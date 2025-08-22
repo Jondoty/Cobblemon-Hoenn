@@ -143,102 +143,102 @@ scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=10}] MusicCooldown
 #Entity-based music
 
 #Soaring Overworld when a genie is in the sky and player has encountered but not caught it
-#Tornadus
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:641}] run playsound minecraft:unovas record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=TornadusEncounter,tag=!TornadusCatch] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:641}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=TornadusEncounter,tag=!TornadusCatch] MusicCooldown 281
-
-#Thundurus
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:642}] run playsound minecraft:unovas record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=ThundurusEncounter,tag=!ThundurusCatch] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:642}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=ThundurusEncounter,tag=!ThundurusCatch] MusicCooldown 281
-
-#Landorus
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:645}] run playsound minecraft:unovas record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=LandorusEncounter,tag=!LandorusCatch] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:645}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=LandorusEncounter,tag=!LandorusCatch] MusicCooldown 281
-
-#Dialga
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:483}] run playsound dialgapalkia record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=DialgaEncounter,tag=!DialgaCatch] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:483}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=DialgaEncounter,tag=!DialgaCatch] MusicCooldown 442
-
-#Palkia
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:484}] run playsound dialgapalkia record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=PalkiaEncounter,tag=!PalkiaCatch] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:484}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=PalkiaEncounter,tag=!PalkiaCatch] MusicCooldown 442
-
-#Giratina
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:487}] run playsound giratina record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=GiratinaEncounter,tag=!GiratinaCatch] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:487}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=GiratinaEncounter,tag=!GiratinaCatch] MusicCooldown 333
-
-#Regice
-execute if entity @e[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:378,Friendship:0s}] run playsound regis record @s[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute if entity @e[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:378,Friendship:0s}] run scoreboard players set @s[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] MusicCooldown 140
-
-#Regigigas
-execute if entity @e[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:486,Friendship:0s}] run playsound regis record @s[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute if entity @e[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:486,Friendship:0s}] run scoreboard players set @s[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] MusicCooldown 140
-
-#Regirock
-execute if entity @e[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,type=pixelmon:pixelmon,nbt={ndex:377,Friendship:0s}] run playsound regis record @s[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,type=pixelmon:pixelmon,nbt={ndex:377,Friendship:0s}] run scoreboard players set @s[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,scores={MusicCooldown=0}] MusicCooldown 140
-
-#Registeel
-execute if entity @e[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,type=pixelmon:pixelmon,nbt={ndex:379,Friendship:0s}] run playsound regis record @s[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute if entity @e[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,type=pixelmon:pixelmon,nbt={ndex:379,Friendship:0s}] run scoreboard players set @s[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,scores={MusicCooldown=0}] MusicCooldown 140
-
-
-#Heatran
-execute at @e[x=1490,y=0,z=-2562,dx=261,dy=256,dz=276,type=pixelmon:pixelmon,nbt={ndex:485,Friendship:0s}] run playsound heatran record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=1490,y=0,z=-2562,dx=261,dy=256,dz=276,type=pixelmon:pixelmon,nbt={ndex:485,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 152
-
-#Ho-oh
-execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:250,Friendship:0s}] run playsound hooh record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:250,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 228
-
-#Lugia
-execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:249,Friendship:0s}] run playsound lugia record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:249,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 184
-
-#Uzie, Azelf and mesprit
-execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:480,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:480,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
-
-execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:481,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:481,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
-
-execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:482,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:482,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
-
-#Reshiram, Zekrom and Kyurem
-execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:643,Friendship:0s}] run playsound unovamains record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:643,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 378
-
-execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:644,Friendship:0s}] run playsound unovamains record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:644,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 378
-
-execute at @e[x=-61,y=0,z=2085,dx=183,dy=256,dz=227,type=pixelmon:pixelmon,nbt={ndex:646,Friendship:0s}] run playsound unovamains record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-61,y=0,z=2085,dx=183,dy=256,dz=227,type=pixelmon:pixelmon,nbt={ndex:646,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 378
-
-#Sword Trio, CObalion, Virizion, Terrakion
-execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:638,Friendship:0s}] run playsound unovas record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:638,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 281
-
-execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:639,Friendship:0s}] run playsound unovas record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:639,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 281
-
-execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:640,Friendship:0s}] run playsound unovas record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:640,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 281
-
-#Johto dogs Raikou, Entei, Suicune
-execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:243,Friendship:0s}] run playsound dogtrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:243,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 289
-
-execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:244,Friendship:0s}] run playsound dogtrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:244,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 289
-
-execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:245,Friendship:0s}] run playsound dogtrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:245,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 289
-
-#Cresselia
-execute at @e[x=191,y=0,z=1425,dx=125,dy=256,dz=164,type=pixelmon:pixelmon,nbt={ndex:488,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[x=191,y=0,z=1425,dx=125,dy=256,dz=164,type=pixelmon:pixelmon,nbt={ndex:488,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
+##Tornadus
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:641}] run playsound minecraft:unovas record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=TornadusEncounter,tag=!TornadusCatch] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:641}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=TornadusEncounter,tag=!TornadusCatch] MusicCooldown 281
+#
+##Thundurus
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:642}] run playsound minecraft:unovas record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=ThundurusEncounter,tag=!ThundurusCatch] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:642}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=ThundurusEncounter,tag=!ThundurusCatch] MusicCooldown 281
+#
+##Landorus
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:645}] run playsound minecraft:unovas record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=LandorusEncounter,tag=!LandorusCatch] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:645}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=LandorusEncounter,tag=!LandorusCatch] MusicCooldown 281
+#
+##Dialga
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:483}] run playsound dialgapalkia record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=DialgaEncounter,tag=!DialgaCatch] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:483}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=DialgaEncounter,tag=!DialgaCatch] MusicCooldown 442
+#
+##Palkia
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:484}] run playsound dialgapalkia record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=PalkiaEncounter,tag=!PalkiaCatch] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:484}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=PalkiaEncounter,tag=!PalkiaCatch] MusicCooldown 442
+#
+##Giratina
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:487}] run playsound giratina record @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=GiratinaEncounter,tag=!GiratinaCatch] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,nbt={ndex:487}] run scoreboard players set @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={MusicCooldown=0},tag=GiratinaEncounter,tag=!GiratinaCatch] MusicCooldown 333
+#
+##Regice
+#execute if entity @e[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:378,Friendship:0s}] run playsound regis record @s[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:378,Friendship:0s}] run scoreboard players set @s[x=-2853,y=0,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] MusicCooldown 140
+#
+##Regigigas
+#execute if entity @e[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:486,Friendship:0s}] run playsound regis record @s[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,type=pixelmon:pixelmon,nbt={ndex:486,Friendship:0s}] run scoreboard players set @s[x=-2853,y=-16,z=69,dx=101,dy=25,dz=217,scores={MusicCooldown=0}] MusicCooldown 140
+#
+##Regirock
+#execute if entity @e[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,type=pixelmon:pixelmon,nbt={ndex:377,Friendship:0s}] run playsound regis record @s[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,type=pixelmon:pixelmon,nbt={ndex:377,Friendship:0s}] run scoreboard players set @s[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,scores={MusicCooldown=0}] MusicCooldown 140
+#
+##Registeel
+#execute if entity @e[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,type=pixelmon:pixelmon,nbt={ndex:379,Friendship:0s}] run playsound regis record @s[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute if entity @e[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,type=pixelmon:pixelmon,nbt={ndex:379,Friendship:0s}] run scoreboard players set @s[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,scores={MusicCooldown=0}] MusicCooldown 140
+#
+#
+##Heatran
+#execute at @e[x=1490,y=0,z=-2562,dx=261,dy=256,dz=276,type=pixelmon:pixelmon,nbt={ndex:485,Friendship:0s}] run playsound heatran record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=1490,y=0,z=-2562,dx=261,dy=256,dz=276,type=pixelmon:pixelmon,nbt={ndex:485,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 152
+#
+##Ho-oh
+#execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:250,Friendship:0s}] run playsound hooh record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:250,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 228
+#
+##Lugia
+#execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:249,Friendship:0s}] run playsound lugia record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-2059,y=0,z=537,dx=371,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:249,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 184
+#
+##Uzie, Azelf and mesprit
+#execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:480,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:480,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
+#
+#execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:481,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:481,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
+#
+#execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:482,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,type=pixelmon:pixelmon,nbt={ndex:482,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
+#
+##Reshiram, Zekrom and Kyurem
+#execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:643,Friendship:0s}] run playsound unovamains record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:643,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 378
+#
+#execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:644,Friendship:0s}] run playsound unovamains record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,type=pixelmon:pixelmon,nbt={ndex:644,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 378
+#
+#execute at @e[x=-61,y=0,z=2085,dx=183,dy=256,dz=227,type=pixelmon:pixelmon,nbt={ndex:646,Friendship:0s}] run playsound unovamains record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-61,y=0,z=2085,dx=183,dy=256,dz=227,type=pixelmon:pixelmon,nbt={ndex:646,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 378
+#
+##Sword Trio, CObalion, Virizion, Terrakion
+#execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:638,Friendship:0s}] run playsound unovas record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:638,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 281
+#
+#execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:639,Friendship:0s}] run playsound unovas record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:639,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 281
+#
+#execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:640,Friendship:0s}] run playsound unovas record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,type=pixelmon:pixelmon,nbt={ndex:640,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 281
+#
+##Johto dogs Raikou, Entei, Suicune
+#execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:243,Friendship:0s}] run playsound dogtrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:243,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 289
+#
+#execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:244,Friendship:0s}] run playsound dogtrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:244,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 289
+#
+#execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:245,Friendship:0s}] run playsound dogtrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=-490,y=0,z=2256,dx=167,dy=256,dz=192,type=pixelmon:pixelmon,nbt={ndex:245,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 289
+#
+##Cresselia
+#execute at @e[x=191,y=0,z=1425,dx=125,dy=256,dz=164,type=pixelmon:pixelmon,nbt={ndex:488,Friendship:0s}] run playsound laketrio record @a[distance=..30,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @e[x=191,y=0,z=1425,dx=125,dy=256,dz=164,type=pixelmon:pixelmon,nbt={ndex:488,Friendship:0s}] run scoreboard players set @s[distance=..30,scores={MusicCooldown=0}] MusicCooldown 298
 
 #Jirachi?
 
@@ -252,13 +252,13 @@ execute if entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,nbt={Variant:"prima
 execute if entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,nbt={Variant:"primal"}] run scoreboard players set @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,scores={MusicCooldown=0}] MusicCooldown 138
 
 #Sky Pillar if Rayquaza is present
-execute if entity @e[x=142,y=242,z=-326,dx=364,dy=50,dz=317,type=pixelmon:pixelmon,nbt={ndex:384,Friendship:0s}] run playsound rayquaza record @s[x=142,y=242,z=-326,dx=364,dy=50,dz=317,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute if entity @e[x=142,y=242,z=-326,dx=364,dy=50,dz=317,type=pixelmon:pixelmon,nbt={ndex:384,Friendship:0s}] run scoreboard players set @s[x=142,y=242,z=-326,dx=364,dy=50,dz=317,scores={MusicCooldown=0}] MusicCooldown 137
+#execute if entity @e[x=142,y=242,z=-326,dx=364,dy=50,dz=317,type=pixelmon:pixelmon,nbt={ndex:384,Friendship:0s}] run playsound rayquaza record @s[x=142,y=242,z=-326,dx=364,dy=50,dz=317,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute if entity @e[x=142,y=242,z=-326,dx=364,dy=50,dz=317,type=pixelmon:pixelmon,nbt={ndex:384,Friendship:0s}] run scoreboard players set @s[x=142,y=242,z=-326,dx=364,dy=50,dz=317,scores={MusicCooldown=0}] MusicCooldown 137
 
 #If player is riding a bicycle
-execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run playsound cycling record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run tag @s add Cycling
-execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 152
+#execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run playsound cycling record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run tag @s add Cycling
+#execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 152
 
 #---------------------------------------------------------------------------------------------------------------------------
 #Takes priority over most zones but not entities

@@ -4,15 +4,15 @@
 #Gives the player their first items
 function hoenn:spawn/startingbook
 function hoenn:spawn/pokenav
-item replace entity @s inventory.0 with pixelmon:lime_poke_bag
-item replace entity @s inventory.1 with pixelmon:red_poke_bag
-item replace entity @s inventory.2 with pixelmon:light_blue_poke_bag
-item replace entity @s inventory.8 with pixelmon:potion
-item replace entity @s hotbar.8 with pixelmon:exp_all
-give @s pixelmon:new_running_boots{Unbreakable:1}
+#item replace entity @s inventory.0 with pixelmon:lime_poke_bag
+#item replace entity @s inventory.1 with pixelmon:red_poke_bag
+#item replace entity @s inventory.2 with pixelmon:light_blue_poke_bag
+#item replace entity @s inventory.8 with pixelmon:potion
+#item replace entity @s hotbar.8 with pixelmon:exp_all
+#give @s pixelmon:new_running_boots{Unbreakable:1}
 
 #Gives the player money
-execute as @s run givemoney 2000
+scoreboard players add @s Money 2000
 
 #Basic world gamerules
 difficulty peaceful
