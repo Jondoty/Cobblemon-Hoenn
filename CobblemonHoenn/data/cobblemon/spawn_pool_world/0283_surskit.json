@@ -1,0 +1,37 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "surskit-1",
+            "pokemon": "surskit",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2-3",
+            "weight": 1,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
+            }
+        },
+        {
+            "id": "surskit-1",
+            "pokemon": "surskit",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "2-3",
+            "weight": 15.0,
+            "condition": {
+                "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
+            }
+        }
+        ]
+}

@@ -1,0 +1,38 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "wurmple-1",
+            "pokemon": "wurmple",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2098, "maxX": -1952, "minZ": 119, "maxZ": 278, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "wurmple-2",
+            "pokemon": "wurmple",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2-3",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
+            }
+        }
+        ]
+}

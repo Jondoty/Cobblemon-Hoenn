@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "ralts-1",
+            "pokemon": "ralts",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2-3",
+            "weight": 4,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
+            }
+        }
+        ]
+}
