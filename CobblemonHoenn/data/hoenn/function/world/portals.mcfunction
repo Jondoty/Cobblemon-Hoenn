@@ -35,12 +35,12 @@ tp @a[x=-1995,y=66,z=1374,dz=1,dy=3,scores={GameVersion=1..,Rival=2}] -1985 50 2
 scoreboard players set @a[x=-2028,y=65,z=1376,dz=1,dy=3] GameVersion 1
 playsound minecraft:entity.player.levelup ambient @a[x=-2028,y=65,z=1376,dz=1,dy=3] ~ ~ ~ 1 1 1
 tellraw @a[x=-2028,y=65,z=1376,dz=1,dy=3] {"text":"You picked the Omega Ruby story line!","italic":true,"color":"gray"}
-give @a[x=-2028,y=65,z=1376,dz=1,dy=3] pixelmon:redbadgecase
+#give @a[x=-2028,y=65,z=1376,dz=1,dy=3] pixelmon:redbadgecase
 
 scoreboard players set @a[x=-2028,y=65,z=1371,dz=1,dy=3] GameVersion 2
 playsound minecraft:entity.player.levelup ambient @a[x=-2028,y=65,z=1371,dz=1,dy=3] ~ ~ ~ 1 1 1
 tellraw @a[x=-2028,y=65,z=1371,dz=1,dy=3] {"text":"You picked the Alpha Sapphire story line!","italic":true,"color":"gray"}
-give @a[x=-2028,y=65,z=1371,dz=1,dy=3] pixelmon:bluebadgecase
+#give @a[x=-2028,y=65,z=1371,dz=1,dy=3] pixelmon:bluebadgecase
 
 tellraw @a[x=-2028,y=65,z=1371,dz=6,dy=3,scores={Rival=0}] {"text":"Which rival do you want to battle in the story?","italic":true,"color":"gray"}
 tp @a[x=-2028,y=65,z=1371,dz=6,dy=3,scores={Rival=0}] -2042 65 1374
@@ -78,11 +78,11 @@ execute as @a run function hoenn:world/bases/portals
 
 #Prof Birch's Lab
 execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run function hoenn:tools/forceclick
-execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run effect clear @e[x=-2042,y=49,z=319,dy=3,type=pixelmon:npc_chatting] minecraft:invisibility
+execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run effect clear @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility
 tp @a[x=-2043,y=50,z=344,dx=3,dy=5,scores={DialogueTrigger=0}] -2042 69 345
 
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5] run function hoenn:tools/forceclick
-execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=!Dialogue7] run effect give @e[x=-2042,y=49,z=319,dy=3,type=pixelmon:npc_chatting] minecraft:invisibility infinite 1 true
+execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=!Dialogue7] run effect give @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility infinite 1 true
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=Dialogue11,tag=!Dialogue12] run scoreboard players set @s DialogueTrigger 12
 tp @a[x=-2043,y=69,z=344,dx=2,dy=5] -2041 50 343
 
@@ -146,7 +146,7 @@ tag @a[x=-2548,y=69,z=-23,dx=6,dy=3,scores={DialogueTrigger=0},tag=!Dialogue95] 
 tp @a[x=-2548,y=69,z=-23,dx=6,dy=3,scores={DialogueTrigger=0}] -3244 65 1639
 
 #Exit
-execute as @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0},tag=Dialogue16] unless entity @a[scores={DialogueTrigger=16}] run tp @e[x=-3244,y=64,z=1621,distance=..2,type=pixelmon:npc_chatting] 10000000 -50000 -10000000
+execute as @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0},tag=Dialogue16] unless entity @a[scores={DialogueTrigger=16}] run tp @e[x=-3244,y=64,z=1621,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000
 scoreboard players set @a[x=-3246,y=65,z=1640,dx=4,dy=3,tag=Dialogue95,tag=!Dialogue96,scores={DialogueTrigger=0}] DialogueTrigger 96
 tp @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0}] -2545 69 -22
 
@@ -239,103 +239,103 @@ tp @a[x=-2804,y=52,z=-403,dx=4,dy=3] -2802 69 -402
 
 #If Regigigas conditions are met
 #Checks for other regis
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s remove RegirockHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s remove RegisteelHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s remove RegiceHave
-
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regirock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regirock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regirock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regirock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regirock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regirock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run scoreboard players set @s PokeHave 0
-
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Registeel
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Registeel
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Registeel
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Registeel
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Registeel
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Registeel
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run scoreboard players set @s PokeHave 0
-
-
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:never_melt_ice
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:never_melt_ice
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:never_melt_ice
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:never_melt_ice
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:never_melt_ice
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:never_melt_ice
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:snowball
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:snowball
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:snowball
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:snowball
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:snowball
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:snowball
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:icy_rock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:icy_rock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:icy_rock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:icy_rock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:icy_rock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:icy_rock
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:casteliacone
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:casteliacone
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:casteliacone
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:casteliacone
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:casteliacone
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:casteliacone
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:icicle_plate
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:icicle_plate
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:icicle_plate
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:icicle_plate
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:icicle_plate
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:icicle_plate
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s remove RegirockHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s remove RegisteelHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s remove RegiceHave
+#
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regirock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regirock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regirock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regirock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regirock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regirock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegirockHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run scoreboard players set @s PokeHave 0
+#
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Registeel
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Registeel
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Registeel
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Registeel
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Registeel
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Registeel
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegisteelHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run scoreboard players set @s PokeHave 0
+#
+#
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:never_melt_ice
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:never_melt_ice
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:never_melt_ice
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:never_melt_ice
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:never_melt_ice
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:never_melt_ice
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:snowball
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:snowball
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:snowball
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:snowball
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:snowball
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:snowball
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:icy_rock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:icy_rock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:icy_rock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:icy_rock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:icy_rock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:icy_rock
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:casteliacone
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:casteliacone
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:casteliacone
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:casteliacone
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:casteliacone
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:casteliacone
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 1 Regice helditem:icicle_plate
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 2 Regice helditem:icicle_plate
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 3 Regice helditem:icicle_plate
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 4 Regice helditem:icicle_plate
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 5 Regice helditem:icicle_plate
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] store result score @s PokeHave run poketest 6 Regice helditem:icicle_plate
+#execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run tag @s[scores={PokeHave=1}] add RegiceHave
 
 
 tp @a[x=-2803,y=64,z=256,dx=4,dy=3,tag=RegiceHave,tag=RegirockHave,tag=RegisteelHave] -2801 -10 255
@@ -576,7 +576,7 @@ tp @a[x=-1619,y=69,z=271,dx=4,dy=3] -1616 52 270
 tp @a[x=-1618,y=52,z=271,dx=3,dy=3] -1617 69 272
 
 #Slateport Harbor
-execute as @a[x=-1412,y=64,z=203,dx=8,dy=3,scores={TalkTime=0}] run tp @e[x=-1408,y=64,z=211,distance=..10,type=pixelmon:npc_chatting] 10000000 -50000 -10000000 
+execute as @a[x=-1412,y=64,z=203,dx=8,dy=3,scores={TalkTime=0}] run tp @e[x=-1408,y=64,z=211,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000 
 
 #Teams stealing Submarine
 
@@ -683,7 +683,7 @@ execute as @a[x=-1559,y=48,z=-646,dx=3,dy=3] run function hoenn:tools/forceclick
 tp @a[x=-1559,y=48,z=-646,dx=3,dy=3] -1558 69 -644
 
 #Despawns rival in courtyard on any portal
-tp @e[type=pixelmon:npc_chatting,x=-1535,y=68,z=-573,distance=..3] 10000000 -50000 -10000000
+tp @e[type=cobblemon:npc,x=-1535,y=68,z=-573,distance=..3] 10000000 -50000 -10000000
 
 #North to Courtyard
 tp @a[x=-1540,y=69,z=-656,dx=12,dy=6] 2705 65 2745
@@ -886,7 +886,7 @@ tp @a[x=-2320,y=74,z=-1432,dx=3,dy=3] -2318 89 -1431
 #Observatory Home (Prof Cozmo's)
 tp @a[x=-2266,y=89,z=-1379,dx=6,dy=3] -2262 68 -1380
 
-execute as @a[x=-2264,y=68,z=-1379,dx=3,dy=3,scores={DialogueTrigger=0},tag=Dialogue82] run tp @e[x=-2266,y=67,z=-1382,dy=3,type=pixelmon:npc_chatting] 10000000 -50000 -10000000
+execute as @a[x=-2264,y=68,z=-1379,dx=3,dy=3,scores={DialogueTrigger=0},tag=Dialogue82] run tp @e[x=-2266,y=67,z=-1382,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 tp @a[x=-2264,y=68,z=-1379,dx=3,dy=3,scores={DialogueTrigger=0}] -2263 89 -1378
 
 #-------------------------------------------------------------------------
@@ -1120,7 +1120,7 @@ tp @a[x=609,y=31,z=-986,dx=3,dy=3] 611 74 -985
 #Lilycove Harbor
 tp @a[x=440,y=74,z=-910,dx=8,dy=3] 2431 79 2594
 
-execute as @a[x=2430,y=79,z=2595,dx=3,dy=3] run tp @e[x=2415,y=78,z=2585,dy=3,type=pixelmon:npc_chatting] 10000000 -50000 -10000000
+execute as @a[x=2430,y=79,z=2595,dx=3,dy=3] run tp @e[x=2415,y=78,z=2585,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 tp @a[x=2430,y=79,z=2595,dx=3,dy=3] 444 74 -909
 
 
@@ -1347,7 +1347,7 @@ tp @a[x=1209,y=73,z=1658,dx=3,dy=3] 1211 89 1659
 tp @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1,tag=!Dialogue143,tag=!Dialogue144] ~ ~ ~7
 
 #tps chatting npcs into void after dialogue is cleared
-execute as @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1] run tp @e[x=978,y=68,z=1508,dx=15,dy=5,dz=20,type=pixelmon:npc_chatting] 10000000 -50000 -10000000
+execute as @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1] run tp @e[x=978,y=68,z=1508,dx=15,dy=5,dz=20,type=cobblemon:npc] 10000000 -50000 -10000000
 
 #Normal portal
 tp @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1,scores={DialogueTrigger=0}] 1945 227 -2418
@@ -1503,8 +1503,8 @@ tp @a[x=632,y=84,z=-3215,dx=4,dy=3] 634.0 87 -3180
 tp @a[x=632,y=140,z=-3215,dx=4,dy=3] 634.0 87 -3180
 
 #Steven's battle room to hall of fame
-execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tp @e[type=pixelmon:npc_chatting,x=626,y=109,z=-3263,dy=3] 10000000 -50000 -10000000
-execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tp @e[type=pixelmon:npc_chatting,x=626,y=109,z=-3263,dy=3] 10000000 -50000 -10000000
+execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tp @e[type=cobblemon:npc,x=626,y=109,z=-3263,dy=3] 10000000 -50000 -10000000
+execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tp @e[type=cobblemon:npc,x=626,y=109,z=-3263,dy=3] 10000000 -50000 -10000000
 
 execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run function hoenn:tools/forceclick
 execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tag @s remove Dialogue166

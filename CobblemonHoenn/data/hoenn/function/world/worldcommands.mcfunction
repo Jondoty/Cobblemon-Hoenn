@@ -2,10 +2,6 @@
 execute at @a run execute if block ~ ~ ~ minecraft:magenta_carpet run function hoenn:world/portals
 execute at @a run execute if block ~ ~ ~ minecraft:pink_carpet run function hoenn:world/portals
 
-#Slightly tps and tags NPCs that are newly spawned in
-execute as @e[type=pixelmon:npc,tag=!HeightAdjusted] at @s run tp @s ~ ~-0.5 ~
-tag @e[type=pixelmon:npc,tag=!HeightAdjusted] add HeightAdjusted
-
 
 #-------------------------World Functions-----------------------------------------------------------------------------------
 #Starts the player at spawn with items, scores and tps to lobby
@@ -50,13 +46,6 @@ execute as @a[scores={BattleStart=1..},tag=!BattleMusicCooldown] run function ho
 
 #---------------------
 #Lobby Gamerule Stuff
-#Runs boss levels
-#execute at @a[scores={Boss=0}] as @e[distance=..20,type=pixelmon:npc] run data merge entity @s {BossTier: "notboss"}
-#execute at @a[scores={Boss=1}] as @e[distance=..20,type=pixelmon:npc] run data merge entity @s {BossTier: "equal"}
-#execute at @a[scores={Boss=2}] as @e[distance=..20,type=pixelmon:npc] run data merge entity @s {BossTier: "common"}
-#execute at @a[scores={Boss=3}] as @e[distance=..20,type=pixelmon:npc] run data merge entity @s {BossTier: "uncommon"}
-#execute at @a[scores={Boss=4}] as @e[distance=..20,type=pixelmon:npc] run data merge entity @s {BossTier: "rare"}
-
 
 #Runs infolist command for non-ops
 scoreboard players enable @a Info
@@ -149,10 +138,10 @@ execute as @a[tag=!MusicDisabled,scores={MusicCooldown=0}] run function hoenn:wo
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
 
 #Resets the music if player jumps on or off a bicycle
-execute as @a[tag=!MusicDisabled,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
-execute as @a[tag=!MusicDisabled,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run tag @s remove Cycling
+#execute as @a[tag=!MusicDisabled,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
+#execute as @a[tag=!MusicDisabled,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run tag @s remove Cycling
 
-execute as @a[tag=!MusicDisabled,tag=!Cycling] at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
+#execute as @a[tag=!MusicDisabled,tag=!Cycling] at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
 
 
 #Desert Ruins Safety Goggles Equip
