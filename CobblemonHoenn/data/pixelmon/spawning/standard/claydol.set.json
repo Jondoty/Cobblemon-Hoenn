@@ -1,0 +1,25 @@
+{
+    "id": "Claydol",
+    "spawnInfos": [
+        {
+            "spec": "species:Claydol",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 44,
+            "maxLevel": 46,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:light_clay",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "minX": 265, "maxX": 411, "minZ": -250, "maxZ": -145, "minY": 89, "maxY": 218
+            },
+            "rarity": 30
+        }
+    ]
+}

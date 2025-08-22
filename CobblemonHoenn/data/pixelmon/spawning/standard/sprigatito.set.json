@@ -1,0 +1,24 @@
+{
+  "id": "Sprigatito",
+  "spawnInfos": [
+    {
+      "spec": "species:Sprigatito",
+      "stringLocationTypes": [
+        "Land"
+      ],
+      "minLevel": 5,
+      "maxLevel": 16,
+      "typeID": "pokemon",
+      "condition": {
+        "times": [
+          "DAY"
+        ],
+        "biomes": [
+          "#pixelmon:spawning/birches"
+        ]
+      },
+      "rarity": 0.0
+    }
+  ]
+}
+

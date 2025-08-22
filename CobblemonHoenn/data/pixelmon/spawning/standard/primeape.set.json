@@ -1,0 +1,53 @@
+{
+  "id": "Primeape",
+  "spawnInfos": [
+    {
+      "spec": "species:Primeape",
+      "stringLocationTypes": [
+        "Tree Top",
+        "Headbutt"
+      ],
+      "minLevel": 28,
+      "maxLevel": 50,
+      "typeID": "pokemon",
+      "condition": {
+        "biomes": [
+          "#pixelmon:spawning/jungles",
+          "byg:crag_gardens"
+        ]
+      },
+      "rarity": 0.0
+    },
+    {
+      "spec": "species:Primeape palette:pink",
+      "stringLocationTypes": [
+        "Tree Top"
+      ],
+      "minLevel": 28,
+      "maxLevel": 50,
+      "typeID": "pokemon",
+      "condition": {
+        "biomes": [
+          "#pixelmon:spawning/jungles",
+          "byg:crag_gardens"
+        ]
+      },
+      "rarity": 0.0
+    },
+    {
+      "spec": "species:Primeape",
+      "stringLocationTypes": [
+        "Tree Top"
+      ],
+      "minLevel": 28,
+      "maxLevel": 50,
+      "typeID": "pokemon",
+      "condition": {
+        "biomes": [
+          "pixelmon:ultra_jungle"
+        ]
+      },
+      "rarity": 0.0
+    }
+  ]
+}

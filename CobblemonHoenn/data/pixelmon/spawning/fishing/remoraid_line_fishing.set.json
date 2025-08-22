@@ -1,0 +1,45 @@
+{
+  "id": "Remoraid Line Fishing",
+  "spawnInfos": [
+    {
+      "spec": "species:Remoraid",
+      "stringLocationTypes": [
+        "Good Rod"
+      ],
+      "minLevel": 25,
+      "maxLevel": 25,
+      "typeID": "pokemon",
+      "condition": {
+        "minX": 2071, "maxX": 2734, "minZ": 323, "maxZ": 1229, "minY": 0, "maxY": 256
+      },
+      "rarity": 5.0
+    },
+    {
+      "spec": "species:Remoraid",
+      "stringLocationTypes": [
+        "Super Rod"
+      ],
+      "minLevel": 30,
+      "maxLevel": 35,
+      "typeID": "pokemon",
+      "condition": {
+        "minX": 2071, "maxX": 2734, "minZ": 323, "maxZ": 1229, "minY": 0, "maxY": 256
+      },
+      "rarity": 60.0
+    },
+
+    {
+      "spec": "species:Octillery",
+      "stringLocationTypes": [
+        "Super Rod"
+      ],
+      "minLevel": 40,
+      "maxLevel": 40,
+      "typeID": "pokemon",
+      "condition": {
+        "minX": 2071, "maxX": 2734, "minZ": 323, "maxZ": 1229, "minY": 0, "maxY": 256
+      },
+      "rarity": 5.0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "Feebas",
+  "spawnInfos": [
+    {
+      "spec": "species:Feebas",
+      "stringLocationTypes": [
+        "Water", "Underground Water"
+      ],
+      "minLevel": 25,
+      "maxLevel": 25,
+      "typeID": "pokemon",
+      "condition": {
+        "minX": -913, "maxX": -897, "minZ": -846, "maxZ": -830, "minY": 0, "maxY": 256,
+        "times": ["DUSK", "NIGHT"]
+      },
+      "rarity": 0.0
+    },
+    {
+      "spec": "species:Feebas",
+      "stringLocationTypes": [
+        "Water", "Underground Water"
+      ],
+      "minLevel": 25,
+      "maxLevel": 25,
+      "typeID": "pokemon",
+      "condition": {
+        "minX": -952, "maxX": -879, "minZ": -1285, "maxZ": -1272, "minY": 0, "maxY": 256,
+        "times": ["DAWN", "DAY"]
+      },
+      "rarity": 0.0
+    }
+  ]
+}

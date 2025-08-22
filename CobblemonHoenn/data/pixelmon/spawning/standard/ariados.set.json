@@ -1,0 +1,18 @@
+{
+  "id": "Ariados",
+  "spawnInfos": [
+    {
+      "spec": "species:Ariados",
+      "stringLocationTypes": [
+        "Underground", "Indoors", "Manmade"
+      ],
+      "minLevel": 44,
+      "maxLevel": 46,
+      "typeID": "pokemon",
+      "condition": {
+          "minX": 265, "maxX": 411, "minZ": -250, "maxZ": -145, "minY": 89, "maxY": 218
+      },
+      "rarity": 30.0
+    }
+  ]
+}

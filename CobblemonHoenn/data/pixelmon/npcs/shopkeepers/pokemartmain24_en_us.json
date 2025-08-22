@@ -1,0 +1,47 @@
+{
+  "data": {
+    "type": "PokemartMain"
+  },
+  "textures": [
+    {
+      "name": "shopman.png"
+    }
+  ],
+  "names": [
+    {
+      "name": "Poké Mart Clerk"
+    }
+  ],
+  "chat": [
+    {
+      "hello": "Welcome to Lilycove Department Store! Are you looking for anything in particular?",
+      "goodbye": "We look forward to seeing you again!"
+    }
+  ],
+  "items": [
+    {
+      "name": "pixelmon:protein",
+      "variation": false
+    },
+    {
+      "name": "pixelmon:iron",
+      "variation": false
+    },
+    {
+      "name": "pixelmon:calcium",
+      "variation": false
+    },
+    {
+      "name": "pixelmon:zinc",
+      "variation": false
+    },
+    {
+      "name": "pixelmon:carbos",
+      "variation": false
+    },
+    {
+      "name": "pixelmon:hp_up",
+      "variation": false
+    }
+  ]
+}

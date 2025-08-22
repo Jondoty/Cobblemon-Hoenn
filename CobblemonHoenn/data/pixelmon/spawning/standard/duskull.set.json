@@ -1,0 +1,18 @@
+{
+  "id": "Duskull",
+  "spawnInfos": [
+    {
+      "spec": "species:Duskull",
+      "stringLocationTypes": [
+        "Underground", "Indoors", "Manmade"
+      ],
+      "minLevel": 28,
+      "maxLevel": 31,
+      "typeID": "pokemon",
+      "condition": {
+          "minX": 1561, "maxX": 1675, "minZ": 2544, "maxZ": 2663, "minY": 25, "maxY": 77
+      },
+      "rarity": 35.0
+    }
+  ]
+}

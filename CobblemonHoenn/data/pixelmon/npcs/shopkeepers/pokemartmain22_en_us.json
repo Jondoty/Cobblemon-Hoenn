@@ -1,0 +1,200 @@
+{
+    "data": {
+        "type": "PokemartMain"
+    },
+    "textures": [
+        {
+            "name": "lass2.png"
+        }
+    ],
+    "names": [
+        {
+            "name": "Secret Base Guild"
+        }
+    ],
+    "chat": [
+        {
+            "hello": "Must-have items for your Secret Base right here!",
+            "goodbye": "Come again!"
+        }
+    ],
+    "items": [
+        {
+            "name": "pixelmon:white_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:light_gray_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:gray_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:black_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:brown_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:red_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:orange_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:yellow_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:lime_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:green_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:cyan_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:light_blue_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:blue_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:purple_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:magenta_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:pink_poke_bag",
+            "variation": false
+        },
+        {
+            "name": "minecraft:netherite_pickaxe",
+            "variation": false
+        },
+        {
+            "name": "minecraft:netherite_axe",
+            "variation": false
+        },
+        {
+            "name": "minecraft:netherite_shovel",
+            "variation": false
+        },
+        {
+            "name": "minecraft:chest",
+            "variation": false
+        },
+        {
+            "name": "minecraft:ender_chest",
+            "variation": false
+        },
+        {
+            "name": "minecraft:campfire",
+            "variation": false
+        },
+        {
+            "name": "minecraft:ladder",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:cooking_pot",
+            "variation": false
+        },
+        {
+            "name": "pixelmon:infuser",
+            "variation": false
+        },
+        {
+            "name": "minecraft:scaffolding",
+            "variation": false
+        },
+        {
+            "name": "minecraft:lantern",
+            "variation": false
+        },
+        {
+            "name": "minecraft:soul_lantern",
+            "variation": false
+        },
+        {
+            "name": "minecraft:white_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:light_gray_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:gray_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:black_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:brown_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:red_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:orange_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:yellow_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:lime_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:green_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:cyan_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:light_blue_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:blue_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:purple_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:magenta_shulker_box",
+            "variation": false
+        },
+        {
+            "name": "minecraft:pink_shulker_box",
+            "variation": false
+        }
+
+    ]
+}

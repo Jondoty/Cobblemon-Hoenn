@@ -1,0 +1,47 @@
+{
+  "id": "Spheal",
+  "spawnInfos": [
+    {
+      "spec": "species:Spheal",
+      "stringLocationTypes": [
+        "Underground", "Indoors", "Manmade"
+      ],
+      "minLevel": 31,
+      "maxLevel": 34,
+      "typeID": "pokemon",
+      "condition": {
+          "minX": 2812, "maxX": 3005, "minZ": -3281, "maxZ": -2970, "minY": 63, "maxY": 135
+      },
+      "rarity": 20.0
+    },
+    {
+      "spec": "species:Spheal",
+      "stringLocationTypes": [
+        "Underground", "Indoors", "Manmade"
+      ],
+      "minLevel": 31,
+      "maxLevel": 34,
+      "typeID": "pokemon",
+      "condition": {
+        "minX": 2783, "maxX": 3012, "minZ": -2959, "maxZ": -2326, "minY": 63, "maxY": 125
+      },
+      "anticondition": {
+        "minX": 2783, "maxX": 3012, "minZ": -2959, "maxZ": -2748, "minY": 63, "maxY": 84
+      },
+      "rarity": 20.0
+    },
+    {
+      "spec": "species:Spheal",
+      "stringLocationTypes": [
+        "Underground", "Indoors", "Manmade"
+      ],
+      "minLevel": 31,
+      "maxLevel": 34,
+      "typeID": "pokemon",
+      "condition": {
+        "minX": 2783, "maxX": 3012, "minZ": -2959, "maxZ": -2748, "minY": 63, "maxY": 84
+      },
+      "rarity": 10.0
+    }
+  ]
+}

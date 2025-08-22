@@ -1,0 +1,60 @@
+{
+  "id": "Flygon",
+  "spawnInfos": [
+    {
+      "spec": "species:Flygon",
+      "stringLocationTypes": [
+        "Air"
+      ],
+      "minLevel": 45,
+      "maxLevel": 50,
+      "typeID": "pokemon",
+      "condition": {
+        "times": [
+          "DUSK",
+          "DAWN"
+        ],
+        "biomes": [
+          "minecraft:desert_hills",
+          "biomesoplenty:lush_desert",
+          "byg:lush_red_desert",
+          "byg:mojave_desert"
+        ]
+      },
+      "rarity": 0.0
+    },
+    {
+      "spec": "species:Flygon",
+      "stringLocationTypes": [
+        "Air"
+      ],
+      "minLevel": 45,
+      "maxLevel": 50,
+      "typeID": "pokemon",
+      "condition": {
+        "times": [
+          "DAY"
+        ],
+        "biomes": [
+          "pixelmon:ultra_desert"
+        ]
+      },
+      "rarity": 0.0
+    },
+    {
+      "spec": "species:Flygon palette:drowned",
+      "stringLocationTypes": [
+        "Water"
+      ],
+      "minLevel": 45,
+      "maxLevel": 50,
+      "typeID": "pokemon",
+      "condition": {
+        "biomes": [
+          "#pixelmon:spawning/drowned"
+        ]
+      },
+      "rarity": 0.0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "Psyduck",
+  "spawnInfos": [
+    {
+      "spec": "species:Psyduck",
+      "stringLocationTypes": [
+        "Water"
+      ],
+      "minLevel": 20,
+      "maxLevel": 30,
+      "typeID": "pokemon",
+      "condition": {
+          "minX": -177, "maxX": 126, "minZ": -1340, "maxZ": -1091, "minY": 0, "maxY": 256
+      },
+      "rarity": 100.0
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "Frillish",
+  "spawnInfos": [
+    {
+      "spec": "species:Frillish",
+      "stringLocationTypes": [
+        "Water"
+      ],
+      "minLevel": 22,
+      "maxLevel": 39,
+      "typeID": "pokemon",
+      "condition": {
+        "times": [
+          "NIGHT"
+        ],
+        "biomes": [
+          "#pixelmon:spawning/oceanic",
+          "terraforged:warm_beach"
+        ],
+        "maxY": 50
+      },
+      "rarity": 0.0
+    },
+    {
+      "spec": "species:Frillish",
+      "stringLocationTypes": [
+        "Water"
+      ],
+      "minLevel": 22,
+      "maxLevel": 39,
+      "typeID": "pokemon",
+      "condition": {
+        "biomes": [
+          "byg:dead_sea"
+        ]
+      },
+      "rarity": 0.0
+    }
+  ]
+}

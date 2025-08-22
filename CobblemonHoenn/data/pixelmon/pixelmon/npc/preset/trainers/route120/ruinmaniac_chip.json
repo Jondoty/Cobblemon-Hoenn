@@ -1,0 +1,224 @@
+{
+    "interactions": {
+        "value": {
+            "interactions": [
+                {
+                    "event": "pixelmon:hit_with_poke_ball",
+                    "conditions": {
+                        "player": {
+                            "key": "pixelmon:player",
+                            "type": "pixelmon:context_player"
+                        },
+                        "type": "pixelmon:can_battle"
+                    },
+                    "results": {
+                        "value": [
+                            {
+                                "title": "Chip",
+                                "message": "Who might you be? Are you perhaps searching for ancient ruins that are rumored to possibly exist according to legend?",
+                                "type": "pixelmon:open_dialogue"
+                            },
+                            {
+                                "commands": [
+                                    "scoreboard players set %player_name% BattleStart 6",
+                                    "execute as %player_name% run function hoenn:triggers/stopsound"
+                                ],
+                                "type": "pixelmon:console_execute_command"
+                            }
+                        ],
+                        "type": "pixelmon:constant"
+                    }
+                },
+                {
+                    "event": "pixelmon:right_click",
+                    "conditions": {
+                        "player": {
+                            "key": "pixelmon:player",
+                            "type": "pixelmon:context_player"
+                        },
+                        "type": "pixelmon:can_battle"
+                    },
+                    "results": {
+                        "value": [
+                            {
+                                "title": "Chip",
+                                "message": "Who might you be? Are you perhaps searching for ancient ruins that are rumored to possibly exist according to legend?",
+                                "type": "pixelmon:open_dialogue"
+                            },
+                            {
+                                "commands": [
+                                    "scoreboard players set %player_name% BattleStart 6",
+                                    "execute as %player_name% run function hoenn:triggers/stopsound"
+                                ],
+                                "type": "pixelmon:console_execute_command"
+                            }
+                        ],
+                        "type": "pixelmon:constant"
+                    }
+                },
+                {
+                    "event": "pixelmon:right_click",
+                    "conditions": {
+                        "type": "pixelmon:logical_not",
+                        "condition": {
+                            "condition": {
+                                "player": {
+                                    "key": "pixelmon:player",
+                                    "type": "pixelmon:context_player"
+                                },
+                                "type": "pixelmon:can_battle"
+                            },
+                            "type": "pixelmon:interaction_condition"
+                        }
+                    },
+                    "results": {
+                        "value": [
+                            {
+                                "messages": [
+                                    {
+                                        "text": "You don't have any Pok\u00e9mon that can battle!"
+                                    }
+                                ],
+                                "type": "pixelmon:message_player"
+                            }
+                        ],
+                        "type": "pixelmon:constant"
+                    }
+                },
+                {
+                    "event": "pixelmon:close_dialogue",
+                    "conditions": {
+                        "type": "pixelmon:true"
+                    },
+                    "results": {
+                        "value": [
+                            {
+                                "type": "pixelmon:player_start_npc_battle"
+                            },
+                            {
+                                "commands": [
+                                    "scoreboard players set %player_name% BattleStart 37",
+                                    "execute as %player_name% run function hoenn:triggers/stopsound"
+                                ],
+                                "type": "pixelmon:console_execute_command"
+                            }
+                        ],
+                        "type": "pixelmon:constant"
+                    }
+                },
+                {
+                    "event": "pixelmon:lose_battle",
+                    "conditions": {
+                        "type": "pixelmon:true"
+                    },
+                    "results": {
+                        "value": [
+                            {
+                                "commands": [
+                                    "scoreboard players set %player_name% BattleEnd 0",
+                                    "scoreboard players set %player_name% BattleStart 0",
+                                    "execute as %player_name% run function hoenn:triggers/stopsound"
+                                ],
+                                "type": "pixelmon:console_execute_command"
+                            }
+                        ],
+                        "type": "pixelmon:constant"
+                    }
+                },
+                {
+                    "event": "pixelmon:win_battle",
+                    "conditions": {
+                        "type": "pixelmon:true"
+                    },
+                    "results": {
+                        "value": [
+                            {
+                                "title": "Chip",
+                                "message": "That giant rock... I would like to believe it may indeed contain ancient ruins, but I see no entrance.",
+                                "fire_close_event": false,
+                                "type": "pixelmon:open_dialogue"
+                            },
+                            {
+                                "money": 896,
+                                "type": "pixelmon:give_money"
+                            },
+                            {
+                                "commands": [
+                                    "scoreboard players set %player_name% BattleEnd 1",
+                                    "execute as %player_name% run function hoenn:triggers/stopsound"
+                                ],
+                                "type": "pixelmon:console_execute_command"
+                            }
+                        ],
+                        "type": "pixelmon:constant"
+                    }
+                }
+            ]
+        },
+        "type": "pixelmon:constant"
+    },
+    "properties": {
+        "value": {
+            "health": 20,
+            "eyeHeight": 1.9,
+            "dimensions": {
+                "width": 0.65,
+                "height": 2
+            },
+            "child": false,
+            "invulnerable": true,
+            "immovable": true,
+            "nameplate": false
+        },
+        "type": "pixelmon:constant"
+    },
+    "party": {
+        "value": {
+            "options": [
+                "Baltoy level:32",
+                "Nosepass level:32"
+            ],
+            "min_selections": 2,
+            "max_selections": 2,
+            "type": "pixelmon:random_combination"
+        },
+        "type": "pixelmon:constant"
+    },
+    "names": {
+        "values": [
+            "Chip"
+        ],
+        "type": "pixelmon:uniformly_random"
+    },
+    "models": {
+        "values": [
+            {
+                "slim": false,
+                "texture": {
+                    "resource": {
+                        "resource": "pixelmon:textures/steve/ornithologist.png",
+                        "fallback": "pixelmon:textures/steve/ornithologist.png"
+                    },
+                    "type": "pixelmon:fallback"
+                },
+                "type": "pixelmon:player"
+            }
+        ],
+        "type": "pixelmon:uniformly_random"
+    },
+    "goals": {
+        "type": "pixelmon:constant",
+        "value": {
+            "goals": [
+                {
+                    "provider": {
+                        "type": "pixelmon:look_at_nearby",
+                        "look_distance": 5,
+                        "probability": 0.9
+                    },
+                    "priority": 1
+                }
+            ]
+        }
+    }
+}
