@@ -1,0 +1,20 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "mawile-1",
+            "pokemon": "mawile",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-12",
+            "weight": 35,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 64, "maxY": 91
+            }
+        }
+    ]
+}

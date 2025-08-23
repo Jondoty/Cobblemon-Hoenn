@@ -49,6 +49,71 @@
                 ],
                 "minX": -2862, "maxX": -2609, "minZ": -512, "maxZ": -348, "minY": 0, "maxY": 256
             }
+        },
+
+        
+        {
+            "id": "pelipper-3",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "20-30",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2869, "maxX": -2637, "minZ": 111, "maxZ": 634, "minY": 36, "maxY": 292
+            }
+        },
+
+        {
+            "id": "pelipper-4",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "9-12",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2869, "maxX": -2331, "minZ": 635, "maxZ": 789, "minY": 31, "maxY": 287
+            }
+        },
+
+        {
+            "id": "pelipper-5",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "9-12",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2574, "maxX": -2331, "minZ": 790, "maxZ": 966, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "pelipper-6",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "20-30",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2330, "maxX": -2060, "minZ": 782, "maxZ": 966, "minY": 40, "maxY": 296
+            }
         }
     ]
 }
