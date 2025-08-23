@@ -33,6 +33,70 @@
                 ],
                 "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "zigzagoon-3",
+            "pokemon": "zigzagoon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2-3",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2107, "maxX": -1655, "minZ": -138, "maxZ": -5, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "zigzagoon-4",
+            "pokemon": "zigzagoon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2-5",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2889, "maxX": -2637, "minZ": -114, "maxZ": 110, "minY": 0, "maxY": 256
+            }
+        },
+        {
+            "id": "zigzagoon-4",
+            "pokemon": "zigzagoon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "4-7",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2862, "maxX": -2609, "minZ": -512, "maxZ": -348, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "zigzagoon-5",
+            "pokemon": "zigzagoon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "4-6",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2862, "maxX": -2587, "minZ": -347, "maxZ": -115, "minY": 0, "maxY": 256
+            }
         }
         ]
 }

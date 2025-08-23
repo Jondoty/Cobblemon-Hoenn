@@ -33,6 +33,22 @@
                 ],
                 "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "poochyena-3",
+            "pokemon": "poochyena",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2-3",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2107, "maxX": -1655, "minZ": -138, "maxZ": -5, "minY": 0, "maxY": 256
+            }
         }
         ]
 }

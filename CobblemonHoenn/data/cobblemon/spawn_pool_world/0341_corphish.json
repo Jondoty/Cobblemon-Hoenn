@@ -30,6 +30,35 @@
                 "minLureLevel": 3,
                 "maxLureLevel": 3
             }
+        },
+
+        {
+            "id": "corphish-2",
+            "pokemon": "corphish",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 5.0,
+            "condition": {
+                "minX": -2636, "maxX": -2437, "minZ": -81, "maxZ": 118, "minY": 0, "maxY": 256,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "corphish-2",
+            "pokemon": "corphish",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 100.0,
+            "condition": {
+                "minX": -2636, "maxX": -2437, "minZ": -81, "maxZ": 118, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
         }
         ]
 }

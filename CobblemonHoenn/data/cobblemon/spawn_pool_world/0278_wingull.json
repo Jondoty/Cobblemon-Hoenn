@@ -4,45 +4,44 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "wurmple-1",
-            "pokemon": "wurmple",
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "common",
-            "level": "2",
-            "weight": 40,
-            "condition": {
-                "neededNearbyBlocks": [
-                    "minecraft:short_grass"
-                ],
-                "minX": -2098, "maxX": -1952, "minZ": 119, "maxZ": 278, "minY": 0, "maxY": 256
-            }
-        },
-
-        {
-            "id": "wurmple-2",
-            "pokemon": "wurmple",
+            "id": "wingull-1",
+            "pokemon": "wingull",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "2-3",
-            "weight": 30,
+            "weight": 20,
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
                 ],
-                "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
+                "minX": -2107, "maxX": -1655, "minZ": -138, "maxZ": -5, "minY": 0, "maxY": 256
+            }
+        },
+        {
+            "id": "wingull-2",
+            "pokemon": "wingull",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "2-3",
+            "weight": 30,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2107, "maxX": -1655, "minZ": -138, "maxZ": -5, "minY": 0, "maxY": 256
             }
         },
 
         {
-            "id": "wurmple-3",
-            "pokemon": "wurmple",
+            "id": "wingull-1",
+            "pokemon": "wingull",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "2-5",
-            "weight": 40,
+            "weight": 15,
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -51,13 +50,13 @@
             }
         },
         {
-            "id": "wurmple-3",
-            "pokemon": "wurmple",
+            "id": "wingull-1",
+            "pokemon": "wingull",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "4-7",
-            "weight": 40,
+            "weight": 15,
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -65,22 +64,36 @@
                 "minX": -2862, "maxX": -2609, "minZ": -512, "maxZ": -348, "minY": 0, "maxY": 256
             }
         },
-
         {
-            "id": "wurmple-4",
-            "pokemon": "wurmple",
+            "id": "wingull-3",
+            "pokemon": "wingull",
             "type": "pokemon",
-            "context": "grounded",
+            "context": "surface",
             "bucket": "common",
-            "level": "4-6",
-            "weight": 30,
+            "level": "4-7",
+            "weight": 95,
             "condition": {
-                "canSeeSky": false,
-                "neededNearbyBlocks": [
-                    "minecraft:short_grass"
+                "presets": [
+                    "water"
                 ],
-                "minX": -2862, "maxX": -2587, "minZ": -347, "maxZ": -115, "minY": 0, "maxY": 256
+                "minX": -2889, "maxX": -2637, "minZ": -114, "maxZ": 110, "minY": 0, "maxY": 256
+
+            }
+        },
+        {
+            "id": "wingull-3",
+            "pokemon": "wingull",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "4-7",
+            "weight": 95,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2862, "maxX": -2609, "minZ": -512, "maxZ": -348, "minY": 0, "maxY": 256
             }
         }
-        ]
+    ]
 }
