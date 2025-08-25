@@ -114,6 +114,86 @@
                 ],
                 "minX": -2330, "maxX": -2060, "minZ": 782, "maxZ": 966, "minY": 40, "maxY": 296
             }
+        },
+
+        {
+            "id": "pelipper-7",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "20-30",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2059, "maxX": -1688, "minZ": 802, "maxZ": 966, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "pelipper-7",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "20-25",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -2059, "maxX": -1688, "minZ": 537, "maxZ": 801, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "pelipper-7",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-13",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -1687, "maxX": -1270, "minZ": 449, "maxZ": 966, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "pelipper-7",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-13",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -1654, "maxX": -1288, "minZ": 136, "maxZ": 448, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "pelipper-8",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-13",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -1654, "maxX": -1321, "minZ": -491, "maxZ": 135, "minY": 0, "maxY": 256
+            }
         }
     ]
 }
