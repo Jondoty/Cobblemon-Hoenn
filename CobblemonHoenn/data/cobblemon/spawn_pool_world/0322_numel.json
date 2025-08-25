@@ -1,0 +1,68 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "numel-1",
+            "pokemon": "numel",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "13-16",
+            "weight": 60,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1910, "maxX": -1602, "minZ": -1371, "maxZ": -1024, "minY": 60, "maxY": 316
+            }
+        },
+
+        {
+            "id": "numel-2",
+            "pokemon": "numel",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "14-17",
+            "weight": 65,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1910, "maxX": -1602, "minZ": -1371, "maxZ": -1024, "minY": 60, "maxY": 316
+            }
+        },
+
+        {
+            "id": "numel-3",
+            "pokemon": "numel",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "13-16",
+            "weight": 40,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -1963, "maxX": -1739, "minZ": -1387, "maxZ": -1144, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "numel-4",
+            "pokemon": "numel",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "18-21",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2215, "maxX": -1529, "minZ": -3100, "maxZ": -2343, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

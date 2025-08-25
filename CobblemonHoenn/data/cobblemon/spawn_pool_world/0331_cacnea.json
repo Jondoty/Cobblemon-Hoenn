@@ -1,0 +1,39 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "cacnea-1",
+            "pokemon": "cacnea",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "20-23",
+            "weight": 20,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:sand",
+                    "minecraft:red_sand"
+                ],
+                "minX": -1562, "maxX": -1313, "minZ": -1293, "maxZ": -1134, "minY": 60, "maxY": 316
+            }
+        },
+        {
+            "id": "cacnea-1",
+            "pokemon": "cacnea",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "20-23",
+            "weight": 20,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:sand",
+                    "minecraft:red_sand"
+                ],
+                "minX": -1479, "maxX": -1313, "minZ": -1133, "maxZ": -866, "minY": 60, "maxY": 316
+            }
+        }
+    ]
+}

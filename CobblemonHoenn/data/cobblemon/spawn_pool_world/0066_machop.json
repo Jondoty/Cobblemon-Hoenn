@@ -1,0 +1,68 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "machop-1",
+            "pokemon": "machop",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "13-16",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1910, "maxX": -1602, "minZ": -1371, "maxZ": -1024, "minY": 60, "maxY": 316
+            }
+        },
+
+        {
+            "id": "machop-2",
+            "pokemon": "machop",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "14-17",
+            "weight": 35,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1910, "maxX": -1602, "minZ": -1371, "maxZ": -1024, "minY": 60, "maxY": 316
+            }
+        },
+
+        {
+            "id": "machop-3",
+            "pokemon": "machop",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "13-16",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -1963, "maxX": -1739, "minZ": -1387, "maxZ": -1144, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "machop-4",
+            "pokemon": "machop",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "18-21",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2215, "maxX": -1529, "minZ": -3100, "maxZ": -2343, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

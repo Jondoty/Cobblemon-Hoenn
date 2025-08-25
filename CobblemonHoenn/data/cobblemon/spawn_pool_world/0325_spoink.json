@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "spoink-1",
+            "pokemon": "spoink",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "18-21",
+            "weight": 20,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2215, "maxX": -1529, "minZ": -3100, "maxZ": -2343, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

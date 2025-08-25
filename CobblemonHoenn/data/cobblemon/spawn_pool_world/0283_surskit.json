@@ -48,6 +48,21 @@
             ],
             "minX": -2636, "maxX": -2437, "minZ": -81, "maxZ": 118, "minY": 0, "maxY": 256
         }
-    }
-        ]
+        },
+        {
+            "id": "surskit-3",
+            "pokemon": "surskit",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "13-16",
+            "weight": 15.0,
+            "condition": {
+                "minX": -1601, "maxX": -1313, "minZ": -1507, "maxZ": -719, "minY": 60, "maxY": 316
+            }
+        }
+    ]
 }
