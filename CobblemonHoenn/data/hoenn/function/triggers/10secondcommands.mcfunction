@@ -9,8 +9,11 @@ function hoenn:world/bases/exteriors
 #Manages any differences in game version
 function hoenn:world/gamedifferences
 
-#Please stop spawning bosses everywhere
-function hoenn:randomizer/debossinator
+#Regenerates Cut Trees
+function hoenn:hms/cutregen
+
+#Regenerates Rock Smash rocks
+execute as @a[tag=RockSmash] at @s as @e[tag=RockSmash,type=armor_stand,distance=40..150] run function hoenn:hms/rocksmashregen
 
 #Resets rock smash rocks when player wanders away
 execute as @e[tag=Regenerate,type=minecraft:armor_stand] at @s unless entity @a[distance=..75] run function hoenn:spawn/rocksmashrock
