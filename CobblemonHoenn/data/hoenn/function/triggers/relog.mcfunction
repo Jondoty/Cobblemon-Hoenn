@@ -41,10 +41,10 @@ execute as @s[tag=Dialogue115,tag=!Dialogue116] run tag @s remove Dialogue115
 
 
 #Relog condition if player crashes/DCs between legend spawn and legend no longer in chamber
-execute as @s[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,tag=Dialogue145,tag=!Dialogue149] unless entity @e[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,type=pixelmon:pixelmon] run tag @s remove Dialogue145
-execute as @s[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,tag=Dialogue147,tag=!Dialogue149] unless entity @e[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,type=pixelmon:pixelmon] run tag @s remove Dialogue147
-execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue146,tag=!Dialogue149] unless entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,type=pixelmon:pixelmon] run tag @s remove Dialogue146
-execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue148,tag=!Dialogue149] unless entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,type=pixelmon:pixelmon] run tag @s remove Dialogue148
+#execute as @s[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,tag=Dialogue145,tag=!Dialogue149] unless entity @e[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,type=pixelmon:pixelmon] run tag @s remove Dialogue145
+#execute as @s[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,tag=Dialogue147,tag=!Dialogue149] unless entity @e[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,type=pixelmon:pixelmon] run tag @s remove Dialogue147
+#execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue146,tag=!Dialogue149] unless entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,type=pixelmon:pixelmon] run tag @s remove Dialogue146
+#execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue148,tag=!Dialogue149] unless entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,type=pixelmon:pixelmon] run tag @s remove Dialogue148
 
 
 #Stern's Radar Prompt
@@ -82,13 +82,17 @@ tag @s remove ShakeScreen
 
 
 #Refreshes any stuck on advancement achievements
-advancement revoke @s only hoenn:click/npcchatting
-advancement revoke @s only hoenn:click/rocksmashuse
 advancement revoke @s only hoenn:click/signread
+advancement revoke @s only kalos:click/cuttrees
+advancement revoke @s only kalos:click/itemclick
+advancement revoke @s only kalos:click/npcs
+advancement revoke @s only kalos:click/rocksmash
+advancement revoke @s only kalos:click/signs
+advancement revoke @s only kalos:click/strengthrock
 
 
 #If player has no bike, allows them to get another. Or if player relogs between claim and dialogue
-execute unless entity @s[nbt={Inventory:[{id:"pixelmon:mach_bike"}]}] unless entity @s[nbt={Inventory:[{id:"pixelmon:acro_bike"}]}] run tag @s remove Dialogue66
+#execute unless entity @s[nbt={Inventory:[{id:"pixelmon:mach_bike"}]}] unless entity @s[nbt={Inventory:[{id:"pixelmon:acro_bike"}]}] run tag @s remove Dialogue66
 
 #Shoal Shell Guy
 tag @s[tag=Dialogue227,tag=!Dialogue228] remove Dialogue228

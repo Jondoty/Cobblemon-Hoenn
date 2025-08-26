@@ -73,10 +73,10 @@ tag @a remove TornadusHave
 
 
 #Runs the Deoxys defeated dialogue if player's catch advancement bugs. Checks if a Deoxys is not present, will activate dialogue on second refresh.
-execute if entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] remove TempDelay
-execute unless entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] remove Dialogue208
-execute unless entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run scoreboard players set @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] DialogueTrigger 208
-execute unless entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure] add TempDelay
+#execute if entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] remove TempDelay
+#execute unless entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] remove Dialogue208
+#execute unless entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run scoreboard players set @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] DialogueTrigger 208
+#execute unless entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure] add TempDelay
 
 
 #Route 113 bushes regeneration
