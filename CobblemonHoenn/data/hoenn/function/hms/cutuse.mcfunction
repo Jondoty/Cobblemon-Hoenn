@@ -77,7 +77,79 @@ execute as @s[x=-220,y=84,z=-1279,distance=..10] as @e[x=-220,y=84,z=-1279,dista
 execute as @s[x=-220,y=84,z=-1279,distance=..10] run kill @e[x=-220,y=84,z=-1279,distance=..5,tag=CutTree,type=interaction]
 
 
+#Route 121
+execute as @s[x=33,y=84,z=-1055,distance=..10] run fill 33 84 -1058 33 86 -1052 air
+execute as @s[x=33,y=84,z=-1055,distance=..10] at @e[x=33,y=84,z=-1055,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=33,y=84,z=-1055,distance=..10] as @e[x=33,y=84,z=-1055,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=33,y=84,z=-1055,distance=..10] run kill @e[x=33,y=84,z=-1055,distance=..5,tag=CutTree,type=interaction]
 
+execute as @s[x=-21,y=74,z=-998,distance=..10] run fill -21 74 -995 -21 76 -1001 air
+execute as @s[x=-21,y=74,z=-998,distance=..10] at @e[x=-21,y=74,z=-998,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-21,y=74,z=-998,distance=..10] as @e[x=-21,y=74,z=-998,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-21,y=74,z=-998,distance=..10] run kill @e[x=-21,y=74,z=-998,distance=..5,tag=CutTree,type=interaction]
+
+execute as @s[x=208,y=74,z=-1054,distance=..10] run fill 205 74 -1054 211 76 -1054 air
+execute as @s[x=208,y=74,z=-1054,distance=..10] at @e[x=208,y=74,z=-1054,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=208,y=74,z=-1054,distance=..10] as @e[x=208,y=74,z=-1054,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=208,y=74,z=-1054,distance=..10] run kill @e[x=208,y=74,z=-1054,distance=..5,tag=CutTree,type=interaction]
+
+
+#Route 123
+execute as @s[x=197,y=74,z=-575,distance=..10] run fill 197 74 -573 197 76 -577 air
+execute as @s[x=197,y=74,z=-575,distance=..10] at @e[x=197,y=74,z=-575,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=197,y=74,z=-575,distance=..10] as @e[x=197,y=74,z=-575,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=197,y=74,z=-575,distance=..10] run kill @e[x=197,y=74,z=-575,distance=..5,tag=CutTree,type=interaction]
+
+execute as @s[x=51,y=74,z=-591,distance=..10] run fill 53 74 -591 49 76 -591 air
+execute as @s[x=51,y=74,z=-591,distance=..10] at @e[x=51,y=74,z=-591,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=51,y=74,z=-591,distance=..10] as @e[x=51,y=74,z=-591,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=51,y=74,z=-591,distance=..10] run kill @e[x=51,y=74,z=-591,distance=..5,tag=CutTree,type=interaction]
+
+execute as @s[x=-1,y=74,z=-608,distance=..10] run fill 1 74 -608 -3 76 -608 air
+execute as @s[x=-1,y=74,z=-608,distance=..10] at @e[x=-1,y=74,z=-608,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-1,y=74,z=-608,distance=..10] as @e[x=-1,y=74,z=-608,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-1,y=74,z=-608,distance=..10] run kill @e[x=-1,y=74,z=-608,distance=..5,tag=CutTree,type=interaction]
+
+
+#Mirage Island (south of Route 132)
+execute as @s[x=-452,y=69,z=677,distance=..10] run fill -450 69 677 -454 71 677 air
+execute as @s[x=-452,y=69,z=677,distance=..10] at @e[x=-452,y=69,z=677,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-452,y=69,z=677,distance=..10] as @e[x=-452,y=69,z=677,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-452,y=69,z=677,distance=..10] run kill @e[x=-452,y=69,z=677,distance=..5,tag=CutTree,type=interaction]
+
+execute as @s[x=-446,y=69,z=658,distance=..10] run fill -444 69 658 -448 71 658 air
+execute as @s[x=-446,y=69,z=658,distance=..10] at @e[x=-446,y=69,z=658,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-446,y=69,z=658,distance=..10] as @e[x=-446,y=69,z=658,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-446,y=69,z=658,distance=..10] run kill @e[x=-446,y=69,z=658,distance=..5,tag=CutTree,type=interaction]
+
+execute as @s[x=-478,y=69,z=674,distance=..10] run fill -478 69 676 -478 71 672 air
+execute as @s[x=-478,y=69,z=674,distance=..10] at @e[x=-478,y=69,z=674,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-478,y=69,z=674,distance=..10] as @e[x=-478,y=69,z=674,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-478,y=69,z=674,distance=..10] run kill @e[x=-478,y=69,z=674,distance=..5,tag=CutTree,type=interaction]
+
+execute as @s[x=-459,y=69,z=639,distance=..10] run fill -459 69 637 -459 71 642 air
+execute as @s[x=-459,y=69,z=639,distance=..10] at @e[x=-459,y=69,z=639,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-459,y=69,z=639,distance=..10] as @e[x=-459,y=69,z=639,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-459,y=69,z=639,distance=..10] run kill @e[x=-459,y=69,z=639,distance=..5,tag=CutTree,type=interaction]
+
+execute as @s[x=-487,y=69,z=686,distance=..10] run fill -487 69 683 -487 71 688 air
+execute as @s[x=-487,y=69,z=686,distance=..10] at @e[x=-487,y=69,z=686,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-487,y=69,z=686,distance=..10] as @e[x=-487,y=69,z=686,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-487,y=69,z=686,distance=..10] run kill @e[x=-487,y=69,z=686,distance=..5,tag=CutTree,type=interaction]
+
+
+#Mirage Forest (east of Mossdeep City)
+execute as @s[x=-1222,y=64,z=2207,distance=..10] run fill -1226 64 2207 -1218 67 2207 air
+execute as @s[x=-1222,y=64,z=2207,distance=..10] at @e[x=-1222,y=64,z=2207,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-1222,y=64,z=2207,distance=..10] as @e[x=-1222,y=64,z=2207,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-1222,y=64,z=2207,distance=..10] run kill @e[x=-1222,y=64,z=2207,distance=..5,tag=CutTree,type=interaction]
+
+
+#Mirage Forest  (south of Route 132)
+execute as @s[x=-978,y=64,z=2336,distance=..10] run fill -975 64 2336 -981 67 2336 air
+execute as @s[x=-978,y=64,z=2336,distance=..10] at @e[x=-978,y=64,z=2336,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
+execute as @s[x=-978,y=64,z=2336,distance=..10] as @e[x=-978,y=64,z=2336,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
+execute as @s[x=-978,y=64,z=2336,distance=..10] run kill @e[x=-978,y=64,z=2336,distance=..5,tag=CutTree,type=interaction]
 
 
 
