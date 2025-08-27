@@ -1,0 +1,20 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "bagon-1",
+            "pokemon": "bagon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "37-40",
+            "weight": 35,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2298, "maxX": 2376, "minZ": -3146, "maxZ": -3023, "minY": 138
+            }
+        }
+    ]
+}

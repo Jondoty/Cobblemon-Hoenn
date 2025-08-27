@@ -4,61 +4,47 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "zubat-1",
-            "pokemon": "zubat",
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "common",
-            "level": "9-12",
-            "weight": 40,
-            "condition": {
-                "canSeeSky": false,
-                "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 130, "maxY": 150
-            }
-        },
-        {
-            "id": "zubat-1",
-            "pokemon": "zubat",
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "common",
-            "level": "10-12",
-            "weight": 30,
-            "condition": {
-                "canSeeSky": false,
-                "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 92, "maxY": 129
-            }
-        },
-        {
-            "id": "zubat-1",
-            "pokemon": "zubat",
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "common",
-            "level": "10-12",
-            "weight": 30,
-            "condition": {
-                "canSeeSky": false,
-                "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 64, "maxY": 91
-            }
-        },
-
-        {
-            "id": "zubat-2",
-            "pokemon": "zubat",
+            "id": "solrock-1",
+            "pokemon": "solrock",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "16-19",
-            "weight": 75,
+            "weight": 25,
             "condition": {
                 "canSeeSky": false,
                 "minX": 2199, "maxX": 2402, "minZ": -2619, "maxZ": -2326, "minY": 0, "maxY": 135
             }
         },
         {
-            "id": "zubat-2",
-            "pokemon": "zubat",
+            "id": "solrock-1",
+            "pokemon": "solrock",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "37-40",
+            "weight": 25,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2215, "maxX": 2402, "minZ": -3169, "maxZ": -2654, "minY": 63, "maxY": 135
+            }
+        },
+        {
+            "id": "solrock-1",
+            "pokemon": "solrock",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "37-40",
+            "weight": 25,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2298, "maxX": 2376, "minZ": -3146, "maxZ": -3023, "minY": 138
+            }
+        },
+        {
+            "id": "solrock-1",
+            "pokemon": "solrock",
             "presets": [
                 "water"
             ],
@@ -66,9 +52,24 @@
             "context": "surface",
             "bucket": "common",
             "level": "16-19",
-            "weight": 80,
+            "weight": 16,
             "condition": {
                 "minX": 2199, "maxX": 2402, "minZ": -2619, "maxZ": -2326, "minY": 0, "maxY": 135
+            }
+        },
+        {
+            "id": "solrock-1",
+            "pokemon": "solrock",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 20,
+            "condition": {
+                "minX": 2215, "maxX": 2402, "minZ": -3169, "maxZ": -2654
             }
         }
     ]

@@ -48,6 +48,37 @@
             "condition": {
                 "minX": -1601, "maxX": -1313, "minZ": -1507, "maxZ": -719, "minY": 60, "maxY": 316
             }
+        },
+
+        {
+            "id": "azumarill-4",
+            "pokemon": "azumarill",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "16-19",
+            "weight": 31.0,
+            "condition": {
+                "minX": -2620, "maxX": -2345, "minZ": -1507, "maxZ": -1080, "minY": 0, "maxY": 256
+            }
+        },
+        {
+            "id": "azumarill-4",
+            "pokemon": "azumarill",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "16-19",
+            "weight": 31.0,
+            "condition": {
+                "minX": -2588, "maxX": -2345, "minZ": -1079, "maxZ": -908, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

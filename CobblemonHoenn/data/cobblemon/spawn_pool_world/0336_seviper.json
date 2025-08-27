@@ -1,0 +1,37 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "seviper-1",
+            "pokemon": "seviper",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "16-19",
+            "weight": 9.5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2620, "maxX": -2345, "minZ": -1507, "maxZ": -1080, "minY": 0, "maxY": 256
+            }
+        },
+        {
+            "id": "seviper-1",
+            "pokemon": "seviper",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "16-19",
+            "weight": 9.5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2588, "maxX": -2345, "minZ": -1079, "maxZ": -908, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

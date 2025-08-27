@@ -34,6 +34,22 @@
                 ],
                 "minX": -1479, "maxX": -1313, "minZ": -1133, "maxZ": -866, "minY": 60, "maxY": 316
             }
+        },
+        
+        {
+            "id": "sandshrew-2",
+            "pokemon": "sandshrew",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "15-18",
+            "weight": 35,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2154, "maxX": -1602, "minZ": -1507, "maxZ": -1372, "minY": 0, "maxY": 256
+            }
         }
     ]
 }
