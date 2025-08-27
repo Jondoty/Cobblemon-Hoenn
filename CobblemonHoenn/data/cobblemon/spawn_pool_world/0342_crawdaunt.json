@@ -1,0 +1,21 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "crawdaunt-1",
+            "pokemon": "crawdaunt",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 5.0,
+            "condition": {
+                "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        }
+        ]
+}

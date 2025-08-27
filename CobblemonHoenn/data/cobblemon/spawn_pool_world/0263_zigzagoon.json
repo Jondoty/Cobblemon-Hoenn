@@ -114,6 +114,38 @@
                 ],
                 "minX": -1654, "maxX": -1321, "minZ": -491, "maxZ": 135, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "zigzagoon-7",
+            "pokemon": "zigzagoon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "5-8",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2608, "maxX": -2230, "minZ": -776, "maxZ": -629, "minY": 64, "maxY": 320
+            }
+        },
+
+        {
+            "id": "zigzagoon-8",
+            "pokemon": "zigzagoon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "11-14",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

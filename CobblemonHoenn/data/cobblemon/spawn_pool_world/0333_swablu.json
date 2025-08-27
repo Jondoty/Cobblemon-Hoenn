@@ -32,6 +32,22 @@
                 ],
                 "minX": -2588, "maxX": -2345, "minZ": -1079, "maxZ": -908, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "swablu-2",
+            "pokemon": "swablu",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "17-20",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2834, "maxX": -2799, "minZ": -1308, "maxZ": -1263, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

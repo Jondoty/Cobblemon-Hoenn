@@ -49,6 +49,38 @@
                 ],
                 "minX": -2862, "maxX": -2587, "minZ": -347, "maxZ": -115, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "taillow-3",
+            "pokemon": "taillow",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "17-20",
+            "weight": 40,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2834, "maxX": -2799, "minZ": -1308, "maxZ": -1263, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "taillow-4",
+            "pokemon": "taillow",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "5-8",
+            "weight": 15,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -2608, "maxX": -2230, "minZ": -776, "maxZ": -629, "minY": 64, "maxY": 320
+            }
         }
-        ]
+     ]
 }

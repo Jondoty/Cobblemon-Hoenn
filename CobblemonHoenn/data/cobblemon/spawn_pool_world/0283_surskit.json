@@ -124,6 +124,37 @@
             "condition": {
                 "minX": -2588, "maxX": -2345, "minZ": -1079, "maxZ": -908, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "surskit-5",
+            "pokemon": "surskit",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "11-14",
+            "weight": 1,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256
+            }
+        },
+        {
+            "id": "surskit-5",
+            "pokemon": "surskit",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "11-14",
+            "weight": 15,
+            "condition": {
+                "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

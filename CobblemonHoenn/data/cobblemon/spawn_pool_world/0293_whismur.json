@@ -4,36 +4,33 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "oddish-1",
-            "pokemon": "oddish",
+            "id": "whismur-1",
+            "pokemon": "whismur",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
-            "level": "10-13",
-            "weight": 10,
+            "level": "5-8",
+            "weight": 30,
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
                 ],
-                "minX": -1654, "maxX": -1321, "minZ": -491, "maxZ": 135, "minY": 0, "maxY": 256
+                "minX": -2608, "maxX": -2230, "minZ": -776, "maxZ": -629, "minY": 64, "maxY": 320
             }
         },
 
         {
-            "id": "oddish-2",
-            "pokemon": "oddish",
+            "id": "whismur-2",
+            "pokemon": "whismur",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
-            "level": "11-14",
+            "level": "7-10",
             "weight": 10,
             "condition": {
-                "neededNearbyBlocks": [
-                    "minecraft:short_grass"
-                ],
-                "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256
+                "canSeeSky": false,
+                "minX": -2451, "maxX": -2229, "minZ": -863, "maxZ": -716, "minY": 0, "maxY": 60
             }
         }
-
-    ]
+     ]
 }

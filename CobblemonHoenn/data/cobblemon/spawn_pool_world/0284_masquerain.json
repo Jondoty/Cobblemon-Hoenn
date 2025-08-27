@@ -80,6 +80,22 @@
             "condition": {
                 "minX": -2620, "maxX": -2345, "minZ": -1507, "maxZ": -1080, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "masquerain-5",
+            "pokemon": "masquerain",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "11-14",
+            "weight": 4.0,
+            "condition": {
+                "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256
+            }
         }
     ]
 }
