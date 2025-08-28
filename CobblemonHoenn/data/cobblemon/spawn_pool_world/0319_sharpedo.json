@@ -1,0 +1,36 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "sharpedo-1",
+            "pokemon": "sharpedo",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-35",
+            "weight": 5,
+            "condition": {
+                "minX": -1399, "maxX": -725, "minZ": -662, "maxZ": -492, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "sharpedo-2",
+            "pokemon": "sharpedo",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 35,
+            "condition": {
+                "minX": -1070, "maxX": -728, "minZ": -1509, "maxZ": -663, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "absol-1",
+            "pokemon": "absol",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "24-27",
+            "weight": 5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -435, "maxX": -178, "minZ": -1509, "maxZ": -993, "minY": 60, "maxY": 316
+            }
+        }
+
+    ]
+}

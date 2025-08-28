@@ -117,6 +117,35 @@
                 "minLureLevel": 3,
                 "maxLureLevel": 3
             }
+        },
+
+        {
+            "id": "barboach-4",
+            "pokemon": "barboach",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 25.0,
+            "condition": {
+                "minX": -435, "maxX": -178, "minZ": -1509, "maxZ": -993, "minY": 60, "maxY": 316,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "barboach-4",
+            "pokemon": "barboach",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 100.0,
+            "condition": {
+                "minX": -435, "maxX": -178, "minZ": -1509, "maxZ": -993, "minY": 60, "maxY": 316,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
         }
     ]
 }

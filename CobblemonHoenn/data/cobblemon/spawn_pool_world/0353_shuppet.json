@@ -1,0 +1,24 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "shuppet-1",
+            "pokemon": "shuppet",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "27-30",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass",
+                    "minecraft:tall_grass"
+                ],
+                "minX": -177, "maxX": 317, "minZ": -1090, "maxZ": -960, "minY": 0, "maxY": 256
+            }
+        }
+
+    ]
+}

@@ -285,6 +285,54 @@
                 ],
                 "minX": -2929, "maxX": -2609, "minZ": -1363, "maxZ": -749, "minY": 0, "maxY": 256
             }
+        },
+
+        
+        {
+            "id": "wingull-13",
+            "pokemon": "wingull",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "21-24",
+            "weight": 15,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1399, "maxX": -725, "minZ": -662, "maxZ": -492, "minY": 0, "maxY": 256
+            }
+        },
+        {
+            "id": "wingull-13",
+            "pokemon": "wingull",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "11-14",
+            "weight": 30,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -1399, "maxX": -725, "minZ": -662, "maxZ": -492, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "wingull-14",
+            "pokemon": "wingull",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "20-30",
+            "weight": 30,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -1070, "maxX": -728, "minZ": -1509, "maxZ": -663, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

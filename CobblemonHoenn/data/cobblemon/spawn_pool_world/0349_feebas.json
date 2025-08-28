@@ -1,0 +1,143 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "15",
+            "weight": 5,
+            "condition": {
+                "minX": -1070, "maxX": -728, "minZ": -1509, "maxZ": -663, "minY": 0, "maxY": 256,
+                "minLureLevel": 1,
+                "maxLureLevel": 1
+            }
+        },
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 5,
+            "condition": {
+                "minX": -1070, "maxX": -728, "minZ": -1509, "maxZ": -663, "minY": 0, "maxY": 256,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "35",
+            "weight": 5,
+            "condition": {
+                "minX": -1070, "maxX": -728, "minZ": -1509, "maxZ": -663, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "15",
+            "weight": 10000,
+            "condition": {
+                "timeRange": "night",
+                "minX": -913, "maxX": -897, "minZ": -846, "maxZ": -830, "minY": 0, "maxY": 256,
+                "minLureLevel": 1,
+                "maxLureLevel": 1
+            }
+        },
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 10000,
+            "condition": {
+                "timeRange": "night",
+                "minX": -913, "maxX": -897, "minZ": -846, "maxZ": -830, "minY": 0, "maxY": 256,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "35",
+            "weight": 10000,
+            "condition": {
+                "timeRange": "night",
+                "minX": -913, "maxX": -897, "minZ": -846, "maxZ": -830, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "15",
+            "weight": 10000,
+            "condition": {
+                "timeRange": "day",
+                "minX": -952, "maxX": -879, "minZ": -1285, "maxZ": -1272, "minY": 0, "maxY": 256,
+                "minLureLevel": 1,
+                "maxLureLevel": 1
+            }
+        },
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 10000,
+            "condition": {
+                "timeRange": "day",
+                "minX": -952, "maxX": -879, "minZ": -1285, "maxZ": -1272, "minY": 0, "maxY": 256,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "feebas-1",
+            "pokemon": "feebas",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "35",
+            "weight": 10000,
+            "condition": {
+                "timeRange": "day",
+                "minX": -952, "maxX": -879, "minZ": -1285, "maxZ": -1272, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        }
+    ]
+}

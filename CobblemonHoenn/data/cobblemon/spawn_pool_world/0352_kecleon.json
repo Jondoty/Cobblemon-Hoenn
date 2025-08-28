@@ -1,0 +1,72 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "kecleon-1",
+            "pokemon": "kecleon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "21-24",
+            "weight": 5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1399, "maxX": -725, "minZ": -662, "maxZ": -492, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "kecleon-2",
+            "pokemon": "kecleon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "22-25",
+            "weight": 5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:tall_grass"
+                ],
+                "minX": -1070, "maxX": -728, "minZ": -1509, "maxZ": -663, "minY": 0, "maxY": 256
+            }
+        },
+        
+        {
+            "id": "kecleon-3",
+            "pokemon": "kecleon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "24-27",
+            "weight": 5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -435, "maxX": -178, "minZ": -1509, "maxZ": -993, "minY": 60, "maxY": 316
+            }
+        },
+
+        {
+            "id": "kecleon-4",
+            "pokemon": "kecleon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "27-30",
+            "weight": 5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass",
+                    "minecraft:tall_grass"
+                ],
+                "minX": -177, "maxX": 317, "minZ": -1090, "maxZ": -960, "minY": 0, "maxY": 256
+            }
+        }
+
+    ]
+}
