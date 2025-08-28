@@ -52,6 +52,38 @@
                 ],
                 "minX": -177, "maxX": 317, "minZ": -1090, "maxZ": -960, "minY": 0, "maxY": 256
             }
+        },
+        
+        {
+            "id": "gloom-4",
+            "pokemon": "gloom",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "27-30",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -139, "maxX": 101, "minZ": -1329, "maxZ": -1101
+            }
+        },
+        
+        {
+            "id": "gloom-5",
+            "pokemon": "gloom",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "28-31",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -725, "maxX": 247, "minZ": -680, "maxZ": -491, "minY": 0, "maxY": 256
+            }
         }
 
     ]

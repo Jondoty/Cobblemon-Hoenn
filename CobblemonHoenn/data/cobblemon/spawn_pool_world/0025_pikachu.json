@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "pikachu-1",
+            "pokemon": "pikachu",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "27-30",
+            "weight": 20,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -21, "maxX": 101, "minZ": -1209, "maxZ": -1101
+            }
+        }
+    ]
+}

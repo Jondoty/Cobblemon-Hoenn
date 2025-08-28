@@ -66,6 +66,22 @@
                 ],
                 "minX": -177, "maxX": 317, "minZ": -1090, "maxZ": -960, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "kecleon-5",
+            "pokemon": "kecleon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "28-31",
+            "weight": 5,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -725, "maxX": 247, "minZ": -680, "maxZ": -491, "minY": 0, "maxY": 256
+            }
         }
 
     ]

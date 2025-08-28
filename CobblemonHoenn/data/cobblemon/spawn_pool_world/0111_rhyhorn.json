@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "rhyhorn-1",
+            "pokemon": "rhyhorn",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "27-30",
+            "weight": 20,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -139, "maxX": -22, "minZ": -1329, "maxZ": -1210
+            }
+        }
+    ]
+}

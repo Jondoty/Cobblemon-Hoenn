@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "donphan-1",
+            "pokemon": "donphan",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "27-30",
+            "weight": 20,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -21, "maxX": 101, "minZ": -1329, "maxZ": -1210
+            }
+        }
+    ]
+}

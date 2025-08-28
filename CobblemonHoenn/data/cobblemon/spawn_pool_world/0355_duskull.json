@@ -1,0 +1,21 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "duskull-1",
+            "pokemon": "duskull",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "28-31",
+            "weight": 35,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 1562, "maxX": 1671, "minZ": 2552, "maxZ": 2667, "minY": 21, "maxY": 79
+            }
+        }
+
+    ]
+}

@@ -119,6 +119,22 @@
             "condition": {
                 "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "marill-6",
+            "pokemon": "marill",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "20-30",
+            "weight": 50,
+            "condition": {
+                "minX": -725, "maxX": 247, "minZ": -680, "maxZ": -491, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

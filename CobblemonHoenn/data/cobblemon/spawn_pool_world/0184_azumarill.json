@@ -111,6 +111,22 @@
             "condition": {
                 "minX": -435, "maxX": -178, "minZ": -1509, "maxZ": -993, "minY": 60, "maxY": 316
             }
+        },
+
+        {
+            "id": "azumarill-7",
+            "pokemon": "azumarill",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "20-30",
+            "weight": 16,
+            "condition": {
+                "minX": -725, "maxX": 247, "minZ": -680, "maxZ": -491, "minY": 0, "maxY": 256
+            }
         }
     ]
 }
