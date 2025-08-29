@@ -17,6 +17,22 @@
                 ],
                 "minX": 1369, "maxX": 1861, "minZ": 2223, "maxZ": 2991, "minY": 85
             }
+        },
+
+        {
+            "id": "vulpix-2",
+            "pokemon": "vulpix",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 10,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1073, "maxX": -908, "minZ": 2086, "maxZ": 2273, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

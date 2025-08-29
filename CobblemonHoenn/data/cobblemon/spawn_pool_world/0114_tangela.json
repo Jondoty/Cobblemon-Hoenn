@@ -17,6 +17,70 @@
                 ],
                 "minX": 1679, "maxX": 1875, "minZ": -1752, "maxZ": -1578, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "tangela-2",
+            "pokemon": "tangela",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1291, "maxX": -1109, "minZ": 2086, "maxZ": 2255, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "tangela-3",
+            "pokemon": "tangela",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1073, "maxX": -908, "minZ": 2086, "maxZ": 2273, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "tangela-4",
+            "pokemon": "tangela",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -874, "maxX": -737, "minZ": 2086, "maxZ": 2232, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "tangela-5",
+            "pokemon": "tangela",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 30,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1279, "maxX": -1099, "minZ": 2285, "maxZ": 2439, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

@@ -4,24 +4,24 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "purugly-1",
-            "pokemon": "purugly",
+            "id": "sunkern-1",
+            "pokemon": "sunkern",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "36-38",
-            "weight": 60,
+            "weight": 30,
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
                 ],
-                "minX": -170, "maxX": 47, "minZ": 699, "maxZ": 941, "minY": 0, "maxY": 256
+                "minX": -1291, "maxX": -1109, "minZ": 2086, "maxZ": 2255, "minY": 0, "maxY": 256
             }
         },
 
         {
-            "id": "purugly-2",
-            "pokemon": "purugly",
+            "id": "sunkern-2",
+            "pokemon": "sunkern",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
@@ -36,8 +36,8 @@
         },
 
         {
-            "id": "purugly-3",
-            "pokemon": "purugly",
+            "id": "sunkern-3",
+            "pokemon": "sunkern",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
@@ -52,8 +52,8 @@
         },
 
         {
-            "id": "purugly-4",
-            "pokemon": "purugly",
+            "id": "sunkern-3",
+            "pokemon": "sunkern",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
@@ -64,6 +64,38 @@
                     "minecraft:short_grass"
                 ],
                 "minX": -1279, "maxX": -1099, "minZ": 2285, "maxZ": 2439, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "sunkern-4",
+            "pokemon": "sunkern",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1050, "maxX": -925, "minZ": 2285, "maxZ": 2434, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "sunkern-5",
+            "pokemon": "sunkern",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 10,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1280, "maxX": -1102, "minZ": 2462, "maxZ": 2605, "minY": 0, "maxY": 256
             }
         }
     ]

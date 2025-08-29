@@ -4,34 +4,34 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "larvesta-1",
-            "pokemon": "larvesta",
+            "id": "petilil-1",
+            "pokemon": "petilil",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "36-38",
-            "weight": 40,
+            "weight": 10,
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
                 ],
-                "minX": 942, "maxX": 1141, "minZ": -1630, "maxZ": -1413, "minY": 0, "maxY": 256
+                "minX": -874, "maxX": -737, "minZ": 2086, "maxZ": 2232, "minY": 0, "maxY": 256
             }
         },
 
         {
-            "id": "larvesta-2",
-            "pokemon": "larvesta",
+            "id": "petilil-2",
+            "pokemon": "petilil",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "36-38",
-            "weight": 60,
+            "weight": 30,
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
                 ],
-                "minX": -1069, "maxX": -882, "minZ": 2462, "maxZ": 2609, "minY": 0, "maxY": 256
+                "minX": -1050, "maxX": -925, "minZ": 2285, "maxZ": 2434, "minY": 0, "maxY": 256
             }
         }
     ]
