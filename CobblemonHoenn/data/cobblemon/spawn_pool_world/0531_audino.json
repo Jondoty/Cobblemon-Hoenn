@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "audino-1",
+            "pokemon": "audino",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 90,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -579, "maxX": -386, "minZ": 571, "maxZ": 785, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

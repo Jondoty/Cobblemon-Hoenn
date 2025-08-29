@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "persian-1",
+            "pokemon": "persian",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 10,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -3134, "maxX": -2906, "minZ": 837, "maxZ": 1033, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "darmanitan-1",
+            "pokemon": "darmanitan",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 10,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -3395, "maxX": -3197, "minZ": -325, "maxZ": -103, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "darmanitan-2",
+            "pokemon": "darmanitan",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": 942, "maxX": 1141, "minZ": -1630, "maxZ": -1413, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

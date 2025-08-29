@@ -4,24 +4,8 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "xatu-1",
-            "pokemon": "xatu",
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "common",
-            "level": "27-30",
-            "weight": 20,
-            "condition": {
-                "neededNearbyBlocks": [
-                    "minecraft:short_grass"
-                ],
-                "minX": -139, "maxX": -22, "minZ": -1209, "maxZ": -1101
-            }
-        },
-
-        {
-            "id": "xatu-2",
-            "pokemon": "xatu",
+            "id": "venomoth-1",
+            "pokemon": "venomoth",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
@@ -36,8 +20,8 @@
         },
 
         {
-            "id": "xatu-3",
-            "pokemon": "xatu",
+            "id": "venomoth-2",
+            "pokemon": "venomoth",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
@@ -52,8 +36,8 @@
         },
 
         {
-            "id": "xatu-4",
-            "pokemon": "xatu",
+            "id": "venomoth-3",
+            "pokemon": "venomoth",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
@@ -68,24 +52,8 @@
         },
 
         {
-            "id": "xatu-5",
-            "pokemon": "xatu",
-            "type": "pokemon",
-            "context": "grounded",
-            "bucket": "common",
-            "level": "36-38",
-            "weight": 10,
-            "condition": {
-                "neededNearbyBlocks": [
-                    "minecraft:short_grass"
-                ],
-                "minX": -579, "maxX": -386, "minZ": 571, "maxZ": 785, "minY": 0, "maxY": 256
-            }
-        },
-
-        {
-            "id": "xatu-6",
-            "pokemon": "xatu",
+            "id": "venomoth-4",
+            "pokemon": "venomoth",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
