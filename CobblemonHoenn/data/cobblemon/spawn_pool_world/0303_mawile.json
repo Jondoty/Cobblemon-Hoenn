@@ -43,6 +43,20 @@
                 "canSeeSky": false,
                 "minX": 252, "maxX": 411, "minZ": -243, "maxZ": -130, "minY": 89, "maxY": 225
             }
+        },
+
+        {
+            "id": "mawile-4",
+            "pokemon": "mawile",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "37-40",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 1182, "maxX": 1463, "minZ": -3312, "maxZ": -2580
+            }
         }
     ]
 }

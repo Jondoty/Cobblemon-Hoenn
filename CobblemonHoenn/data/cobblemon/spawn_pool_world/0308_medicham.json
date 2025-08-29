@@ -1,0 +1,20 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "medicham-1",
+            "pokemon": "medicham",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "37-40",
+            "weight": 15,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 1182, "maxX": 1463, "minZ": -3312, "maxZ": -2580
+            }
+        }
+     ]
+}

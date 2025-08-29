@@ -209,6 +209,38 @@
                 ],
                 "minX": 2025, "maxX": 2363, "minZ": -884, "maxZ": 77, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "tentacruel-13",
+            "pokemon": "tentacruel",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "37-40",
+            "weight": 15,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": 1182, "maxX": 1463, "minZ": -3312, "maxZ": -2580
+            }
+        },
+
+        {
+            "id": "tentacruel-14",
+            "pokemon": "tentacruel",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "35-40",
+            "weight": 50,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": 2071, "maxX": 2734, "minZ": 323, "maxZ": 1229, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

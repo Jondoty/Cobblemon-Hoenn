@@ -529,6 +529,40 @@
                 ],
                 "minX": -1287, "maxX": -925, "minZ": 136, "maxZ": 448, "minY": 31, "maxY": 287
             }
+        },
+
+        
+        {
+            "id": "pelipper-30",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "35-40",
+            "weight": 19,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": 2071, "maxX": 2734, "minZ": 323, "maxZ": 1229, "minY": 0, "maxY": 256
+            }
+        },
+
+        
+        {
+            "id": "pelipper-31",
+            "pokemon": "pelipper",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 5,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": 2025, "maxX": 2363, "minZ": -884, "maxZ": 77, "minY": 0, "maxY": 256
+            }
         }
     ]
 }
