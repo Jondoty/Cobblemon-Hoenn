@@ -70,6 +70,23 @@
             "condition": {
                 "minX": 2199, "maxX": 2402, "minZ": -2619, "maxZ": -2326, "minY": 0, "maxY": 135
             }
+        },
+
+        {
+            "id": "zubat-3",
+            "pokemon": "zubat",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2440, "maxX": 2759, "minZ": -3361, "maxZ": -2675, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

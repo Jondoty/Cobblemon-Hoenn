@@ -16,6 +16,81 @@
                 "minLureLevel": 3,
                 "maxLureLevel": 3
             }
+        },
+
+        {
+            "id": "horsea-2",
+            "pokemon": "horsea",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30",
+            "weight": 35,
+            "condition": {
+                "minX": 45, "maxX": 506, "minZ": -8, "maxZ": 396, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "horsea-3",
+            "pokemon": "horsea",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30",
+            "weight": 35,
+            "condition": {
+                "minX": -545, "maxX": -181, "minZ": 135, "maxZ": 447, "minY": 31, "maxY": 287,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "horsea-4",
+            "pokemon": "horsea",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30",
+            "weight": 40,
+            "condition": {
+                "minX": 2440, "maxX": 2759, "minZ": -3361, "maxZ": -2675, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "horsea-5",
+            "pokemon": "horsea",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30",
+            "weight": 35,
+            "condition": {
+                "minX": -924, "maxX": -546, "minZ": 136, "maxZ": 448, "minY": 31, "maxY": 287,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "horsea-6",
+            "pokemon": "horsea",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30",
+            "weight": 35,
+            "condition": {
+                "minX": -1287, "maxX": -925, "minZ": 136, "maxZ": 448, "minY": 31, "maxY": 287,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
         }
     ]
 }

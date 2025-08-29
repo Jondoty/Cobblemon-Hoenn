@@ -140,6 +140,37 @@
                 "canSeeSky": false,
                 "minX": 1753, "maxX": 2166, "minZ": -3361, "maxZ": -2286, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "golbat-4",
+            "pokemon": "golbat",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "44-46",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 252, "maxX": 411, "minZ": -243, "maxZ": -130, "minY": 89, "maxY": 225
+            }
+        },
+
+        {
+            "id": "zubat-5",
+            "pokemon": "zubat",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2440, "maxX": 2759, "minZ": -3361, "maxZ": -2675, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

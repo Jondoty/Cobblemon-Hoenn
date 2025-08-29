@@ -34,6 +34,22 @@
                     "water"
                 ]
             }
+        },
+
+        
+        {
+            "id": "corsola-2",
+            "pokemon": "corsola",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 5,
+            "condition": {
+                "minX": 2025, "maxX": 2363, "minZ": -884, "maxZ": 77, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
         }
     ]
 }

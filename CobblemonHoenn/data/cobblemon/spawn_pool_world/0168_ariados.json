@@ -1,0 +1,20 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "ariados-1",
+            "pokemon": "ariados",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "44-46",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 252, "maxX": 411, "minZ": -243, "maxZ": -130, "minY": 89, "maxY": 225
+            }
+        }
+    ]
+}

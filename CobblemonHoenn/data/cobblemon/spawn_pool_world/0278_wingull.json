@@ -381,6 +381,22 @@
                 ],
                 "minX": 318, "maxX": 832, "minZ": -1170, "maxZ": -845, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "wingull-18",
+            "pokemon": "wingull",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 30,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": -1287, "maxX": -925, "minZ": 136, "maxZ": 448, "minY": 31, "maxY": 287
+            }
         }
     ]
 }
