@@ -1,0 +1,59 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "spheal-1",
+            "pokemon": "spheal",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2771, "maxX": 3009, "minZ": -3275, "maxZ": -2971
+            }
+        },
+        {
+            "id": "spheal-1",
+            "pokemon": "spheal",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2783, "maxX": 3012, "minZ": -2746, "maxZ": -2326, "minY": 64, "maxY": 126
+            }
+        },
+        {
+            "id": "spheal-1",
+            "pokemon": "spheal",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2783, "maxX": 3012, "minZ": -2959, "maxZ": -2744, "minY": 86, "maxY": 126
+            }
+        },
+        {
+            "id": "spheal-1",
+            "pokemon": "spheal",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2783, "maxX": 3012, "minZ": -2959, "maxZ": -2744, "minY": 64, "maxY": 85
+            }
+        }
+    ]
+}

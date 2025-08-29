@@ -1,0 +1,54 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "tentacruel-1",
+            "pokemon": "tentacruel",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 15,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": 833, "maxX": 1244, "minZ": -1170, "maxZ": -831, "minY": 31, "maxY": 287
+            }
+        },
+
+        {
+            "id": "tentacruel-2",
+            "pokemon": "tentacruel",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 15,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": 1391, "maxX": 1799, "minZ": -1373, "maxZ": -1164, "minY": 0, "maxY": 256
+            }
+        },
+
+        {
+            "id": "tentacruel-3",
+            "pokemon": "tentacruel",
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 15,
+            "condition": {
+                "presets": [
+                    "water"
+                ],
+                "minX": 1245, "maxX": 1799, "minZ": -1163, "maxZ": -812, "minY": 0, "maxY": 256
+            }
+        }
+    ]
+}

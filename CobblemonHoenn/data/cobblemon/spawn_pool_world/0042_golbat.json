@@ -58,6 +58,74 @@
             "condition": {
                 "minX": 2215, "maxX": 2402, "minZ": -3169, "maxZ": -2654
             }
+        },
+
+        {
+            "id": "golbat-2",
+            "pokemon": "golbat",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 40,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2771, "maxX": 3009, "minZ": -3275, "maxZ": -2971
+            }
+        },
+        {
+            "id": "golbat-2",
+            "pokemon": "golbat",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 35,
+            "condition": {
+                "minX": 2771, "maxX": 3009, "minZ": -3275, "maxZ": -2971
+            }
+        },
+        {
+            "id": "golbat-2",
+            "pokemon": "golbat",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 40,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2783, "maxX": 3012, "minZ": -2746, "maxZ": -2326, "minY": 64, "maxY": 126
+            }
+        },
+        {
+            "id": "golbat-2",
+            "pokemon": "golbat",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 40,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2783, "maxX": 3012, "minZ": -2959, "maxZ": -2744, "minY": 86, "maxY": 126
+            }
+        },
+        {
+            "id": "golbat-2",
+            "pokemon": "golbat",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-34",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2783, "maxX": 3012, "minZ": -2959, "maxZ": -2744, "minY": 64, "maxY": 85
+            }
         }
     ]
 }

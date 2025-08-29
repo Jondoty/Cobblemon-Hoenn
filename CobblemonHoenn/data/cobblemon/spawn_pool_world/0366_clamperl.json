@@ -20,6 +20,25 @@
                     "water"
                 ]
             }
+        },
+
+        {
+            "id": "clamperl-2",
+            "pokemon": "clamperl",
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 30,
+            "condition": {
+                "minX": 833, "maxX": 1244, "minZ": -1170, "maxZ": -831, "minY": -32, "maxY": 0,
+                "neededNearbyBlocks": [
+                    "minecraft:grass_block"
+                ],
+                "presets": [
+                    "water"
+                ]
+            }
         }
-        ]
+    ]
 }

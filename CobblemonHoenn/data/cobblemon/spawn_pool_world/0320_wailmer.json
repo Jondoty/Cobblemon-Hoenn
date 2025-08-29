@@ -349,6 +349,151 @@
                 "minLureLevel": 3,
                 "maxLureLevel": 3
             }
+        },
+
+        {
+            "id": "wailmer-13",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 5,
+            "condition": {
+                "minX": 833, "maxX": 1244, "minZ": -1170, "maxZ": -831, "minY": 31, "maxY": 287,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "wailmer-13",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 100,
+            "condition": {
+                "minX": 833, "maxX": 1244, "minZ": -1170, "maxZ": -831, "minY": 31, "maxY": 287,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "wailmer-14",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 5,
+            "condition": {
+                "minX": 318, "maxX": 832, "minZ": -1170, "maxZ": -845, "minY": 0, "maxY": 256,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "wailmer-14",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 95,
+            "condition": {
+                "minX": 318, "maxX": 832, "minZ": -1170, "maxZ": -845, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "wailmer-15",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 5,
+            "condition": {
+                "minX": 1391, "maxX": 1799, "minZ": -1373, "maxZ": -1164, "minY": 0, "maxY": 256,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "wailmer-15",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 100,
+            "condition": {
+                "minX": 1391, "maxX": 1799, "minZ": -1373, "maxZ": -1164, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "wailmer-16",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 5,
+            "condition": {
+                "minX": 2771, "maxX": 3009, "minZ": -3275, "maxZ": -2971,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "wailmer-16",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 100,
+            "condition": {
+                "minX": 2771, "maxX": 3009, "minZ": -3275, "maxZ": -2971,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "wailmer-17",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "25",
+            "weight": 5,
+            "condition": {
+                "minX": 1245, "maxX": 1799, "minZ": -1163, "maxZ": -812, "minY": 0, "maxY": 256,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "wailmer-17",
+            "pokemon": "wailmer",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "30-40",
+            "weight": 100,
+            "condition": {
+                "minX": 1245, "maxX": 1799, "minZ": -1163, "maxZ": -812, "minY": 0, "maxY": 256,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
         }
     ]
 }
