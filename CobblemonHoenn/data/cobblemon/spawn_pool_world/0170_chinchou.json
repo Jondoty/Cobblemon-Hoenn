@@ -39,6 +39,82 @@
                     "water"
                 ]
             }
+        },
+
+        {
+            "id": "chinchou-3",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 50,
+            "condition": {
+                "minX": 692, "maxX": 1145, "minZ": -835, "maxZ": -327, "minY": -46, "maxY": 29,
+                "neededNearbyBlocks": [
+                    "minecraft:grass_block"
+                ],
+                "presets": [
+                    "water"
+                ]
+            }
+        },
+
+        {
+            "id": "chinchou-4",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 50,
+            "condition": {
+                "minX": 1175, "maxX": 1793, "minZ": -237, "maxZ": 105, "minY": -62, "maxY": 30,
+                "neededNearbyBlocks": [
+                    "minecraft:grass_block"
+                ],
+                "presets": [
+                    "water"
+                ]
+            }
+        },
+
+        {
+            "id": "chinchou-5",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 50,
+            "condition": {
+                "minX": 964, "maxX": 1637, "minZ": 83, "maxZ": 434, "minY": -74, "maxY": 29,
+                "neededNearbyBlocks": [
+                    "minecraft:grass_block"
+                ],
+                "presets": [
+                    "water"
+                ]
+            }
+        },
+
+        {
+            "id": "chinchou-6",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "submerged",
+            "bucket": "common",
+            "level": "25-35",
+            "weight": 50,
+            "condition": {
+                "minX": 546, "maxX": 963, "minZ": 83, "maxZ": 334, "minY": -74, "maxY": 182,
+                "neededNearbyBlocks": [
+                    "minecraft:grass_block"
+                ],
+                "presets": [
+                    "water"
+                ]
+            }
         }
     ]
 }
