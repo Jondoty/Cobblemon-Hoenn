@@ -17,6 +17,22 @@
                 ],
                 "minX": -170, "maxX": 47, "minZ": 699, "maxZ": 941, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "porygon-2",
+            "pokemon": "porygon",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 10,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1152, "maxX": -1002, "minZ": 2691, "maxZ": 2846, "minY": 0, "maxY": 256
+            }
         }
     ]
 }

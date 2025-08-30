@@ -97,6 +97,22 @@
                 ],
                 "minX": 1679, "maxX": 1875, "minZ": -1752, "maxZ": -1578, "minY": 0, "maxY": 256
             }
+        },
+
+        {
+            "id": "xatu-7",
+            "pokemon": "xatu",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1152, "maxX": -1002, "minZ": 2691, "maxZ": 2846, "minY": 0, "maxY": 256
+            }
         }
     ]
 }
