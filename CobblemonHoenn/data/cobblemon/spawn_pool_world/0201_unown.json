@@ -1,0 +1,20 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "unown-1",
+            "pokemon": "unown",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 100,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -3266, "maxX": -3118, "minZ": -1490, "maxZ": -1366, "minY": 0, "maxY": 60
+            }
+        }
+    ]
+}

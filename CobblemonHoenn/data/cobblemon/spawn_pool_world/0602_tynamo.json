@@ -1,0 +1,90 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "tynamo-1",
+            "pokemon": "tynamo",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 40,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -600, "maxX": -333, "minZ": 2487, "maxZ": 2719, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "tynamo-2",
+            "pokemon": "tynamo",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -323, "maxX": -121, "minZ": 2487, "maxZ": 2710, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "tynamo-3",
+            "pokemon": "tynamo",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -79, "maxX": 130, "minZ": 2487, "maxZ": 2700, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "tynamo-4",
+            "pokemon": "tynamo",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -3303, "maxX": -3164, "minZ": -955, "maxZ": -816, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "tynamo-5",
+            "pokemon": "tynamo",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -594, "maxX": -252, "minZ": 2823, "maxZ": 3103, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "tynamo-6",
+            "pokemon": "tynamo",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -224, "maxX": 60, "minZ": 2823, "maxZ": 3083, "minY": 0, "maxY": 60
+            }
+        }
+    ]
+}

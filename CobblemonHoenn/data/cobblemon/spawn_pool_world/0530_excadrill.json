@@ -4,29 +4,27 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "ditto-1",
-            "pokemon": "ditto",
+            "id": "excadrill-1",
+            "pokemon": "excadrill",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "36-38",
-            "weight": 40,
+            "weight": 30,
             "condition": {
-                "neededNearbyBlocks": [
-                    "minecraft:short_grass"
-                ],
-                "minX": -1953, "maxX": -1712, "minZ": -2065, "maxZ": -1846, "minY": 0, "maxY": 256
+                "canSeeSky": false,
+                "minX": -323, "maxX": -121, "minZ": 2487, "maxZ": 2710, "minY": 0, "maxY": 60
             }
         },
 
         {
-            "id": "ditto-2",
-            "pokemon": "ditto",
+            "id": "excadrill-2",
+            "pokemon": "excadrill",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "36-38",
-            "weight": 40,
+            "weight": 30,
             "condition": {
                 "canSeeSky": false,
                 "minX": -3303, "maxX": -3164, "minZ": -955, "maxZ": -816, "minY": 0, "maxY": 60

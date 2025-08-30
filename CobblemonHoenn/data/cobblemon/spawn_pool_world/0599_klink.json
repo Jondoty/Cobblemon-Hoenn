@@ -1,0 +1,48 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "klink-1",
+            "pokemon": "klink",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -600, "maxX": -333, "minZ": 2487, "maxZ": 2719, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "klink-2",
+            "pokemon": "klink",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -323, "maxX": -121, "minZ": 2487, "maxZ": 2710, "minY": 0, "maxY": 60
+            }
+        },
+
+        {
+            "id": "klink-3",
+            "pokemon": "klink",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "36-38",
+            "weight": 60,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -3177, "maxX": -2997, "minZ": -2052, "maxZ": -1884, "minY": 0, "maxY": 60
+            }
+        }
+    ]
+}

@@ -4,24 +4,22 @@
     "neededUninstalledMods": [],
     "spawns": [
         {
-            "id": "ditto-1",
-            "pokemon": "ditto",
+            "id": "slowpoke-1",
+            "pokemon": "slowpoke",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
             "level": "36-38",
-            "weight": 40,
+            "weight": 10,
             "condition": {
-                "neededNearbyBlocks": [
-                    "minecraft:short_grass"
-                ],
-                "minX": -1953, "maxX": -1712, "minZ": -2065, "maxZ": -1846, "minY": 0, "maxY": 256
+                "canSeeSky": false,
+                "minX": -79, "maxX": 130, "minZ": 2487, "maxZ": 2700, "minY": 0, "maxY": 60
             }
         },
 
         {
-            "id": "ditto-2",
-            "pokemon": "ditto",
+            "id": "slowpoke-2",
+            "pokemon": "slowpoke",
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
@@ -29,7 +27,7 @@
             "weight": 40,
             "condition": {
                 "canSeeSky": false,
-                "minX": -3303, "maxX": -3164, "minZ": -955, "maxZ": -816, "minY": 0, "maxY": 60
+                "minX": -224, "maxX": 60, "minZ": 2823, "maxZ": 3083, "minY": 0, "maxY": 60
             }
         }
     ]
