@@ -2,6 +2,8 @@
 execute at @a run execute if block ~ ~ ~ minecraft:magenta_carpet run function hoenn:world/portals
 execute at @a run execute if block ~ ~ ~ minecraft:pink_carpet run function hoenn:world/portals
 
+#Aligns and gets rid of nametags on NPCs
+execute as @e[type=cobblemon:npc,nbt={PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b,HideNPCNameTag:1b}
 
 #-------------------------World Functions-----------------------------------------------------------------------------------
 #Starts the player at spawn with items, scores and tps to lobby
