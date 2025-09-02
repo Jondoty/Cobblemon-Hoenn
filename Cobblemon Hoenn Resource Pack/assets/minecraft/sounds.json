@@ -780,6 +780,14 @@
       }
     ]
   },
+  "itemget": {
+  "sounds": [
+    {
+      "name":"hoenn/events/itemget",
+      "stream": true
+    }
+  ]
+},
   "keyitem": {
     "sounds": [
       {
