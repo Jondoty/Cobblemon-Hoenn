@@ -104,46 +104,46 @@ execute as @s[tag=!RadioOff,scores={BattleStart=19}] run scoreboard players set 
 #Battle Chatelaine Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=30}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=30}] run playsound battlechatelaine record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=30}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=30}] run scoreboard players set @s MusicCooldown 271
 
 #Elite Four Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=31}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=31}] run playsound elitefour record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=31}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=31}] run scoreboard players set @s MusicCooldown 169
 
 #Gym Leader Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=32}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=32}] run playsound gymleader record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=32}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=32}] run scoreboard players set @s MusicCooldown 208
 
 #Rival Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=33}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=33}] run playsound rival record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=33}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=33}] run scoreboard players set @s MusicCooldown 183
 
 
 #Champion Steven Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=34}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=34}] run playsound steven record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=34}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=34}] run scoreboard players set @s MusicCooldown 184
 
 
 #Aqua/Magma Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=35}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=35}] run playsound teambattle record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=35}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=35}] run scoreboard players set @s MusicCooldown 280
 
 
 #Maxie/Archie Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=36}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=36}] run playsound teamleaders record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=36}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=36}] run scoreboard players set @s MusicCooldown 203
 
 
 #Trainer Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=37}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=37}] run playsound trainer record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=37}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=37}] run scoreboard players set @s MusicCooldown 245
 
 
 #Wally Battle
@@ -155,13 +155,13 @@ execute as @s[tag=!RadioOff,scores={BattleStart=38}] run scoreboard players set 
 #Zinnia Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=39}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=39}] run playsound zinnia record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=39}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=39}] run scoreboard players set @s MusicCooldown 256
 
 
 #Wild Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=40}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=40}] run playsound wild record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=40}] run scoreboard players set @s MusicCooldown 117
+execute as @s[tag=!RadioOff,scores={BattleStart=40}] run scoreboard players set @s MusicCooldown 138
 
 
 
