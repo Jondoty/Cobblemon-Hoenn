@@ -152,16 +152,18 @@ execute as @s[tag=!RadioOff,scores={BattleStart=38}] run playsound wally record 
 execute as @s[tag=!RadioOff,scores={BattleStart=38}] run scoreboard players set @s MusicCooldown 117
 
 
-#Wild Battle
+#Zinnia Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=39}] run stopsound @s record
-execute as @s[tag=!RadioOff,scores={BattleStart=39}] run playsound wild record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=39}] run playsound zinnia record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=39}] run scoreboard players set @s MusicCooldown 117
 
 
-#Zinnia Battle
+#Wild Battle
 execute as @s[tag=!RadioOff,scores={BattleStart=40}] run stopsound @s record
-execute as @s[tag=!RadioOff,scores={BattleStart=40}] run playsound zinnia record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40}] run playsound wild record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=40}] run scoreboard players set @s MusicCooldown 117
+
+
 
 
 
