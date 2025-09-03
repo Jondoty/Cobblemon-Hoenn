@@ -1,7 +1,7 @@
 {
   "type": "cobblemon:simple_pokedex_def",
   "id": "cobblemon:johto",
-  "sortOrder": 3,
+  "sortOrder": 4,
   "entries": [
     "cobblemon:chikorita",
     "cobblemon:bayleef",

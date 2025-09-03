@@ -1,7 +1,7 @@
 {
   "type": "cobblemon:simple_pokedex_def",
   "id": "cobblemon:kanto",
-  "sortOrder": 2,
+  "sortOrder": 3,
   "entries": [
     "cobblemon:bulbasaur",
     "cobblemon:ivysaur",

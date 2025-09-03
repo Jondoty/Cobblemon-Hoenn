@@ -1,7 +1,7 @@
 {
   "type": "cobblemon:aggregate_pokedex_def",
   "id": "cobblemon:national",
-  "sortOrder": 1,
+  "sortOrder": 2,
   "squash": true,
   "subDexIds": [
     "cobblemon:kanto",
