@@ -1,0 +1,46 @@
+{
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:shopman",
+    "presets": [
+        "cobblemon:trainer_basics"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:pokemon_breeder_isaac_interaction"
+    },
+    "name": "Isaac",
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "Whismur level=17",
+            "Zigzagoon level=17",
+            "Aron level=17",
+            "Poochyena level=17",
+            "Taillow level=17",
+            "Makuhita level=17"
+        ]
+    },
+    "config": [
+        {
+            "variableName": "challenge_cooldown",
+            "displayName": "Cooldown",
+            "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+            "type": "NUMBER",
+            "defaultValue": "0"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokemon_breeder_isaac_end @s');"
+        }
+    ]
+}

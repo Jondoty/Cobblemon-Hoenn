@@ -1,0 +1,45 @@
+{
+    "initializationAction": [
+        "c.npc.set_chatting();",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $312 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 312');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Graeme",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:backpacker",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Even the salty smell of the sea is fresh to me... I'm really glad I made this trip. I still want to make more memories on my trip, though, so battle me again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [
+        "q.dialogue.close();"
+    ]
+}
