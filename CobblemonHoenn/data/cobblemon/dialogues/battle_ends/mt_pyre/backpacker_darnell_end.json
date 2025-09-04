@@ -1,0 +1,45 @@
+{
+  "initializationAction": [
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $864 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 864');"
+  ],
+  "speakers": {
+    "npc": {
+      "name": "Darnell",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:backpacker",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": [
+        "The toughest thing about being on a trip is being alone. As long as I have my Pok\u00e9mon, though, it doesn't bother me!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": [
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "escapeAction": [
+    "q.dialogue.close();"
+  ]
+}

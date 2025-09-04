@@ -1,0 +1,46 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:wallace",
+  "presets": [
+    "cobblemon:trainer_basics"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:route131_wallace_interaction"
+  },
+  "name": "Wallace",
+  "party": {
+    "type": "simple",
+    "pokemon": [
+      "Wailord level=55",
+      "Tentacruel level=55",
+      "Ludicolo level=55",
+      "Whiscash level=55",
+      "Gyarados level=55",
+      "Milotic level=57"
+    ]
+  },
+  "config": [
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "Cooldown",
+      "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+      "type": "NUMBER",
+      "defaultValue": "0"
+    },
+    {
+      "variableName": "can_rechallenge",
+      "displayName": "Rechallenging",
+      "description": "This NPC can be battled multiple times.",
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue route131_wallace_end @s');"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:winona",
+  "presets": [
+    "cobblemon:trainer_basics"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:leader_winona_interaction"
+  },
+  "name": "Winona",
+  "party": {
+    "type": "simple",
+    "pokemon": [
+      "Swellow level=33",
+      "Pelipper level=33",
+      "Skarmory level=33",
+      "Altaria level=35"
+    ]
+  },
+  "config": [
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "Cooldown",
+      "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+      "type": "NUMBER",
+      "defaultValue": "0"
+    },
+    {
+      "variableName": "can_rechallenge",
+      "displayName": "Rechallenging",
+      "description": "This NPC can be battled multiple times.",
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue leader_winona_end @s');"
+    }
+  ]
+}

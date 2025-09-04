@@ -1,0 +1,56 @@
+{
+  "initializationAction": [
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
+    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
+  ],
+  "escapeAction": [
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+    "q.dialogue.close();"
+  ],
+  "names": [
+    "Colton"
+  ],
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();"
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+        "Go back and forth between Lilycove and Slateport, that's what I do. It's my hobby\u2014going from port to port to take in Pok\u00e9mon Contest Spectaculars."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
+            "value": "battle",
+            "action": [
+              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
+              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+              "v.battle = q.npc.start_battle(q.player);"
+            ]
+          },
+          {
+            "text": "No",
+            "value": "no",
+            "action": [
+              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

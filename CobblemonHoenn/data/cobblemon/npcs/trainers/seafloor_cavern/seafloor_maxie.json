@@ -1,0 +1,44 @@
+{
+  "hitbox": "player",
+  "resourceIdentifier": "cobblemon:maxie",
+  "presets": [
+    "cobblemon:trainer_basics"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:seafloor_maxie_interaction"
+  },
+  "name": "Maxie",
+  "party": {
+    "type": "simple",
+    "pokemon": [
+      "Mightyena level=41",
+      "Weezing level=41",
+      "Crobat level=41",
+      "Mega Camerupt level=43"
+    ]
+  },
+  "config": [
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "Cooldown",
+      "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+      "type": "NUMBER",
+      "defaultValue": "0"
+    },
+    {
+      "variableName": "can_rechallenge",
+      "displayName": "Rechallenging",
+      "description": "This NPC can be battled multiple times.",
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue seafloor_maxie_end @s');"
+    }
+  ]
+}
