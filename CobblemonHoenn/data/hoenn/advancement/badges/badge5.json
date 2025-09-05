@@ -8,7 +8,7 @@
             "text": "Defeat Dad"
         },
         "icon": {
-            "item": "pixelmon:balance_badge"
+            "id": "cobblemon:silk_scarf"
         },
         "frame": "task",
         "show_toast": true,

@@ -8,7 +8,7 @@
             "text": "Obtain the Mega Ring on Southern Island"
         },
         "icon": {
-            "item": "pixelmon:key_stone"
+            "id": "mega_showdown:keystone"
         },
         "frame": "task",
         "show_toast": true,

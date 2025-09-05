@@ -8,7 +8,7 @@
             "text": "Explore the region"
         },
         "icon": {
-            "item": "pixelmon:wide_lens"
+            "id": "cobblemon:wide_lens"
         },
         "frame": "task",
         "show_toast": false,

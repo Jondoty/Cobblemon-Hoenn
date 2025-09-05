@@ -8,7 +8,7 @@
             "text": "Defeat Flannery"
         },
         "icon": {
-            "item": "pixelmon:heat_badge"
+            "id": "cobblemon:magmarizer"
         },
         "frame": "task",
         "show_toast": true,

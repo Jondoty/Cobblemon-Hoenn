@@ -8,7 +8,7 @@
             "text": "Defeat Liza & Tate"
         },
         "icon": {
-            "item": "pixelmon:mind_badge"
+            "id": "cobblemon:twisted_spoon"
         },
         "frame": "task",
         "show_toast": true,

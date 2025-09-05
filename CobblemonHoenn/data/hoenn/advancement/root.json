@@ -1,15 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:carrot_on_a_stick",
-      "nbt": "{CustomModelData:100}"
+      "id": "cobblemon:pokedex_green"
     },
     "title": "The Hoenn Region",
     "description": "Enter into Hoenn",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false,
-    "background": "pixelmon:textures/gui/advancements/backgrounds/ruinswall.png"
+    "background": "cobblemon:textures/gui/advancements/backgrounds/cobblemon.png"
   },
   "criteria": {
     "requirement": {

@@ -8,7 +8,7 @@
             "text": "Visit a mirage area"
         },
         "icon": {
-            "item": "pixelmon:eon_flute"
+            "id": "minecraft:compass"
         },
         "frame": "task",
         "show_toast": true,

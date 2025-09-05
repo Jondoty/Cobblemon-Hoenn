@@ -8,7 +8,7 @@
             "text": "Wake up Groudon from its slumber"
         },
         "icon": {
-            "item": "pixelmon:ground_gem"
+            "id": "cobblemon:ground_gem"
         },
         "frame": "task",
         "show_toast": true,
