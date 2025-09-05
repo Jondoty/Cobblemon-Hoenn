@@ -1,18 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:pokefanf",
+  "resourceIdentifier": "cobblemon:schoolgirl",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:pok\u00e9fan_vanessa_interaction"
+    "dialogue": "cobblemon:twins_miu_and_yuki_interaction"
   },
-  "name": "Vanessa",
+  "name": "Miu & Yuki",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Pikachu level=35"
+      "Beautifly level=35",
+      "Dustox level=35"
     ]
   },
   "config": [
@@ -35,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pok\u00e9fan_vanessa_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twins_miu_and_yuki_end @s');"
     }
   ]
 }

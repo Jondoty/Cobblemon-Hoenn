@@ -1,18 +1,19 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:pokefanm",
+    "resourceIdentifier": "cobblemon:schoolgirl",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:pok\u00e9_maniac_steve_interaction"
+        "dialogue": "cobblemon:teammates_anna_and_meg_interaction"
     },
-    "name": "Steve",
+    "name": "Anna & Meg",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Aron level=23"
+            "Zigzagoon level=17",
+            "Makuhita level=18"
         ]
     },
     "config": [
@@ -35,7 +36,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pok\u00e9_maniac_steve_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue teammates_anna_and_meg_end @s');"
         }
     ]
 }

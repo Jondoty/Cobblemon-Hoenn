@@ -1,19 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:scientistf",
+  "resourceIdentifier": "cobblemon:liza-tate",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:interviewers_gabby_&_ty_interaction"
+    "dialogue": "cobblemon:leaders_liza_and_tate_interaction"
   },
-  "name": "Gabby & Ty",
+  "name": "Liza & Tate",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Loutred level=29",
-      "Magneton level=29"
+      "Lunatone level=45",
+      "Solrock level=45"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue interviewers_gabby_&_ty_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue leaders_liza_and_tate_end @s');"
     }
   ]
 }

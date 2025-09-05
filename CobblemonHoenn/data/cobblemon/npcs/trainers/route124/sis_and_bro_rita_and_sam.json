@@ -1,19 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:schoolgirl",
+  "resourceIdentifier": "cobblemon:swimmerf",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:twins_miu_&_yuki_interaction"
+    "dialogue": "cobblemon:sis_and_bro_rita_and_sam_interaction"
   },
-  "name": "Miu & Yuki",
+  "name": "Rita & Sam",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Beautifly level=35",
-      "Dustox level=35"
+      "Pelipper level=39",
+      "Whiscash level=38"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twins_miu_&_yuki_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue sis_and_bro_rita_and_sam_end @s');"
     }
   ]
 }

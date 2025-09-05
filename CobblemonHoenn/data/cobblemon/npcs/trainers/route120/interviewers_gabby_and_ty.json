@@ -1,18 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:pokefanm",
+  "resourceIdentifier": "cobblemon:scientistf",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:pok\u00e9maniac_mark_interaction"
+    "dialogue": "cobblemon:interviewers_gabby_and_ty_interaction"
   },
-  "name": "Mark",
+  "name": "Gabby & Ty",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Lairon level=36"
+      "Loutred level=29",
+      "Magneton level=29"
     ]
   },
   "config": [
@@ -35,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pok\u00e9maniac_mark_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue interviewers_gabby_and_ty_end @s');"
     }
   ]
 }

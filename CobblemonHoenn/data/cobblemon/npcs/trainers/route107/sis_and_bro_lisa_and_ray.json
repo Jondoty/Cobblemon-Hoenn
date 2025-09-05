@@ -1,19 +1,19 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:schoolgirl",
+    "resourceIdentifier": "cobblemon:swimmerf",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:twins_gina&mia_interaction"
+        "dialogue": "cobblemon:sis_and_bro_lisa_and_ray_interaction"
     },
-    "name": "Gina & Mia",
+    "name": "Lisa & Ray",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Lotad level=9",
-            "Seedot level=9"
+            "Goldeen level=27",
+            "Corphish level=26"
         ]
     },
     "config": [
@@ -36,7 +36,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twins_gina&mia_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue sis_and_bro_lisa_and_ray_end @s');"
         }
     ]
 }

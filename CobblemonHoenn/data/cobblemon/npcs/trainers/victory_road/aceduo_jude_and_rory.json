@@ -1,19 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:hexmaniac",
+  "resourceIdentifier": "cobblemon:acetrainerm",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:mysterioussisters_elle_&_aya_interaction"
+    "dialogue": "cobblemon:aceduo_jude_and_rory_interaction"
   },
-  "name": "Elle & Aya",
+  "name": "Jude & Rory",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Girafarig level=36",
-      "Mawile level=35"
+      "Armaldo level=47",
+      "Cradily level=47"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue mysterioussisters_elle_&_aya_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue aceduo_jude_and_rory_end @s');"
     }
   ]
 }

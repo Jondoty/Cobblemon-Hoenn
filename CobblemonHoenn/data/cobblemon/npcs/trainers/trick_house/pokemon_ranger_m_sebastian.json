@@ -1,19 +1,19 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:schoolgirl",
+    "resourceIdentifier": "cobblemon:rangerm",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:twins_amy&liv_interaction"
+        "dialogue": "cobblemon:pokemon_ranger_m_sebastian_interaction"
     },
-    "name": "Amy & Liv",
+    "name": "Sebastian",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Plusle level=16",
-            "Minun level=16"
+            "Cacnea level=16",
+            "Aron level=18"
         ]
     },
     "config": [
@@ -36,7 +36,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twins_amy&liv_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokemon_ranger_m_sebastian_end @s');"
         }
     ]
 }

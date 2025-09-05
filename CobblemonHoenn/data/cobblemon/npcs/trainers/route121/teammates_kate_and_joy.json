@@ -1,19 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:liza-tate",
+  "resourceIdentifier": "cobblemon:schoolgirl",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:leaders_liza_&_tate_interaction"
+    "dialogue": "cobblemon:teammates_kate_and_joy_interaction"
   },
-  "name": "Liza & Tate",
+  "name": "Kate & Joy",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Lunatone level=45",
-      "Solrock level=45"
+      "Spinda level=34",
+      "Slaking level=35"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue leaders_liza_&_tate_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue teammates_kate_and_joy_end @s');"
     }
   ]
 }

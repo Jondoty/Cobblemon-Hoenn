@@ -1,19 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:swimmerf",
+  "resourceIdentifier": "cobblemon:schoolgirl",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:sis&bro_rita_&_sam_interaction"
+    "dialogue": "cobblemon:youngcouple_lea_and_jed_interaction"
   },
-  "name": "Rita & Sam",
+  "name": "Lea & Jed",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Pelipper level=39",
-      "Whiscash level=38"
+      "Miltank level=51",
+      "Tauros level=51"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue sis&bro_rita_&_sam_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue youngcouple_lea_and_jed_end @s');"
     }
   ]
 }

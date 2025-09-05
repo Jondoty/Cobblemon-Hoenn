@@ -1,19 +1,18 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:blackbelt",
+  "resourceIdentifier": "cobblemon:pokefanf",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:brains&brawn_aden_&_finn_interaction"
+    "dialogue": "cobblemon:pokedan_marissa_interaction"
   },
-  "name": "Aden & Finn",
+  "name": "Marissa",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Musharna level=47",
-      "Primeape level=47"
+      "Azumarill level=43"
     ]
   },
   "config": [
@@ -36,7 +35,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue brains&brawn_aden_&_finn_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokedan_marissa_end @s');"
     }
   ]
 }

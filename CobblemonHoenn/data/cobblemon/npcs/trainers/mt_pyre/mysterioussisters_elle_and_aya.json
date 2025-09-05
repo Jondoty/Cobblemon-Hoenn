@@ -1,19 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:schoolgirl",
+  "resourceIdentifier": "cobblemon:hexmaniac",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:youngcouple_dez_&_luke_interaction"
+    "dialogue": "cobblemon:mysterioussisters_elle_and_aya_interaction"
   },
-  "name": "Dez & Luke",
+  "name": "Elle & Aya",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Delcatty level=36",
-      "Manectric level=36"
+      "Girafarig level=36",
+      "Mawile level=35"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue youngcouple_dez_&_luke_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue mysterioussisters_elle_and_aya_end @s');"
     }
   ]
 }

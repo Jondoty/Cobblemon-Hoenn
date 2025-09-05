@@ -1,19 +1,19 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:blackbelt",
+    "resourceIdentifier": "cobblemon:schoolgirl",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:brains_&_brawn_jael_and_kael_interaction"
+        "dialogue": "cobblemon:twins_gina_and_mia_interaction"
     },
-    "name": "Jael & Kael",
+    "name": "Gina & Mia",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Kadabra level=31",
-            "Machoke level=31"
+            "Lotad level=9",
+            "Seedot level=9"
         ]
     },
     "config": [
@@ -36,7 +36,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue brains_&_brawn_jael_and_kael_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twins_gina_and_mia_end @s');"
         }
     ]
 }

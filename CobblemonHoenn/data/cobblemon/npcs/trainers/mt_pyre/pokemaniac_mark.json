@@ -1,19 +1,18 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:schoolgirl",
+  "resourceIdentifier": "cobblemon:pokefanm",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:teammates_kate_&_joy_interaction"
+    "dialogue": "cobblemon:pokemaniac_mark_interaction"
   },
-  "name": "Kate & Joy",
+  "name": "Mark",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Spinda level=34",
-      "Slaking level=35"
+      "Lairon level=36"
     ]
   },
   "config": [
@@ -36,7 +35,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue teammates_kate_&_joy_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokemaniac_mark_end @s');"
     }
   ]
 }

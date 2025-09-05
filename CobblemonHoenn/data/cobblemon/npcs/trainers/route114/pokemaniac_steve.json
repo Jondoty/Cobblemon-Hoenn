@@ -1,19 +1,18 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:rangerf",
+    "resourceIdentifier": "cobblemon:pokefanm",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:pok\u00e9mon_ranger_f_sophia_interaction"
+        "dialogue": "cobblemon:pokemaniac_steve_interaction"
     },
-    "name": "Sophia",
+    "name": "Steve",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Swablu level=17",
-            "Roselia level=17"
+            "Aron level=23"
         ]
     },
     "config": [
@@ -36,7 +35,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pok\u00e9mon_ranger_f_sophia_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokemaniac_steve_end @s');"
         }
     ]
 }

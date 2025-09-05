@@ -6,14 +6,14 @@
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:youngcouple_lea_&_jed_interaction"
+    "dialogue": "cobblemon:youngcouple_dez_and_luke_interaction"
   },
-  "name": "Lea & Jed",
+  "name": "Dez & Luke",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Miltank level=51",
-      "Tauros level=51"
+      "Delcatty level=36",
+      "Manectric level=36"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue youngcouple_lea_&_jed_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue youngcouple_dez_and_luke_end @s');"
     }
   ]
 }

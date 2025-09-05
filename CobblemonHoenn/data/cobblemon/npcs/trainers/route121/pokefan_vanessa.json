@@ -1,20 +1,18 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:pokefanm",
+  "resourceIdentifier": "cobblemon:pokefanf",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:pok\u00e9fan_colton_interaction"
+    "dialogue": "cobblemon:pokedan_vanessa_interaction"
   },
-  "name": "Colton",
+  "name": "Vanessa",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Delcatty level=48",
-      "Delcatty level=48",
-      "Delcatty level=48"
+      "Pikachu level=35"
     ]
   },
   "config": [
@@ -37,7 +35,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pok\u00e9fan_colton_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokedan_vanessa_end @s');"
     }
   ]
 }

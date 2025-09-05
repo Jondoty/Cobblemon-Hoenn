@@ -6,14 +6,14 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:pok\u00e9mon_ranger_m_sebastian_interaction"
+        "dialogue": "cobblemon:pokemon_ranger_jackson_interaction"
     },
-    "name": "Sebastian",
+    "name": "Jackson",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Cacnea level=16",
-            "Aron level=18"
+            "Seviper level=29",
+            "Vigoroth level=29"
         ]
     },
     "config": [
@@ -36,7 +36,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pok\u00e9mon_ranger_m_sebastian_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokemon_ranger_jackson_end @s');"
         }
     ]
 }

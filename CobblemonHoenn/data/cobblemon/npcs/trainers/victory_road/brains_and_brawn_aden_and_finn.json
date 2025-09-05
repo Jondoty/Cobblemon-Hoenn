@@ -1,19 +1,19 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:acetrainerm",
+  "resourceIdentifier": "cobblemon:blackbelt",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:aceduo_jude_&_rory_interaction"
+    "dialogue": "cobblemon:brains_and_brawn_aden_and_finn_interaction"
   },
-  "name": "Jude & Rory",
+  "name": "Aden & Finn",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Armaldo level=47",
-      "Cradily level=47"
+      "Musharna level=47",
+      "Primeape level=47"
     ]
   },
   "config": [
@@ -36,7 +36,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue aceduo_jude_&_rory_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue brains_and_brawn_aden_and_finn_end @s');"
     }
   ]
 }

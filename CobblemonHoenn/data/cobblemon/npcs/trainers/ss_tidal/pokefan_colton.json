@@ -1,19 +1,20 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:swimmerf",
+  "resourceIdentifier": "cobblemon:pokefanm",
   "presets": [
     "cobblemon:trainer_basics"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:sis&bro_rell_&_ian_interaction"
+    "dialogue": "cobblemon:pokedan_colton_interaction"
   },
-  "name": "Rell & Ian",
+  "name": "Colton",
   "party": {
     "type": "simple",
     "pokemon": [
-      "Azumarill level=39",
-      "Sealeo level=38"
+      "Delcatty level=48",
+      "Delcatty level=48",
+      "Delcatty level=48"
     ]
   },
   "config": [
@@ -36,7 +37,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue sis&bro_rell_&_ian_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue pokedan_colton_end @s');"
     }
   ]
 }

@@ -6,14 +6,14 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:teammates_anna&meg_interaction"
+        "dialogue": "cobblemon:twins_amy_and_liv_interaction"
     },
-    "name": "Anna & Meg",
+    "name": "Amy & Liv",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Zigzagoon level=17",
-            "Makuhita level=18"
+            "Plusle level=16",
+            "Minun level=16"
         ]
     },
     "config": [
@@ -36,7 +36,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue teammates_anna&meg_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twins_amy_and_liv_end @s');"
         }
     ]
 }
