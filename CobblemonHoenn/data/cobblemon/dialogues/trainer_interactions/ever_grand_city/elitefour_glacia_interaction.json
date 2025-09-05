@@ -1,6 +1,6 @@
 {
   "initializationAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 2');",
     "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
   ],
   "escapeAction": [
@@ -35,7 +35,7 @@
             "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
             "value": "battle",
             "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
+              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 31');",
               "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
               "v.battle = q.npc.start_battle(q.player);"
             ]
