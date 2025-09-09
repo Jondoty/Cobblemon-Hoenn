@@ -28,7 +28,7 @@
             "condition": {
                 "minX": 1175, "maxX": 1793, "minZ": -237, "maxZ": 105, "minY": -62, "maxY": 30,
                 "neededNearbyBlocks": [
-                    "minecraft:grass_block"
+                    "minecraft:moss_block"
                 ],
                 "presets": [
                     "water"
