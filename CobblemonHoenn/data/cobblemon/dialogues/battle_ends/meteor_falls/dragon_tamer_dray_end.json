@@ -19,10 +19,28 @@
     },
     "pages": [
         {
+            "id": "greeting",
+            "speaker": "player",
+            "lines": [
+                "The Dragon Tamer uniform aims to appear prestigious."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "The Dragon Tamer uniform aims to appear prestigious. There are more than a few Trainers who have quit being Dragon-type users because of their dislike of it."
+                "There are more than a few Trainers who have quit being Dragon-type users because of their dislike of it."
             ],
             "input": {
                 "type": "option",

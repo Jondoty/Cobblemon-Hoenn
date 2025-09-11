@@ -1,7 +1,7 @@
 #Function that is assigned a score from when NPCs are engaged with
 #Depending on the number, can play pre-battle music and then battle music
 
-#1 - Pre-battle Ace Trainer, Battle Girl, Blackbelt, Dragon Tamer
+#1 - Pre-battle Ace Trainer, Battle Girl, Blackbelt, Dragon Tamer, Kindler
 execute as @s[tag=!RadioOff,scores={BattleStart=1}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=1}] run playsound acetrainer record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=1}] run scoreboard players set @s MusicCooldown 91
@@ -11,7 +11,7 @@ execute as @s[tag=!RadioOff,scores={BattleStart=2}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=2}] run playsound elitefouropen record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=2}] run scoreboard players set @s MusicCooldown 74
 
-#3 - Pre-battle Gentleman, Oldman/Oldlady (Default)
+#3 - Pre-battle Gentleman, Oldman/Oldlady, Expert (Default)
 execute as @s[tag=!RadioOff,scores={BattleStart=3}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=3}] run playsound gentleman record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=3}] run scoreboard players set @s MusicCooldown 57
@@ -21,7 +21,7 @@ execute as @s[tag=!RadioOff,scores={BattleStart=4}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=4}] run playsound hexmaniac record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=4}] run scoreboard players set @s MusicCooldown 63
 
-#5 - Pre-battle hiker
+#5 - Pre-battle hiker, Backpacker, Ruin Maniac
 execute as @s[tag=!RadioOff,scores={BattleStart=5}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=5}] run playsound hiker record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=5}] run scoreboard players set @s MusicCooldown 53
@@ -31,7 +31,7 @@ execute as @s[tag=!RadioOff,scores={BattleStart=6}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=6}] run playsound lass record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=6}] run scoreboard players set @s MusicCooldown 41
 
-#7 - Pre-battle pokefan
+#7 - Pre-battle pokefan, Bird Keeper, Collector
 execute as @s[tag=!RadioOff,scores={BattleStart=7}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=7}] run playsound pokefan record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=7}] run scoreboard players set @s MusicCooldown 41
@@ -51,12 +51,12 @@ execute as @s[tag=!RadioOff,scores={BattleStart=10}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=10}] run playsound stevenopen record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=10}] run scoreboard players set @s MusicCooldown 93
 
-#11 - Pre-Battle streetthug, Ninja, delinquent
+#11 - Pre-Battle streetthug, Ninja, delinquent, blackbelt, guitarist
 execute as @s[tag=!RadioOff,scores={BattleStart=11}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=11}] run playsound streetthug record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=11}] run scoreboard players set @s MusicCooldown 70
 
-#12 - Pre-Battle swimmer, sailor
+#12 - Pre-Battle Swimmer, Sailor, Fisherman
 execute as @s[tag=!RadioOff,scores={BattleStart=12}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=12}] run playsound swimmer record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=12}] run scoreboard players set @s MusicCooldown 40
