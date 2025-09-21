@@ -48,7 +48,7 @@ execute if entity @e[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Item:{id:"mi
 execute if entity @e[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Item:{id:"minecraft:coarse_dirt",Count:1b}}] run function hoenn:world/bases/clonebases
 execute if entity @e[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Item:{id:"minecraft:red_concrete_powder",Count:1b}}] run function hoenn:world/bases/clonebases
 execute if entity @e[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Item:{id:"minecraft:white_concrete",Count:1b}}] run function hoenn:world/bases/clonebases
-execute if entity @e[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Item:{id:"pixelmon:warp_plate",Count:1b}}] run function hoenn:world/bases/clonebases
+execute if entity @e[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Item:{id:"minecraft:magenta_carpet",Count:1b}}] run function hoenn:world/bases/clonebases
 
 execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{id:"minecraft:terracotta"}]}] run function hoenn:world/bases/clonebases
 execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{id:"minecraft:cyan_terracotta"}]}] run function hoenn:world/bases/clonebases
@@ -72,7 +72,7 @@ execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{
 execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{id:"minecraft:coarse_dirt"}]}] run function hoenn:world/bases/clonebases
 execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{id:"minecraft:red_concrete_powder"}]}] run function hoenn:world/bases/clonebases
 execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{id:"minecraft:white_concrete"}]}] run function hoenn:world/bases/clonebases
-execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{id:"minecraft:pixelmon:warp_plate"}]}] run function hoenn:world/bases/clonebases
+execute if entity @a[x=-3545,y=63,z=-3151,dx=1127,dy=20,dz=658,nbt={Inventory:[{id:"minecraft:minecraft:magenta_carpet"}]}] run function hoenn:world/bases/clonebases
 
 
 

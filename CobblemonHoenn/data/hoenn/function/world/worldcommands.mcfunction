@@ -111,16 +111,16 @@ execute as @e[type=armor_stand,tag=DexNav,tag=Active] at @s run function hoenn:p
 
 
 #Runs Fly HM and Map
-execute as @a[scores={click=1..},nbt={SelectedItem:{tag:{display:{Name:'[{"text":"HM02: Fly","italic":false,"color":"aqua"}]'}}}}] run function hoenn:items/flyhm
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM02: Fly"}],"text":""}'}}}] run function hoenn:items/flyhm
 
 #Eon Flute
-execute as @a[scores={click=1..},nbt={SelectedItem:{tag:{display:{Name:'[{"text":"Eon Flute","italic":false,"color":"light_purple"}]'}}}}] run function hoenn:items/eonflute
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"dark_purple","italic":false,"text":"Eon Flute"}],"text":""}'}}}] run function hoenn:items/eonflute
 
 #Flash
-execute as @a[scores={click=1..},nbt={SelectedItem:{tag:{display:{Name:'[{"text":"HM05: Flash","italic":false,"color":"aqua"}]'}}}}] run tellraw @s {"text":"You used Flash!","italic":true,"color":"gray"}
-execute as @a[scores={click=1..},nbt={SelectedItem:{tag:{display:{Name:'[{"text":"HM05: Flash","italic":false,"color":"aqua"}]'}}}}] run effect give @s minecraft:night_vision 900 1 true
-execute as @a[scores={click=1..},nbt={SelectedItem:{tag:{display:{Name:'[{"text":"HM05: Flash","italic":false,"color":"aqua"}]'}}}}] run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~ 1 1 1
-execute as @a[scores={click=1..},nbt={SelectedItem:{tag:{display:{Name:'[{"text":"HM05: Flash","italic":false,"color":"aqua"}]'}}}}] run scoreboard players remove @s click 1
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run tellraw @s {"text":"You used Flash!","italic":true,"color":"gray"}
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run effect give @s minecraft:night_vision 900 1 true
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run scoreboard players remove @s click 1
 
 #Fly Map
 execute as @a[x=334,y=237,z=-1917,distance=..40] run function hoenn:world/flymap
