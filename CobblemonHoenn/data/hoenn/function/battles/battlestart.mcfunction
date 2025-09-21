@@ -51,7 +51,7 @@ execute as @s[tag=!RadioOff,scores={BattleStart=10}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=10}] run playsound stevenopen record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=10}] run scoreboard players set @s MusicCooldown 93
 
-#11 - Pre-Battle streetthug, Ninja, delinquent, blackbelt, guitarist
+#11 - Pre-Battle streetthug, Ninja, delinquent, blackbelt, guitarist, ranger
 execute as @s[tag=!RadioOff,scores={BattleStart=11}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=11}] run playsound streetthug record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=11}] run scoreboard players set @s MusicCooldown 70
