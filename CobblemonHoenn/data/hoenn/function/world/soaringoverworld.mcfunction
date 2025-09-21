@@ -191,38 +191,38 @@ execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=31}] run tp @s
 
 
 #Plays mirage spot particles
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0}] run particle pixelmon:shiny 1 255 255 75 75 0 -987 66 1471 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=1}] run particle pixelmon:shiny 1 255 255 75 75 0 -969 66 1529 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=2}] run particle pixelmon:shiny 1 255 255 75 75 0 -915 66 1386 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=3}] run particle pixelmon:shiny 1 255 255 75 75 0 -787 66 1420 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=4}] run particle pixelmon:shiny 1 255 255 75 75 0 -757 66 1404 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=5}] run particle pixelmon:shiny 1 255 255 75 75 0 -813 66 1522 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=6}] run particle pixelmon:shiny 1 255 255 75 75 0 -834 66 1526 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=7}] run particle pixelmon:shiny 1 255 255 75 75 0 -877 66 1543 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=8}] run particle pixelmon:shiny 1 255 255 75 75 0 -741 66 1449 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=9}] run particle pixelmon:shiny 1 255 255 75 75 0 -796 66 1423 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=10}] run particle pixelmon:shiny 1 255 255 75 75 0 -952 66 1407 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=11}] run particle pixelmon:shiny 1 255 255 75 75 0 -815 67 1423 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=12}] run particle pixelmon:shiny 1 255 255 75 75 0 -817 68 1509 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=13}] run particle pixelmon:shiny 1 255 255 75 75 0 -983 66 1494 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=14}] run particle pixelmon:shiny 1 255 255 75 75 0 -884 67 1537 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=15}] run particle pixelmon:shiny 1 255 255 75 75 0 -879 68 1406 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=16}] run particle pixelmon:shiny 1 255 255 75 75 0 -984 66 1466 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=17}] run particle pixelmon:shiny 1 255 255 75 75 0 -857 67 1405 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=18}] run particle pixelmon:shiny 1 255 255 75 75 0 -810 67 1513 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=19}] run particle pixelmon:shiny 1 255 255 75 75 0 -935 66 1547 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=20}] run particle pixelmon:shiny 1 255 255 75 75 0 -779 66 1423 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=21}] run particle pixelmon:shiny 1 255 255 75 75 0 -837 66 1488 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=22}] run particle pixelmon:shiny 1 255 255 75 75 0 -757 67 1515 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=23}] run particle pixelmon:shiny 1 255 255 75 75 0 -934 67 1400 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=24}] run particle pixelmon:shiny 1 255 255 75 75 0 -971 66 1444 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=25}] run particle pixelmon:shiny 1 255 255 75 75 0 -810 67 1425 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=26}] run particle pixelmon:shiny 1 255 255 75 75 0 -748 66 1415 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=27}] run particle pixelmon:shiny 1 255 255 75 75 0 -806 67 1514 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=28}] run particle pixelmon:shiny 1 255 255 75 75 0 -740 66 1430 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=29}] run particle pixelmon:shiny 1 255 255 75 75 0 -762 67 1518 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=30}] run particle pixelmon:shiny 1 255 255 75 75 0 -750 66 1507 0.4 0.5 0.4 1 1 force
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=31}] run particle pixelmon:shiny 1 255 255 75 75 0 -766 66 1415 0.4 0.5 0.4 1 1 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0}] run particle minecraft:firework -987 66 1471 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=1}] run particle minecraft:firework -969 66 1529 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=2}] run particle minecraft:firework -915 66 1386 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=3}] run particle minecraft:firework -787 66 1420 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=4}] run particle minecraft:firework -757 66 1404 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=5}] run particle minecraft:firework -813 66 1522 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=6}] run particle minecraft:firework -834 66 1526 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=7}] run particle minecraft:firework -877 66 1543 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=8}] run particle minecraft:firework -741 66 1449 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=9}] run particle minecraft:firework -796 66 1423 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=10}] run particle minecraft:firework -952 66 1407 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=11}] run particle minecraft:firework -815 67 1423 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=12}] run particle minecraft:firework -817 68 1509 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=13}] run particle minecraft:firework -983 66 1494 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=14}] run particle minecraft:firework -884 67 1537 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=15}] run particle minecraft:firework -879 68 1406 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=16}] run particle minecraft:firework -984 66 1466 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=17}] run particle minecraft:firework -857 67 1405 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=18}] run particle minecraft:firework -810 67 1513 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=19}] run particle minecraft:firework -935 66 1547 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=20}] run particle minecraft:firework -779 66 1423 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=21}] run particle minecraft:firework -837 66 1488 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=22}] run particle minecraft:firework -757 67 1515 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=23}] run particle minecraft:firework -934 67 1400 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=24}] run particle minecraft:firework -971 66 1444 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=25}] run particle minecraft:firework -810 67 1425 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=26}] run particle minecraft:firework -748 66 1415 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=27}] run particle minecraft:firework -806 67 1514 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=28}] run particle minecraft:firework -740 66 1430 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=29}] run particle minecraft:firework -762 67 1518 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=30}] run particle minecraft:firework -750 66 1507 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=31}] run particle minecraft:firework -766 66 1415 0 2 0 0.1 0 force
 
 
 #Legendary Pokemon, checks against specific conditions in the player's party or time of day
@@ -230,8 +230,8 @@ execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=31}] run parti
 #Crescent Isle
 #appears randomly at the start of the day or when it is received from passersby.
 #Could do 50/50 chance at spawning during the mornings. Will base it on MirageSpot scores
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0..15}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..6000}] run particle pixelmon:shiny 1 204 0 204 75 0 -738 66 1508 0.4 0.5 0.4 1 1 force @s
-execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0..15}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=23000..}] run particle pixelmon:shiny 1 204 0 204 75 0 -738 66 1508 0.4 0.5 0.4 1 1 force @s
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0..15}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..6000}] run particle minecraft:firework -738 66 1508 0 2 0 0.1 0 force
+execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0..15}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=23000..}] run particle minecraft:firework -738 66 1508 0 2 0 0.1 0 force
 
 execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0..15}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..6000}] as @a[x=-739,y=63,z=1507,dx=2,dy=150,dz=2] run title @s actionbar {"text":"Crescent Isle"}
 execute if entity @e[x=-2070,y=64,z=1410,dy=3,scores={MirageSpots=0..15}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=23000..}] as @a[x=-739,y=63,z=1507,dx=2,dy=150,dz=2] run title @s actionbar {"text":"Crescent Isle"}
@@ -259,7 +259,7 @@ execute as @s[tag=FourthEVMaxed] run scoreboard players add @s Temp 1
 execute as @s[tag=FifthEVMaxed] run scoreboard players add @s Temp 1
 execute as @s[tag=SixthEVMaxed] run scoreboard players add @s Temp 1
 
-execute as @s[scores={Temp=3..}] run particle pixelmon:shiny 1 204 0 204 75 0 -801 67 1513 0.4 0.5 0.4 1 1 force @s
+execute as @s[scores={Temp=3..}] run particle minecraft:firework -801 67 1513 0 2 0 0.1 0 force
 execute as @s[scores={Temp=3..},x=-802,y=63,z=1512,dx=2,dy=150,dz=2] run title @s actionbar {"text":"Pathless Plain"}
 execute as @s[scores={Temp=3..},x=-802,y=63,z=1512,dx=2,dy=15,dz=2] run function hoenn:tools/forceclick
 execute as @s[scores={Temp=3..},x=-802,y=63,z=1512,dx=2,dy=15,dz=2] run gamemode adventure @s
@@ -271,27 +271,27 @@ scoreboard players set @s PokeHave 0
 #three Pokémon with max friendship in their party
 
 scoreboard players set @s Temp 0
-execute as @s store result score @s PokeHave run poketest 1 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 1 friendship:255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run poketest 2 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 2 friendship:255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run poketest 3 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 3 friendship:255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run poketest 4 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 4 friendship:255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run poketest 5 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 5 friendship:255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run poketest 6 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 6 friendship:255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
 
 execute as @s[scores={Temp=3..}] run tag @s add NamelessSpawn
-execute as @s[tag=NamelessSpawn] run particle pixelmon:shiny 1 204 0 204 75 0 -783 66 1451 0.4 0.5 0.4 1 1 force @s
+execute as @s[tag=NamelessSpawn] run particle minecraft:firework -783 66 1451 0 2 0 0.1 0 force
 execute as @s[x=-784,y=63,z=1450,dx=2,dy=150,dz=2,tag=NamelessSpawn] run title @s actionbar {"text":"Nameless Cavern"}
 execute as @s[x=-784,y=63,z=1450,dx=2,dy=15,dz=2,tag=NamelessSpawn] run function hoenn:tools/forceclick
 execute as @s[x=-784,y=63,z=1450,dx=2,dy=15,dz=2,tag=NamelessSpawn] run gamemode adventure @s
@@ -302,20 +302,20 @@ scoreboard players set @s PokeHave 0
 
 #Fabled Cave
 #if the player has a Level 100 Pokémon on their team
-execute as @s store result score @s PokeHave run poketest 1 lvl:100
+execute as @s store result score @s PokeHave run testpartyslot @s 1 lvl:100
 tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run poketest 2 lvl:100
+execute as @s store result score @s PokeHave run testpartyslot @s 2 lvl:100
 tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run poketest 3 lvl:100
+execute as @s store result score @s PokeHave run testpartyslot @s 3 lvl:100
 tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run poketest 4 lvl:100
+execute as @s store result score @s PokeHave run testpartyslot @s 4 lvl:100
 tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run poketest 5 lvl:100
+execute as @s store result score @s PokeHave run testpartyslot @s 5 lvl:100
 tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run poketest 6 lvl:100
+execute as @s store result score @s PokeHave run testpartyslot @s 6 lvl:100
 tag @s[scores={PokeHave=1}] add HaveLvl100
 
-execute as @s[tag=HaveLvl100] run particle pixelmon:shiny 1 204 0 204 75 0 -869 67 1480 0.4 0.5 0.4 1 1 force @s
+execute as @s[tag=HaveLvl100] run particle minecraft:firework -869 67 1480 0 2 0 0.1 0 force
 execute as @s[x=-870,y=63,z=1479,dx=2,dy=150,dz=2,tag=HaveLvl100] run title @s actionbar {"text":"Fabled Cave"}
 execute as @s[x=-870,y=63,z=1479,dx=2,dy=15,dz=2,tag=HaveLvl100] run function hoenn:tools/forceclick
 execute as @s[x=-870,y=63,z=1479,dx=2,dy=15,dz=2,tag=HaveLvl100] run gamemode adventure @s
@@ -327,33 +327,33 @@ scoreboard players set @s PokeHave 0
 
 #Gnarled Den
 #if the player has Reshiram and Zekrom in their party
-execute as @s store result score @s PokeHave run poketest 1 Reshiram
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Reshiram
 tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run poketest 2 Reshiram
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Reshiram
 tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run poketest 3 Reshiram
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Reshiram
 tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run poketest 4 Reshiram
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Reshiram
 tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run poketest 5 Reshiram
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Reshiram
 tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run poketest 6 Reshiram
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Reshiram
 tag @s[scores={PokeHave=1}] add ReshiramHave
 
-execute as @s store result score @s PokeHave run poketest 1 Zekrom
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Zekrom
 tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run poketest 2 Zekrom
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Zekrom
 tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run poketest 3 Zekrom
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Zekrom
 tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run poketest 4 Zekrom
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Zekrom
 tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run poketest 5 Zekrom
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Zekrom
 tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run poketest 6 Zekrom
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Zekrom
 tag @s[scores={PokeHave=1}] add ZekromHave
 
-execute as @s[tag=ReshiramHave,tag=ZekromHave] run particle pixelmon:shiny 1 204 0 204 75 0 -928 73 1420 0.4 0.5 0.4 1 1 force @s
+execute as @s[tag=ReshiramHave,tag=ZekromHave] run particle minecraft:firework -928 73 1420 0 2 0 0.1 0 force
 execute as @s[x=-929,y=63,z=1419,dx=2,dy=150,dz=2,tag=ReshiramHave,tag=ZekromHave] run title @s actionbar {"text":"Gnarled Den"}
 execute as @s[x=-929,y=63,z=1419,dx=2,dy=15,dz=2,tag=ReshiramHave,tag=ZekromHave] run function hoenn:tools/forceclick
 execute as @s[x=-929,y=63,z=1419,dx=2,dy=15,dz=2,tag=ReshiramHave,tag=ZekromHave] run gamemode adventure @s
@@ -366,35 +366,35 @@ scoreboard players set @s PokeHave 0
 #Trackless Forest
 #if the player has Ho-Oh or Lugia in their party
 
-execute as @s store result score @s PokeHave run poketest 1 Lugia
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Lugia
 tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run poketest 2 Lugia
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Lugia
 tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run poketest 3 Lugia
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Lugia
 tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run poketest 4 Lugia
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Lugia
 tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run poketest 5 Lugia
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Lugia
 tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run poketest 6 Lugia
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Lugia
 tag @s[scores={PokeHave=1}] add LugiaHave
 
-execute as @s store result score @s PokeHave run poketest 1 Hooh
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Hooh
 tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run poketest 2 Hooh
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Hooh
 tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run poketest 3 Hooh
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Hooh
 tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run poketest 4 Hooh
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Hooh
 tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run poketest 5 Hooh
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Hooh
 tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run poketest 6 Hooh
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Hooh
 tag @s[scores={PokeHave=1}] add HoohHave
 
 scoreboard players set @s[tag=HoohHave] PokeHave 1
 scoreboard players set @s[tag=LugiaHave] PokeHave 1
-execute as @s[scores={PokeHave=1}] run particle pixelmon:shiny 1 204 0 204 75 0 -936 67 1446 0.4 0.5 0.4 1 1 force @s
+execute as @s[scores={PokeHave=1}] run particle minecraft:firework -936 67 1446 0 2 0 0.1 0 force
 execute as @s[x=-937,y=63,z=1445,dx=2,dy=150,dz=2,scores={PokeHave=1}] run title @s actionbar {"text":"Trackless Forest"}
 execute as @s[x=-937,y=63,z=1445,dx=2,dy=15,dz=2,scores={PokeHave=1}] run function hoenn:tools/forceclick
 execute as @s[x=-937,y=63,z=1445,dx=2,dy=15,dz=2,scores={PokeHave=1}] run gamemode adventure @s
@@ -409,72 +409,72 @@ scoreboard players set @s PokeHave 0
 #The second contains Giratina, and only appears if the player has Dialga and Palkia in their party
 
 scoreboard players set @s Temp 0
-execute as @s store result score @s PokeHave run poketest 1 Uxie
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Uxie
 tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run poketest 2 Uxie
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Uxie
 tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run poketest 3 Uxie
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Uxie
 tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run poketest 4 Uxie
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Uxie
 tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run poketest 5 Uxie
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Uxie
 tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run poketest 6 Uxie
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Uxie
 tag @s[scores={PokeHave=1}] add UxieHave
 
-execute as @s store result score @s PokeHave run poketest 1 Mesprit
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Mesprit
 tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run poketest 2 Mesprit
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Mesprit
 tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run poketest 3 Mesprit
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Mesprit
 tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run poketest 4 Mesprit
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Mesprit
 tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run poketest 5 Mesprit
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Mesprit
 tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run poketest 6 Mesprit
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Mesprit
 tag @s[scores={PokeHave=1}] add MespritHave
 
 
-execute as @s store result score @s PokeHave run poketest 1 Azelf
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Azelf
 tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run poketest 2 Azelf
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Azelf
 tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run poketest 3 Azelf
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Azelf
 tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run poketest 4 Azelf
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Azelf
 tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run poketest 5 Azelf
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Azelf
 tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run poketest 6 Azelf
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Azelf
 tag @s[scores={PokeHave=1}] add AzelfHave
 
 
-execute as @s store result score @s PokeHave run poketest 1 Dialga
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Dialga
 tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run poketest 2 Dialga
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Dialga
 tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run poketest 3 Dialga
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Dialga
 tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run poketest 4 Dialga
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Dialga
 tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run poketest 5 Dialga
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Dialga
 tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run poketest 6 Dialga
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Dialga
 tag @s[scores={PokeHave=1}] add DialgaHave
 
 
-execute as @s store result score @s PokeHave run poketest 1 Palkia
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Palkia
 tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run poketest 2 Palkia
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Palkia
 tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run poketest 3 Palkia
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Palkia
 tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run poketest 4 Palkia
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Palkia
 tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run poketest 5 Palkia
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Palkia
 tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run poketest 6 Palkia
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Palkia
 tag @s[scores={PokeHave=1}] add PalkiaHave
 
 execute as @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomModelData:5}},Rotation:[-145f,0.0f]}
@@ -496,43 +496,43 @@ scoreboard players set @s PokeHave 0
 #The first contains TornadusOR/ThundurusAS, and only appears if the player has Castform in their party
 #The second cloud contains Landorus, and only appears if the player has Tornadus and Thundurus in their party
 
-execute as @s store result score @s PokeHave run poketest 1 Castform
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Castform
 tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run poketest 2 Castform
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Castform
 tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run poketest 3 Castform
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Castform
 tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run poketest 4 Castform
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Castform
 tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run poketest 5 Castform
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Castform
 tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run poketest 6 Castform
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Castform
 tag @s[scores={PokeHave=1}] add CastformHave
 
-execute as @s store result score @s PokeHave run poketest 1 Tornadus
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Tornadus
 tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run poketest 2 Tornadus
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Tornadus
 tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run poketest 3 Tornadus
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Tornadus
 tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run poketest 4 Tornadus
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Tornadus
 tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run poketest 5 Tornadus
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Tornadus
 tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run poketest 6 Tornadus
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Tornadus
 tag @s[scores={PokeHave=1}] add TornadusHave
 
-execute as @s store result score @s PokeHave run poketest 1 Thundurus
+execute as @s store result score @s PokeHave run testpartyslot @s 1 Thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run poketest 2 Thundurus
+execute as @s store result score @s PokeHave run testpartyslot @s 2 Thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run poketest 3 Thundurus
+execute as @s store result score @s PokeHave run testpartyslot @s 3 Thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run poketest 4 Thundurus
+execute as @s store result score @s PokeHave run testpartyslot @s 4 Thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run poketest 5 Thundurus
+execute as @s store result score @s PokeHave run testpartyslot @s 5 Thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run poketest 6 Thundurus
+execute as @s store result score @s PokeHave run testpartyslot @s 6 Thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
 
 #Thundurus, runs if it is raining
