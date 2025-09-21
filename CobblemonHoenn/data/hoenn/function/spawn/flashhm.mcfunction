@@ -1,1 +1,1 @@
-give @s minecraft:carrot_on_a_stick{CustomModelData:3,Unbreakable:1,display:{Name:'[{"text":"HM05: Flash","italic":false,"color":"aqua"}]',Lore:['[{"text":"Illuminates the user\'s vision","italic":false}]','[{"text":"for fifteen minutes.","italic":false}]']}} 1
+give @s carrot_on_a_stick[custom_name='["",{"text":"HM05: Flash","italic":false,"color":"aqua"}]',lore=['["",{"text":"Illuminates the user\'s vision","italic":false}]','["",{"text":"for fifteen minutes.","italic":false}]'],custom_model_data=3]
