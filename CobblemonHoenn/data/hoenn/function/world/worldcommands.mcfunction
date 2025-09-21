@@ -102,7 +102,7 @@ execute as @a[nbt={SelectedItem:{tag:{display:{Name:'[{"text":"Soot Sack","itali
 
 
 #Poke Nav
-execute as @a[nbt={SelectedItem:{tag:{display:{Name:'[{"text":"PokéNav","italic":false,"color":"aqua"}]'}}}}] run function hoenn:pokenav/main
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"PokéNav"}],"text":""}'}}}] run function hoenn:pokenav/main
 execute as @a[scores={NavSlot=10..}] run function hoenn:pokenav/main
 
 #DexNav function for approaching a shadow Pokemon
