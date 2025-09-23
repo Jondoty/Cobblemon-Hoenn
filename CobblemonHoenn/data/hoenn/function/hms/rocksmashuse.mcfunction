@@ -12,6 +12,13 @@
 
 #------------------------------------------------------------------------------------------------
 
+#Rusturf Tunnel specific dialogue after using Rock smash
+#execute as @a[x=-2309,y=42,z=-817,distance=..30,tag=!Dialogue69,scores={DialogueTrigger=69}] at @s if entity @e[distance=..5,tag=Break] run scoreboard players set @s TalkTime 0
+#execute as @a[x=-2309,y=42,z=-817,distance=..30,tag=!Dialogue69,scores={DialogueTrigger=69}] at @s if entity @e[distance=..5,tag=Break] run tag @s add Dialogue69
+#execute as @a[x=-2309,y=42,z=-817,distance=..30,tag=!Dialogue70] at @s if entity @e[distance=..5,tag=Break] run scoreboard players set @s DialogueTrigger 70
+
+#------------------------------------------------------------------------------------------------
+
 #Tags rocks within the player's grasp as Broken to clear a path quickly
 execute at @s run tag @e[distance=..5,type=minecraft:interaction,tag=RockSmash] add Break
 
@@ -27,170 +34,202 @@ tellraw @s {"text":"You used Rock Smash!","italic":true,"color":"gray"}
 playsound minecraft:item.shield.block ambient @s ~ ~ ~ 10 1 1
 
 #------------------------------------------------------------------------------------------------
-#Sets the player's score to specific areas for loot pools
+#Tags the player if they're within a mirage area for different loot pools
 
-scoreboard players set @s Temp 0
+tag @s[x=-3395,y=0,z=-325,dx=198,dy=256,dz=222] add MirageArea
+tag @s[x=-1080,y=50,z=528,dx=238,dy=256,dz=241] add MirageArea
+tag @s[x=942,y=0,z=-1630,dx=199,dy=256,dz=217] add MirageArea
+tag @s[x=-3134,y=0,z=837,dx=228,dy=256,dz=196] add MirageArea
+tag @s[x=-170,y=0,z=699,dx=217,dy=256,dz=242] add MirageArea
+tag @s[x=-579,y=0,z=571,dx=193,dy=256,dz=214] add MirageArea
+tag @s[x=-1953,y=0,z=-2065,dx=241,dy=256,dz=219] add MirageArea
+tag @s[x=1679,y=0,z=-1752,dx=196,dy=256,dz=174] add MirageArea
 
-#Ruins of Alph
-scoreboard players set @s[x=160,y=0,z=-295,dx=121,dy=240,dz=205] Temp 1
+tag @s[x=-1291,y=0,z=2086,dx=182,dy=256,dz=169] add MirageArea
+tag @s[x=-1073,y=0,z=2086,dx=165,dy=256,dz=187] add MirageArea
+tag @s[x=-874,y=0,z=2086,dx=137,dy=256,dz=146] add MirageArea
+tag @s[x=-1279,y=0,z=2285,dx=180,dy=256,dz=154] add MirageArea
+tag @s[x=-1050,y=0,z=2285,dx=125,dy=256,dz=149] add MirageArea
+tag @s[x=-878,y=0,z=2285,dx=160,dy=256,dz=159] add MirageArea
+tag @s[x=-1280,y=0,z=2462,dx=178,dy=256,dz=143] add MirageArea
+tag @s[x=-1069,y=0,z=2462,dx=187,dy=256,dz=147] add MirageArea
 
-#The Cliff Cave (all of R47)
-scoreboard players set @s[x=1321,y=0,z=-487,dx=389,dy=256,dz=150] Temp 2
+tag @s[x=-600,y=0,z=2487,dx=267,dy=256,dz=232] add MirageArea
+tag @s[x=-323,y=0,z=2487,dx=202,dy=256,dz=223] add MirageArea
+tag @s[x=-79,y=0,z=2487,dx=209,dy=256,dz=213] add MirageArea
+tag @s[x=-3266,y=0,z=-1490,dx=148,dy=256,dz=124] add MirageArea
+tag @s[x=-3177,y=0,z=-2052,dx=180,dy=256,dz=168] add MirageArea
+tag @s[x=-3303,y=0,z=-955,dx=139,dy=256,dz=139] add MirageArea
+tag @s[x=-594,y=0,z=2823,dx=342,dy=256,dz=280] add MirageArea
+tag @s[x=-224,y=0,z=2823,dx=284,dy=256,dz=260] add MirageArea
 
-#Cianwood City, Dark Cave, Rock Tunnel, Route 19, Vemillion City & Victory Road
-#(Default pool, will execute if score is 0)
-
-
-
-
+tag @s[x=-984,y=0,z=2963,dx=245,dy=256,dz=184] add MirageArea
+tag @s[x=-853,y=0,z=2463,dx=162,dy=256,dz=155] add MirageArea
+tag @s[x=-1360,y=0,z=3010,dx=223,dy=256,dz=121] add MirageArea
+tag @s[x=-1360,y=0,z=2817,dx=223,dy=256,dz=192] add MirageArea
+tag @s[x=-984,y=0,z=2769,dx=245,dy=256,dz=193] add MirageArea
+tag @s[x=-1136,y=0,z=2885,dx=151,dy=256,dz=142] add MirageArea
+tag @s[x=-1152,y=0,z=2691,dx=150,dy=256,dz=155] add MirageArea
+tag @s[x=-1360,y=0,z=3182,dx=197,dy=256,dz=153] add MirageArea
 
 #------------------------------------------------------------------------------------------------
 #Gives the player loot depending on locations
-#https://www.serebii.net/heartgoldsoulsilver/rocksmash.shtml
+#https://www.serebii.net/omegarubyalphasapphire/rocksmash.shtml
 
-scoreboard players set @e[x=-867,y=69,z=-207,dy=4,dz=2] rng 0
-scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 1
-scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 2
-scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 4
-scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 8
-scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 16
-scoreboard players operation @s rng = @e[x=-867,y=69,z=-205,dy=3,type=armor_stand] rng
+scoreboard players set @e[x=-2068,y=64,z=1410,dy=4,dx=2] rng 0
+scoreboard players add @e[x=-2068,y=64,z=1410,dy=4,dx=2,sort=random,limit=1] rng 1
+scoreboard players add @e[x=-2068,y=64,z=1410,dy=4,dx=2,sort=random,limit=1] rng 2
+scoreboard players add @e[x=-2068,y=64,z=1410,dy=4,dx=2,sort=random,limit=1] rng 4
+scoreboard players add @e[x=-2068,y=64,z=1410,dy=4,dx=2,sort=random,limit=1] rng 8
+scoreboard players add @e[x=-2068,y=64,z=1410,dy=4,dx=2,sort=random,limit=1] rng 16
+scoreboard players operation @s rng = @e[x=-2068,y=64,z=1410,dy=3,type=armor_stand] rng
 
 
 #Everywhere item drops
 #0-9, nothing
 #10-20, Pokemon Battle
 #21-31, loots
-#Pool with all available items
-#give @s[scores={Temp=0,rng=21}] pixelmon:blue_shard
-#give @s[scores={Temp=0,rng=22}] pixelmon:green_shard
-#give @s[scores={Temp=0,rng=23..24}] pixelmon:heart_scale
-#give @s[scores={Temp=0,rng=25..26}] pixelmon:max_ether
-#give @s[scores={Temp=0,rng=27}] pixelmon:red_shard
-#give @s[scores={Temp=0,rng=28}] pixelmon:revive
-#give @s[scores={Temp=0,rng=29..30}] pixelmon:star_piece
-#give @s[scores={Temp=0,rng=31}] pixelmon:yellow_shard
-
-#Smaller current-cobblemon item pool
-give @s[scores={Temp=0,rng=21}] cobblemon:revive
-give @s[scores={Temp=0,rng=22}] cobblemon:max_ether
-give @s[scores={Temp=0,rng=23..24}] cobblemon:fire_stone
-give @s[scores={Temp=0,rng=25..26}] cobblemon:water_stone
-give @s[scores={Temp=0,rng=27}] cobblemon:thunder_stone
-give @s[scores={Temp=0,rng=28}] cobblemon:leaf_stone
-give @s[scores={Temp=0,rng=29..30}] cobblemon:moon_stone
-give @s[scores={Temp=0,rng=31}] cobblemon:sun_stone
-
-#If the player is within Ruins of Alph
-give @s[scores={Temp=1,rng=21}] cobblemon:shiny_stone
-give @s[scores={Temp=1,rng=22..23}] cobblemon:dome_fossil
-give @s[scores={Temp=1,rng=24}] cobblemon:dusk_stone
-give @s[scores={Temp=1,rng=25..26}] cobblemon:helix_fossil
-give @s[scores={Temp=1,rng=27}] cobblemon:max_ether
-give @s[scores={Temp=1,rng=28}] cobblemon:max_revive
-give @s[scores={Temp=1,rng=29}] cobblemon:old_amber_fossil
-give @s[scores={Temp=1,rng=30}] cobblemon:dawn_stone
-give @s[scores={Temp=1,rng=31}] cobblemon:ice_stone
-
-#If the player is within R47 (Cliff Cave Pool)
-give @s[scores={Temp=2,rng=21}] cobblemon:shiny_stone
-give @s[scores={Temp=2,rng=22}] cobblemon:dusk_stone
-give @s[scores={Temp=2,rng=23}] cobblemon:claw_fossil
-give @s[scores={Temp=2,rng=24}] cobblemon:dawn_stone
-give @s[scores={Temp=2,rng=25}] cobblemon:max_ether
-give @s[scores={Temp=2,rng=26}] cobblemon:ice_stone
-scoreboard players add @s[scores={Temp=2,rng=27..28}] Money 5000
-give @s[scores={Temp=2,rng=29}] cobblemon:root_fossil
-give @s[scores={Temp=2,rng=30}] cobblemon:oval_stone
-give @s[scores={Temp=2,rng=31}] cobblemon:hard_stone
+execute as @s[tag=!MirageArea,scores={rng=21}] run scoreboard players add @s Money 3750
+give @s[tag=!MirageArea,scores={rng=22}] cobblemon:ether
+give @s[tag=!MirageArea,scores={rng=23}] cobblemon:hard_stone
+execute as @s[tag=!MirageArea,scores={rng=24}] run scoreboard players add @s Money 50
+give @s[tag=!MirageArea,scores={rng=25}] cobblemon:max_ether
+give @s[tag=!MirageArea,scores={rng=26}] cobblemon:max_revive
+give @s[tag=!MirageArea,scores={rng=27}] cobblemon:normal_gem
+execute as @s[tag=!MirageArea,scores={rng=28}] run scoreboard players add @s Money 700
+give @s[tag=!MirageArea,scores={rng=29}] cobblemon:revive
+give @s[tag=!MirageArea,scores={rng=30}] cobblemon:soft_sand
+execute as @s[tag=!MirageArea,scores={rng=31}] run scoreboard players add @s Money 4900
 
 playsound minecraft:entity.experience_orb.pickup ambient @s[scores={rng=21..31}] ~ ~ ~ 1 1 1
 tellraw @s[scores={rng=21..31}] {"text":"An item was in the rubble!","italic":true,"color":"gray"}
 
 
+#Fossils if the player is within a mirage area
+give @s[tag=MirageArea,scores={rng=21}] cobblemon:armor_fossil
+give @s[tag=MirageArea,scores={rng=22}] cobblemon:cover_fossil
+give @s[tag=MirageArea,scores={rng=23}] cobblemon:dome_fossil
+give @s[tag=MirageArea,scores={rng=24}] cobblemon:helix_fossil
+give @s[tag=MirageArea,scores={rng=25}] cobblemon:old_amber_fossil
+give @s[tag=MirageArea,scores={rng=26}] cobblemon:plume_fossil
+give @s[tag=MirageArea,scores={rng=27}] cobblemon:skull_fossil
+give @s[tag=MirageArea,scores={rng=28}] cobblemon:root_fossil
+give @s[tag=MirageArea,scores={rng=29}] cobblemon:claw_fossil
+give @s[tag=MirageArea,scores={rng=30}] cobblemon:jaw_fossil
+give @s[tag=MirageArea,scores={rng=31}] cobblemon:sail_fossil
+
 #--------------------------------------
 #Pokemon Encounters!
 
-#Vermillion City
-#72% Diglett
-#28% Shuckle
-execute as @s[x=-2884,y=0,z=-200,dx=273,dy=240,dz=239,scores={rng=10..17}] at @s run pokespawn diglett level=30
-execute as @s[x=-2884,y=0,z=-200,dx=273,dy=240,dz=239,scores={rng=18..20}] at @s run pokespawn shuckle level=30
-
-tellraw @s[x=-2884,y=0,z=-200,dx=273,dy=240,dz=239,scores={rng=10..17}] {"text":"A Diglett was in the rubble!","italic":true,"color":"gray"}
-tellraw @s[x=-2884,y=0,z=-200,dx=273,dy=240,dz=239,scores={rng=18..20}] {"text":"A Shuckle was in the rubble!","italic":true,"color":"gray"}
-
-#--------------------------------------
-#Dark Cave
-#72% Dunsparce
-#28% Geodude
-execute as @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223,scores={rng=10..17}] at @s run pokespawn dunsparce level=11
-execute as @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223,scores={rng=18..20}] at @s run pokespawn geodude level=11
-
-execute as @s[x=-439,y=0,z=-190,dx=131,dy=240,dz=319,scores={rng=10..17}] at @s run pokespawn dunsparce level=11
-execute as @s[x=-439,y=0,z=-190,dx=131,dy=240,dz=319,scores={rng=18..20}] at @s run pokespawn geodude level=11
-
-tellraw @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223,scores={rng=10..17}] {"text":"A Dunsparce was in the rubble!","italic":true,"color":"gray"}
-tellraw @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223,scores={rng=18..20}] {"text":"A Geodude was in the rubble!","italic":true,"color":"gray"}
-
-tellraw @s[x=-439,y=0,z=-190,dx=131,dy=240,dz=319,scores={rng=10..17}] {"text":"A Dunsparce was in the rubble!","italic":true,"color":"gray"}
-tellraw @s[x=-439,y=0,z=-190,dx=131,dy=240,dz=319,scores={rng=18..20}] {"text":"A Geodude was in the rubble!","italic":true,"color":"gray"}
-
-#--------------------------------------
-#Ruins of Alph
+#Route 111, Route 114, Rusturf Tunnel
 #Geodude
-execute as @s[x=160,y=0,z=-295,dx=121,dy=240,dz=205,scores={rng=10..20}] at @s run pokespawn geodude level=10
+#R11
+execute as @s[x=-1668,y=0,z=-1024,dx=66,dy=256,dz=305,scores={rng=10..20}] at @s run pokespawn geodude level=15
+execute as @s[x=-1562,y=60,z=-1293,dx=249,dy=256,dz=159,scores={rng=10..20}] at @s run pokespawn geodude level=15
+execute as @s[x=-1479,y=60,z=-1133,dx=166,dy=256,dz=267,scores={rng=10..20}] at @s run pokespawn geodude level=15
 
-tellraw @s[x=160,y=0,z=-295,dx=121,dy=240,dz=205,scores={rng=10..20}] {"text":"A Geodude was in the rubble!","italic":true,"color":"gray"}
+#R114
+execute as @s[x=-2620,y=0,z=-1507,dx=275,dy=256,dz=427,scores={rng=10..20}] at @s run pokespawn geodude level=15
+
+#Rusturf Tunnel
+execute as @s[x=-2451,y=0,z=-863,dx=222,dy=60,dz=147,scores={rng=10..20}] at @s run pokespawn geodude level=15
+
 
 #--------------------------------------
-#Rock Tunnel
-#Geodude
-execute as @s[x=-3420,y=0,z=516,dx=257,dy=59,dz=197,scores={rng=10..20}] at @s run pokespawn geodude level=15
-
-tellraw @s[x=-3420,y=0,z=516,dx=257,dy=59,dz=197,scores={rng=10..20}] {"text":"A Geodude was in the rubble!","italic":true,"color":"gray"}
-
-#--------------------------------------
-#Victory Road
-#72% Geodude
-#28% Graveler
-execute as @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=10..17}] at @s run pokespawn geodude level=30
-execute as @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=18..20}] at @s run pokespawn graveler level=32
-
-tellraw @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=10..17}] {"text":"A Geodude was in the rubble!","italic":true,"color":"gray"}
-tellraw @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=18..20}] {"text":"A Graveler was in the rubble!","italic":true,"color":"gray"}
+#Granite Cave
+#Geodude or Nosepass
+execute as @s[x=2440,y=0,z=-2673,dx=319,dy=256,dz=387,scores={rng=10..18}] at @s run pokespawn geodude level=11
+execute as @s[x=2440,y=0,z=-2673,dx=319,dy=256,dz=387,scores={rng=19..20}] at @s run pokespawn nosepass level=11
 
 #--------------------------------------
-#Cianwood
-#72% Krabby
-#28% Shuckle
-execute as @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=10..17}] at @s run pokespawn krabby level=20
-execute as @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=18..20}] at @s run pokespawn shuckle level=25
+#Lilycove City, Mirage Forest, Seafloor Cavern, Shoal Cave
+#graveler
 
-tellraw @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=10..17}] {"text":"A Krabby was in the rubble!","italic":true,"color":"gray"}
-tellraw @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173,scores={rng=18..20}] {"text":"A Shuckle was in the rubble!","italic":true,"color":"gray"}
+#Lilycove
+execute as @s[x=318,y=0,z=-1170,dx=514,dy=256,dz=325,scores={rng=10..20}] at @s run pokespawn graveler level=30
+
+#Seafloor Cavern
+execute as @s[x=783,y=0,z=-3361,dx=391,dy=256,dz=797,scores={rng=10..20}] at @s run pokespawn graveler level=34
+
+#Shoal Cave
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075,scores={rng=10..20}] at @s run pokespawn graveler level=35
+
+#Mirage Forests
+execute as @s[x=-1291,y=0,z=2086,dx=182,dy=256,dz=169,scores={rng=10..20}] at @s run pokespawn graveler level=37
+execute as @s[x=-1073,y=0,z=2086,dx=165,dy=256,dz=187,scores={rng=10..20}] at @s run pokespawn graveler level=37
+execute as @s[x=-874,y=0,z=2086,dx=137,dy=256,dz=146,scores={rng=10..20}] at @s run pokespawn graveler level=37
+execute as @s[x=-1279,y=0,z=2285,dx=180,dy=256,dz=154,scores={rng=10..20}] at @s run pokespawn graveler level=37
+execute as @s[x=-1050,y=0,z=2285,dx=125,dy=256,dz=149,scores={rng=10..20}] at @s run pokespawn graveler level=37
+execute as @s[x=-878,y=0,z=2285,dx=160,dy=256,dz=159,scores={rng=10..20}] at @s run pokespawn graveler level=37
+execute as @s[x=-1280,y=0,z=2462,dx=178,dy=256,dz=143,scores={rng=10..20}] at @s run pokespawn graveler level=37
+execute as @s[x=-1069,y=0,z=2462,dx=187,dy=256,dz=147,scores={rng=10..20}] at @s run pokespawn graveler level=37
+
 
 #--------------------------------------
-#Cliff Cave & Route 47
-#72% Krabby
-#28% Kingler
-execute as @s[x=1321,y=0,z=-487,dx=389,dy=256,dz=150,scores={rng=10..17}] at @s run pokespawn krabby level=25
-execute as @s[x=1321,y=0,z=-487,dx=389,dy=256,dz=150,scores={rng=18..20}] at @s run pokespawn kingler level=30
 
-tellraw @s[x=1321,y=0,z=-487,dx=389,dy=256,dz=150,scores={rng=10..17}] {"text":"A Krabby was in the rubble!","italic":true,"color":"gray"}
-tellraw @s[x=1321,y=0,z=-487,dx=389,dy=256,dz=150,scores={rng=18..20}] {"text":"A Kingler was in the rubble!","italic":true,"color":"gray"}
+#Mirage Island
+#graveler 85% or binacle 15%
+execute as @s[scores={rng=10..18},x=-3395,y=0,z=-325,dx=198,dy=256,dz=222] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=10..18},x=-1080,y=50,z=528,dx=238,dy=256,dz=241] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=10..18},x=942,y=0,z=-1630,dx=199,dy=256,dz=217] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=10..18},x=-3134,y=0,z=837,dx=228,dy=256,dz=196] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=10..18},x=-170,y=0,z=699,dx=217,dy=256,dz=242] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=10..18},x=-579,y=0,z=571,dx=193,dy=256,dz=214] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=10..18},x=-1953,y=0,z=-2065,dx=241,dy=256,dz=219] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=10..18},x=1679,y=0,z=-1752,dx=196,dy=256,dz=174] at @s run pokespawn graveler level=38
+execute as @s[scores={rng=19..20},x=-3395,y=0,z=-325,dx=198,dy=256,dz=222] at @s run pokespawn binacle level=37
+execute as @s[scores={rng=19..20},x=-1080,y=50,z=528,dx=238,dy=256,dz=241] at @s run pokespawn binacle level=37
+execute as @s[scores={rng=19..20},x=942,y=0,z=-1630,dx=199,dy=256,dz=217] at @s run pokespawn binacle level=37
+execute as @s[scores={rng=19..20},x=-3134,y=0,z=837,dx=228,dy=256,dz=196] at @s run pokespawn binacle level=37
+execute as @s[scores={rng=19..20},x=-170,y=0,z=699,dx=217,dy=256,dz=242] at @s run pokespawn binacle level=37
+execute as @s[scores={rng=19..20},x=-579,y=0,z=571,dx=193,dy=256,dz=214] at @s run pokespawn binacle level=37
+execute as @s[scores={rng=19..20},x=-1953,y=0,z=-2065,dx=241,dy=256,dz=219] at @s run pokespawn binacle level=37
+execute as @s[scores={rng=19..20},x=1679,y=0,z=-1752,dx=196,dy=256,dz=174] at @s run pokespawn binacle level=37
+
 
 #--------------------------------------
-#Route 19
-#72% Krabby
-#28% Kingler
-execute as @s[x=-2479,y=0,z=-831,dx=225,dy=240,dz=192,scores={rng=10..17}] at @s run pokespawn krabby level=25
-execute as @s[x=-2479,y=0,z=-831,dx=225,dy=240,dz=192,scores={rng=18..20}] at @s run pokespawn kingler level=30
 
-tellraw @s[x=-2479,y=0,z=-831,dx=225,dy=240,dz=192,scores={rng=10..17}] {"text":"A Krabby was in the rubble!","italic":true,"color":"gray"}
-tellraw @s[x=-2479,y=0,z=-831,dx=225,dy=240,dz=192,scores={rng=18..20}] {"text":"A Kingler was in the rubble!","italic":true,"color":"gray"}
+#Mirage Cave
+#graveler 85% or boldore 15%
+execute as @s[scores={rng=10..18},x=-600,y=0,z=2487,dx=267,dy=256,dz=232] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-323,y=0,z=2487,dx=202,dy=256,dz=223] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-79,y=0,z=2487,dx=209,dy=256,dz=213] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-3266,y=0,z=-1490,dx=148,dy=256,dz=124] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-3177,y=0,z=-2052,dx=180,dy=256,dz=168] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-3303,y=0,z=-955,dx=139,dy=256,dz=139] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-594,y=0,z=2823,dx=342,dy=256,dz=280] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-224,y=0,z=2823,dx=284,dy=256,dz=260] at @s run pokespawn graveler level=37
 
+execute as @s[scores={rng=19..20},x=-600,y=0,z=2487,dx=267,dy=256,dz=232] at @s run pokespawn boldore level=37
+execute as @s[scores={rng=19..20},x=-323,y=0,z=2487,dx=202,dy=256,dz=223] at @s run pokespawn boldore level=37
+execute as @s[scores={rng=19..20},x=-79,y=0,z=2487,dx=209,dy=256,dz=213] at @s run pokespawn boldore level=37
+execute as @s[scores={rng=19..20},x=-3266,y=0,z=-1490,dx=148,dy=256,dz=124] at @s run pokespawn boldore level=37
+execute as @s[scores={rng=19..20},x=-3177,y=0,z=-2052,dx=180,dy=256,dz=168] at @s run pokespawn boldore level=37
+execute as @s[scores={rng=19..20},x=-3303,y=0,z=-955,dx=139,dy=256,dz=139] at @s run pokespawn boldore level=37
+execute as @s[scores={rng=19..20},x=-594,y=0,z=2823,dx=342,dy=256,dz=280] at @s run pokespawn boldore level=37
+execute as @s[scores={rng=19..20},x=-224,y=0,z=2823,dx=284,dy=256,dz=260] at @s run pokespawn boldore level=37
 
+#--------------------------------------
+
+#Mirage Mountain
+#graveler 85% or crustle 15%
+execute as @s[scores={rng=10..18},x=-984,y=0,z=2963,dx=245,dy=256,dz=184] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-853,y=0,z=2463,dx=162,dy=256,dz=155] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-1360,y=0,z=3010,dx=223,dy=256,dz=121] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-1360,y=0,z=2817,dx=223,dy=256,dz=192] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-984,y=0,z=2769,dx=245,dy=256,dz=193] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-1136,y=0,z=2885,dx=151,dy=256,dz=142] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-1152,y=0,z=2691,dx=150,dy=256,dz=155] at @s run pokespawn graveler level=37
+execute as @s[scores={rng=10..18},x=-1360,y=0,z=3182,dx=197,dy=256,dz=153] at @s run pokespawn graveler level=37
+
+execute as @s[scores={rng=19..20},x=-984,y=0,z=2963,dx=245,dy=256,dz=184] at @s run pokespawn crustle level=37
+execute as @s[scores={rng=19..20},x=-853,y=0,z=2463,dx=162,dy=256,dz=155] at @s run pokespawn crustle level=37
+execute as @s[scores={rng=19..20},x=-1360,y=0,z=3010,dx=223,dy=256,dz=121] at @s run pokespawn crustle level=37
+execute as @s[scores={rng=19..20},x=-1360,y=0,z=2817,dx=223,dy=256,dz=192] at @s run pokespawn crustle level=37
+execute as @s[scores={rng=19..20},x=-984,y=0,z=2769,dx=245,dy=256,dz=193] at @s run pokespawn crustle level=37
+execute as @s[scores={rng=19..20},x=-1136,y=0,z=2885,dx=151,dy=256,dz=142] at @s run pokespawn crustle level=37
+execute as @s[scores={rng=19..20},x=-1152,y=0,z=2691,dx=150,dy=256,dz=155] at @s run pokespawn crustle level=37
+execute as @s[scores={rng=19..20},x=-1360,y=0,z=3182,dx=197,dy=256,dz=153] at @s run pokespawn crustle level=37
 
 
 tag @s remove RockSmashUse
