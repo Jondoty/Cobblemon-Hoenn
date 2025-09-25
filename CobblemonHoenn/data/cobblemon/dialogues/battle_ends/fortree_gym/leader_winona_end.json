@@ -1,45 +1,121 @@
 {
-  "initializationAction": [
-    "c.npc.set_chatting();",
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $4200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-    "q.run_command('scoreboard players add ' + q.player.username + ' Money 4200');"
-  ],
-  "speakers": {
-    "npc": {
-      "name": "Winona",
-      "face": {
-        "type": "artificial",
-        "modelType": "npc",
-        "identifier": "cobblemon:winona",
-        "isLeftSide": true
-      }
-    }
-  },
-  "pages": [
-    {
-      "id": "page2",
-      "speaker": "npc",
-      "lines": [
-        "Never before have I seen a Trainer command Pok\u00e9mon with more grace than I..."
-      ],
-      "input": {
-        "type": "option",
-        "vertical": false,
-        "options": [
-          {
-            "text": "Close",
-            "value": "close",
-            "action": [
-              "q.dialogue.close();"
-            ]
-          }
-        ]
-      }
-    }
-  ],
-  "escapeAction": [
-    "q.dialogue.close();"
-  ]
+    "initializationAction": [
+        "c.npc.set_chatting();",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s add Winona');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $4200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 4200');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Winona",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:winona",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "I recognize your talent and present you with this Gym Badge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only hoenn:badges/badge6');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "With the Feather Badge, you will be able to use the HM move Fly outside of battle."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "You won against me... I know you'll keep aiming higher and higher!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Someday, you may even fly up into the sky..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "That's the impression I get from you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": []
 }

@@ -1,56 +1,233 @@
 {
-  "initializationAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
-  ],
-  "escapeAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-    "q.dialogue.close();"
-  ],
-  "names": [
-    "Wallace"
-  ],
-  "speakers": {
-    "npc": {
-      "name": {
-        "type": "expression",
-        "expression": "q.npc.name"
-      },
-      "face": "q.npc.face();"
-    }
-  },
-  "pages": [
-    {
-      "id": "greeting",
-      "speaker": "npc",
-      "lines": [
-        "Bravo!"
-      ],
-      "input": {
-        "type": "option",
-        "vertical": false,
-        "options": [
-          {
-            "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-            "value": "battle",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "v.battle = q.npc.start_battle(q.player);"
-            ]
-          },
-          {
-            "text": "No",
-            "value": "no",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "q.dialogue.close();"
-            ]
-          }
-        ]
-      }
-    }
-  ]
+    "initializationAction": [],
+    "escapeAction": [
+        "q.dialogue.close();"
+    ],
+    "names": [
+        "Wallace"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Allow me to formally introduce myself."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I am Wallace. The Gym Leader of Sootopolis City."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "There's something about you... A difference in your demeanor..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "I think I sense that in you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "There's something about you... A difference in your demeanor..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "What happened inside the Cave of Origin, and what you did there..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Our upcoming battle will make that all clear."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "Now, show me. Show me the power you wield with your Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "And I, in turn, shall present you..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                "with a performance of illusions in water..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "npc",
+            "lines": [
+                "by me and my Pokémon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
+                        "value": "battle",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 32');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }

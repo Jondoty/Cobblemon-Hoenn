@@ -43,7 +43,18 @@ execute as @s[x=-1421,y=37,z=-1133,distance=..10,tag=!RegirockEncounter] run ope
 
 
 
+#-------------------------------------------------------------
+#Gym Leaders
+#Mainly just teleports the player to the battle room when they click on the gym leaders
 
+execute as @s[x=-2986,y=74,z=1494,distance=..10] run tp @s -2988 91 1346 180 17
+execute as @s[x=-2434,y=64,z=1514,distance=..10] run tp @s -2433 67 1411 180 17
+execute as @s[x=-3375,y=105,z=1459,distance=..10] run tp @s -3370 91 1351 180 17
+execute as @s[x=-3101,y=90,z=1518,distance=..10] run tp @s -3102 70 1355 180 17
+execute as @s[x=-3241,y=64,z=1457,distance=..10] run tp @s -3236 95 1355 180 17
+execute as @s[x=-2798,y=150,z=1478,distance=..10] run tp @s -2799 222 1526 180 17
+execute as @s[x=-2586,y=68,z=1499,distance=..10] run tp @s -2588 52 1343 180 17
+execute as @s[x=-3533,y=122,z=1472,distance=..10] run tp @s -3532 91 1339
 
 
 
