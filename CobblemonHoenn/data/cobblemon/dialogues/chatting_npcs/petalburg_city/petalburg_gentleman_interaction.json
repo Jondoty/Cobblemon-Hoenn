@@ -33,7 +33,7 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
-        "That's why we decided to send him to stay with my brother's family in Verdanturf Town for a while. The air is far cleaner there than it is around these parts."
+        "That's why we decided to send him to stay with my brother's family in Verdanturf Town for a while."
       ],
       "input": {
         "type": "option",
@@ -51,7 +51,7 @@
       "id": "page3",
       "speaker": "npc",
       "lines": [
-        "Oh, you're looking for Wally? I'm sorry, but I'm afraid he's already left."
+        "The air is far cleaner there than it is around these parts."
       ],
       "input": {
         "type": "option",
@@ -67,6 +67,24 @@
     },
     {
       "id": "page4",
+      "speaker": "npc",
+      "lines": [
+        "Oh, you're looking for Wally? I'm sorry, but I'm afraid he's already left."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page5');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page5",
       "speaker": "npc",
       "lines": [
         "I wonder where he is right this moment..."

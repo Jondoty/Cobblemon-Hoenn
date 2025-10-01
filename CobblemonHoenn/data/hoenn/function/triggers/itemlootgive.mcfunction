@@ -129,7 +129,7 @@ execute as @s[x=-2643,y=69,z=-187,distance=..5,tag=!ItemLoot26] run tag @s add I
 
 execute as @s[x=-2675,y=69,z=-317,distance=..5,tag=ItemLoot27] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-2675,y=69,z=-317,distance=..5,tag=!ItemLoot27] run give @s cobblemon:miracle_seed
-execute as @s[x=-2675,y=69,z=-317,distance=..5,tag=!ItemLoot27] run tellraw @s {"text":"You found a Miracle Seed!","italic":true,"color":"gray"}
+execute as @s[x=-2675,y=69,z=-317,distance=..5,tag=!ItemLoot27] run tellraw @s {"text":"You received a Miracle Seed!","italic":true,"color":"gray"}
 execute as @s[x=-2675,y=69,z=-317,distance=..5,tag=!ItemLoot27] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-2675,y=69,z=-317,distance=..5,tag=!ItemLoot27] run tag @s add ItemLoot27
 
