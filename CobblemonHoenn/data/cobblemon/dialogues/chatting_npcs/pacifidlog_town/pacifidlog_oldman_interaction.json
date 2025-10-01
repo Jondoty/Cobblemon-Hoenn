@@ -1,7 +1,7 @@
 {
   "speakers": {
     "npc": {
-      "name": "",
+      "name": "     ",
       "face": {
         "type": "artificial",
         "modelType": "npc",
