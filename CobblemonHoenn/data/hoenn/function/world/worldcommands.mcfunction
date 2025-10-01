@@ -6,6 +6,13 @@ execute at @a run execute if block ~ ~ ~ minecraft:pink_carpet run function hoen
 execute as @e[type=cobblemon:npc,nbt={PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b,HideNPCNameTag:1b}
 
 #-------------------------World Functions-----------------------------------------------------------------------------------
+
+#Auto reloads the server if function fails to load (should thus fix itself by reloading)
+tag @e[x=-2070,y=65,z=1410,dy=3,type=armor_stand] remove ReloadCheck
+function hoenn:triggers/autoreload
+execute if entity @e[x=-2070,y=65,z=1410,dy=3,type=armor_stand,tag=!ReloadCheck] run reload
+
+
 #Starts the player at spawn with items, scores and tps to lobby
 execute as @a[x=-2021,y=64,z=1459,distance=..20,tag=!InitialTags] run function hoenn:triggers/startingcommands
 
