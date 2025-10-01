@@ -42,7 +42,10 @@
           {
             "text": "Next",
             "value": "next",
-            "action": "q.dialogue.set_page('page3');"
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/itemlootgive');",
+              "q.dialogue.set_page('page3');"
+            ]
           }
         ]
       }
@@ -51,7 +54,7 @@
       "id": "page3",
       "speaker": "npc",
       "lines": [
-        "Teach that TM Flash to a Pok\u00e9mon and use it. It lights up even the inky darkness of caves."
+        "Use that TM Flash. It lights up even the inky darkness of caves."
       ],
       "input": {
         "type": "option",

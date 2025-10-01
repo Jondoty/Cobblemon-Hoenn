@@ -1,1 +1,1 @@
-give @s carrot_on_a_stick[custom_name='["",{"text":"HM05: Flash","italic":false,"color":"aqua"}]',lore=['["",{"text":"Illuminates the user\'s vision","italic":false}]','["",{"text":"for fifteen minutes.","italic":false}]'],custom_model_data=3]
+give @s carrot_on_a_stick[custom_name='["",{"text":"TM70: Flash","italic":false,"color":"aqua"}]',lore=['["",{"text":"Illuminates the user\'s vision","italic":false}]','["",{"text":"for fifteen minutes.","italic":false}]'],custom_model_data=3]

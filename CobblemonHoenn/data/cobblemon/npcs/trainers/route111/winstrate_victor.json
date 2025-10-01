@@ -1,6 +1,6 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:pokefanm",
+    "resourceIdentifier": "cobblemon:oldman",
     "presets": [
         "cobblemon:trainer_basics"
     ],

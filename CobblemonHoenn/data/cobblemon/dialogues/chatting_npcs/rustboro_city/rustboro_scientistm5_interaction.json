@@ -33,7 +33,7 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
-        "If you have a Fossil, bring it to my machines here!"
+        "If you have a Fossil, bring it to me!"
       ],
       "input": {
         "type": "option",

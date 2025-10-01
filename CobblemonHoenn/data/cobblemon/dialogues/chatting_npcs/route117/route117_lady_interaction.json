@@ -33,7 +33,7 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
-        "We can raise your Pok\u00e9mon for you here at our Pok\u00e9mon Day Care."
+        "We're still working on being able to raise your own Pok\u00e9mon'"
       ],
       "input": {
         "type": "option",
@@ -51,7 +51,7 @@
       "id": "page3",
       "speaker": "npc",
       "lines": [
-        "You can deposit your Pok\u00e9mon with us using that machine to the left!"
+        "You are welcome to have your Pok\u00e9mon roam in the pastures in the back though!"
       ],
       "input": {
         "type": "option",

@@ -42,7 +42,10 @@
           {
             "text": "Next",
             "value": "next",
-            "action": "q.dialogue.set_page('page3');"
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/itemlootgive');",
+              "q.dialogue.set_page('page3');"
+            ]
           }
         ]
       }
@@ -69,7 +72,25 @@
       "id": "page4",
       "speaker": "npc",
       "lines": [
-        "Focus your mind... If you get a bite, pull on the rod. Sometimes you can snag something immediately, but with bigger catches, you need to time the pulls on your rod to haul them in."
+        "Focus your mind... If you get a bite, pull on the rod."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page5');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": [
+        "Sometimes you can snag something immediately, but with bigger catches, you need to time the pulls on your rod to haul them in."
       ],
       "input": {
         "type": "option",
