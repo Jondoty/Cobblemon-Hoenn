@@ -1,5 +1,8 @@
 #Runs each time the player clicks on an interaction entity with the tag ItemLoot
 
+#For npcs that give items, runs within their action commands.
+#"q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/itemlootgive');",
+
 
 execute as @s[x=-2001,y=69,z=39,distance=..5,tag=ItemLoot1] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-2001,y=69,z=39,distance=..5,tag=!ItemLoot1] run give @s cobblemon:potion 10
@@ -708,6 +711,16 @@ execute as @s[x=-2004,y=66,z=-1070,distance=..5,tag=!ItemLoot211] run give @s co
 execute as @s[x=-2004,y=66,z=-1070,distance=..5,tag=!ItemLoot211] run tellraw @s {"text":"You found a Charcoal!","italic":true,"color":"gray"}
 execute as @s[x=-2004,y=66,z=-1070,distance=..5,tag=!ItemLoot211] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-2004,y=66,z=-1070,distance=..5,tag=!ItemLoot211] run tag @s add ItemLoot211
+
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=Itemloot615,tag=!Itemloot616,scores={PokemonLeague=1..}] run pokegive togepi level=1
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=Itemloot615,tag=!Itemloot616,scores={PokemonLeague=1..}] run tellraw @s {"text":"You recieved a Togepi!","italic":true,"color":"gray"}
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=Itemloot615,tag=!Itemloot616,scores={PokemonLeague=1..}] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=Itemloot615,tag=!Itemloot616,scores={PokemonLeague=1..}] run tag @s add Itemloot616
+
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=!Itemloot615] run pokegive wynaut level=1
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=!Itemloot615] run tellraw @s {"text":"You recieved a Wynaut!","italic":true,"color":"gray"}
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=!Itemloot615] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-2047,y=84,z=-1094,distance=..5,tag=!Itemloot615] run tag @s add Itemloot615
 
 execute as @s[x=-1920,y=100,z=-2697,distance=..5,tag=ItemLoot215] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-1920,y=100,z=-2697,distance=..5,tag=!ItemLoot215] run give @s cobblemon:full_heal
