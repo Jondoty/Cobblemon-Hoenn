@@ -732,9 +732,9 @@ tellraw @s[scores={DialogueTrigger=16,TalkTime=290}] {"text":"<Wally> P-please s
 
 execute as @s[scores={DialogueTrigger=16,TalkTime=297}] run gamemode spectator
 execute as @s[scores={DialogueTrigger=16,TalkTime=297}] run tp @s -2407.5 69.5 28.5 -48 24.5
-execute as @s[scores={DialogueTrigger=16,TalkTime=297},tag=!MusicDisabled] run stopsound @s
-execute as @s[scores={DialogueTrigger=16,TalkTime=297},tag=!MusicDisabled] run playsound minecraft:wild record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=16,TalkTime=297},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 137
+execute as @s[scores={DialogueTrigger=16,TalkTime=297},tag=!RadioOff] run stopsound @s
+execute as @s[scores={DialogueTrigger=16,TalkTime=297},tag=!RadioOff] run playsound minecraft:wild record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=16,TalkTime=297},tag=!RadioOff] run scoreboard players set @s MusicCooldown 137
 execute as @s[scores={DialogueTrigger=16,TalkTime=297}] run particle cloud -2406 69 32 1 1 1 0.15 100
 
 execute as @s[scores={DialogueTrigger=16,TalkTime=297}] unless entity @e[x=-2406,y=69,z=32,distance=..2,type=pixelmon:statue] run summon pixelmon:statue -2406 69 32 {Brain: {memories: {}}, HurtByTimestamp: 0, EVSpeed: 0s, Attributes: [{Base: 8.0d, Name: "minecraft:generic.max_health"}, {Base: 0.55d, Name: "minecraft:generic.movement_speed"}], Moveset: [{MoveID: "Tackle", MovePP: 35b}, {MoveID: "Vine Whip", MovePP: 25b}, {MoveID: "Growth", MovePP: 20b}, {MoveID: "Leech Seed", MovePP: 10b}], Invulnerable: 0b, statueTexture: 0b, Gender: 1b, ribbon_display2: {receiver: "null", received: 0L, type: "isi"}, AbsorptionAmount: 0.0f, Bred: 0b, FallDistance: 0.0f, InLove: 0, CanUpdate: 1b, IVSpDef: 5b, CaughtBall: "poke_ball", HandDropChances: [0.085f, 0.085f], statueLabel: "", PersistenceRequired: 0b, palette: "none", Ability: "Overgrow", IVDefense: 22b, DoesLevel: 1b, EVDefense: 0s, Air: 300s, PAbilitySlot: 0, DynamaxLevel: 0, HandItems: [{}, {}], Variant: "", ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.085f], statueModelType: 1b, EVSpecialAttack: 0s, Pos: [-2405.4374384143484d, 69.0d, 32.62818196425937d], IVSpeed: 18b, Temper: 0, CanPickUpLoot: 0b, Level: -1, HurtTime: 0s, NoGravity: 1b, Tame: 0b, StatsDefense: 3s, IVAttack: 13b, Growth: 7b, PHiddenAbility: 0b, BoundingBoxMode: 2b, FallFlying: 0b, ForcedAge: 0, PersistentData: {}, PortalCooldown: 0, GigantamaxFactor: 0b, Friendship: 70s, statueAnimation: "idle", EatingHaystack: 0b, DeathTime: 0s, eggCycles: -1, EVAttack: 0s, StatsSpecialAttack: 4s, IVHP: 2b, EVHP: 0s, ndex: 263, StatsSpecialDefense: 4s, Age: 0, Nature: 3b, Motion: [0.0d, 0.0d, 0.0d], StatsHP: 8s, Health: 20, Animate: 1b, SpecFlags: [], LeftHanded: 0b, OnGround: 0b, NoAI: 1b, Rotation: [203.94992f, 0.0f], StatsSpeed: 3s, StatsAttack: 4s, statueFrame: 0, Fire: -1s, ArmorItems: [{}, {}, {}, {}], IVSpAtt: 28b, NBT_VERSION: 2b, EVSpecialDefense: 0s, EXP: 0, RelrnMoves: [], ribbons2: []}
@@ -764,9 +764,9 @@ execute as @s[scores={DialogueTrigger=16,TalkTime=335}] run summon pixelmon:empt
 execute as @s[scores={DialogueTrigger=16,TalkTime=338}] run particle cloud -2404 69 29 1 1 1 0.15 100
 execute as @s[scores={DialogueTrigger=16,TalkTime=338}] run tp @e[x=-2404,y=69,z=29,distance=..2,type=pixelmon:statue] 10000000 -50000 -10000000
 
-execute as @s[scores={DialogueTrigger=16,TalkTime=338},tag=!MusicDisabled] run stopsound @s
-execute as @s[scores={DialogueTrigger=16,TalkTime=338},tag=!MusicDisabled] run playsound minecraft:wildwin record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=16,TalkTime=338},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 50
+execute as @s[scores={DialogueTrigger=16,TalkTime=338},tag=!RadioOff] run stopsound @s
+execute as @s[scores={DialogueTrigger=16,TalkTime=338},tag=!RadioOff] run playsound minecraft:wildwin record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=16,TalkTime=338},tag=!RadioOff] run scoreboard players set @s MusicCooldown 50
 tellraw @s[scores={DialogueTrigger=16,TalkTime=338}] {"text":"Gotcha! Ralts was caught!","italic":true,"color":"gray"}
 
 execute as @s[scores={DialogueTrigger=16,TalkTime=343}] run gamemode adventure
@@ -822,9 +822,9 @@ tellraw @s[scores={DialogueTrigger=17,TalkTime=17}] {"text":"<Researcher> I real
 
 #Team Grunt teleports in
 execute as @s[scores={DialogueTrigger=17,TalkTime=24}] run particle cloud -2720 69 -228 1 1 1 0.15 300
-execute as @s[scores={DialogueTrigger=17,TalkTime=24},tag=!MusicDisabled] run stopsound @s
-execute as @s[scores={DialogueTrigger=17,TalkTime=24},tag=!MusicDisabled] run playsound minecraft:teamappears record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=17,TalkTime=24},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 69
+execute as @s[scores={DialogueTrigger=17,TalkTime=24},tag=!RadioOff] run stopsound @s
+execute as @s[scores={DialogueTrigger=17,TalkTime=24},tag=!RadioOff] run playsound minecraft:teamappears record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=17,TalkTime=24},tag=!RadioOff] run scoreboard players set @s MusicCooldown 69
 execute as @s[scores={DialogueTrigger=17,TalkTime=24,GameVersion=1}] run summon pixelmon:npc_chatting -2720 69 -228 {HurtByTimestamp: 0, chatNum: 0, Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "Magma Grunt", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 0b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, TextureIndex: 4, TrainerIndex: "madame", NameIndex: 4, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [180.0f, 0.0f], HandItems: [{}, {}], ChatIndex: 0, Profession: -1s,Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "magmagruntmale.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 2s}
 execute as @s[scores={DialogueTrigger=17,TalkTime=24,GameVersion=2}] run summon pixelmon:npc_chatting -2720 69 -228 {HurtByTimestamp: 0, chatNum: 0, Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "Aqua Grunt", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 0b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, TextureIndex: 4, TrainerIndex: "madame", NameIndex: 4, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [180.0f, 0.0f], HandItems: [{}, {}], ChatIndex: 0, Profession: -1s,Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "aquagruntmale.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 2s}
 
@@ -1097,9 +1097,9 @@ tag @s[scores={DialogueTrigger=25,TalkTime=73..}] add Dialogue25
 #https://youtu.be/MgkqxXCmrtI?t=6955
 
 tellraw @s[scores={DialogueTrigger=26,TalkTime=3}] {"text":"Out of the way! Move it!","bold":true}
-execute as @s[scores={DialogueTrigger=26,TalkTime=3},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=26,TalkTime=3},tag=!MusicDisabled] run playsound minecraft:helpme record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=26,TalkTime=3},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 27
+execute as @s[scores={DialogueTrigger=26,TalkTime=3},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=26,TalkTime=3},tag=!RadioOff] run playsound minecraft:helpme record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=26,TalkTime=3},tag=!RadioOff] run scoreboard players set @s MusicCooldown 27
 
 #tps to overview
 execute as @s[scores={DialogueTrigger=26,TalkTime=5}] run gamemode spectator
@@ -1139,9 +1139,9 @@ tag @s[scores={DialogueTrigger=27,TalkTime=22..}] add Dialogue27
 #Pre-Grunt Battle
 #https://youtu.be/MgkqxXCmrtI?t=8360
 
-execute as @s[scores={DialogueTrigger=28,TalkTime=1},tag=!MusicDisabled] run stopsound @s
-execute as @s[scores={DialogueTrigger=28,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:teamappears record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=28,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 69
+execute as @s[scores={DialogueTrigger=28,TalkTime=1},tag=!RadioOff] run stopsound @s
+execute as @s[scores={DialogueTrigger=28,TalkTime=1},tag=!RadioOff] run playsound minecraft:teamappears record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=28,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 69
 
 tellraw @s[scores={DialogueTrigger=28,TalkTime=1,GameVersion=1}] {"text":"<Team Magma Grunt> Grah, keelhaul it all!"}
 tellraw @s[scores={DialogueTrigger=28,TalkTime=9,GameVersion=1}] {"text":"<Team Magma Grunt> This hostage Pokémon turned out to be worthless!"}
@@ -1287,9 +1287,9 @@ tag @s[scores={DialogueTrigger=30,TalkTime=185..}] add Dialogue30
 #Rival after Devon Corp Convo
 #https://youtu.be/MgkqxXCmrtI?t=8762
 
-execute as @s[scores={DialogueTrigger=31,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=31,TalkTime=1},tag=!MusicDisabled] run playsound may record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=31,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 102
+execute as @s[scores={DialogueTrigger=31,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=31,TalkTime=1},tag=!RadioOff] run playsound may record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=31,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 102
 execute at @s[scores={DialogueTrigger=31,TalkTime=1}] as @e[type=pixelmon:npc_chatting,distance=..10] at @s run tp @s ~ ~ ~ facing entity @p[distance=..15]
 
 tellraw @s[scores={DialogueTrigger=31,TalkTime=1,Rival=1}] ["",{"text":"<May> Oh! Hey, "},{"selector":"@s"},{"text":"! Have you been catching lots of Pokémon?"}]
@@ -1595,9 +1595,9 @@ tellraw @s[scores={DialogueTrigger=42,TalkTime=20}] {"text":"<Captain Stern> Ah!
 tellraw @s[scores={DialogueTrigger=42,TalkTime=28}] {"text":"<Captain Stern> Thank you for bringing the case all this way."}
 tellraw @s[scores={DialogueTrigger=42,TalkTime=35}] {"text":"<Captain Stern> Now we can prepare for our expedition at last!"}
 
-execute as @s[scores={DialogueTrigger=42,TalkTime=40},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=42,TalkTime=40},tag=!MusicDisabled] run playsound minecraft:teamappears record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=42,TalkTime=40},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 69
+execute as @s[scores={DialogueTrigger=42,TalkTime=40},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=42,TalkTime=40},tag=!RadioOff] run playsound minecraft:teamappears record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=42,TalkTime=40},tag=!RadioOff] run scoreboard players set @s MusicCooldown 69
 
 #Team Grunts teleport in
 execute as @s[scores={DialogueTrigger=42,TalkTime=40,GameVersion=1}] run particle cloud -1382 15 270 1 1 1 0.15 300
@@ -1673,9 +1673,9 @@ tellraw @s[scores={DialogueTrigger=44,TalkTime=17,GameVersion=2}] {"text":"<Team
 #Shot of them
 #https://youtu.be/MgkqxXCmrtI?t=12840
 
-execute as @s[scores={DialogueTrigger=44,TalkTime=27},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=44,TalkTime=27},tag=!MusicDisabled] run playsound minecraft:teamleader record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=44,TalkTime=27},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 99
+execute as @s[scores={DialogueTrigger=44,TalkTime=27},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=44,TalkTime=27},tag=!RadioOff] run playsound minecraft:teamleader record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=44,TalkTime=27},tag=!RadioOff] run scoreboard players set @s MusicCooldown 99
 
 execute as @s[scores={DialogueTrigger=44,TalkTime=27,GameVersion=1}] run particle cloud -1388 15 278 1 1 1 0.15 300
 execute as @s[scores={DialogueTrigger=44,TalkTime=27,GameVersion=2}] run particle cloud -1388 -12 278 1 1 1 0.15 300
@@ -2090,9 +2090,9 @@ tag @s[scores={DialogueTrigger=51,TalkTime=100..}] add Dialogue51
 
 execute at @s[scores={DialogueTrigger=58,TalkTime=1}] as @e[type=pixelmon:npc_chatting,distance=..10] at @s run tp @s ~ ~ ~ facing entity @p[distance=..15]
 
-execute as @s[scores={DialogueTrigger=58,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=58,TalkTime=1},tag=!MusicDisabled] run playsound may record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=58,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 102
+execute as @s[scores={DialogueTrigger=58,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=58,TalkTime=1},tag=!RadioOff] run playsound may record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=58,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 102
 
 tellraw @s[scores={DialogueTrigger=58,TalkTime=3,Rival=1}] ["",{"text":"<May> Hey, "},{"selector":"@s"},{"text":"! It's been ages!"}]
 tellraw @s[scores={DialogueTrigger=58,TalkTime=10,Rival=1}] {"text":"<May> Nice timing, too. I was just searching for Pokémon, you know?"}
@@ -2683,9 +2683,9 @@ tellraw @s[scores={DialogueTrigger=76,TalkTime=16}] {"text":"<...> It's gotta be
 tellraw @s[scores={DialogueTrigger=76,TalkTime=23}] {"text":"<Aarune> There'll be enough space here to build a crazy super place, or my name's not Aarune!"}
 
 
-execute as @s[scores={DialogueTrigger=76,TalkTime=30},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=76,TalkTime=30},tag=!MusicDisabled] run playsound minecraft:secretbases record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=76,TalkTime=30},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 104
+execute as @s[scores={DialogueTrigger=76,TalkTime=30},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=76,TalkTime=30},tag=!RadioOff] run playsound minecraft:secretbases record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=76,TalkTime=30},tag=!RadioOff] run scoreboard players set @s MusicCooldown 104
 
 execute at @s[scores={DialogueTrigger=76,TalkTime=30}] as @e[type=pixelmon:npc_chatting,x=-1515,y=78,z=-1368,distance=..3] at @s run tp @s ~ ~ ~ facing entity @p[distance=..15]
 tellraw @s[scores={DialogueTrigger=76,TalkTime=33}] {"text":"<Aarune> Yo, my young Pokémon Trainer!"}
@@ -2935,8 +2935,8 @@ tellraw @s[scores={DialogueTrigger=82,TalkTime=32,GameVersion=1}] {"text":"<Team
 tellraw @s[scores={DialogueTrigger=82,TalkTime=39,GameVersion=1}] {"text":"<Team Magma Admin> If we combine them all, a super-ancient Pokémon..."}
 
 #stops music
-execute as @s[scores={DialogueTrigger=82,TalkTime=44,GameVersion=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=82,TalkTime=44,GameVersion=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 18
+execute as @s[scores={DialogueTrigger=82,TalkTime=44,GameVersion=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=82,TalkTime=44,GameVersion=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 18
 
 tellraw @s[scores={DialogueTrigger=82,TalkTime=50,GameVersion=1}] {"text":"<...> Bwahahahahahaha! You lost to this scamp?"}
 tellraw @s[scores={DialogueTrigger=82,TalkTime=57,GameVersion=1}] {"text":"<...> What a pathetic bunch! You lazy stooges will be the downfall of Team Magma!"}
@@ -3018,8 +3018,8 @@ tellraw @s[scores={DialogueTrigger=82,TalkTime=25,GameVersion=2}] {"text":"<Team
 tellraw @s[scores={DialogueTrigger=82,TalkTime=33,GameVersion=2}] {"text":"<Team Aqua Admin> We won't let ignorant little brats get in our way!"}
 
 #stops music
-execute as @s[scores={DialogueTrigger=82,TalkTime=40,GameVersion=2},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=82,TalkTime=40,GameVersion=2},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 18
+execute as @s[scores={DialogueTrigger=82,TalkTime=40,GameVersion=2},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=82,TalkTime=40,GameVersion=2},tag=!RadioOff] run scoreboard players set @s MusicCooldown 18
 
 tellraw @s[scores={DialogueTrigger=82,TalkTime=43,GameVersion=2}] {"text":"<...> Hmph... Do these mere children give you so much trouble?"}
 tellraw @s[scores={DialogueTrigger=82,TalkTime=52,GameVersion=2}] {"text":"<...> You—an Admin of Team Aqua..."}
@@ -3271,9 +3271,9 @@ tag @s[scores={DialogueTrigger=86,TalkTime=47..}] add Dialogue86
 #sets player into spectator
 execute as @s[scores={DialogueTrigger=87,TalkTime=1}] run gamemode spectator
 execute as @s[scores={DialogueTrigger=87,TalkTime=1..10}] run tp @s -1885.8 238 -3370.5 130 12
-execute as @s[scores={DialogueTrigger=87,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=87,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:teamleader record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=87,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 99
+execute as @s[scores={DialogueTrigger=87,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=87,TalkTime=1},tag=!RadioOff] run playsound minecraft:teamleader record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=87,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 99
 
 tellraw @s[scores={DialogueTrigger=87,TalkTime=4,GameVersion=1}] {"text":"<Maxie> The power contained in the Meteorite..."}
 tellraw @s[scores={DialogueTrigger=87,TalkTime=13,GameVersion=1}] {"text":"<Maxie> If we merge the explosive energy contained within the planet's core with the Meteorite's power..."}
@@ -5147,9 +5147,9 @@ tag @s[scores={DialogueTrigger=127,TalkTime=45..}] add Dialogue127
 #Rival pre-battle
 #https://youtu.be/MgkqxXCmrtI?t=47196
 
-execute as @s[scores={DialogueTrigger=128,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=128,TalkTime=1},tag=!MusicDisabled] run playsound may record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=128,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 102
+execute as @s[scores={DialogueTrigger=128,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=128,TalkTime=1},tag=!RadioOff] run playsound may record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=128,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 102
 
 tellraw @s[scores={DialogueTrigger=128,TalkTime=1,Rival=1}] ["",{"text":"<May> Heeey! "},{"selector":"@s"},{"text":"!"}]
 
@@ -5593,7 +5593,7 @@ tag @s[scores={DialogueTrigger=138,TalkTime=123..}] add Dialogue138
 #https://youtu.be/MgkqxXCmrtI?t=51939
 
 execute as @s[scores={DialogueTrigger=139,TalkTime=3}] run stopsound @s record
-execute as @s[scores={DialogueTrigger=139,TalkTime=3},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 25
+execute as @s[scores={DialogueTrigger=139,TalkTime=3},tag=!RadioOff] run scoreboard players set @s MusicCooldown 25
 
 #screen shaking
 execute as @s[scores={DialogueTrigger=139,TalkTime=3}] run tag @s add ShakeScreen
@@ -5618,9 +5618,9 @@ execute as @s[scores={DialogueTrigger=139,TalkTime=25}] unless entity @e[x=1515,
 execute as @s[scores={DialogueTrigger=139,TalkTime=25}] unless entity @e[x=1505,y=74,z=-1022,dy=3,type=pixelmon:npc_chatting] run summon pixelmon:npc_chatting 1505 74 -1022 {Brain: {memories: {}}, HurtByTimestamp: 0, chatNum: 0, Attributes: [{Base: 0.699999988079071d, Name: "minecraft:generic.movement_speed"}, {Base: 0.0d, Name: "forge:step_height_addition"}, {Base: 0.08d, Name: "forge:entity_gravity"}], Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "Team Galactic Grunt", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 0b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, Motion: [0.0d, -0.0784000015258789d, 0.0d], TextureIndex: 0, TrainerIndex: "madame", NameIndex: 2, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [4.967906f, 40.0f], HandItems: [{}, {}], ChatIndex: 2, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.085f], Profession: -1s, Pos: [1505.5d, 75.0d, -1021.5d], Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "madame.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 3s}
 execute as @s[scores={DialogueTrigger=139,TalkTime=25}] unless entity @e[x=1499,y=74,z=-1024,dy=3,type=pixelmon:npc_chatting] run summon pixelmon:npc_chatting 1499 74 -1024 {Brain: {memories: {}}, HurtByTimestamp: 0, chatNum: 0, Attributes: [{Base: 0.699999988079071d, Name: "minecraft:generic.movement_speed"}, {Base: 0.0d, Name: "forge:step_height_addition"}, {Base: 0.08d, Name: "forge:entity_gravity"}], Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "Penelope", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 0b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, Motion: [0.0d, -0.0784000015258789d, 0.0d], TextureIndex: 0, TrainerIndex: "littleboy", NameIndex: 0, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [1.2638327f, 36.807278f], HandItems: [{}, {}], ChatIndex: 0, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.085f], Profession: -1s, Pos: [1499.5d, 75.0d, -1023.5d], Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "littleboy.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 3s}
 
-execute as @s[scores={DialogueTrigger=139,TalkTime=26},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=139,TalkTime=26},tag=!MusicDisabled] run playsound countdowntodestruction record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=139,TalkTime=26},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 113
+execute as @s[scores={DialogueTrigger=139,TalkTime=26},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=139,TalkTime=26},tag=!RadioOff] run playsound countdowntodestruction record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=139,TalkTime=26},tag=!RadioOff] run scoreboard players set @s MusicCooldown 113
 
 execute as @s[scores={DialogueTrigger=139,TalkTime=26}] run gamemode adventure
 execute as @s[scores={DialogueTrigger=139,TalkTime=26}] run tp @s 1510.5 74 -1013.5 170 14
@@ -5927,9 +5927,9 @@ tellraw @s[scores={DialogueTrigger=141,TalkTime=323}] {"text":"<Maxie> What is i
 tellraw @s[scores={DialogueTrigger=141,TalkTime=330}] {"text":"<Maxie> So the sun has turned mercilessly fierce in its heat. I should expect so."}
 tellraw @s[scores={DialogueTrigger=141,TalkTime=338}] {"text":"<Maxie> That is what I have long— No, what WE have long wished for."}
 
-execute as @s[scores={DialogueTrigger=141,TalkTime=346},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=141,TalkTime=346},tag=!MusicDisabled] run playsound countdowntodestruction record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=141,TalkTime=346},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 113
+execute as @s[scores={DialogueTrigger=141,TalkTime=346},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=141,TalkTime=346},tag=!RadioOff] run playsound countdowntodestruction record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=141,TalkTime=346},tag=!RadioOff] run scoreboard players set @s MusicCooldown 113
 
 tellraw @s[scores={DialogueTrigger=141,TalkTime=346}] {"text":"<Maxie> What?! The heat is greater than simulations predicted?"}
 tellraw @s[scores={DialogueTrigger=141,TalkTime=353}] {"text":"<Maxie> It will be a risk to our own safety if it continues?!"}
@@ -5971,9 +5971,9 @@ execute as @s[scores={DialogueTrigger=141,TalkTime=534}] unless entity @e[x=1370
 execute as @s[scores={DialogueTrigger=141,TalkTime=534}] unless entity @e[x=1373,y=64,z=-49,dy=3,type=pixelmon:npc_chatting] run summon pixelmon:npc_chatting 1373 64 -49 {Brain: {memories: {}}, HurtByTimestamp: 0, chatNum: 0, Attributes: [{Base: 0.0d, Name: "forge:step_height_addition"}, {Base: 0.699999988079071d, Name: "minecraft:generic.movement_speed"}, {Base: 0.08d, Name: "forge:entity_gravity"}], Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "Tabitha", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 0b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, Motion: [0.0d, -0.0784000015258789d, 0.0d], TextureIndex: 0, TrainerIndex: "magmagruntmale", NameIndex: 4, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [6.185627f, -2.765615f], HandItems: [{}, {}], ChatIndex: 2, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.085f], Profession: -1s, Pos: [1373.5d, 65.0d, -48.5d], Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "magmagruntmale.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 3s}
 execute as @s[scores={DialogueTrigger=141,TalkTime=534}] unless entity @e[x=1364,y=64,z=-49,dy=3,type=pixelmon:npc_chatting] run summon pixelmon:npc_chatting 1364 64 -49 {Brain: {memories: {}}, HurtByTimestamp: 0, chatNum: 0, Attributes: [{Base: 0.0d, Name: "forge:step_height_addition"}, {Base: 0.699999988079071d, Name: "minecraft:generic.movement_speed"}, {Base: 0.08d, Name: "forge:entity_gravity"}], Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 1b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, Motion: [0.0d, -0.0784000015258789d, 0.0d], TextureIndex: 0, TrainerIndex: "magmaboss", NameIndex: 0, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [3.0787864f, -4.131112f], HandItems: [{}, {}], ChatIndex: 0, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.085f], Profession: -1s, Pos: [1364.5d, 65.0d, -48.5d], Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "magmaboss.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 3s}
 
-execute as @s[scores={DialogueTrigger=141,TalkTime=534},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=141,TalkTime=534},tag=!MusicDisabled] run playsound drought record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=141,TalkTime=534},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 81
+execute as @s[scores={DialogueTrigger=141,TalkTime=534},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=141,TalkTime=534},tag=!RadioOff] run playsound drought record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=141,TalkTime=534},tag=!RadioOff] run scoreboard players set @s MusicCooldown 81
 
 
 tellraw @s[scores={DialogueTrigger=141,TalkTime=540}] {"text":"<Maxie> This... This is not..."}
@@ -6141,9 +6141,9 @@ tellraw @s[scores={DialogueTrigger=142,TalkTime=266}] {"text":"<Archie> What is 
 tellraw @s[scores={DialogueTrigger=142,TalkTime=273}] {"text":"<Archie> Bwahahahaha! But of course it has!"}
 tellraw @s[scores={DialogueTrigger=142,TalkTime=280}] {"text":"<Archie> That is exactly what I have—"}
 
-execute as @s[scores={DialogueTrigger=142,TalkTime=287},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=142,TalkTime=287},tag=!MusicDisabled] run playsound countdowntodestruction record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=142,TalkTime=287},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 113
+execute as @s[scores={DialogueTrigger=142,TalkTime=287},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=142,TalkTime=287},tag=!RadioOff] run playsound countdowntodestruction record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=142,TalkTime=287},tag=!RadioOff] run scoreboard players set @s MusicCooldown 113
 
 tellraw @s[scores={DialogueTrigger=142,TalkTime=287}] {"text":"<Archie> What...?"}
 tellraw @s[scores={DialogueTrigger=142,TalkTime=293}] {"text":"<Archie> What do you mean far more than we thought?!"}
@@ -6180,9 +6180,9 @@ execute as @s[scores={DialogueTrigger=142,TalkTime=437}] unless entity @e[x=1373
 execute as @s[scores={DialogueTrigger=142,TalkTime=437}] unless entity @e[x=1364,y=64,z=-49,dy=3,type=pixelmon:npc_chatting] run summon pixelmon:npc_chatting 1364 64 -49 {Brain: {memories: {}}, HurtByTimestamp: 0, chatNum: 0, Attributes: [{Base: 0.0d, Name: "forge:step_height_addition"}, {Base: 0.699999988079071d, Name: "minecraft:generic.movement_speed"}, {Base: 0.08d, Name: "forge:entity_gravity"}], Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 1b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, Motion: [0.0d, -0.0784000015258789d, 0.0d], TextureIndex: 0, TrainerIndex: "aquaboss", NameIndex: 0, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [3.0787864f, -4.131112f], HandItems: [{}, {}], ChatIndex: 0, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.085f], Profession: -1s, Pos: [1364.5d, 65.0d, -48.5d], Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "aquaboss.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 3s}
 
 
-execute as @s[scores={DialogueTrigger=142,TalkTime=437},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=142,TalkTime=437},tag=!MusicDisabled] run playsound drought record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=142,TalkTime=437},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 81
+execute as @s[scores={DialogueTrigger=142,TalkTime=437},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=142,TalkTime=437},tag=!RadioOff] run playsound drought record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=142,TalkTime=437},tag=!RadioOff] run scoreboard players set @s MusicCooldown 81
 
 
 tellraw @s[scores={DialogueTrigger=142,TalkTime=439}] {"text":"<Archie> This... This is..."}
@@ -6760,9 +6760,9 @@ tag @s[scores={DialogueTrigger=148,TalkTime=50..}] add Dialogue148
 #After legendaty is caught (or defeated?)
 #https://youtu.be/MgkqxXCmrtI?t=56455
 
-execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:coexistence record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 323
+execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!RadioOff] run playsound minecraft:coexistence record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 323
 
 
 #Energy particles
@@ -7154,9 +7154,9 @@ tag @s[scores={DialogueTrigger=152,TalkTime=160..}] add Dialogue152
 
 #Summon exclamation
 
-execute as @s[scores={DialogueTrigger=153,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=153,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:apathweallmustwalk record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=153,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 116
+execute as @s[scores={DialogueTrigger=153,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=153,TalkTime=1},tag=!RadioOff] run playsound minecraft:apathweallmustwalk record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=153,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 116
 
 tellraw @s[scores={DialogueTrigger=153,TalkTime=1}] ["",{"text":"<Wally> Ah! "},{"selector":"@s"},{"text":"! "}]
 tellraw @s[scores={DialogueTrigger=153,TalkTime=8}] {"text":"<Wally> I bet you must be surprised to see me in a place like this!"}
@@ -7170,10 +7170,10 @@ tellraw @s[scores={DialogueTrigger=153,TalkTime=63}] {"text":"<Wally> And now we
 tellraw @s[scores={DialogueTrigger=153,TalkTime=72}] {"text":"<Wally> Standing here facing you again gives me chills..."}
 
 tellraw @s[scores={DialogueTrigger=153,TalkTime=81}] {"text":"<Wally> ...But I won't give up! I won't lose anymore."}
-execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!MusicDisabled] run playsound minecraft:wally record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 119
-execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!MusicDisabled] run scoreboard players set @s BattleMusic 9
+execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!RadioOff] run playsound minecraft:wally record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!RadioOff] run scoreboard players set @s MusicCooldown 119
+execute as @s[scores={DialogueTrigger=153,TalkTime=81},tag=!RadioOff] run scoreboard players set @s BattleMusic 9
 tellraw @s[scores={DialogueTrigger=153,TalkTime=90}] {"text":"<Wally> My Pokémon have given me the courage and strength to fight."}
 tellraw @s[scores={DialogueTrigger=153,TalkTime=99}] {"text":"<Wally> I have to win for their sake!"}
 tellraw @s[scores={DialogueTrigger=153,TalkTime=106}] {"text":"<Wally> So get ready... Here I come!"}
@@ -7222,9 +7222,9 @@ tag @s[scores={DialogueTrigger=154,TalkTime=122..}] add Dialogue154
 #https://youtu.be/MgkqxXCmrtI?t=61412
 
 #Runs intro music
-execute as @s[scores={DialogueTrigger=155,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=155,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=155,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 71
+execute as @s[scores={DialogueTrigger=155,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=155,TalkTime=1},tag=!RadioOff] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=155,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 71
 
 tellraw @s[scores={DialogueTrigger=155,PokemonLeague=0,TalkTime=1}] {"text":"<...> Welcome, challenger!"}
 tellraw @s[scores={DialogueTrigger=155,PokemonLeague=0,TalkTime=7}] {"text":"<Sidney> I'm Sidney of the Elite Four."}
@@ -7268,9 +7268,9 @@ tag @s[scores={DialogueTrigger=156,TalkTime=15..}] add Dialogue156
 #Phoebe Pre-Battle
 
 #Runs intro music
-execute as @s[scores={DialogueTrigger=157,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=157,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=157,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 71
+execute as @s[scores={DialogueTrigger=157,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=157,TalkTime=1},tag=!RadioOff] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=157,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 71
 
 tellraw @s[scores={DialogueTrigger=157,PokemonLeague=0,TalkTime=1}] {"text":"<...> Hahaha!"}
 tellraw @s[scores={DialogueTrigger=157,PokemonLeague=0,TalkTime=7}] {"text":"<Phoebe> I'm Phoebe of the Elite Four."}
@@ -7309,9 +7309,9 @@ tag @s[scores={DialogueTrigger=158,TalkTime=26..}] add Dialogue158
 #https://youtu.be/MgkqxXCmrtI?t=62059
 
 #Runs intro music
-execute as @s[scores={DialogueTrigger=159,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=159,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=159,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 71
+execute as @s[scores={DialogueTrigger=159,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=159,TalkTime=1},tag=!RadioOff] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=159,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 71
 
 tellraw @s[scores={DialogueTrigger=159,PokemonLeague=0,TalkTime=1}] {"text":"<...> Welcome."}
 tellraw @s[scores={DialogueTrigger=159,PokemonLeague=0,TalkTime=7}] {"text":"<Glacia> My name is Glacia of the Elite Four."}
@@ -7350,9 +7350,9 @@ tag @s[scores={DialogueTrigger=160,TalkTime=31..}] add Dialogue160
 #https://youtu.be/MgkqxXCmrtI?t=62435
 
 #Runs intro music
-execute as @s[scores={DialogueTrigger=161,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=161,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=161,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 71
+execute as @s[scores={DialogueTrigger=161,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=161,TalkTime=1},tag=!RadioOff] run playsound minecraft:elitefouropen record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=161,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 71
 
 tellraw @s[scores={DialogueTrigger=161,PokemonLeague=0,TalkTime=1}] {"text":"<Drake> I am the last of the Pokémon League Elite Four, Drake the Dragon master!"}
 tellraw @s[scores={DialogueTrigger=161,PokemonLeague=0,TalkTime=11}] {"text":"<Drake> In their natural state, Pokémon are wild living things. They are free."}
@@ -7394,9 +7394,9 @@ tag @s[scores={DialogueTrigger=162,TalkTime=46..}] add Dialogue162
 #https://youtu.be/MgkqxXCmrtI?t=62718
 
 #Runs intro music
-execute as @s[scores={DialogueTrigger=163,TalkTime=1},tag=!MusicDisabled] run stopsound @s record
-execute as @s[scores={DialogueTrigger=163,TalkTime=1},tag=!MusicDisabled] run playsound minecraft:stevenopen record @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=163,TalkTime=1},tag=!MusicDisabled] run scoreboard players set @s MusicCooldown 91
+execute as @s[scores={DialogueTrigger=163,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=163,TalkTime=1},tag=!RadioOff] run playsound minecraft:stevenopen record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=163,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 91
 
 tellraw @s[scores={DialogueTrigger=163,PokemonLeague=0,TalkTime=1}] ["",{"text":"<Steven> Welcome, "},{"selector":"@s"},{"text":"."}]
 tellraw @s[scores={DialogueTrigger=163,PokemonLeague=0,TalkTime=8}] {"text":"<Steven> I was hoping I would get to see you make it here one day."}

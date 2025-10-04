@@ -27,24 +27,24 @@ stopsound @s record
 scoreboard players set @s MusicCooldown 0
 
 #General Trainer, rival
-playsound trainerwin record @s[tag=!MusicDisabled,scores={BattleMusic=0..2}] ~ ~ ~ 1 1 1
-scoreboard players set @s[tag=!MusicDisabled,scores={BattleMusic=0..2}] MusicCooldown 53
+playsound trainerwin record @s[tag=!RadioOff,scores={BattleMusic=0..2}] ~ ~ ~ 1 1 1
+scoreboard players set @s[tag=!RadioOff,scores={BattleMusic=0..2}] MusicCooldown 53
 
 #Gym Leader, elite four?
-playsound gymleaderwin record @s[tag=!MusicDisabled,scores={BattleMusic=3..4}] ~ ~ ~ 1 1 1
-scoreboard players set @s[tag=!MusicDisabled,scores={BattleMusic=3..4}] MusicCooldown 135
+playsound gymleaderwin record @s[tag=!RadioOff,scores={BattleMusic=3..4}] ~ ~ ~ 1 1 1
+scoreboard players set @s[tag=!RadioOff,scores={BattleMusic=3..4}] MusicCooldown 135
 
 #Gym Leader, Chatelaine
-playsound gymleaderwin record @s[tag=!MusicDisabled,scores={BattleMusic=5..6}] ~ ~ ~ 1 1 1
-scoreboard players set @s[tag=!MusicDisabled,scores={BattleMusic=5..6}] MusicCooldown 100
+playsound gymleaderwin record @s[tag=!RadioOff,scores={BattleMusic=5..6}] ~ ~ ~ 1 1 1
+scoreboard players set @s[tag=!RadioOff,scores={BattleMusic=5..6}] MusicCooldown 100
 
 #Teams win
-playsound teamwin record @s[tag=!MusicDisabled,scores={BattleMusic=7..8}] ~ ~ ~ 1 1 1
-scoreboard players set @s[tag=!MusicDisabled,scores={BattleMusic=7..8}] MusicCooldown 35
+playsound teamwin record @s[tag=!RadioOff,scores={BattleMusic=7..8}] ~ ~ ~ 1 1 1
+scoreboard players set @s[tag=!RadioOff,scores={BattleMusic=7..8}] MusicCooldown 35
 
 #Wally, Zinnia
-playsound trainerwin record @s[tag=!MusicDisabled,scores={BattleMusic=9..10}] ~ ~ ~ 1 1 1
-scoreboard players set @s[tag=!MusicDisabled,scores={BattleMusic=9..10}] MusicCooldown 53
+playsound trainerwin record @s[tag=!RadioOff,scores={BattleMusic=9..10}] ~ ~ ~ 1 1 1
+scoreboard players set @s[tag=!RadioOff,scores={BattleMusic=9..10}] MusicCooldown 53
 
 
 

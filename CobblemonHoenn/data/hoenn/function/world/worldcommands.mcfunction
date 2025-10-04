@@ -141,16 +141,16 @@ execute as @e[type=minecraft:armor_stand,tag=MegaStone] at @s if entity @a[dista
 
 
 #Runs music function
-execute as @a[tag=!MusicDisabled,scores={MusicCooldown=0}] run function hoenn:world/music
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0}] run function hoenn:world/music
 
 #Removes a MusicCooldown score each run, resets music at 0
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
 
 #Resets the music if player jumps on or off a bicycle
-#execute as @a[tag=!MusicDisabled,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
-#execute as @a[tag=!MusicDisabled,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run tag @s remove Cycling
+#execute as @a[tag=!RadioOff,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
+#execute as @a[tag=!RadioOff,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run tag @s remove Cycling
 
-#execute as @a[tag=!MusicDisabled,tag=!Cycling] at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
+#execute as @a[tag=!RadioOff,tag=!Cycling] at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
 
 
 #Desert Ruins Safety Goggles Equip
