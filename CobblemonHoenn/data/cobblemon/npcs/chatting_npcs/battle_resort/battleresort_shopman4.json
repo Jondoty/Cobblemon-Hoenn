@@ -1,6 +1,6 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:shopman4",
+  "resourceIdentifier": "cobblemon:shopman",
   "presets": [],
   "variation": {
     "dirt": [

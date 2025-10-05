@@ -988,26 +988,23 @@ execute as @s[x=-1011,y=51,z=-1288,distance=..5,tag=!ItemLoot281] run tag @s add
 
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=ItemLoot282] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot282] run give @s cobblemon:icy_rock
-execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot282] run tellraw @s {"text":"You found an Icy Rock!","italic":true,"color":"gray"}
+execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot282] run tellraw @s {"text":"You recieved an Icy Rock!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot282] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot282] run tag @s add ItemLoot282
 
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=ItemLoot283] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot283] run give @s cobblemon:smooth_rock
-execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot283] run tellraw @s {"text":"You found a Smooth Rock!","italic":true,"color":"gray"}
-execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot283] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot283] run tellraw @s {"text":"You recieved a Smooth Rock!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot283] run tag @s add ItemLoot283
 
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=ItemLoot284] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot284] run give @s cobblemon:heat_rock
-execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot284] run tellraw @s {"text":"You found a Heat Rock!","italic":true,"color":"gray"}
-execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot284] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot284] run tellraw @s {"text":"You recieved a Heat Rock!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot284] run tag @s add ItemLoot284
 
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=ItemLoot285] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot285] run give @s cobblemon:damp_rock
-execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot285] run tellraw @s {"text":"You found a Damp Rock!","italic":true,"color":"gray"}
-execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot285] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot285] run tellraw @s {"text":"You recieved a Damp Rock!","italic":true,"color":"gray"}
 execute as @s[x=-988,y=51,z=-1291,distance=..5,tag=!ItemLoot285] run tag @s add ItemLoot285
 
 execute as @s[x=-508,y=66,z=-1445,distance=..5,tag=ItemLoot289] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
@@ -1389,6 +1386,94 @@ execute as @s[x=-560,y=45,z=-623,distance=..5,tag=!ItemLoot383] run give @s mega
 execute as @s[x=-560,y=45,z=-623,distance=..5,tag=!ItemLoot383] run tellraw @s {"text":"You received a Gracidea!","italic":true,"color":"gray"}
 execute as @s[x=-560,y=45,z=-623,distance=..5,tag=!ItemLoot383] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-560,y=45,z=-623,distance=..5,tag=!ItemLoot383] run tag @s add ItemLoot383
+
+#Berry Master's Wife
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run scoreboard players set @e[x=-2068,y=64,z=1410,dx=2,dy=4] rng 0
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 1
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 2
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 4
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 8
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run scoreboard players operation @a[scores={TriggerCommand=105},tag=!Item5Give] rng = @e[x=-2068,y=64,z=1410,dy=3,type=armor_stand] rng
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=0..2},tag=!ItemLoot385] run give @s cobblemon:spelon_berry
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=3..5},tag=!ItemLoot385] run give @s cobblemon:pamtre_berry
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=6..8},tag=!ItemLoot385] run give @s cobblemon:watmel_berry
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=9..11},tag=!ItemLoot385] run give @s cobblemon:durin_berry
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=12..15},tag=!ItemLoot385] run give @s cobblemon:belue_berry
+
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=0..2},tag=!ItemLoot385] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Spelon Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=3..5},tag=!ItemLoot385] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Pamtre Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=6..8},tag=!ItemLoot385] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Watmel Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=9..11},tag=!ItemLoot385] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Durin Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-545,y=45,z=-625,distance=..5,scores={rng=12..15},tag=!ItemLoot385] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Belue Berry!","italic":true,"color":"gray"}]
+
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run playsound itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-545,y=45,z=-625,distance=..5,tag=!ItemLoot385] run tag @s add ItemLoot385
+
+
+#Berry Master
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players set @e[x=-2068,y=64,z=1410,dx=2,dy=4] rng 0
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 1
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 2
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 4
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 8
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 16
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players operation @s rng = @e[x=-2068,y=64,z=1410,dy=3,type=armor_stand] rng
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=0..2},tag=!ItemLoot384] run give @s cobblemon:pomeg_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=3..5},tag=!ItemLoot384] run give @s cobblemon:kelpsy_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=6..8},tag=!ItemLoot384] run give @s cobblemon:qualot_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=9..11},tag=!ItemLoot384] run give @s cobblemon:hondew_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=12..15},tag=!ItemLoot384] run give @s cobblemon:grepa_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=16..18},tag=!ItemLoot384] run give @s cobblemon:tamato_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=19..21},tag=!ItemLoot384] run give @s cobblemon:cornn_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=22..24},tag=!ItemLoot384] run give @s cobblemon:magost_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=25..27},tag=!ItemLoot384] run give @s cobblemon:rabuta_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=28..},tag=!ItemLoot384] run give @s cobblemon:nomel_berry
+
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=0..2},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Pomeg Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=3..5},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Kelpsy Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=6..8},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Qualot Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=9..11},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Hondew Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=12..15},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Grepa Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=16..18},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Tamato Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=19..21},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Cornn Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=22..24},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Magost Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=25..27},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Rabuta Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=28..},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Nomel Berry!","italic":true,"color":"gray"}]
+
+#Second Berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players set @e[x=-2068,y=64,z=1410,dx=2,dy=4] rng 0
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 1
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 2
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 4
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 8
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 16
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run scoreboard players operation @s rng = @e[x=-2068,y=64,z=1410,dy=3,type=armor_stand] rng
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=0..2},tag=!ItemLoot384] run give @s cobblemon:pomeg_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=3..5},tag=!ItemLoot384] run give @s cobblemon:kelpsy_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=6..8},tag=!ItemLoot384] run give @s cobblemon:qualot_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=9..11},tag=!ItemLoot384] run give @s cobblemon:hondew_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=12..15},tag=!ItemLoot384] run give @s cobblemon:grepa_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=16..18},tag=!ItemLoot384] run give @s cobblemon:tamato_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=19..21},tag=!ItemLoot384] run give @s cobblemon:cornn_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=22..24},tag=!ItemLoot384] run give @s cobblemon:magost_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=25..27},tag=!ItemLoot384] run give @s cobblemon:rabuta_berry
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=28..},tag=!ItemLoot384] run give @s cobblemon:nomel_berry
+
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=0..2},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Pomeg Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=3..5},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Kelpsy Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=6..8},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Qualot Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=9..11},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received a Hondew Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=12..15},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Grepa Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=16..18},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Tamato Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=19..21},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Cornn Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=22..24},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Magost Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=25..27},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Rabuta Berry!","italic":true,"color":"gray"}]
+execute as @s[x=-555,y=45,z=-621,distance=..5,scores={rng=28..},tag=!ItemLoot384] run tellraw @s ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received an Nomel Berry!","italic":true,"color":"gray"}]
+
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run playsound itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-555,y=45,z=-621,distance=..5,tag=!ItemLoot384] run tag @s add ItemLoot384
+
+
 
 execute as @s[x=933,y=102,z=-2395,distance=..5,tag=ItemLoot390] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=933,y=102,z=-2395,distance=..5,tag=!ItemLoot390] run give @s cobblemon:master_ball
@@ -2368,6 +2453,33 @@ execute as @s[x=-1277,y=85,z=3233,distance=..5,tag=!ItemLoot612] run tellraw @s 
 execute as @s[x=-1277,y=85,z=3233,distance=..5,tag=!ItemLoot612] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-1277,y=85,z=3233,distance=..5,tag=!ItemLoot612] run tag @s add ItemLoot612
 
+
+#Random berry of 6, resets daily
+#Some a little less likely than others cause you can get them from another NPC, #5
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run scoreboard players set @e[x=-2068,y=64,z=1410,dx=2,dy=4] rng 0
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 1
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 2
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 4
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 8
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run scoreboard players add @e[x=-2068,y=64,z=1410,dx=2,dy=4,sort=random,limit=1] rng 16
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run scoreboard players operation @s rng = @e[x=-2068,y=64,z=1410,dy=3,type=armor_stand] rng
+
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=0..4},tag=!ItemLoot617] run give @s cobblemon:pomeg_berry
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=5..10},tag=!ItemLoot617] run give @s cobblemon:kelpsy_berry
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=11..15},tag=!ItemLoot617] run give @s cobblemon:qualot_berry
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=16..20},tag=!ItemLoot617] run give @s cobblemon:hondew_berry
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=21..25},tag=!ItemLoot617] run give @s cobblemon:grepa_berry
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=26..31},tag=!ItemLoot617] run give @s cobblemon:tamato_berry
+
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=0..4},tag=!ItemLoot617] run tellraw @s {"text":"You received a Pomeg Berry!","italic":true,"color":"gray"}
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=5..10},tag=!ItemLoot617] run tellraw @s {"text":"You received a Kelpsy Berry!","italic":true,"color":"gray"}
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=11..15},tag=!ItemLoot617] run tellraw @s {"text":"You received a Qualot Berry!","italic":true,"color":"gray"}
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=16..20},tag=!ItemLoot617] run tellraw @s {"text":"You received an Hondew Berry!","italic":true,"color":"gray"}
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=21..25},tag=!ItemLoot617] run tellraw @s {"text":"You received an Grepa Berry!","italic":true,"color":"gray"}
+execute as @s[x=2469,y=44,z=668,distance=..5,scores={rng=26..31},tag=!ItemLoot617] run tellraw @s {"text":"You received a Tamato Berry!","italic":true,"color":"gray"}
+
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run playsound itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2469,y=44,z=668,distance=..5,tag=!ItemLoot617] run tag @s add ItemLoot617
 
 
 advancement revoke @s only hoenn:click/itemclick

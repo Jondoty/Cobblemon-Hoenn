@@ -51,7 +51,7 @@
       "id": "page3",
       "speaker": "npc",
       "lines": [
-        "You can deposit your Pok\u00e9mon with us using that machine to the left!"
+        "There's some pasture blocks out back to let them roam free!"
       ],
       "input": {
         "type": "option",

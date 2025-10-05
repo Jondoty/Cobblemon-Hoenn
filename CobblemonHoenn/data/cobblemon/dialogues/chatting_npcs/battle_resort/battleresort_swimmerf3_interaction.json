@@ -5,7 +5,7 @@
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:swimmerf3",
+        "identifier": "cobblemon:swimmerf",
         "isLeftSide": true
       }
     }

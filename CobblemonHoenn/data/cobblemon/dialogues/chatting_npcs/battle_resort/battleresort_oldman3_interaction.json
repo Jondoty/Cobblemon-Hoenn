@@ -5,7 +5,7 @@
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:oldman3",
+        "identifier": "cobblemon:oldman",
         "isLeftSide": true
       }
     }
