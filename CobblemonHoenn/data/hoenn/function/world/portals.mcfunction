@@ -64,10 +64,10 @@ tp @a[x=-2051,y=65,z=1372,dz=1,dy=3,scores={Rival=2}] -1985 50 299 120 12
 
 
 #May's House to lobby
-tp @a[x=-1987,y=50,z=302,dy=3,scores={DialogueTrigger=0}] -1976 66 1375.0 90 11
+tp @a[x=-1987,y=50,z=302,dy=3] -1976 66 1375.0 90 11
 
 #Brendan's House to lobby
-tp @a[x=-2072,y=50,z=302,dy=3,scores={DialogueTrigger=0}] -1976 66 1375.0 90 11
+tp @a[x=-2072,y=50,z=302,dy=3] -1976 66 1375.0 90 11
 
 #-------------------------------------------------------------------------
 #Secret-base related portals
@@ -79,7 +79,7 @@ execute as @a run function hoenn:world/bases/portals
 #Prof Birch's Lab
 execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run function hoenn:tools/forceclick
 execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run effect clear @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility
-tp @a[x=-2043,y=50,z=344,dx=3,dy=5,scores={DialogueTrigger=0}] -2042 69 345
+tp @a[x=-2043,y=50,z=344,dx=3,dy=5] -2042 69 345
 
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5] run function hoenn:tools/forceclick
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=!Dialogue7] run effect give @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility infinite 1 true
@@ -87,12 +87,12 @@ execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=Dialogue11,tag=!Dialogue12] run s
 tp @a[x=-2043,y=69,z=344,dx=2,dy=5] -2041 50 343
 
 #Brendan's House
-tp @a[x=-2059,y=40,z=309,dx=3,dy=3,scores={DialogueTrigger=0},tag=RoomVisit] -2057 69 310
-tp @a[x=-2059,y=69,z=309,dx=4,dy=3,scores={DialogueTrigger=0}] -2057 40 308
+tp @a[x=-2059,y=40,z=309,dx=3,dy=3] -2057 69 310
+tp @a[x=-2059,y=69,z=309,dx=4,dy=3] -2057 40 308
 
 #May's House
-tp @a[x=-2004,y=40,z=309,dx=4,dy=3,scores={DialogueTrigger=0},tag=RoomVisit] -2002 69 310
-tp @a[x=-2004,y=69,z=309,dx=4,dy=3,scores={DialogueTrigger=0}] -2002 40 308
+tp @a[x=-2004,y=40,z=309,dx=4,dy=3] -2002 69 310
+tp @a[x=-2004,y=69,z=309,dx=4,dy=3] -2002 40 308
 
 #-------------------------------------------------------------------------
 #Oldale Town
@@ -142,12 +142,12 @@ tp @a[x=-2473,y=50,z=8,dx=3,dy=3] -2472 69 9
 
 
 #Pokemon Gym
-tag @a[x=-2548,y=69,z=-23,dx=6,dy=3,scores={DialogueTrigger=0},tag=!Dialogue95] remove Dialogue94
-tp @a[x=-2548,y=69,z=-23,dx=6,dy=3,scores={DialogueTrigger=0}] -3244 65 1639
+tag @a[x=-2548,y=69,z=-23,dx=6,dy=3,tag=!Dialogue95] remove Dialogue94
+tp @a[x=-2548,y=69,z=-23,dx=6,dy=3] -3244 65 1639
 
 #Exit
 execute as @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0},tag=Dialogue16] unless entity @a[scores={DialogueTrigger=16}] run tp @e[x=-3244,y=64,z=1621,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000
-scoreboard players set @a[x=-3246,y=65,z=1640,dx=4,dy=3,tag=Dialogue95,tag=!Dialogue96,scores={DialogueTrigger=0}] DialogueTrigger 96
+scoreboard players set @a[x=-3246,y=65,z=1640,dx=4,dy=3,tag=Dialogue95,tag=!Dialogue96] DialogueTrigger 96
 tp @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0}] -2545 69 -22
 
 
@@ -667,9 +667,9 @@ tp @a[x=-1612,y=133,z=-531,dz=6,dy=3] 2575 85 2904 180 ~
 tp @a[x=-1456,y=133,z=-531,dz=6,dy=3] 2836 85 2904 180 ~
 
 #Pokemon Gym
-tag @a[x=2670,y=65,z=2714,dx=6,dy=3,scores={DialogueTrigger=0},tag=!Dialogue68] remove Dialogue67
-tp @a[x=2670,y=65,z=2714,dx=6,dy=3,scores={DialogueTrigger=0}] -3375 99 1599
-tp @a[x=-3379,y=99,z=1600,dx=8,dy=3,scores={DialogueTrigger=0}] 2673 65 2715
+tag @a[x=2670,y=65,z=2714,dx=6,dy=3,tag=!Dialogue68] remove Dialogue67
+tp @a[x=2670,y=65,z=2714,dx=6,dy=3] -3375 99 1599
+tp @a[x=-3379,y=99,z=1600,dx=8,dy=3] 2673 65 2715
 
 #Pokemon Mart
 execute as @a[x=-1511,y=69,z=-645,dx=2,dy=3] run function hoenn:tools/forceclick
@@ -834,8 +834,8 @@ execute as @a[x=-1977,y=65,z=-1112,dx=3,dy=3] run function hoenn:tools/forceclic
 tp @a[x=-1977,y=65,z=-1112,dx=3,dy=3] -1976 84 -1111
 
 #Pokemon Gym
-tag @a[x=-2039,y=84,z=-1053,dx=6,dy=3,scores={DialogueTrigger=0},tag=!Dialogue90] remove Dialogue89
-tp @a[x=-2039,y=84,z=-1053,dx=6,dy=3,scores={DialogueTrigger=0}] -3101 88 1625
+tag @a[x=-2039,y=84,z=-1053,dx=6,dy=3,tag=!Dialogue90] remove Dialogue89
+tp @a[x=-2039,y=84,z=-1053,dx=6,dy=3] -3101 88 1625
 
 scoreboard players set @a[x=-3102,y=88,z=1626,dx=3,dy=3,tag=Dialogue90,tag=!Dialogue91] DialogueTrigger 91
 execute as @a[x=-3102,y=88,z=1626,dx=3,dy=3,tag=Dialogue90,tag=!Dialogue91] run function hoenn:tools/forceclick
@@ -890,8 +890,8 @@ tp @a[x=-2320,y=74,z=-1432,dx=3,dy=3] -2318 89 -1431
 #Observatory Home (Prof Cozmo's)
 tp @a[x=-2266,y=89,z=-1379,dx=6,dy=3] -2262 68 -1380
 
-execute as @a[x=-2264,y=68,z=-1379,dx=3,dy=3,scores={DialogueTrigger=0},tag=Dialogue82] run tp @e[x=-2266,y=67,z=-1382,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-tp @a[x=-2264,y=68,z=-1379,dx=3,dy=3,scores={DialogueTrigger=0}] -2263 89 -1378
+execute as @a[x=-2264,y=68,z=-1379,dx=3,dy=3,tag=Dialogue82] run tp @e[x=-2266,y=67,z=-1382,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+tp @a[x=-2264,y=68,z=-1379,dx=3,dy=3] -2263 89 -1378
 
 #-------------------------------------------------------------------------
 #Route 114
@@ -1146,8 +1146,8 @@ tp @a[x=1472,y=74,z=-1036,dx=2,dy=3] 1473 47 -1037
 tp @a[x=1471,y=47,z=-1036,dx=4,dy=3] 1473 74 -1035
 
 #Pokemon Gym
-tag @a[x=1563,y=74,z=-1038,dx=6,dy=3,tag=!Dialogue138,scores={DialogueTrigger=0}] remove Dialogue137
-tp @a[x=1563,y=74,z=-1038,dx=6,dy=3,scores={DialogueTrigger=0}] -2586 61 1586
+tag @a[x=1563,y=74,z=-1038,dx=6,dy=3,tag=!Dialogue138] remove Dialogue137
+tp @a[x=1563,y=74,z=-1038,dx=6,dy=3] -2586 61 1586
 tp @a[x=-2587,y=61,z=1587,dx=3,dy=3] 1566 74 -1037
 
 #Top Right NPC Home
@@ -1354,8 +1354,8 @@ tp @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1,tag=!Dialogue143,tag=!Dialogue144] ~ ~ ~
 execute as @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1] run tp @e[x=978,y=68,z=1508,dx=15,dy=5,dz=20,type=cobblemon:npc] 10000000 -50000 -10000000
 
 #Normal portal
-tp @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1,scores={DialogueTrigger=0}] 1945 227 -2418
-tp @a[x=1943,y=227,z=-2417,dx=4,dy=4,scores={DialogueTrigger=0}] 985 69 1503
+tp @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1] 1945 227 -2418
+tp @a[x=1943,y=227,z=-2417,dx=4,dy=4] 985 69 1503
 
 #-------------------------------------------------------------------------
 #Evergrand City

@@ -2,18 +2,38 @@
 #Ran by the WorldCommands function with an assumption of TalkTime and DialogueTrigger 0 values in this function.
 
 
+#Rival=1 May
+#Rival=2 Brendan
+
+#GameVersion=1 Magma
+#GameVersion=2 Aqua
+
+#Dialogue 2 - Littleroot
+#First dialogue with mom, establishing the city
+#Probably just gonna skip and teleport the player directly to their house
+#execute as @s[x=-2098,y=0,z=278,dx=146,dy=256,dz=92,tag=!Dialogue2] run opendialogue mom_dialogue2 @s
+
+#Dialogue 3 - Littleroot Mom downstairs
+execute as @s[x=-2056,y=40,z=304,distance=..7,tag=!Dialogue3] run opendialogue mom_dialogue3 @s
+execute as @s[x=-1999,y=39,z=295,distance=..7,tag=!Dialogue3] run opendialogue mom_dialogue3 @s
+
+#Mrs Birch's introduction to player
+#May's House
+execute as @s[x=-2002,y=40,z=307,distance=..7,scores={Rival=1},tag=!Dialogue4] run opendialogue rivalmom_dialogue4_may @s
+
+#Brendan's
+execute as @s[x=-2057,y=40,z=307,distance=..7,scores={Rival=2},tag=!Dialogue4] run opendialogue rivalmom_dialogue4_brendan @s
 
 
+#Summons generic rival in their room
+#May
+execute as @s[x=-2005,y=40,z=293,distance=..10,scores={Rival=1},tag=!Dialogue5] unless entity @e[x=-1984,y=50,z=291,distance=..3,type=cobblemon:npc] run npcspawnat -1984 50 291 may_generic
+#Brendan
+execute as @s[x=-2053,y=40,z=293,distance=..10,scores={Rival=2},tag=!Dialogue5] unless entity @e[x=-2074,y=50,z=291,distance=..3,type=cobblemon:npc] run npcspawnat -2074 50 291 brendan_generic
 
-
-
-
-
-
-
-
-
-
+#Dialogue 5 - #Introduction to Rival
+execute as @s[x=-1984,y=48,z=291,distance=..8,scores={Rival=1},tag=!Dialogue5] run opendialogue may_dialogue5 @s
+execute as @s[x=-2074,y=48,z=291,distance=..8,scores={Rival=2},tag=!Dialogue5] run opendialogue brendan_dialogue5 @s
 
 
 
