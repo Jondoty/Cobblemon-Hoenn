@@ -11,16 +11,6 @@ execute as @a[x=-2080,y=49,z=288,dx=24,dy=10,dz=18,tag=!RoomVisit] run tag @s ad
 
 
 
-
-
-
-#Dialogue 6 - Route 101
-#Professor Birch pre-picking starters
-execute as @a[x=-2029,y=69,z=254,distance=..12,tag=!Dialogue6] run scoreboard players set @s DialogueTrigger 6
-
-#After battling a Pokemon on Route 101 (player should have picked a starter)
-execute as @a[x=-2029,y=69,z=254,distance=..60,tag=!Dialogue7,nbt={active_effects:[{id:"pixelmon:avoidance"}]}] run scoreboard players set @s DialogueTrigger 7
-
 #Oldale Town shopkeeper showing buildings
 execute as @a[x=-2022,y=69,z=88,distance=..4,tag=!Dialogue9] run scoreboard players set @s DialogueTrigger 9
 

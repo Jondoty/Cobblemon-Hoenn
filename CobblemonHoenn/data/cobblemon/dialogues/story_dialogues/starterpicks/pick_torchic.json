@@ -1,0 +1,48 @@
+{
+    "initializationAction": [
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Torchic",
+            "face": {
+              "type": "artificial",
+              "modelType": "pokemon",
+              "identifier": "cobblemon:torchic",
+              "isLeftSide": true
+            }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "You pick Torchic, the Fire Pokémon?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive torchic level=5');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s StarterPick 2');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2038 69 232 134 7');",
+                            "q.run_command('tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch1Initiate] remove Birch1Initiate');",
+                            "q.run_command('execute positioned as ' + q.player.username + ' run pokespawn poochyena level=3');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        }    
+    ]
+}

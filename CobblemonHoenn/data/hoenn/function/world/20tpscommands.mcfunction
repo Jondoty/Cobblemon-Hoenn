@@ -83,7 +83,7 @@ execute as @a run function hoenn:pokenav/throwdetect
 
 #-----------------------------------------------------------------------------------------
 #Professor Birch's Route 101 Running Commands
-execute as @a[x=-2035,y=69,z=246,distance=..30,tag=!Dialogue6,scores={DialogueTrigger=6}] run function hoenn:cutscenes/birchrunning
+execute as @a[x=-2035,y=69,z=246,distance=..30,tag=!Dialogue6,scores={StarterPick=0}] run function hoenn:cutscenes/birchrunning
 execute as @a[x=-2035,y=69,z=246,distance=..30,tag=!Dialogue171,scores={DialogueTrigger=171}] run function hoenn:cutscenes/birchrunningjohto
 execute as @a[x=-2035,y=69,z=246,distance=..30,tag=!Dialogue173,scores={DialogueTrigger=173}] run function hoenn:cutscenes/birchrunningunova
 execute as @a[x=-2035,y=69,z=246,distance=..30,tag=!Dialogue175,scores={DialogueTrigger=175}] run function hoenn:cutscenes/birchrunningsinnoh

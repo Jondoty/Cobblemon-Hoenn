@@ -141,7 +141,33 @@ execute unless entity @a[x=-2154,y=0,z=-1507,dx=552,dy=256,dz=135] if block -200
 
 
 
+#Sets up starters if they're missing
+#Hoenn
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2102,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2102 65 1311 treecko no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2098,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2098 65 1311 torchic no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2094,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2094 65 1311 mudkip no_ai=yes level=5
 
+#Johto
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2151,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2151 65 1311 chikorita no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2047,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2047 65 1311 cyndaquil no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2043,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2043 65 1311 totodile no_ai=yes level=5
+
+#Unova
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2000,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2000 65 1311 snivy no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-1996,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -1996 65 1311 tepig no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-1992,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -1992 65 1311 oshawott no_ai=yes level=5
+
+#Sinnoh
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-1949,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -1949 65 1311 turtwig no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-1945,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -1945 65 1311 chimchar no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-1941,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -1941 65 1311 piplup no_ai=yes level=5
+
+
+#Applies data to all entities in the domes
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] as @e[x=-2105,y=64,z=1310,dx=175,dy=4,dz=2,type=cobblemon:pokemon,nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] as @e[x=-2105,y=64,z=1310,dx=175,dy=4,dz=2,type=cobblemon:pokemon,nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] as @e[x=-2105,y=64,z=1310,dx=175,dy=4,dz=2,type=cobblemon:pokemon,nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] as @e[x=-2105,y=64,z=1310,dx=175,dy=4,dz=2,type=cobblemon:pokemon,nbt={PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
 
 
 
