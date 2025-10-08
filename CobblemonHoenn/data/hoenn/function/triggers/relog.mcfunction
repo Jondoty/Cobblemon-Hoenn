@@ -20,7 +20,10 @@ execute if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTr
 #Resets music
 stopsound @s[scores={relog=1..}] record
 scoreboard players set @s[scores={relog=1..}] MusicCooldown 0
-scoreboard players set @s BattleMusic 0
+
+#Removes Music tags if present
+scoreboard players set @s BattleStart 0
+scoreboard players set @s BattleEnd 0
 
 
 #Removes dialogue tags for legendary prompts if the player never responds to them to encounter them
@@ -89,6 +92,9 @@ advancement revoke @s only kalos:click/npcs
 advancement revoke @s only kalos:click/rocksmash
 advancement revoke @s only kalos:click/signs
 advancement revoke @s only kalos:click/strengthrock
+advancement revoke @s only hoenn:click/box1
+advancement revoke @s only hoenn:click/box2
+advancement revoke @s only hoenn:click/box3
 
 
 #If player has no bike, allows them to get another. Or if player relogs between claim and dialogue
