@@ -1,0 +1,1408 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "youngster": {
+            "name": "     ",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:youngster",
+                "isLeftSide": false
+            }
+        },
+        "dad": {
+            "name": "Dad",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:norman",
+                "isLeftSide": true
+            }
+        },
+        "wally": {
+            "name": "Wally",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:wally",
+                "isLeftSide": false
+            }
+        },
+        "unknown": {
+            "name": "???",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:wally",
+                "isLeftSide": false
+            }
+        },
+        "zigzagoon": {
+            "name": "Zigzagoon",
+            "face": {
+              "type": "artificial",
+              "modelType": "pokemon",
+              "identifier": "cobblemon:zigzagoon",
+              "isLeftSide": false
+            }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "dad",
+            "lines": [
+                "Not bad... It was a good battle."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "youngster",
+            "lines": [
+                "Th-thank you, sir!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "dad",
+            "lines": [
+                "Come back and challenge me again anytime."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "dad",
+            "lines": [
+                "I'll be looking forward to seeing you and your Pok\u00e9mon again when you're a bit stronger."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "youngster",
+            "lines": [
+                "Yes, sir! Thank you, sir! I'm gonna do special training with my Pok\u00e9mon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "youngster",
+            "lines": [
+                "Then I'll challenge this Gym again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "youngster",
+            "lines": [
+                "Thank you for the battle, Mr. Norman!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud -2545 69 -12 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-2545,y=69,z=-12,distance=..2] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "dad",
+            "lines": [
+                "Hm?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "dad",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Why, if it isnt ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "dad",
+            "lines": [
+                "So you've finished moving in?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "dad",
+            "lines": [
+                "I see... Well..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "dad",
+            "lines": [
+                "I guess we shouldn't stand around out here talking."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "dad",
+            "lines": [
+                "Do you want to come in for a bit? We can talk in the Gym."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('effect give ' + q.player.username + ' minecraft:blindness 3 1 true');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-2545,y=69,z=-16,distance=..2] 10000000 -50000 -10000000');",
+                            "q.run_command('tp ' + q.player.username + ' -3244 65 1625 180 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute unless entity @e[x=-3244,y=65,z=1621,distance=..2,type=cobblemon:npc] run npcspawnat -3244 65 1621 dad_generic');",
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "dad",
+            "lines": [
+                "You know, I sure was surprised that you managed to get here by yourself."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "dad",
+            "lines": [
+                "Ah... I see."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "dad",
+            "lines": [
+                "You're making a good start on your team!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "dad",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Mm-hmm! Then I guess you are going to become a Trainer like me, ' + q.player.username + '?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "dad",
+            "lines": [
+                "Now that's something to look forward to!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "unknown",
+            "lines": [
+                "Um... E-excuse me..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page20');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "unknown",
+            "lines": [
+                "I...I'd like to get a Pok\u00e9mon, please..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud -3240 65 1624 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=-3240,y=65,z=1624,distance=..2,type=cobblemon:npc] run npcspawnat -3240 65 1624 wally_generic');",
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "dad",
+            "lines": [
+                "Hm? Aren't you... You're Wally, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "wally",
+            "lines": [
+                "Y-yes... I'm supposed to go stay with my relatives in Verdanturf Town for a while."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "wally",
+            "lines": [
+                "But I thought I might be lonely by myself, so I wanted to bring a Pok\u00e9mon with me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "wally",
+            "lines": [
+                "But I've never caught a Pok\u00e9mon by myself..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "wally",
+            "lines": [
+                "I'm not sure if I can."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page26');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "dad",
+            "lines": [
+                "Mm-hmm. I see."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page27');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "dad",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '! You heard all that, right?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page28');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "dad",
+            "lines": [
+                "You go with Wally, and make sure that he safely catches a Pok\u00e9mon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page29');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "dad",
+            "lines": [
+                "Wally, here. I'll lend you one of my Pok\u00e9mon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page30');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "wally",
+            "lines": [
+                "Wally received Zigzagoon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page31');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page31",
+            "speaker": "wally",
+            "lines": [
+                "Oh, wow... Your Pok\u00e9mon, sir?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page32');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page32",
+            "speaker": "dad",
+            "lines": [
+                "Hmm... I'll give you a Pok\u00e9 Ball, too, so go give it your best!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page33');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page33",
+            "speaker": "wally",
+            "lines": [
+                "Wally received a Pok\u00e9 Ball!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page34');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page34",
+            "speaker": "wally",
+            "lines": [
+                "Th-thank you, Mr. Norman!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page35');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page35",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Um...' + q.player.username + '? You will... You will come with me, right?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2410.5 69 35.5 -102.5 15');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute unless entity @e[x=-2406,y=69,z=34,dy=2,type=cobblemon:npc] run npcspawnat -2406 69 34 wally_generic');",
+                            "q.dialogue.set_page('page36');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page36",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '... Pok\u00e9mon hide in tall grass like this, dont they?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page37');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page37",
+            "speaker": "wally",
+            "lines": [
+                "P-please stay there to watch and see if I can catch one properly."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2407.5 69.5 28.5 -48 24.5');",
+                            "q.run_command('execute as ' + q.player.username + ' run stopsound @s record');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:wild record @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s MusicCooldown 137');",
+                            "q.run_command('particle cloud -2406 69 32 1 1 1 0.15 100');",
+                            "q.run_command('execute unless entity @e[x=-2406,y=69,z=32,dy=4,nbt={NoAI:1b}] run pokespawnat -2406 69 32 zigzagoon no_ai=yes level=5');",
+                            "q.run_command('execute as @e[x=-2406,y=69,z=32,dy=4,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ ~180 ~');",
+                            "q.dialogue.set_page('page38');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page38",
+            "speaker": "wally",
+            "lines": [
+                "Wh-whoa!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud -2404 69 29 1 1 1 0.15 100');",
+                            "q.run_command('execute unless entity @e[x=-2404,y=69,z=29,dy=4,nbt={NoAI:1b}] run pokespawnat -2404 69 29 ralts no_ai=yes level=5');",
+                            "q.dialogue.set_page('page39');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page39",
+            "speaker": "wally",
+            "lines": [
+                "I'm su-supposed to try to weaken the Pok\u00e9mon before I throw my Pok\u00e9 Ball, right? I read that in a book recently."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2409.25 69 34.0 -113 10.5');",
+                            "q.dialogue.set_page('page40');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page40",
+            "speaker": "zigzagoon",
+            "lines": [
+                "Zigzagoon used tackle!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound entity.iron_golem.hurt ambient @s ~ ~ ~ 10 1 1');",
+                            "q.run_command('particle minecraft:block{block_state:{Name:terracotta}} -2404 69 29 1 2 1 1 500');",
+                            "q.dialogue.set_page('page41');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page41",
+            "speaker": "wally",
+            "lines": [
+                "Wally used a Pok\u00e9 Ball!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('summon cobblemon:empty_pokeball -2405.5 70 34.5 {Motion: [0.5573935278373682d, 0.0264652272676661d, -1.0373697936967232d], Invulnerable: 0b, LeftOwner: 1b, Air: 300s, OnGround: 0b, PortalCooldown: 0, Rotation: [151.75027f, 5.5219755f], FallDistance: 0.0f, Item: {count: 1, id: \"cobblemon:poke_ball\"}, HasBeenShot: 1b, Fire: -1s}');",
+                            "q.run_command('particle cloud -2404 69 29 1 1 1 0.15 100');",
+                            "q.run_command('tp @e[x=-2404,y=69,z=29,dy=4,nbt={NoAI:1b}] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run stopsound @s');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:wildwin record @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s MusicCooldown 19');",
+                            "q.dialogue.set_page('page42');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page42",
+            "speaker": "wally",
+            "lines": [
+                "Gotcha! Ralts was caught!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2408.5 69 35.5 -112 5');",
+                            "q.dialogue.set_page('page43');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page43",
+            "speaker": "wally",
+            "lines": [
+                "I did it... It's my... My own Pok\u00e9mon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page44');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page44",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Thanks so much, ' + q.player.username + '! Let us head back to the Gym!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s minecraft:blindness 3 1 true');",
+                            "q.run_command('tp @e[x=-2406,y=69,z=34,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=-2406,y=69,z=32,distance=..10,nbt={NoAI:1b}] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -3244 65 1625 180 10');",
+                            "q.dialogue.set_page('page45');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page45",
+            "speaker": "dad",
+            "lines": [
+                "So did it go well?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page46');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page46",
+            "speaker": "wally",
+            "lines": [
+                "Yes, it did! Thank you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page47');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47",
+            "speaker": "wally",
+            "lines": [
+                "Let me give you back your Pok\u00e9mon, sir."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page48');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page48",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'And you, ' + q.player.username + '... Thank you so much for coming with me.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page49');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page49",
+            "speaker": "wally",
+            "lines": [
+                "It was all thanks to you two that I was able to catch Ralts."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page50');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page50",
+            "speaker": "wally",
+            "lines": [
+                "My very own Ralts..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page51');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page51",
+            "speaker": "wally",
+            "lines": [
+                "I will always, always treasure it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page52');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page52",
+            "speaker": "wally",
+            "lines": [
+                "I'm going to try my best together with Ralts."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page53');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page53",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'You do your best, too, ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page54');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page54",
+            "speaker": "wally",
+            "lines": [
+                "Oh, but my mom's waiting for me. I've got to get going!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page55');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page55",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'I hope we will meet again, ' + q.player.username + '! And you, too, Mr. Norman!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud -3240 65 1624 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=-3240,y=65,z=1624,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page56');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page56",
+            "speaker": "dad",
+            "lines": [
+                "Hmm. That boy will be worth keeping an eye on. But for now..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page57');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page57",
+            "speaker": "dad",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page58');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page58",
+            "speaker": "dad",
+            "lines": [
+                "If you want to become strong as a Trainer, listen to my advice."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page59');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page59",
+            "speaker": "dad",
+            "lines": [
+                "First head for Rustboro City, which lies beyond this town."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page60');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page60",
+            "speaker": "dad",
+            "lines": [
+                "There you should challenge the Gym Leader, Roxanne."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page61');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page61",
+            "speaker": "dad",
+            "lines": [
+                "After her, go on to the other Pok\u00e9mon Gyms and defeat their Leaders as well."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page62');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page62",
+            "speaker": "dad",
+            "lines": [
+                "Collect Badges from them, understand?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page63');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page63",
+            "speaker": "dad",
+            "lines": [
+                "Of course, I'm a Gym Leader, too. I'm sure we'll battle one day."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page64');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page64",
+            "speaker": "dad",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'But that will only be after you've become stronger, ' + q.player.username + '.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue16');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
