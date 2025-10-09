@@ -83,7 +83,7 @@ tp @a[x=-2043,y=50,z=344,dx=3,dy=5] -2042 69 345
 
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5] run function hoenn:tools/forceclick
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=!Dialogue7] run effect give @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility infinite 1 true
-execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=Dialogue11,tag=!Dialogue12] run scoreboard players set @s DialogueTrigger 12
+#execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=Dialogue11,tag=!Dialogue12] run scoreboard players set @s DialogueTrigger 12
 tp @a[x=-2043,y=69,z=344,dx=2,dy=5] -2041 50 343
 
 #Brendan's House
@@ -147,7 +147,7 @@ tp @a[x=-2548,y=69,z=-23,dx=6,dy=3] -3244 65 1639
 
 #Exit
 execute as @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0},tag=Dialogue16] unless entity @a[scores={DialogueTrigger=16}] run tp @e[x=-3244,y=64,z=1621,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000
-scoreboard players set @a[x=-3246,y=65,z=1640,dx=4,dy=3,tag=Dialogue95,tag=!Dialogue96] DialogueTrigger 96
+#scoreboard players set @a[x=-3246,y=65,z=1640,dx=4,dy=3,tag=Dialogue95,tag=!Dialogue96] DialogueTrigger 96
 tp @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0}] -2545 69 -22
 
 
@@ -837,7 +837,7 @@ tp @a[x=-1977,y=65,z=-1112,dx=3,dy=3] -1976 84 -1111
 tag @a[x=-2039,y=84,z=-1053,dx=6,dy=3,tag=!Dialogue90] remove Dialogue89
 tp @a[x=-2039,y=84,z=-1053,dx=6,dy=3] -3101 88 1625
 
-scoreboard players set @a[x=-3102,y=88,z=1626,dx=3,dy=3,tag=Dialogue90,tag=!Dialogue91] DialogueTrigger 91
+#scoreboard players set @a[x=-3102,y=88,z=1626,dx=3,dy=3,tag=Dialogue90,tag=!Dialogue91] DialogueTrigger 91
 execute as @a[x=-3102,y=88,z=1626,dx=3,dy=3,tag=Dialogue90,tag=!Dialogue91] run function hoenn:tools/forceclick
 tp @a[x=-3102,y=88,z=1626,dx=3,dy=3] -2036 84 -1052
 

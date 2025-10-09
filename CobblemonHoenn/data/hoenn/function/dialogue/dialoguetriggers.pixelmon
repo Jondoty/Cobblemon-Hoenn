@@ -15,10 +15,6 @@ execute as @a[x=-2080,y=49,z=288,dx=24,dy=10,dz=18,tag=!RoomVisit] run tag @s ad
 execute as @a[x=-2022,y=69,z=88,distance=..4,tag=!Dialogue9] run scoreboard players set @s DialogueTrigger 9
 
 
-
-#Dialogue 13 - littleroot mom leaving
-execute as @a[x=-2026,y=69,z=285,distance=..15,tag=Dialogue12,tag=!Dialogue13] run scoreboard players set @s DialogueTrigger 13
-
 #Dialogue 15 - Route 102 Rival near Petalburg
 execute as @a[x=-2371,y=69,z=28,distance=..25,tag=!Dialogue15] run scoreboard players set @s DialogueTrigger 15
 

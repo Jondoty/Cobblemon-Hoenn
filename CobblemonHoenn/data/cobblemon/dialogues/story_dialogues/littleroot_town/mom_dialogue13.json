@@ -1,0 +1,246 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Mom",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:beauty",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '! ! Wait!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud -2026 69 285 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=-2026,y=69,z=285,dy=3,type=cobblemon:npc] run npcspawnat -2026 69 285 beauty_generic');",
+                            "q.dialogue.set_page('page2');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '! ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Did you introduce yourself to Professor Birch?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Oh! What an adorable Pokémon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "You got it from the professor?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "How nice! You are your father's child, all right..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "You look good together with a Pokémon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "To think that you have your very own Pokémon now..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                "Your father will be overjoyed. But don't push yourself too hard."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "npc",
+            "lines": [
+                "If anything happens, you can always come home, honey."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud -2026 69 285 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-2026,y=69,z=285,distance=..3] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue13');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

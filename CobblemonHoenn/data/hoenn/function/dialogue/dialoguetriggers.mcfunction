@@ -39,6 +39,9 @@ execute as @s[x=-2074,y=48,z=291,distance=..8,scores={Rival=2},tag=!Dialogue5] r
 #Professor Birch pre-picking starters
 execute as @s[x=-2029,y=69,z=254,distance=..12,tag=!Dialogue6] run opendialogue birch_dialogue6 @s
 
+#Oldale Shopkeeper showing player the town, dialogue 9
+execute as @s[x=-2026,y=68,z=131,distance=..15,tag=!Dialogue9] unless entity @e[x=-2022,y=69,z=88,distance=..4,type=cobblemon:npc] run npcspawnat -2022 69 88 shopkeeper_dialogue9
+
 #Dialogue 11 - Route 103 Rival setup
 #May
 execute as @s[x=-2017,y=70,z=-42,distance=..25,tag=Dialogue7,tag=!Dialogue11,scores={StarterPick=1,Rival=1}] unless entity @e[x=-2024,y=69,z=-100,distance=..3,type=cobblemon:npc] run npcspawnat -2024 69 -100 rival_may_route103_torchic
@@ -57,7 +60,8 @@ execute as @s[x=-2041,y=50,z=341,distance=..6,tag=Dialogue11,tag=!Dialogue12,sco
 execute as @s[x=-2042,y=49,z=319,distance=..6,tag=Dialogue11,tag=!Dialogue12,scores={Rival=1}] run opendialogue birch_dialogue12_may @s
 execute as @s[x=-2042,y=49,z=319,distance=..6,tag=Dialogue11,tag=!Dialogue12,scores={Rival=2}] run opendialogue birch_dialogue12_brendan @s
 
-
+#Dialogue 13, Mom after returning to lab
+execute as @s[x=-2026,y=69,z=285,distance=..15,tag=Dialogue12,tag=!Dialogue13] run opendialogue mom_dialogue13 @s
 
 
 

@@ -1,0 +1,253 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.run_command('execute as ' + q.player.username + ' run playsound hurryalong record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+        "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 77');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Poké Mart Clerk",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shopman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hi there! I work at the Poké Mart."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "From what I can see, you're a novice Trainer. Am I right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "OK. Being super kindhearted as I am, I'm going to give you useful advice."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('gamemode spectator ' + q.player.username + '');",
+                            "q.run_command('tp ' + q.player.username + ' -2019 85 55.5 -145 18');",
+                            "q.dialogue.set_page('page4');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "First of all, that's a Poké Mart there. Just look for our blue roof."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "We sell a variety of goods, including Poké Balls for catching Pokémon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('gamemode adventure ' + q.player.username + '');",
+                            "q.run_command('tp ' + q.player.username + ' -2021.5 69 92.5 180 10');",
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "I'd like you to have these as part of a special promotion!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:potion 10');",
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Potions can be used anytime, so they can be very useful to have."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('gamemode spectator ' + q.player.username + '');",
+                            "q.run_command('tp ' + q.player.username + ' -2036.5 85 106.5 145 21');",
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "And this is a Pokémon Center! Look for a red roof!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "Ask a woman inside, and she'll restore your Pokémon's health."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('gamemode adventure ' + q.player.username + '');",
+                            "q.run_command('tp ' + q.player.username + ' -2021.5 69 92.5 180 10');",
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                "That's it. That was the advice from me— the supremely kindhearted clerk."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "npc",
+            "lines": [
+                "Have a great journey!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud -2022 69 88 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-2022,y=69,z=88,distance=..3] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue9');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
