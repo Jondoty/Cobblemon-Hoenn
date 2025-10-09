@@ -1,5 +1,14 @@
 #These commands run at, shockingly, 10-second intervals. Used for larger-area things that aren't super time-sensitive
 
+
+#Deletes duplicate Pokemon/Trainers if player relogs near where something respawns, spawning new entities over the old ones.
+execute at @e[nbt={NoAI: 1b},type=cobblemon:pokemon] unless entity @e[type=cobblemon:pokemon,tag=keeper] run tag @e[distance=..0.01,limit=1] add keeper
+execute at @e[type=cobblemon:npc] unless entity @e[type=cobblemon:npc,tag=keeper] run tag @e[distance=..0.01,limit=1] add keeper
+execute at @e[type=cobblemon:pokemon,tag=keeper] run kill @e[nbt={NoAI: 1b},type=cobblemon:pokemon,distance=..0.01,tag=!keeper]
+execute at @e[type=cobblemon:npc,tag=keeper] run tp @e[type=cobblemon:npc,distance=..0.01,tag=!keeper] 10000000 -50000 -10000000
+tag @e[tag=keeper] remove keeper
+
+
 #Runs the first player spawn commands on every player regardless of if they spawned in the right place or not
 execute as @a[tag=!InitialTags] run function hoenn:triggers/startingcommands
 
