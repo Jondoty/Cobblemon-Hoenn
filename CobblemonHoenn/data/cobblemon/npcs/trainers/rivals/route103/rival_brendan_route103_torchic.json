@@ -6,13 +6,13 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:rival_brendan_route103_torchic_interaction"
+        "dialogue": "cobblemon:route103_rival_brendan_interaction"
     },
     "name": "Brendan",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Torchic level=5"
+            "torchic level=5 moves=scratch,helpinghand,growl,splash"
         ]
     },
     "config": [
@@ -35,7 +35,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue rival_brendan_route103_torchic_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue route103_rival_brendan_end @s');"
         }
     ]
 }

@@ -197,7 +197,7 @@ function hoenn:world/blockchanges
 execute as @a[scores={DialogueTrigger=1..}] run function hoenn:dialogue/dialogue
 
 #Manages story trigger commands, starts from a perspective of player not having an active dialogue score
-execute as @a[scores={DialogueTrigger=0,TalkTime=0},tag=!InDialogue] run function hoenn:dialogue/dialoguetriggers
+execute as @a[tag=!InDialogue] run function hoenn:dialogue/dialoguetriggers
 
 #Will keep the weather always sunny or always rainy if only player and has particle effects
 execute as @a[tag=KyogreParticles] unless entity @a[tag=!KyogreParticles] run weather thunder 100s

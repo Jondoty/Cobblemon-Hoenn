@@ -6,13 +6,13 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:rival_may_route103_mudkip_interaction"
+        "dialogue": "cobblemon:route103_rival_may_interaction"
     },
     "name": "May",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Mudkip level=5"
+            "mudkip level=5 moves=tackle,helpinghand,growl,splash"
         ]
     },
     "config": [
@@ -35,7 +35,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue rival_may_route103_mudkip_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue route103_rival_may_end @s');"
         }
     ]
 }
