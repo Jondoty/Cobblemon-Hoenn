@@ -182,5 +182,31 @@ execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] as @e[x=-2105,y=64,
 
 
 
+#Helps convert armor stand model data to newer formats
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":1},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":1}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":2},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":2}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":3},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":3}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":4},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":4}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":5},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":5}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":6},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":6}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":7},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":7}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":8},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":8}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":9},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":9}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":10},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":10}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":11},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":11}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":12},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":12}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":13},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":13}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":14},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":14}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":15},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":15}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":16},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":16}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":17},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":17}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":18},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":18}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":19},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":19}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":20},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":20}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":21},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":21}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":22},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":22}}]}
+execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":23},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":23}}]}
+
+
 
 #
