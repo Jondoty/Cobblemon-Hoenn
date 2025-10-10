@@ -1,19 +1,11 @@
 {
-    "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-        "q.run_command('execute as ' + q.player.username + ' run tag @s add SeashoreTrainer2');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $480 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 480');"
-    ],
     "speakers": {
         "npc": {
-            "name": "Destinee",
+            "name": "Mr. Sea",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:delinquent",
+                "identifier": "cobblemon:richman",
                 "isLeftSide": true
             }
         }
@@ -23,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "There's something special about the food at the Seashore House, isn't there?"
+                "You're scorching hot! Those battles blazed!"
             ],
             "input": {
                 "type": "option",
@@ -41,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "It's not like it's particularly good or anything, but I never want to miss out."
+                "I'm more than pleased!"
             ],
             "input": {
                 "type": "option",
@@ -57,8 +49,5 @@
                 ]
             }
         }
-    ],
-    "escapeAction": [
-        "q.dialogue.close();"
     ]
 }

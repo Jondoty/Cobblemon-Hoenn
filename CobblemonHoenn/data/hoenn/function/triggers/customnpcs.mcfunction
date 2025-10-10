@@ -32,8 +32,13 @@ execute as @s[x=-1421,y=37,z=-1133,distance=..10,tag=!RegirockEncounter] run ope
 
 
 
+#-------------------------------------------------------------
+#Misc World NPCs
 
-
+#Route109 Mr Sea
+execute as @s[x=-1552,y=38,z=494,distance=..6] run opendialogue route109_richman_interaction @s
+execute as @s[x=-1552,y=38,z=494,distance=..6,tag=SeashoreTrainer1,tag=SeashoreTrainer2,tag=SeashoreTrainer3,tag=SeashoreTrainer4,tag=SeashoreTrainer5,tag=!ItemLoot118] run opendialogue mrsea_trainersbeaten @s
+execute as @s[x=-1552,y=38,z=494,distance=..6,tag=SeashoreTrainer1,tag=SeashoreTrainer2,tag=SeashoreTrainer3,tag=SeashoreTrainer4,tag=SeashoreTrainer5,tag=ItemLoot118] run opendialogue mrsea_finished @s
 
 
 #-------------------------------------------------------------
@@ -48,7 +53,8 @@ execute as @s[x=-2718,y=68,z=-35,distance=..6,tag=Dialogue30,tag=Dialogue32] run
 #Dewford
 execute as @s[x=-2415,y=69,z=837,distance=..6,tag=!Dialogue36] run opendialogue briney_dewford_limited @s
 execute as @s[x=-2415,y=69,z=837,distance=..6,tag=!Brawly] run opendialogue briney_dewford_limited @s
-execute as @s[x=-2415,y=69,z=837,distance=..6,tag=Dialogue36,tag=Brawly] run opendialogue briney_dewford @s
+execute as @s[x=-2415,y=69,z=837,distance=..6,tag=Dialogue36,tag=!Dialogue37,tag=Brawly] run opendialogue briney_dialogue37 @s
+execute as @s[x=-2415,y=69,z=837,distance=..6,tag=Dialogue36,tag=Dialogue37,tag=Brawly] run opendialogue briney_dewford @s
 
 #Slateport
 execute as @s[x=-1436,y=70,z=687,distance=..6] run opendialogue briney_slateport @s

@@ -58,6 +58,11 @@ tag @s remove GroudonParticles
 tag @s remove KyogreParticles
 tag @s remove RoomVisit
 tag @s remove KecleonHint
+tag @s remove SeashoreTrainer1
+tag @s remove SeashoreTrainer2
+tag @s remove SeashoreTrainer3
+tag @s remove SeashoreTrainer4
+tag @s remove SeashoreTrainer5
 
 
 #Removes Mega Stone Fount tags
