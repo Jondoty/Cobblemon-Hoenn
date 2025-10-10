@@ -39,7 +39,19 @@ execute as @s[x=-1421,y=37,z=-1133,distance=..10,tag=!RegirockEncounter] run ope
 #-------------------------------------------------------------
 #General Story NPCs
 
+#Mr. Briney
+#R104
+execute as @s[x=-2718,y=68,z=-35,distance=..6,tag=!Dialogue30] run opendialogue route104_oldman_interaction @s
+execute as @s[x=-2718,y=68,z=-35,distance=..6,tag=Dialogue30,tag=!Dialogue32] run opendialogue briney_dialogue32 @s
+execute as @s[x=-2718,y=68,z=-35,distance=..6,tag=Dialogue30,tag=Dialogue32] run opendialogue briney_route104 @s
 
+#Dewford
+execute as @s[x=-2415,y=69,z=837,distance=..6,tag=!Dialogue36] run opendialogue briney_dewford_limited @s
+execute as @s[x=-2415,y=69,z=837,distance=..6,tag=!Brawly] run opendialogue briney_dewford_limited @s
+execute as @s[x=-2415,y=69,z=837,distance=..6,tag=Dialogue36,tag=Brawly] run opendialogue briney_dewford @s
+
+#Slateport
+execute as @s[x=-1436,y=70,z=687,distance=..6] run opendialogue briney_slateport @s
 
 
 
