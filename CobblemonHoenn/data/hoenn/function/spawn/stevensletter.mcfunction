@@ -1,0 +1,1 @@
+give @s music_disc_cat[!minecraft:jukebox_playable,custom_name='["",{"text":"Letter","italic":false,"color":"#80ffff"}]',lore=['["",{"text":"An extremely important letter","italic":false}]','[{"text":"to Steven from the President","italic":false}]','[{"text":"of Devon Corporation.","italic":false}]']]

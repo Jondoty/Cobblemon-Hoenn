@@ -91,8 +91,8 @@ execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scor
 execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=2}] run opendialogue researcher_dialogue26_aqua @s
 
 #Dialogue 27 - Rustboro researcher after gym
-execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=1}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_magma
-execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=2}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_aqua
+execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue30,scores={GameVersion=1}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_magma
+execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue30,scores={GameVersion=2}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_aqua
 execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,scores={GameVersion=1}] run opendialogue researcher_dialogue27_magma_interaction @s
 execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,scores={GameVersion=2}] run opendialogue researcher_dialogue27_aqua_interaction @s
 
@@ -105,6 +105,42 @@ execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={
 execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
 execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
 execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
+#Dialogue 30 - Returning the Devon Parts
+execute as @s[x=-2706,y=69,z=-701,distance=..7,nbt={Inventory:[{id:"minecraft:music_disc_13"}]},tag=!Dialogue30] run opendialogue researcher_dialogue30 @s
+
+#Dialogue 31 - Rival outside Devon Corp
+execute as @s[x=-2757,y=69,z=-705,distance=..10,tag=!Dialogue31,scores={Rival=1}] unless entity @e[x=-2764,y=69,z=-693,distance=..3,type=cobblemon:npc] run npcspawnat -2764 69 -693 may_generic
+execute as @s[x=-2757,y=69,z=-705,distance=..10,tag=!Dialogue31,scores={Rival=2}] unless entity @e[x=-2764,y=69,z=-693,distance=..3,type=cobblemon:npc] run npcspawnat -2764 69 -693 brendan_generic
+execute as @s[x=-2757,y=69,z=-705,distance=..10,tag=!Dialogue31,scores={Rival=1}] run opendialogue may_dialogue31 @s
+execute as @s[x=-2757,y=69,z=-705,distance=..10,tag=!Dialogue31,scores={Rival=2}] run opendialogue brendan_dialogue31 @s
+
+#tps rival out when player is a distance away
+execute if entity @s[x=-2764,y=69,z=-693,distance=30..50,tag=Dialogue31] run tp @e[x=-2764,y=69,z=-693,distance=..4,type=cobblemon:npc] 10000000 -50000 -10000000
+
+#Mr. Briney upon making landfall in Dewford for the first time
+execute as @s[x=-2415,y=69,z=837,distance=..10,tag=!Dialogue33,scores={Cutscene=0}] run opendialogue briney_dialogue33 @s
+
+#Dialogue 36 - Granite Cave Steven
+execute as @s[x=2564,y=170,z=-2603,distance=..10,tag=!Dialogue36] run opendialogue steven_dialogue36 @s
+execute as @s[x=2564,y=155,z=-2514,distance=..20,tag=!Dialogue36] unless entity @e[x=2564,y=171,z=-2599,distance=..3,type=cobblemon:npc] run npcspawnat 2564 171 -2599 steven_generic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
