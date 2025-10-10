@@ -1,0 +1,99 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "researcher": {
+            "name": "Devon Researcher",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": true
+            }
+        },
+        "grunt": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntm",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "grunt",
+            "lines": [
+                "Out of the way! Move it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound helpme record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 28');",
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2706.0 78 -662.5 -180 28');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "researcher",
+            "lines": [
+                "Wait! Pleeeaaase!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "researcher",
+            "lines": [
+                "Don't take those parts!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2670 69 -676 70 0');",
+                            "q.run_command('particle cloud -2986 65 1564 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=-2986,y=65,z=1564,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue26');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

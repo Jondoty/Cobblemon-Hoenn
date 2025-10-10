@@ -1,11 +1,24 @@
 {
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
     "speakers": {
         "npc": {
-            "name": "Gym Guy",
+            "name": "Roxanne",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:oldman",
+                "identifier": "cobblemon:roxanne",
+                "isLeftSide": true
+            }
+        },
+        "unknown": {
+            "name": "???",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:roxanne",
                 "isLeftSide": true
             }
         }
@@ -13,9 +26,9 @@
     "pages": [
         {
             "id": "greeting",
-            "speaker": "npc",
+            "speaker": "unknown",
             "lines": [
-                "Yo, how's it going?"
+                "Hello."
             ],
             "input": {
                 "type": "option",
@@ -24,16 +37,17 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": [
+                            "q.dialogue.set_page('page2');"]
                     }
                 ]
             }
         },
         {
             "id": "page2",
-            "speaker": "npc",
+            "speaker": "unknown",
             "lines": [
-                "Listen, my friend! Would you like to become the Champion?"
+                "You must be a new challenger."
             ],
             "input": {
                 "type": "option",
@@ -42,7 +56,9 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
                     }
                 ]
             }
@@ -51,7 +67,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "I'm no Trainer, not me, but I can sure give you winning advice."
+                "I am Roxanne, the Rustboro City Pokémon Gym Leader."
             ],
             "input": {
                 "type": "option",
@@ -60,7 +76,9 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
                     }
                 ]
             }
@@ -69,7 +87,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "That's settled, then! We'll aim for the Pokémon Championship together!"
+                "I became a Gym Leader so that I may apply in battle all that I've learned at the Pokémon Trainers' School."
             ],
             "input": {
                 "type": "option",
@@ -87,7 +105,7 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "It's your job as a Trainer to collect Gym Badges, am I right?"
+                "If you defeat me in a Pokémon battle, I'll present you with a Gym Badge as proof of your strength as a Trainer."
             ],
             "input": {
                 "type": "option",
@@ -105,7 +123,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "But Gym Leaders aren't pushovers! And that's where I come in!"
+                "Please take up the challenge."
             ],
             "input": {
                 "type": "option",
@@ -123,61 +141,7 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "I'm here to provide expert advice!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page8');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page8",
-            "speaker": "npc",
-            "lines": [
-                "Roxanne, the Gym Leader here, is a user of Rock-type Pokémon."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page9');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page9",
-            "speaker": "npc",
-            "lines": [
-                "The Rock type is very durable, but it can't stand Water-type and Grass-type moves."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page10');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page10",
-            "speaker": "npc",
-            "lines": [
-                "Well, go for it!"
+                "I look forward to seeing you as a challenger. Until then, farewell."
             ],
             "input": {
                 "type": "option",
@@ -187,6 +151,10 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('particle cloud -2986 65 1564 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=-2986,y=65,z=1564,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue22');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

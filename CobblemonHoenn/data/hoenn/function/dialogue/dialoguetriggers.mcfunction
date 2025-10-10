@@ -65,21 +65,36 @@ execute as @s[x=-2026,y=69,z=285,distance=..15,tag=Dialogue12,tag=!Dialogue13] r
 
 #Dialogue 16 - Petalburg CityDad and Wally
 #Sets up dad and youngster
-execute as @a[x=-2539,y=68,z=5,distance=..30,tag=!Dialogue16] unless entity @e[x=-2545,y=69,z=-16,distance=..2,type=cobblemon:npc] run npcspawnat -2545 69 -16 dad_generic
-execute as @a[x=-2539,y=68,z=5,distance=..30,tag=!Dialogue16] unless entity @e[x=-2545,y=69,z=-12,distance=..2,type=cobblemon:npc] run npcspawnat -2545 69 -12 youngster_generic
-execute as @a[x=-2545,y=69,z=-14,distance=..15,tag=!Dialogue16] run opendialogue dad_dialogue16 @s
+execute as @s[x=-2539,y=68,z=5,distance=..30,tag=!Dialogue16] unless entity @e[x=-2545,y=69,z=-16,distance=..2,type=cobblemon:npc] run npcspawnat -2545 69 -16 dad_generic
+execute as @s[x=-2539,y=68,z=5,distance=..30,tag=!Dialogue16] unless entity @e[x=-2545,y=69,z=-12,distance=..2,type=cobblemon:npc] run npcspawnat -2545 69 -12 youngster_generic
+execute as @s[x=-2545,y=69,z=-14,distance=..15,tag=!Dialogue16] run opendialogue dad_dialogue16 @s
 
 #Dialogue 17 - Petalburg Woods Team Magma/Aqua first encounter
 execute as @s[x=-2732,y=69,z=-195,distance=..15,tag=!Dialogue18] unless entity @e[x=-2720,y=69,z=-222,distance=..2,type=cobblemon:npc] run npcspawnat -2720 69 -222 scientist_generic
 execute as @s[x=-2720,y=69,z=-228,distance=..20,tag=Dialogue17,tag=!Dialogue18,scores={GameVersion=1}] unless entity @e[x=-2720,y=69,z=-228,dy=3,type=cobblemon:npc] run npcspawnat -2720 69 -228 magma_grunt_petalburg
 execute as @s[x=-2720,y=69,z=-228,distance=..20,tag=Dialogue17,tag=!Dialogue18,scores={GameVersion=2}] unless entity @e[x=-2720,y=69,z=-228,dy=3,type=cobblemon:npc] run npcspawnat -2720 69 -228 aqua_grunt_petalburg
-execute as @a[x=-2720,y=69,z=-213,distance=..10,tag=!Dialogue17,scores={GameVersion=1}] run opendialogue researcher_dialogue17_magma @s
-execute as @a[x=-2720,y=69,z=-213,distance=..10,tag=!Dialogue17,scores={GameVersion=2}] run opendialogue researcher_dialogue17_aqua @s
+execute as @s[x=-2720,y=69,z=-213,distance=..10,tag=!Dialogue17,scores={GameVersion=1}] run opendialogue researcher_dialogue17_magma @s
+execute as @s[x=-2720,y=69,z=-213,distance=..10,tag=!Dialogue17,scores={GameVersion=2}] run opendialogue researcher_dialogue17_aqua @s
 
+#Dialogue 20 - Rival's introduction to Rustboro
+execute as @s[x=-2741,y=69,z=-565,distance=..10,tag=!Dialogue20,scores={Rival=1}] run opendialogue may_dialogue20 @s
+execute as @s[x=-2741,y=69,z=-565,distance=..10,tag=!Dialogue20,scores={Rival=2}] run opendialogue brendan_dialogue20 @s
+execute as @s[x=-2741,y=69,z=-565,distance=..40,tag=!Dialogue20,scores={Rival=1}] unless entity @e[x=-2741,y=69,z=-565,dy=3,type=cobblemon:npc] run npcspawnat -2741 69 -565 may_generic
+execute as @s[x=-2741,y=69,z=-565,distance=..40,tag=!Dialogue20,scores={Rival=2}] unless entity @e[x=-2741,y=69,z=-565,dy=3,type=cobblemon:npc] run npcspawnat -2741 69 -565 brendan_generic
 
+#Dialogue 22 - Roxanne introducing herself
+execute as @s[x=-2986,y=65,z=1564,distance=..5,tag=!Dialogue22] run opendialogue roxanne_dialogue22 @s
+execute as @s[x=-2986,y=65,z=1579,distance=..10,tag=!Dialogue22] unless entity @e[x=-2986,y=65,z=1564,dy=3,type=cobblemon:npc] run npcspawnat -2986 65 1564 roxanne_generic
 
+#Dialogue 26 - Team stealing Devon Parts, after first badge
+execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=1}] run opendialogue researcher_dialogue26_magma @s
+execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=2}] run opendialogue researcher_dialogue26_aqua @s
 
-
+#Dialogue 27 - Rustboro researcher after gym
+execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=1}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_magma
+execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=2}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_aqua
+execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,scores={GameVersion=1}] run opendialogue researcher_dialogue27_magma_interaction @s
+execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,scores={GameVersion=2}] run opendialogue researcher_dialogue27_aqua_interaction @s
 
 
 
