@@ -1,0 +1,1 @@
+give @s music_disc_13[!minecraft:jukebox_playable,custom_name='["",{"text":"Devon Parts","italic":false,"color":"#80ffff"}]',lore=['["",{"text":"A case that contains mechanical","italic":false}]','[{"text":"parts of some sort made by the","italic":false}]','[{"text":"Devon Corporation.","italic":false}]']]

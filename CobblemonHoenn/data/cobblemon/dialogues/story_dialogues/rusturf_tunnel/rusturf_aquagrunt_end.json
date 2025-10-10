@@ -1,0 +1,300 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $520 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 520');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "briney": {
+            "name": "Mr. Briney",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldman",
+                "isLeftSide": true
+            }
+        },
+        "grunt": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": true
+            }
+        },
+        "wingull": {
+            "name": "Peeko",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:wingull",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "grunt",
+            "lines": [
+                "This is plain not right..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "grunt",
+            "lines": [
+                "The boss told me this would be a slick-and-easy job to pull."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "grunt",
+            "lines": [
+                "All I had to do was steal some parts from Devon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "grunt",
+            "lines": [
+                "Tch! You want 'em back that badly, then take 'em!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/devonparts');",
+                            "q.run_command('execute as ' + q.player.username + ' run particle cloud -2361 42 -821 1 1 1 0.15 300');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-2361,y=42,z=-821,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run particle cloud -2357 42 -818 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=-2357,y=42,z=-818,dy=3,type=cobblemon:npc] run npcspawnat -2357 42 -818 oldman_generic');",
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "briney",
+            "lines": [
+                "Peeko! Am I glad to see you're safe!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "briney",
+            "lines": [
+                "My Peeko owes her life an' freedom to you! They call me Mr. Briney. And you are?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "briney",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Ah, so it is ' + q.player.username + ', is it now!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "briney",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Then I sincerely thank you, ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "briney",
+            "lines": [
+                "If there's ever a thing I can do to help you in turn, don't you hesitate to tell me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "briney",
+            "lines": [
+                "If I'm to be found, it will always be at my cottage by the sea near Petalburg Woods."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "briney",
+            "lines": [
+                "Come, Peeko! High time we're under way to home!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('playsound cobblemon:pokemon.wingull.cry ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "wingull",
+            "lines": [
+                "Pikwee!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud -2357 42 -821 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud -2357 42 -818 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=-2357,y=42,z=-820,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=-2357,y=42,z=-820,distance=..3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue29');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -96,6 +96,19 @@ execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scor
 execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,scores={GameVersion=1}] run opendialogue researcher_dialogue27_magma_interaction @s
 execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,scores={GameVersion=2}] run opendialogue researcher_dialogue27_aqua_interaction @s
 
+#Dialogue 28 & 29 - Rusturf Tunnel Team Grunts stealing Wingull
+execute as @s[x=-2415,y=42,z=-814,distance=..15,tag=Roxanne,tag=!Dialogue29,scores={GameVersion=1}] unless entity @e[x=-2361,y=42,z=-821,dy=3,type=cobblemon:npc] run npcspawnat -2361 42 -821 magma_grunt_rusturf_tunnel
+execute as @s[x=-2415,y=42,z=-814,distance=..15,tag=Roxanne,tag=!Dialogue29,scores={GameVersion=2}] unless entity @e[x=-2361,y=42,z=-821,dy=3,type=cobblemon:npc] run npcspawnat -2361 42 -821 aqua_grunt_rusturf_tunnel
+
+execute as @s[x=-2415,y=42,z=-814,distance=..15,tag=Roxanne,tag=!Dialogue29] unless entity @e[x=-2357,y=42,z=-821,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b}] run pokespawnat -2357 42 -821 wingull no_ai=true level=10
+execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
+
+
+
 
 
 #-----------------------------------------------------------------------------------------------------
