@@ -1,0 +1,309 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Mr. Briney",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Oho! It looks as though you have delivered your chit good and proper."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Ah, but that reminds me! I've had a message from President Stone, saying he has another favor to ask."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "It's about them Devon Parts that you recovered for him before."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Seems as though they should go to some fellow called Stern at Slateport's shipyard."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "Now that you've got this here town's badge, what about for Slateport?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Or we could head back to my Cottage, up to you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Route 104 (near Petalburg)",
+                        "value": "petalburg",
+                        "action": [
+                            "q.dialogue.set_page('end5');"
+                        ]
+                    },
+                    {
+                        "text": "Route 109 (near Slateport)",
+                        "value": "slateport",
+                        "action": [
+                            "q.dialogue.set_page('end8');"
+                        ]
+                    },
+                    {
+                        "text": "Never mind",
+                        "value": "nevermind",
+                        "action": [
+                            "q.dialogue.set_page('end1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        
+
+
+
+        {
+            "id": "end1",
+            "speaker": "npc",
+            "lines": [
+                "You sure about that? Well, Peeko owes her life to you"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('end2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end2",
+            "speaker": "npc",
+            "lines": [
+                "You just go on and tell me anytime you want to set sail."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('end3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end3",
+            "speaker": "npc",
+            "lines": [
+                "I'll brave any tide for you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue37');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "end5",
+            "speaker": "npc",
+            "lines": [
+                "Petalburg City, or thereabouts? Anchors aweigh! Peeko, we're setting sail, my darling!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue37');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Cutscene 5');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end6",
+            "speaker": "npc",
+            "lines": [
+                "Dewford it is, then! Anchors aweigh! Peeko, we're setting sail, my darling!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue37');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Cutscene 2');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end7",
+            "speaker": "npc",
+            "lines": [
+                "Dewford it is, then! Anchors aweigh! Peeko, we're setting sail, my darling!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue37');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Cutscene 4');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end8",
+            "speaker": "npc",
+            "lines": [
+                "Slateport City, is it? Anchors aweigh! Peeko, we're setting sail, my darling!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue37');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Cutscene 3');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

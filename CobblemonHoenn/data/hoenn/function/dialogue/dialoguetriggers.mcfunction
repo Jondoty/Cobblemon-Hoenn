@@ -125,8 +125,8 @@ execute as @s[x=-2415,y=69,z=837,distance=..10,tag=!Dialogue33,scores={Cutscene=
 execute as @s[x=2564,y=170,z=-2603,distance=..10,tag=!Dialogue36] run opendialogue steven_dialogue36 @s
 execute as @s[x=2564,y=155,z=-2514,distance=..20,tag=!Dialogue36] unless entity @e[x=2564,y=171,z=-2599,distance=..3,type=cobblemon:npc] run npcspawnat 2564 171 -2599 steven_generic
 
-
-
+#Dialogue 38 - Making Landfall in Slateport
+execute as @s[x=-1436,y=70,z=687,distance=..10,tag=!Dialogue38,scores={Cutscene=0}] run opendialogue briney_dialogue38 @s
 
 
 

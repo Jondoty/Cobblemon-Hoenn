@@ -346,60 +346,6 @@ tellraw @s[scores={DialogueTrigger=19,TalkTime=1}] {"text":"<Team Aqua Grunt> Bu
 tag @s[scores={DialogueTrigger=19,TalkTime=100..}] add Dialogue19
 
 #----------------------------------------------------------------------------------------------------------
-#Dialogue 37 - Dewford Town
-#Mr. Briney after delivering Steven's Letter
-#https://youtu.be/MgkqxXCmrtI?t=10962
-
-#tellraw @s[scores={DialogueTrigger=37,TalkTime=1}] {"text":"<Mr. Briney> Oho! It looks as though you have delivered your chit good and proper."}
-#tellraw @s[scores={DialogueTrigger=37,TalkTime=1}] {"text":"<Mr. Briney> Ah, but that reminds me! I've had a message from President Stone, saying he has another favor to ask."}
-#tellraw @s[scores={DialogueTrigger=37,TalkTime=1}] {"text":"<Mr. Briney> It's about them Devon Parts that you recovered for him before."}
-#tellraw @s[scores={DialogueTrigger=37,TalkTime=1}] {"text":"<Mr. Briney> Seems as though they should go to some fellow called Stern at Slateport's shipyard."}
-#tellraw @s[scores={DialogueTrigger=37,TalkTime=1}] {"text":"<Mr. Briney> This old seadog will see you there safely! Weigh anchors! We're for Slateport!"}
-
-tellraw @s[scores={DialogueTrigger=37,TalkTime=1},tag=Dialogue35] {"text":"<Mr. Briney> Now that you've got this here town's badge, what about for Slateport?"}
-tellraw @s[scores={DialogueTrigger=37,TalkTime=9},tag=Dialogue35] {"text":"<Mr. Briney> Or we could head back to my Cottage, up to you!"}
-
-execute as @s[scores={DialogueTrigger=37,TalkTime=9},tag=Dialogue35] run scoreboard players enable @s TriggerCommand
-tellraw @s[scores={DialogueTrigger=37,TalkTime=9},tag=Dialogue35] ["",{"text":"["},{"text":"Route 104 (near Petalburg)","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 14"}},{"text":"] ["},{"text":"Route 109 (near Slateport)","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 13"}},{"text":"]"}]
-
-#Without Brawly Badge
-tellraw @s[scores={DialogueTrigger=37,TalkTime=1},tag=!Dialogue35] {"text":"<Mr. Briney> How's about it, did you want to go back to my Cottage?"}
-execute as @s[scores={DialogueTrigger=37,TalkTime=1},tag=!Dialogue35] run scoreboard players enable @s TriggerCommand
-tellraw @s[scores={DialogueTrigger=37,TalkTime=1},tag=!Dialogue35] ["",{"text":"["},{"text":"Yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 14"}},{"text":"]"}]
-execute as @s[scores={DialogueTrigger=37,TalkTime=1},tag=!Dialogue35] run scoreboard players add @s TalkTime 9
-
-tag @s[scores={DialogueTrigger=37,TalkTime=9..}] add Dialogue37
-
-#----------------------------------------------------------------------------------------------------------
-#Dialogue 37 - Dewford Town
-#Mr. Briney taking player to either Petalburg or Slateport
-
-tellraw @s[scores={DialogueTrigger=38,TalkTime=1,Temp=1}] {"text":"<Mr. Briney> Slateport City, is it? Anchors aweigh! Peeko, we're setting sail, my darling!"}
-tellraw @s[scores={DialogueTrigger=38,TalkTime=1,Temp=2}] {"text":"<Mr. Briney> Petalburg City, is it? Anchors aweigh! Peeko, we're setting sail, my darling!"}
-
-#Cutscene shots
-execute as @s[scores={DialogueTrigger=38,TalkTime=11,Temp=1}] run scoreboard players set @s Cutscene 3
-execute as @s[scores={DialogueTrigger=38,TalkTime=11,Temp=2}] run scoreboard players set @s Cutscene 5
-
-tellraw @s[scores={DialogueTrigger=38,TalkTime=75,Temp=1}] {"text":"<Mr. Briney> Ahoy! We've made land in Slateport!"}
-tellraw @s[scores={DialogueTrigger=38,TalkTime=75,Temp=2}] {"text":"<Mr. Briney> Ahoy! We've made land in Petalburg!"}
-#tellraw @s[scores={DialogueTrigger=37,TalkTime=1}] {"text":"<Mr. Briney> I suppose you're off to visit Captain Stern and deliver those Devon Parts?"}
-
-tag @s[scores={DialogueTrigger=38,TalkTime=75..}] add Dialogue38
-#----------------------------------------------------------------------------------------------------------
-#Dialogue ??? - Route 109
-#Seashore House after all trainers battled
-#https://youtu.be/MgkqxXCmrtI?t=11872
-
-#tellraw @s[scores={DialogueTrigger=???,TalkTime=1}] {"text":"<Mr. Sea> You're scorching hot! Those battles blazed!"}
-#tellraw @s[scores={DialogueTrigger=???,TalkTime=1}] {"text":"<Mr. Sea> I'm more than pleased!"}
-#tellraw @s[scores={DialogueTrigger=???,TalkTime=1}] {"text":"<Mr. Sea> As thanks for showing me your hot streak, I want you to take these."}
-#tellraw @s[scores={DialogueTrigger=???,TalkTime=1}] {"text":"<Mr. Sea> It's half a dozen bottles of Soda Pop!"}
-
-#tellraw @s[scores={DialogueTrigger=???,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained Soda Pops!","italic":true,"color":"gray"}]
-
-#tag @s[scores={DialogueTrigger=???,TalkTime=100..}] add Dialogue???
-#----------------------------------------------------------------------------------------------------------
 #Dialogue 39 - Slateport City
 #Fan Club President when talked to
 
