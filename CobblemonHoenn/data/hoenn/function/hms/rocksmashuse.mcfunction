@@ -12,13 +12,6 @@
 
 #------------------------------------------------------------------------------------------------
 
-#Rusturf Tunnel specific dialogue after using Rock smash
-#execute as @a[x=-2309,y=42,z=-817,distance=..30,tag=!Dialogue69,scores={DialogueTrigger=69}] at @s if entity @e[distance=..5,tag=Break] run scoreboard players set @s TalkTime 0
-#execute as @a[x=-2309,y=42,z=-817,distance=..30,tag=!Dialogue69,scores={DialogueTrigger=69}] at @s if entity @e[distance=..5,tag=Break] run tag @s add Dialogue69
-#execute as @a[x=-2309,y=42,z=-817,distance=..30,tag=!Dialogue70] at @s if entity @e[distance=..5,tag=Break] run scoreboard players set @s DialogueTrigger 70
-
-#------------------------------------------------------------------------------------------------
-
 #Tags rocks within the player's grasp as Broken to clear a path quickly
 execute at @s run tag @e[distance=..5,type=minecraft:interaction,tag=RockSmash] add Break
 

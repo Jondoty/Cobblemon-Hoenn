@@ -179,7 +179,7 @@ tellraw @s[scores={SignRead=33}] ["",{"text":"Rusturf Tunnel","bold":true,"itali
 
 #-2071 69 -617
 #Runs Shroomish dialogue if first time reading
-execute as @s[scores={SignRead=34},tag=!Dialogue71] run scoreboard players set @s DialogueTrigger 71
+execute as @s[scores={SignRead=34},tag=!Dialogue71] run opendialogue shroomishgirl_dialogue71 @s
 
 title @s[scores={SignRead=34}] subtitle ["",{"text":"The windswept highlands with the sweet fragrance of grass","color":"green"},{"text":"."}]
 title @s[scores={SignRead=34}] title {"text":"Verdanturf Town","color":"green"}

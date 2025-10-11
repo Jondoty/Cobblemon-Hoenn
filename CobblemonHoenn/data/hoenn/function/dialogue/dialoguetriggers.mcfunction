@@ -189,10 +189,17 @@ execute as @s[x=2675,y=65,z=2716,distance=..40,tag=!Dialogue62] unless entity @e
 execute as @s[x=2675,y=65,z=2716,distance=..40,tag=!Dialogue62] unless entity @e[x=2671,y=65,z=2716,dy=3,type=cobblemon:npc] run npcspawnat 2671 65 2716 oldman_generic
 
 
+#Rusturf Tunnel after knowing Rock Smash
+execute as @s[x=-2300,y=42,z=-820,distance=..7,tag=RockSmash,tag=Wattson,tag=!Dialogue69] run opendialogue wanda_dialogue69 @s
 
+#Dialogue 70, sets up NPCs for when player uses Rock Smash
+execute as @s[x=-2309,y=43,z=-817,distance=..40,tag=!Dialogue70] unless entity @e[x=-2314,y=42,z=-817,dy=3,type=cobblemon:npc] run npcspawnat -2314 42 -817 rusturftunnel_blackbelt
+execute as @s[x=-2309,y=43,z=-817,distance=..40,tag=!Dialogue70] unless entity @e[x=-2300,y=42,z=-820,dy=3,type=cobblemon:npc] run npcspawnat -2300 42 -820 rusturftunnel_aromalady
+execute as @s[x=-2309,y=43,z=-817,distance=..10,tag=!Dialogue70] if entity @e[x=-2309,y=43,z=-817,type=armor_stand,distance=..10,nbt={ArmorItems: [{}, {}, {}, {count: 1, id: "minecraft:deepslate_copper_ore"}]}] run opendialogue couple_dialogue70 @s
 
-
-
+#Dialogue 72 - Route 116 Researcher after clearing Rusturf Tunnel
+execute as @s[x=-2414,y=69,z=-714,distance=..20,tag=Dialogue70,tag=!Dialogue72] unless entity @e[x=-2414,y=69,z=-714,distance=..2,type=cobblemon:npc] run npcspawnat -2414 69 -714 scientist_generic
+execute as @s[x=-2414,y=69,z=-714,distance=..7,tag=Dialogue70,tag=!Dialogue72] run opendialogue researcher_dialogue72 @s
 
 
 

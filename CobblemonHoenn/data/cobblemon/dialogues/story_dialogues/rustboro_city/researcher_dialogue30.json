@@ -1,7 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
-        "q.run_command('clear ' + q.player.username + ' music_disc_13');"
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {

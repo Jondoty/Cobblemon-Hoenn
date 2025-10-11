@@ -41,6 +41,11 @@ execute as @s[x=-1552,y=38,z=494,distance=..6,tag=SeashoreTrainer1,tag=SeashoreT
 execute as @s[x=-1552,y=38,z=494,distance=..6,tag=SeashoreTrainer1,tag=SeashoreTrainer2,tag=SeashoreTrainer3,tag=SeashoreTrainer4,tag=SeashoreTrainer5,tag=ItemLoot118] run opendialogue mrsea_finished @s
 
 
+#Mr. Stone
+execute as @s[x=-2747,y=38,z=-719,distance=..6] run opendialogue rustboro_mrstone_interaction @s
+execute as @s[x=-2747,y=38,z=-719,distance=..6,nbt={Inventory:[{id:"minecraft:prismarine_crystals"}]},tag=!Dialogue73] run opendialogue rustboro_mrstone_intriguingstone @s
+
+
 #-------------------------------------------------------------
 #General Story NPCs
 
