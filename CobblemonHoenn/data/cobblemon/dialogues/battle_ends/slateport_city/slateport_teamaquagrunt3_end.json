@@ -4,7 +4,9 @@
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $640 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 640');"
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 640');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s add MuseumGrunt1');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s add InDialogue');"
     ],
     "speakers": {
         "npc": {
@@ -19,12 +21,31 @@
     },
     "pages": [
         {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Awaaaughhh! I got beat by a little brat?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"]
+                    }
+                ]
+            }
+        },
+        {
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "How?!"
+                "Oh, man, what a disaster... The boss is gonna be furious..."
             ],
-            "input": {
+                "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
@@ -32,6 +53,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }
@@ -40,6 +62,5 @@
         }
     ],
     "escapeAction": [
-        "q.dialogue.close();"
     ]
 }

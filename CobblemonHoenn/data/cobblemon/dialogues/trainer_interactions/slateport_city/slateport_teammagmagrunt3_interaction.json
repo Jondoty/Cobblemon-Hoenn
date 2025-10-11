@@ -1,11 +1,7 @@
 {
     "initializationAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
     ],
     "escapeAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.dialogue.close();"
     ],
     "names": [
@@ -24,7 +20,7 @@
         {
             "id": "greeting",
             "speaker": "npc",
-            "lines": [],
+            "lines": ["Our boss has need of the parts in that case, so relinquish it to us at once!"],
             "input": {
                 "type": "option",
                 "vertical": false,
@@ -33,7 +29,7 @@
                         "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
                         "value": "battle",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 35');",
                             "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
                             "v.battle = q.npc.start_battle(q.player);"
                         ]

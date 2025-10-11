@@ -129,16 +129,22 @@ execute as @s[x=2564,y=155,z=-2514,distance=..20,tag=!Dialogue36] unless entity 
 execute as @s[x=-1436,y=70,z=687,distance=..10,tag=!Dialogue38,scores={Cutscene=0}] run opendialogue briney_dialogue38 @s
 
 
+#Dialogue 41 - Slateport Stern's Shipyard
+execute as @s[x=-1446,y=16,z=328,distance=..10,tag=!Dialogue41,tag=!Dialogue42] run opendialogue dock_dialogue41 @s
 
+#Dialogue 42 - Oceanic Museum Stern Ambush
+execute as @a[x=-1394,y=15,z=244,distance=..20,tag=!Dialogue42] unless entity @e[x=-1379,y=15,z=276,distance=..3,type=cobblemon:npc] run npcspawnat -1379 15 276 museum_stern_magma
+execute as @a[x=-1394,y=-13,z=244,distance=..20,tag=!Dialogue42] unless entity @e[x=-1379,y=-13,z=276,distance=..3,type=cobblemon:npc] run npcspawnat -1379 -12 276 museum_stern_aqua
 
+#Respawns grunts to battle
+execute as @s[x=-1379,y=15,z=276,distance=..10,tag=Dialogue42,tag=!Dialogue44] unless entity @e[x=-1382,y=15,z=270,dy=3,type=cobblemon:npc] run npcspawnat -1382 15 270 slateport_teammagmagrunt3
+execute as @s[x=-1379,y=15,z=276,distance=..10,tag=Dialogue42,tag=!Dialogue44] unless entity @e[x=-1384,y=15,z=270,dy=3,type=cobblemon:npc] run npcspawnat -1384 15 270 slateport_teammagmagrunt4
+execute as @s[x=-1379,y=-12,z=276,distance=..10,tag=Dialogue42,tag=!Dialogue44] unless entity @e[x=-1382,y=-12,z=270,dy=3,type=cobblemon:npc] run npcspawnat -1382 -12 270 slateport_teamaquagrunt3
+execute as @s[x=-1379,y=-12,z=276,distance=..10,tag=Dialogue42,tag=!Dialogue44] unless entity @e[x=-1384,y=-12,z=270,dy=3,type=cobblemon:npc] run npcspawnat -1384 -12 270 slateport_teamaquagrunt4
 
-
-
-
-
-
-
-
+#Dialogue 44 - Introducing the team leaders after both battles
+execute as @s[x=-1379,y=15,z=276,distance=..10,tag=MuseumGrunt1,tag=MuseumGrunt2,tag=!Dialogue44] run opendialogue maxie_dialogue44 @s
+execute as @s[x=-1379,y=-12,z=276,distance=..10,tag=MuseumGrunt1,tag=MuseumGrunt2,tag=!Dialogue44] run opendialogue archie_dialogue44 @s
 
 
 

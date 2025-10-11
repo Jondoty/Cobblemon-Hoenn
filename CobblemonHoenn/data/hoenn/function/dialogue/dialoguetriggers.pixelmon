@@ -12,8 +12,6 @@ execute as @a[x=-2080,y=49,z=288,dx=24,dy=10,dz=18,tag=!RoomVisit] run tag @s ad
 execute as @a[x=-2371,y=69,z=28,distance=..25,tag=!Dialogue15] run scoreboard players set @s DialogueTrigger 15
 
 
-#Dialogue 41 - Stern's Shipyard
-execute as @a[x=-1446,y=16,z=328,distance=..10,tag=!Dialogue41,tag=!Dialogue42] run scoreboard players set @s DialogueTrigger 41
 
 #------------------------------------------------
 
