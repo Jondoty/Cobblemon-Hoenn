@@ -1,0 +1,134 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+        "q.run_command('execute as ' + q.player.username + ' run tp @s -1579.0 74.15 -3.5 153 33');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "grunt1": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntm",
+                "isLeftSide": true
+            }
+        },
+        "grunt2": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntm",
+                "isLeftSide": false
+            }
+        },
+        "grunt3": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntf",
+                "isLeftSide": true
+            }
+        },
+        "grunt4": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntf",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "grunt1",
+            "lines": [
+                "Let's keep going through Route 110 and head for Mt. Chimney!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "grunt3",
+            "lines": [
+                "It'll be quite a long journey."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "grunt2",
+            "lines": [
+                "Let's take a rest in Mauville City, which is on the way."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "grunt4",
+            "lines": [
+                "I concur!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud -1583 69 -11 3 1 3 0.15 300');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue42');",
+                            "q.run_command('tp @e[x=-1594,y=68,z=-42,dx=23,dy=5,dz=35,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -1584 69 5 180 7');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue50');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

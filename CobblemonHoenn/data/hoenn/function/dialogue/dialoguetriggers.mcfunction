@@ -133,8 +133,8 @@ execute as @s[x=-1436,y=70,z=687,distance=..10,tag=!Dialogue38,scores={Cutscene=
 execute as @s[x=-1446,y=16,z=328,distance=..10,tag=!Dialogue41,tag=!Dialogue42] run opendialogue dock_dialogue41 @s
 
 #Dialogue 42 - Oceanic Museum Stern Ambush
-execute as @a[x=-1394,y=15,z=244,distance=..20,tag=!Dialogue42] unless entity @e[x=-1379,y=15,z=276,distance=..3,type=cobblemon:npc] run npcspawnat -1379 15 276 museum_stern_magma
-execute as @a[x=-1394,y=-13,z=244,distance=..20,tag=!Dialogue42] unless entity @e[x=-1379,y=-13,z=276,distance=..3,type=cobblemon:npc] run npcspawnat -1379 -12 276 museum_stern_aqua
+execute as @s[x=-1394,y=15,z=244,distance=..20,tag=!Dialogue42] unless entity @e[x=-1379,y=15,z=276,distance=..3,type=cobblemon:npc] run npcspawnat -1379 15 276 museum_stern_magma
+execute as @s[x=-1394,y=-13,z=244,distance=..20,tag=!Dialogue42] unless entity @e[x=-1379,y=-13,z=276,distance=..3,type=cobblemon:npc] run npcspawnat -1379 -12 276 museum_stern_aqua
 
 #Respawns grunts to battle
 execute as @s[x=-1379,y=15,z=276,distance=..10,tag=Dialogue42,tag=!Dialogue44] unless entity @e[x=-1382,y=15,z=270,dy=3,type=cobblemon:npc] run npcspawnat -1382 15 270 slateport_teammagmagrunt3
@@ -145,6 +145,49 @@ execute as @s[x=-1379,y=-12,z=276,distance=..10,tag=Dialogue42,tag=!Dialogue44] 
 #Dialogue 44 - Introducing the team leaders after both battles
 execute as @s[x=-1379,y=15,z=276,distance=..10,tag=MuseumGrunt1,tag=MuseumGrunt2,tag=!Dialogue44] run opendialogue maxie_dialogue44 @s
 execute as @s[x=-1379,y=-12,z=276,distance=..10,tag=MuseumGrunt1,tag=MuseumGrunt2,tag=!Dialogue44] run opendialogue archie_dialogue44 @s
+
+#Teleports player after meeting leaders to un-taken over museum
+execute as @s[x=-1409,y=-20,z=242,dx=30,dy=40,dz=7,tag=Dialogue44] at @s run tp @s ~ 43 ~ ~ ~
+
+#Contest dialogues, skipped over for now
+
+#Dialogue 50 - Route 110
+execute as @s[x=-1581,y=69,z=16,distance=..20,tag=!Dialogue50,scores={GameVersion=1}] run opendialogue route111_magmagrunts_dialogue50 @s
+execute as @s[x=-1581,y=69,z=16,distance=..20,tag=!Dialogue50,scores={GameVersion=2}] run opendialogue route111_aquagrunts_dialogue50 @s
+
+#Spawns grunts
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=1}] unless entity @e[x=-1587,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1587 69 -11 magmagrunt_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=1}] unless entity @e[x=-1585,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1585 69 -11 magmagruntf_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=1}] unless entity @e[x=-1583,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1583 69 -11 magmagrunt_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=1}] unless entity @e[x=-1581,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1581 69 -11 magmagruntf_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=1}] unless entity @e[x=-1585,y=69,z=-14,dy=3,type=cobblemon:npc] run npcspawnat -1585 69 -14 magmagrunt_generic
+
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=2}] unless entity @e[x=-1587,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1587 69 -11 aquagrunt_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=2}] unless entity @e[x=-1585,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1585 69 -11 aquagruntf_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=2}] unless entity @e[x=-1583,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1583 69 -11 aquagrunt_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=2}] unless entity @e[x=-1581,y=69,z=-11,dy=3,type=cobblemon:npc] run npcspawnat -1581 69 -11 aquagruntf_generic
+execute as @s[x=-1581,y=69,z=16,distance=..30,tag=!Dialogue50,scores={GameVersion=2}] unless entity @e[x=-1585,y=69,z=-14,dy=3,type=cobblemon:npc] run npcspawnat -1585 69 -14 aquagrunt_generic
+
+
+#Route 110 Rival Battle spawns
+execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=1,StarterPick=1}] unless entity @e[x=-1419,y=69,z=-133,distance=..3,type=cobblemon:npc] run npcspawnat -1419 69 -133 route110_may1
+execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=1,StarterPick=2}] unless entity @e[x=-1419,y=69,z=-133,distance=..3,type=cobblemon:npc] run npcspawnat -1419 69 -133 route110_may2
+execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=1,StarterPick=3}] unless entity @e[x=-1419,y=69,z=-133,distance=..3,type=cobblemon:npc] run npcspawnat -1419 69 -133 route110_may3
+
+execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=2,StarterPick=1}] unless entity @e[x=-1419,y=69,z=-133,distance=..3,type=cobblemon:npc] run npcspawnat -1419 69 -133 route110_brendan1
+execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=2,StarterPick=2}] unless entity @e[x=-1419,y=69,z=-133,distance=..3,type=cobblemon:npc] run npcspawnat -1419 69 -133 route110_brendan2
+execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=2,StarterPick=3}] unless entity @e[x=-1419,y=69,z=-133,distance=..3,type=cobblemon:npc] run npcspawnat -1419 69 -133 route110_brendan3
+
+
+
+
+
+
+
+
+
+
+
 
 
 
