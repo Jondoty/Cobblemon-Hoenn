@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
         "c.npc.set_chatting();",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
@@ -7,22 +8,627 @@
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 680');"
     ],
     "speakers": {
-        "npc": {
+        "wally": {
             "name": "Wally",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
                 "identifier": "cobblemon:wally",
+                "isLeftSide": false
+            }
+        },
+        "uncle": {
+            "name": "Wally's Uncle",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldman",
                 "isLeftSide": true
             }
-        }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
     },
     "pages": [
         {
-            "id": "page2",
-            "speaker": "npc",
+            "id": "greeting",
+            "speaker": "wally",
             "lines": [
-                "Wow... You really are strong!"
+                "... I'll go back to Verdanturf..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + ', thank you... Being a Trainer is tough, isnt it?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "wally",
+            "lines": [
+                "It's not enough just to battle with your Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "wally",
+            "lines": [
+                "I can't become a true Trainer like that... Not really..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "uncle",
+            "lines": [
+                "Wally, there's no need to get so down on yourself."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "uncle",
+            "lines": [
+                "Why, what's keeping you from becoming stronger?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "uncle",
+            "lines": [
+                "Nothing is! All you need to do is keep growing."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "wally",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "uncle",
+            "lines": [
+                "Come on, let's go home. Everyone's waiting for you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "wally",
+            "lines": [
+                "...Yes, Uncle."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '...';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "wally",
+            "lines": [
+                "I... I'm definitely... I'm going to get stronger. Much, much stronger!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "wally",
+            "lines": [
+                "I feel like I learned a lot from just one Pokémon battle with you..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "wally",
+            "lines": [
+                "About my own limits...and Ralts's..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'So...um... That is why... ' + q.player.username + '... If it is all right... Could I...';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "wally",
+            "lines": [
+                "Could I call you...my r-riv—"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "wally",
+            "lines": [
+                "Ah, never mind! S-sorry! It was nothing! Please forget about it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "wally",
+            "lines": [
+                "Guh...good-bye!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2675 65 2716 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=2675,y=65,z=2716,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "uncle",
+            "lines": [
+                "It just dawned on me that you must be the young trainer who kept an eye out for Wally when he caught his Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page20');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "uncle",
+            "lines": [
+                "So it's you we have to thank for Wally becoming so positive about the future."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "uncle",
+            "lines": [
+                "Thank you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "uncle",
+            "lines": [
+                "...Ah, here! Take this."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "uncle",
+            "lines": [
+                "I want you to have it, as a bit of a thank-you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RockSmash');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "player",
+            "lines": [
+                "You obtained HM06 Rock Smash!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "uncle",
+            "lines": [
+                "Even if there are obstacles in your path, I think you'll be able to break through them."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page26');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "uncle",
+            "lines": [
+                "Especially if you use Rock Smash there!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page27');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "uncle",
+            "lines": [
+                "We should head back now, but..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page28');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "uncle",
+            "lines": [
+                "If you ever have the time, I'd love it if you'd stop by our home in Verdanturf."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page29');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "uncle",
+            "lines": [
+                "I'm sure Wally would enjoy it, too."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page30');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "uncle",
+            "lines": [
+                "We'll look forward to seeing you!"
             ],
             "input": {
                 "type": "option",
@@ -32,6 +638,10 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('particle cloud 2671 65 2716 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=2671,y=65,z=2716,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue62');",
                             "q.dialogue.close();"
                         ]
                     }
@@ -40,6 +650,5 @@
         }
     ],
     "escapeAction": [
-        "q.dialogue.close();"
     ]
 }

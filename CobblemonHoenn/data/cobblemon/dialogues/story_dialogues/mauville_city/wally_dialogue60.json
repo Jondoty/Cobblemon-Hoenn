@@ -1,12 +1,10 @@
 {
     "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+        "q.run_command('execute as ' + q.player.username + ' run tp @s 2710.0 70.5 2920.0 156 30');",
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
-    "escapeAction": [
-        "q.dialogue.close();"
-    ],
-    "names": [
-        "Wally"
-    ],
+    "escapeAction": [],
     "speakers": {
         "wally": {
             "name": "Wally",
@@ -17,8 +15,8 @@
                 "isLeftSide": false
             }
         },
-        "uncle": {
-            "name": "Wally's Uncle",
+        "unknown": {
+            "name": "???",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
@@ -32,7 +30,7 @@
             "id": "greeting",
             "speaker": "wally",
             "lines": [
-                "Uncle, I'm begging you!"
+                "Wow! So this is Mauville City!"
             ],
             "input": {
                 "type": "option",
@@ -48,9 +46,9 @@
         },
         {
             "id": "page2",
-            "speaker": "wally",
+            "speaker": "unknown",
             "lines": [
-                "I want to challenge this Gym to see how much stronger I've become!"
+                "Hahaha! You sure seem to be enjoying it, Wally."
             ],
             "input": {
                 "type": "option",
@@ -66,9 +64,9 @@
         },
         {
             "id": "page3",
-            "speaker": "wally",
+            "speaker": "unknown",
             "lines": [
-                "Please! You'll let me, won't you?"
+                "So what would you like to do? Do you want to grab a bite to eat at the Mauville Food Court?"
             ],
             "input": {
                 "type": "option",
@@ -86,9 +84,9 @@
         },
         {
             "id": "page4",
-            "speaker": "uncle",
+            "speaker": "unknown",
             "lines": [
-                "Now hold on, Wally..."
+                "Or maybe we should get you a Bike of your own at Rydel's Cycles."
             ],
             "input": {
                 "type": "option",
@@ -106,9 +104,9 @@
         },
         {
             "id": "page5",
-            "speaker": "uncle",
+            "speaker": "unknown",
             "lines": [
-                "It's certainly true that you've grown quite a lot stronger alongside your Pokémon."
+                "Would you like that? I bet the exercise would be good for your health."
             ],
             "input": {
                 "type": "option",
@@ -126,9 +124,9 @@
         },
         {
             "id": "page6",
-            "speaker": "uncle",
+            "speaker": "wally",
             "lines": [
-                "But don't you think that jumping right into challenging a Gym might be pushing it?"
+                "No, thank you! I want to challenge the Gym right away!"
             ],
             "input": {
                 "type": "option",
@@ -146,9 +144,9 @@
         },
         {
             "id": "page7",
-            "speaker": "wally",
+            "speaker": "unknown",
             "lines": [
-                "I'm not pushing it! If it's me and my Ralts, we can beat anyone!"
+                "What?"
             ],
             "input": {
                 "type": "option",
@@ -168,10 +166,7 @@
             "id": "page8",
             "speaker": "wally",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'Ah! ' + q.player.username + '!';"
-                }
+                "Let me see... I'm pretty sure the Gym is..."
             ],
             "input": {
                 "type": "option",
@@ -191,7 +186,7 @@
             "id": "page9",
             "speaker": "wally",
             "lines": [
-                "Ralts and I have gotten a lot stronger since we first met. Growing together!"
+                "Yup! Straight ahead this way! Just through the inner courtyard!"
             ],
             "input": {
                 "type": "option",
@@ -201,6 +196,8 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
+                            "q.run_command('particle cloud 2707 65 2909 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2707,y=65,z=2909,dy=2] 10000000 -50000 -10000000');",
                             "q.dialogue.set_page('page10');"
                         ]
                     }
@@ -209,12 +206,9 @@
         },
         {
             "id": "page10",
-            "speaker": "uncle",
+            "speaker": "unknown",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'I want to prove that to you and my uncle both, ' + q.player.username + '.';"
-                }
+                "What? Hey! Wait!"
             ],
             "input": {
                 "type": "option",
@@ -230,32 +224,26 @@
                 ]
             }
         },
-
         {
             "id": "page11",
-            "speaker": "wally",
+            "speaker": "unknown",
             "lines": [
-                "Please...help me once more... And have a battle with me!"
+                "Wally?!"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-                        "value": "battle",
+                        "text": "Close",
+                        "value": "close",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 38');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-                            "v.battle = q.npc.start_battle(q.player);"
-                        ]
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('particle cloud 2703 65 2909 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2703,y=65,z=2909,dy=2] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2705 65 2929 180 10');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue60');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

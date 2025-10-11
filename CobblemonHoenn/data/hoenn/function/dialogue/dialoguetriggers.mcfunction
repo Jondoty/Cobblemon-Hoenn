@@ -179,11 +179,14 @@ execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=2,S
 execute as @s[x=-1439,y=69,z=-61,distance=..20,tag=!Dialogue59,scores={Rival=2,StarterPick=3}] unless entity @e[x=-1419,y=69,z=-133,distance=..3,type=cobblemon:npc] run npcspawnat -1419 69 -133 route110_brendan3
 
 
+#Wally on entering Mauville City
+execute as @s[x=2705,y=65,z=2959,distance=..20,tag=!Dialogue60] unless entity @e[x=2707,y=65,z=2909,dy=3,type=cobblemon:npc] run npcspawnat 2707 65 2909 wally_generic
+execute as @s[x=2705,y=65,z=2959,distance=..20,tag=!Dialogue60] unless entity @e[x=2703,y=65,z=2909,dy=3,type=cobblemon:npc] run npcspawnat 2703 65 2909 oldman_generic
+execute as @s[x=2705,y=64,z=2929,distance=..10,tag=!Dialogue60] run opendialogue wally_dialogue60 @s
 
-
-
-
-
+#Mauville Wally in front of Gym
+execute as @s[x=2675,y=65,z=2716,distance=..40,tag=!Dialogue62] unless entity @e[x=2675,y=65,z=2716,dy=3,type=cobblemon:npc] run npcspawnat 2675 65 2716 mauville_wally
+execute as @s[x=2675,y=65,z=2716,distance=..40,tag=!Dialogue62] unless entity @e[x=2671,y=65,z=2716,dy=3,type=cobblemon:npc] run npcspawnat 2671 65 2716 oldman_generic
 
 
 
