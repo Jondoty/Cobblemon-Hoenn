@@ -13,16 +13,6 @@ execute as @a[x=-2371,y=69,z=28,distance=..25,tag=!Dialogue15] run scoreboard pl
 
 
 
-#Dialogue 75 - Route 112
-#Rival showing Mt. Chimney and giving Strength
-execute as @a[x=-1694,y=78,z=-1088,distance=..15,tag=!Dialogue75] run scoreboard players set @s DialogueTrigger 75
-
-#Dialogue 76 - Route 111
-#Secret Base Obtaining
-execute as @a[x=-1541,y=78,z=-1337,distance=..20,tag=!Dialogue76] unless entity @e[x=-1515,y=78,z=-1368,distance=..3,type=cobblemon:npc] run npcspawnat -1515 79 -1368 {HurtByTimestamp: 0, chatNum: 0, Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "Aarune", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 0b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, TextureIndex: 4, TrainerIndex: "madame", NameIndex: 4, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [180.0f, 0.0f], HandItems: [{}, {}], ChatIndex: 0, Profession: -1s,Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "ornithologist.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 2s}
-
-execute as @a[x=-1515,y=78,z=-1368,distance=..15,tag=!Dialogue76] run scoreboard players set @s DialogueTrigger 76
-
 #Dialogue 77 - Route 113
 #Rival healing player
 execute as @a[x=-1646,y=79,z=-1418,distance=..15,tag=!Dialogue77] run scoreboard players set @s DialogueTrigger 77

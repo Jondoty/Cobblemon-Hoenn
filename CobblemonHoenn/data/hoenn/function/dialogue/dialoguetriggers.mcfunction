@@ -151,7 +151,7 @@ execute as @s[x=-1409,y=-20,z=242,dx=30,dy=40,dz=7,tag=Dialogue44] at @s run tp 
 
 #Contest dialogues, skipped over for now
 
-#Dialogue 50 - Route 110
+#Dialogue 50 - Route 110 Grunts showing the way
 execute as @s[x=-1581,y=69,z=16,distance=..20,tag=!Dialogue50,scores={GameVersion=1}] run opendialogue route111_magmagrunts_dialogue50 @s
 execute as @s[x=-1581,y=69,z=16,distance=..20,tag=!Dialogue50,scores={GameVersion=2}] run opendialogue route111_aquagrunts_dialogue50 @s
 
@@ -200,6 +200,34 @@ execute as @s[x=-2309,y=43,z=-817,distance=..10,tag=!Dialogue70] if entity @e[x=
 #Dialogue 72 - Route 116 Researcher after clearing Rusturf Tunnel
 execute as @s[x=-2414,y=69,z=-714,distance=..20,tag=Dialogue70,tag=!Dialogue72] unless entity @e[x=-2414,y=69,z=-714,distance=..2,type=cobblemon:npc] run npcspawnat -2414 69 -714 scientist_generic
 execute as @s[x=-2414,y=69,z=-714,distance=..7,tag=Dialogue70,tag=!Dialogue72] run opendialogue researcher_dialogue72 @s
+
+
+#Dialogue 74 - Mauville north gate Grunts showing the way
+execute as @s[x=2705,y=65,z=2685,distance=..15,tag=Wattson,tag=!Dialogue74,scores={GameVersion=1}] run opendialogue grunts_dialogue74_magma @s
+execute as @s[x=2705,y=65,z=2685,distance=..15,tag=Wattson,tag=!Dialogue74,scores={GameVersion=2}] run opendialogue grunts_dialogue74_aqua @s
+
+#Spawns grunts
+execute as @s[x=2705,y=65,z=2712,distance=..20,tag=Wattson,tag=!Dialogue74,scores={GameVersion=1}] unless entity @e[x=2705,y=65,z=2680,dy=3,type=cobblemon:npc] run npcspawnat 2705 65 2680 magmagrunt_generic
+execute as @s[x=2705,y=65,z=2712,distance=..20,tag=Wattson,tag=!Dialogue74,scores={GameVersion=1}] unless entity @e[x=2705,y=65,z=2685,dy=3,type=cobblemon:npc] run npcspawnat 2705 65 2685 magmagruntf_generic
+
+execute as @s[x=2705,y=65,z=2712,distance=..20,tag=Wattson,tag=!Dialogue74,scores={GameVersion=2}] unless entity @e[x=2705,y=65,z=2680,dy=3,type=cobblemon:npc] run npcspawnat 2705 65 2680 aquagrunt_generic
+execute as @s[x=2705,y=65,z=2712,distance=..20,tag=Wattson,tag=!Dialogue74,scores={GameVersion=2}] unless entity @e[x=2705,y=65,z=2685,dy=3,type=cobblemon:npc] run npcspawnat 2705 65 2685 aquagruntf_generic
+
+
+#Route 112 - Rival granting player Strength
+execute as @a[x=-1694,y=78,z=-1088,distance=..15,tag=!Dialogue75,scores={Rival=1}] run opendialogue may_dialogue75 @s
+execute as @a[x=-1694,y=78,z=-1088,distance=..15,tag=!Dialogue75,scores={Rival=2}] run opendialogue brendan_dialogue75 @s
+execute as @s[x=-1694,y=78,z=-1088,distance=..45,tag=!Dialogue75,scores={Rival=1}] unless entity @e[x=-1694,y=79,z=-1088,dy=3,type=cobblemon:npc] run npcspawnat -1694 79 -1088 may_generic
+execute as @s[x=-1694,y=78,z=-1088,distance=..45,tag=!Dialogue75,scores={Rival=2}] unless entity @e[x=-1694,y=79,z=-1088,dy=3,type=cobblemon:npc] run npcspawnat -1694 79 -1088 brendan_generic
+
+
+#Dialogue 76 - Route 111
+#Secret Base Obtaining
+execute as @a[x=-1541,y=78,z=-1337,distance=..20,tag=!Dialogue76] unless entity @e[x=-1515,y=78,z=-1368,distance=..3,type=cobblemon:npc] run npcspawnat -1515 79 -1368 aarune_generic
+execute as @a[x=-1515,y=78,z=-1368,distance=..7,tag=!Dialogue76] run opendialogue aarune_dialogue76 @s
+
+
+
 
 
 
