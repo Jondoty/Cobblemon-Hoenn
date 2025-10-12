@@ -226,7 +226,22 @@ execute as @s[x=-1694,y=78,z=-1088,distance=..45,tag=!Dialogue75,scores={Rival=2
 execute as @a[x=-1541,y=78,z=-1337,distance=..20,tag=!Dialogue76] unless entity @e[x=-1515,y=78,z=-1368,distance=..3,type=cobblemon:npc] run npcspawnat -1515 79 -1368 aarune_generic
 execute as @a[x=-1515,y=78,z=-1368,distance=..7,tag=!Dialogue76] run opendialogue aarune_dialogue76 @s
 
+#Dialogue 77 - Route 113 Rival healing player
+execute as @a[x=-1646,y=79,z=-1418,distance=..15,tag=!Dialogue77,scores={Rival=1}] run opendialogue may_dialogue77 @s
+execute as @a[x=-1646,y=79,z=-1418,distance=..15,tag=!Dialogue77,scores={Rival=2}] run opendialogue brendan_dialogue77 @s
+execute as @s[x=-1580,y=79,z=-1416,distance=..20,tag=!Dialogue77,scores={Rival=1}] unless entity @e[x=-1646,y=79,z=-1418,dy=3,type=cobblemon:npc] run npcspawnat -1646 79 -1418 may_generic
+execute as @s[x=-1580,y=79,z=-1416,distance=..20,tag=!Dialogue77,scores={Rival=2}] unless entity @e[x=-1646,y=79,z=-1418,dy=3,type=cobblemon:npc] run npcspawnat -1646 79 -1418 brendan_generic
 
+#Fallarbor Dialogue 78, Spawns Lanette in front of PC 
+execute as @s[x=-2200,y=89,z=-1429,distance=..10,tag=!Dialogue78] unless entity @e[x=-2194,y=68,z=-1443,dy=3,type=cobblemon:npc] run npcspawnat -2194 68 -1443 fallarbor_lanette
+
+#Fallarbor Rival finding Prof Cozmo Gone
+execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=1,GameVersion=1}] run opendialogue may_dialogue79_magma @s
+execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=1,GameVersion=2}] run opendialogue may_dialogue79_aqua @s
+execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2,GameVersion=1}] run opendialogue brendan_dialogue79_magma @s
+execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2,GameVersion=2}] run opendialogue brendan_dialogue79_aqua @s
+execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=1}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 may_generic
+execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=2}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 brendan_generic
 
 
 
