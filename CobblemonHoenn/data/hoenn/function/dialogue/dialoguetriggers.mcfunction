@@ -278,6 +278,36 @@ execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,sc
 execute as @a[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=1}] run opendialogue may_dialogue91 @s
 execute as @a[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=2}] run opendialogue brendan_dialogue91 @s
 
+#Dialogue 96 - Wally and family after leaving Petalburg Gym
+execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] unless entity @e[x=-2542,y=69,z=-6,dy=3,type=cobblemon:npc] run npcspawnat -2542 69 -6 wally_generic
+execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] unless entity @e[x=-2542,y=69,z=-16,dy=3,type=cobblemon:npc] run npcspawnat -2542 69 -16 dad_generic
+execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] unless entity @e[x=-2548,y=69,z=-6,dy=3,type=cobblemon:npc] run npcspawnat -2548 69 -6 petalburg_gentleman
+execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] run opendialogue wally_dialogue96 @s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #------------------------------------------
 
 #Mt. Chimney Sets up all NPCs

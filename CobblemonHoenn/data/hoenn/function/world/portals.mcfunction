@@ -147,7 +147,6 @@ tp @a[x=-2548,y=69,z=-23,dx=6,dy=3] -3244 65 1639
 
 #Exit
 execute as @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0},tag=Dialogue16] run tp @e[x=-3244,y=64,z=1621,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000
-#scoreboard players set @a[x=-3246,y=65,z=1640,dx=4,dy=3,tag=Dialogue95,tag=!Dialogue96] DialogueTrigger 96
 tp @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0}] -2545 69 -22
 
 

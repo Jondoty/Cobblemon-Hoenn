@@ -508,7 +508,7 @@
             "id": "page24",
             "speaker": "player",
             "lines": [
-                "You obtained HM06 Rock Smash!"
+                "You obtained HM06 Rock Smash! You can now break rocks!"
             ],
             "input": {
                 "type": "option",
