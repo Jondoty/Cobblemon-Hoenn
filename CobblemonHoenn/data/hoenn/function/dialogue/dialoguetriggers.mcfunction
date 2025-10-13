@@ -272,6 +272,12 @@ execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2
 #execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue rivalleader_aqua_brendan_dialogue82 @s
 
 
+#Lavaridge Town, Rival granting Go-Goggles after the gym badge
+execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=1}] unless entity @e[x=-2036,y=84,z=-1044,dy=3,type=cobblemon:npc] run npcspawnat -2036 84 -1044 may_generic
+execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=2}] unless entity @e[x=-2036,y=84,z=-1044,dy=3,type=cobblemon:npc] run npcspawnat -2036 84 -1044 brendan_generic
+execute as @a[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=1}] run opendialogue may_dialogue91 @s
+execute as @a[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=2}] run opendialogue brendan_dialogue91 @s
+
 #------------------------------------------
 
 #Mt. Chimney Sets up all NPCs

@@ -146,7 +146,7 @@ tag @a[x=-2548,y=69,z=-23,dx=6,dy=3,tag=!Dialogue95] remove Dialogue94
 tp @a[x=-2548,y=69,z=-23,dx=6,dy=3] -3244 65 1639
 
 #Exit
-execute as @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0},tag=Dialogue16] unless entity @a[scores={DialogueTrigger=16}] run tp @e[x=-3244,y=64,z=1621,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0},tag=Dialogue16] run tp @e[x=-3244,y=64,z=1621,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000
 #scoreboard players set @a[x=-3246,y=65,z=1640,dx=4,dy=3,tag=Dialogue95,tag=!Dialogue96] DialogueTrigger 96
 tp @a[x=-3246,y=65,z=1640,dx=4,dy=3,scores={TalkTime=0}] -2545 69 -22
 
@@ -168,8 +168,8 @@ tp @a[x=-2507,y=54,z=64,dx=4,dy=3] -2506 69 65
 #Petalburg Gym Interiors
 
 #If player does not have Flannery's Badge yet
-execute as @a[x=-3253,y=66,z=1607,dx=20,dy=3,tag=!Dialogue90] run tellraw @s ["",{"text":"Your father's words echo in your mind... ","italic":true,"color":"gray"},{"selector":"@s","italic":true,"color":"gray"},{"text":"! We can battle, but not before you're more experienced!\"","italic":true,"color":"gray"}]
-execute as @a[x=-3253,y=66,z=1607,dx=20,dy=3,tag=!Dialogue90] at @s run tp ~ ~ ~5
+execute as @a[x=-3253,y=66,z=1607,dx=20,dy=3,tag=!Flannery] run tellraw @s ["",{"text":"Your father's words echo in your mind... \"","italic":true,"color":"gray"},{"selector":"@s","italic":true,"color":"gray"},{"text":"! We can battle, but not before you're more experienced!\"","italic":true,"color":"gray"}]
+execute as @a[x=-3253,y=66,z=1607,dx=20,dy=3,tag=!Flannery] at @s run tp ~ ~ ~5
 
 #Entrance - Speed Room
 tp @a[x=-3253,y=66,z=1607,dx=2,dy=3] -3256 65 1591
@@ -834,11 +834,7 @@ execute as @a[x=-1977,y=65,z=-1112,dx=3,dy=3] run function hoenn:tools/forceclic
 tp @a[x=-1977,y=65,z=-1112,dx=3,dy=3] -1976 84 -1111
 
 #Pokemon Gym
-tag @a[x=-2039,y=84,z=-1053,dx=6,dy=3,tag=!Dialogue90] remove Dialogue89
 tp @a[x=-2039,y=84,z=-1053,dx=6,dy=3] -3101 88 1625
-
-#scoreboard players set @a[x=-3102,y=88,z=1626,dx=3,dy=3,tag=Dialogue90,tag=!Dialogue91] DialogueTrigger 91
-execute as @a[x=-3102,y=88,z=1626,dx=3,dy=3,tag=Dialogue90,tag=!Dialogue91] run function hoenn:tools/forceclick
 tp @a[x=-3102,y=88,z=1626,dx=3,dy=3] -2036 84 -1052
 
 #Left NPC Home

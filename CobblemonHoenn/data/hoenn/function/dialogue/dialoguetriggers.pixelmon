@@ -18,10 +18,6 @@ execute as @a[x=-2371,y=69,z=28,distance=..25,tag=!Dialogue15] run scoreboard pl
 execute as @a[x=-2560,y=94,z=-1174,distance=..20,tag=Dialogue79,tag=!Dialogue80] run scoreboard players set @s DialogueTrigger 80
 
 
-#------------------------------------------------
-#Dialogues 91-93
-#If player wanders too far, despawns NPC naturally
-execute as @p[x=-2036,y=84,z=-1044,distance=50..80,tag=Dialogue91] if entity @e[type=pixelmon:npc_chatting,x=-2036,y=84,z=-1044,dy=3] run tp @e[type=pixelmon:npc_chatting,x=-2036,y=84,z=-1044,dy=3] 10000000 -50000 -10000000
 
 #Dialogue 101 - If Shaymin is in party
 execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
