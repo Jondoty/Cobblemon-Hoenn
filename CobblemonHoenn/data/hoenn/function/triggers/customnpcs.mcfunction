@@ -46,6 +46,26 @@ execute as @s[x=-2747,y=38,z=-719,distance=..6] run opendialogue rustboro_mrston
 execute as @s[x=-2747,y=38,z=-719,distance=..6,nbt={Inventory:[{id:"minecraft:prismarine_crystals"}]},tag=!Dialogue73] run opendialogue rustboro_mrstone_intriguingstone @s
 
 
+#Route Route 123, Berry Master's House if Shaymin is in your party
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
+execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 1 shaymin
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
+execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 2 shaymin
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
+execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 3 shaymin
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
+execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 4 shaymin
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
+execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 5 shaymin
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
+execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 6 shaymin
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
+
+execute as @s[x=-560,y=45,z=-623,distance=..6] if entity @s[tag=!ItemLoot383,tag=Temp] run opendialogue route123_richman_shaymin @s
+execute as @s[x=-560,y=45,z=-623,distance=..6] unless entity @s[tag=!ItemLoot383,tag=Temp] run opendialogue route123_richman_interaction @s
+execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
+
+
 #-------------------------------------------------------------
 #General Story NPCs
 

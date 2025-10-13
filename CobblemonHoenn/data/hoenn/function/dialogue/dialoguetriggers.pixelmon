@@ -19,24 +19,6 @@ execute as @a[x=-2560,y=94,z=-1174,distance=..20,tag=Dialogue79,tag=!Dialogue80]
 
 
 
-#Dialogue 101 - If Shaymin is in party
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
-execute as @a[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run poketest 1 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @a[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run poketest 2 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @a[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run poketest 3 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @a[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run poketest 4 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @a[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run poketest 5 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @a[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run poketest 6 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-
-scoreboard players set @a[x=-560,y=45,z=-623,distance=..6,tag=!Dialogue101,tag=Temp] DialogueTrigger 101
-execute as @a[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
-
 #Dialogue 113 - Steven and Kecleon Devon Scope
 execute as @a[x=-359,y=85,z=-1357,distance=..8,tag=!Dialogue113] run scoreboard players set @s DialogueTrigger 113
 execute as @a[x=-362,y=85,z=-1354,distance=..30,tag=Dialogue113,tag=!Dialogue114,nbt={active_effects:[{id:"pixelmon:avoidance"}]}] run scoreboard players set @s DialogueTrigger 114
@@ -100,66 +82,6 @@ execute as @a[x=-2029,y=69,z=254,distance=..12,tag=!Dialogue175,scores={PokemonL
 #----------------------------------------------
 #Picking starters, runs dialogues based on which photo the player picks
 #/data merge block ~ ~ ~ {dropOneTime:0b,timeEnabled:1b}
-
-#Detects which Pokemon the player already picked at the spawn if they already did
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] run scoreboard players set @s Temp 0
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 1 Treecko
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 2 Treecko
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 3 Treecko
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 4 Treecko
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 5 Treecko
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 6 Treecko
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={Temp=1}] run scoreboard players set @s StarterPick 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={Temp=1}] run scoreboard players set @s TriggerCommand 2
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] run scoreboard players set @s PokeHave 0
-
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] run scoreboard players set @s Temp 0
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 1 Torchic
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 2 Torchic
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 3 Torchic
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 4 Torchic
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 5 Torchic
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 6 Torchic
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={Temp=1}] run scoreboard players set @s StarterPick 2
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={Temp=1}] run scoreboard players set @s TriggerCommand 4
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] run scoreboard players set @s PokeHave 0
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] run scoreboard players set @s Temp 0
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 1 Mudkip
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 2 Mudkip
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 3 Mudkip
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 4 Mudkip
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 5 Mudkip
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] store result score @s PokeHave run poketest 6 Mudkip
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={PokeHave=1}] run scoreboard players set @s Temp 1
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={Temp=1}] run scoreboard players set @s StarterPick 3
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50,scores={Temp=1}] run scoreboard players set @s TriggerCommand 6
-
-execute as @a[x=-2123,y=63,z=1286,dx=50,dy=30,dz=50] run scoreboard players set @s PokeHave 0
-
 
 #Hoenns
 execute as @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50,nbt={Inventory:[{id:"pixelmon:pixelmon_sprite",tag:{ndex:252}}]},scores={TriggerCommand=0}] run scoreboard players set @s TriggerCommand 2
@@ -634,26 +556,6 @@ execute as @a[x=-1615,y=52,z=251,distance=..4,tag=!CustomLoot54,scores={Temp=150
 execute as @a[x=-1615,y=52,z=251,distance=..4,tag=!CustomLoot54,scores={Temp=150..}] run give @s pixelmon:soothe_bell
 execute as @a[x=-1615,y=52,z=251,distance=..4,tag=!CustomLoot54,scores={Temp=150..}] run tag @s add CustomLoot54
 
-#Route 123
-#If NPC is shown a Shaymin in the player's party
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] run scoreboard players set @s PokeHave 0
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] run scoreboard players set @s Temp 0
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] store result score @s PokeHave run poketest 1 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,scores={PokeHave=1}] run tag @s add ShayminHave
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] store result score @s PokeHave run poketest 2 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,scores={PokeHave=1}] run tag @s add ShayminHave
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] store result score @s PokeHave run poketest 3 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,scores={PokeHave=1}] run tag @s add ShayminHave
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] store result score @s PokeHave run poketest 4 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,scores={PokeHave=1}] run tag @s add ShayminHave
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] store result score @s PokeHave run poketest 5 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,scores={PokeHave=1}] run tag @s add ShayminHave
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55] store result score @s PokeHave run poketest 6 Shaymin
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,scores={PokeHave=1}] run tag @s add ShayminHave
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,tag=ShayminHave] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,tag=ShayminHave] run tellraw @s {"text":"Golly! You have a Shaymin! Speaking of Shaymin, do you have a Gracidea? I have many Gracidea right now, so I'll give you one."}
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,tag=ShayminHave] run give @s pixelmon:gracidea
-execute as @a[x=-560,y=45,z=-623,distance=..4,tag=!CustomLoot55,tag=ShayminHave] run tag @s add CustomLoot55
 
 execute as @a[x=1388,y=45,z=-1042,distance=..6,tag=!CustomLoot56,scores={PokemonLeague=1..}] run playsound minecraft:eggget ambient @s ~ ~ ~ 1 1 1
 execute as @a[x=1388,y=45,z=-1042,distance=..6,tag=!CustomLoot56,scores={PokemonLeague=1..}] run tellraw @s {"text":"<Steven> Hello, new Champion.. I've been looking for you to give you this. I hope you take care of it."}

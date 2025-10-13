@@ -1267,22 +1267,7 @@ execute as @s[scores={DialogueTrigger=100,TalkTime=350}] run tp @e[x=-982,y=64,z
 execute as @s[scores={DialogueTrigger=100,TalkTime=350}] run advancement grant @s only hoenn:adventurer/megaring
 
 tag @s[scores={DialogueTrigger=100,TalkTime=350..}] add Dialogue100
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 101 - Route 123
-#Berry Master's House if Shaymin is in your party
-#https://youtu.be/MgkqxXCmrtI?t=33690
-tellraw @s[scores={DialogueTrigger=101,TalkTime=5}] {"text":"<Rich Boy> Golly! You have a Shaymin!"}
-tellraw @s[scores={DialogueTrigger=101,TalkTime=12}] {"text":"<Rich Boy> Speaking of Shaymin, do you have a Gracidea?"}
-tellraw @s[scores={DialogueTrigger=101,TalkTime=19}] {"text":"<Rich Boy> I have many Gracidea right now, so I'll give you one."}
 
-execute as @s[scores={DialogueTrigger=101,TalkTime=25}] run give @s pixelmon:gracidea
-execute as @s[scores={DialogueTrigger=101,TalkTime=25}] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-
-tellraw @s[scores={DialogueTrigger=101,TalkTime=30}] {"text":"<Rich Boy> In the Sinnoh region, there's an old custom that they give a bouquet of Gracidea to convey gratitude."}
-tellraw @s[scores={DialogueTrigger=101,TalkTime=40}] {"text":"<Rich Boy> In other words, if you give Gracidea, you can express your feeling even without saying it."}
-tellraw @s[scores={DialogueTrigger=101,TalkTime=48}] {"text":"<Rich Boy> For a shy person like me, there's nothing more useful than this."}
-
-tag @s[scores={DialogueTrigger=101,TalkTime=48..}] add Dialogue101
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 102 - Weather Institute
 #Overhearing Team Admin
