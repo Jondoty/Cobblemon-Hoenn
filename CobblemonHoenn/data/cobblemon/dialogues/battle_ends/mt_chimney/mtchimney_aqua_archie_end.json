@@ -1,8 +1,9 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s add InDialogue');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $4320 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 4320');"
     ],
@@ -13,16 +14,485 @@
                 "type": "artificial",
                 "modelType": "npc",
                 "identifier": "cobblemon:archie",
+                "isLeftSide": false
+            }
+        },
+        "maxie": {
+            "name": "Maxie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:maxie",
                 "isLeftSide": true
             }
         }
     },
     "pages": [
         {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Heheheh."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Oh! You went and did it, didn't you?"
+                "Ya little scamp! I knew you were the real deal!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Brilliant!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Then my team won't hold back this time! Mega Evolution, how I've missed you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "It's been ages since we got to let loose!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Tch."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Scamp, I'm gonna have to ask you to hold that thought."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "I've gotta use my time-out."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "Huh? That you, Matt? You have the worst timing\u2014"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                "What?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "npc",
+            "lines": [
+                "Hoh!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "npc",
+            "lines": [
+                "So Mt. Pyre's the real\u2014 Got it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page13');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "npc",
+            "lines": [
+                "Guess that orb's not just some fairy tale after all!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page14');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "npc",
+            "lines": [
+                "All right! I'm on my way!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page15');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "npc",
+            "lines": [
+                "Sorry, scamp. When you're a grown-up, y'see, sometimes things crop up."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page16');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "npc",
+            "lines": [
+                "Gotta put our battle on hold till next time. Take this."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page17');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "npc",
+            "lines": [
+                "Should help keep ya busy till we settle the score. Have fun with it, hey?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/meteorite');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "npc",
+            "lines": [
+                "Let's meet again somewhere. I'll be sure to remember that face."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud -1893 235 -3374 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-1893,y=235,z=-3374,dy=3] 10000000 -50000 -10000000');",
+                            "q.run_command('particle cloud -1910 236 -3367 1 1 1 0.15 300');",
+                            "q.run_command('execute unless eneity @e[type=cobblemon:npc,x=-1910,y=236,z=-3367,dy=3] run npcspawnat -1910 236 -3367 maxie_generic');",
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "maxie",
+            "lines": [
+                "I've seen you before, child."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page20');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "maxie",
+            "lines": [
+                "It seems you are not to be trifled with, if you repelled Archie in battle."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page21');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "maxie",
+            "lines": [
+                "What is that fool up to now?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page22');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "maxie",
+            "lines": [
+                "He abandoned the Meteorite that he sought so persistently?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page23');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "maxie",
+            "lines": [
+                "No!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page24');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "maxie",
+            "lines": [
+                "Could it be possible that he has confirmed the existence of the orbs at last?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page25');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "maxie",
+            "lines": [
+                "Ngh! Again, I find myself outmaneuvered."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page26');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "maxie",
+            "lines": [
+                "What a terrible miscalculation!"
             ],
             "input": {
                 "type": "option",
@@ -32,6 +502,10 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('particle cloud -1910 236 -3367 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-1910,y=236,z=-3367,dy=3] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue88');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }
@@ -39,7 +513,5 @@
             }
         }
     ],
-    "escapeAction": [
-        "q.dialogue.close();"
-    ]
+    "escapeAction": []
 }

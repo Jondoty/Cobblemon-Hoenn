@@ -6,7 +6,7 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:mtchimney_aqua_shelly_interaction"
+        "dialogue": "cobblemon:mt_chimney_aqua_admin_shelly_interaction"
     },
     "name": "Shelly",
     "party": {

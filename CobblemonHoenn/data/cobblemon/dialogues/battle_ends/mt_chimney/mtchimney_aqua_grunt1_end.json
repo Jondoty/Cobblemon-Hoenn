@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $880 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 880');"
@@ -12,7 +12,7 @@
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:teamaquagruntf",
+                "identifier": "cobblemon:teamaquagruntm",
                 "isLeftSide": true
             }
         }

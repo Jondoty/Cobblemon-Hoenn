@@ -6,7 +6,7 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:mtchimney_aqua_archie_interaction"
+        "dialogue": "cobblemon:mt_chimney_aqua_leader_archie_interaction"
     },
     "name": "Archie",
     "party": {

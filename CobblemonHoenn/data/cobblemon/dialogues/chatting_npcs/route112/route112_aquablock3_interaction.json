@@ -1,0 +1,53 @@
+{
+  "speakers": {
+    "npc": {
+      "name": "Team Aqua Grunt",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:teamaquagruntm",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+        "Grumble..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page2');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": [
+        "You two never cease to complain..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": [
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

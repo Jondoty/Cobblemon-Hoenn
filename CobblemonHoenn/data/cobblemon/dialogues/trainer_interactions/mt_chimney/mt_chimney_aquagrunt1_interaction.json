@@ -25,7 +25,25 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "We of Team Aqua are working hard for everyone's sake. Like, if there's more water around, Water Pokémon will be happy, and it'll give people more fun places to swim!"
+                "We of Team Aqua are working hard for everyone's sake."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Like, if there's more water around, Water Pokémon will be happy, and it'll give people more fun places to swim!"
             ],
             "input": {
                 "type": "option",

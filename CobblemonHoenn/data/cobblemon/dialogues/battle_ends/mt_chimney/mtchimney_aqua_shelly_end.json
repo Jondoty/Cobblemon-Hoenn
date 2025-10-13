@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2400 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 2400');"
@@ -19,10 +19,66 @@
     },
     "pages": [
         {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Uh. Are you telling me you've upped your game even more since last time?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Wh-what was that!"
+                "You're a brat with a bright future..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "My Pokémon and I don't have any strength left to fight..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Go on... Go and be destroyed by Archie."
             ],
             "input": {
                 "type": "option",
@@ -40,6 +96,5 @@
         }
     ],
     "escapeAction": [
-        "q.dialogue.close();"
     ]
 }

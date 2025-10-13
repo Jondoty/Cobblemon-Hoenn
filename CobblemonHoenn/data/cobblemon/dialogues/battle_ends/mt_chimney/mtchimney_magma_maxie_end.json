@@ -1,20 +1,30 @@
 {
     "initializationAction": [
+        "c.npc.set_chatting();",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.run_command('execute as ' + q.player.username + ' run playsound teamleader record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
-        "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 99');"
-    ],
-    "escapeAction": [],
-    "names": [
-        "Maxie"
+        "q.run_command('execute as ' + q.player.username + ' run tag @s add InDialogue');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $4320 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 4320');"
     ],
     "speakers": {
         "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
+            "name": "Maxie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:maxie",
+                "isLeftSide": false
+            }
+        },
+        "archie": {
+            "name": "Archie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:archie",
+                "isLeftSide": true
+            }
         }
     },
     "pages": [
@@ -22,7 +32,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "The power contained in the Meteorite..."
+                "Oh? So you repulsed the great Maxie in battle."
             ],
             "input": {
                 "type": "option",
@@ -40,7 +50,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "If we merge the explosive energy contained within the planet's core with the Meteorite's power..."
+                "Haha... You never fail to entertain me!"
             ],
             "input": {
                 "type": "option",
@@ -58,7 +68,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "I remember those eyes. And the indomitable will that seems to burn behind them."
+                "An excellent start! This time, permit me to unleash my full strength!"
             ],
             "input": {
                 "type": "option",
@@ -76,7 +86,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "Ahhh. Now I recall. You are the one who defied us at Slateport's Oceanic Museum."
+                "Once you've tasted my Pok\u00e9mon's Mega Evolved power, you will say good-bye to your last shred of hope!"
             ],
             "input": {
                 "type": "option",
@@ -94,7 +104,7 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "And, your presence here tells me that you have defeated Tabitha."
+                "Hm?"
             ],
             "input": {
                 "type": "option",
@@ -112,7 +122,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "Yes, I see now that the stirring of interest I felt was not misplaced."
+                "Yes, it's me."
             ],
             "input": {
                 "type": "option",
@@ -130,7 +140,7 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "Hmph. You show true promise. Fine. I will attempt to educate you."
+                "... Oh?"
             ],
             "input": {
                 "type": "option",
@@ -148,7 +158,7 @@
             "id": "page8",
             "speaker": "npc",
             "lines": [
-                "Thousands of years ago, there lived a most powerful being that was said to be capable of creating new lands on the planet."
+                "Then it is Mt. Pyre."
             ],
             "input": {
                 "type": "option",
@@ -166,7 +176,7 @@
             "id": "page9",
             "speaker": "npc",
             "lines": [
-                "The power which we in Team Magma seek\u2014"
+                "I understand. I will come at once."
             ],
             "input": {
                 "type": "option",
@@ -184,7 +194,7 @@
             "id": "page10",
             "speaker": "npc",
             "lines": [
-                "This power, which can expand the available landmass, belongs to a legendary and super- ancient Pok\u00e9mon."
+                "I am sorry to cut our battle short, but I'm afraid I must excuse myself."
             ],
             "input": {
                 "type": "option",
@@ -202,7 +212,7 @@
             "id": "page11",
             "speaker": "npc",
             "lines": [
-                "Though now it slumbers, having lost the source of its power and been trapped in a deep sleep."
+                "Such rudeness demands reparation. Take this Meteorite with my apologies."
             ],
             "input": {
                 "type": "option",
@@ -220,7 +230,7 @@
             "id": "page12",
             "speaker": "npc",
             "lines": [
-                "So what is it that we must do to awaken this slumbering giant?"
+                "You may do with it what you like."
             ],
             "input": {
                 "type": "option",
@@ -229,7 +239,11 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page13');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/meteorite');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page13');"
+                        ]
                     }
                 ]
             }
@@ -238,7 +252,7 @@
             "id": "page13",
             "speaker": "npc",
             "lines": [
-                "Our research has led us here, to Mt. Chimney."
+                "And I will not again forget the face of the Trainer who managed to thwart me in battle!"
             ],
             "input": {
                 "type": "option",
@@ -247,16 +261,22 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page14');"
+                        "action": [
+                            "q.run_command('particle cloud -1893 235 -3374 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-1893,y=235,z=-3374,dy=3] 10000000 -50000 -10000000');",
+                            "q.run_command('particle cloud -1910 236 -3367 1 1 1 0.15 300');",
+                            "q.run_command('execute unless eneity @e[type=cobblemon:npc,x=-1910,y=236,z=-3367,dy=3] run npcspawnat -1910 236 -3367 archie_generic');",
+                            "q.dialogue.set_page('page14');"
+                        ]
                     }
                 ]
             }
         },
         {
             "id": "page14",
-            "speaker": "npc",
+            "speaker": "archie",
             "lines": [
-                "Yes, here...to this very Meteorite."
+                "Huh? If it ain't that little scamp!"
             ],
             "input": {
                 "type": "option",
@@ -272,9 +292,9 @@
         },
         {
             "id": "page15",
-            "speaker": "npc",
+            "speaker": "archie",
             "lines": [
-                "If we create the right conditions, we should find ourselves able to alter this Meteorite's qualities."
+                "But blast that Maxie! He just escaped us!"
             ],
             "input": {
                 "type": "option",
@@ -290,9 +310,9 @@
         },
         {
             "id": "page16",
-            "speaker": "npc",
+            "speaker": "archie",
             "lines": [
-                "Yes, even into a Mega Stone."
+                "And he just left behind the Meteorite that he's been crazy about finding?"
             ],
             "input": {
                 "type": "option",
@@ -308,9 +328,9 @@
         },
         {
             "id": "page17",
-            "speaker": "npc",
+            "speaker": "archie",
             "lines": [
-                "Even into a Key Stone."
+                "Can't be\u2014!"
             ],
             "input": {
                 "type": "option",
@@ -326,9 +346,9 @@
         },
         {
             "id": "page18",
-            "speaker": "npc",
+            "speaker": "archie",
             "lines": [
-                "And here, at Mt. Chimney\u2014"
+                "Could he have found out where the real orbs are hidden?!"
             ],
             "input": {
                 "type": "option",
@@ -344,9 +364,9 @@
         },
         {
             "id": "page19",
-            "speaker": "npc",
+            "speaker": "archie",
             "lines": [
-                "Hmph... I should not say too much. That is the end of today's lesson."
+                "That sneaky little scientific so-and-so!"
             ],
             "input": {
                 "type": "option",
@@ -362,115 +382,28 @@
         },
         {
             "id": "page20",
-            "speaker": "npc",
+            "speaker": "archie",
             "lines": [
-                "Now then. I believe it is time we begin."
+                "I'm always left watching his bony backside run two steps ahead of me!"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page21');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page21",
-            "speaker": "npc",
-            "lines": [
-                "The time for the purge has come."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page22');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page22",
-            "speaker": "npc",
-            "lines": [
-                "I do believe that I made myself quite clear when we were last in Slateport."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page23');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page23",
-            "speaker": "npc",
-            "lines": [
-                "I warned you that any fool standing in our way would be met without mercy!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page24');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page24",
-            "speaker": "npc",
-            "lines": [
-                "I will bury you by my own hand."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page25');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page25",
-            "speaker": "npc",
-            "lines": [
-                "I hope you appreciate this honor!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-                        "value": "battle",
+                        "text": "Close",
+                        "value": "close",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 36');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-                            "v.battle = q.npc.start_battle(q.player);"
+                            "q.run_command('particle cloud -1910 236 -3367 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-1910,y=236,z=-3367,dy=3] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue88');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove InDialogue');",
+                            "q.dialogue.close();"
                         ]
                     }
                 ]
             }
         }
-    ]
+    ],
+    "escapeAction": []
 }

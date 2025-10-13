@@ -1,15 +1,12 @@
 {
     "initializationAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
-    ],
-    "escapeAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.dialogue.close();"
+        "q.run_command('execute as ' + q.player.username + ' run playsound teamleader record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+        "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 99');"
     ],
+    "escapeAction": [],
     "names": [
-        "Matt"
+        "Archie"
     ],
     "speakers": {
         "npc": {
@@ -25,7 +22,349 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                ""
+                "Ah! You..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Uh... No... Oh!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Now I know how I know you! You're the little scamp that got in our way in Slateport's museum!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "If you made it here to me, you musta swept right past Shelly, huh?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "Heh...heheheh... Krmph! Bwahahahahaha!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "I figured you were a big deal the first time I laid eyes on you, but...whoa!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Heheh. Well, since you are the real deal, I s'pose I could let you in on just what's going on."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "See, this Meteorite that I just got from good old Professor High-an'-Mighty back there..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "With the right bit of work, it seems we could turn it into a real nice, valuable bit."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                "Like maybe a Mega Stone."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "npc",
+            "lines": [
+                "Or maybe...even a Key Stone."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "npc",
+            "lines": [
+                "And as long as we're here at Mt. Chimney..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page13');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "npc",
+            "lines": [
+                "Hyup! Bwahahahahah! Look what I nearly went an' did!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page14');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "npc",
+            "lines": [
+                "If I give away all my secrets, all the thrill'd be gone from our relationship!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page15');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "npc",
+            "lines": [
+                "I think I'll just leave you hanging here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page16');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "npc",
+            "lines": [
+                "Well... It's not the details that matter any old how."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page17');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "npc",
+            "lines": [
+                "We've got a thing we gotta do, ya see."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page18');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "npc",
+            "lines": [
+                "From our point of view, scamp, you're a dirty villain who's gotten in our way one time too many."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page19');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "npc",
+            "lines": [
+                "I'm still leader of Team Aqua, so I'm afraid it's the rope's end for you and your Pok\u00e9mon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page20');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "npc",
+            "lines": [
+                "Now come!"
             ],
             "input": {
                 "type": "option",
@@ -35,18 +374,9 @@
                         "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
                         "value": "battle",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 36');",
                             "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
                             "v.battle = q.npc.start_battle(q.player);"
-                        ]
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-                            "q.dialogue.close();"
                         ]
                     }
                 ]

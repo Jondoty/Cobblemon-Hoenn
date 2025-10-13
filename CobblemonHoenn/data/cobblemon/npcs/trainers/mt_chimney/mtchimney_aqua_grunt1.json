@@ -1,14 +1,14 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:teammagmagruntm",
+    "resourceIdentifier": "cobblemon:teamaquagruntm",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:mtchimney_magma_grunt1_interaction"
+        "dialogue": "cobblemon:mt_chimney_aquagrunt1_interaction"
     },
-    "name": "Team Magma Grunt",
+    "name": "Team Aqua Grunt",
     "party": {
         "type": "simple",
         "pokemon": [
@@ -36,7 +36,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue mtchimney_magma_grunt1_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue mtchimney_aqua_grunt1_end @s');"
         }
     ]
 }

@@ -1,23 +1,20 @@
 {
     "initializationAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 13');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
-    ],
-    "escapeAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+        "c.npc.set_chatting();",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.dialogue.close();"
-    ],
-    "names": [
-        "Tabitha"
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2400 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 2400');"
     ],
     "speakers": {
         "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
+            "name": "Tabitha",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:tabitha",
+                "isLeftSide": true
+            }
         }
     },
     "pages": [
@@ -25,7 +22,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hyahyahya?!"
+                "I knew you would be strong."
             ],
             "input": {
                 "type": "option",
@@ -43,7 +40,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "It's you! You're the one who tried to interrupt me, Tabitha, at Meteor Falls!"
+                "What a shame, though!"
             ],
             "input": {
                 "type": "option",
@@ -61,7 +58,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "D-d-do you intend to get in my way once more? Unngh! You're really..."
+                "The Meteorite we got from Professor Whoever is already in our Boss's hands!"
             ],
             "input": {
                 "type": "option",
@@ -70,7 +67,9 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
                     }
                 ]
             }
@@ -79,7 +78,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "really, really, really, really, really, really..."
+                "Where's the Boss, you ask?"
             ],
             "input": {
                 "type": "option",
@@ -88,7 +87,9 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
                     }
                 ]
             }
@@ -97,7 +98,7 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "really, really, really, really, really, really, really, really, really, really..."
+                "Ah, yes, yes, right this way!"
             ],
             "input": {
                 "type": "option",
@@ -106,7 +107,9 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
                     }
                 ]
             }
@@ -115,7 +118,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "reeeallllyyyyy..."
+                "Oh, I do hope that you can be shown Team Magma's true power!"
             ],
             "input": {
                 "type": "option",
@@ -124,7 +127,9 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
                     }
                 ]
             }
@@ -133,59 +138,23 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "...an obnoxious child, aren't you?!"
+                "Ahya! Ahyahyahyahya!"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page8');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page8",
-            "speaker": "npc",
-            "lines": [
-                "Ahh... Ahh..."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page9');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page9",
-            "speaker": "npc",
-            "lines": [
-                "I will...crush you. So that you...never get in my way...again."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-                        "value": "battle",
+                        "text": "Close",
+                        "value": "close",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 35');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-                            "v.battle = q.npc.start_battle(q.player);"
+                            "q.dialogue.close();"
                         ]
                     }
                 ]
             }
         }
+    ],
+    "escapeAction": [
     ]
 }

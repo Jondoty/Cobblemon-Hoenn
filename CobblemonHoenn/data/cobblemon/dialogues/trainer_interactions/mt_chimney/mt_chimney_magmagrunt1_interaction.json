@@ -25,7 +25,25 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "We of Team Magma are working hard for everyone's sake. Like, if there's more land, there'd be more places to live. Everyone would be happy!"
+                "We of Team Magma are working hard for everyone's sake."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Like, if there's more land, there'd be more places to live. Everyone would be happy!"
             ],
             "input": {
                 "type": "option",
