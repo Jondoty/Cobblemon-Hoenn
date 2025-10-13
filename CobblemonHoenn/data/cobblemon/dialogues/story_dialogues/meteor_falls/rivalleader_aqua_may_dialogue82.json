@@ -1,0 +1,1281 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "rival": {
+            "name": "May",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:may",
+                "isLeftSide": true
+            }
+        },
+        "cozmo": {
+            "name": "Professor Cozmo",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": false
+            }
+        },
+        "admin": {
+            "name": "Team Aqua Admin",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shelly",
+                "isLeftSide": false
+            }
+        },
+        "grunt": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": true
+            }
+        },
+        "oppositegrunt": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntm",
+                "isLeftSide": true
+            }
+        },
+        "leaderunknown": {
+            "name": "???",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:maxie",
+                "isLeftSide": false
+            }
+        },
+        "leader": {
+            "name": "Maxie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:maxie",
+                "isLeftSide": false
+            }
+        },
+        "wife": {
+            "name": "Cozmo's Wife",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:parasollady",
+                "isLeftSide": false
+            }
+        },
+        "player": {
+            "face": "q.player.face(true);",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "admin",
+            "lines": [
+                "Ahhh?! Did I go too easy on you?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "rival",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'We did it, ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "admin",
+            "lines": [
+                "If the tremendous energy of Mt. Chimney and the Meteorite are combined,"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "admin",
+            "lines": [
+                "we of Team Aqua can take a giant step toward the world that we dream of!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "admin",
+            "lines": [
+                "We won't let ignorant little brats get in our way!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 100');",
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "leaderunknown",
+            "lines": [
+                "Hmph... Do these mere children give you so much trouble?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "leaderunknown",
+            "lines": [
+                "You—an Admin of Team Aqua..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "rival",
+            "lines": [
+                "Wh-who's there?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound teamleader record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 99');",
+                            "q.run_command('particle cloud 2285 110 -2501 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2282 110 -2505 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2282 110 -2497 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=2285,y=109,z=-2501,dy=3,type=cobblemon:npc] run npcspawnat 2285 110 -2501 maxie_generic');",
+                            "q.run_command('execute unless entity @e[x=2282,y=109,z=-2497,dy=3,type=cobblemon:npc] run npcspawnat 2282 110 -2497 magmagrunt_generic');",
+                            "q.run_command('execute unless entity @e[x=2282,y=109,z=-2505,dy=3,type=cobblemon:npc] run npcspawnat 2282 110 -2505 magmagrunt_generic');",
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "admin",
+            "lines": [
+                "Hmph! Even Team Magma showed their faces, huh?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "admin",
+            "lines": [
+                "There's nothing to be done about it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "admin",
+            "lines": [
+                "Hey! Grab that Meteorite!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "grunt",
+            "lines": [
+                "Aye aye!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "cozmo",
+            "lines": [
+                "Wha-wha-wha-what?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "grunt",
+            "lines": [
+                "Come on! Hand over the Meteorite!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "cozmo",
+            "lines": [
+                "Augh?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "rival",
+            "lines": [
+                "Professor!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "admin",
+            "lines": [
+                "Ahahaha! Later days, brats and Team Magma!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "admin",
+            "lines": [
+                "All right, time to rush to Mt. Chimney!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2297 110 -2503 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2294 110 -2499 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2297,y=110,z=-2503,distance=..2] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2294,y=110,z=-2499,distance=..2] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "leaderunknown",
+            "lines": [
+                "Tch!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "oppositegrunt",
+            "lines": [
+                "Maxie... We must give chase to Team Aqua or else..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "leader",
+            "lines": [
+                "Hmm..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "leader",
+            "lines": [
+                "... My name is Maxie."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2290.90 110.06 -2495.95 491.15 14.55');",
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "leader",
+            "lines": [
+                "I lead an organization known as Team Magma."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page26');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "leader",
+            "lines": [
+                "We work for the future happiness of all mankind."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page27');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "leader",
+            "lines": [
+                "From what I have seen here, it appears that you are working against our rivals in Team Aqua"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page28');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "leader",
+            "lines": [
+                "...Fine. Amuse yourself with those Team Aqua fools."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page29');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "leader",
+            "lines": [
+                "But be careful you do not impede our goals."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page30');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "leader",
+            "lines": [
+                "Be you child or grown, oppose us in the slightest, and I, the great Maxie, will show no mercy!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2285 110 -2501 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2282 110 -2505 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2282 110 -2497 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=2285,y=109,z=-2501,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=2282,y=109,z=-2497,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=2282,y=109,z=-2505,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.dialogue.set_page('page34');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page34",
+            "speaker": "rival",
+            "lines": [
+                "Oh bother! I have no idea what's going on anymore with all these people!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page35');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page35",
+            "speaker": "rival",
+            "lines": [
+                "Never mind those nuts! Professor, you doing OK?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page36');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page36",
+            "speaker": "cozmo",
+            "lines": [
+                "B-but...they... I...only..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page37');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page37",
+            "speaker": "rival",
+            "lines": [
+                "Looks like he's still pretty out of it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page38');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page38",
+            "speaker": "rival",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '...';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page39');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page39",
+            "speaker": "rival",
+            "lines": [
+                "Never mind what's happened! I've got to get the professor back to his lab in Fallarbor!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page40');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page40",
+            "speaker": "rival",
+            "lines": [
+                "OK, Professor... Easy now..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 5 1 true');",
+                            "q.run_command('tp @e[x=2292,y=109,z=-2503,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=2304,y=109,z=-2501,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -2265.5 68 -1386.5 -36 7');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s MusicTitles 11');",
+                            "q.run_command('execute as unless entity @e[x=-2262,y=67,z=-1382,dy=3,type=cobblemon:npc] run npcspawnat -2262 68 -1382 researcher_generic');",
+                            "q.run_command('execute as ' + q.player.username + ' as @s[scores={Rival=1}] unless entity @e[x=-2266,y=67,z=-1382,dy=3,type=cobblemon:npc] run npcspawnat -2266 68 -1382 may_generic');",
+                            "q.run_command('execute as ' + q.player.username + ' as @s[scores={Rival=2}] unless entity @e[x=-2266,y=67,z=-1382,dy=3,type=cobblemon:npc] run npcspawnat -2266 68 -1382 brendan_generic');",
+                            "q.dialogue.set_page('page41');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page41",
+            "speaker": "wife",
+            "lines": [
+                "Ahhh! Professor! Thank the stars above! Professor, you're back!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page42');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page42",
+            "speaker": "cozmo",
+            "lines": [
+                "Hah...haha... Thanks to these children, I have somehow returned."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page43');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page43",
+            "speaker": "rival",
+            "lines": [
+                "Those nuts back there... What do you think they're hoping to do with the professor's Meteorite?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page44');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page44",
+            "speaker": "rival",
+            "lines": [
+                "From the look of them, they kind of seem like bad guys, but..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page45');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page45",
+            "speaker": "rival",
+            "lines": [
+                "We've both got to be careful."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page46');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page46",
+            "speaker": "rival",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Though I am not worried a bit if it's you and your team, ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page47');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47",
+            "speaker": "cozmo",
+            "lines": [
+                "But I need to thank you, as well. You truly saved me from disaster."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page48');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page48",
+            "speaker": "rival",
+            "lines": [
+                "Wow! Thanks, Professor!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page49');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page49",
+            "speaker": "rival",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'We-e-ell... What are you gonna do next, ' + q.player.username + '?';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page50');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page50",
+            "speaker": "rival",
+            "lines": [
+                "I'm thinking of checking out the next Gym on my list."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page51');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page51",
+            "speaker": "rival",
+            "lines": [
+                "It's the one in Mauville City."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page52');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page52",
+            "speaker": "rival",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Why dont you come with me, ' + q.player.username + '? To Mauville!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Fast Travel",
+                        "value": "fasttravel",
+                        "action": [
+                            "q.dialogue.set_page('page53');"
+                        ]
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": [
+                            "q.dialogue.set_page('page65');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page53",
+            "speaker": "rival",
+            "lines": [
+                "Let's hit the road!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 5 1 true');",
+                            "q.run_command('tp @e[x=-2266,y=67,z=-1382,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s -1527.5 69 -572.5 170 -12');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s MusicTitles 8');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' as @s[scores={Rival=1}] unless entity @e[x=-1535,y=69,z=-573,distance=..3,type=cobblemon:npc] run npcspawnat -1535 69 -573 may_generic');",
+                            "q.run_command('execute as ' + q.player.username + ' as @s[scores={Rival=2}] unless entity @e[x=-1535,y=69,z=-573,distance=..3,type=cobblemon:npc] run npcspawnat -1535 69 -573 brendan_generic');",
+                            "q.dialogue.set_page('page54');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page54",
+            "speaker": "rival",
+            "lines": [
+                "All right, made it to Mauville City."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page55');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page55",
+            "speaker": "rival",
+            "lines": [
+                "Up ahead here is Mt. Chimney, huh?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page56');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page56",
+            "speaker": "rival",
+            "lines": [
+                "That's the place those nut jobs at Meteor Falls were talking about going to."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page57');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page57",
+            "speaker": "rival",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Be careful, ' + q.player.username + '. It might get dangerous around here.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud -1535 69 -573 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=-1535,y=68,z=-573,distance=..3] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue82');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "page65",
+            "speaker": "rival",
+            "lines": [
+                "Ah, right. Well, I will see you there!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page66');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page66",
+            "speaker": "rival",
+            "lines": [
+                "Mauville's right in the middle of Hoenn, so you can go to all sorts of places from there."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page67');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page67",
+            "speaker": "rival",
+            "lines": [
+                "Even Mt. Chimney, the place those guys were talking about at Meteor Falls, is a pretty short trip from Mauville."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page68');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page68",
+            "speaker": "rival",
+            "lines": [
+                "See ya!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud -2266 67 -1382 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=-2266,y=67,z=-1382,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue82');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

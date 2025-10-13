@@ -1,12 +1,10 @@
 {
     "initializationAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
+    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+    "v.battle = q.npc.start_battle(q.player);"
     ],
     "escapeAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.dialogue.close();"
     ],
     "names": [
         "Shelly"
@@ -25,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                ""
+                "...Fine! Brats who don't know how to watch their mouths must be punished!"
             ],
             "input": {
                 "type": "option",
@@ -35,7 +33,7 @@
                         "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
                         "value": "battle",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 35');",
                             "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
                             "v.battle = q.npc.start_battle(q.player);"
                         ]

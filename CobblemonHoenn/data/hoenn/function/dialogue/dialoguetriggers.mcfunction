@@ -243,6 +243,72 @@ execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2
 execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=1}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 may_generic
 execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=2}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 brendan_generic
 
+#Meteor Falls
+#Spawns NPCs, pre-battle
+execute as @s[x=2329,y=108,z=-2502,distance=..10,tag=!Dialogue82,scores={Rival=1}] unless entity @e[x=2304,y=109,z=-2501,dy=3,type=cobblemon:npc] run npcspawnat 2304 110 -2501 may_generic
+execute as @s[x=2329,y=108,z=-2502,distance=..10,tag=!Dialogue82,scores={Rival=2}] unless entity @e[x=2304,y=109,z=-2501,dy=3,type=cobblemon:npc] run npcspawnat 2304 110 -2501 brendan_generic
+
+#Cozmo
+execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82] unless entity @e[x=2292,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2292 110 -2503 scientist_generic
+
+#Magmas
+execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=1}] unless entity @e[x=2294,y=109,z=-2499,dy=3,type=cobblemon:npc] run npcspawnat 2294 110 -2499 magmagrunt_generic
+execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=1}] unless entity @e[x=2297,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2297 110 -2503 meteorfalls_tabitha
+#Aqua
+execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=2}] unless entity @e[x=2294,y=109,z=-2499,dy=3,type=cobblemon:npc] run npcspawnat 2294 110 -2499 aquagrunt_generic
+execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=2}] unless entity @e[x=2297,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2297 110 -2503 meteorfalls_shelly
+
+#Dialogue Prior to battle
+execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=1,GameVersion=1}] run opendialogue may_magma_dialogue81 @s
+execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=1,GameVersion=2}] run opendialogue may_aqua_dialogue81 @s
+execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2,GameVersion=1}] run opendialogue brendan_magma_dialogue81 @s
+execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue brendan_aqua_dialogue81 @s
+
+#Dialogue 82 - Post battle activated by either Tabitha or Shelly's battle ends
+#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=1,GameVersion=1}] run opendialogue rivalleader_magma_may_dialogue82 @s
+#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=1}] run opendialogue rivalleader_magma_brendan_dialogue82 @s
+
+#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=1,GameVersion=2}] run opendialogue rivalleader_aqua_may_dialogue82 @s
+#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue rivalleader_aqua_brendan_dialogue82 @s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $3220 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 3220');"
@@ -13,7 +13,7 @@
                 "type": "artificial",
                 "modelType": "npc",
                 "identifier": "cobblemon:shelly",
-                "isLeftSide": true
+                "isLeftSide": false
             }
         }
     },
@@ -32,7 +32,9 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
+                            "q.dialogue.close();",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Rival=1}] run opendialogue rivalleader_aqua_may_dialogue82 @s');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Rival=2}] run opendialogue rivalleader_aqua_brendan_dialogue82 @s');"
                         ]
                     }
                 ]
@@ -40,6 +42,5 @@
         }
     ],
     "escapeAction": [
-        "q.dialogue.close();"
     ]
 }
