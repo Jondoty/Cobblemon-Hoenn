@@ -131,6 +131,7 @@ execute as @a[scores={DialogueTrigger=44,TalkTime=26..42}] at @s run tp @s ~-0.0
 #Dialogue 71 - Verdanturf Shroomish moving
 #execute if entity @a[scores={DialogueTrigger=71,TalkTime=3..6}] as @e[x=-2071,y=69,z=-617,distance=..10,type=pixelmon:statue] at @s run tp @s ~0.075 ~ ~
 
+#Dialogue 97, Southern Island map flying
 execute as @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={DialogueTrigger=97}] at @s run tp @s ~0.25 90 ~0.25 ~0.25 70
 
 #Dialogue 139 - Mossdeep team breaking in to cavern

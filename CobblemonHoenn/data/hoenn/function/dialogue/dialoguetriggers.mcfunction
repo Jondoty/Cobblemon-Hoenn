@@ -284,17 +284,29 @@ execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] unles
 execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] unless entity @e[x=-2548,y=69,z=-6,dy=3,type=cobblemon:npc] run npcspawnat -2548 69 -6 petalburg_gentleman
 execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] run opendialogue wally_dialogue96 @s
 
+#Route 118 - Steven starting Southern Island dialogue
+execute as @a[x=-977,y=64,z=-598,distance=..50,tag=!Dialogue97] unless entity @e[x=-977,y=64,z=-598,distance=..3,type=cobblemon:npc] run npcspawnat -977 64 -598 steven_generic
+execute as @s[x=-977,y=64,z=-598,distance=..5,tag=!Dialogue97,scores={GameVersion=1}] run opendialogue steven_dialogue97a_ruby @s
+execute as @s[x=-977,y=64,z=-598,distance=..5,tag=!Dialogue97,scores={GameVersion=2}] run opendialogue steven_dialogue97a_sapphire @s
 
 
+#Southern Island Lati opposite of your game version
+execute as @s[x=727,y=74,z=762,distance=..75,scores={GameVersion=1}] unless entity @e[x=727,y=74,z=762,distance=..5,type=cobblemon:pokemon] run pokespawnat 727 74 762 latios no_ai=yes level=30 uncatchable=yes
+execute as @s[x=727,y=74,z=762,distance=..75,scores={GameVersion=2}] unless entity @e[x=727,y=74,z=762,distance=..5,type=cobblemon:pokemon] run pokespawnat 727 74 762 latias no_ai=yes level=30 uncatchable=yes
 
+execute if entity @s[x=727,y=74,z=762,distance=..75] as @e[x=727,y=74,z=762,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute if entity @s[x=727,y=74,z=762,distance=..75] as @e[x=727,y=74,z=762,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute if entity @s[x=727,y=74,z=762,distance=..75] as @e[x=727,y=74,z=762,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute if entity @s[x=727,y=74,z=762,distance=..75] as @e[x=727,y=74,z=762,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
 
+execute as @s[x=727,y=74,z=762,distance=..5,tag=!Dialogue99,scores={GameVersion=1}] run opendialogue steven_dialogue99_ruby @s
+execute as @s[x=727,y=74,z=762,distance=..5,tag=!Dialogue99,scores={GameVersion=2}] run opendialogue steven_dialogue99_sapphire @s
 
-
-
-
-
-
-
+#Respawns trainers when needed
+execute as @s[x=727,y=74,z=762,distance=..15,tag=Dialogue99,tag=!Dialogue100,scores={GameVersion=1}] unless entity @e[x=731,y=73,z=777,dy=3,type=cobblemon:npc] run npcspawnat 731 74 777 southern_island_courtney
+execute as @s[x=727,y=74,z=762,distance=..15,tag=Dialogue99,tag=!Dialogue100,scores={GameVersion=1}] unless entity @e[x=724,y=73,z=777,dy=3,type=cobblemon:npc] run npcspawnat 724 74 777 magmagrunt_generic
+execute as @s[x=727,y=74,z=762,distance=..15,tag=Dialogue99,tag=!Dialogue100,scores={GameVersion=2}] unless entity @e[x=731,y=73,z=777,dy=3,type=cobblemon:npc] run npcspawnat 731 74 777 southern_island_matt
+execute as @s[x=727,y=74,z=762,distance=..15,tag=Dialogue99,tag=!Dialogue100,scores={GameVersion=2}] unless entity @e[x=724,y=73,z=777,dy=3,type=cobblemon:npc] run npcspawnat 724 74 777 aquagrunt_generic
 
 
 
