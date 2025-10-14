@@ -313,6 +313,15 @@ execute as @s[x=-971,y=38,z=-1317,distance=..5,tag=!Dialogue102,scores={GameVers
 execute as @s[x=-971,y=17,z=-1317,distance=..5,tag=!Dialogue102,scores={GameVersion=2}] run opendialogue shelly_dialogue102 @s
 
 
+#Route 119 - Rival spawn for battle to obtain the Fly HM
+execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={StarterPick=1,Rival=1}] unless entity @e[x=-867,y=79,z=-1300,distance=..5,type=cobblemon:npc] run npcspawnat -867 79 -1300 route119_may1
+execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={StarterPick=2,Rival=1}] unless entity @e[x=-867,y=79,z=-1300,distance=..5,type=cobblemon:npc] run npcspawnat -867 79 -1300 route119_may2
+execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={StarterPick=3,Rival=1}] unless entity @e[x=-867,y=79,z=-1300,distance=..5,type=cobblemon:npc] run npcspawnat -867 79 -1300 route119_may3
+
+#Brendan
+execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={StarterPick=1,Rival=2}] unless entity @e[x=-867,y=79,z=-1300,distance=..5,type=cobblemon:npc] run npcspawnat -867 79 -1300 route119_brendan1
+execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={StarterPick=2,Rival=2}] unless entity @e[x=-867,y=79,z=-1300,distance=..5,type=cobblemon:npc] run npcspawnat -867 79 -1300 route119_brendan2
+execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={StarterPick=3,Rival=2}] unless entity @e[x=-867,y=79,z=-1300,distance=..5,type=cobblemon:npc] run npcspawnat -867 79 -1300 route119_brendan3
 
 
 
