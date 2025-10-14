@@ -308,7 +308,9 @@ execute as @s[x=727,y=74,z=762,distance=..15,tag=Dialogue99,tag=!Dialogue100,sco
 execute as @s[x=727,y=74,z=762,distance=..15,tag=Dialogue99,tag=!Dialogue100,scores={GameVersion=2}] unless entity @e[x=731,y=73,z=777,dy=3,type=cobblemon:npc] run npcspawnat 731 74 777 southern_island_matt
 execute as @s[x=727,y=74,z=762,distance=..15,tag=Dialogue99,tag=!Dialogue100,scores={GameVersion=2}] unless entity @e[x=724,y=73,z=777,dy=3,type=cobblemon:npc] run npcspawnat 724 74 777 aquagrunt_generic
 
-
+#Weather Institute dialogue overhearing the admins
+execute as @s[x=-971,y=38,z=-1317,distance=..5,tag=!Dialogue102,scores={GameVersion=1}] run opendialogue tabitha_dialogue102 @s
+execute as @s[x=-971,y=17,z=-1317,distance=..5,tag=!Dialogue102,scores={GameVersion=2}] run opendialogue shelly_dialogue102 @s
 
 
 
