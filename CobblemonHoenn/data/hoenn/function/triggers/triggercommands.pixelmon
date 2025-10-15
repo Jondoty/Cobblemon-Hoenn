@@ -20,32 +20,6 @@ execute as @s[scores={TriggerCommand=8}] run tellraw @s {"text":"<Parasol Lady> 
 #No
 execute as @s[scores={TriggerCommand=9}] run tellraw @s {"text":"<Parasol Lady> Acknowledged. I can change the music anytime, so whenever you feel like it, let me know."}
 
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 7 & 8, Prof Birch's options
-
-execute as @s[scores={TriggerCommand=10}] run
-
-execute as @s[scores={TriggerCommand=11}] run
-
-
-#-----------------------------------------------------------------------------------------------------
-#Mr. Briney's locations
-
-#Dewford
-execute as @s[scores={TriggerCommand=12}] run scoreboard players set @s DialogueTrigger 33
-
-#Slateport
-execute as @s[scores={TriggerCommand=13}] run scoreboard players set @s Temp 1
-execute as @s[scores={TriggerCommand=13}] run scoreboard players set @s DialogueTrigger 38
-
-#Petalburg
-execute as @s[scores={TriggerCommand=14}] run scoreboard players set @s Temp 2
-execute as @s[scores={TriggerCommand=14}] run scoreboard players set @s DialogueTrigger 38
-
-#if player is near Slateport, sends him to Dewford
-execute as @s[scores={TriggerCommand=61}] run tellraw @s {"text":"<Mr. Briney> Dewford, we're a-coming! Anchors aweigh!"}
-execute as @s[scores={TriggerCommand=61}] run scoreboard players set @s Cutscene 4
-execute as @s[scores={TriggerCommand=61}] run scoreboard players set @s TriggerCommand 0
 
 #-----------------------------------------------------------------------------------------------------
 #Rydel's Bike Choices
@@ -91,23 +65,6 @@ execute as @s[scores={TriggerCommand=18}] run scoreboard players set @s TriggerC
 
 #Switching out bikes, likely just needs to be a couple TriggerCommands
 
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 82 & 83 Rival fast travel option
-
-#No
-execute as @s[scores={TriggerCommand=19}] run scoreboard players set @s DialogueTrigger 83
-
-#Yes
-execute as @s[scores={TriggerCommand=20}] run scoreboard players set @s DialogueTrigger 84
-
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 91 & 93 Rival fast travel option
-
-#No
-execute as @s[scores={TriggerCommand=21}] run scoreboard players set @s DialogueTrigger 92
-
-#Yes
-execute as @s[scores={TriggerCommand=22}] run scoreboard players set @s DialogueTrigger 93
 
 #-----------------------------------------------------------------------------------------------------
 #Dialogues 107 - 110, hidden power lady coin flips
@@ -126,11 +83,6 @@ execute as @s[scores={TriggerCommand=25}] run scoreboard players set @s Dialogue
 
 #Third correct hand
 execute as @s[scores={TriggerCommand=26}] run scoreboard players set @s DialogueTrigger 110
-
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 115, Kecleon in Fortree
-
-execute as @s[scores={TriggerCommand=27}] run scoreboard players set @s DialogueTrigger 116
 
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 122, Evolite fisherman questions

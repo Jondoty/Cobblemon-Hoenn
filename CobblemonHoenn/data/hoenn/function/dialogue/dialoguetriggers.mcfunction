@@ -324,10 +324,17 @@ execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={Starter
 execute as @s[x=-867,y=79,z=-1300,distance=..20,tag=!Dialogue106,scores={StarterPick=3,Rival=2}] unless entity @e[x=-867,y=79,z=-1300,distance=..5,type=cobblemon:npc] run npcspawnat -867 79 -1300 route119_brendan3
 
 
+#Route 120 - Steven demonstrating the Devon Scope
+execute as @s[x=-322,y=79,z=-1355,distance=..10,tag=!Dialogue114] unless entity @e[x=-359,y=85,z=-1357,dy=3,type=cobblemon:npc] run npcspawnat -359 85.6 -1357 route120_steven
+execute as @s[x=-359,y=85,z=-1357,distance=..8,tag=!Dialogue113] run opendialogue steven_dialogue113 @s
 
+#After any battle
+#execute as @a[x=-362,y=85,z=-1354,distance=..30,tag=Dialogue113,tag=!Dialogue114] run opendialogue steven_dialogue113 @s
 
-
-
+#Fortree City Devon Scope Gym Clear
+execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=DevonScope,tag=!Dialogue115] if block -562 84 -1419 barrier run opendialogue kecleon_scope @s
+execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run opendialogue kecleon_noscope @s
+execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run tag @s add KecleonHint
 
 
 
