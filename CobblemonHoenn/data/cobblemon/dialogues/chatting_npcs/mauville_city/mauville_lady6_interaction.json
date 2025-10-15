@@ -5,7 +5,7 @@
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:lady6",
+        "identifier": "cobblemon:lady",
         "isLeftSide": true
       }
     }

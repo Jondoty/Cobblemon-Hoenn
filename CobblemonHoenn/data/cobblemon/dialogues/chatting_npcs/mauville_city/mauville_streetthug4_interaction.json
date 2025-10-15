@@ -5,7 +5,7 @@
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:streetthug4",
+        "identifier": "cobblemon:streetthug",
         "isLeftSide": true
       }
     }

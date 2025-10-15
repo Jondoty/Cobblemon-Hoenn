@@ -5,7 +5,7 @@
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:richman3",
+        "identifier": "cobblemon:richman",
         "isLeftSide": true
       }
     }

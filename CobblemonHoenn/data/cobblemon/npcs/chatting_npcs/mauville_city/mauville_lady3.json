@@ -1,6 +1,6 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:lady3",
+  "resourceIdentifier": "cobblemon:lady",
   "presets": [],
   "variation": {
     "dirt": [
