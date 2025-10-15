@@ -1,14 +1,11 @@
 {
     "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $3800 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 3800');"
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
+    "escapeAction": [],
     "speakers": {
         "admin": {
-            "name": "Aqua Admin Matt",
+            "name": "Aqua Grunt Matt",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
@@ -16,22 +13,29 @@
                 "isLeftSide": false
             }
         },
-        "oldman": {
-            "name": "     ",
+        "leader": {
+            "name": "Archie",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:oldman",
+                "identifier": "cobblemon:archie",
                 "isLeftSide": true
             }
-        }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
     },
     "pages": [
         {
             "id": "greeting",
-            "speaker": "admin",
+            "speaker": "leader",
             "lines": [
-                "That was fun! I knew you'd show me a good time!"
+                "Yo."
             ],
             "input": {
                 "type": "option",
@@ -49,9 +53,9 @@
         },
         {
             "id": "page2",
-            "speaker": "admin",
+            "speaker": "leader",
             "lines": [
-                "I look forward to facing you again someday!"
+                "I thought something was a bit noisy, and who is it but the usual scamp!"
             ],
             "input": {
                 "type": "option",
@@ -61,20 +65,55 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue120');",
-                            "q.run_command('particle cloud 1611 247 2361 1 1 1 0.15 300');",
-                            "q.run_command('tp @e[type=cobblemon:npc,x=1611,y=247,z=2361,distance=..3] 10000000 -50000 -10000000');",
-                            "q.dialogue.set_page('page5');"
+                            "q.dialogue.set_page('page3');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page5",
-            "speaker": "oldman",
+            "id": "page3",
+            "speaker": "leader",
             "lines": [
-                "Aye, me, what disaster..."
+                "Sorry, scampo, but I'm afraid I just don't have time to play with you right now."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "leader",
+            "lines": [
+                "The Blue Orb that's long been enshrined here at Mt. Pyre..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "leader",
+            "lines": [
+                "It belongs to Team Aqua now!"
             ],
             "input": {
                 "type": "option",
@@ -92,9 +131,9 @@
         },
         {
             "id": "page6",
-            "speaker": "oldman",
+            "speaker": "leader",
             "lines": [
-                "The Blue Orb... Stolen from our safekeeping..."
+                "...Ma-a-att!"
             ],
             "input": {
                 "type": "option",
@@ -103,18 +142,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": [
-                            "q.dialogue.set_page('page7');"
-                        ]
+                        "action": "q.dialogue.set_page('page7');"
                     }
                 ]
             }
         },
         {
             "id": "page7",
-            "speaker": "oldman",
+            "speaker": "admin",
             "lines": [
-                "The Red Orb and Blue Orb must never be separated. They belong together..."
+                "Oh! Boss!"
             ],
             "input": {
                 "type": "option",
@@ -123,18 +160,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": [
-                            "q.dialogue.set_page('page8');"
-                        ]
+                        "action": "q.dialogue.set_page('page8');"
                     }
                 ]
             }
         },
         {
             "id": "page8",
-            "speaker": "oldman",
+            "speaker": "leader",
             "lines": [
-                "Mmm..."
+                "How about you do a favor for our lively little visitor, and keep them entertained?"
             ],
             "input": {
                 "type": "option",
@@ -143,18 +178,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": [
-                            "q.dialogue.set_page('page9');"
-                        ]
+                        "action": "q.dialogue.set_page('page9');"
                     }
                 ]
             }
         },
         {
             "id": "page9",
-            "speaker": "oldman",
+            "speaker": "leader",
             "lines": [
-                "I will entrust the remaining Red Orb to you, young one."
+                "You'd better use your full strength, too, so you don't offend our honored guest!"
             ],
             "input": {
                 "type": "option",
@@ -163,20 +196,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run give @s mega_showdown:redorb');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
-                            "q.dialogue.set_page('page10');"
-                        ]
+                        "action": "q.dialogue.set_page('page10');"
                     }
                 ]
             }
         },
         {
             "id": "page10",
-            "speaker": "oldman",
+            "speaker": "leader",
             "lines": [
-                "Aye, me, what disaster..."
+                "Bwahahahaha! With this Blue Orb in my hands, I won't even need the power of the Meteorite to awaken the beast from the deep!"
             ],
             "input": {
                 "type": "option",
@@ -185,18 +214,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": [
-                            "q.dialogue.set_page('page11');"
-                        ]
+                        "action": "q.dialogue.set_page('page11');"
                     }
                 ]
             }
         },
         {
             "id": "page11",
-            "speaker": "oldman",
+            "speaker": "leader",
             "lines": [
-                "And I beg you..."
+                "All I need now is a way to get to the place where it sleeps..."
             ],
             "input": {
                 "type": "option",
@@ -205,18 +232,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": [
-                            "q.dialogue.set_page('page12');"
-                        ]
+                        "action": "q.dialogue.set_page('page12');"
                     }
                 ]
             }
         },
         {
             "id": "page12",
-            "speaker": "oldman",
+            "speaker": "leader",
             "lines": [
-                "Chase after those thieves and take back their orb! That wretched leader of theirs..."
+                "All I have to do is get that submarine they're making in Slateport!"
             ],
             "input": {
                 "type": "option",
@@ -226,6 +251,8 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
+                            "q.run_command('particle cloud 1605 247 2361 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=1605,y=247,z=2361,distance=..3] 10000000 -50000 -10000000');",
                             "q.dialogue.set_page('page13');"
                         ]
                     }
@@ -234,9 +261,9 @@
         },
         {
             "id": "page13",
-            "speaker": "oldman",
+            "speaker": "admin",
             "lines": [
-                "I'm sure he said they were headed for Slateport City next..."
+                "All right then, until the Boss makes his getaway, I'll be your opponent!"
             ],
             "input": {
                 "type": "option",
@@ -246,13 +273,13 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue119');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }
                 ]
             }
         }
-    ],
-    "escapeAction": [
     ]
 }

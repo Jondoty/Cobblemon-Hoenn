@@ -215,20 +215,20 @@ execute as @s[x=2705,y=65,z=2712,distance=..20,tag=Wattson,tag=!Dialogue74,score
 
 
 #Route 112 - Rival granting player Strength
-execute as @a[x=-1694,y=78,z=-1088,distance=..15,tag=!Dialogue75,scores={Rival=1}] run opendialogue may_dialogue75 @s
-execute as @a[x=-1694,y=78,z=-1088,distance=..15,tag=!Dialogue75,scores={Rival=2}] run opendialogue brendan_dialogue75 @s
+execute as @s[x=-1694,y=78,z=-1088,distance=..15,tag=!Dialogue75,scores={Rival=1}] run opendialogue may_dialogue75 @s
+execute as @s[x=-1694,y=78,z=-1088,distance=..15,tag=!Dialogue75,scores={Rival=2}] run opendialogue brendan_dialogue75 @s
 execute as @s[x=-1694,y=78,z=-1088,distance=..45,tag=!Dialogue75,scores={Rival=1}] unless entity @e[x=-1694,y=79,z=-1088,dy=3,type=cobblemon:npc] run npcspawnat -1694 79 -1088 may_generic
 execute as @s[x=-1694,y=78,z=-1088,distance=..45,tag=!Dialogue75,scores={Rival=2}] unless entity @e[x=-1694,y=79,z=-1088,dy=3,type=cobblemon:npc] run npcspawnat -1694 79 -1088 brendan_generic
 
 
 #Dialogue 76 - Route 111
 #Secret Base Obtaining
-execute as @a[x=-1541,y=78,z=-1337,distance=..20,tag=!Dialogue76] unless entity @e[x=-1515,y=78,z=-1368,distance=..3,type=cobblemon:npc] run npcspawnat -1515 79 -1368 aarune_generic
-execute as @a[x=-1515,y=78,z=-1368,distance=..7,tag=!Dialogue76] run opendialogue aarune_dialogue76 @s
+execute as @s[x=-1541,y=78,z=-1337,distance=..20,tag=!Dialogue76] unless entity @e[x=-1515,y=78,z=-1368,distance=..3,type=cobblemon:npc] run npcspawnat -1515 79 -1368 aarune_generic
+execute as @s[x=-1515,y=78,z=-1368,distance=..7,tag=!Dialogue76] run opendialogue aarune_dialogue76 @s
 
 #Dialogue 77 - Route 113 Rival healing player
-execute as @a[x=-1646,y=79,z=-1418,distance=..15,tag=!Dialogue77,scores={Rival=1}] run opendialogue may_dialogue77 @s
-execute as @a[x=-1646,y=79,z=-1418,distance=..15,tag=!Dialogue77,scores={Rival=2}] run opendialogue brendan_dialogue77 @s
+execute as @s[x=-1646,y=79,z=-1418,distance=..15,tag=!Dialogue77,scores={Rival=1}] run opendialogue may_dialogue77 @s
+execute as @s[x=-1646,y=79,z=-1418,distance=..15,tag=!Dialogue77,scores={Rival=2}] run opendialogue brendan_dialogue77 @s
 execute as @s[x=-1580,y=79,z=-1416,distance=..20,tag=!Dialogue77,scores={Rival=1}] unless entity @e[x=-1646,y=79,z=-1418,dy=3,type=cobblemon:npc] run npcspawnat -1646 79 -1418 may_generic
 execute as @s[x=-1580,y=79,z=-1416,distance=..20,tag=!Dialogue77,scores={Rival=2}] unless entity @e[x=-1646,y=79,z=-1418,dy=3,type=cobblemon:npc] run npcspawnat -1646 79 -1418 brendan_generic
 
@@ -236,10 +236,10 @@ execute as @s[x=-1580,y=79,z=-1416,distance=..20,tag=!Dialogue77,scores={Rival=2
 execute as @s[x=-2200,y=89,z=-1429,distance=..10,tag=!Dialogue78] unless entity @e[x=-2194,y=68,z=-1443,dy=3,type=cobblemon:npc] run npcspawnat -2194 68 -1443 fallarbor_lanette
 
 #Fallarbor Rival finding Prof Cozmo Gone
-execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=1,GameVersion=1}] run opendialogue may_dialogue79_magma @s
-execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=1,GameVersion=2}] run opendialogue may_dialogue79_aqua @s
-execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2,GameVersion=1}] run opendialogue brendan_dialogue79_magma @s
-execute as @a[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2,GameVersion=2}] run opendialogue brendan_dialogue79_aqua @s
+execute as @s[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=1,GameVersion=1}] run opendialogue may_dialogue79_magma @s
+execute as @s[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=1,GameVersion=2}] run opendialogue may_dialogue79_aqua @s
+execute as @s[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2,GameVersion=1}] run opendialogue brendan_dialogue79_magma @s
+execute as @s[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2,GameVersion=2}] run opendialogue brendan_dialogue79_aqua @s
 execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=1}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 may_generic
 execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=2}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 brendan_generic
 
@@ -249,34 +249,34 @@ execute as @s[x=2329,y=108,z=-2502,distance=..10,tag=!Dialogue82,scores={Rival=1
 execute as @s[x=2329,y=108,z=-2502,distance=..10,tag=!Dialogue82,scores={Rival=2}] unless entity @e[x=2304,y=109,z=-2501,dy=3,type=cobblemon:npc] run npcspawnat 2304 110 -2501 brendan_generic
 
 #Cozmo
-execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82] unless entity @e[x=2292,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2292 110 -2503 scientist_generic
+execute as @s[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82] unless entity @e[x=2292,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2292 110 -2503 scientist_generic
 
 #Magmas
-execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=1}] unless entity @e[x=2294,y=109,z=-2499,dy=3,type=cobblemon:npc] run npcspawnat 2294 110 -2499 magmagrunt_generic
-execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=1}] unless entity @e[x=2297,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2297 110 -2503 meteorfalls_tabitha
+execute as @s[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=1}] unless entity @e[x=2294,y=109,z=-2499,dy=3,type=cobblemon:npc] run npcspawnat 2294 110 -2499 magmagrunt_generic
+execute as @s[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=1}] unless entity @e[x=2297,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2297 110 -2503 meteorfalls_tabitha
 #Aqua
-execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=2}] unless entity @e[x=2294,y=109,z=-2499,dy=3,type=cobblemon:npc] run npcspawnat 2294 110 -2499 aquagrunt_generic
-execute as @a[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=2}] unless entity @e[x=2297,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2297 110 -2503 meteorfalls_shelly
+execute as @s[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=2}] unless entity @e[x=2294,y=109,z=-2499,dy=3,type=cobblemon:npc] run npcspawnat 2294 110 -2499 aquagrunt_generic
+execute as @s[x=2329,y=108,z=-2503,distance=..10,tag=!Dialogue82,scores={GameVersion=2}] unless entity @e[x=2297,y=109,z=-2503,dy=3,type=cobblemon:npc] run npcspawnat 2297 110 -2503 meteorfalls_shelly
 
 #Dialogue Prior to battle
-execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=1,GameVersion=1}] run opendialogue may_magma_dialogue81 @s
-execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=1,GameVersion=2}] run opendialogue may_aqua_dialogue81 @s
-execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2,GameVersion=1}] run opendialogue brendan_magma_dialogue81 @s
-execute as @a[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue brendan_aqua_dialogue81 @s
+execute as @s[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=1,GameVersion=1}] run opendialogue may_magma_dialogue81 @s
+execute as @s[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=1,GameVersion=2}] run opendialogue may_aqua_dialogue81 @s
+execute as @s[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2,GameVersion=1}] run opendialogue brendan_magma_dialogue81 @s
+execute as @s[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue brendan_aqua_dialogue81 @s
 
 #Dialogue 82 - Post battle activated by either Tabitha or Shelly's battle ends
-#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=1,GameVersion=1}] run opendialogue rivalleader_magma_may_dialogue82 @s
-#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=1}] run opendialogue rivalleader_magma_brendan_dialogue82 @s
+#execute as @s[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=1,GameVersion=1}] run opendialogue rivalleader_magma_may_dialogue82 @s
+#execute as @s[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=1}] run opendialogue rivalleader_magma_brendan_dialogue82 @s
 
-#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=1,GameVersion=2}] run opendialogue rivalleader_aqua_may_dialogue82 @s
-#execute as @a[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue rivalleader_aqua_brendan_dialogue82 @s
+#execute as @s[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=1,GameVersion=2}] run opendialogue rivalleader_aqua_may_dialogue82 @s
+#execute as @s[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue rivalleader_aqua_brendan_dialogue82 @s
 
 
 #Lavaridge Town, Rival granting Go-Goggles after the gym badge
 execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=1}] unless entity @e[x=-2036,y=84,z=-1044,dy=3,type=cobblemon:npc] run npcspawnat -2036 84 -1044 may_generic
 execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=2}] unless entity @e[x=-2036,y=84,z=-1044,dy=3,type=cobblemon:npc] run npcspawnat -2036 84 -1044 brendan_generic
-execute as @a[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=1}] run opendialogue may_dialogue91 @s
-execute as @a[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=2}] run opendialogue brendan_dialogue91 @s
+execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=1}] run opendialogue may_dialogue91 @s
+execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=2}] run opendialogue brendan_dialogue91 @s
 
 #Dialogue 96 - Wally and family after leaving Petalburg Gym
 execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] unless entity @e[x=-2542,y=69,z=-6,dy=3,type=cobblemon:npc] run npcspawnat -2542 69 -6 wally_generic
@@ -285,7 +285,7 @@ execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] unles
 execute as @s[x=-2544,y=68,z=-14,distance=..10,tag=Norman,tag=!Dialogue96] run opendialogue wally_dialogue96 @s
 
 #Route 118 - Steven starting Southern Island dialogue
-execute as @a[x=-977,y=64,z=-598,distance=..50,tag=!Dialogue97] unless entity @e[x=-977,y=64,z=-598,distance=..3,type=cobblemon:npc] run npcspawnat -977 64 -598 steven_generic
+execute as @s[x=-977,y=64,z=-598,distance=..50,tag=!Dialogue97] unless entity @e[x=-977,y=64,z=-598,distance=..3,type=cobblemon:npc] run npcspawnat -977 64 -598 steven_generic
 execute as @s[x=-977,y=64,z=-598,distance=..5,tag=!Dialogue97,scores={GameVersion=1}] run opendialogue steven_dialogue97a_ruby @s
 execute as @s[x=-977,y=64,z=-598,distance=..5,tag=!Dialogue97,scores={GameVersion=2}] run opendialogue steven_dialogue97a_sapphire @s
 
@@ -329,13 +329,53 @@ execute as @s[x=-322,y=79,z=-1355,distance=..10,tag=!Dialogue114] unless entity 
 execute as @s[x=-359,y=85,z=-1357,distance=..8,tag=!Dialogue113] run opendialogue steven_dialogue113 @s
 
 #After any battle
-#execute as @a[x=-362,y=85,z=-1354,distance=..30,tag=Dialogue113,tag=!Dialogue114] run opendialogue steven_dialogue113 @s
+#execute as @s[x=-362,y=85,z=-1354,distance=..30,tag=Dialogue113,tag=!Dialogue114] run opendialogue steven_dialogue113 @s
 
 #Fortree City Devon Scope Gym Clear
 execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=DevonScope,tag=!Dialogue115] if block -562 84 -1419 barrier run opendialogue kecleon_scope @s
 execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run opendialogue kecleon_noscope @s
 execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run tag @s add KecleonHint
 
+
+#Dialogue 119 - Route 121 team grunts overhearing
+execute as @s[x=-3,y=84,z=-1042,distance=..15,tag=!Dialogue275,scores={GameVersion=1}] run opendialogue route121_magmagrunts_dialogue275 @s
+execute as @s[x=-3,y=84,z=-1042,distance=..15,tag=!Dialogue275,scores={GameVersion=2}] run opendialogue route121_aquagrunts_dialogue275 @s
+
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=1}] unless entity @e[x=14,y=84,z=-1050,dy=3,type=cobblemon:npc] run npcspawnat 14 84 -1050 magmagrunt_generic
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=1}] unless entity @e[x=16,y=84,z=-1050,dy=3,type=cobblemon:npc] run npcspawnat 16 84 -1050 magmagruntf_generic
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=1}] unless entity @e[x=18,y=84,z=-1050,dy=3,type=cobblemon:npc] run npcspawnat 18 84 -1050 magmagrunt_generic
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=1}] unless entity @e[x=16,y=84,z=-1047,dy=3,type=cobblemon:npc] run npcspawnat 16 84 -1047 magmagruntf_generic
+
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=2}] unless entity @e[x=14,y=84,z=-1050,dy=3,type=cobblemon:npc] run npcspawnat 14 84 -1050 aquagrunt_generic
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=2}] unless entity @e[x=16,y=84,z=-1050,dy=3,type=cobblemon:npc] run npcspawnat 16 84 -1050 aquagruntf_generic
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=2}] unless entity @e[x=18,y=84,z=-1050,dy=3,type=cobblemon:npc] run npcspawnat 18 84 -1050 aquagrunt_generic
+execute as @s[x=-23,y=84,z=-1039,distance=..20,tag=!Dialogue275,scores={GameVersion=2}] unless entity @e[x=16,y=84,z=-1047,dy=3,type=cobblemon:npc] run npcspawnat 16 84 -1047 aquagruntf_generic
+
+
+#------------------------------------------------
+#Mt. Pyre 
+execute as @s[x=1605,y=247,z=2361,distance=..10,tag=!Dialogue119,scores={GameVersion=1}] run opendialogue mtpyre_magmas_dialogue119 @s
+execute as @s[x=1605,y=247,z=2361,distance=..10,tag=!Dialogue119,scores={GameVersion=2}] run opendialogue mtpyre_aquas_dialogue119 @s
+
+#Summons grunts on summit
+execute as @s[x=1598,y=207,z=2510,distance=..50,tag=!Dialogue120,scores={GameVersion=1}] unless entity @e[x=1598,y=207,z=2510,dy=3,type=cobblemon:npc] run npcspawnat 1598 207 2510 mtpyre_magmagrunt1
+execute as @s[x=1616,y=207,z=2483,distance=..50,tag=!Dialogue120,scores={GameVersion=1}] unless entity @e[x=1616,y=207,z=2483,dy=3,type=cobblemon:npc] run npcspawnat 1616 207 2483 mtpyre_magmagrunt2
+execute as @s[x=1595,y=222,z=2440,distance=..50,tag=!Dialogue120,scores={GameVersion=1}] unless entity @e[x=1595,y=222,z=2440,dy=3,type=cobblemon:npc] run npcspawnat 1595 222 2440 mtpyre_magmagrunt3
+execute as @s[x=1611,y=247,z=2361,distance=..50,tag=!Dialogue120,scores={GameVersion=1}] unless entity @e[x=1611,y=247,z=2361,dy=3,type=cobblemon:npc] run npcspawnat 1611 247 2361 mtpyre_courtney
+execute as @s[x=1605,y=247,z=2361,distance=..50,tag=!Dialogue119,scores={GameVersion=1}] unless entity @e[x=1605,y=247,z=2361,dy=3,type=cobblemon:npc] run npcspawnat 1605 247 2361 maxie_generic
+
+execute as @s[x=1598,y=207,z=2510,distance=..50,tag=!Dialogue120,scores={GameVersion=2}] unless entity @e[x=1598,y=207,z=2510,dy=3,type=cobblemon:npc] run npcspawnat 1598 207 2510 mtpyre_aquagrunt1
+execute as @s[x=1616,y=207,z=2483,distance=..50,tag=!Dialogue120,scores={GameVersion=2}] unless entity @e[x=1616,y=207,z=2483,dy=3,type=cobblemon:npc] run npcspawnat 1616 207 2483 mtpyre_aquagrunt2
+execute as @s[x=1595,y=222,z=2440,distance=..50,tag=!Dialogue120,scores={GameVersion=2}] unless entity @e[x=1595,y=222,z=2440,dy=3,type=cobblemon:npc] run npcspawnat 1595 222 2440 mtpyre_aquagrunt3
+execute as @s[x=1611,y=247,z=2361,distance=..50,tag=!Dialogue120,scores={GameVersion=2}] unless entity @e[x=1611,y=247,z=2361,dy=3,type=cobblemon:npc] run npcspawnat 1611 247 2361 mtpyre_matt
+execute as @s[x=1605,y=247,z=2361,distance=..50,tag=!Dialogue119,scores={GameVersion=2}] unless entity @e[x=1605,y=247,z=2361,dy=3,type=cobblemon:npc] run npcspawnat 1605 247 2361 archie_generic
+
+#Clears NPCs
+execute as @p[x=1598,y=207,z=2510,distance=..60,tag=Dialogue120] run tp @e[x=1598,y=207,z=2510,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=1616,y=207,z=2483,distance=..60,tag=Dialogue120] run tp @e[x=1616,y=207,z=2483,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=1595,y=222,z=2440,distance=..60,tag=Dialogue120] run tp @e[x=1595,y=222,z=2440,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=1616,y=247,z=2368,distance=..60,tag=Dialogue120] run tp @e[x=1616,y=247,z=2368,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=1605,y=247,z=2361,distance=..60,tag=Dialogue120] run tp @e[x=1605,y=247,z=2361,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
 
 
 #------------------------------------------
