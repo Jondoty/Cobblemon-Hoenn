@@ -1331,11 +1331,11 @@ execute as @s[x=-330,y=68,z=-577,distance=..5,tag=!ItemLoot376] run tellraw @s {
 execute as @s[x=-330,y=68,z=-577,distance=..5,tag=!ItemLoot376] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-330,y=68,z=-577,distance=..5,tag=!ItemLoot376] run tag @s add ItemLoot376
 
-execute as @s[x=-395,y=45,z=-655,distance=..5,tag=ItemLoot377] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run give @s mega_showdown:gyaradosite
-execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run tellraw @s {"text":"You found a Gyaradosite!","italic":true,"color":"gray"}
-execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run tag @s add ItemLoot377
+#execute as @s[x=-395,y=45,z=-655,distance=..5,tag=ItemLoot377] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+#execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run give @s mega_showdown:gyaradosite
+#execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run tellraw @s {"text":"You found a Gyaradosite!","italic":true,"color":"gray"}
+#execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
+#execute as @s[x=-395,y=45,z=-655,distance=..5,tag=!ItemLoot377] run tag @s add ItemLoot377
 
 execute as @s[x=-391,y=45,z=-654,distance=..5,tag=ItemLoot378] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-391,y=45,z=-654,distance=..5,tag=!ItemLoot378] run give @s cobblemon:eviolite

@@ -5,6 +5,14 @@
 execute as @s[x=-2098,y=65,z=1311,distance=..10] run opendialogue pick_treecko @s
 
 
+
+
+
+#Also used with multiple advancement-based hitboxes are close together
+execute as @s[x=-395,y=45,z=-655,distance=..10] run opendialogue poochyena_dialogue121 @s
+
+
+
 advancement revoke @s only hoenn:click/box1
 
 #

@@ -377,6 +377,15 @@ execute as @p[x=1595,y=222,z=2440,distance=..60,tag=Dialogue120] run tp @e[x=159
 execute as @p[x=1616,y=247,z=2368,distance=..60,tag=Dialogue120] run tp @e[x=1616,y=247,z=2368,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
 execute as @p[x=1605,y=247,z=2361,distance=..60,tag=Dialogue120] run tp @e[x=1605,y=247,z=2361,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
 
+#------------------------------------------
+#Route 123 - Sets up Poochyena if missing
+execute as @p[x=-402,y=44,z=-643,distance=..10] unless entity @e[x=-395,y=44,z=-655,dy=3,type=cobblemon:pokemon] run pokespawnat -395 45 -655 poochyena no_ai=yes level=20 uncatchable=yes
+execute if entity @p[x=-402,y=44,z=-643,distance=..10] as @e[x=-395,y=44,z=-655,dy=3,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute if entity @p[x=-402,y=44,z=-643,distance=..10] as @e[x=-395,y=44,z=-655,dy=3,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute if entity @p[x=-402,y=44,z=-643,distance=..10] as @e[x=-395,y=44,z=-655,dy=3,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute if entity @p[x=-402,y=44,z=-643,distance=..10] as @e[x=-395,y=44,z=-655,dy=3,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
+
+
 
 #------------------------------------------
 

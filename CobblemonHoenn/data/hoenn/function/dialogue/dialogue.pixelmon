@@ -859,41 +859,6 @@ tellraw @s[scores={DialogueTrigger=112,TalkTime=1}] {"text":"<Aarune> And enjoy 
 tag @s[scores={DialogueTrigger=112,TalkTime=100..}] add Dialogue112
 
 #-----------------------------------------------------------------------------------------------------
-#Dialogue 121 - Route 123
-#Poochyena giving mega stone
-#https://youtu.be/MgkqxXCmrtI?t=45180
-
-tellraw @s[scores={DialogueTrigger=121,TalkTime=1}] {"text":"<Poochyena> Gromp gromp gromp..."}
-tellraw @s[scores={DialogueTrigger=121,TalkTime=8}] {"text":"It seems like something is bothering Chomper... Could you give it a little scratch?","italic":true,"color":"gray"}
-tellraw @s[scores={DialogueTrigger=121,TalkTime=17}] {"text":"<Poochyena> Grrrmph! Rahk! Hack!"}
-
-tellraw @s[scores={DialogueTrigger=121,TalkTime=24}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained a Gyaradosite!","italic":true,"color":"gray"}]
-execute as @s[scores={DialogueTrigger=121,TalkTime=24}] run give @s pixelmon:gyaradosite
-execute as @s[scores={DialogueTrigger=121,TalkTime=24}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-
-tellraw @s[scores={DialogueTrigger=121,TalkTime=31}] {"text":"<Poochyena> Grrromp!"}
-
-tag @s[scores={DialogueTrigger=121,TalkTime=31..}] add Dialogue121
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 122 - Route 123
-
-#Dialogue, if player picks Magikarp
-tellraw @s[scores={DialogueTrigger=122,TalkTime=1}] {"text":"<Fisherman> Play along with an old man, would you? Tell me which Pokémon you like best. Magikarp or Gyarados?"}
-tellraw @s[scores={DialogueTrigger=122,TalkTime=11}] {"text":"<Fisherman> Magikarp?"}
-tellraw @s[scores={DialogueTrigger=122,TalkTime=18}] {"text":"<Fisherman> Oh, exactly! You get it, don't you?"}
-tellraw @s[scores={DialogueTrigger=122,TalkTime=25}] {"text":"<Fisherman> I'll have to give you something special I've been holding onto!"}
-
-execute as @s[scores={DialogueTrigger=122,TalkTime=33}] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=122,TalkTime=33}] run give @s pixelmon:eviolite
-tellraw @s[scores={DialogueTrigger=122,TalkTime=33}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained an Eviolite!","italic":true,"color":"gray"}]
-
-tellraw @s[scores={DialogueTrigger=122,TalkTime=40}] {"text":"<Fisherman> That there will boost the Defense and Sp. Def of a Pokémon that can still evolve!"}
-tellraw @s[scores={DialogueTrigger=122,TalkTime=50}] {"text":"<Fisherman> I have my precious Magikarp hold one. Huhuhuhu..."}
-tellraw @s[scores={DialogueTrigger=122,TalkTime=58}] {"text":"<Fisherman> Unevolved Pokémon just get me right there, you know?"}
-tellraw @s[scores={DialogueTrigger=122,TalkTime=66}] {"text":"<Fisherman> They're like... Like a bud that hasn't yet bloomed!"}
-
-tag @s[scores={DialogueTrigger=122,TalkTime=66..}] add Dialogue122
-#-----------------------------------------------------------------------------------------------------
 #Dialogue 123 - Slateport City
 #Slateport Harbor
 #https://youtu.be/MgkqxXCmrtI?t=46181
