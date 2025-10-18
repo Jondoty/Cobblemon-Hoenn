@@ -521,7 +521,16 @@ execute as @a[x=2218,y=78,z=2704,distance=..10,tag=HarborGrunt1,tag=HarborGrunt2
 execute as @a[x=2218,y=78,z=2704,distance=..10,tag=HarborGrunt1,tag=HarborGrunt2,tag=!Dialogue126,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue126 @s
 
 
+#Lilycove Rival battle
+#May
+execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=1,StarterPick=1}] unless entity @e[x=566,y=73,z=-1055,dy=3,type=cobblemon:npc] run npcspawnat 566 74 -1055 lilycove_may1
+execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=1,StarterPick=2}] unless entity @e[x=566,y=73,z=-1055,dy=3,type=cobblemon:npc] run npcspawnat 566 74 -1055 lilycove_may2
+execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=1,StarterPick=3}] unless entity @e[x=566,y=73,z=-1055,dy=3,type=cobblemon:npc] run npcspawnat 566 74 -1055 lilycove_may3
 
+#Brendan
+execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=2,StarterPick=1}] unless entity @e[x=566,y=73,z=-1055,dy=3,type=cobblemon:npc] run npcspawnat 566 74 -1055 lilycove_brendan1
+execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=2,StarterPick=2}] unless entity @e[x=566,y=73,z=-1055,dy=3,type=cobblemon:npc] run npcspawnat 566 74 -1055 lilycove_brendan2
+execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=2,StarterPick=3}] unless entity @e[x=566,y=73,z=-1055,dy=3,type=cobblemon:npc] run npcspawnat 566 74 -1055 lilycove_brendan3
 
 
 
