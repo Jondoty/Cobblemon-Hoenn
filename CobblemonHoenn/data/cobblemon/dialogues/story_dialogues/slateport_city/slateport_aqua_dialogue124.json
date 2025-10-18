@@ -1,0 +1,432 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "stern": {
+            "name": "Captain Stern",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:stern",
+                "isLeftSide": true
+            }
+        },
+        "grunt": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": false
+            }
+        },
+        "grunt2": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": true
+            }
+        },
+        "leader": {
+            "name": "Archie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:archie",
+                "isLeftSide": false
+            }
+        },
+        "admin": {
+            "name": "Aqua Admin Shelly",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shelly",
+                "isLeftSide": false
+            }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "leader",
+            "lines": [
+                "Impossible! You actually followed us all the way from Mt. Pyre?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "leader",
+            "lines": [
+                "Grah-hah! You got me! I bow to your persistence and love of justice!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "leader",
+            "lines": [
+                "Bwaha! Bwahahahahah!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "leader",
+            "lines": [
+                "It's a pity, so it is, but we're well past the time when you and your best efforts could turn the tide."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "leader",
+            "lines": [
+                "We'll add a few last touches to this submarine, and we'll be all set to bust open the Seafloor Cavern where that great Pokémon is sleeping."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "leader",
+            "lines": [
+                "Our plans to return everything to the beginning..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "leader",
+            "lines": [
+                "They're as good as complete!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "leader",
+            "lines": [
+                "But I know you gotta do what you gotta do, scamp."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "leader",
+            "lines": [
+                "I'm not gonna tell ya to quit chasing us..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "leader",
+            "lines": [
+                "Follow us all the way to our hideout in Lilycove, if that's what your honor demands."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "leader",
+            "lines": [
+                "Now then... Shelly?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "admin",
+            "lines": [
+                "...Got it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page13');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "admin",
+            "lines": [
+                "You guys! Keep that spoiled brat busy until the submarine takes off."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2201 79 2704 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2201 79 2701 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=2201,y=79,z=2701,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2701 slateport_teamaquagrunt1');",
+                            "q.run_command('execute unless entity @e[x=2201,y=79,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2704 slateport_teamaquagrunt2');",
+                            "q.dialogue.set_page('page14');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "grunt",
+            "lines": [
+                "Aye aye!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page15');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "grunt2",
+            "lines": [
+                "Ma'am!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page16');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "admin",
+            "lines": [
+                "Let's go. Archie..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page17');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "leader",
+            "lines": [
+                "Got it. We'll see you there, then!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page18');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "leader",
+            "lines": [
+                "My little scamp adversary! Grahahaha! Bwahahahahahahah!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2207 79 2699 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2210 79 2699 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2207,y=79,z=2699,dy=3] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2210,y=79,z=2699,dy=3] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },    
+        {
+            "id": "page19",
+            "speaker": "grunt",
+            "lines": [
+                "I can fight like Poseidon even on land!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue124');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

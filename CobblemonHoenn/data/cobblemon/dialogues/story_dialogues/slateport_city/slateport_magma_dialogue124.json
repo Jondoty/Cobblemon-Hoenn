@@ -1,0 +1,396 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "stern": {
+            "name": "Captain Stern",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:stern",
+                "isLeftSide": true
+            }
+        },
+        "grunt": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntm",
+                "isLeftSide": false
+            }
+        },
+        "grunt2": {
+            "name": "Team Magma Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teammagmagruntm",
+                "isLeftSide": true
+            }
+        },
+        "leader": {
+            "name": "Maxie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:maxie",
+                "isLeftSide": false
+            }
+        },
+        "admin": {
+            "name": "Magma Admin Tabitha",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:tabitha",
+                "isLeftSide": false
+            }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "leader",
+            "lines": [
+                "Hmph..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "leader",
+            "lines": [
+                "So you have bothered to chase me, Maxie, all the way here from Mt. Pyre..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "leader",
+            "lines": [
+                "Hohoho."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "leader",
+            "lines": [
+                "You have earned my respect for the persistence you have shown."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "leader",
+            "lines": [
+                "However... None can stop us now."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "leader",
+            "lines": [
+                "All that remains is to retrofit this submarine and force our way into the Seafloor Cavern, where the great Pokémon sleeps..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "leader",
+            "lines": [
+                "Our plans to propel humanity to its ultimate heights have entered their final stage."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "leader",
+            "lines": [
+                "If you wish to prolong your futile struggle, I will not deny your right to try."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "leader",
+            "lines": [
+                "Our hideout lies in Lilycove City. Follow us to our very door if you feel that justice demands it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "leader",
+            "lines": [
+                "And now I must be going. Tabitha!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "admin",
+            "lines": [
+                "We are in accord, Leader Maxie... You Grunts, there!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "admin",
+            "lines": [
+                "Until our Leader and I, your Admin, have made our escape in the submarine, stay here and buy us some time!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2201 79 2704 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2201 79 2701 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=2201,y=79,z=2701,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2701 slateport_teammagmagrunt1');",
+                            "q.run_command('execute unless entity @e[x=2201,y=79,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2704 slateport_teammagmagrunt2');",
+                            "q.dialogue.set_page('page14');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "grunt",
+            "lines": [
+                "Yessir!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page15');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "grunt2",
+            "lines": [
+                "Yessir!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page16');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "admin",
+            "lines": [
+                "This way, Leader Maxie... We should make haste."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page17');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "leader",
+            "lines": [
+                "Let us go."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2207 79 2699 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2210 79 2699 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2207,y=79,z=2699,dy=3] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[type=cobblemon:npc,x=2210,y=79,z=2699,dy=3] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },    
+        {
+            "id": "page19",
+            "speaker": "grunt",
+            "lines": [
+                "This is not just for buying time. I'll flatten you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue124');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

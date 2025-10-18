@@ -272,6 +272,100 @@ execute as @s[x=2304,y=110,z=-2501,distance=..10,tag=!Dialogue81,scores={Rival=2
 #execute as @s[x=2297,y=110,z=-2503,distance=..30,tag=!Dialogue81,scores={Rival=2,GameVersion=2}] run opendialogue rivalleader_aqua_brendan_dialogue82 @s
 
 
+#------------------------------------------
+
+#Mt. Chimney Sets up all NPCs
+
+#Makes all Poochyena on the mountain persistent and unbattleable
+execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
+
+
+#Blocks southern path off caldera
+execute as @a[x=-1892,y=200,z=-3126,dx=25,dy=15,dz=20,tag=!Dialogue88] at @s run tp @s ~ 210 ~-6
+
+execute as @p[x=-1888,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1888,y=209,z=-3126,dy=3,type=cobblemon:npc] run npcspawnat -1888 210 -3126 mtchimney_teamaquagruntmale
+execute as @p[x=-1871,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1871,y=209,z=-3126,dy=3,type=cobblemon:npc] run npcspawnat -1871 210 -3126 mtchimney_teammagmagruntmale
+
+execute as @p[x=-1871,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1876,y=210,z=-3126,distance=..3,type=cobblemon:pokemon] run pokespawnat -1876 210 -3126 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @p[x=-1883,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1883,y=210,z=-3126,distance=..3,type=cobblemon:pokemon] run pokespawnat -1883 210 -3126 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @e[x=-1876,y=210,z=-3126,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
+execute as @e[x=-1883,y=210,z=-3126,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
+
+
+#Group 2 NPCs
+execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1841,y=234,z=-3268,dy=3,type=cobblemon:npc] run npcspawnat -1841 235 -3268 mtchimney_teamaquagruntmale2
+execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1826,y=234,z=-3268,dy=3,type=cobblemon:npc] run npcspawnat -1826 235 -3268 mtchimney_teammagmagruntmale2
+execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1831,y=234,z=-3268,dy=3,type=cobblemon:pokemon] run pokespawnat -1831 235 -3268 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1836,y=234,z=-3268,dy=3,type=cobblemon:pokemon] run pokespawnat -1836 235 -3268 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @e[x=-1831,y=235,z=-3268,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
+execute as @e[x=-1836,y=235,z=-3268,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
+
+#Group 3 NPCs
+execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1782,y=234,z=-3293,dy=3,type=cobblemon:npc] run npcspawnat -1782 235 -3293 mtchimney_teamaquagruntmale3
+execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1767,y=234,z=-3293,dy=3,type=cobblemon:npc] run npcspawnat -1767 235 -3293 mtchimney_teammagmagruntmale3
+execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1772,y=234,z=-3293,dy=3,type=cobblemon:pokemon] run pokespawnat -1772 235 -3293 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1777,y=234,z=-3293,dy=3,type=cobblemon:pokemon] run pokespawnat -1777 235 -3293 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @e[x=-1772,y=235,z=-3293,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
+execute as @e[x=-1777,y=235,z=-3293,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
+
+
+#Group 4 w/ leader
+#Magma main, three of the magma team
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1924,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1924 235 -3269 mtchimney_archie
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1937,y=234,z=-3261,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3261 mtchimney_teammagmagruntmale4
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1942,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1942 235 -3269 mtchimney_teammagmagruntmale5
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1937,y=234,z=-3277,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3277 mtchimney_teammagmagruntmale6
+
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1928,y=234,z=-3269,dy=3,type=cobblemon:pokemon] run pokespawnat -1928 235 -3269 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1934,y=234,z=-3264,dy=3,type=cobblemon:pokemon] run pokespawnat -1934 235 -3264 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1938,y=234,z=-3269,dy=3,type=cobblemon:pokemon] run pokespawnat -1938 235 -3269 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1934,y=234,z=-3274,dy=3,type=cobblemon:pokemon] run pokespawnat -1934 235 -3274 poochyena no_ai=yes level=20 uncatchable=yes
+execute as @e[x=-1938,y=235,z=-3269,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
+execute as @e[x=-1928,y=235,z=-3269,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
+execute as @e[x=-1934,y=235,z=-3264,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 180 ~
+
+#Aqua main, three of the aqua team
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1924,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1924 235 -3269 mtchimney_maxie
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1937,y=234,z=-3261,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3261 mtchimney_teamaquagruntmale4
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1942,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1942 235 -3269 mtchimney_teamaquagruntmale5
+execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1937,y=234,z=-3277,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3277 mtchimney_teamaquagruntmale6
+
+
+#Trainer guarding the volcano area
+execute as @p[x=-1994,y=235,z=-3266,distance=..30,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1997,y=234,z=-3283,dy=3,type=cobblemon:npc] run npcspawnat -1997 235 -3283 mtchimney_magma_grunt1
+execute as @p[x=-1994,y=235,z=-3266,distance=..30,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1997,y=234,z=-3283,dy=3,type=cobblemon:npc] run npcspawnat -1997 235 -3283 mtchimney_aqua_grunt1
+
+
+#Team Admin Trainer Spawn
+execute as @p[x=-2009,y=235,z=-3350,distance=..40,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] run npcspawnat -2009 235 -3350 mtchimney_magma_tabitha
+execute as @p[x=-2009,y=235,z=-3350,distance=..40,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] run npcspawnat -2009 235 -3350 mtchimney_aqua_shelly
+
+
+#Spawns Maxie/Archie main Trainer
+execute as @p[x=-1893,y=235,z=-3374,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1893,y=234,z=-3374,dy=3,type=cobblemon:npc] run npcspawnat -1893 236 -3374 mtchimney_magma_maxie
+execute as @p[x=-1893,y=235,z=-3374,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1893,y=234,z=-3374,dy=3,type=cobblemon:npc] run npcspawnat -1893 236 -3374 mtchimney_aqua_archie
+
+
+
+
+#Clears out all NPCs when player has beaten the boss
+execute as @p[x=-2009,y=235,z=-3350,distance=..75,tag=Dialogue88] if entity @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] run tp @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=-1997,y=234,z=-3283,distance=..75,tag=Dialogue88] if entity @e[x=-1997,y=235,z=-3283,dy=3,type=cobblemon:npc] run tp @e[x=-1997,y=235,z=-3283,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=-1933,y=235,z=-3269,distance=..75,tag=Dialogue88] if entity @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:npc] run tp @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=-1933,y=235,z=-3269,distance=..75,tag=Dialogue88] if entity @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @p[x=-1834,y=235,z=-3268,distance=..75,tag=Dialogue88] if entity @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:npc] run tp @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=-1834,y=235,z=-3268,distance=..75,tag=Dialogue88] if entity @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @p[x=-1774,y=235,z=-3293,distance=..75,tag=Dialogue88] if entity @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:npc] run tp @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=-1774,y=235,z=-3293,distance=..75,tag=Dialogue88] if entity @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @p[x=-1879,y=210,z=-3126,distance=..75,tag=Dialogue88] if entity @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:npc] run tp @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=-1879,y=210,z=-3126,distance=..75,tag=Dialogue88] if entity @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
+
+
+#------------------------------------------
+
 #Lavaridge Town, Rival granting Go-Goggles after the gym badge
 execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=1}] unless entity @e[x=-2036,y=84,z=-1044,dy=3,type=cobblemon:npc] run npcspawnat -2036 84 -1044 may_generic
 execute as @s[x=-2036,y=84,z=-1044,distance=..10,tag=Flannery,tag=!Dialogue91,scores={Rival=2}] unless entity @e[x=-2036,y=84,z=-1044,dy=3,type=cobblemon:npc] run npcspawnat -2036 84 -1044 brendan_generic
@@ -386,106 +480,45 @@ execute if entity @p[x=-402,y=44,z=-643,distance=..10] as @e[x=-395,y=44,z=-655,
 execute if entity @p[x=-402,y=44,z=-643,distance=..10] as @e[x=-395,y=44,z=-655,dy=3,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
 
 
+#Slateport City - Team stealing submarine
+execute as @a[x=-1420,y=64,z=219,distance=..10,tag=Dialogue120,tag=!Dialogue123,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue123 @s
+execute as @a[x=-1420,y=64,z=219,distance=..10,tag=Dialogue120,tag=!Dialogue123,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue123 @s
 
-#------------------------------------------
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1408,y=64,z=205,dy=3,type=cobblemon:npc] run npcspawnat -1408 64 205 stern_generic
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1408,y=64,z=208,dy=3,type=cobblemon:npc] run npcspawnat -1408 64 208 lass_generic
 
-#Mt. Chimney Sets up all NPCs
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1415,y=64,z=209,dy=3,type=cobblemon:npc] run npcspawnat -1415 64 209 lady_generic
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1414,y=64,z=213,dy=3,type=cobblemon:npc] run npcspawnat -1414 64 213 youngster_generic
 
-#Makes all Poochyena on the mountain persistent and unbattleable
-execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
-execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
-execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
-execute if entity @p[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,tag=!Dialogue88] as @e[x=-2215,y=200,z=-3623,dx=686,dy=256,dz=522,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1409,y=64,z=216,dy=3,type=cobblemon:npc] run npcspawnat -1409 64 216 aromalady_generic
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1407,y=64,z=216,dy=3,type=cobblemon:npc] run npcspawnat -1407 64 216 richman_generic
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1405,y=64,z=216,dy=3,type=cobblemon:npc] run npcspawnat -1405 64 216 oldman_generic
 
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1402,y=64,z=211,dy=3,type=cobblemon:npc] run npcspawnat -1402 64 211 gentleman_generic
+execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1399,y=64,z=211,dy=3,type=cobblemon:npc] run npcspawnat -1399 64 211 oldman_generic
 
-#Blocks southern path off caldera
-execute as @a[x=-1892,y=200,z=-3126,dx=25,dy=15,dz=20,tag=!Dialogue88] at @s run tp @s ~ 210 ~-6
+#Dialoges 124-126, Slateport stealing submarine
+execute as @a[x=2209,y=78,z=2698,distance=..10,tag=!Dialogue124,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue124 @s
+execute as @a[x=2209,y=78,z=2698,distance=..10,tag=!Dialogue124,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue124 @s
 
-execute as @p[x=-1888,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1888,y=209,z=-3126,dy=3,type=cobblemon:npc] run npcspawnat -1888 210 -3126 mtchimney_teamaquagruntmale
-execute as @p[x=-1871,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1871,y=209,z=-3126,dy=3,type=cobblemon:npc] run npcspawnat -1871 210 -3126 mtchimney_teammagmagruntmale
+execute as @a[x=2209,y=78,z=2704,distance=..20,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=2218,y=78,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2218 78 2704 stern_generic
 
-execute as @p[x=-1871,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1876,y=210,z=-3126,distance=..3,type=cobblemon:pokemon] run pokespawnat -1876 210 -3126 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @p[x=-1883,y=210,z=-3126,distance=..50,tag=!Dialogue88] unless entity @e[x=-1883,y=210,z=-3126,distance=..3,type=cobblemon:pokemon] run pokespawnat -1883 210 -3126 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @e[x=-1876,y=210,z=-3126,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
-execute as @e[x=-1883,y=210,z=-3126,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
+#Admin and Leader that teleport out
+execute as @a[x=2218,y=78,z=2704,distance=..20,tag=!Dialogue124,scores={GameVersion=1}] unless entity @e[x=2207,y=78,z=2699,dy=3,type=cobblemon:npc] run npcspawnat 2207 79 2699 maxie_generic
+execute as @a[x=2218,y=78,z=2704,distance=..20,tag=!Dialogue124,scores={GameVersion=1}] unless entity @e[x=2210,y=78,z=2699,dy=3,type=cobblemon:npc] run npcspawnat 2210 79 2699 tabitha_generic
+execute as @a[x=2218,y=78,z=2704,distance=..20,tag=!Dialogue124,scores={GameVersion=2}] unless entity @e[x=2207,y=78,z=2699,dy=3,type=cobblemon:npc] run npcspawnat 2207 79 2699 archie_generic
+execute as @a[x=2218,y=78,z=2704,distance=..20,tag=!Dialogue124,scores={GameVersion=2}] unless entity @e[x=2210,y=78,z=2699,dy=3,type=cobblemon:npc] run npcspawnat 2210 79 2699 shelly_generic
 
-
-#Group 2 NPCs
-execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1841,y=234,z=-3268,dy=3,type=cobblemon:npc] run npcspawnat -1841 235 -3268 mtchimney_teamaquagruntmale2
-execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1826,y=234,z=-3268,dy=3,type=cobblemon:npc] run npcspawnat -1826 235 -3268 mtchimney_teammagmagruntmale2
-execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1831,y=234,z=-3268,dy=3,type=cobblemon:pokemon] run pokespawnat -1831 235 -3268 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @p[x=-1841,y=234,z=-3268,distance=..50,tag=!Dialogue88] unless entity @e[x=-1836,y=234,z=-3268,dy=3,type=cobblemon:pokemon] run pokespawnat -1836 235 -3268 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @e[x=-1831,y=235,z=-3268,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
-execute as @e[x=-1836,y=235,z=-3268,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
-
-#Group 3 NPCs
-execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1782,y=234,z=-3293,dy=3,type=cobblemon:npc] run npcspawnat -1782 235 -3293 mtchimney_teamaquagruntmale3
-execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1767,y=234,z=-3293,dy=3,type=cobblemon:npc] run npcspawnat -1767 235 -3293 mtchimney_teammagmagruntmale3
-execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1772,y=234,z=-3293,dy=3,type=cobblemon:pokemon] run pokespawnat -1772 235 -3293 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @p[x=-1782,y=235,z=-3293,distance=..50,tag=!Dialogue88] unless entity @e[x=-1777,y=234,z=-3293,dy=3,type=cobblemon:pokemon] run pokespawnat -1777 235 -3293 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @e[x=-1772,y=235,z=-3293,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
-execute as @e[x=-1777,y=235,z=-3293,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
+#Grunts to battle
+execute as @a[x=2201,y=79,z=2701,distance=..10,tag=Dialogue124,tag=!Dialogue126,scores={GameVersion=1}] unless entity @e[x=2201,y=79,z=2701,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2701 slateport_teammagmagrunt1
+execute as @a[x=2201,y=79,z=2704,distance=..10,tag=Dialogue124,tag=!Dialogue126,scores={GameVersion=1}] unless entity @e[x=2201,y=79,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2704 slateport_teammagmagrunt2
+execute as @a[x=2201,y=79,z=2701,distance=..10,tag=Dialogue124,tag=!Dialogue126,scores={GameVersion=2}] unless entity @e[x=2201,y=79,z=2701,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2701 slateport_teamaquagrunt1
+execute as @a[x=2201,y=79,z=2704,distance=..10,tag=Dialogue124,tag=!Dialogue126,scores={GameVersion=2}] unless entity @e[x=2201,y=79,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2704 slateport_teamaquagrunt2
 
 
-#Group 4 w/ leader
-#Magma main, three of the magma team
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1924,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1924 235 -3269 mtchimney_archie
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1937,y=234,z=-3261,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3261 mtchimney_teammagmagruntmale4
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1942,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1942 235 -3269 mtchimney_teammagmagruntmale5
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1937,y=234,z=-3277,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3277 mtchimney_teammagmagruntmale6
-
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1928,y=234,z=-3269,dy=3,type=cobblemon:pokemon] run pokespawnat -1928 235 -3269 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1934,y=234,z=-3264,dy=3,type=cobblemon:pokemon] run pokespawnat -1934 235 -3264 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1938,y=234,z=-3269,dy=3,type=cobblemon:pokemon] run pokespawnat -1938 235 -3269 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88] unless entity @e[x=-1934,y=234,z=-3274,dy=3,type=cobblemon:pokemon] run pokespawnat -1934 235 -3274 poochyena no_ai=yes level=20 uncatchable=yes
-execute as @e[x=-1938,y=235,z=-3269,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ -90 ~
-execute as @e[x=-1928,y=235,z=-3269,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 90 ~
-execute as @e[x=-1934,y=235,z=-3264,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 180 ~
-
-#Aqua main, three of the aqua team
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1924,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1924 235 -3269 mtchimney_maxie
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1937,y=234,z=-3261,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3261 mtchimney_teamaquagruntmale4
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1942,y=234,z=-3269,dy=3,type=cobblemon:npc] run npcspawnat -1942 235 -3269 mtchimney_teamaquagruntmale5
-execute as @p[x=-1924,y=235,z=-3269,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1937,y=234,z=-3277,dy=3,type=cobblemon:npc] run npcspawnat -1937 235 -3277 mtchimney_teamaquagruntmale6
-
-
-#Trainer guarding the volcano area
-execute as @p[x=-1994,y=235,z=-3266,distance=..30,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1997,y=234,z=-3283,dy=3,type=cobblemon:npc] run npcspawnat -1997 235 -3283 mtchimney_magma_grunt1
-execute as @p[x=-1994,y=235,z=-3266,distance=..30,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1997,y=234,z=-3283,dy=3,type=cobblemon:npc] run npcspawnat -1997 235 -3283 mtchimney_aqua_grunt1
-
-
-#Team Admin Trainer Spawn
-execute as @p[x=-2009,y=235,z=-3350,distance=..40,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] run npcspawnat -2009 235 -3350 mtchimney_magma_tabitha
-execute as @p[x=-2009,y=235,z=-3350,distance=..40,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] run npcspawnat -2009 235 -3350 mtchimney_aqua_shelly
-
-
-#Spawns Maxie/Archie main Trainer
-execute as @p[x=-1893,y=235,z=-3374,distance=..50,tag=!Dialogue88,scores={GameVersion=1}] unless entity @e[x=-1893,y=234,z=-3374,dy=3,type=cobblemon:npc] run npcspawnat -1893 236 -3374 mtchimney_magma_maxie
-execute as @p[x=-1893,y=235,z=-3374,distance=..50,tag=!Dialogue88,scores={GameVersion=2}] unless entity @e[x=-1893,y=234,z=-3374,dy=3,type=cobblemon:npc] run npcspawnat -1893 236 -3374 mtchimney_aqua_archie
-
-
-
-
-#Clears out all NPCs when player has beaten the boss
-execute as @p[x=-2009,y=235,z=-3350,distance=..75,tag=Dialogue88] if entity @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] run tp @e[x=-2009,y=234,z=-3350,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @p[x=-1997,y=234,z=-3283,distance=..75,tag=Dialogue88] if entity @e[x=-1997,y=235,z=-3283,dy=3,type=cobblemon:npc] run tp @e[x=-1997,y=235,z=-3283,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @p[x=-1933,y=235,z=-3269,distance=..75,tag=Dialogue88] if entity @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:npc] run tp @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @p[x=-1933,y=235,z=-3269,distance=..75,tag=Dialogue88] if entity @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1933,y=235,z=-3269,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
-execute as @p[x=-1834,y=235,z=-3268,distance=..75,tag=Dialogue88] if entity @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:npc] run tp @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @p[x=-1834,y=235,z=-3268,distance=..75,tag=Dialogue88] if entity @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1834,y=235,z=-3268,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
-execute as @p[x=-1774,y=235,z=-3293,distance=..75,tag=Dialogue88] if entity @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:npc] run tp @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @p[x=-1774,y=235,z=-3293,distance=..75,tag=Dialogue88] if entity @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1774,y=235,z=-3293,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
-execute as @p[x=-1879,y=210,z=-3126,distance=..75,tag=Dialogue88] if entity @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:npc] run tp @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @p[x=-1879,y=210,z=-3126,distance=..75,tag=Dialogue88] if entity @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] run tp @e[x=-1879,y=210,z=-3126,distance=..10,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
-
-
-#------------------------------------------
-
-
-
-
-
-
+#Once both grunts are beaten
+execute as @a[x=2218,y=78,z=2704,distance=..10,tag=HarborGrunt1,tag=HarborGrunt2,tag=!Dialogue126,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue126 @s
+execute as @a[x=2218,y=78,z=2704,distance=..10,tag=HarborGrunt1,tag=HarborGrunt2,tag=!Dialogue126,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue126 @s
 
 
 

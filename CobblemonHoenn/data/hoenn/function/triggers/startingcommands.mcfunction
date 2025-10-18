@@ -65,6 +65,8 @@ tag @s remove SeashoreTrainer4
 tag @s remove SeashoreTrainer5
 tag @s remove MuseumGrunt1
 tag @s remove MuseumGrunt2
+tag @s remove HarborGrunt1
+tag @s remove HarborGrunt2
 
 
 #Removes Mega Stone Fount tags
