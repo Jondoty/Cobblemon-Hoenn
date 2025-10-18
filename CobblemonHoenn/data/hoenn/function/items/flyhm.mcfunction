@@ -5,8 +5,8 @@ tag @s add Fly
 scoreboard players set @s click 0
 
 #If the player does not have the Fortree City Badge
-tellraw @s[tag=!Dialogue118] ["",{"text":"Your father's words echo in your mind... ","italic":true,"color":"gray"},{"selector":"@s","italic":true,"color":"gray"},{"text":"! This isn't the time for that!\"","italic":true,"color":"gray"}]
-tag @s[tag=!Dialogue118] remove Fly
+tellraw @s[tag=!Winona] ["",{"text":"Your father's words echo in your mind... ","italic":true,"color":"gray"},{"selector":"@s","italic":true,"color":"gray"},{"text":"! This isn't the time for that!\"","italic":true,"color":"gray"}]
+tag @s[tag=!Winona] remove Fly
 
 
 #When the player is in a dialogue
