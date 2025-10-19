@@ -538,6 +538,31 @@ execute as @s[x=1566,y=74,z=-1035,distance=..10,tag=LizaTate,tag=!Dialogue139] r
 
 
 
+#Seafloor Cavern Spawns Grunts during takeover
+execute as @p[x=906,y=65,z=-2683,distance=..40,tag=!Dialogue141,scores={GameVersion=1}] unless entity @e[x=906,y=65,z=-2683,dy=3,type=cobblemon:npc] run npcspawnat 906 65 -2683 seafloor_team_magma_grunt1
+execute as @p[x=941,y=70,z=-2665,distance=..40,tag=!Dialogue141,scores={GameVersion=1}] unless entity @e[x=941,y=70,z=-2665,dy=3,type=cobblemon:npc] run npcspawnat 941 70 -2665 seafloor_team_magma_grunt2
+execute as @p[x=1072,y=65,z=-2880,distance=..40,tag=!Dialogue141,scores={GameVersion=1}] unless entity @e[x=1072,y=65,z=-2880,dy=3,type=cobblemon:npc] run npcspawnat 1072 65 -2880 seafloor_team_magma_grunt3
+execute as @p[x=886,y=75,z=-2846,distance=..40,tag=!Dialogue141,scores={GameVersion=1}] unless entity @e[x=886,y=75,z=-2846,dy=3,type=cobblemon:npc] run npcspawnat 886 75 -2846 seafloor_team_magma_grunt4
+execute as @p[x=1100,y=75,z=-3042,distance=..40,tag=!Dialogue141,scores={GameVersion=1}] unless entity @e[x=1100,y=75,z=-3042,dy=3,type=cobblemon:npc] run npcspawnat 1100 75 -3042 seafloor_team_magma_grunt5
+execute as @p[x=885,y=74,z=-3168,distance=..40,tag=!Dialogue141,scores={GameVersion=1}] unless entity @e[x=885,y=74,z=-3168,dy=3,type=cobblemon:npc] run npcspawnat 885 74 -3168 seafloor_maxie
+
+execute as @p[x=906,y=65,z=-2683,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=906,y=65,z=-2683,dy=3,type=cobblemon:npc] run npcspawnat 906 65 -2683 seafloor_team_aqua_grunt1
+execute as @p[x=941,y=70,z=-2665,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=941,y=70,z=-2665,dy=3,type=cobblemon:npc] run npcspawnat 941 70 -2665 seafloor_team_aqua_grunt2
+execute as @p[x=1072,y=65,z=-2880,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=1072,y=65,z=-2880,dy=3,type=cobblemon:npc] run npcspawnat 1072 65 -2880 seafloor_team_aqua_grunt3
+execute as @p[x=886,y=75,z=-2846,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=886,y=75,z=-2846,dy=3,type=cobblemon:npc] run npcspawnat 886 75 -2846 seafloor_team_aqua_grunt4
+execute as @p[x=1100,y=75,z=-3042,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=1100,y=75,z=-3042,dy=3,type=cobblemon:npc] run npcspawnat 1100 75 -3042 seafloor_team_aqua_grunt5
+execute as @p[x=885,y=74,z=-3168,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=885,y=74,z=-3168,dy=3,type=cobblemon:npc] run npcspawnat 885 117 -3164 seafloor_archie
+
+#Clears NPCs
+execute as @p[x=906,y=65,z=-2683,distance=..60,tag=Dialogue141] run tp @e[x=906,y=65,z=-2683,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=941,y=70,z=-2665,distance=..60,tag=Dialogue141] run tp @e[x=941,y=70,z=-2665,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=1072,y=65,z=-2880,distance=..60,tag=Dialogue141] run tp @e[x=1072,y=65,z=-2880,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=886,y=75,z=-2846,distance=..60,tag=Dialogue141] run tp @e[x=886,y=75,z=-2846,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=1100,y=75,z=-3042,distance=..60,tag=Dialogue141] run tp @e[x=1100,y=75,z=-3042,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=885,y=74,z=-3164,distance=..60,tag=Dialogue141] run tp @e[x=885,y=74,z=-3164,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=885,y=117,z=-3164,distance=..60,tag=Dialogue141] run tp @e[x=885,y=117,z=-3164,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+
+
 
 
 

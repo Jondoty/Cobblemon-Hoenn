@@ -8,7 +8,7 @@
   ],
   "speakers": {
     "npc": {
-      "name": "Team Aqua Grunt1",
+      "name": "Team Aqua Grunt",
       "face": {
         "type": "artificial",
         "modelType": "npc",

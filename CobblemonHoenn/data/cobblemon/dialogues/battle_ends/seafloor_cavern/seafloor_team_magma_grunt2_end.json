@@ -8,7 +8,7 @@
   ],
   "speakers": {
     "npc": {
-      "name": "Team Magma Grunt2",
+      "name": "Team Magma Grunt",
       "face": {
         "type": "artificial",
         "modelType": "npc",
