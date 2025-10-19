@@ -33,7 +33,7 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
-        "I came here 'cause my uncle told me that there are extraordinary treasures in this abandoned building."
+        "I came here 'cause my uncle told me that there are extraordinary treasures in this abandoned building. "
       ],
       "input": {
         "type": "option",
@@ -51,7 +51,7 @@
       "id": "page3",
       "speaker": "npc",
       "lines": [
-        "Don't you know anything about them? Well, how would you know..."
+        "Don't you know anything about them? Well, how would you know... "
       ],
       "input": {
         "type": "option",
@@ -67,24 +67,6 @@
     },
     {
       "id": "page4",
-      "speaker": "npc",
-      "lines": [
-        "But if you learn anything, tell me, kid. Understand?"
-      ],
-      "input": {
-        "type": "option",
-        "vertical": false,
-        "options": [
-          {
-            "text": "Next",
-            "value": "next",
-            "action": "q.dialogue.set_page('page5');"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page5",
       "speaker": "npc",
       "lines": [
         "But if you learn anything, tell me, kid. Understand?"

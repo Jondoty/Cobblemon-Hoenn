@@ -533,7 +533,8 @@ execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=2,
 execute as @s[x=566,y=74,z=-1055,distance=..20,tag=!Dialogue129,scores={Rival=2,StarterPick=3}] unless entity @e[x=566,y=73,z=-1055,dy=3,type=cobblemon:npc] run npcspawnat 566 74 -1055 lilycove_brendan3
 
 
-
+#Dialogue 139 - Mossdeep City upon exiting the gym
+execute as @s[x=1566,y=74,z=-1035,distance=..10,tag=LizaTate,tag=!Dialogue139] run scoreboard players set @s DialogueTrigger 139
 
 
 
