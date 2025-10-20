@@ -157,11 +157,110 @@ execute as @s[tag=!RadioOff,scores={BattleStart=39}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=39}] run playsound zinnia record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=39}] run scoreboard players set @s MusicCooldown 256
 
+#----------------------------------------------------------------------------
+#Wild Battles
 
-#Wild Battle
-execute as @s[tag=!RadioOff,scores={BattleStart=40}] run stopsound @s record
-execute as @s[tag=!RadioOff,scores={BattleStart=40}] run playsound wild record @s ~ ~ ~ 1 1 1
-execute as @s[tag=!RadioOff,scores={BattleStart=40}] run scoreboard players set @s MusicCooldown 138
+#Tags for if legendaries are within your area
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:tornadus",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryUnova
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:thundurus",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryUnova
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:landorus",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryUnova
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:dialga",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryDP
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:palkia",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryDP
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:giratina",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryGiratina
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regice",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryRegis
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regigigas",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryRegis
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regirock",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryRegis
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:registeel",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryRegis
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:heatran",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryHeatran
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:cresselia",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:hooh",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryHooh
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:lugia",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLugia
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:tornadus",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:thundurus",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:landorus",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:reshiram",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryUnovaBoxes
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:zekrom",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryUnovaBoxes
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:kyurem",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryUnovaBoxes
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:cobalion",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendarySwords
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:virizion",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendarySwords
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:terrakion",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendarySwords
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:raikou",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryBeasts
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:entei",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryBeasts
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:suicune",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryBeasts
+
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryRayquaza
+
+
+#Plays legendary music tags
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnova] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnova] run playsound unovas record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnova] run scoreboard players set @s MusicCooldown 281
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryDP] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryDP] run playsound dialgapalkia record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryDP] run scoreboard players set @s MusicCooldown 442
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryGiratina] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryGiratina] run playsound giratina record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryGiratina] run scoreboard players set @s MusicCooldown 333
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRegis] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRegis] run playsound regis record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRegis] run scoreboard players set @s MusicCooldown 140
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryHeatran] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryHeatran] run playsound heatran record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryHeatran] run scoreboard players set @s MusicCooldown 152
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryLakes] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryLakes] run playsound laketrio record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryLakes] run scoreboard players set @s MusicCooldown 298
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryHooh] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryHooh] run playsound hooh record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryHooh] run scoreboard players set @s MusicCooldown 228
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryLugia] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryLugia] run playsound lugia record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryLugia] run scoreboard players set @s MusicCooldown 184
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnovaBoxes] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnovaBoxes] run playsound unovamains record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnovaBoxes] run scoreboard players set @s MusicCooldown 378
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendarySwords] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendarySwords] run playsound unovas record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendarySwords] run scoreboard players set @s MusicCooldown 281
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryBeasts] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryBeasts] run playsound dogtrio record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryBeasts] run scoreboard players set @s MusicCooldown 289
+
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRayquaza] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRayquaza] run playsound rayquaza record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRayquaza] run scoreboard players set @s MusicCooldown 137
+
+
+
+
+
+
+
+#Wild Battle, normal
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0}] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0}] run playsound wild record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0}] run scoreboard players set @s MusicCooldown 138
 
 
 
@@ -175,6 +274,18 @@ execute as @s[tag=!RadioOff,scores={BattleStart=40}] run scoreboard players set 
 #Adds a cooldown tag to not loop until player hits MusicCooldown 0 again
 tag @s add BattleMusicCooldown
 
+tag @s remove LegendaryUnova
+tag @s remove LegendaryDP
+tag @s remove LegendaryGiratina
+tag @s remove LegendaryRegis
+tag @s remove LegendaryHeatran
+tag @s remove LegendaryHooh
+tag @s remove LegendaryLugia
+tag @s remove LegendaryLakes
+tag @s remove LegendaryUnovaBoxes
+tag @s remove LegendarySwords
+tag @s remove LegendaryBeasts
+tag @s remove LegendaryRayquaza
 
 
 
