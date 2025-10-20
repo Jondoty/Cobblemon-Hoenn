@@ -551,7 +551,7 @@ execute as @p[x=941,y=70,z=-2665,distance=..40,tag=!Dialogue141,scores={GameVers
 execute as @p[x=1072,y=65,z=-2880,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=1072,y=65,z=-2880,dy=3,type=cobblemon:npc] run npcspawnat 1072 65 -2880 seafloor_team_aqua_grunt3
 execute as @p[x=886,y=75,z=-2846,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=886,y=75,z=-2846,dy=3,type=cobblemon:npc] run npcspawnat 886 75 -2846 seafloor_team_aqua_grunt4
 execute as @p[x=1100,y=75,z=-3042,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=1100,y=75,z=-3042,dy=3,type=cobblemon:npc] run npcspawnat 1100 75 -3042 seafloor_team_aqua_grunt5
-execute as @p[x=885,y=74,z=-3168,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=885,y=74,z=-3168,dy=3,type=cobblemon:npc] run npcspawnat 885 117 -3164 seafloor_archie
+execute as @p[x=885,y=116,z=-3168,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=885,y=74,z=-3168,dy=3,type=cobblemon:npc] run npcspawnat 885 117 -3164 seafloor_archie
 
 #Clears NPCs
 execute as @p[x=906,y=65,z=-2683,distance=..60,tag=Dialogue141] run tp @e[x=906,y=65,z=-2683,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
@@ -562,13 +562,20 @@ execute as @p[x=1100,y=75,z=-3042,distance=..60,tag=Dialogue141] run tp @e[x=110
 execute as @p[x=885,y=74,z=-3164,distance=..60,tag=Dialogue141] run tp @e[x=885,y=74,z=-3164,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
 execute as @p[x=885,y=117,z=-3164,distance=..60,tag=Dialogue141] run tp @e[x=885,y=117,z=-3164,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
 
+#Spawns legendary statues
+execute as @s[x=885,y=74,z=-3164,distance=..60,tag=!Dialogue141] unless entity @e[x=881,y=65,z=-3202,distance=..5,type=cobblemon:pokemon] run pokespawnat 881 65 -3202 groudon level=45 freeze_frame=0.0 no_ai=yes uncatchable=yes aspect=statue
+execute as @s[x=885,y=116,z=-3164,distance=..60,tag=!Dialogue141] unless entity @e[x=884,y=107,z=-3194,distance=..5,type=cobblemon:pokemon] run pokespawnat 884 107 -3194 kyogre level=45 freeze_frame=0.0 no_ai=yes uncatchable=yes aspect=statue
+
+execute as @e[x=813,y=64,z=-3258,dx=140,dy=100,dz=161,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute as @e[x=813,y=64,z=-3258,dx=140,dy=100,dz=161,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute as @e[x=813,y=64,z=-3258,dx=140,dy=100,dz=161,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute as @e[x=813,y=64,z=-3258,dx=140,dy=100,dz=161,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
+execute as @e[x=813,y=64,z=-3258,dx=140,dy=100,dz=161,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 0 ~
 
 
-
-
-
-
-
+#execute positioned as @e[x=881,y=65,z=-3202,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b}] run pokespawnat 881 65 -3202 groudon level=45 uncatchable=yes
+#execute as @e[x=881,y=65,z=-3202,distance=..5,type=cobblemon:pokemon] at @s run tp @s ~ ~ ~ 180 ~
+#tp @e[x=881,y=65,z=-3202,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
 
 
 
