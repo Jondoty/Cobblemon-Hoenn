@@ -588,7 +588,9 @@ execute as @e[x=813,y=64,z=-3258,dx=140,dy=100,dz=161,type=cobblemon:pokemon,nbt
 
 #-----------------------------------------------------------------------------------------------------
 #Legendary Spawns
+#Static spawns on the overworld
 
+#Regirock
 execute as @s[x=-1421,y=37,z=-1049,distance=..10,tag=!RegirockEncounter] unless entity @e[x=-1421,y=37,z=-1133,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction -1421 37 -1133 {width:2,height:3,response:1,Tags:[NPCs]}
 execute as @s[x=-1421,y=37,z=-1049,distance=..10,tag=!RegirockEncounter] unless entity @e[x=-1421,y=37,z=-1133,distance=..5,type=cobblemon:pokemon] run pokespawnat -1421 37 -1133 regirock no_ai=true level=40 moves=bulldoze,curse,ancientpower,irondefense ability=clearbody
 execute positioned -1421 37 -1133 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regirock"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
@@ -596,6 +598,44 @@ execute positioned -1421 37 -1133 as @e[distance=..5,type=cobblemon:pokemon,nbt=
 execute positioned -1421 37 -1133 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regirock"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
 execute positioned -1421 37 -1133 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regirock"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
 
+#Regice
+execute as @s[x=-2802,y=11,z=196,distance=..10,tag=!RegiceEncounter] unless entity @e[x=-2802,y=11,z=117,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction -2802 11 117 {width:2,height:3,response:1,Tags:[NPCs]}
+execute as @s[x=-2802,y=11,z=196,distance=..10,tag=!RegiceEncounter] unless entity @e[x=-2802,y=11,z=117,distance=..5,type=cobblemon:pokemon] run pokespawnat -2802 11 117 regice no_ai=true level=40 moves=bulldoze,curse,ancientpower,amnesia ability=clearbody
+execute positioned -2802 11 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regice"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute positioned -2802 11 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regice"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute positioned -2802 11 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regice"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute positioned -2802 11 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regice"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
+#Registeel
+execute as @s[x=-371,y=37,z=-1237,distance=..10,tag=!RegisteelEncounter] unless entity @e[x=-371,y=37,z=-1324,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction -371 37 -1324 {width:3,height:4,response:1,Tags:[NPCs]}
+execute as @s[x=-371,y=37,z=-1237,distance=..10,tag=!RegisteelEncounter] unless entity @e[x=-371,y=37,z=-1324,distance=..5,type=cobblemon:pokemon] run pokespawnat -371 37 -1324 registeel no_ai=true level=40 moves=irondefense,curse,ancientpower,amnesia ability=clearbody
+execute positioned -371 37 -1324 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:registeel"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute positioned -371 37 -1324 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:registeel"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute positioned -371 37 -1324 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:registeel"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute positioned -371 37 -1324 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:registeel"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
+#Regigigas
+execute as @s[x=-2802,y=-10,z=196,distance=..10,tag=!RegigigasEncounter] unless entity @e[x=-2802,y=-10,z=117,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction -2802 -10 117 {width:5,height:5,response:1,Tags:[NPCs]}
+execute as @s[x=-2802,y=-10,z=196,distance=..10,tag=!RegigigasEncounter] unless entity @e[x=-2802,y=-10,z=117,distance=..5,type=cobblemon:pokemon] run pokespawnat -2802 -10 117 regigigas no_ai=true level=50 moves=foresight,revenge,wideguard,zenheadbutt ability=slowstart
+execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regigigas"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regigigas"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regigigas"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regigigas"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
+#Rayquaza
+execute as @s[x=338,y=231,z=-146,distance=..10,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction 338 242 -197 {width:5.5,height:5.5,response:1,Tags:[NPCs]}
+execute as @s[x=338,y=231,z=-146,distance=..10,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run pokespawnat 338 243 -197 rayquaza no_ai=true level=70 moves=dragonascent,extremespeed,dragonpulse,dragondance ability=airlock
+execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
+
+#Toggles Heatran's portal to be visible or not depending on the primal reversion story beat
+
+execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=Dialogue149] unless entity @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:interaction] positioned 1639 65 -2528 run function hoenn:spawn/hoopaportal
+execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=!Dialogue149] run kill @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:interaction]
+execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=!Dialogue149] run kill @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:armor_stand]
 
 
 #

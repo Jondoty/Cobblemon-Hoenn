@@ -9,23 +9,66 @@
 #Regirock
 execute as @s[x=-1421,y=37,z=-1133,distance=..10,tag=!RegirockEncounter] run opendialogue regirock_encounter @s
 
+#Regice
+execute as @s[x=-2802,y=11,z=117,distance=..10,tag=!RegiceEncounter] run opendialogue regice_encounter @s
+
+#Registeel
+execute as @s[x=-371,y=37,z=-1324,distance=..10,tag=!RegisteelEncounter] run opendialogue registeel_encounter @s
+
+#Regigigas
+execute as @s[x=-2802,y=-10,z=117,distance=..10,tag=!RegigigasEncounter] run opendialogue regigigas_encounter @s
+
+#Rayquaza
+execute as @s[x=338,y=242,z=-197,distance=..10,tag=!RayquazaEncounter] run opendialogue rayquaza_encounter @s
+
+
+#Hoopa Portal Specifics
+#execute positioned -319 84 1403 run function hoenn:spawn/hoopaportal
+
+#Sword trio, cobalion, terrakion, virizion
+#Switches based on day of the week
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=!VirizionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=1}] run opendialogue virizion_encounter @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=!TerrakionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=2}] run opendialogue terrakion_encounter @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=!CobalionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run opendialogue cobalion_encounter @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=!VirizionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run opendialogue virizion_encounter @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=!CobalionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run opendialogue cobalion_encounter @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=!TerrakionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=6}] run opendialogue terrakion_encounter @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=!CobalionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=7}] run opendialogue cobalion_encounter @s
+
+#Empty portals
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=VirizionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=1}] run opendialogue portal_empty @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=TerrakionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=2}] run opendialogue portal_empty @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=CobalionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run opendialogue portal_empty @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=VirizionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run opendialogue portal_empty @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=CobalionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run opendialogue portal_empty @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=TerrakionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=6}] run opendialogue portal_empty @s
+execute as @s[x=-319,y=84,z=1403,distance=..6,tag=CobalionEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=7}] run opendialogue portal_empty @s
+
+
+#Raikou, Entei and Suicune also day of the week
+execute as @a[x=-409,y=64,z=2295,distance=..6,tag=!SuicuneEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=1}] run opendialogue suicune_encounter @s
+execute as @a[x=-409,y=64,z=2295,distance=..6,tag=!EnteiEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=2}] run opendialogue entei_encounter @s
+execute as @a[x=-409,y=64,z=2295,distance=..6,tag=!RaikouEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run opendialogue raikou_encounter @s
+execute as @a[x=-409,y=64,z=2295,distance=..6,tag=!SuicuneEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run opendialogue suicune_encounter @s
+execute as @a[x=-409,y=64,z=2295,distance=..6,tag=!RaikouEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run opendialogue raikou_encounter @s
+execute as @a[x=-409,y=64,z=2295,distance=..6,tag=!EnteiEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=6}] run opendialogue entei_encounter @s
+execute as @a[x=-409,y=64,z=2295,distance=..6,tag=!RaikouEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=7}] run opendialogue raikou_encounter @s
 
 
 
+#Empty portals
+execute as @s[x=-409,y=64,z=2295,distance=..6,tag=SuicuneEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=1}] run opendialogue portal_empty @s
+execute as @s[x=-409,y=64,z=2295,distance=..6,tag=EnteiEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=2}] run opendialogue portal_empty @s
+execute as @s[x=-409,y=64,z=2295,distance=..6,tag=RaikouEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run opendialogue portal_empty @s
+execute as @s[x=-409,y=64,z=2295,distance=..6,tag=SuicuneEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run opendialogue portal_empty @s
+execute as @s[x=-409,y=64,z=2295,distance=..6,tag=RaikouEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run opendialogue portal_empty @s
+execute as @s[x=-409,y=64,z=2295,distance=..6,tag=EnteiEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=6}] run opendialogue portal_empty @s
+execute as @s[x=-409,y=64,z=2295,distance=..6,tag=RaikouEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=7}] run opendialogue portal_empty @s
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+#Heatran Encounter
+execute as @a[x=1639,y=65,z=-2528,distance=..6,tag=!HeatranEncounter] run opendialogue heatran_encounter @s
+execute as @s[x=1639,y=65,z=-2528,distance=..6,tag=HeatranEncounter] run opendialogue portal_empty @s
 
 
 
