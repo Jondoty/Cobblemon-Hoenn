@@ -1,6 +1,5 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
         "q.run_command('playsound cobblemon:pokemon.regirock.cry ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
     ],
     "escapeAction": [],
@@ -20,7 +19,7 @@
             "id": "greeting",
             "speaker": "pokemon",
             "lines": [
-                "Errr err!"
+                "Tkk-tkk-TUNK!"
             ],
             "input": {
                 "type": "option",
@@ -35,8 +34,7 @@
                             "q.run_command('data merge entity @e[x=-1421,y=37,z=-1133,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:regirock\"}}] {NoAI:0b}');",
                             "q.run_command('data modify entity @e[x=-1421,y=37,z=-1133,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:regirock\"}}] Unbattleable set value 0b');",
                             "q.run_command('kill @e[x=-1421,y=37,z=-1133,distance=..5,type=minecraft:interaction]');",
-                            "q.run_command('tag ' + q.player.username + ' add RegirockEncounter');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');"
+                            "q.run_command('tag ' + q.player.username + ' add RegirockEncounter');"
                         ]
                     }
                 ]
