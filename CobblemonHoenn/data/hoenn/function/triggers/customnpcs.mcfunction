@@ -67,12 +67,38 @@ execute as @s[x=-409,y=64,z=2295,distance=..6,tag=RaikouEncounter] if entity @e[
 
 
 #Heatran Encounter
-execute as @a[x=1639,y=65,z=-2528,distance=..6,tag=!HeatranEncounter] run opendialogue heatran_encounter @s
-execute as @s[x=1639,y=65,z=-2528,distance=..6,tag=HeatranEncounter] run opendialogue portal_empty @s
+execute as @a[x=1639,y=65,z=-2528,distance=..8,tag=!HeatranEncounter] run opendialogue heatran_encounter @s
+execute as @s[x=1639,y=65,z=-2528,distance=..8,tag=HeatranEncounter] run opendialogue portal_empty @s
 
 
+#Sinnoh Lake Trio, dependent on the time you click
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=!AzelfEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..3999}] run opendialogue azelf_encounter @s
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=!UxieEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=18000..21000}] run opendialogue uxie_encounter @s
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=!MespritEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=4000..17999}] run opendialogue mesprit_encounter @s
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=!AzelfEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=21001..24000}] run opendialogue azelf_encounter @s
+
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=AzelfEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..3999}] run opendialogue portal_empty @s
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=UxieEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=17999..21000}] run opendialogue portal_empty @s
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=MespritEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=4000..19999}] run opendialogue portal_empty @s
+execute as @s[x=1127,y=35,z=-801,distance=..8,tag=AzelfEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=21001..24000}] run opendialogue portal_empty @s
 
 
+#Zekrom and Reshiram, night and day 
+execute as @s[x=-191,y=33,z=2182,distance=..8,tag=!ReshiramEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=23000..}] run opendialogue reshiram_encounter @s
+execute as @s[x=-191,y=33,z=2182,distance=..8,tag=!ReshiramEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..11999}] run opendialogue reshiram_encounter @s
+execute as @s[x=-191,y=33,z=2182,distance=..8,tag=!ZekromEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=12000..23000}] run opendialogue zekrom_encounter @s
+
+execute as @s[x=-191,y=33,z=2182,distance=..8,tag=ReshiramEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=23000..}] run opendialogue portal_empty @s
+execute as @s[x=-191,y=33,z=2182,distance=..8,tag=ReshiramEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..11999}] run opendialogue portal_empty @s
+execute as @s[x=-191,y=33,z=2182,distance=..8,tag=ZekromEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=12000..23000}] run opendialogue portal_empty @s
+
+#Kyurem portal
+execute as @a[x=18,y=41,z=2139,distance=..8,tag=!KyuremEncounter] run opendialogue kyurem_encounter @s
+execute as @s[x=18,y=41,z=2139,distance=..8,tag=KyuremEncounter] run opendialogue portal_empty @s
+
+#Cresselia portal
+execute as @a[x=236,y=78,z=1473,distance=..8,tag=!CresseliaEncounter] run opendialogue cresselia_encounter @s
+execute as @s[x=236,y=78,z=1473,distance=..8,tag=CresseliaEncounter] run opendialogue portal_empty @s
 
 
 #-------------------------------------------------------------
