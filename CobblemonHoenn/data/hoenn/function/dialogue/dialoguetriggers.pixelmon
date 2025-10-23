@@ -130,23 +130,6 @@ scoreboard players set @a[x=633,y=132,z=-3321,distance=..3,tag=!Dialogue166] Dia
 
 
 
-#legendary portals AOE
-#Cresselia
-scoreboard players set @a[x=236,y=79,z=1473,distance=..3,tag=!Dialogue268] DialogueTrigger 268
-
-
-#Reshiram & Zekrom (day and night)
-execute as @a[x=-190,y=32,z=2182,distance=..4,tag=!Dialogue269] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..12000}] run scoreboard players set @s DialogueTrigger 269
-execute as @a[x=-190,y=32,z=2182,distance=..4,tag=!Dialogue270] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=12001..}] run scoreboard players set @s DialogueTrigger 270
-
-#Gnarled Den Kyurem
-execute as @a[x=18,y=40,z=2139,distance=..4,tag=!Dialogue271] run scoreboard players set @s DialogueTrigger 271
-
-#Uzie, Azelf, Mesprit
-execute as @a[x=1127,y=35,z=-801,distance=..4,tag=!Dialogue272] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=20000..21000}] run scoreboard players set @s DialogueTrigger 272
-execute as @a[x=1127,y=35,z=-801,distance=..4,tag=!Dialogue273] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=4000..19999}] run scoreboard players set @s DialogueTrigger 273
-execute as @a[x=1127,y=35,z=-801,distance=..4,tag=!Dialogue274] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=21001..24000}] run scoreboard players set @s DialogueTrigger 274
-execute as @a[x=1127,y=35,z=-801,distance=..4,tag=!Dialogue274] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..3999}] run scoreboard players set @s DialogueTrigger 274
 
 #Ho-Oh
 #Spawns portal

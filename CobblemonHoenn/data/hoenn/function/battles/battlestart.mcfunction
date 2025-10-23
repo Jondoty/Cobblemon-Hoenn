@@ -178,6 +178,9 @@ execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cob
 execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:heatran",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryHeatran
 
 execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:cresselia",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:uxie",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:mesprit",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:azelf",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryLakes
 
 execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:hooh",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryHooh
 

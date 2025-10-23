@@ -48,15 +48,15 @@ execute as @a[tag=ShakeScreen] at @s run function hoenn:cutscenes/shakeeffect
 
 #Soaring Overworld particles
 #Thundurus, over Dewford
-#execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=CastformHave] if predicate hoenn:rain_test positioned -863 95 1411 run particle minecraft:flame ~ ~ ~ 1 1 1 0 13 force @a[tag=!ThundurusEncounter]
-#execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=CastformHave] if predicate hoenn:rain_test positioned -863 95 1411 run particle minecraft:campfire_cosy_smoke ~ ~ ~ 2 1 2 0 50 force @a[tag=!ThundurusEncounter]
+execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=CastformHave] if predicate hoenn:rain_test positioned -863 95 1411 run particle minecraft:flame ~ ~ ~ 1 1 1 0 13 force @a[tag=!ThundurusEncounter]
+execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=CastformHave] if predicate hoenn:rain_test positioned -863 95 1411 run particle minecraft:campfire_cosy_smoke ~ ~ ~ 2 1 2 0 50 force @a[tag=!ThundurusEncounter]
 
 #Tornadus, over Foretree City
-#execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=CastformHave] unless predicate hoenn:rain_test positioned -930 95 1522 run particle minecraft:campfire_cosy_smoke ~ ~ ~ 2 2 2 0 75 force @a[tag=!TornadusEncounter]
+execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=CastformHave] unless predicate hoenn:rain_test positioned -930 95 1522 run particle minecraft:campfire_cosy_smoke ~ ~ ~ 2 2 2 0 75 force @a[tag=!TornadusEncounter]
 
 #Landorus, over Pacifidlog
 #execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=TornadusHave,tag=ThundurusHave,tag=!LandorusEncounter] run particle pixelmon:cyclone 1.0 255 0 0 0 0 -821 106 1495 1 70 1 0.5 75 normal @a[tag=!LandorusEncounter]
-#execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=TornadusHave,tag=ThundurusHave,tag=!LandorusEncounter] positioned -814 106 1503 run particle minecraft:campfire_cosy_smoke ~ ~ ~ 2 1 2 0 50 force @a[tag=!LandorusEncounter]
+execute if entity @a[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,tag=TornadusHave,tag=ThundurusHave,tag=!LandorusEncounter] positioned -814 106 1503 run particle minecraft:campfire_cosy_smoke ~ ~ ~ 2 1 2 0 50 force @a[tag=!LandorusEncounter]
 
 #-----------------------------------------------------------------------------------------
 #Custom cutscenes fully scirpted

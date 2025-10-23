@@ -1,4 +1,5 @@
 q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 0');
 q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');
 q.run_command('tag ' + q.player.username + ' add Whiteout');
+q.run_command('execute as ' + q.player.username + ' if entity @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296] run gamemode spectator');
 q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');

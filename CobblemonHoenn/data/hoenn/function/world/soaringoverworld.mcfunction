@@ -480,9 +480,9 @@ tag @s[scores={PokeHave=1}] add PalkiaHave
 execute as @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomModelData:5}},Rotation:[-145f,0.0f]}
 execute as @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!PalkiaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomModelData:5}},Rotation:[-145f,0.0f]}
 execute as @s[tag=DialgaHave,tag=PalkiaHave,tag=!GiratinaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomModelData:5}},Rotation:[-145f,0.0f]}
-execute as @s[x=-958,y=100,z=1539,distance=..7,tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!Dialogue265,scores={DialogueTrigger=0}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..12000}] run scoreboard players set @s DialogueTrigger 265
-execute as @s[x=-958,y=100,z=1539,distance=..7,tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!Dialogue266,scores={DialogueTrigger=0}] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=12001..}] run scoreboard players set @s DialogueTrigger 266
-execute as @s[x=-958,y=100,z=1539,distance=..7,tag=DialgaHave,tag=PalkiaHave,tag=!Dialogue267,scores={DialogueTrigger=0}] run scoreboard players set @s DialogueTrigger 267
+execute as @s[x=-958,y=100,z=1539,distance=..7,tag=!InDialogue,tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=0..12000}] run opendialogue dialga_encounter @s
+execute as @s[x=-958,y=100,z=1539,distance=..7,tag=!InDialogue,tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!PalkiaEncounter] if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={DayTime=12001..}] run opendialogue palkia_encounter @s
+execute as @s[x=-958,y=100,z=1539,distance=..7,tag=!InDialogue,tag=DialgaHave,tag=PalkiaHave,tag=!Dialogue267] run opendialogue giratina_encounter @s
 
 
 tag @s remove UxieHave
@@ -536,13 +536,13 @@ execute as @s store result score @s PokeHave run testpartyslot @s 6 Thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
 
 #Thundurus, runs if it is raining
-execute if predicate hoenn:rain_test run scoreboard players set @a[tag=CastformHave,x=-863,y=95,z=1411,distance=..7,tag=!Dialogue241] DialogueTrigger 241
+execute as @a[tag=CastformHave,x=-863,y=95,z=1411,distance=..7,tag=!ThundurusEncounter] if predicate hoenn:rain_test run opendialogue thundurus_encounter @s[tag=!InDialogue]
 
 #Tornadus, runs if it is sunny
-execute unless predicate hoenn:rain_test run scoreboard players set @a[tag=CastformHave,x=-930,y=95,z=1522,distance=..7,tag=!Dialogue240] DialogueTrigger 240
+execute as @a[tag=CastformHave,x=-930,y=95,z=1522,distance=..7,tag=!TornadusEncounter] unless predicate hoenn:rain_test run opendialogue tornadus_encounter @s[tag=!InDialogue]
 
 #Landorus, runs if both others present in inventory
-scoreboard players set @a[tag=ThundurusHave,tag=TornadusHave,x=-814,y=106,z=1503,distance=..7,tag=!Dialogue264] DialogueTrigger 264
+execute as @a[tag=ThundurusHave,tag=TornadusHave,x=-814,y=106,z=1503,distance=..7,tag=!LandorusEncounter] run opendialogue landorus_encounter @s[tag=!InDialogue]
 
 #Regular world zones
 

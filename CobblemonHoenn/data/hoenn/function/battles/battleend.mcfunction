@@ -33,7 +33,8 @@ execute as @s[tag=!RadioOff,scores={BattleEnd=5}] run playsound wildwin record @
 execute as @s[tag=!RadioOff,scores={BattleEnd=5}] run scoreboard players set @s MusicCooldown 19
 
 
-
+#If player is in the Soaring Overworld and wins, sets back to Spectator
+execute as @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={BattleEnd=5}] run gamemode spectator
 
 
 #Story beats
