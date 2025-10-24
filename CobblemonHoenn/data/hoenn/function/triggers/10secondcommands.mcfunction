@@ -70,6 +70,9 @@ particle flash -1617 173 -605 0 0 0 0 1 force @a
 particle flash -1534 173 -685 0 0 0 0 1 force @a
 particle flash -1451 173 -605 0 0 0 0 1 force @a
 
+particle flash 1689 169 -1154 0 0 0 0 1 force @a
+particle flash 1729 169 -1154 0 0 0 0 1 force @a
+
 
 #Runs Cut Tree regeneration
 function hoenn:world/cuttrees
@@ -207,6 +210,11 @@ execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft
 execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":22},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":22}}]}
 execute as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:damage":23},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @s {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":23}}]}
 
+#2.75, large sign?
+#execute as @e[type=interaction,nbt={width:2.75f,height:2.75f}] at @s unless entity @e[distance=..1,type=armor_stand,nbt={ArmorItems:[{},{},{},{components:{"minecraft:custom_model_data":10},count:1,id:"minecraft:diamond_hoe"}]}] run data merge entity @e[distance=..1,type=armor_stand,limit=1] {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":4}}]}
+
+#1.75, small sign
+#execute as @e[type=interaction,nbt={width:1.75f,height:1.75f}] at @s if entity @e[distance=..1,type=armor_stand] run data merge entity @e[distance=..1,type=armor_stand,limit=1] {ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":5}}]}
 
 
 #

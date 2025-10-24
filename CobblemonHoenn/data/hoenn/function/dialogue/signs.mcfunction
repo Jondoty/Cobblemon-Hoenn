@@ -1,7 +1,9 @@
 #Contains text and events for each sign placed in the world.
 #Signs assign a scoreboard value when clicked on, that then activate this function when a score is present
 
-#/summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,PersistenceRequired:1b,NoBasePlate:1b,Tags:["Sign"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:diamond_hoe,tag:{Damage:5,HideFlags:6,Unbreakable:1},Count:1}],ArmorDropChances:[0f,0f,0f,0f]}
+#/summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,PersistenceRequired:1b,NoBasePlate:1b,Tags:["Sign"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1,components:{"minecraft:custom_model_data":5}}],ArmorDropChances:[0f,0f,0f,0f]}
+#summon minecraft:interaction ~ ~ ~ {width:1.75,height:1.75,response:1,Tags:[SignRead]}
+#1.75w and h for smaller signs, 2.75 for wooden and blue-accented city signs
 
 #Each sign assigns a unique score, SignRead 1, to then run this command. Score then determines which text is displayed to player
 
