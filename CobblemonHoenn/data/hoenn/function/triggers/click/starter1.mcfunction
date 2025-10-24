@@ -4,7 +4,14 @@
 #Hoenn
 execute as @s[x=-2098,y=65,z=1311,distance=..10] run opendialogue pick_treecko @s
 
+#Johto
+execute as @s[x=-2047,y=65,z=1311,distance=..10] run opendialogue pick_chikorita @s
 
+#Unova
+execute as @s[x=-1996,y=65,z=1311,distance=..10] run opendialogue pick_snivy @s
+
+#Sinnoh
+execute as @s[x=-1945,y=65,z=1311,distance=..10] run opendialogue pick_turtwig @s
 
 
 

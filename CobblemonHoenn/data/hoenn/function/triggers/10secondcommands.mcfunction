@@ -160,7 +160,7 @@ execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=
 execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2094,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2094 65 1311 mudkip no_ai=yes level=5
 
 #Johto
-execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2151,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2151 65 1311 chikorita no_ai=yes level=5
+execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2051,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2051 65 1311 chikorita no_ai=yes level=5
 execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2047,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2047 65 1311 cyndaquil no_ai=yes level=5
 execute if entity @a[x=-2123,y=63,z=1286,dx=203,dy=40,dz=50] unless entity @e[x=-2043,y=65,z=1311,dy=3,type=cobblemon:pokemon] run pokespawnat -2043 65 1311 totodile no_ai=yes level=5
 

@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.torchic.cry ambient @s ~ ~ ~ 1 1 1');"
     ],
     "escapeAction": [],
     "speakers": {
