@@ -5250,62 +5250,6 @@ tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> So I'm l
 tag @s[scores={DialogueTrigger=223,TalkTime=100..}] add Dialogue223
 
 #-----------------------------------------------------------------------------------------------------
-#Dialogue 226 - Shoal Cave
-#Shell Guy First Talk
-tellraw @s[scores={DialogueTrigger=226,TalkTime=1}] {"text":"<Shoal Man> Are you planning on going deep in there?"}
-tellraw @s[scores={DialogueTrigger=226,TalkTime=8}] {"text":"<Shoal Man> How about bringing me back some Shoal Salt and Shoal Shells?"}
-tellraw @s[scores={DialogueTrigger=226,TalkTime=16}] {"text":"<Shoal Man> I can make you something good if you bring me those items."}
-tellraw @s[scores={DialogueTrigger=226,TalkTime=24}] {"text":"<Shoal Man> If you bring me four each of the Shoal Salt and Shoal Shells, I can make you a Shell Bell..."}
-tellraw @s[scores={DialogueTrigger=226,TalkTime=34}] {"text":"<Shoal Man> You can get more every day."}
-
-tag @s[scores={DialogueTrigger=226,TalkTime=34..}] add Dialogue226
-#-------------------------------
-#Dialogue 227 - Shoal Cave
-#Shell Guy if resources present
-#https://youtu.be/MgkqxXCmrtI?t=79763
-
-tellraw @s[scores={DialogueTrigger=227,TalkTime=1}] {"text":"<Shoal Man> Oh, hey! Shoal Salt and Shoal Shells!"}
-tellraw @s[scores={DialogueTrigger=227,TalkTime=9}] {"text":"<Shoal Man> And enough of them, too! Would you like me to make you a Shell Bell with them?"}
-execute as @s[scores={DialogueTrigger=227,TalkTime=9}] run scoreboard players enable @s TriggerCommand
-execute as @s[scores={DialogueTrigger=227,TalkTime=9}] run tellraw @s ["",{"text":"["},{"text":"Yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 180"}},{"text":"]"}]
-
-tag @s[scores={DialogueTrigger=227,TalkTime=9..}] add Dialogue227
-#-------------------------------
-#Dialogue 228 - Shoal Cave
-#Shell Guy Creating shells
-
-#If answers no,
-#tellraw @s[scores={DialogueTrigger=228,TalkTime=1}] {"text":"<Shoal Man> Oh... Is that so...? I wanted to make a Shell Bell..."}
-
-
-execute as @s[scores={DialogueTrigger=228,TalkTime=1}] run clear @s pixelmon:shoal_salt 4
-execute as @s[scores={DialogueTrigger=228,TalkTime=1}] run clear @s pixelmon:shoal_shell 4
-
-#Checks resources are still present
-tellraw @s[scores={DialogueTrigger=228,TalkTime=3}] {"text":"<Shoal Man> All righty, then! I'll make you a Shell Bell right away."}
-tellraw @s[scores={DialogueTrigger=228,TalkTime=16}] {"text":"<Shoal Man> ... There! Done!"}
-
-tellraw @s[scores={DialogueTrigger=228,TalkTime=22}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained a Shell Bell!","italic":true,"color":"gray"}]
-execute as @s[scores={DialogueTrigger=228,TalkTime=22}] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=228,TalkTime=22}] run give @s pixelmon:shell_bell
-
-tellraw @s[scores={DialogueTrigger=228,TalkTime=29}] {"text":"<Shoal Man> Have a Pokémon hold on to that."}
-tellraw @s[scores={DialogueTrigger=228,TalkTime=36}] {"text":"<Shoal Man> It'll love it, that's for certain."}
-tellraw @s[scores={DialogueTrigger=228,TalkTime=43}] {"text":"<Shoal Man> Why, the Shell Bell's chime... It's simply sublime!"}
-tellraw @s[scores={DialogueTrigger=228,TalkTime=51}] {"text":"<Shoal Man> You can get more Shoal Salt and Shoal Shells every day, so I can always make more."}
-
-#if done for the first time, applies tag after first time. Skips if recurring
-execute as @s[scores={DialogueTrigger=228,TalkTime=61},tag=Slowbronite] run scoreboard players add @s TalkTime 20
-tellraw @s[scores={DialogueTrigger=228,TalkTime=61},tag=!Slowbronite] {"text":"<Shoal Man> And... I'm not quite sure what this is, but I got this recently."}
-tellraw @s[scores={DialogueTrigger=228,TalkTime=70},tag=!Slowbronite] {"text":"<Shoal Man> If you like, please take this, too."}
-
-tellraw @s[scores={DialogueTrigger=228,TalkTime=77},tag=!Slowbronite] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained a Slowbronite!","italic":true,"color":"gray"}]
-execute as @s[scores={DialogueTrigger=228,TalkTime=77},tag=!Slowbronite] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=228,TalkTime=77},tag=!Slowbronite] run give @s pixelmon:slowbronite
-execute as @s[scores={DialogueTrigger=228,TalkTime=77},tag=!Slowbronite] run tag @s add Slowbronite
-
-tag @s[scores={DialogueTrigger=228,TalkTime=77..}] add Dialogue228
-#-----------------------------------------------------------------------------------------------------
 #Dialogue 229 - Sealed Chamber
 #Upon meeting unlock conditions
 #https://youtu.be/MgkqxXCmrtI?t=81073

@@ -135,6 +135,30 @@ execute as @s[x=-560,y=45,z=-623,distance=..6] unless entity @s[tag=!ItemLoot383
 execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
 
 
+#-------------
+
+#Shoal Cave Shell Bell Man
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075] run scoreboard players set @s Temp 0
+
+#Determines how many Salt and Shells player has on them
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075] store result score @s Temp run clear @s minecraft:rabbit_foot 0
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075,scores={Temp=4..}] run tag @s add SaltHave 
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075] store result score @s Temp run clear @s minecraft:ghast_tear 0
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075,scores={Temp=4..}] run tag @s add ShellHave 
+
+#Dry Cave
+execute as @s[x=2847,y=70,z=-2392,distance=..8] unless entity @s[tag=ShellHave,tag=SaltHave] run opendialogue shoalcave_oldman_interaction @s
+execute as @s[x=2847,y=70,z=-2392,distance=..8] if entity @s[tag=ShellHave,tag=SaltHave,tag=!Dialogue228] run opendialogue shoalcave_first_shellbell @s
+execute as @s[x=2847,y=70,z=-2392,distance=..8] if entity @s[tag=ShellHave,tag=SaltHave,tag=Dialogue228] run opendialogue shoalcave_repeated_shellbell @s
+
+#Flooded cave
+execute as @s[x=2899,y=70,z=-3201,distance=..8] unless entity @s[tag=ShellHave,tag=SaltHave] run opendialogue shoalcave_oldman_interaction @s
+execute as @s[x=2899,y=70,z=-3201,distance=..8] if entity @s[tag=ShellHave,tag=SaltHave,tag=!Dialogue228] run opendialogue shoalcave_first_shellbell @s
+execute as @s[x=2899,y=70,z=-3201,distance=..8] if entity @s[tag=ShellHave,tag=SaltHave,tag=Dialogue228] run opendialogue shoalcave_repeated_shellbell @s
+
+
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075,scores={Temp=4..}] run tag @s remove SaltHave 
+execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075,scores={Temp=4..}] run tag @s remove ShellHave 
 #-------------------------------------------------------------
 #General Story NPCs
 

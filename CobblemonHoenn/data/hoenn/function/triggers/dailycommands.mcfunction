@@ -37,17 +37,15 @@ tag @a remove ItemLoot384
 tag @a remove ItemLoot385
 tag @a remove ItemLoot617
 
-#Shoal Cave loots, resets daily
-tag @a remove CustomLoot44
-tag @a remove CustomLoot45
-tag @a remove CustomLoot46
-tag @a remove CustomLoot47
-tag @a remove CustomLoot48
-tag @a remove CustomLoot49
-tag @a remove CustomLoot50
-tag @a remove CustomLoot51
-tag @a remove Dialogue227
-tag @a remove Dialogue228
+#Shoal Cave Salt/Shell loots, resets daily
+tag @a remove ItemLoot437
+tag @a remove ItemLoot438
+tag @a remove ItemLoot439
+tag @a remove ItemLoot440
+tag @a remove ItemLoot442
+tag @a remove ItemLoot443
+tag @a remove ItemLoot444
+tag @a remove ItemLoot445
 
 #Loto-ID daily reset
 tag @a remove Dialogue131

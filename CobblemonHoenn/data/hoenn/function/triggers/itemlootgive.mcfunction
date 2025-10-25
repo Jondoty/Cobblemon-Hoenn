@@ -1707,53 +1707,53 @@ execute as @s[x=2937,y=80,z=-3237,distance=..5,tag=!ItemLoot436] run tellraw @s 
 execute as @s[x=2937,y=80,z=-3237,distance=..5,tag=!ItemLoot436] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=2937,y=80,z=-3237,distance=..5,tag=!ItemLoot436] run tag @s add ItemLoot436
 
-#execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=ItemLoot437] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run give @s cobblemon:shoal_shell
-#execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
-#execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run tag @s add ItemLoot437
-#
-#execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=ItemLoot438] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run give @s cobblemon:shoal_shell
-#execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
-#execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run tag @s add ItemLoot438
-#
-#execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=ItemLoot439] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run give @s cobblemon:shoal_shell
-#execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
-#execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run tag @s add ItemLoot439
-#
-#execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=ItemLoot440] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run give @s cobblemon:shoal_shell
-#execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
-#execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run tag @s add ItemLoot440
-#
-#execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=ItemLoot442] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run give @s cobblemon:shoal_salt
-#execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
-#execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run tag @s add ItemLoot442
-#
-#execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=ItemLoot443] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run give @s cobblemon:shoal_salt
-#execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
-#execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run tag @s add ItemLoot443
-#
-#execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=ItemLoot444] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run give @s cobblemon:shoal_salt
-#execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
-#execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run tag @s add ItemLoot444
-#
-#execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=ItemLoot445] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-#execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run give @s cobblemon:shoal_salt
-#execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
-#execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-#execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run tag @s add ItemLoot445
+execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=ItemLoot437] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run function hoenn:spawn/shoalshell
+execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
+execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2885,y=99,z=-3066,distance=..5,tag=!ItemLoot437] run tag @s add ItemLoot437
+
+execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=ItemLoot438] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run function hoenn:spawn/shoalshell
+execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
+execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2853,y=99,z=-3071,distance=..5,tag=!ItemLoot438] run tag @s add ItemLoot438
+
+execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=ItemLoot439] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run function hoenn:spawn/shoalshell
+execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
+execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2966,y=99,z=-3036,distance=..5,tag=!ItemLoot439] run tag @s add ItemLoot439
+
+execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=ItemLoot440] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run function hoenn:spawn/shoalshell
+execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run tellraw @s {"text":"You found a Shoal Shell!","italic":true,"color":"gray"}
+execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2968,y=99,z=-3064,distance=..5,tag=!ItemLoot440] run tag @s add ItemLoot440
+
+execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=ItemLoot442] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run function hoenn:spawn/shoalsalt
+execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
+execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2883,y=65,z=-2618,distance=..5,tag=!ItemLoot442] run tag @s add ItemLoot442
+
+execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=ItemLoot443] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run function hoenn:spawn/shoalsalt
+execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
+execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2907,y=92,z=-2937,distance=..5,tag=!ItemLoot443] run tag @s add ItemLoot443
+
+execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=ItemLoot444] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run function hoenn:spawn/shoalsalt
+execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
+execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2840,y=84,z=-2501,distance=..5,tag=!ItemLoot444] run tag @s add ItemLoot444
+
+execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=ItemLoot445] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run function hoenn:spawn/shoalsalt
+execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run tellraw @s {"text":"You found Shoal Salt!","italic":true,"color":"gray"}
+execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2891,y=89,z=-2549,distance=..5,tag=!ItemLoot445] run tag @s add ItemLoot445
 
 execute as @s[x=2887,y=65,z=-2611,distance=..5,tag=ItemLoot446] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=2887,y=65,z=-2611,distance=..5,tag=!ItemLoot446] run give @s cobblemon:ice_heal

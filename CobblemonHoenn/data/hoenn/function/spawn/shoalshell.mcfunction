@@ -1,0 +1,1 @@
+give @s ghast_tear[custom_name='["",{"text":"Shoal Shell","italic":false,"color":"#80ffff"}]',lore=['["",{"text":"A seashell that you found","italic":false}]','[{"text":"inside Shoal Cave. ","italic":false}]']]

@@ -1,0 +1,1 @@
+give @s rabbit_foot[custom_name='["",{"text":"Shoal Salt","italic":false,"color":"#80ffff"}]',lore=['["",{"text":"Salt that you found","italic":false}]','[{"text":"inside Shoal Cave. ","italic":false}]']]
