@@ -15,7 +15,7 @@
       "Mightyena level=41",
       "Muk level=41",
       "Crobat level=41",
-      "Mega Sharpedo level=43"
+      "Sharpedo level=43 mega_evolution=mega"
     ]
   },
   "config": [
@@ -38,7 +38,7 @@
       "displayName": "npc.variable.on_player_wins.name",
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
-      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue seafloor_archie_end @s');"
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue seafloor_archie_dialogue141a @s');"
     }
   ]
 }

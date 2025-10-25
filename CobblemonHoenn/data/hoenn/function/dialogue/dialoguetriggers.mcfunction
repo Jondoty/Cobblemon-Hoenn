@@ -553,7 +553,7 @@ execute as @p[x=941,y=70,z=-2665,distance=..40,tag=!Dialogue141,scores={GameVers
 execute as @p[x=1072,y=65,z=-2880,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=1072,y=65,z=-2880,dy=3,type=cobblemon:npc] run npcspawnat 1072 65 -2880 seafloor_team_aqua_grunt3
 execute as @p[x=886,y=75,z=-2846,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=886,y=75,z=-2846,dy=3,type=cobblemon:npc] run npcspawnat 886 75 -2846 seafloor_team_aqua_grunt4
 execute as @p[x=1100,y=75,z=-3042,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=1100,y=75,z=-3042,dy=3,type=cobblemon:npc] run npcspawnat 1100 75 -3042 seafloor_team_aqua_grunt5
-execute as @p[x=885,y=116,z=-3168,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=885,y=74,z=-3168,dy=3,type=cobblemon:npc] run npcspawnat 885 117 -3164 seafloor_archie
+execute as @p[x=885,y=116,z=-3168,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=885,y=117,z=-3164,dy=3,type=cobblemon:npc] run npcspawnat 885 117 -3164 seafloor_archie
 execute as @p[x=885,y=116,z=-3168,distance=..40,tag=!Dialogue141,scores={GameVersion=2}] unless entity @e[x=881,y=117,z=-3159,dy=3,type=cobblemon:npc] run npcspawnat 881 117 -3159 maxie_generic
 
 #Clears NPCs

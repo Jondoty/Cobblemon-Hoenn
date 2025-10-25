@@ -125,7 +125,7 @@ execute as @s[scores={DialogueTrigger=141,TalkTime=267}] run tp @s 1068 93 -291 
 #execute as @s[scores={DialogueTrigger=141,TalkTime=57..64}] run tp @s ~-0.25 ~ ~-0.25
 
 #tps back to cave
-execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run tp @e[x=1043,y=63,z=-311,distance=..15,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run tp @e[x=1043,y=63,z=-311,distance=..5,type=cobblemon:pokemon] 10000000 -50000 -10000000
 execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run tp @s 885 74 -3161 180 8
 execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run gamemode adventure
 
@@ -136,11 +136,53 @@ scoreboard players set @s[scores={DialogueTrigger=141},tag=Dialogue141] TalkTime
 scoreboard players set @s[scores={DialogueTrigger=141},tag=Dialogue141] DialogueTrigger 0
 
 #-----------------------------------------------------------------------------------------------------
+#Dialogue 142 - Seafloor Cavern
+#Legendary summoned, Aqua line
+
+#Summoning legendary
+execute as @s[scores={DialogueTrigger=142,TalkTime=151}] run function hoenn:triggers/stopsound
+execute as @s[scores={DialogueTrigger=142,TalkTime=155}] run tag @s add ShakeScreen
+execute as @s[scores={DialogueTrigger=142,TalkTime=175}] run tag @s remove ShakeScreen
+
+#Awakens Legend
+execute as @s[scores={DialogueTrigger=142,TalkTime=160}] run gamemode spectator
+execute as @s[scores={DialogueTrigger=142,TalkTime=160}] run tp @s 888.2 106.75 -3187.5 144 1
+
+#Shot 2
+execute as @s[scores={DialogueTrigger=142,TalkTime=170}] run tp @s 877.0 111.3 -3199.8 -54 26
+execute as @s[scores={DialogueTrigger=142,TalkTime=170}] run particle cloud 884 106 -3194 1 1 1 0.15 300
+execute as @s[scores={DialogueTrigger=142,TalkTime=170}] run tp @e[x=884,y=106,z=-3194,distance=..5,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=142,TalkTime=170}] run pokespawnat 884 106 -3194 kyogre level=45 no_ai=yes uncatchable=yes
+execute as @s[scores={DialogueTrigger=142,TalkTime=170}] run playsound cobblemon:pokemon.kyogre.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=142,TalkTime=170}] run tellraw @s {"text":"<Kyogre> Krrraaawwwrrr!!!"}
+
+#Shot 3
+execute as @s[scores={DialogueTrigger=142,TalkTime=180}] run tp @s 880.50 106.60 -3187.95 -132.45 10.25
+execute as @s[scores={DialogueTrigger=142,TalkTime=190}] run tp @s 896.70 121.60 -3201.40 53.95 48.45
+
+#Groudon Flees
+execute as @s[scores={DialogueTrigger=142,TalkTime=196}] run tp @e[x=884,y=106,z=-3194,distance=..5,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=142,TalkTime=196}] run particle rain 884 107 -3194 3 2 3 0.25 30000 force @s
+
+#Shot of it in the ocean?
+execute as @s[scores={DialogueTrigger=142,TalkTime=200}] run tag @s add KyogreParticles
+execute as @s[scores={DialogueTrigger=142,TalkTime=200}] run weather thunder
+execute as @s[scores={DialogueTrigger=142,TalkTime=200}] run pokespawnat 1043 63 -311 kyogre level=45 no_ai=yes uncatchable=yes
+execute as @s[scores={DialogueTrigger=142,TalkTime=200}] run tp @s 1027 65 -311 -91 2
+execute as @s[scores={DialogueTrigger=142,TalkTime=207}] run tp @s 1068 93 -291 140 30
+#execute as @s[scores={DialogueTrigger=141,TalkTime=200..207}] run tp @s ~0.1 ~ ~
+#execute as @s[scores={DialogueTrigger=141,TalkTime=207..214}] run tp @s ~-0.25 ~ ~-0.25
+
+execute as @s[scores={DialogueTrigger=142,TalkTime=214}] run tp @e[x=1043,y=63,z=-311,distance=..5,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=142,TalkTime=214}] run gamemode adventure
+execute as @s[scores={DialogueTrigger=142,TalkTime=214}] run tp @s 885 117 -3157 180 8
 
 
+execute as @s[scores={DialogueTrigger=142,TalkTime=215}] run opendialogue seafloor_archie_dialogue141b @s
 
-
-
+tag @s[scores={DialogueTrigger=142,TalkTime=216..}] add Dialogue142
+scoreboard players set @s[scores={DialogueTrigger=142},tag=Dialogue142] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=142},tag=Dialogue142] DialogueTrigger 0
 
 
 
