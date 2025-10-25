@@ -83,16 +83,59 @@ execute as @s[scores={DialogueTrigger=139,TalkTime=26}] run opendialogue steven_
 tag @s[scores={DialogueTrigger=139,TalkTime=27..}] add Dialogue139
 scoreboard players set @s[scores={DialogueTrigger=139},tag=Dialogue139] TalkTime 0
 scoreboard players set @s[scores={DialogueTrigger=139},tag=Dialogue139] DialogueTrigger 0
+
 #-----------------------------------------------------------------------------------------------------
+#Dialogue 141 - Seafloor Cavern
+#Legendary summoned, Magma line
+#https://youtu.be/MgkqxXCmrtI?t=54419
+
+#Starts screen shake
+execute as @s[scores={DialogueTrigger=141,TalkTime=214}] run function hoenn:triggers/stopsound
+execute as @s[scores={DialogueTrigger=141,TalkTime=215}] run tag @s add ShakeScreen
+execute as @s[scores={DialogueTrigger=141,TalkTime=235}] run tag @s remove ShakeScreen
+
+#Awakens Groudon
+execute as @s[scores={DialogueTrigger=141,TalkTime=220}] run gamemode spectator
+execute as @s[scores={DialogueTrigger=141,TalkTime=220}] run tp @s 884.7 66.6 -3190.5 -180 -13
+
+#Shot 2
+execute as @s[scores={DialogueTrigger=141,TalkTime=230}] run tp @s 879.6 63.9 -3189.6 -146 -21
+execute as @s[scores={DialogueTrigger=141,TalkTime=230}] run particle cloud 881 64 -3202 1 1 1 0.15 300
+execute as @s[scores={DialogueTrigger=141,TalkTime=230}] run tp @e[x=881,y=64,z=-3202,distance=..5,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=141,TalkTime=230}] run pokespawnat 881 65 -3202 groudon level=45 no_ai=yes uncatchable=yes
+execute as @s[scores={DialogueTrigger=141,TalkTime=230}] run playsound cobblemon:pokemon.groudon.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=141,TalkTime=230}] run tellraw @s {"text":"<Groudon> Gurrraaahhhh! Gurrrooouuuhhh!!!"}
+
+#Shot 3
+execute as @s[scores={DialogueTrigger=141,TalkTime=240}] run tp @s 873.2 67 -3202.6 -63 -1
+execute as @s[scores={DialogueTrigger=141,TalkTime=250}] run tp @s 905.1 81.4 -3213.4 57 42
+
+#Groudon Flees
+execute as @s[scores={DialogueTrigger=141,TalkTime=256}] run tp @e[x=884,y=64,z=-3198,distance=..5,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=141,TalkTime=256}] run particle flame 884 64 -3198 1 1 1 0.25 300 force @s
 
 
+#Shot of it in the ocean?
+execute as @s[scores={DialogueTrigger=141,TalkTime=260}] run tag @s add GroudonParticles
+execute as @s[scores={DialogueTrigger=141,TalkTime=260}] run weather clear
+execute as @s[scores={DialogueTrigger=141,TalkTime=260}] run pokespawnat 1043 63 -311 groudon no_ai=yes level=45
+execute as @s[scores={DialogueTrigger=141,TalkTime=260}] run tp @s 1027 65 -311 -91 2
+execute as @s[scores={DialogueTrigger=141,TalkTime=267}] run tp @s 1068 93 -291 140 30
+#execute as @s[scores={DialogueTrigger=141,TalkTime=50..57}] run tp @s ~0.1 ~ ~
+#execute as @s[scores={DialogueTrigger=141,TalkTime=57..64}] run tp @s ~-0.25 ~ ~-0.25
 
+#tps back to cave
+execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run tp @e[x=1043,y=63,z=-311,distance=..15,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run tp @s 885 74 -3161 180 8
+execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run gamemode adventure
 
+execute as @s[scores={DialogueTrigger=141,TalkTime=274}] run opendialogue seafloor_maxie_dialogue141b @s
 
+tag @s[scores={DialogueTrigger=141,TalkTime=274..}] add Dialogue141
+scoreboard players set @s[scores={DialogueTrigger=141},tag=Dialogue141] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=141},tag=Dialogue141] DialogueTrigger 0
 
-
-
-
+#-----------------------------------------------------------------------------------------------------
 
 
 

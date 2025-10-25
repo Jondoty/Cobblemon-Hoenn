@@ -21,15 +21,15 @@ execute as @a[x=-2215,y=129,z=-3100,dx=686,dy=256,dz=757] at @s run particle min
 execute as @a[x=-2154,y=80,z=-1507,dx=552,dy=256,dz=135,scores={StepCounter=1..}] at @s if block ~ ~ ~ short_grass run particle white_ash ~ ~ ~ 1 1 1 1 100 normal
 
 #Desert Sandstorm Particles
-#execute as @a[x=-1562,y=60,z=-1293,dx=249,dy=256,dz=159] at @s run particle minecraft:falling_dust sand ~ ~ ~ 20 10 20 8 100 normal
-#execute as @a[x=-1479,y=60,z=-1133,dx=166,dy=256,dz=267] at @s run particle minecraft:falling_dust sand ~ ~ ~ 20 10 20 8 100 normal
+execute as @a[x=-1562,y=60,z=-1293,dx=249,dy=256,dz=159] at @s run particle falling_dust{block_state:{Name:sand}} ~ ~ ~ 20 10 20 8 100 normal
+execute as @a[x=-1479,y=60,z=-1133,dx=166,dy=256,dz=267] at @s run particle falling_dust{block_state:{Name:sand}} ~ ~ ~ 20 10 20 8 100 normal
 
 #Groudon's Drought particles
-#execute as @a[tag=GroudonParticles] at @s run particle minecraft:crimson_spore ~ ~1 ~ 10 10 10 10 100 normal
-#execute as @a[tag=GroudonParticles] at @s run particle minecraft:flame ~ ~0 ~ 10 0.1 10 0 1 normal
+execute as @a[tag=GroudonParticles] at @s run particle minecraft:crimson_spore ~ ~1 ~ 10 10 10 10 100 normal
+execute as @a[tag=GroudonParticles] at @s run particle minecraft:flame ~ ~0 ~ 10 0.1 10 0 1 normal
 
 #Kyogre
-#execute as @a[tag=KyogreParticles] at @s unless predicate hoenn:rain_test run particle minecraft:rain ~ ~ ~ 20 20 20 1 1000 normal
+execute as @a[tag=KyogreParticles] at @s unless predicate hoenn:rain_test run particle minecraft:rain ~ ~ ~ 20 20 20 1 1000 normal
 
 #Lavaridge Gym
 execute if entity @p[x=-3181,y=77,z=1224,dx=125,dy=256,dz=449] run particle minecraft:campfire_cosy_smoke -3101 87 1550 30 0 40 0.1 3 force
