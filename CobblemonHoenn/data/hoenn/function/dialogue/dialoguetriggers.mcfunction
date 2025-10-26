@@ -585,8 +585,15 @@ execute as @s[x=885,y=73,z=-3164,distance=..15,tag=!Dialogue140] run opendialogu
 execute as @s[x=885,y=116,z=-3164,distance=..15,tag=!Dialogue140] run opendialogue seafloor_archie_dialogue140 @s
 
 
+#Sootopolis gaining suiit and prep for Cave of Origin
+execute as @s[x=919,y=94,z=1481,distance=..10,tag=Dialogue141,tag=!Dialogue143,scores={GameVersion=1,Rival=1}] run opendialogue magma_may_dialogue143 @s
+execute as @s[x=919,y=94,z=1481,distance=..10,tag=Dialogue141,tag=!Dialogue143,scores={GameVersion=1,Rival=2}] run opendialogue magma_brendan_dialogue143 @s
 
+execute as @s[x=919,y=94,z=1481,distance=..10,tag=Dialogue141,tag=!Dialogue143,scores={GameVersion=2,Rival=1}] run opendialogue aqua_may_dialogue143 @s
+execute as @s[x=919,y=94,z=1481,distance=..10,tag=Dialogue141,tag=!Dialogue143,scores={GameVersion=2,Rival=2}] run opendialogue aqua_brendan_dialogue143 @s
 
+execute as @a[x=919,y=94,z=1477,distance=..40,tag=Dialogue141,tag=!Dialogue143] unless entity @e[x=924,y=93,z=1477,dy=3,type=cobblemon:npc] run npcspawnat 924 94 1477 steven_generic
+execute as @a[x=919,y=94,z=1477,distance=..40,tag=Dialogue141,tag=!Dialogue143] unless entity @e[x=919,y=93,z=1477,dy=3,type=cobblemon:npc] run npcspawnat 919 94 1477 wallace_generic
 
 
 
