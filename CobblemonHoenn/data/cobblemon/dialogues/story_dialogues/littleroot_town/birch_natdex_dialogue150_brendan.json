@@ -1,19 +1,16 @@
 {
     "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1920 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 1920');"
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
+    "escapeAction": [],
     "speakers": {
-        "wally": {
-            "name": "Wally",
+        "birch": {
+            "name": "Professor Birch",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:wally",
-                "isLeftSide": true
+                "identifier": "cobblemon:birch",
+                "isLeftSide": false
             }
         },
         "player": {
@@ -27,9 +24,12 @@
     "pages": [
         {
             "id": "greeting",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "..."
+                {
+                    "type": "expression",
+                    "expression": "'Welcome back, ' + q.player.username + '!';"
+                }
             ],
             "input": {
                 "type": "option",
@@ -45,9 +45,9 @@
         },
         {
             "id": "page2",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "..."
+                "You must be tired after all your recent exploits."
             ],
             "input": {
                 "type": "option",
@@ -63,27 +63,9 @@
         },
         {
             "id": "page3",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "Arghhh!!!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next...",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page4",
-            "speaker": "wally",
-            "lines": [
-                "... ..."
+                "Brendan has been keeping me updated about all of your grand adventures around Hoenn."
             ],
             "input": {
                 "type": "option",
@@ -99,9 +81,9 @@
         },
         {
             "id": "page5",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "...Hah."
+                "After hearing all that you've been up to, there is something I'd definitely like to share with you."
             ],
             "input": {
                 "type": "option",
@@ -117,12 +99,9 @@
         },
         {
             "id": "page6",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'' + q.player.username + ', you... And your Pok\u00e9mon, too...'"
-                }
+                "The fact of the matter is that after you resolved that kerfuffle with the super-ancient Pok\u00e9mon,"
             ],
             "input": {
                 "type": "option",
@@ -138,9 +117,9 @@
         },
         {
             "id": "page7",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "Thank you for not holding back when you battled against us..."
+                "a number of Pok\u00e9mon never before recorded in the Hoenn region began to appear all over!"
             ],
             "input": {
                 "type": "option",
@@ -156,9 +135,9 @@
         },
         {
             "id": "page8",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "For not holding back when you beat us..."
+                "Those Pok\u00e9mon are precisely the subject of my many long years of research..."
             ],
             "input": {
                 "type": "option",
@@ -174,9 +153,9 @@
         },
         {
             "id": "page9",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "And... Gallade... Everyone... Thank you so much..."
+                "They are Pok\u00e9mon which are thought to have resided in Hoenn thousands of years ago!"
             ],
             "input": {
                 "type": "option",
@@ -192,9 +171,9 @@
         },
         {
             "id": "page10",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "I feel like I've been able to take another step forward thanks to you!"
+                "We'll finally be able to meet Pok\u00e9mon never before seen, the very Pok\u00e9mon I've pursued all these years!"
             ],
             "input": {
                 "type": "option",
@@ -210,9 +189,9 @@
         },
         {
             "id": "page11",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "Oh! I know! I'll give you this to keep."
+                "I'm so excited I feel like I'm about to burst!"
             ],
             "input": {
                 "type": "option",
@@ -228,9 +207,27 @@
         },
         {
             "id": "page12",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "I hope it will always remind you of your battle with me...and with Gallade and the rest of my team."
+                "So excited that I went right ahead and upgraded the Pok\u00e9dex to be ready for all of them!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page13');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "birch",
+            "lines": [
+                "Now, let me upgrade your Pok\u00e9dex while you're here!"
             ],
             "input": {
                 "type": "option",
@@ -240,40 +237,19 @@
                         "text": "Next...",
                         "value": "next",
                         "action": [
-                            "q.run_command('give ' + q.player.username + ' cobblemon:dawn_stone');",
-                            "q.run_command('playsound minecraft:itemget ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
-                            "q.dialogue.set_page('page13');"
+                            "q.run_command('tag ' + q.player.username + ' add NatDex');",
+                            "q.run_command('playsound minecraft:keyitem ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page14');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page13",
+            "id": "page14",
             "speaker": "player",
             "lines": [
-                "You obtained a Dawn Stone from Wally!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next...",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page14');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page14",
-            "speaker": "wally",
-            "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'If you have a male Kirlia as one of your partners, ' + q.player.username + ', I hope that you might use that Dawn Stone on it for me.'"
-                }
+                "The National Pokédex has now been added to your Pokédex!"
             ],
             "input": {
                 "type": "option",
@@ -289,12 +265,9 @@
         },
         {
             "id": "page15",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'I couldn\\'t beat you this time, ' + q.player.username + '. But I\\'ll stay here and continue training.'"
-                }
+                "It is being suggested that Hoenn is now more hospitable to Pok\u00e9mon after that incident in Sootopolis."
             ],
             "input": {
                 "type": "option",
@@ -310,9 +283,9 @@
         },
         {
             "id": "page16",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "And one day... Look out! I swear I'll catch up to you one day!"
+                "However, that does not necessarily mean the environment has become any more hospitable to humanity."
             ],
             "input": {
                 "type": "option",
@@ -328,9 +301,81 @@
         },
         {
             "id": "page17",
-            "speaker": "wally",
+            "speaker": "birch",
             "lines": [
-                "When I do, promise we'll battle again! That's a promise I intend to live up to!"
+                "People, Pok\u00e9mon, and nature..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page18');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "birch",
+            "lines": [
+                "The balance between these three great ecosystems has shifted greatly."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page19');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "birch",
+            "lines": [
+                "I can't wait for you to start exploring this new world!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page20');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "birch",
+            "lines": [
+                "Exploration may help us learn how best to coexist with Pok\u00e9mon from this time forward."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page21');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "birch",
+            "lines": [
+                "I hope you will find your own answers to this great question, as you continue your journey with your Pok\u00e9dex!"
             ],
             "input": {
                 "type": "option",
@@ -340,9 +385,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('particle cloud 1644 95 -3015 1 1 1 0.15 300');",
-                            "q.run_command('tp @e[type=cobblemon:npc,x=1644,y=95,z=-3015,dy=3] 10000000 -50000 -10000000');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue154');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue150');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]
@@ -350,6 +393,5 @@
                 ]
             }
         }
-    ],
-    "escapeAction": []
+    ]
 }

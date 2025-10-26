@@ -1,56 +1,295 @@
 {
-  "initializationAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
-  ],
-  "escapeAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-    "q.dialogue.close();"
-  ],
-  "names": [
-    "Wally"
-  ],
-  "speakers": {
-    "npc": {
-      "name": {
-        "type": "expression",
-        "expression": "q.npc.name"
-      },
-      "face": "q.npc.face();"
-    }
-  },
-  "pages": [
-    {
-      "id": "greeting",
-      "speaker": "npc",
-      "lines": [
-        "..."
-      ],
-      "input": {
-        "type": "option",
-        "vertical": false,
-        "options": [
-          {
-            "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-            "value": "battle",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "v.battle = q.npc.start_battle(q.player);"
-            ]
-          },
-          {
-            "text": "No",
-            "value": "no",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "q.dialogue.close();"
-            ]
-          }
-        ]
-      }
-    }
-  ]
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!RadioOff] run stopsound @s record');",
+        "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!RadioOff] run playsound minecraft:apathweallmustwalk record @s ~ ~ ~ 1 1 1');",
+        "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!RadioOff] run scoreboard players set @s MusicCooldown 116');"
+    ],
+    "escapeAction": [
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.dialogue.close();"
+    ],
+    "names": [
+        "Wally"
+    ],
+    "speakers": {
+        "wally": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Ah! ' + q.player.username + '! '"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "wally",
+            "lines": [
+                "I bet you must be surprised to see me in a place like this!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "wally",
+            "lines": [
+                "That promise that we made back then... Thank you for keeping your end of it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'It was really all thanks to you that I could make it this far, ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "wally",
+            "lines": [
+                "It was only because I lost to you back then that I could become even stronger."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "wally",
+            "lines": [
+                "I'm sure that you and your Pok\u00e9mon must have had to overcome a lot, too..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "wally",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'To make it all the way here. Right, ' + q.player.username + '?'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "wally",
+            "lines": [
+                "Everyone's grown so much..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "wally",
+            "lines": [
+                "And now we'll finally get to see just what we all can do."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "wally",
+            "lines": [
+                "Standing here facing you again gives me chills..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 38');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                          "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "wally",
+            "lines": [
+                "...But I won't give up! I won't lose anymore."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "wally",
+            "lines": [
+                "My Pok\u00e9mon have given me the courage and strength to fight."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page13');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "wally",
+            "lines": [
+                "I have to win for their sake!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next...",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page14');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "wally",
+            "lines": [
+                "So get ready... Here I come!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
+                        "value": "battle",
+                        "action": [
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }

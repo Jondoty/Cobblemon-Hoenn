@@ -613,6 +613,13 @@ execute as @s[x=2023,y=71,z=-2406,distance=..7,tag=Dialogue145,tag=!Dialogue148]
 execute as @s[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,tag=Dialogue147,tag=!Dialogue149,scores={BattleStart=0,GameVersion=1}] unless entity @e[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:groudon"}}] run scoreboard players set @s DialogueTrigger 149
 execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue148,tag=!Dialogue149,scores={BattleStart=0,GameVersion=2}] unless entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:kyogre"}}] run scoreboard players set @s DialogueTrigger 149
 
+#Littleroot, Birch granting National Dex after the legend has been dealt with
+execute as @s[x=-2042,y=49,z=319,distance=..6,tag=Dialogue149,tag=!Dialogue150,scores={Rival=1}] run opendialogue birch_natdex_dialogue150_may @s
+execute as @s[x=-2042,y=49,z=319,distance=..6,tag=Dialogue149,tag=!Dialogue150,scores={Rival=2}] run opendialogue birch_natdex_dialogue150_brendan @s
+
+#Victory Road Wally Battle
+execute as @s[x=1644,y=95,z=-2947,distance=..10,tag=!Dialogue154] unless entity @e[x=1644,y=94,z=-3015,dy=3,type=cobblemon:npc] run npcspawnat 1644 95 -3015 victoryroad_wally
+
 
 
 #-----------------------------------------------------------------------------------------------------
