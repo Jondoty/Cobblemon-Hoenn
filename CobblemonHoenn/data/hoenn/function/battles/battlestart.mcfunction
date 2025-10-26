@@ -205,7 +205,15 @@ execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cob
 execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryRayquaza
 
 
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:kyogre",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryPrimal
+execute as @s[scores={BattleStart=40}] at @s if entity @e[distance=..30,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:groudon",PokemonOriginalTrainerType:"NONE"}}] run tag @s add LegendaryPrimal
+
+
 #Plays legendary music tags
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryPrimal] run stopsound @s record
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryPrimal] run playsound primal record @s ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryPrimal] run scoreboard players set @s MusicCooldown 138
+
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnova] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnova] run playsound unovas record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryUnova] run scoreboard players set @s MusicCooldown 281

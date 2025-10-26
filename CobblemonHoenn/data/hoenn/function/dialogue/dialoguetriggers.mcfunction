@@ -592,9 +592,26 @@ execute as @s[x=919,y=94,z=1481,distance=..10,tag=Dialogue141,tag=!Dialogue143,s
 execute as @s[x=919,y=94,z=1481,distance=..10,tag=Dialogue141,tag=!Dialogue143,scores={GameVersion=2,Rival=1}] run opendialogue aqua_may_dialogue143 @s
 execute as @s[x=919,y=94,z=1481,distance=..10,tag=Dialogue141,tag=!Dialogue143,scores={GameVersion=2,Rival=2}] run opendialogue aqua_brendan_dialogue143 @s
 
-execute as @a[x=919,y=94,z=1477,distance=..40,tag=Dialogue141,tag=!Dialogue143] unless entity @e[x=924,y=93,z=1477,dy=3,type=cobblemon:npc] run npcspawnat 924 94 1477 steven_generic
-execute as @a[x=919,y=94,z=1477,distance=..40,tag=Dialogue141,tag=!Dialogue143] unless entity @e[x=919,y=93,z=1477,dy=3,type=cobblemon:npc] run npcspawnat 919 94 1477 wallace_generic
+execute as @s[x=919,y=94,z=1477,distance=..40,tag=Dialogue141,tag=!Dialogue143] unless entity @e[x=924,y=93,z=1477,dy=3,type=cobblemon:npc] run npcspawnat 924 94 1477 steven_generic
+execute as @s[x=919,y=94,z=1477,distance=..40,tag=Dialogue141,tag=!Dialogue143] unless entity @e[x=919,y=93,z=1477,dy=3,type=cobblemon:npc] run npcspawnat 919 94 1477 wallace_generic
 
+
+#Cave of Orisin Pep Talks
+execute as @s[x=1858,y=77,z=-2366,distance=..15,tag=!Dialogue145] run opendialogue origin_magma_dialogue145 @s
+execute as @s[x=2025,y=77,z=-2363,distance=..15,tag=!Dialogue145] run opendialogue origin_aqua_dialogue145 @s
+
+#Spawns Pokemon before battle
+execute as @s[x=1858,y=76,z=-2361,distance=..20,tag=Dialogue145,tag=!Dialogue147] unless entity @e[x=1856,y=70,z=-2426,distance=..15,type=cobblemon:pokemon] run fill 1857 69 -2412 1855 70 -2424 minecraft:lava
+execute as @s[x=1858,y=76,z=-2361,distance=..20,tag=Dialogue145,tag=!Dialogue147] unless entity @e[x=1856,y=70,z=-2426,distance=..15,type=cobblemon:pokemon] run pokespawnat 1856 71 -2426 groudon level=45 moves=lavaplume,rest,earthquake,precipiceblades no_ai=yes uncatchable=yes
+execute as @s[x=2025,y=76,z=-2351,distance=..20,tag=Dialogue145,tag=!Dialogue148] unless entity @e[x=2025,y=70,z=-2421,distance=..15,type=cobblemon:pokemon] run pokespawnat 2025 70 -2421 kyogre level=45 moves=bodyslam,aquaring,icebeam,originpulse no_ai=yes uncatchable=yes
+
+#Primal Reversion time
+execute as @s[x=1857,y=71,z=-2412,distance=..7,tag=Dialogue145,tag=!Dialogue147] run scoreboard players set @s DialogueTrigger 147
+execute as @s[x=2023,y=71,z=-2406,distance=..7,tag=Dialogue145,tag=!Dialogue148] run scoreboard players set @s DialogueTrigger 148
+
+#Legend subdued following dialogue, if no Pokemon is within the chambers
+execute as @s[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,tag=Dialogue147,tag=!Dialogue149,scores={BattleStart=0,GameVersion=1}] unless entity @e[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:groudon"}}] run scoreboard players set @s DialogueTrigger 149
+execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue148,tag=!Dialogue149,scores={BattleStart=0,GameVersion=2}] unless entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:kyogre"}}] run scoreboard players set @s DialogueTrigger 149
 
 
 

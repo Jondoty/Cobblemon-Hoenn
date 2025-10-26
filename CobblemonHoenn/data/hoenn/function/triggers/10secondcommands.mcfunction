@@ -27,6 +27,12 @@ execute as @a[tag=RockSmash] at @s as @e[tag=RockSmash,type=armor_stand,distance
 #Resets rock smash rocks when player wanders away
 execute as @e[tag=Regenerate,type=minecraft:armor_stand] at @s unless entity @a[distance=..75] run function hoenn:spawn/rocksmashrock
 
+
+#Cave of Origin, grants player & Pokemon Fire Resistance when battling Groudon
+execute if entity @a[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,tag=Dialogue145,tag=!Dialogue149] as @e[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152] run effect give @s minecraft:fire_resistance 600 1 true
+
+
+
 #Mirage spot sword trio EV scanning
 tag @s remove FirstEVMaxed
 tag @s remove SecondEVMaxed

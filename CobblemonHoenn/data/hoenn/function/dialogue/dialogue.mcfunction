@@ -184,11 +184,119 @@ tag @s[scores={DialogueTrigger=142,TalkTime=216..}] add Dialogue142
 scoreboard players set @s[scores={DialogueTrigger=142},tag=Dialogue142] TalkTime 0
 scoreboard players set @s[scores={DialogueTrigger=142},tag=Dialogue142] DialogueTrigger 0
 
+#-----------------------------------------------------------------------------------------------------
+#Dialogue 147 - Cave of Origin
+#Groudon in primal chamber
+#Triggered by jumping into the lava with legendary
+#https://youtu.be/MgkqxXCmrtI?t=56137
+
+tellraw @s[scores={DialogueTrigger=147,TalkTime=1}] {"text":"<Groudon> Gurouhh!!!"}
+execute as @s[scores={DialogueTrigger=147,TalkTime=1}] run playsound cobblemon:pokemon.groudon.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=147,TalkTime=1}] run stopsound @s record
+
+#Camera 1
+execute as @s[scores={DialogueTrigger=147,TalkTime=5}] run function hoenn:triggers/stopsound
+execute as @s[scores={DialogueTrigger=147,TalkTime=6}] run gamemode spectator
+execute as @s[scores={DialogueTrigger=147,TalkTime=6}] run tp @s 1850.0 72 -2416.5 -134 -2
+
+#Camera 2
+execute as @s[scores={DialogueTrigger=147,TalkTime=14}] run tp @s 1859.5 74.25 -2419 140 10
+
+#Starts shake
+execute as @s[scores={DialogueTrigger=147,TalkTime=22}] run tag @s add ShakeScreen
+execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run tag @s remove ShakeScreen
+
+#transforms into primal
+execute as @s[scores={DialogueTrigger=147,TalkTime=22}] run tp @s 1852 70 -2417.3 -148 -24
+
+execute as @s[scores={DialogueTrigger=147,TalkTime=30}] run tp @s 1851.95 70.1 -2434.3 -34 -10.5
+
+#tps player to land
+execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run gamemode adventure
+execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run tp @s 1855 72 -2408 180 0
 
 
 
+#Swaps for primal battle
+execute as @s[scores={DialogueTrigger=148,TalkTime=37}] run tp @e[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run particle minecraft:explosion_emitter 1856 70 -2426 4 5 4 .75 100 normal
+execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run pokespawnat 1856 71 -2426 groudon level=45 moves=lavaplume,rest,earthquake,precipiceblades reversion_state=primal
+execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run tp @e[x=1856,y=71,z=-2426,distance=..5,nbt={NoAI:1b}] 10000000 -50000 -10000000
+
+tellraw @s[scores={DialogueTrigger=147,TalkTime=40}] {"text":"<Groudon> Gurrrooouuuhhh!!!"}
+execute as @s[scores={DialogueTrigger=147,TalkTime=40}] run playsound cobblemon:pokemon.groudon.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=147,TalkTime=40}] run tag @s remove GroudonParticles
+execute as @s[scores={DialogueTrigger=147,TalkTime=40}] run scoreboard players set @s LegendCatch 1
+execute as @s[scores={DialogueTrigger=147,TalkTime=50}] run advancement grant @s only hoenn:adventurer/groudon2
+execute as @s[scores={DialogueTrigger=147,TalkTime=50}] run fill 1857 69 -2412 1855 70 -2424 minecraft:obsidian
+
+#Groudon transforms into Primal form
+#Could form glass crystals around it during transformation?
+
+#Text if legend is defeated
+#tellraw @s {"text":"Groudon disappeared deep beneath the magma...","italic":true,"color":"gray"}
+
+#pokebattle
+
+tag @s[scores={DialogueTrigger=147,TalkTime=50..}] add Dialogue147
+
+#-----------------------------------------------------------------------------------------------------
+#Dialogue 148 - Cave of Origin
+#Groudon in primal chamber
+#Triggered by jumping into the water with legendary
+
+tellraw @s[scores={DialogueTrigger=148,TalkTime=1}] {"text":"<Kyogre> Krawr!!"}
+execute as @s[scores={DialogueTrigger=148,TalkTime=1}] run playsound cobblemon:pokemon.kyogre.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=148,TalkTime=1}] run stopsound @s record
+
+#Camera 1
+execute as @s[scores={DialogueTrigger=148,TalkTime=5}] run function hoenn:tools/forceclick
+execute as @s[scores={DialogueTrigger=148,TalkTime=6}] run gamemode spectator
+execute as @s[scores={DialogueTrigger=148,TalkTime=6}] run tp @s 2017.6 69.75 -2412.75 -135 4
+
+#Camera 2
+execute as @s[scores={DialogueTrigger=148,TalkTime=14}] run tp @s 2031.0 71.25 -2414.33 132 22
+
+#Starts shake
+execute as @s[scores={DialogueTrigger=148,TalkTime=22}] run tag @s add ShakeScreen
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run tag @s remove ShakeScreen
+
+#transforms into primal
+execute as @s[scores={DialogueTrigger=148,TalkTime=22}] run tp @s 2022.8 64.5 -2413.9 -158 -42
+
+execute as @s[scores={DialogueTrigger=148,TalkTime=30}] run tp @s 2019.66 70.86 -2429.6 -34 5
+
+#tps player to land
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run gamemode adventure
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run tp @s 2025 72 -2404 180 0
 
 
+
+#Swaps for primal battle
+execute as @s[scores={DialogueTrigger=148,TalkTime=37}] run tp @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run particle minecraft:explosion_emitter 2025 72 -2421 4 5 4 .75 100 normal
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run pokespawnat 2025 70 -2421 kyogre level=45 moves=bodyslam,aquaring,icebeam,originpulse reversion_state=primal
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run tp @e[x=2025,y=70,z=-2421,distance=..5,nbt={NoAI:1b}] 10000000 -50000 -10000000
+
+tellraw @s[scores={DialogueTrigger=148,TalkTime=40}] {"text":"<Kyogre> Krrraaawwwrrr!!!"}
+execute as @s[scores={DialogueTrigger=148,TalkTime=40}] run playsound cobblemon:pokemon.kyogre.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=148,TalkTime=40}] run tag @s remove KyogreParticles
+execute as @s[scores={DialogueTrigger=148,TalkTime=40}] run scoreboard players set @s LegendCatch 1
+execute as @s[scores={DialogueTrigger=148,TalkTime=50}] run advancement grant @s only hoenn:adventurer/kyogre2
+
+
+#Kyogre transforms into Primal form
+#Could form glass crystals around it during transformation?
+
+#Text if legend is defeated
+#tellraw @s[scores={DialogueTrigger=148,TalkTime=1}] {"text":"Kyogre disappeared deep beneath the water...","italic":true,"color":"gray"}
+
+#pokebattle
+
+tag @s[scores={DialogueTrigger=148,TalkTime=50..}] add Dialogue148
+
+
+#-----------------------------------------------------------------------------------------------------
 
 
 
