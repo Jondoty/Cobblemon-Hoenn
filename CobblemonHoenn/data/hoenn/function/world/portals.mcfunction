@@ -1409,26 +1409,26 @@ tp @a[x=633,y=91,z=-2306,dx=2,dy=3] 2158 171 -795
 
 #Checks if player has all 8 badges
 scoreboard players set @a[x=2155,y=171,z=-797,dx=6,dy=4] Temp 0
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue25] Temp 1
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue35] Temp 1
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue68] Temp 1
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue90] Temp 1
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue95] Temp 1
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue118] Temp 1
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue138] Temp 1
-scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Dialogue152] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Roxanne] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Brawly] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Wattson] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Flannery] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Norman] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Winona] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=LizaTate] Temp 1
+scoreboard players add @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,tag=Wallace] Temp 1
 tag @a[x=2155,y=171,z=-797,dx=6,dy=4,scores={Temp=8..}] add AllBadges
 
 tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,scores={Temp=7}] {"text":"All eight badges are required to enter the Elite Four! You are missing the badge:","italic":true,"color":"gray"}
 tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges,scores={Temp=..6}] {"text":"All eight badges are required to enter the Elite Four! You are missing the badges:","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue25] {"text":"Stone Badge","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue35] {"text":"Knuckle Badge","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue68] {"text":"Dynamo Badge","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue90] {"text":"Heat Badge","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue95] {"text":"Balance Badge","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue118] {"text":"Feather Badge","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue138] {"text":"Mind Badge","italic":true,"color":"gray"}
-tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Dialogue152] {"text":"Rain Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Roxanne] {"text":"Stone Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Brawly] {"text":"Knuckle Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Wattson] {"text":"Dynamo Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Flannery] {"text":"Heat Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Norman] {"text":"Balance Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Winona] {"text":"Feather Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!LizaTate] {"text":"Mind Badge","italic":true,"color":"gray"}
+tellraw @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!Wallace] {"text":"Rain Badge","italic":true,"color":"gray"}
 
 scoreboard players set @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=AllBadges] MusicTitles 44
 tp @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=AllBadges] 634 91 -2307
