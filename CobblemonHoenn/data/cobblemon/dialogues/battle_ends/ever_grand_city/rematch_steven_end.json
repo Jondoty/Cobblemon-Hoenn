@@ -1,10 +1,13 @@
 {
   "initializationAction": [
     "c.npc.set_chatting();",
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 3');",
     "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+    "q.run_command('execute as ' + q.player.username + ' run tag @s add Steven');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $15800 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-    "q.run_command('scoreboard players add ' + q.player.username + ' Money 15800');"
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 15800');",
+    "q.run_command('execute as ' + q.player.username + ' run opendialogue rematch_steven_end_first @s[tag=!Dialogue164]');",
+    "q.run_command('execute as ' + q.player.username + ' run opendialogue rematch_steven_end_additional @s[tag=Dialogue164]');"
   ],
   "speakers": {
     "npc": {
@@ -40,6 +43,5 @@
     }
   ],
   "escapeAction": [
-    "q.dialogue.close();"
   ]
 }

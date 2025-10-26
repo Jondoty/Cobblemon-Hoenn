@@ -36,7 +36,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page2');"
                     }
@@ -54,7 +54,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page3');"
                     }
@@ -72,7 +72,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page5');"
                     }
@@ -90,7 +90,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page6');"
                     }
@@ -108,7 +108,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page7');"
                     }
@@ -126,7 +126,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page8');"
                     }
@@ -144,7 +144,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page9');"
                     }
@@ -162,7 +162,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page10');"
                     }
@@ -180,7 +180,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page11');"
                     }
@@ -198,7 +198,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page12');"
                     }
@@ -216,7 +216,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page13');"
                     }
@@ -234,7 +234,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": [
                             "q.run_command('tag ' + q.player.username + ' add NatDex');",
@@ -256,7 +256,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page15');"
                     }
@@ -274,7 +274,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page16');"
                     }
@@ -292,7 +292,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page17');"
                     }
@@ -310,7 +310,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page18');"
                     }
@@ -328,7 +328,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page19');"
                     }
@@ -346,7 +346,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page20');"
                     }
@@ -364,7 +364,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next...",
+                        "text": "Next",
                         "value": "next",
                         "action": "q.dialogue.set_page('page21');"
                     }

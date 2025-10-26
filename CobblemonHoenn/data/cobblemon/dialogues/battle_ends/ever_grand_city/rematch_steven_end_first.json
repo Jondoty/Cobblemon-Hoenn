@@ -1,31 +1,30 @@
 {
-    "initializationAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 10');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
-    ],
-    "escapeAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.dialogue.close();"
-    ],
-    "speakers": {
-        "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
-        }
+  "initializationAction": [
+  ],
+  "speakers": {
+    "npc": {
+      "name": "Steven",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:steven",
+        "isLeftSide": true
+      }
     },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
     "pages": [
         {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'Welcome, ' + q.player.username + '.';"
-                }
+                "I knew you would be strong..."
             ],
             "input": {
                 "type": "option",
@@ -43,7 +42,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I was hoping I would get to see you make it here one day."
+                "But I don't regret our battle."
             ],
             "input": {
                 "type": "option",
@@ -61,7 +60,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Tell me... What have you seen on your journey with your Pokémon?"
+                "Because each time that I battle you, I learn more about Pokémon..."
             ],
             "input": {
                 "type": "option",
@@ -79,7 +78,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "What have you felt, meeting so many other Trainers out there?"
+                "Yes..."
             ],
             "input": {
                 "type": "option",
@@ -97,7 +96,7 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "Traveling this rich land of Hoenn..."
+                "I have something I'd like to give to you in thanks for all you've done."
             ],
             "input": {
                 "type": "option",
@@ -106,16 +105,19 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": [
+                          "q.run_command('execute as ' + q.player.username + ' run give @s mega_showdown:metagrossite');",
+                          "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1');",
+                          "q.dialogue.set_page('page6');"]
                     }
                 ]
             }
         },
         {
             "id": "page6",
-            "speaker": "npc",
+            "speaker": "player",
             "lines": [
-                "Has it awoken something inside you? I want you to come at me with all that you've learned."
+                "You obtained a Metagrossite!"
             ],
             "input": {
                 "type": "option",
@@ -133,7 +135,7 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "My Pokémon and I will respond in turn with all that we know!"
+                "That is a very special piece from my collection..."
             ],
             "input": {
                 "type": "option",
@@ -151,32 +153,41 @@
             "id": "page8",
             "speaker": "npc",
             "lines": [
-                "Let it begin!"
+                "But I think you are capable of appreciating its worth."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-                        "value": "battle",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 34');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-                            "v.battle = q.npc.start_battle(q.player);"
-                        ]
-                    },
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "It is time we record your great victory."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
                     {
-                        "text": "No",
-                        "value": "no",
+                        "text": "Close",
+                        "value": "close",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue164');",
                             "q.dialogue.close();"
                         ]
                     }
                 ]
             }
         }
-    ]
+    ],
+    "escapeAction": []
 }

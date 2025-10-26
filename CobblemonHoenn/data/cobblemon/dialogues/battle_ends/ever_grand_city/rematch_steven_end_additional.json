@@ -1,29 +1,30 @@
 {
-    "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.run_command('execute as ' + q.player.username + ' run tag @s add Sidney');",
-        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $11520 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 11520');"
-    ],
-    "speakers": {
-        "npc": {
-            "name": "Sidney",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:sidney",
-                "isLeftSide": true
-            }
-        }
+  "initializationAction": [
+  ],
+  "speakers": {
+    "npc": {
+      "name": "Steven",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:steven",
+        "isLeftSide": true
+      }
     },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
     "pages": [
         {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Heh... I knew you really were the strongest..."
+                "In the end, you are still the strongest."
             ],
             "input": {
                 "type": "option",
@@ -41,7 +42,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Well, hurry up and get out of here!"
+                "Amazing."
             ],
             "input": {
                 "type": "option",
@@ -59,7 +60,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Everybody else is still waiting for you!"
+                "Now let us make a record of your victory!"
             ],
             "input": {
                 "type": "option",

@@ -3,6 +3,7 @@
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
     "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+    "q.run_command('execute as ' + q.player.username + ' run tag @s add Glacia');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $11840 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 11840');"
   ],
@@ -17,29 +18,63 @@
       }
     }
   },
-  "pages": [
-    {
-      "id": "page2",
-      "speaker": "npc",
-      "lines": [
-        "It really is hot."
-      ],
-      "input": {
-        "type": "option",
-        "vertical": false,
-        "options": [
-          {
-            "text": "Close",
-            "value": "close",
-            "action": [
-              "q.dialogue.close();"
-            ]
-          }
-        ]
-      }
-    }
-  ],
-  "escapeAction": [
-    "q.dialogue.close();"
-  ]
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hmmph... Do you intend to thaw my very heart?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "That actually wouldn't bother me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Anyway, continue onward! Drake is waiting for you as well."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": []
 }

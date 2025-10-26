@@ -77,11 +77,11 @@ execute as @a run function hoenn:world/bases/portals
 #Littleroot Town
 
 #Prof Birch's Lab
-execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run function hoenn:triggers/stopsound
 execute as @a[x=-2043,y=50,z=344,dx=3,dy=5] run effect clear @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility
 tp @a[x=-2043,y=50,z=344,dx=3,dy=5] -2042 69 345
 
-execute as @a[x=-2043,y=69,z=344,dx=2,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2043,y=69,z=344,dx=2,dy=5] run function hoenn:triggers/stopsound
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=!Dialogue7] run effect give @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility infinite 1 true
 #execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=Dialogue11,tag=!Dialogue12] run scoreboard players set @s DialogueTrigger 12
 tp @a[x=-2043,y=69,z=344,dx=2,dy=5] -2041 50 343
@@ -98,18 +98,18 @@ tp @a[x=-2004,y=69,z=309,dx=4,dy=3] -2002 40 308
 #Oldale Town
 
 #Pokemon Center
-execute as @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] run spawnpoint @s -2054 48 86
 tp @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] -2054 48 86
 
-execute as @a[x=-2055,y=48,z=87,dx=2,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2055,y=48,z=87,dx=2,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2055,y=48,z=87,dx=2,dy=3] -2054 69 89
 
 #Pokemon Mart
-execute as @a[x=-2008,y=69,z=35,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2008,y=69,z=35,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2008,y=69,z=35,dx=3,dy=3] -2006 50 34
 
-execute as @a[x=-2008,y=50,z=35,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2008,y=50,z=35,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2008,y=50,z=35,dx=3,dy=3] -2007 69 36
 
 #Top Left Home
@@ -125,18 +125,18 @@ tp @a[x=-1995,y=55,z=88,dx=3,dy=3] -1993 69 89
 #Petalburg City
 
 #Pokemon Center
-execute as @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] run spawnpoint @s -2506 48 24
 tp @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] -2506 48 24
 
-execute as @a[x=-2507,y=48,z=25,dx=2,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2507,y=48,z=25,dx=2,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2507,y=48,z=25,dx=2,dy=3] -2506 69 27
 
 #Pokemon Mart
-execute as @a[x=-2473,y=69,z=8,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2473,y=69,z=8,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2473,y=69,z=8,dx=3,dy=3] -2471 50 7
 
-execute as @a[x=-2473,y=50,z=8,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2473,y=50,z=8,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2473,y=50,z=8,dx=3,dy=3] -2472 69 9
 
 
@@ -339,14 +339,14 @@ tp @a[x=-2804,y=52,z=-403,dx=4,dy=3] -2802 69 -402
 
 tp @a[x=-2803,y=64,z=256,dx=4,dy=3,tag=RegiceHave,tag=RegirockHave,tag=RegisteelHave] -2801 -10 255
 
-execute as @a[x=-2803,y=-10,z=256,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2803,y=-10,z=256,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2803,y=-10,z=256,dx=4,dy=3] -2801 64 257
 
 #Normal
-execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2803,y=64,z=256,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2803,y=64,z=256,dx=4,dy=3] -2801 11 255
 
-execute as @a[x=-2803,y=11,z=256,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2803,y=11,z=256,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2803,y=11,z=256,dx=4,dy=3] -2801 64 257
 
 #if trapped behind wall
@@ -356,18 +356,18 @@ execute as @a[x=-2803,y=11,z=207,dx=4,dy=5] at @s run tp @s ~ ~ ~5
 #Rustboro City
 
 #Pokemon Center
-execute as @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] run spawnpoint @s -2736 48 -608
 tp @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] -2736 48 -608
 
-execute as @a[x=-2737,y=48,z=-607,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2737,y=48,z=-607,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2737,y=48,z=-607,dx=3,dy=3] -2736 69 -605
 
 #Pokemon Mart
-execute as @a[x=-2743,y=69,z=-567,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2743,y=69,z=-567,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2743,y=69,z=-567,dx=3,dy=3] -2741 50 -568
 
-execute as @a[x=-2743,y=50,z=-567,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2743,y=50,z=-567,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2743,y=50,z=-567,dx=3,dy=3] -2742 69 -566
 
 #Pokemon Gym
@@ -422,35 +422,35 @@ tp @a[x=-2453,y=56,z=-723,dx=4,dy=3] -2451 69 -722
 
 #Rustboro Tunnel
 #Route 116 Side
-execute as @a[x=-2417,y=69,z=-723,dx=6,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2417,y=69,z=-723,dx=6,dy=5] run function hoenn:triggers/stopsound
 scoreboard players set @a[x=-2417,y=69,z=-723,dx=6,dy=5] EscapeRope 1
 tp @a[x=-2417,y=69,z=-723,dx=6,dy=5] -2414 37 -792
 
 #Return
-execute as @a[x=-2417,y=37,z=-791,dx=6,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2417,y=37,z=-791,dx=6,dy=5] run function hoenn:triggers/stopsound
 scoreboard players set @a[x=-2417,y=37,z=-791,dx=6,dy=5] EscapeRope 0
 tp @a[x=-2417,y=37,z=-791,dx=6,dy=5] -2414 69 -722
 
 #------------
 
 #Dead End Middle Portal
-execute as @a[x=-2336,y=69,z=-710,dx=6,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2336,y=69,z=-710,dx=6,dy=5] run function hoenn:triggers/stopsound
 tp @a[x=-2336,y=69,z=-710,dx=6,dy=5] -2333 37 -751
 
 #Return
-execute as @a[x=-2336,y=37,z=-750,dx=6,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2336,y=37,z=-750,dx=6,dy=5] run function hoenn:triggers/stopsound
 tp @a[x=-2336,y=37,z=-750,dx=6,dy=5] -2333 69 -709
 
 
 #------------
 
 #Verdanturf Town Side
-execute as @a[x=-2121,y=69,z=-659,dx=6,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2121,y=69,z=-659,dx=6,dy=5] run function hoenn:triggers/stopsound
 scoreboard players set @a[x=-2121,y=69,z=-659,dx=6,dy=5] EscapeRope 2
 tp @a[x=-2121,y=69,z=-659,dx=6,dy=5] -2268 37 -771
 
 #Return
-execute as @a[x=-2271,y=37,z=-770,dx=6,dy=5] run function hoenn:tools/forceclick
+execute as @a[x=-2271,y=37,z=-770,dx=6,dy=5] run function hoenn:triggers/stopsound
 scoreboard players set @a[x=-2271,y=37,z=-770,dx=6,dy=5] EscapeRope 0
 tp @a[x=-2271,y=37,z=-770,dx=6,dy=5] -2118 69 -658
 
@@ -458,25 +458,25 @@ tp @a[x=-2271,y=37,z=-770,dx=6,dy=5] -2118 69 -658
 #Verdanturf Town
 
 #Pokemon Center
-execute as @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] run spawnpoint @s -2056 48 -640
 tp @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] -2056 48 -640
 
-execute as @a[x=-2057,y=48,z=-639,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2057,y=48,z=-639,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2057,y=48,z=-639,dx=3,dy=3] -2056 69 -637
 
 #Pokemon Mart
-execute as @a[x=-2097,y=69,z=-640,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2097,y=69,z=-640,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2097,y=69,z=-640,dx=3,dy=3] -2095 50 -641
 
-execute as @a[x=-2097,y=50,z=-640,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2097,y=50,z=-640,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2097,y=50,z=-640,dx=3,dy=3] -2096 69 -639
 
 #Contest Hall
-execute as @a[x=-2158,y=69,z=-618,dx=10,dy=3,dz=2] run function hoenn:tools/forceclick
+execute as @a[x=-2158,y=69,z=-618,dx=10,dy=3,dz=2] run function hoenn:triggers/stopsound
 tp @a[x=-2158,y=69,z=-618,dx=10,dy=3,dz=2] -1742 67 1443
 
-execute as @a[x=-1743,y=67,z=1444,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1743,y=67,z=1444,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1743,y=67,z=1444,dx=3,dy=3] -2153 69 -615
 
 #Left Home
@@ -507,11 +507,11 @@ tp @a[x=-1724,y=50,z=-652,dx=3,dy=3] -1722 69 -655
 #Dewford Town
 
 #Pokemon Center
-execute as @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] run spawnpoint @s -2533 43 863
 tp @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] -2533 43 863
 
-execute as @a[x=-2534,y=43,z=864,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2534,y=43,z=864,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2534,y=43,z=864,dx=3,dy=3] -2533 64 866
 
 #Pokemon Gym
@@ -552,25 +552,25 @@ tp @a[x=-1556,y=66,z=513,dx=4,dy=3] -1554 38 512
 tp @a[x=-1556,y=38,z=513,dx=3,dy=3] -1554 64 516
 
 #Pokemon Center
-execute as @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] run spawnpoint @s -1539 48 261
 tp @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] -1539 48 261
 
-execute as @a[x=-1540,y=48,z=262,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1540,y=48,z=262,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1540,y=48,z=262,dx=3,dy=3] -1539 69 264
 
 #Pokemon Mart
-execute as @a[x=-1490,y=69,z=262,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1490,y=69,z=262,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1490,y=69,z=262,dx=3,dy=3] -1488 50 261
 
-execute as @a[x=-1490,y=50,z=262,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1490,y=50,z=262,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1490,y=50,z=262,dx=3,dy=3] -1489 69 263
 
 #Contest Hall
-execute as @a[x=-1572,y=69,z=196,dx=10,dy=3,dz=2] run function hoenn:tools/forceclick
+execute as @a[x=-1572,y=69,z=196,dx=10,dy=3,dz=2] run function hoenn:triggers/stopsound
 tp @a[x=-1572,y=69,z=196,dx=10,dy=3,dz=2] -1636 67 1443
 
-execute as @a[x=-1637,y=67,z=1444,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1637,y=67,z=1444,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1637,y=67,z=1444,dx=3,dy=3] -1567 69 199
 
 
@@ -583,8 +583,8 @@ execute as @a[x=-1412,y=64,z=203,dx=8,dy=3] run tp @e[x=-1408,y=64,z=211,distanc
 
 #Teams stealing Submarine
 
-execute as @a[x=-1412,y=64,z=203,dx=8,dy=3,tag=Dialogue123,tag=!Dialogue126] run function hoenn:tools/forceclick
-execute as @a[x=2220,y=79,z=2709,dx=3,dy=3,tag=Dialogue123,tag=!Dialogue126] run function hoenn:tools/forceclick
+execute as @a[x=-1412,y=64,z=203,dx=8,dy=3,tag=Dialogue123,tag=!Dialogue126] run function hoenn:triggers/stopsound
+execute as @a[x=2220,y=79,z=2709,dx=3,dy=3,tag=Dialogue123,tag=!Dialogue126] run function hoenn:triggers/stopsound
 
 tp @a[x=-1412,y=64,z=203,dx=8,dy=3,tag=Dialogue123,tag=!Dialogue126] 2221 79 2708
 tp @a[x=2220,y=79,z=2709,dx=2,dy=3,tag=Dialogue123,tag=!Dialogue126] -1408 64 204
@@ -595,10 +595,10 @@ tp @a[x=2220,y=79,z=2595,dx=2,dy=3] -1408 64 204
 
 #Oceanic Museum
 #(Normal branch)
-execute as @a[x=-1395,y=69,z=282,dx=2,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1395,y=69,z=282,dx=2,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1395,y=69,z=282,dx=2,dy=3,tag=Dialogue44] -1394 34 281
 
-execute as @a[x=-1396,y=-21,z=282,dx=4,dy=60] run function hoenn:tools/forceclick
+execute as @a[x=-1396,y=-21,z=282,dx=4,dy=60] run function hoenn:triggers/stopsound
 tp @a[x=-1396,y=-21,z=282,dx=4,dy=60] -1394 69 283
 
 #Magma taken over branch
@@ -671,18 +671,18 @@ tp @a[x=2670,y=65,z=2714,dx=6,dy=3] -3375 99 1599
 tp @a[x=-3379,y=99,z=1600,dx=8,dy=3] 2673 65 2715
 
 #Pokemon Mart
-execute as @a[x=-1511,y=69,z=-645,dx=2,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1511,y=69,z=-645,dx=2,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1511,y=69,z=-645,dx=2,dy=3] -1510 50 -646
 
-execute as @a[x=-1512,y=50,z=-645,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1512,y=50,z=-645,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1512,y=50,z=-645,dx=3,dy=3] -1510 69 -644
 
 #Pokemon Center
-execute as @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] run spawnpoint @s -1558 48 -647
 tp @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] -1558 48 -647
 
-execute as @a[x=-1559,y=48,z=-646,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1559,y=48,z=-646,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1559,y=48,z=-646,dx=3,dy=3] -1558 69 -644
 
 #Despawns rival in courtyard on any portal
@@ -752,10 +752,10 @@ tp @a[x=-1564,y=79,z=-868,dx=3,dy=3] -1562 58 -869
 tp @a[x=-1564,y=58,z=-868,dx=3,dy=3] -1562 79 -867
 
 #Desert Ruins
-execute as @a[x=-1424,y=79,z=-995,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1424,y=79,z=-995,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1424,y=79,z=-995,dx=4,dy=3] -1421 37 -994
 
-execute as @a[x=-1423,y=37,z=-993,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1423,y=37,z=-993,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1423,y=37,z=-993,dx=4,dy=3] -1422 79 -994
 
 #if trapped behind wall
@@ -810,26 +810,26 @@ tp @a[x=-1789,y=33,z=-1336,dx=5,dy=5] -1682 79 -1308
 #Lavaridge Town
 
 #Pokemon Center
-execute as @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] run spawnpoint @s -2012 63 -1109
 tp @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] -2012 63 -1109
 
-execute as @a[x=-2013,y=63,z=-1108,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2013,y=63,z=-1108,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2013,y=63,z=-1108,dx=3,dy=3] -2012 84 -1106
 
 #Spa Entrance
-execute as @a[x=-2023,y=63,z=-1128,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2023,y=63,z=-1128,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2023,y=63,z=-1128,dx=3,dy=3] -2020 84 -1133
 
-execute as @a[x=-2022,y=84,z=-1132,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2022,y=84,z=-1132,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2022,y=84,z=-1132,dx=4,dy=3] -2021 63 -1127
 
 
 #Pokemon Mart
-execute as @a[x=-1977,y=84,z=-1112,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1977,y=84,z=-1112,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1977,y=84,z=-1112,dx=3,dy=3] -1975 65 -1113
 
-execute as @a[x=-1977,y=65,z=-1112,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1977,y=65,z=-1112,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1977,y=65,z=-1112,dx=3,dy=3] -1976 84 -1111
 
 #Pokemon Gym
@@ -856,25 +856,25 @@ tp @a[x=-1956,y=77,z=-1458,dx=3,dy=3] -1954 94 -1455
 #Fallarbor Town
 
 #Pokemon Center
-execute as @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] run spawnpoint @s -2200 68 -1431
 tp @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] -2200 68 -1431
 
-execute as @a[x=-2201,y=68,z=-1430,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2201,y=68,z=-1430,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2201,y=68,z=-1430,dx=3,dy=3] -2200 89 -1428
 
 #Pokemon Mart
-execute as @a[x=-2197,y=89,z=-1384,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2197,y=89,z=-1384,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2197,y=89,z=-1384,dx=3,dy=3] -2195 70 -1385
 
-execute as @a[x=-2197,y=70,z=-1384,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-2197,y=70,z=-1384,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-2197,y=70,z=-1384,dx=3,dy=3] -2196 89 -1383
 
 #Contest Hall
-execute as @a[x=-2269,y=89,z=-1431,dx=9,dy=3,dz=2] run function hoenn:tools/forceclick
+execute as @a[x=-2269,y=89,z=-1431,dx=9,dy=3,dz=2] run function hoenn:triggers/stopsound
 tp @a[x=-2269,y=89,z=-1431,dx=9,dy=3,dz=2] -1742 67 1348
 
-execute as @a[x=-1743,y=67,z=1349,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1743,y=67,z=1349,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1743,y=67,z=1349,dx=3,dy=3] -2264 89 -1428
 
 
@@ -949,16 +949,16 @@ tp @a[x=-820,y=50,z=-824,dx=3,dy=3] -818 66 -823
 tp @a[x=-991,y=79,z=-1280,dx=8,dy=3,tag=Dialogue104] -987 51 -1281
 
 #Ruby
-execute as @a[x=-991,y=79,z=-1280,dx=8,dy=3,scores={GameVersion=1},tag=!Dialogue104] run function hoenn:tools/forceclick
+execute as @a[x=-991,y=79,z=-1280,dx=8,dy=3,scores={GameVersion=1},tag=!Dialogue104] run function hoenn:triggers/stopsound
 tp @a[x=-991,y=79,z=-1280,dx=8,dy=3,scores={GameVersion=1},tag=!Dialogue104] -987 29 -1281
 
 #Sapphire
-execute as @a[x=-991,y=79,z=-1280,dx=8,dy=3,scores={GameVersion=2},tag=!Dialogue104] run function hoenn:tools/forceclick
+execute as @a[x=-991,y=79,z=-1280,dx=8,dy=3,scores={GameVersion=2},tag=!Dialogue104] run function hoenn:triggers/stopsound
 tp @a[x=-991,y=79,z=-1280,dx=8,dy=3,scores={GameVersion=2},tag=!Dialogue104] -987 7 -1281
 
 #Return
-execute as @a[x=-989,y=6,z=-1280,dx=3,dy=50,scores={GameVersion=1},tag=!Dialogue104] run function hoenn:tools/forceclick
-execute as @a[x=-989,y=6,z=-1280,dx=3,dy=50,scores={GameVersion=2},tag=!Dialogue104] run function hoenn:tools/forceclick
+execute as @a[x=-989,y=6,z=-1280,dx=3,dy=50,scores={GameVersion=1},tag=!Dialogue104] run function hoenn:triggers/stopsound
+execute as @a[x=-989,y=6,z=-1280,dx=3,dy=50,scores={GameVersion=2},tag=!Dialogue104] run function hoenn:triggers/stopsound
 tp @a[x=-989,y=6,z=-1280,dx=3,dy=50] -987 79 -1279
 
 
@@ -966,18 +966,18 @@ tp @a[x=-989,y=6,z=-1280,dx=3,dy=50] -987 79 -1279
 #Fortree City
 
 #Pokemon Center
-execute as @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] run spawnpoint @s -688 63 -1428
 tp @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] -688 63 -1428
 
-execute as @a[x=-689,y=63,z=-1427,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-689,y=63,z=-1427,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-689,y=63,z=-1427,dx=3,dy=3] -688 84 -1425
 
 #Pokemon Mart
-execute as @a[x=-698,y=84,z=-1373,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-698,y=84,z=-1373,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-698,y=84,z=-1373,dx=3,dy=3] -696 65 -1374
 
-execute as @a[x=-698,y=65,z=-1373,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-698,y=65,z=-1373,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-698,y=65,z=-1373,dx=3,dy=3] -697 84 -1372
 
 #Pokemon Gym
@@ -1041,9 +1041,9 @@ tp @a[x=138,y=64,z=-765,dx=5,dy=3] 1644 27 2653
 tp @a[x=1642,y=27,z=2654,dx=5,dy=3] 140 64 -764
 
 #To standalone Mountain
-execute as @a[x=1499,y=87,z=2854,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=1499,y=87,z=2854,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=1499,y=87,z=2854,dx=4,dy=3] 1614 51 2648
-execute as @a[x=1611,y=51,z=2649,dx=5,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=1611,y=51,z=2649,dx=5,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=1611,y=51,z=2649,dx=5,dy=3] 1501 87 2855
 
 #-------------------------------------------------------------------------
@@ -1061,9 +1061,9 @@ tp @a[x=-554,y=45,z=-611,dx=3,dy=3] -553 64 -610
 #Lilycove City
 
 #Lilycove Museum
-execute as @a[x=419,y=94,z=-1098,dx=14,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=419,y=94,z=-1098,dx=14,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=419,y=94,z=-1098,dx=14,dy=3] 426 54 -1099
-execute as @a[x=424,y=54,z=-1098,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=424,y=54,z=-1098,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=424,y=54,z=-1098,dx=3,dy=3] 426 94 -1097
 
 #Lilycove Department Store
@@ -1086,11 +1086,11 @@ tp @a[x=443,y=74,z=-1036,dx=4,dy=3] 445 55 -1037
 tp @a[x=443,y=55,z=-1036,dx=3,dy=3] 445 74 -1035
 
 #Pokemon Center
-execute as @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] run spawnpoint @s 518 53 -1036
 tp @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] 518 53 -1036
 
-execute as @a[x=517,y=53,z=-1035,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=517,y=53,z=-1035,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=517,y=53,z=-1035,dx=3,dy=3] 518 74 -1033
 
 #Middle Middle NPC Home Trainer Club
@@ -1106,10 +1106,10 @@ tp @a[x=437,y=74,z=-988,dx=4,dy=3] 439 53 -989
 tp @a[x=437,y=53,z=-988,dx=3,dy=3] 439 74 -987
 
 #Contest Hall
-execute as @a[x=-1637,y=67,z=1349,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-1637,y=67,z=1349,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-1637,y=67,z=1349,dx=3,dy=3] 514 74 -977
 
-execute as @a[x=509,y=74,z=-980,dx=10,dy=3,dz=2] run function hoenn:tools/forceclick
+execute as @a[x=509,y=74,z=-980,dx=10,dy=3,dz=2] run function hoenn:triggers/stopsound
 tp @a[x=509,y=74,z=-980,dx=10,dy=3,dz=2] -1636 67 1348
 
 #Lilycove Motel
@@ -1158,18 +1158,18 @@ tp @a[x=1427,y=74,z=-977,dx=2,dy=3] 1428 48 -978
 tp @a[x=1426,y=48,z=-977,dx=4,dy=3] 1428 74 -976
 
 #Pokemon Center
-execute as @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] run spawnpoint @s 1482 53 -979
 tp @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] 1482 53 -979
 
-execute as @a[x=1481,y=53,z=-978,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=1481,y=53,z=-978,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=1481,y=53,z=-978,dx=3,dy=3] 1482 74 -976
 
 #Pokemon Mart
-execute as @a[x=1534,y=74,z=-974,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=1534,y=74,z=-974,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=1534,y=74,z=-974,dx=3,dy=3] 1536 55 -975
 
-execute as @a[x=1534,y=55,z=-974,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=1534,y=55,z=-974,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=1534,y=55,z=-974,dx=3,dy=3] 1535 74 -973
 
 #Middle Right NPC Home
@@ -1256,11 +1256,11 @@ tp @a[x=-102,y=65,z=248,dx=4,dy=3] -100 32 247
 tp @a[x=-102,y=32,z=248,dx=3,dy=3] -100 65 249
 
 #Pokemon Center
-execute as @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] run spawnpoint @s -53 28 265
 tp @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] -53 28 265
 
-execute as @a[x=-54,y=28,z=266,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=-54,y=28,z=266,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=-54,y=28,z=266,dx=3,dy=3] -53 65 268
 
 #Top Right Home
@@ -1293,18 +1293,18 @@ tp @a[x=983,y=64,z=1715,dx=6,dy=3] -3533.0 82 1601
 tp @a[x=-3536,y=82,z=1602,dx=5,dy=3] 986 65 1716
 
 #Pokemon Center
-execute as @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] run spawnpoint @s 1121 58 1667
 tp @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] 1121 58 1667
 
-execute as @a[x=1120,y=58,z=1668,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=1120,y=58,z=1668,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=1120,y=58,z=1668,dx=3,dy=3] 1121 79 1670
 
 #Pokemon Mart
-execute as @a[x=858,y=79,z=1666,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=858,y=79,z=1666,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=858,y=79,z=1666,dx=3,dy=3] 860 60 1665
 
-execute as @a[x=858,y=60,z=1666,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=858,y=60,z=1666,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=858,y=60,z=1666,dx=3,dy=3] 859 79 1667
 
 #Left Side Top Home
@@ -1356,11 +1356,11 @@ tp @a[x=1943,y=227,z=-2417,dx=4,dy=4] 985 69 1503
 #Evergrand City
 
 #Pokemon Center
-execute as @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] run spawnpoint @s 2227 133 -223
 tp @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] 2227 133 -223
 
-execute as @a[x=2226,y=133,z=-222,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=2226,y=133,z=-222,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=2226,y=133,z=-222,dx=3,dy=3] 2227 154 -220
 
 #Victory Road Entrance
@@ -1380,30 +1380,23 @@ tp @a[x=1642,y=94,z=-3112,dx=8,dy=3] 2248 159 -378
 #Pokemon League
 
 #Exterior to Interior
-execute as @a[x=2154,y=170,z=-750,dx=8,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=2154,y=170,z=-750,dx=8,dy=3] run function hoenn:triggers/stopsound
 execute as @a[x=2154,y=170,z=-750,dx=8,dy=3] run spawnpoint @s 2158 171 -766
 tp @a[x=2154,y=170,z=-750,dx=8,dy=3] 2158 171 -766
-execute as @a[x=2156,y=171,z=-765,dx=4,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=2156,y=171,z=-765,dx=4,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=2156,y=171,z=-765,dx=4,dy=3] 2158 170 -749
 
 #Entrance to Elite Four Chambers
 
 #Removes tags present of previous members
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue155
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue156
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue157
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue158
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue159
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue160
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue161
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue161
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue162
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue163
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue164
-#tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue165
-tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue166
+tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Sidney
+tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Phoebe
+tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Glacia
+tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Drake
+tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Steven
+tag @a[x=2155,y=171,z=-797,dx=6,dy=4] remove Dialogue165
 
-#Sydney's Entrance to League
+#Sidney's Entrance to League
 scoreboard players set @a[x=633,y=91,z=-2306,dx=2,dy=3] MusicTitles 19
 tp @a[x=633,y=91,z=-2306,dx=2,dy=3] 2158 171 -795
 
@@ -1438,7 +1431,7 @@ execute as @a[x=2155,y=171,z=-797,dx=6,dy=4,tag=!AllBadges] at @s run tp @s ~ ~ 
 #League Proper
 #Rematch Portals
 
-#Sydney's exterior to battle room
+#Sidney's exterior to battle room
 tp @a[x=632,y=91,z=-2382,dx=4,dy=3,scores={PokemonLeague=1..}] 634 117 -2447
 
 #Phoebe's exterior to battle room
@@ -1453,71 +1446,71 @@ tp @a[x=631,y=91,z=-2946,dx=6,dy=3,scores={PokemonLeague=1..}] 634 112 -3017
 #--------------------------
 #Regular Portals
 
-#Sydney's exterior to battle room
+#Sidney's exterior to battle room
 tp @a[x=632,y=91,z=-2382,dx=4,dy=25] 634 95 -2447
 tp @a[x=632,y=95,z=-2446,dx=4,dy=25] 634 91 -2381
 
-#Sydney's Battle Room to Phoebe's exterior
-tp @a[x=632,y=95,z=-2478,dx=4,dy=25,tag=Dialogue156] 634 91 -2489
+#Sidney's Battle Room to Phoebe's exterior
+tp @a[x=632,y=95,z=-2478,dx=4,dy=25,tag=Sidney] 634 91 -2489
 tp @a[x=633,y=91,z=-2488,dx=4,dy=25,scores={PokemonLeague=1..}] 634 117 -2477
 tp @a[x=633,y=91,z=-2488,dx=4,dy=25] 634 95 -2477
 
-execute as @a[x=632,y=95,z=-2478,dx=4,dy=25,tag=!Dialogue156] run tp @s ~ ~ ~3
+execute as @a[x=632,y=95,z=-2478,dx=4,dy=25,tag=!Sidney] run tp @s ~ ~ ~3
 
 #Phoebe's exterior to battle room
 tp @a[x=632,y=91,z=-2562,dx=4,dy=25] 634 91 -2631
 tp @a[x=632,y=91,z=-2630,dx=4,dy=25] 634 91 -2561
 
 #Phoebe's battle room to Glacia's exterior
-tp @a[x=632,y=91,z=-2662,dx=4,dy=25,tag=Dialogue158] 634 91 -2677
+tp @a[x=632,y=91,z=-2662,dx=4,dy=25,tag=Phoebe] 634 91 -2677
 tp @a[x=633,y=91,z=-2676,dx=4,dy=25,scores={PokemonLeague=1..}] 634 111 -2661
 tp @a[x=633,y=91,z=-2676,dx=4,dy=25] 634 91 -2661
 
-execute as @a[x=632,y=91,z=-2662,dx=4,dy=25,tag=!Dialogue158] run tp @s ~ ~ ~3
+execute as @a[x=632,y=91,z=-2662,dx=4,dy=25,tag=!Phoebe] run tp @s ~ ~ ~3
 
 #Glacia's exterior to battle room
 tp @a[x=631,y=91,z=-2750,dx=6,dy=25] 634 92 -2824
 tp @a[x=632,y=91,z=-2823,dx=4,dy=25] 634 91 -2749
 
 #Glacia's battle room to Drake's exterior
-tp @a[x=632,y=91,z=-2855,dx=4,dy=25,tag=Dialogue160] 634 91 -2871
+tp @a[x=632,y=91,z=-2855,dx=4,dy=25,tag=Glacia] 634 91 -2871
 tp @a[x=633,y=91,z=-2870,dx=4,dy=25,scores={PokemonLeague=1..}] 634 111 -2854
 tp @a[x=633,y=91,z=-2870,dx=4,dy=25] 634 92 -2854
 
-execute as @a[x=632,y=91,z=-2855,dx=4,dy=25,tag=!Dialogue160] run tp @s ~ ~ ~3
+execute as @a[x=632,y=91,z=-2855,dx=4,dy=25,tag=!Glacia] run tp @s ~ ~ ~3
 
 #Drake's exterior to battle room
 tp @a[x=631,y=91,z=-2946,dx=6,dy=25] 634 91 -3017
 tp @a[x=632,y=91,z=-3016,dx=6,dy=25] 634 91 -2945
 
 #Drake's battle room to Steven's exterior
-tp @a[x=632,y=91,z=-3048,dx=4,dy=25,tag=Dialogue162] 634.0 87 -3064
+tp @a[x=632,y=91,z=-3048,dx=4,dy=25,tag=Drake] 634.0 87 -3064
 tp @a[x=632,y=87,z=-3063,dx=4,dy=25,scores={PokemonLeague=1..}] 634 112 -3047
 tp @a[x=632,y=87,z=-3063,dx=4,dy=25] 634 91 -3047
 
-execute as @a[x=632,y=91,z=-3048,dx=4,dy=25,tag=!Dialogue162] run tp @s ~ ~ ~3
+execute as @a[x=632,y=91,z=-3048,dx=4,dy=25,tag=!Drake] run tp @s ~ ~ ~3
 
 #Steven's Exterior to battle room (return)
 tp @a[x=632,y=84,z=-3215,dx=4,dy=3] 634.0 87 -3180
 tp @a[x=632,y=140,z=-3215,dx=4,dy=3] 634.0 87 -3180
 
 #Steven's battle room to hall of fame
-execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tp @e[type=cobblemon:npc,x=626,y=109,z=-3263,dy=3] 10000000 -50000 -10000000
-execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tp @e[type=cobblemon:npc,x=626,y=109,z=-3263,dy=3] 10000000 -50000 -10000000
+execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Steven] run tp @e[type=cobblemon:npc,x=626,y=109,z=-3263,dy=3] 10000000 -50000 -10000000
+execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Steven] run tp @e[type=cobblemon:npc,x=630,y=109,z=-3260,dy=3] 10000000 -50000 -10000000
 
-execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run function hoenn:tools/forceclick
-execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] run tag @s remove Dialogue166
-tp @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Dialogue164] 633 132 -3305
+execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Steven] run function hoenn:triggers/stopsound
+execute as @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Steven] run tag @s remove Dialogue165
+tp @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Steven] 633 132 -3305
 
 #-------------------------------------------------------------------------
 #Battle Resort
 
 #Pokemon Center
-execute as @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] run function hoenn:tools/forceclick
+execute as @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] run spawnpoint @s 2353 48 804
 tp @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] 2353 48 804
 
-execute as @a[x=2352,y=48,z=805,dx=3,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=2352,y=48,z=805,dx=3,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=2352,y=48,z=805,dx=3,dy=3] 2353 69 807
 
 #Daycare Area
@@ -1528,9 +1521,9 @@ tp @a[x=2454,y=64,z=785,dx=2,dy=3] 2456.0 41 782
 tp @a[x=2454,y=41,z=781,dx=2,dy=3] 2456 64 784
 
 #Battle Maison
-execute as @a[x=2395,y=94,z=715,dx=6,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=2395,y=94,z=715,dx=6,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=2395,y=94,z=715,dx=6,dy=3] 2398 44 714
-execute as @a[x=2395,y=44,z=715,dx=6,dy=3] run function hoenn:tools/forceclick
+execute as @a[x=2395,y=44,z=715,dx=6,dy=3] run function hoenn:triggers/stopsound
 tp @a[x=2395,y=44,z=715,dx=6,dy=3] 2398 94 716
 
 #Island Left NPC Home

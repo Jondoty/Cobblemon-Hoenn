@@ -1,56 +1,89 @@
 {
-  "initializationAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 2');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
-  ],
-  "escapeAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-    "q.dialogue.close();"
-  ],
-  "names": [
-    "Drake"
-  ],
-  "speakers": {
-    "npc": {
-      "name": {
-        "type": "expression",
-        "expression": "q.npc.name"
-      },
-      "face": "q.npc.face();"
-    }
-  },
-  "pages": [
-    {
-      "id": "greeting",
-      "speaker": "npc",
-      "lines": [
-        ""
-      ],
-      "input": {
-        "type": "option",
-        "vertical": false,
-        "options": [
-          {
-            "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-            "value": "battle",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 31');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "v.battle = q.npc.start_battle(q.player);"
-            ]
-          },
-          {
-            "text": "No",
-            "value": "no",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "q.dialogue.close();"
-            ]
-          }
-        ]
-      }
-    }
-  ]
+    "initializationAction": [
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 2');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
+    ],
+    "escapeAction": [
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Oh, I've been waitin' for you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "My Pokémon and I are going to show you everything we've got!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Well then, you had better get ready to try and stop me!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
+                        "value": "battle",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 31');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }
