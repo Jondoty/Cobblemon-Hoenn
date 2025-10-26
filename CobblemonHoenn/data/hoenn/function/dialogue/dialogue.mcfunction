@@ -239,6 +239,8 @@ execute as @s[scores={DialogueTrigger=147,TalkTime=50}] run fill 1857 69 -2412 1
 #pokebattle
 
 tag @s[scores={DialogueTrigger=147,TalkTime=50..}] add Dialogue147
+scoreboard players set @s[scores={DialogueTrigger=147},tag=Dialogue147] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=147},tag=Dialogue147] DialogueTrigger 0
 
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 148 - Cave of Origin
@@ -294,7 +296,113 @@ execute as @s[scores={DialogueTrigger=148,TalkTime=50}] run advancement grant @s
 #pokebattle
 
 tag @s[scores={DialogueTrigger=148,TalkTime=50..}] add Dialogue148
+scoreboard players set @s[scores={DialogueTrigger=148},tag=Dialogue148] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=148},tag=Dialogue148] DialogueTrigger 0
 
+#-----------------------------------------------------------------------------------------------------
+#Dialogue 149 - Cave of Origin
+#After legendaty is caught (or defeated?)
+#https://youtu.be/MgkqxXCmrtI?t=56455
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!RadioOff] run stopsound @s record
+execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!RadioOff] run playsound minecraft:coexistence record @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=149,TalkTime=1},tag=!RadioOff] run scoreboard players set @s MusicCooldown 323
+
+
+#Energy particles
+execute as @s[scores={DialogueTrigger=149,TalkTime=5}] run effect give @s minecraft:blindness 3 1 true
+
+#Shot of the door
+execute as @s[scores={DialogueTrigger=149,TalkTime=5}] run gamemode spectator
+execute as @s[scores={DialogueTrigger=149,TalkTime=6}] run tp @s 986.5 76 1562.5 180 5
+
+#execute as @a[scores={DialogueTrigger=149,TalkTime=6..17},gamemode=spectator] run tp @s ~ ~0.1 ~-0.05 ~ ~
+#execute as @a[scores={DialogueTrigger=149,TalkTime=6..17},gamemode=spectator] run particle minecraft:glow_squid_ink 986 64 1433 2 100 0.15 2 1000 force @s
+
+#Overhead shot of Sootopolis
+execute as @s[scores={DialogueTrigger=149,TalkTime=18}] run tp @s -779 83 1483 155 45
+#execute as @a[scores={DialogueTrigger=149,TalkTime=18..29},gamemode=spectator] run tp @s ~0.015 ~0.015 ~0.015 ~ ~
+#execute as @a[scores={DialogueTrigger=149,TalkTime=18..23},gamemode=spectator] run particle minecraft:glow_squid_ink -786 64 1465 0.05 100 0.05 0.25 100 force @s
+
+
+#rain or the harsh sun subsides
+execute as @s[scores={DialogueTrigger=149,TalkTime=25,GameVersion=1}] run weather rain 
+execute as @s[scores={DialogueTrigger=149,TalkTime=25,GameVersion=2}] run weather clear
+
+#Sparkle particles above the players
+execute as @s[scores={DialogueTrigger=149,TalkTime=25..90}] run particle dust{color:[1.0,1.0,1.0],scale:1} ~ ~25 ~ 10 10 10 10 1000 force
+
+#view of the sky
+execute as @a[scores={DialogueTrigger=149,TalkTime=30},gamemode=spectator] at @s run tp @s ~ ~ ~ ~ -28
+#execute as @a[scores={DialogueTrigger=149,TalkTime=30..40},gamemode=spectator] run execute as @s run tp @s ~ ~ ~ ~0.1 ~
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=41}] run effect give @s minecraft:blindness 3 1 true
+
+
+#Shot of Littleroot
+#https://youtu.be/MgkqxXCmrtI?t=56498
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=42}] run tp @s -2026 75 359 -154 5
+
+#sets up NPCs
+execute as @s[scores={DialogueTrigger=149,TalkTime=44}] unless entity @e[x=-2017,y=68,z=337,dy=3,type=cobblemon:npc] run npcspawnat -2017 69 337 birch_generic
+#execute as @a[scores={DialogueTrigger=149,TalkTime=44..55},gamemode=spectator] run execute as @s run tp @s ~0.021 ~ ~-0.044 ~-0.035 ~.086
+
+#tps Professor Birch
+execute as @s[scores={DialogueTrigger=149,TalkTime=56}] run effect give @s minecraft:blindness 3 1 true
+execute as @s[scores={DialogueTrigger=149,TalkTime=57}] run tp @e[x=-2017,y=68,z=337,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+#Shot of Wally in Ever Grand City
+execute as @s[scores={DialogueTrigger=149,TalkTime=57}] run tp @s 2163.5 150 -159 -150 2
+execute as @s[scores={DialogueTrigger=149,TalkTime=58}] unless entity @e[x=2171,y=148,z=-168,dy=3,type=cobblemon:npc] run npcspawnat 2171 149 -168 wally_generic
+#execute as @a[scores={DialogueTrigger=149,TalkTime=57..66},gamemode=spectator] run execute as @s run tp @s ~0.02 ~ ~ ~
+
+#shots in Mossdeep
+execute as @s[scores={DialogueTrigger=149,TalkTime=66}] run effect give @s minecraft:blindness 3 1 true
+execute as @s[scores={DialogueTrigger=149,TalkTime=67}] run tp @e[x=2171,y=148,z=-168,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=68}] run tp @s 1623.5 95 -1033 -164 9
+execute as @s[scores={DialogueTrigger=149,TalkTime=69}] unless entity @e[x=1625,y=84,z=-1060,dy=3,type=cobblemon:npc] run npcspawnat 1625 84 -1060 aquagrunt_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=69}] unless entity @e[x=1630,y=84,z=-1062,dy=3,type=cobblemon:npc] run npcspawnat 1630 84 -1062 magmagrunt_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=69}] unless entity @e[x=1634,y=84,z=-1060,dy=3,type=cobblemon:npc] run npcspawnat 1634 84 -1060 zinnia_generic
+#execute as @a[scores={DialogueTrigger=149,TalkTime=68..78},gamemode=spectator] run execute as @s run tp @s ~0.023 ~-.0375 ~-0.08 ~-0.05 ~.038
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=78}] run effect give @s minecraft:blindness 4 1 true
+execute as @s[scores={DialogueTrigger=149,TalkTime=79}] run tp @e[type=cobblemon:npc,x=1630,y=84,z=-1060,distance=..6] 10000000 -50000 -10000000
+
+#Shots exterior of temple entrance
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=80}] run tp @s 1022.5 80 1551.5 144 8
+#execute as @a[scores={DialogueTrigger=149,TalkTime=80..90},gamemode=spectator] run execute as @s run tp @s ~-0.02 ~ ~-0.02 ~ ~
+
+#player tps out
+#Steven and Rival
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,Rival=1}] unless entity @e[x=987,y=69,z=1510,dy=3,type=cobblemon:npc] run npcspawnat 987 69 1510 may_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,Rival=2}] unless entity @e[x=987,y=69,z=1510,dy=3,type=cobblemon:npc] run npcspawnat 987 69 1510 brendan_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=90}] unless entity @e[x=990,y=69,z=1507,dy=3,type=cobblemon:npc] run npcspawnat 990 69 1507 steven_generic
+#Magma and Aqua leaders
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=1}] unless entity @e[x=988,y=69,z=1515,dy=3,type=cobblemon:npc] run npcspawnat 988 69 1515 tabitha_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=1}] unless entity @e[x=983,y=69,z=1515,dy=3,type=cobblemon:npc] run npcspawnat 983 69 1515 maxie_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=1}] unless entity @e[x=978,y=69,z=1515,dy=3,type=cobblemon:npc] run npcspawnat 978 69 1515 archie_generic
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=2}] unless entity @e[x=988,y=69,z=1515,dy=3,type=cobblemon:npc] run npcspawnat 988 69 1515 shelly_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=2}] unless entity @e[x=983,y=69,z=1515,dy=3,type=cobblemon:npc] run npcspawnat 983 69 1515 maxie_generic
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=2}] unless entity @e[x=978,y=69,z=1515,dy=3,type=cobblemon:npc] run npcspawnat 978 69 1515 archie_generic
+
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=90}] run gamemode adventure
+execute as @s[scores={DialogueTrigger=149,TalkTime=90}] run tp @s 985 69 1503 0 8
+execute as @s[scores={DialogueTrigger=149,TalkTime=90}] run scoreboard players set @s MusicTitles 17
+
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=1,Rival=1}] run opendialogue epilogue_magma_may_dialogue149 @s
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=2,Rival=1}] run opendialogue epilogue_aqua_may_dialogue149 @s
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=1,Rival=2}] run opendialogue epilogue_magma_brendan_dialogue149 @s
+execute as @s[scores={DialogueTrigger=149,TalkTime=90,GameVersion=2,Rival=2}] run opendialogue epilogue_aqua_brendan_dialogue149 @s
+
+
+tag @s[scores={DialogueTrigger=149,TalkTime=91..}] add Dialogue149
+scoreboard players set @s[scores={DialogueTrigger=149},tag=Dialogue149] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=149},tag=Dialogue149] DialogueTrigger 0
 
 #-----------------------------------------------------------------------------------------------------
 

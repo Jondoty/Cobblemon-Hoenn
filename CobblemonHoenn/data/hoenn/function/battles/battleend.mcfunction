@@ -42,6 +42,25 @@ execute as @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={BattleEnd=5}] run 
 execute as @s[x=-2098,y=0,z=119,dx=146,dy=256,dz=158,tag=Dialogue6,tag=!Dialogue7,scores={BattleEnd=5,Rival=1}] run opendialogue birch_dialogue7_may @s
 execute as @s[x=-2098,y=0,z=119,dx=146,dy=256,dz=158,tag=Dialogue6,tag=!Dialogue7,scores={BattleEnd=5,Rival=2}] run opendialogue birch_dialogue7_brendan @s
 
+#Player after catching/defeating Kyogre or Groudon in their chambers
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] run scoreboard players set @s Temp 0
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] store result score @s Temp run teststore @s all groudon
+execute as @s[tag=!RadioOff,scores={BattleEnd=5,Temp=1..}] run tag @s add GroudonCaught
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] store result score @s Temp run teststore @s all kyogre
+execute as @s[tag=!RadioOff,scores={BattleEnd=5,Temp=1..}] run tag @s add KyogreCaught
+
+execute as @s[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,tag=!RadioOff,scores={BattleEnd=5},tag=!Dialogue149] run tellraw @s[tag=!GroudonCaught] {"text":"Groudon disappeared deep beneath the magma...","italic":true,"color":"gray"}
+execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=!RadioOff,scores={BattleEnd=5},tag=!Dialogue149] run tellraw @s[tag=!KyogreCaught] {"text":"Kyogre disappeared deep beneath the water...","italic":true,"color":"gray"}
+
+execute as @s[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,tag=Dialogue147,tag=!Dialogue149,scores={BattleEnd=5,GameVersion=1}] run scoreboard players set @s DialogueTrigger 149
+execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue148,tag=!Dialogue149,scores={BattleEnd=5,GameVersion=2}] run scoreboard players set @s DialogueTrigger 149
+
+
+
+
+
+
+
 scoreboard players set @s BattleEnd 0
 
 #
