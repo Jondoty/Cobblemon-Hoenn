@@ -371,7 +371,7 @@ execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=!ItemLoot80] run playsound mi
 execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=!ItemLoot80] run tag @s add ItemLoot80
 
 execute as @s[x=-2109,y=-25,z=927,distance=..5,tag=ItemLoot81] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-2109,y=-25,z=927,distance=..5,tag=!ItemLoot81] run give @s mega_showdown:electric_tera_shard
+execute as @s[x=-2109,y=-25,z=927,distance=..5,tag=!ItemLoot81] run give @s mega_showdown:electric_tera_shard[custom_name='["",{"text":"Yellow Shard","italic":false,"color":"yellow"}]',lore=['["",{"text":"A small yellow shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=-2109,y=-25,z=927,distance=..5,tag=!ItemLoot81] run tellraw @s {"text":"You found a Yellow Shard!","italic":true,"color":"gray"}
 execute as @s[x=-2109,y=-25,z=927,distance=..5,tag=!ItemLoot81] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-2109,y=-25,z=927,distance=..5,tag=!ItemLoot81] run tag @s add ItemLoot81
@@ -1576,13 +1576,13 @@ execute as @s[x=1389,y=102,z=-2395,distance=..5,tag=!ItemLoot411] run playsound 
 execute as @s[x=1389,y=102,z=-2395,distance=..5,tag=!ItemLoot411] run tag @s add ItemLoot411
 
 execute as @s[x=1039,y=64,z=-1100,distance=..5,tag=ItemLoot412] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1039,y=64,z=-1100,distance=..5,tag=!ItemLoot412] run give @s mega_showdown:fire_tera_shard
+execute as @s[x=1039,y=64,z=-1100,distance=..5,tag=!ItemLoot412] run give @s mega_showdown:fire_tera_shard[custom_name='["",{"text":"Red Shard","italic":false,"color":"#ff0000"}]',lore=['["",{"text":"A small red shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=1039,y=64,z=-1100,distance=..5,tag=!ItemLoot412] run tellraw @s {"text":"You found a Red Shard!","italic":true,"color":"gray"}
 execute as @s[x=1039,y=64,z=-1100,distance=..5,tag=!ItemLoot412] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1039,y=64,z=-1100,distance=..5,tag=!ItemLoot412] run tag @s add ItemLoot412
 
 execute as @s[x=898,y=64,z=-963,distance=..5,tag=ItemLoot413] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=898,y=64,z=-963,distance=..5,tag=!ItemLoot413] run give @s mega_showdown:water_tera_shard
+execute as @s[x=898,y=64,z=-963,distance=..5,tag=!ItemLoot413] run give @s mega_showdown:water_tera_shard[custom_name='["",{"text":"Blue Shard","italic":false,"color":"aqua"}]',lore=['["",{"text":"A small blue shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=898,y=64,z=-963,distance=..5,tag=!ItemLoot413] run tellraw @s {"text":"You found a Blue Shard!","italic":true,"color":"gray"}
 execute as @s[x=898,y=64,z=-963,distance=..5,tag=!ItemLoot413] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=898,y=64,z=-963,distance=..5,tag=!ItemLoot413] run tag @s add ItemLoot413
@@ -1594,13 +1594,13 @@ execute as @s[x=903,y=64,z=-969,distance=..5,tag=!ItemLoot414] run playsound min
 execute as @s[x=903,y=64,z=-969,distance=..5,tag=!ItemLoot414] run tag @s add ItemLoot414
 
 execute as @s[x=992,y=64,z=-886,distance=..5,tag=ItemLoot415] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=992,y=64,z=-886,distance=..5,tag=!ItemLoot415] run give @s mega_showdown:electric_tera_shard
+execute as @s[x=992,y=64,z=-886,distance=..5,tag=!ItemLoot415] run give @s mega_showdown:electric_tera_shard[custom_name='["",{"text":"Yellow Shard","italic":false,"color":"yellow"}]',lore=['["",{"text":"A small yellow shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=992,y=64,z=-886,distance=..5,tag=!ItemLoot415] run tellraw @s {"text":"You found a Yellow Shard!","italic":true,"color":"gray"}
 execute as @s[x=992,y=64,z=-886,distance=..5,tag=!ItemLoot415] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=992,y=64,z=-886,distance=..5,tag=!ItemLoot415] run tag @s add ItemLoot415
 
 execute as @s[x=1116,y=-29,z=-1091,distance=..5,tag=ItemLoot417] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1116,y=-29,z=-1091,distance=..5,tag=!ItemLoot417] run give @s mega_showdown:grass_tera_shard
+execute as @s[x=1116,y=-29,z=-1091,distance=..5,tag=!ItemLoot417] run give @s mega_showdown:grass_tera_shard[custom_name='["",{"text":"Green Shard","italic":false,"color":"#008000"}]',lore=['["",{"text":"A small green shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=1116,y=-29,z=-1091,distance=..5,tag=!ItemLoot417] run tellraw @s {"text":"You found a Green Shard!","italic":true,"color":"gray"}
 execute as @s[x=1116,y=-29,z=-1091,distance=..5,tag=!ItemLoot417] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1116,y=-29,z=-1091,distance=..5,tag=!ItemLoot417] run tag @s add ItemLoot417
@@ -1840,7 +1840,7 @@ execute as @s[x=1252,y=-21,z=-541,distance=..5,tag=!ItemLoot462] run playsound m
 execute as @s[x=1252,y=-21,z=-541,distance=..5,tag=!ItemLoot462] run tag @s add ItemLoot462
 
 execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=ItemLoot463] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=!ItemLoot463] run give @s mega_showdown:fire_tera_shard
+execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=!ItemLoot463] run give @s mega_showdown:fire_tera_shard[custom_name='["",{"text":"Red Shard","italic":false,"color":"#ff0000"}]',lore=['["",{"text":"A small red shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=!ItemLoot463] run tellraw @s {"text":"You found a Red Shard!","italic":true,"color":"gray"}
 execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=!ItemLoot463] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=!ItemLoot463] run tag @s add ItemLoot463
@@ -1852,7 +1852,7 @@ execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=!ItemLoot464] run playsound m
 execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=!ItemLoot464] run tag @s add ItemLoot464
 
 execute as @s[x=810,y=64,z=-779,distance=..5,tag=ItemLoot465] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=810,y=64,z=-779,distance=..5,tag=!ItemLoot465] run give @s mega_showdown:grass_tera_shard
+execute as @s[x=810,y=64,z=-779,distance=..5,tag=!ItemLoot465] run give @s mega_showdown:grass_tera_shard[custom_name='["",{"text":"Green Shard","italic":false,"color":"#008000"}]',lore=['["",{"text":"A small green shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=810,y=64,z=-779,distance=..5,tag=!ItemLoot465] run tellraw @s {"text":"You found a Green Shard!","italic":true,"color":"gray"}
 execute as @s[x=810,y=64,z=-779,distance=..5,tag=!ItemLoot465] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=810,y=64,z=-779,distance=..5,tag=!ItemLoot465] run tag @s add ItemLoot465
@@ -1876,7 +1876,7 @@ execute as @s[x=896,y=-22,z=-617,distance=..5,tag=!ItemLoot469] run playsound mi
 execute as @s[x=896,y=-22,z=-617,distance=..5,tag=!ItemLoot469] run tag @s add ItemLoot469
 
 execute as @s[x=746,y=-19,z=-615,distance=..5,tag=ItemLoot470] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=746,y=-19,z=-615,distance=..5,tag=!ItemLoot470] run give @s mega_showdown:water_tera_shard
+execute as @s[x=746,y=-19,z=-615,distance=..5,tag=!ItemLoot470] run give @s mega_showdown:water_tera_shard[custom_name='["",{"text":"Blue Shard","italic":false,"color":"aqua"}]',lore=['["",{"text":"A small blue shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=746,y=-19,z=-615,distance=..5,tag=!ItemLoot470] run tellraw @s {"text":"You found a Blue Shard!","italic":true,"color":"gray"}
 execute as @s[x=746,y=-19,z=-615,distance=..5,tag=!ItemLoot470] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=746,y=-19,z=-615,distance=..5,tag=!ItemLoot470] run tag @s add ItemLoot470
@@ -1888,7 +1888,7 @@ execute as @s[x=802,y=-36,z=-418,distance=..5,tag=!ItemLoot471] run playsound mi
 execute as @s[x=802,y=-36,z=-418,distance=..5,tag=!ItemLoot471] run tag @s add ItemLoot471
 
 execute as @s[x=959,y=-23,z=-420,distance=..5,tag=ItemLoot472] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=959,y=-23,z=-420,distance=..5,tag=!ItemLoot472] run give @s mega_showdown:electric_tera_shard
+execute as @s[x=959,y=-23,z=-420,distance=..5,tag=!ItemLoot472] run give @s mega_showdown:electric_tera_shard[custom_name='["",{"text":"Yellow Shard","italic":false,"color":"yellow"}]',lore=['["",{"text":"A small yellow shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=959,y=-23,z=-420,distance=..5,tag=!ItemLoot472] run tellraw @s {"text":"You found a Yellow Shard!","italic":true,"color":"gray"}
 execute as @s[x=959,y=-23,z=-420,distance=..5,tag=!ItemLoot472] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=959,y=-23,z=-420,distance=..5,tag=!ItemLoot472] run tag @s add ItemLoot472
@@ -1954,7 +1954,7 @@ execute as @s[x=1576,y=-51,z=164,distance=..5,tag=!ItemLoot486] run playsound mi
 execute as @s[x=1576,y=-51,z=164,distance=..5,tag=!ItemLoot486] run tag @s add ItemLoot486
 
 execute as @s[x=1528,y=-47,z=318,distance=..5,tag=ItemLoot487] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1528,y=-47,z=318,distance=..5,tag=!ItemLoot487] run give @s mega_showdown:water_tera_shard
+execute as @s[x=1528,y=-47,z=318,distance=..5,tag=!ItemLoot487] run give @s mega_showdown:water_tera_shard[custom_name='["",{"text":"Blue Shard","italic":false,"color":"aqua"}]',lore=['["",{"text":"A small blue shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=1528,y=-47,z=318,distance=..5,tag=!ItemLoot487] run tellraw @s {"text":"You found a Blue Shard!","italic":true,"color":"gray"}
 execute as @s[x=1528,y=-47,z=318,distance=..5,tag=!ItemLoot487] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1528,y=-47,z=318,distance=..5,tag=!ItemLoot487] run tag @s add ItemLoot487
@@ -1978,7 +1978,7 @@ execute as @s[x=1195,y=-48,z=250,distance=..5,tag=!ItemLoot490] run playsound mi
 execute as @s[x=1195,y=-48,z=250,distance=..5,tag=!ItemLoot490] run tag @s add ItemLoot490
 
 execute as @s[x=1063,y=-54,z=216,distance=..5,tag=ItemLoot491] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1063,y=-54,z=216,distance=..5,tag=!ItemLoot491] run give @s mega_showdown:grass_tera_shard
+execute as @s[x=1063,y=-54,z=216,distance=..5,tag=!ItemLoot491] run give @s mega_showdown:grass_tera_shard[custom_name='["",{"text":"Green Shard","italic":false,"color":"#008000"}]',lore=['["",{"text":"A small green shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=1063,y=-54,z=216,distance=..5,tag=!ItemLoot491] run tellraw @s {"text":"You found a Green Shard!","italic":true,"color":"gray"}
 execute as @s[x=1063,y=-54,z=216,distance=..5,tag=!ItemLoot491] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1063,y=-54,z=216,distance=..5,tag=!ItemLoot491] run tag @s add ItemLoot491
@@ -2399,7 +2399,7 @@ execute as @s[x=-445,y=69,z=626,distance=..5,tag=!ItemLoot587] run playsound min
 execute as @s[x=-445,y=69,z=626,distance=..5,tag=!ItemLoot587] run tag @s add ItemLoot587
 
 execute as @s[x=-1226,y=64,z=2168,distance=..5,tag=ItemLoot589] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-1226,y=64,z=2168,distance=..5,tag=!ItemLoot589] run give @s mega_showdown:grass_tera_shard
+execute as @s[x=-1226,y=64,z=2168,distance=..5,tag=!ItemLoot589] run give @s mega_showdown:grass_tera_shard[custom_name='["",{"text":"Green Shard","italic":false,"color":"#008000"}]',lore=['["",{"text":"A small green shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=-1226,y=64,z=2168,distance=..5,tag=!ItemLoot589] run tellraw @s {"text":"You found a Green Shard!","italic":true,"color":"gray"}
 execute as @s[x=-1226,y=64,z=2168,distance=..5,tag=!ItemLoot589] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-1226,y=64,z=2168,distance=..5,tag=!ItemLoot589] run tag @s add ItemLoot589
@@ -2441,7 +2441,7 @@ execute as @s[x=-1213,y=64,z=2562,distance=..5,tag=!ItemLoot595] run playsound m
 execute as @s[x=-1213,y=64,z=2562,distance=..5,tag=!ItemLoot595] run tag @s add ItemLoot595
 
 execute as @s[x=-466,y=38,z=2581,distance=..5,tag=ItemLoot597] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-466,y=38,z=2581,distance=..5,tag=!ItemLoot597] run give @s mega_showdown:electric_tera_shard
+execute as @s[x=-466,y=38,z=2581,distance=..5,tag=!ItemLoot597] run give @s mega_showdown:electric_tera_shard[custom_name='["",{"text":"Yellow Shard","italic":false,"color":"yellow"}]',lore=['["",{"text":"A small yellow shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=-466,y=38,z=2581,distance=..5,tag=!ItemLoot597] run tellraw @s {"text":"You found a Yellow Shard!","italic":true,"color":"gray"}
 execute as @s[x=-466,y=38,z=2581,distance=..5,tag=!ItemLoot597] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-466,y=38,z=2581,distance=..5,tag=!ItemLoot597] run tag @s add ItemLoot597
@@ -2489,7 +2489,7 @@ execute as @s[x=-906,y=95,z=3029,distance=..5,tag=!ItemLoot605] run playsound mi
 execute as @s[x=-906,y=95,z=3029,distance=..5,tag=!ItemLoot605] run tag @s add ItemLoot605
 
 execute as @s[x=-1199,y=95,z=3055,distance=..5,tag=ItemLoot607] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-1199,y=95,z=3055,distance=..5,tag=!ItemLoot607] run give @s mega_showdown:fire_tera_shard
+execute as @s[x=-1199,y=95,z=3055,distance=..5,tag=!ItemLoot607] run give @s mega_showdown:fire_tera_shard[custom_name='["",{"text":"Red Shard","italic":false,"color":"#ff0000"}]',lore=['["",{"text":"A small red shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=-1199,y=95,z=3055,distance=..5,tag=!ItemLoot607] run tellraw @s {"text":"You found a Red Shard!","italic":true,"color":"gray"}
 execute as @s[x=-1199,y=95,z=3055,distance=..5,tag=!ItemLoot607] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-1199,y=95,z=3055,distance=..5,tag=!ItemLoot607] run tag @s add ItemLoot607
@@ -2507,7 +2507,7 @@ execute as @s[x=-874,y=75,z=2911,distance=..5,tag=!ItemLoot609] run playsound mi
 execute as @s[x=-874,y=75,z=2911,distance=..5,tag=!ItemLoot609] run tag @s add ItemLoot609
 
 execute as @s[x=-1094,y=40,z=2955,distance=..5,tag=ItemLoot610] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-1094,y=40,z=2955,distance=..5,tag=!ItemLoot610] run give @s mega_showdown:water_tera_shard
+execute as @s[x=-1094,y=40,z=2955,distance=..5,tag=!ItemLoot610] run give @s mega_showdown:water_tera_shard[custom_name='["",{"text":"Blue Shard","italic":false,"color":"aqua"}]',lore=['["",{"text":"A small blue shard. It appears ","italic":false}]','[{"text":"to be a fragment of some sort ","italic":false}]','[{"text":"of implement made long ago. ","italic":false}]']]
 execute as @s[x=-1094,y=40,z=2955,distance=..5,tag=!ItemLoot610] run tellraw @s {"text":"You found a Blue Shard!","italic":true,"color":"gray"}
 execute as @s[x=-1094,y=40,z=2955,distance=..5,tag=!ItemLoot610] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-1094,y=40,z=2955,distance=..5,tag=!ItemLoot610] run tag @s add ItemLoot610

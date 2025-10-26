@@ -1,0 +1,300 @@
+{
+    "initializationAction": [
+    ],
+    "escapeAction": ["q.dialogue.close();"],
+    "speakers": {
+        "npc": {
+            "name": "Treasure Hunter",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:swimmerm",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Oh hey! That... That's a shard!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'm looking for those!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Oh, man, you've got to trade that to me! I'll give you something good!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "What do you want to trade?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Red Shard",
+                        "value": "redshard",
+                        "action": [
+                            "q.dialogue.set_page('tradered');"
+                        ]
+                    },
+                    {
+                        "text": "Yellow Shard",
+                        "value": "yellowshard",
+                        "action": [
+                            "q.dialogue.set_page('tradeyellow');"
+                        ]
+                    },
+                    {
+                        "text": "Blue Shard",
+                        "value": "blueshard",
+                        "action": [
+                            "q.dialogue.set_page('tradeblue');"
+                        ]
+                    },
+                    {
+                        "text": "Green Shard",
+                        "value": "greenshard",
+                        "action": [
+                            "q.dialogue.set_page('tradegreen');"
+                        ]
+                    },
+                    {
+                        "text": "Quit",
+                        "value": "quit",
+                        "action": [
+                            "q.dialogue.set_page('leave');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "tradered",
+            "speaker": "npc",
+            "lines": [
+                "You want to trade your Red Shard for my Fire Stone, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Trade",
+                        "value": "trade",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"mega_showdown:fire_tera_shard\"}]}] add ShardHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s[tag=ShardHave] mega_showdown:fire_tera_shard 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s[tag=ShardHave] cobblemon:fire_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s[tag=ShardHave] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ShardHave');",
+                            "q.dialogue.set_page('tradeend');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "tradeyellow",
+            "speaker": "npc",
+            "lines": [
+                "You want to trade your Yellow Shard for my Thunder Stone, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Trade",
+                        "value": "trade",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"mega_showdown:electric_tera_shard\"}]}] add ShardHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s[tag=ShardHave] mega_showdown:electric_tera_shard 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s[tag=ShardHave] cobblemon:thunder_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s[tag=ShardHave] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ShardHave');",
+                            "q.dialogue.set_page('tradeend');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "tradeblue",
+            "speaker": "npc",
+            "lines": [
+                "You want to trade your Blue Shard for my Water Stone, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Trade",
+                        "value": "trade",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"mega_showdown:water_tera_shard\"}]}] add ShardHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s[tag=ShardHave] mega_showdown:water_tera_shard 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s[tag=ShardHave] cobblemon:water_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s[tag=ShardHave] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ShardHave');",
+                            "q.dialogue.set_page('tradeend');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "tradegreen",
+            "speaker": "npc",
+            "lines": [
+                "You want to trade your Green Shard for my Leaf Stone, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Trade",
+                        "value": "trade",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"mega_showdown:grass_tera_shard\"}]}] add ShardHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s[tag=ShardHave] mega_showdown:grass_tera_shard 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s[tag=ShardHave] cobblemon:leaf_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s[tag=ShardHave] ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('tradeend');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+
+
+
+
+
+{
+            "id": "tradeend",
+            "speaker": "npc",
+            "lines": [
+                "It's a done deal! Use that wisely!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "leave",
+            "speaker": "npc",
+            "lines": [
+                "No? That's a downer. Well, if you change your mind, come back."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

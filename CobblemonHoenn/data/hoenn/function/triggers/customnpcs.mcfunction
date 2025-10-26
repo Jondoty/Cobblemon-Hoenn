@@ -178,6 +178,17 @@ execute as @s[x=-2415,y=69,z=837,distance=..6,tag=Dialogue36,tag=Dialogue37,tag=
 execute as @s[x=-1436,y=70,z=687,distance=..6] run opendialogue briney_slateport @s
 
 
+#Route 124 Shard Hunder
+execute as @s[x=1123,y=36,z=-954,distance=..8,nbt={Inventory:[{id:"mega_showdown:fire_tera_shard"}]}] run tag @s add ShardsHave
+execute as @s[x=1123,y=36,z=-954,distance=..8,nbt={Inventory:[{id:"mega_showdown:electric_tera_shard"}]}] run tag @s add ShardsHave
+execute as @s[x=1123,y=36,z=-954,distance=..8,nbt={Inventory:[{id:"mega_showdown:water_tera_shard"}]}] run tag @s add ShardsHave
+execute as @s[x=1123,y=36,z=-954,distance=..8,nbt={Inventory:[{id:"mega_showdown:grass_tera_shard"}]}] run tag @s add ShardsHave
+
+execute as @s[x=1123,y=36,z=-954,distance=..8,tag=!ShardsHave] run opendialogue shardhunter_noshards @s
+execute as @s[x=1123,y=36,z=-954,distance=..8,tag=ShardsHave] run opendialogue shardhunter_shards @s
+execute as @s[x=1123,y=36,z=-954,distance=..8,tag=ShardsHave] run tag @s remove ShardsHave
+
+
 
 #-------------------------------------------------------------
 #Gym Leaders
