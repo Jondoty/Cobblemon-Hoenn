@@ -1,0 +1,669 @@
+{
+    "initializationAction": [
+        "q.run_command('team join shops ' + q.player.username + '');"
+    ],
+    "escapeAction": [
+        "q.run_command('team join default ' + q.player.username + '');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Stone Hunter",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome, welcome."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "As you can see, I sell stones. I sell rare stones that I collect by myself on this riverside."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "What stone would you like to buy today?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Loneliness",
+                        "value": "loneliness",
+                        "action": "q.dialogue.set_page('pickloneliness');"
+                    },
+                    {
+                        "text": "Withered Tree",
+                        "value": "witheredtree",
+                        "action": "q.dialogue.set_page('pickwitheredtree');"
+                    },
+                    {
+                        "text": "Emotionless",
+                        "value": "emotionless",
+                        "action": "q.dialogue.set_page('pickemotionless');"
+                    },
+                    {
+                        "text": "More >>",
+                        "value": "more",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },        
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "What stone would you like to buy today?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ebb Tide",
+                        "value": "ebbtide",
+                        "action": "q.dialogue.set_page('pickebbtide');"
+                    },
+                    {
+                        "text": "Tears",
+                        "value": "tears",
+                        "action": "q.dialogue.set_page('picktears');"
+                    },
+                    {
+                        "text": "Fading Fire",
+                        "value": "fadingfire",
+                        "action": "q.dialogue.set_page('pickfadingfire');"
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+
+
+
+        {
+            "id": "pickloneliness",
+            "speaker": "npc",
+            "lines": [
+                "Oho, I see you appreciate the value of this Hard Stone. How very discerning you are!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickloneliness2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickloneliness2",
+            "speaker": "npc",
+            "lines": [
+                "The shape, the color... The texture of this stone..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickloneliness3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickloneliness3",
+            "speaker": "npc",
+            "lines": [
+                "Doesn't there seem to be an atmosphere about it? A feeling as though someone is all alone in space..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickloneliness4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickloneliness4",
+            "speaker": "npc",
+            "lines": [
+                "Specially for you, I'll sell the stone for $45,000!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 220');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "pickwitheredtree",
+            "speaker": "npc",
+            "lines": [
+                "Well, for beginners, this may suffice."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickwitheredtree2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwitheredtree2",
+            "speaker": "npc",
+            "lines": [
+                "Its texture is suggestive of a withered tree that stands alone."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickwitheredtree3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwitheredtree3",
+            "speaker": "npc",
+            "lines": [
+                "That's not too bad, wouldn't you say? I'll sell this stone for $1,500."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 219');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "pickemotionless",
+            "speaker": "npc",
+            "lines": [
+                "Oho, I see you appreciate the value of this Hard Stone. How very discerning you are!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickemotionless2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickemotionless2",
+            "speaker": "npc",
+            "lines": [
+                "The shape, the color... The texture of this stone..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickemotionless3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickemotionless3",
+            "speaker": "npc",
+            "lines": [
+                "Do you feel an aura of emptiness and distance, as though all emotions have been drained away?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickemotionless4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickemotionless4",
+            "speaker": "npc",
+            "lines": [
+                "Specially for you, I'll sell the stone for $80,000!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 221');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        
+        {
+            "id": "pickebbtide",
+            "speaker": "npc",
+            "lines": [
+                "Well, for beginners, this may suffice."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickebbtide2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickebbtide2",
+            "speaker": "npc",
+            "lines": [
+                "Its texture is suggestive of a seashore exposed after the tide has gone out."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickebbtide3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickebbtide3",
+            "speaker": "npc",
+            "lines": [
+                "That's not too bad, wouldn't you say? I'll sell this stone for $1,500."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 223');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+
+        {
+            "id": "picktears",
+            "speaker": "npc",
+            "lines": [
+                "Oho, I see you appreciate the value of this Hard Stone. How very discerning you are!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('picktears2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picktears2",
+            "speaker": "npc",
+            "lines": [
+                "The shape, the color... The texture of this stone..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('picktears3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picktears3",
+            "speaker": "npc",
+            "lines": [
+                "It reminds you of a lifetime's tears trickling down your face, wouldn't you agree?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('picktears4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picktears4",
+            "speaker": "npc",
+            "lines": [
+                "Specially for you, I'll sell the stone for $150,000!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 222');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+
+
+        
+        {
+            "id": "pickfadingfire",
+            "speaker": "npc",
+            "lines": [
+                "Well, for beginners, this may suffice."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickfadingfire2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickfadingfire2",
+            "speaker": "npc",
+            "lines": [
+                "Its texture suggests a fire in its flickering moments at the brink of snuffing out."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('pickfadingfire3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickfadingfire3",
+            "speaker": "npc",
+            "lines": [
+                "That's not too bad, wouldn't you say? I'll sell this stone for $1,500."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 208');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+
+
+
+
+
+
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Thank you very much. Quality stones build a life of quality!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "P-p-please wait. It's taken me three years of combing this vast riverside to collect this many stones."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

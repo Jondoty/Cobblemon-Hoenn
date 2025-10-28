@@ -1184,13 +1184,13 @@ execute as @s[scores={TriggerCommand=207,Money=30000..}] run playsound minecraft
 execute as @s[scores={TriggerCommand=207,Money=30000..}] run scoreboard players remove @s Money 30000
 
 #Blazikenite
-execute as @s[scores={TriggerCommand=208,Money=..29999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=208,Money=..29999}] run scoreboard players set @s TriggerCommand 0
+execute as @s[scores={TriggerCommand=208,Money=..1499}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=208,Money=..1499}] run scoreboard players set @s TriggerCommand 0
 
-execute as @s[scores={TriggerCommand=208,Money=30000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=208,Money=30000..}] run give @s mega_showdown:blazikenite 1
-execute as @s[scores={TriggerCommand=208,Money=30000..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=208,Money=30000..}] run scoreboard players remove @s Money 30000
+execute as @s[scores={TriggerCommand=208,Money=1500..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=208,Money=1500..}] run give @s mega_showdown:blazikenite 1
+execute as @s[scores={TriggerCommand=208,Money=1500..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={TriggerCommand=208,Money=1500..}] run scoreboard players remove @s Money 1500
 
 #Cameruptite
 execute as @s[scores={TriggerCommand=209,Money=..29999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
@@ -1283,49 +1283,49 @@ execute as @s[scores={TriggerCommand=218,Money=30000..}] run playsound minecraft
 execute as @s[scores={TriggerCommand=218,Money=30000..}] run scoreboard players remove @s Money 30000
 
 #Sceptilite
-execute as @s[scores={TriggerCommand=219,Money=..29999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=219,Money=..29999}] run scoreboard players set @s TriggerCommand 0
+execute as @s[scores={TriggerCommand=219,Money=..1499}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=219,Money=..1499}] run scoreboard players set @s TriggerCommand 0
 
-execute as @s[scores={TriggerCommand=219,Money=30000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=219,Money=30000..}] run give @s mega_showdown:sceptilite 1
-execute as @s[scores={TriggerCommand=219,Money=30000..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=219,Money=30000..}] run scoreboard players remove @s Money 30000
+execute as @s[scores={TriggerCommand=219,Money=1500..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=219,Money=1500..}] run give @s mega_showdown:sceptilite 1
+execute as @s[scores={TriggerCommand=219,Money=1500..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={TriggerCommand=219,Money=1500..}] run scoreboard players remove @s Money 1500
 
-#Sharpedonite
-execute as @s[scores={TriggerCommand=220,Money=..29999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=220,Money=..29999}] run scoreboard players set @s TriggerCommand 0
+#Hard Stone 1
+execute as @s[scores={TriggerCommand=220,Money=..44999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=220,Money=..44999}] run scoreboard players set @s TriggerCommand 0
 
-execute as @s[scores={TriggerCommand=220,Money=30000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=220,Money=30000..}] run give @s mega_showdown:sharpedonite 1
-execute as @s[scores={TriggerCommand=220,Money=30000..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=220,Money=30000..}] run scoreboard players remove @s Money 30000
+execute as @s[scores={TriggerCommand=220,Money=45000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=220,Money=45000..}] run give @s cobblemon:hard_stone[custom_name='["",{"text":"Loneliness","italic":false,"color":"dark_gray"}]'] 1
+execute as @s[scores={TriggerCommand=220,Money=45000..}] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={TriggerCommand=220,Money=45000..}] run scoreboard players remove @s Money 45000
 
-#Slowbronite
-execute as @s[scores={TriggerCommand=221,Money=..29999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=221,Money=..29999}] run scoreboard players set @s TriggerCommand 0
+#Hard Stone 2
+execute as @s[scores={TriggerCommand=221,Money=..79999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=221,Money=..79999}] run scoreboard players set @s TriggerCommand 0
 
-execute as @s[scores={TriggerCommand=221,Money=30000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=221,Money=30000..}] run give @s mega_showdown:slowbronite 1
-execute as @s[scores={TriggerCommand=221,Money=30000..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=221,Money=30000..}] run scoreboard players remove @s Money 30000
+execute as @s[scores={TriggerCommand=221,Money=80000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=221,Money=80000..}] run give @s cobblemon:hard_stone[custom_name='["",{"text":"Emotionless","italic":false,"color":"dark_red"}]'] 1
+execute as @s[scores={TriggerCommand=221,Money=80000..}] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={TriggerCommand=221,Money=80000..}] run scoreboard players remove @s Money 80000
 
-#Steelixite
-execute as @s[scores={TriggerCommand=222,Money=..29999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=222,Money=..29999}] run scoreboard players set @s TriggerCommand 0
+#Hard Stone 3
+execute as @s[scores={TriggerCommand=222,Money=..14999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=222,Money=..14999}] run scoreboard players set @s TriggerCommand 0
 
-execute as @s[scores={TriggerCommand=222,Money=30000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=222,Money=30000..}] run give @s mega_showdown:steelixite 1
-execute as @s[scores={TriggerCommand=222,Money=30000..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=222,Money=30000..}] run scoreboard players remove @s Money 30000
+execute as @s[scores={TriggerCommand=222,Money=150000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=222,Money=150000..}] run give @s cobblemon:hard_stone[custom_name='["",{"text":"Tears","italic":false,"color":"dark_blue"}]'] 1
+execute as @s[scores={TriggerCommand=222,Money=150000..}] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={TriggerCommand=222,Money=150000..}] run scoreboard players remove @s Money 150000
 
 #Swampertite
-execute as @s[scores={TriggerCommand=223,Money=..29999}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=223,Money=..29999}] run scoreboard players set @s TriggerCommand 0
+execute as @s[scores={TriggerCommand=223,Money=..1499}] run tellraw @s {"text":"You don't have enough money for that!","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=223,Money=..1499}] run scoreboard players set @s TriggerCommand 0
 
-execute as @s[scores={TriggerCommand=223,Money=30000..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
-execute as @s[scores={TriggerCommand=223,Money=30000..}] run give @s mega_showdown:swampertite 1
-execute as @s[scores={TriggerCommand=223,Money=30000..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=223,Money=30000..}] run scoreboard players remove @s Money 30000
+execute as @s[scores={TriggerCommand=223,Money=1500..}] run tellraw @s {"text":"You put the stone in your inventory.","italic":true,"color":"gray"}
+execute as @s[scores={TriggerCommand=223,Money=1500..}] run give @s mega_showdown:swampertite 1
+execute as @s[scores={TriggerCommand=223,Money=1500..}] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={TriggerCommand=223,Money=1500..}] run scoreboard players remove @s Money 1500
 
 #-----------------------------
 #Furfrou Trims

@@ -243,6 +243,12 @@ execute as @s[x=-2225,y=89,z=-1389,distance=..10,tag=!Dialogue79,scores={Rival=2
 execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=1}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 may_generic
 execute as @s[x=-2207,y=89,z=-1417,distance=..20,tag=!Dialogue79,scores={Rival=2}] unless entity @e[x=-2225,y=89,z=-1389,dy=3,type=cobblemon:npc] run npcspawnat -2225 89 -1389 brendan_generic
 
+
+#Route 114, Stone Trader after legendary encounter
+execute as @p[x=-2466,y=89,z=-1348,distance=..75,tag=!Dialogue149] run tp @e[x=-2466,y=89,z=-1348,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @s[x=-2466,y=89,z=-1348,distance=..75,tag=Dialogue149] unless entity @e[x=-2466,y=89,z=-1348,dy=3,type=cobblemon:npc] run npcspawnat -2466 89 -1348 route114_stone_shop
+
+
 #Meteor Falls
 #Spawns NPCs, pre-battle
 execute as @s[x=2329,y=108,z=-2502,distance=..10,tag=!Dialogue82,scores={Rival=1}] unless entity @e[x=2304,y=109,z=-2501,dy=3,type=cobblemon:npc] run npcspawnat 2304 110 -2501 may_generic
