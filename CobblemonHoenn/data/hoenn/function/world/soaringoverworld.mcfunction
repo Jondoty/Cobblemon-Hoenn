@@ -633,9 +633,9 @@ gamemode adventure @s[x=-860,y=63,z=1409,dx=11,dy=15,dz=12]
 gamemode adventure @s[x=-815,y=63,z=1428,dx=13,dy=15,dz=14]
 gamemode adventure @s[x=-770,y=63,z=1440,dx=19,dy=15,dz=19]
 gamemode adventure @s[x=-791,y=63,z=1461,dx=9,dy=15,dz=9]
-gamemode adventure @s[x=-822,y=63,z=1494,dx=9,dy=15,dz=9]
-gamemode adventure @s[x=-753,y=63,z=1475,dx=17,dy=15,dz=28]
-gamemode adventure @s[x=-753,y=63,z=1460,dx=17,dy=15,dz=14]
+gamemode adventure @s[x=-822,y=63,z=1494,dx=9,dy=15,dz=9,tag=FlyPacifidlog]
+gamemode adventure @s[x=-753,y=63,z=1475,dx=17,dy=15,dz=28,tag=FlyEverGrande]
+gamemode adventure @s[x=-753,y=63,z=1460,dx=17,dy=15,dz=14,tag=FlyLeague]
 
 
 
@@ -668,14 +668,14 @@ gamemode adventure @s[x=-857,y=63,z=1456,dx=34,dy=15,dz=13]
 gamemode adventure @s[x=-801,y=63,z=1428,dx=30,dy=15,dz=21]
 gamemode adventure @s[x=-770,y=63,z=1419,dx=24,dy=15,dz=20]
 gamemode adventure @s[x=-800,y=63,z=1450,dx=29,dy=15,dz=28]
-gamemode adventure @s[x=-770,y=63,z=1460,dx=16,dy=15,dz=18]
-gamemode adventure @s[x=-770,y=63,z=1479,dx=16,dy=15,dz=14]
-gamemode adventure @s[x=-770,y=63,z=1494,dx=16,dy=15,dz=16]
-gamemode adventure @s[x=-792,y=63,z=1491,dx=21,dy=15,dz=19]
-gamemode adventure @s[x=-812,y=63,z=1491,dx=19,dy=15,dz=19]
-gamemode adventure @s[x=-842,y=63,z=1491,dx=19,dy=15,dz=25]
-gamemode adventure @s[x=-864,y=63,z=1491,dx=21,dy=15,dz=39]
-gamemode adventure @s[x=-886,y=63,z=1491,dx=21,dy=15,dz=39]
+gamemode adventure @s[x=-770,y=63,z=1460,dx=16,dy=15,dz=18,tag=FlyRoute127]
+gamemode adventure @s[x=-770,y=63,z=1479,dx=16,dy=15,dz=14,tag=FlyRoute128]
+gamemode adventure @s[x=-770,y=63,z=1494,dx=16,dy=15,dz=16,tag=FlyRoute129]
+gamemode adventure @s[x=-792,y=63,z=1491,dx=21,dy=15,dz=19,tag=FlyRoute130]
+gamemode adventure @s[x=-812,y=63,z=1491,dx=19,dy=15,dz=19,tag=FlyRoute131]
+gamemode adventure @s[x=-842,y=63,z=1491,dx=19,dy=15,dz=25,tag=FlyRoute132]
+gamemode adventure @s[x=-864,y=63,z=1491,dx=21,dy=15,dz=39,tag=FlyRoute133]
+gamemode adventure @s[x=-886,y=63,z=1491,dx=21,dy=15,dz=39,tag=FlyRoute134]
 gamemode adventure @s[x=-926,y=63,z=1422,dx=25,dy=15,dz=6]
 gamemode adventure @s[x=-833,y=63,z=1447,dx=6,dy=15,dz=5]
 gamemode adventure @s[x=-803,y=63,z=1479,dx=17,dy=15,dz=11]
@@ -702,9 +702,9 @@ tp @s[x=-860,y=63,z=1409,dx=11,dy=15,dz=12] -688 84 -1424 0 ~
 tp @s[x=-815,y=63,z=1428,dx=13,dy=15,dz=14] 518 74 -1032 0 ~
 tp @s[x=-770,y=63,z=1440,dx=19,dy=15,dz=19] 1482 74 -975 0 ~
 tp @s[x=-791,y=63,z=1461,dx=9,dy=15,dz=9] 1121 79 1671 0 ~
-tp @s[x=-822,y=63,z=1494,dx=9,dy=15,dz=9] -53 65 269 0 ~
-tp @s[x=-753,y=63,z=1475,dx=17,dy=15,dz=28] 2227 154 -219 0 ~
-tp @s[x=-753,y=63,z=1460,dx=17,dy=15,dz=14] 2158 170 -748 0 ~
+tp @s[x=-822,y=63,z=1494,dx=9,dy=15,dz=9,tag=FlyPacifidlog] -53 65 269 0 ~
+tp @s[x=-753,y=63,z=1475,dx=17,dy=15,dz=28,tag=FlyEverGrande] 2227 154 -219 0 ~
+tp @s[x=-753,y=63,z=1460,dx=17,dy=15,dz=14,tag=FlyLeague] 2158 170 -748 0 ~
 tp @s[x=-833,y=63,z=1447,dx=6,dy=15,dz=5] 140 64 -761 0 0
 
 
@@ -737,14 +737,14 @@ tp @s[x=-857,y=63,z=1456,dx=34,dy=15,dz=13] -638 64 -578 0 0
 tp @s[x=-801,y=63,z=1428,dx=30,dy=15,dz=21] 1119 64 -934 0 0
 tp @s[x=-770,y=63,z=1419,dx=24,dy=15,dz=20] 1542 64 -1194 0 0
 tp @s[x=-800,y=63,z=1450,dx=29,dy=15,dz=28] 1047 64 -620 0 0
-tp @s[x=-770,y=63,z=1460,dx=16,dy=15,dz=18] 1270 64 -728 0 0
-tp @s[x=-770,y=63,z=1479,dx=16,dy=15,dz=14] 1596 64 -42 -180 0
-tp @s[x=-770,y=63,z=1494,dx=16,dy=15,dz=16] 1367 64 170 0 0
-tp @s[x=-792,y=63,z=1491,dx=21,dy=15,dz=19] 877 64 213 0 0
-tp @s[x=-812,y=63,z=1491,dx=19,dy=15,dz=19] 457 64 197 0 0
-tp @s[x=-842,y=63,z=1491,dx=19,dy=15,dz=25] -214 64 247 0 0
-tp @s[x=-864,y=63,z=1491,dx=21,dy=15,dz=39] -571 64 311 0 0
-tp @s[x=-886,y=63,z=1491,dx=21,dy=15,dz=39] -954 64 296 0 0
+tp @s[x=-770,y=63,z=1460,dx=16,dy=15,dz=18,tag=FlyRoute127] 1270 64 -728 0 0
+tp @s[x=-770,y=63,z=1479,dx=16,dy=15,dz=14,tag=FlyRoute128] 1596 64 -42 -180 0
+tp @s[x=-770,y=63,z=1494,dx=16,dy=15,dz=16,tag=FlyRoute129] 1367 64 170 0 0
+tp @s[x=-792,y=63,z=1491,dx=21,dy=15,dz=19,tag=FlyRoute130] 877 64 213 0 0
+tp @s[x=-812,y=63,z=1491,dx=19,dy=15,dz=19,tag=FlyRoute131] 457 64 197 0 0
+tp @s[x=-842,y=63,z=1491,dx=19,dy=15,dz=25,tag=FlyRoute132] -214 64 247 0 0
+tp @s[x=-864,y=63,z=1491,dx=21,dy=15,dz=39,tag=FlyRoute133] -571 64 311 0 0
+tp @s[x=-886,y=63,z=1491,dx=21,dy=15,dz=39,tag=FlyRoute134] -954 64 296 0 0
 tp @s[x=-926,y=63,z=1422,dx=25,dy=15,dz=6] -1880 175 -2950 0 0
 tp @s[x=-803,y=63,z=1479,dx=17,dy=15,dz=11] 338 89 -125 0 0
 tp @s[x=-957,y=63,z=1413,dx=8,dy=15,dz=7] -2575 99 -1030 0 0

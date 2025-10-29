@@ -63,6 +63,15 @@ tag @a[tag=!FlyLeague,x=2137,y=170,z=-798,dx=42,dy=15,dz=35] add FlyLeague
 tag @a[tag=!FlyResort,x=2071,y=0,z=323,dx=663,dy=256,dz=906] add FlyResort
 
 #Manages Eon Flute fly tags (for a later version)
+tag @a[x=1186,y=31,z=-811,dx=576,dy=256,dz=575] add FlyRoute127
+tag @a[x=1186,y=31,z=-235,dx=838,dy=256,dz=312] add FlyRoute128
+tag @a[x=945,y=31,z=78,dx=857,dy=256,dz=351] add FlyRoute129
+tag @a[x=507,y=31,z=78,dx=437,dy=256,dz=351] add FlyRoute130
+tag @a[x=45,y=0,z=-8,dx=461,dy=256,dz=404] add FlyRoute131
+tag @a[x=-545,y=31,z=135,dx=364,dy=256,dz=312] add FlyRoute132
+tag @a[x=-924,y=31,z=136,dx=378,dy=256,dz=312] add FlyRoute133
+tag @a[x=-1287,y=31,z=136,dx=362,dy=256,dz=312] add FlyRoute134
+
 
 
 #Runs flash commands on tall structures

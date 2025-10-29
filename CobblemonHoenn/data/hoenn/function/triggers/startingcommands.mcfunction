@@ -116,6 +116,16 @@ tag @s remove FlyEverGrande
 tag @s remove FlyLeague
 tag @s remove FlyResort
 
+#Used in Eon Flute
+tag @s remove FlyRoute127
+tag @s remove FlyRoute128
+tag @s remove FlyRoute129
+tag @s remove FlyRoute130
+tag @s remove FlyRoute131
+tag @s remove FlyRoute132
+tag @s remove FlyRoute133
+tag @s remove FlyRoute134
+
 
 #Resets legendary caught tags
 tag @s remove AzelfCatch
