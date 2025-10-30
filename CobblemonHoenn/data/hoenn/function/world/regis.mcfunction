@@ -23,11 +23,24 @@ execute if entity @a[x=-2801,y=64,z=256,distance=..100,tag=RegiUnlock] if block 
 #Locked
 execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run fill -2803 15 208 -2799 11 208 minecraft:black_concrete
 execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run clone -2070 68 1444 -2066 64 1444 -2803 11 209
+
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2803 12.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":42}}}
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2802 12.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":42}}}
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2801 12.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":29}}}
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2800 12.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":42}}}
+
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2803 14.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":28}}}
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2801 14.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":46}}}
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2800 14.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":25}}}
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run execute positioned -2799 14.5 209 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":33}}}
+
 execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=!IceUnlock] if block -2801 11 207 air run fill -2803 11 207 -2799 11 207 minecraft:magenta_carpet
+
 
 #Unlocked
 execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=IceUnlock] if block -2801 11 207 minecraft:magenta_carpet run fill -2802 15 209 -2800 15 209 air
 execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=IceUnlock] if block -2801 11 207 minecraft:magenta_carpet run fill -2799 15 208 -2803 15 208 air
+execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=IceUnlock] if block -2801 11 207 minecraft:magenta_carpet run kill @e[x=-2803,y=11,z=207,dx=4,dy=5,dz=3,type=minecraft:item_display]
 execute if entity @a[x=-2846,y=-15,z=76,dx=89,dy=41,dz=198,tag=IceUnlock] if block -2801 11 207 minecraft:magenta_carpet run fill -2799 14 209 -2803 11 207 air
 
 
@@ -45,6 +58,19 @@ execute if entity @a[x=-1422,y=79,z=-995,distance=..100,tag=RegiUnlock] if block
 #Locked
 execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run fill -1419 41 -1040 -1423 37 -1040 minecraft:black_concrete
 execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run clone -2070 68 1442 -2066 64 1442 -1423 37 -1039
+
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1423 38.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":42}}}
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1422 38.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":29}}}
+
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1420 38.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":48}}}
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1419 38.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":39}}}
+
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1423 40.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":41}}}
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1422 40.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":33}}}
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1421 40.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":31}}}
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1420 40.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":32}}}
+execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run execute positioned -1419 40.5 -1039 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":43}}}
+
 execute if entity @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] if block -1421 37 -1041 air run fill -1419 37 -1041 -1423 37 -1041 minecraft:magenta_carpet
 
 #Unlocked
@@ -68,11 +94,25 @@ execute if entity @a[x=-372,y=104,z=-1182,distance=..100,tag=RegiUnlock] if bloc
 #Locked
 execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run fill -369 37 -1227 -373 41 -1227 minecraft:black_concrete
 execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run clone -2070 68 1440 -2066 64 1440 -373 37 -1226
+
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -373 38.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":38}}}
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -372 38.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":28}}}
+
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -370 38.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":32}}}
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -369 38.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":39}}}
+
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -373 40.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":43}}}
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -372 40.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":39}}}
+
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -370 40.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":43}}}
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run execute positioned -369 40.5 -1226 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":32}}}
+
 execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=!SteelUnlock] if block -371 37 -1228 air run fill -369 37 -1228 -373 37 -1228 minecraft:magenta_carpet
 
 #Unlocked
 execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=SteelUnlock] if block -371 37 -1228 minecraft:magenta_carpet run fill -370 41 -1227 -372 41 -1226 air
 execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=SteelUnlock] if block -371 37 -1228 minecraft:magenta_carpet run fill -373 41 -1227 -369 41 -1227 air
+execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=SteelUnlock] if block -371 37 -1228 minecraft:magenta_carpet run kill @e[x=-373,y=37,z=-1227,dx=4,dy=4,dz=3,type=minecraft:item_display]
 execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=SteelUnlock] if block -371 37 -1228 minecraft:magenta_carpet run fill -369 37 -1228 -373 40 -1226 air
 
 
@@ -83,6 +123,13 @@ execute if entity @a[x=-428,y=0,z=-1376,dx=116,dy=55,dz=227,tag=SteelUnlock] if 
 #Locked
 execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run fill 2575 80 -2948 2581 85 -2948 minecraft:black_concrete
 execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run clone -2070 69 1438 -2064 64 1438 2575 80 -2947
+execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run execute positioned 2575 81.5 -2947 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":28}}}
+execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run execute positioned 2576 81.5 -2947 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":33}}}
+execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run execute positioned 2577 81.5 -2947 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":31}}}
+
+execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run execute positioned 2579 81.5 -2947 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":32}}}
+execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run execute positioned 2580 81.5 -2947 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":29}}}
+execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run execute positioned 2581 81.5 -2947 run summon minecraft:item_display ~ ~ ~ {transformation:{left_rotation:[180f]},scale:[1.01f,1.01f,1.01f],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"minecraft:custom_model_data":41}}}
 execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=!ChamberUnlock] if block 2578 80 -2949 air run fill 2581 80 -2949 2575 80 -2949 minecraft:magenta_carpet
 
 #Unlocked
@@ -95,12 +142,13 @@ execute if entity @a[x=2440,y=0,z=-3361,dx=319,dy=256,dz=686,tag=ChamberUnlock] 
 
 #Sealed Chamber
 #First Chamber:
-#   Test: Fly Here (original is Dig Here, but can't detect that well?)
-#Could just have the player throw out a Pokemon that knows Dig, and do @s used Dig!
+#Dig Here
+#Have the player throw out a Pokemon that knows Dig, and do @s used Dig!
 
-execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Moveset:[{MoveID:"Dig"}]}] run tellraw @a[tag=!ChamberUnlock,x=2440,y=0,z=-3361,dx=319,dy=256,dz=686] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" used Dig!","italic":true,"color":"gray"}]
-execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Moveset:[{MoveID:"Dig"}]}] run playsound minecraft:entity.iron_golem.death ambient @a[tag=!ChamberUnlock,x=2440,y=0,z=-3361,dx=319,dy=256,dz=686] ~ ~ ~ 1 1 1
-execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Moveset:[{MoveID:"Dig"}]}] run tag @a[tag=!ChamberUnlock,x=2440,y=0,z=-3361,dx=319,dy=256,dz=686] add ChamberUnlock
+execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Pokemon:{MoveSet:[{MoveName:"dig"}]}}] run tellraw @a[tag=!ChamberUnlock,x=2440,y=0,z=-3361,dx=319,dy=256,dz=686] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" used Dig!","italic":true,"color":"gray"}]
+execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Pokemon:{MoveSet:[{MoveName:"dig"}]}}] run playsound minecraft:entity.iron_golem.death ambient @a[tag=!ChamberUnlock,x=2440,y=0,z=-3361,dx=319,dy=256,dz=686] ~ ~ ~ 1 1 1
+execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Pokemon:{MoveSet:[{MoveName:"dig"}]}}] run tag @a[tag=!ChamberUnlock,x=2440,y=0,z=-3361,dx=319,dy=256,dz=686] add ChamberUnlock
+execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Pokemon:{MoveSet:[{MoveName:"dig"}]}}] run kill @e[x=2575,y=79,z=-2948,dx=6,dy=5,dz=3,type=minecraft:item_display]
 
 #Controlled by the Fly function. Usually fails in caves. If player does not have ChamberUnlock tag and tries to fly in Sealed Chamber, applies tag.
 
@@ -111,10 +159,10 @@ execute as @e[x=2578,y=80,z=-2941,distance=..10,nbt={Moveset:[{MoveID:"Dig"}]}] 
 #   FIRST COMES RELICANTH. LAST COMES WAILORD.
 #Checks against if a Relicanth is in slot 1, and a Wailord is in slot 6
 
-execute as @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35] store result score @s RelicanthHave run testpartyslot @s 1 Relicanth
-execute as @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35] store result score @s WailordHave run testpartyslot @s 6 Wailord
+execute as @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35] store result score @s RelicanthHave run testpartyslot @s 1 relicanth
+execute as @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35] store result score @s WailordHave run testpartyslot @s 6 wailord
 
-execute as @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35,scores={RelicanthHave=1..,WailordHave=1..}] run scoreboard players set @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35,tag=!Dialogue263] DialogueTrigger 263
+execute as @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35,scores={RelicanthHave=1..,WailordHave=1..}] run scoreboard players set @a[x=2545,y=86,z=-3188,dx=70,dy=30,dz=35,tag=!RegiUnlock] DialogueTrigger 263
 
 #--------------------------------------------------------------------
 #Island Cave
@@ -146,9 +194,9 @@ execute as @a[x=-2853,y=-16,z=69,dx=101,dy=46,dz=217,scores={DayTime=168..},tag=
 #Ideally would spawn invisible armor stands to track the pattern of the player. If in a >>vv pattern, success.
 #My alternative, throw out a Pokemon with the move strength in the bottom right corner of the chamber.
 
-execute if entity @e[x=-1405,y=36,z=-1005,distance=..10,nbt={Moveset:[{MoveID:"Strength"}]}] run playsound minecraft:entity.iron_golem.death ambient @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] ~ ~ ~ 1 1 1
-execute if entity @e[x=-1405,y=36,z=-1005,distance=..10,nbt={Moveset:[{MoveID:"Strength"}]}] run tag @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] add RockUnlock
-
+execute if entity @e[x=-1405,y=36,z=-1005,distance=..10,nbt={Pokemon:{MoveSet:[{MoveName:"strength"}]}}] run playsound minecraft:entity.iron_golem.death ambient @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] ~ ~ ~ 1 1 1
+execute if entity @e[x=-1405,y=36,z=-1005,distance=..10,nbt={Pokemon:{MoveSet:[{MoveName:"strength"}]}}] run tag @a[x=-1474,y=0,z=-1178,dx=104,dy=55,dz=217,tag=!RockUnlock] add RockUnlock
+execute if entity @e[x=-1405,y=36,z=-1005,distance=..10,nbt={Pokemon:{MoveSet:[{MoveName:"strength"}]}}] run kill @e[x=-1423,y=37,z=-1041,dx=4,dy=5,dz=3,type=minecraft:item_display]
 
 #--------------------------------------------------------------------
 #Ancient Tomb

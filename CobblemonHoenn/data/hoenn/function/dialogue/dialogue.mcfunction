@@ -405,10 +405,24 @@ scoreboard players set @s[scores={DialogueTrigger=149},tag=Dialogue149] TalkTime
 scoreboard players set @s[scores={DialogueTrigger=149},tag=Dialogue149] DialogueTrigger 0
 
 #-----------------------------------------------------------------------------------------------------
+#Dialogue 263  - Sealed Chamber Regis Unlock
+
+execute as @s[scores={DialogueTrigger=263,TalkTime=1}] run tag @s add ShakeScreen
+
+execute as @s[scores={DialogueTrigger=263,TalkTime=4}] run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=263,TalkTime=8}] run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 .75 1
+execute as @s[scores={DialogueTrigger=263,TalkTime=12}] run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 1.25 1
+execute as @s[scores={DialogueTrigger=263,TalkTime=12}] run tag @s add RegiUnlock
+execute as @s[scores={DialogueTrigger=263,TalkTime=13}] run tag @s remove ShakeScreen
+
+tellraw @s[scores={DialogueTrigger=263,TalkTime=15}] {"text":"It sounded as if doors opened somewhere far away.","italic":true,"color":"gray"}
+
+tag @s[scores={DialogueTrigger=263,TalkTime=15..}] add Dialogue263
+scoreboard players set @s[scores={DialogueTrigger=263},tag=Dialogue263] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=263},tag=Dialogue263] DialogueTrigger 0
 
 
-
-
+#-----------------------------------------------------------------------------------------------------
 
 
 

@@ -3959,20 +3959,6 @@ tellraw @s[scores={DialogueTrigger=262,TalkTime=1}] {"text":"<Phoebe> Well, good
 #tp out
 
 tag @s[scores={DialogueTrigger=262,TalkTime=100..}] add Dialogue262
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 263  - Sealed Chamber Regis Unlock
-
-execute as @s[scores={DialogueTrigger=263,TalkTime=1}] run tag @s add ShakeScreen
-
-execute as @s[scores={DialogueTrigger=263,TalkTime=1}] run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=263,TalkTime=1}] run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 .75 1
-execute as @s[scores={DialogueTrigger=263,TalkTime=1}] run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 1.25 1
-execute as @s[scores={DialogueTrigger=263,TalkTime=1}] run tag @s add RegiUnlock
-execute as @s[scores={DialogueTrigger=263,TalkTime=1}] run tag @s remove ShakeScreen
-
-tellraw @s[scores={DialogueTrigger=263,TalkTime=1}] {"text":"It sounded as if doors opened somewhere far away.","italic":true,"color":"gray"}
-
-tag @s[scores={DialogueTrigger=263,TalkTime=100..}] add Dialogue263
 
 #-----------------------------------------------------------------------------------------------------
 
