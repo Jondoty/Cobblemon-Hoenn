@@ -139,6 +139,9 @@
             "condition": {
                 "canSeeSky": false,
                 "minX": 1753, "maxX": 2166, "minZ": -3361, "maxZ": -2286, "minY": 0, "maxY": 256
+            },
+            "anticondition": {
+                "minX": 1774, "maxX": 2107, "minZ": -2497, "maxZ": -2320, "minY": 63, "maxY": 98
             }
         },
 

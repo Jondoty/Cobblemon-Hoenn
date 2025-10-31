@@ -375,6 +375,9 @@
                     "water"
                 ],
                 "minX": 676, "maxX": 1185, "minZ": -830, "maxZ": -270, "minY": 31, "maxY": 287
+            },
+            "anticondition": {
+                "minX": 1068, "maxX": 1185, "minZ": -803, "maxZ": -658, "minY": 0, "maxY": 256
             }
         },
 
