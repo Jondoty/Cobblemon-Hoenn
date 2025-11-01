@@ -97,49 +97,6 @@ scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=139}] MusicCoo
 
 
 #---------------------------------------------------------------------------------------------------------------------------
-#Battle Music
-
-#General Trainer
-playsound trainer record @s[scores={MusicCooldown=0,BattleMusic=1}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=1}] MusicCooldown 246
-
-#Rival
-playsound rival record @s[scores={MusicCooldown=0,BattleMusic=2}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=2}] MusicCooldown 186
-
-#Gym Leader
-playsound gymleader record @s[scores={MusicCooldown=0,BattleMusic=3}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=3}] MusicCooldown 210
-
-#Elite Four
-playsound elitefour record @s[scores={MusicCooldown=0,BattleMusic=4}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=4}] MusicCooldown 170
-
-#Champion Sreven
-playsound steven record @s[scores={MusicCooldown=0,BattleMusic=5}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=5}] MusicCooldown 186
-
-#Battle Chatelaine
-playsound battlechatelaine record @s[scores={MusicCooldown=0,BattleMusic=6}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=6}] MusicCooldown 273
-
-#Team Magma/Aqua grunts
-playsound teambattle record @s[scores={MusicCooldown=0,BattleMusic=7}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=7}] MusicCooldown 281
-
-#Team Laders
-playsound teamleaders record @s[scores={MusicCooldown=0,BattleMusic=8}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=8}] MusicCooldown 204
-
-#Wally
-playsound wally record @s[scores={MusicCooldown=0,BattleMusic=9}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=9}] MusicCooldown 117
-
-#Zinnia
-playsound zinnia record @s[scores={MusicCooldown=0,BattleMusic=10}] ~ ~ ~ 1 1 1
-scoreboard players set @s[scores={MusicCooldown=0,BattleMusic=10}] MusicCooldown 257
-
-#---------------------------------------------------------------------------------------------------------------------------
 #Entity-based music
 
 
