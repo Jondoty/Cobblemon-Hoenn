@@ -851,7 +851,13 @@
             "input": {
                 "type": "option",
                 "vertical": false,
-                "options": []
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page45');"
+                    }
+                ]
             }
         },
         {

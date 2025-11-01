@@ -239,6 +239,10 @@ scoreboard players set @s[x=616,y=0,z=-3337,dx=35,dy=256,dz=40,scores={MusicCool
 playsound explosiveencounters record @s[x=-1023,y=3,z=-1326,dx=73,dy=44,dz=51,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
 scoreboard players set @s[x=-1023,y=3,z=-1326,dx=73,dy=44,dz=51,scores={MusicCooldown=0}] MusicCooldown 102
 
+#Nameless Cavern
+playsound sealedchamber record @s[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,scores={MusicCooldown=0}] MusicCooldown 123
+
 #---------------------------------------------------------------------------------------------------------------------------
 #Pokemon Centers
 
@@ -803,10 +807,6 @@ scoreboard players set @s[x=191,y=0,z=1425,dx=125,dy=256,dz=164,scores={MusicCoo
 #Pathless Plain
 playsound sealedchamber record @s[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
 scoreboard players set @s[x=-369,y=0,z=1349,dx=164,dy=256,dz=236,scores={MusicCooldown=0}] MusicCooldown 123
-
-#Nameless Cavern
-playsound sealedchamber record @s[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,scores={MusicCooldown=0}] MusicCooldown 123
 
 #Fabled Cave
 playsound sealedchamber record @s[x=-310,y=0,z=2085,dx=207,dy=256,dz=264,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1

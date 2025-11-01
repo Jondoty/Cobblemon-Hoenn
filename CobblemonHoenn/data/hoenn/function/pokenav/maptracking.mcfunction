@@ -6,6 +6,8 @@
 #Secret Islet
 tag @s[x=676,y=0,z=-372,dx=86,dy=256,dz=102] add Indoors
 
+#Nameless Cavern
+tag @s[x=1068,y=0,z=-803,dx=117,dy=256,dz=145] add Indoors
 
 #Littleroot
 execute as @s[x=-2098,y=0,z=278,dx=146,dy=256,dz=92,scores={NavSlot=1}] unless entity @s[scores={NavTrack=101}] run item replace entity @s hotbar.0 with carrot_on_a_stick[custom_model_data=101,custom_name='["",{"text":"PokéNav","italic":false,"color":"aqua"}]',lore=['["",{"text":"An electronic device with modules","italic":false}]','["",{"text":"used in exploring the Hoenn region.","italic":false}]','[""]','["",{"text":"Controls","italic":false,"bold":true}]','["",{"text":"Q (drop) to change modules.","italic":false}]','["",{"text":"Right click to interact with module.","italic":false}]']] 1
