@@ -141,6 +141,13 @@ execute as @s[tag=!RadioOff,scores={BattleStart=36}] run scoreboard players set 
 
 
 #Trainer Battle
+
+#Some specific logic for if players are in water, but not in the underwater areas. If surrounded by water, make a lilypad under them.
+execute as @s[scores={BattleStart=37}] at @s if block ~ ~ ~ water run tag @s[y=59,dy=10] add WaterBattle
+execute as @s[scores={BattleStart=37},tag=WaterBattle] at @s run tp @s ~ 64.5 ~ ~ ~30
+execute as @s[scores={BattleStart=37},tag=WaterBattle] at @s if block ~ ~ ~ air run setblock ~ ~ ~ minecraft:lily_pad
+execute as @s[scores={BattleStart=37},tag=WaterBattle] run tag @s remove WaterBattle
+
 execute as @s[tag=!RadioOff,scores={BattleStart=37}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=37}] run playsound trainer record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=37}] run scoreboard players set @s MusicCooldown 245

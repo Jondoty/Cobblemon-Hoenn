@@ -8,7 +8,6 @@ execute as @s[tag=!RadioOff,scores={BattleEnd=1}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleEnd=1}] run playsound trainerwin record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleEnd=1}] run scoreboard players set @s MusicCooldown 19
 
-
 #2 - Gym Leader battle ending (Applies a tag based on which gym the player's in)
 execute as @s[tag=!RadioOff,scores={BattleEnd=2}] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleEnd=2}] run playsound gymleaderwin record @s ~ ~ ~ 1 1 1
@@ -36,6 +35,8 @@ execute as @s[tag=!RadioOff,scores={BattleEnd=5}] run scoreboard players set @s 
 #If player is in the Soaring Overworld and wins, sets back to Spectator
 execute as @s[x=-1048,y=0,z=1331,dx=379,dy=256,dz=296,scores={BattleEnd=5}] run gamemode spectator
 
+#If the player is in a trainer battle and wins, fills lilypads around them with air to return back to the sea
+execute as @s[scores={BattleEnd=1}] at @s run fill ~20 64 ~20 ~-20 63 ~-20 air replace minecraft:lily_pad
 
 #Story beats
 #If player defeats anything on Route 101, between getting starter and Birch's first talk
