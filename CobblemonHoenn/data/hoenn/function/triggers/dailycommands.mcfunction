@@ -48,7 +48,7 @@ tag @a remove ItemLoot444
 tag @a remove ItemLoot445
 
 #Loto-ID daily reset
-tag @a remove Dialogue131
+tag @a remove Dialogue130
 
 
 

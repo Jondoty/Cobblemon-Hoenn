@@ -312,6 +312,9 @@ execute as @s[x=855,y=60,z=1653,distance=..6,scores={Temp=4}] run opendialogue 4
 execute as @s[x=855,y=60,z=1653,distance=..6,scores={Temp=5..}] run opendialogue 5_badges_shop_interaction @s
 
 
+#Loto ID
+execute as @s[x=523,y=28,z=-1109,distance=..6,tag=Dialogue130] run opendialogue lotoid_cooldown @s
+execute as @s[x=523,y=28,z=-1109,distance=..6,tag=!Dialogue130] run opendialogue lotoid_interaction @s
 
 #-------------------------------------------------------------
 
