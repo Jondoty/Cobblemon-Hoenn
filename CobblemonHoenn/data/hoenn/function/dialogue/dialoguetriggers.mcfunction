@@ -626,6 +626,21 @@ execute as @s[x=-2042,y=49,z=319,distance=..6,tag=Dialogue149,tag=!Dialogue150,s
 #Victory Road Wally Battle
 execute as @s[x=1644,y=95,z=-2947,distance=..10,tag=!Dialogue154] unless entity @e[x=1644,y=94,z=-3015,dy=3,type=cobblemon:npc] run npcspawnat 1644 95 -3015 victoryroad_wally
 
+#Hall of Fame Steven interaction
+execute as @s[x=629,y=132,z=-3316,distance=..7,tag=!Dialogue165] run opendialogue halloffame_steven_interaction @s
+
+
+#Respawns rematched May/Brendan Route 103
+execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=1,StarterPick=1},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_may_route103_blaziken_team
+execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=1,StarterPick=2},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_may_route103_swampert_team
+execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=1,StarterPick=3},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_may_route103_sceptile_team
+
+execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2,StarterPick=1},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_brendan_route103_blaziken_team
+execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2,StarterPick=2},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_brendan_route103_swampert_team
+execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2,StarterPick=3},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_brendan_route103_sceptile_team
+
+
+
 
 
 #-----------------------------------------------------------------------------------------------------

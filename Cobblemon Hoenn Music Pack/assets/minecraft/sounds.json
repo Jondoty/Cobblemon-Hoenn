@@ -667,6 +667,14 @@
       }
     ]
   },
+  "theend": {
+    "sounds": [
+      {
+        "name":"hoenn/dialogues/theend",
+        "stream": true
+      }
+    ]
+  },
   "thelamentoffallingstars": {
     "sounds": [
       {
