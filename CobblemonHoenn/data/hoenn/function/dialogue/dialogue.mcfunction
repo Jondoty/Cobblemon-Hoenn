@@ -423,14 +423,56 @@ scoreboard players set @s[scores={DialogueTrigger=263},tag=Dialogue263] Dialogue
 
 
 #-----------------------------------------------------------------------------------------------------
+#Dialogue 166 - Map Credits
+#First time
+
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeheal
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run function hoenn:tools/forceclick
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run advancement grant @s only hoenn:badges/champion
+
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run scoreboard players add @s PokemonLeague 1
+
+#Gives the player's Party Pokemon a ribbon
+#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 1 ribbon:hoenn_champion
+#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 2 ribbon:hoenn_champion
+#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 3 ribbon:hoenn_champion
+#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 4 ribbon:hoenn_champion
+#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 5 ribbon:hoenn_champion
+#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 6 ribbon:hoenn_champion
+
+tellraw @s[scores={DialogueTrigger=166,TalkTime=1}] {"text":"Thank you for playing Pixelmon Hoenn!"}
+tellraw @s[scores={DialogueTrigger=166,TalkTime=10}] {"text":"Map Creators: Jond - Project Manager, Builder, Commands, Terrain"}
+tellraw @s[scores={DialogueTrigger=166,TalkTime=20}] {"text":"PixelmonChampion (Ozzy) - Builder & Modeler"}
+
+tellraw @s[scores={DialogueTrigger=166,TalkTime=30}] {"text":"_SilverPhoenix - Builder, Pokemon League Interiors, Fortree City\nMystCraftMC - Gym Interiors"}
+
+tellraw @s[scores={DialogueTrigger=166,TalkTime=40}] {"text":"Magma Builds - ~25 World buildings, Sea Mauville, Pokemon League, NPC Homes\nbooksketball - Builder, Misc Homes and World Buildings"}
+
+tellraw @s[scores={DialogueTrigger=166,TalkTime=50}] ["",{"text":"Check out my other region maps if you liked this one!\n["},{"text":"Cobblemon Johto","color":"gold","clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/worlds/cobblemon-johto"}},{"text":"] ["},{"text":"Cobblemon Kanto","color":"green","clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/worlds/cobblemon-kanto"}},{"text":"] ["},{"text":"Pixelmon Kalos","color":"aqua","clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/worlds/pixelmon-kalos"}},{"text":"]"}]
+
+tellraw @s[scores={DialogueTrigger=166,TalkTime=60}] {"text":"All source material credit to Game Freak, The Pokemon Company, and Nintendo."}
+
+#runs legendary reset function
+execute as @s[scores={DialogueTrigger=166,TalkTime=70}] run function hoenn:triggers/legendatyreset
+
+#If this is the player's first time, run cutscenes
+execute as @s[scores={DialogueTrigger=166,TalkTime=75},tag=!Dialogue167] run effect give @s minecraft:blindness 3 1 true
+execute as @s[scores={DialogueTrigger=166,TalkTime=75},tag=!Dialogue167] run tp @s 637.18 110.00 -3274.59 138.75 8.25
+execute as @s[scores={DialogueTrigger=166,TalkTime=76,Rival=1},tag=!Dialogue167] unless entity @e[x=634,y=110,z=-3278,dy=4,type=cobblemon:npc] run npcspawnat 634 110 -3278 may_generic
+execute as @s[scores={DialogueTrigger=166,TalkTime=76,Rival=2},tag=!Dialogue167] unless entity @e[x=634,y=110,z=-3278,dy=4,type=cobblemon:npc] run npcspawnat 634 110 -3278 brendan_generic
+execute as @s[scores={DialogueTrigger=166,TalkTime=76,Rival=1},tag=!Dialogue167] run opendialogue may_dialogue166 @s
+execute as @s[scores={DialogueTrigger=166,TalkTime=76,Rival=2},tag=!Dialogue167] run opendialogue brendan_dialogue166 @s
 
 
+#If the player has beaten the league for a second+ time, skip over and tp to Littleroot after
 
+execute as @s[scores={DialogueTrigger=166,TalkTime=80},tag=Dialogue167] run effect give @s minecraft:blindness 3 1 true
+execute as @s[scores={DialogueTrigger=166,TalkTime=82,Rival=1},tag=Dialogue167] run tp @s -2074 50 299 -120 12
+execute as @s[scores={DialogueTrigger=166,TalkTime=82,Rival=2},tag=Dialogue167] run tp @s -1985 50 299 120 12
 
-
-
-
-
+tag @s[scores={DialogueTrigger=166,TalkTime=83..}] add Dialogue166
+scoreboard players set @s[scores={DialogueTrigger=166},tag=Dialogue166] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=166},tag=Dialogue166] DialogueTrigger 0
 
 
 

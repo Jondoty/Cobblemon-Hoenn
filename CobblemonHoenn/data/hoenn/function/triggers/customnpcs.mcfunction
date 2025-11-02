@@ -1,7 +1,9 @@
 #Function that manages what specific NPCs say when you click on boxes surrounding them.
 #Used to have the same NPC say different lines depending on the player's own tags.
 
-
+#Hall of Fame machine running credits
+execute as @s[x=633,y=132,z=-3321,distance=..8] run tag @s remove Dialogue166
+execute as @s[x=633,y=132,z=-3321,distance=..8] run scoreboard players set @s DialogueTrigger 166
 #-------------------------------------------------------------
 #Legendary Pokemon Triggers
 #execute as @e[distance=..3,type=cobblemon:pokemon] at @s run summon minecraft:interaction ~ ~ ~ {width:3,height:5,response:1,Tags:[NPCs]}
