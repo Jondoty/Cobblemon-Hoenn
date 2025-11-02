@@ -678,6 +678,22 @@ execute as @s[x=-2590,y=69,z=-29,distance=..10,scores={GameVersion=2,PokemonLeag
 execute as @s[x=-2722,y=69,z=-676,distance=..30,tag=Dialogue177,tag=!Dialogue179] unless entity @e[x=-2757,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2757 69 -704 steven_generic
 execute as @s[x=-2757,y=69,z=-704,distance=..10,tag=Dialogue177,tag=!Dialogue179] run opendialogue steven_dialogue179 @s
 
+#Dialogue 182 - Zinnia in Granite Cave, pre-battle
+execute as @s[x=2564,y=156,z=-2512,distance=..10,tag=Dialogue180,tag=!Dialogue182] unless entity @e[x=2565,y=171,z=-2598,dy=3,type=cobblemon:pokemon] run pokespawnat 2565 171 -2598 whismur level=30 no_ai=yes uncatchable=yes
+execute positioned 2565 171 -2598 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:whismur"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute positioned 2565 171 -2598 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:whismur"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+execute as @s[x=2564,y=156,z=-2512,distance=..10,tag=Dialogue180,tag=!Dialogue182] unless entity @e[x=2561,y=171,z=-2598,dy=3,type=cobblemon:npc] run npcspawnat 2561 171 -2598 zinnia_granite_cave
+execute as @s[x=2563,y=170,z=-2596,distance=..7,tag=Dialogue180,tag=!Dialogue181] run opendialogue zinnia_dialogue181 @s
+
+
+
+
+
+
+
+
+
+
 
 
 

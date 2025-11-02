@@ -859,66 +859,6 @@ tellraw @s[scores={DialogueTrigger=112,TalkTime=1}] {"text":"<Aarune> And enjoy 
 tag @s[scores={DialogueTrigger=112,TalkTime=100..}] add Dialogue112
 
 #-----------------------------------------------------------------------------------------------------
-#Dialogue 181 - Granite Cave
-#Zinnia and the player
-#https://youtu.be/MgkqxXCmrtI?t=65432
-
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> Hm, hm, hm. Well, seems like it's true."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> It really is just like the wall painting there."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> This one shows Primal Reversion... While that one shows Mega Evolution..."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> I guess that proves it once and for all."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> Our great ancestors once lived here, too."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"The ancestors who passed down through me the knowledge of how to protect the world..."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> How to avert the threat that will appear from space, as long was foretold..."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> From a place higher even than the heavens..."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Whismur> ...Mum?"}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> What is it, Aster?"}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> Oh?"}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] ["",{"text":"<Zinnia> We do seem to meet an awful lot, ' + q.player.username + '."}]
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> Are you also interested in this old painting?"}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> Or are you here for the other? For one of the Meteorite Shards that can serve as a source of power for the Legendary Pokémon that lives in the heavens above."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> Either way... You know I adore you."}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> That's it! I can't help it! I have to battle you!"}
-tellraw @s[scores={DialogueTrigger=181,TalkTime=1}] {"text":"<Zinnia> I'll play nice, though, and ask first... You're ready to battle me, right?"}
-
-tag @s[scores={DialogueTrigger=181,TalkTime=100..}] add Dialogue181
-#---------------------------------
-#Dialogue 182 - Granite Cave
-#Zinnia post-battle
-#https://youtu.be/MgkqxXCmrtI?t=65629
-
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] ["",{"text":"<Zinnia> Niiice! Real nice, ' + q.player.username + '! Ohhh, I really felt that one! Full points to you!"}]
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> That settles it! You get this Meteorite Shard as a reward!"}
-
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained the Meteorite Shard!","italic":true,"color":"gray"}]
-
-#Summon question mark
-
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> That glittering Meteorite that you've got there..."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> Hmm... It's sure giving off some vibes."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> I'd keep a tight hold on it if I were you, along with that shard I just gave you."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> ..."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> ... Hey... The actions that you're taking now..."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> Are they based on the ideals you cling to?"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> Or are they based on actual truths?"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> And if they are... How much of the truth do you think you know?"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Whismur> ...Mum?"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> Yes, ma'am! Moving out!"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> Such a spoiled girl you are, Aster..."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Zinnia> So what'll be our next stop, hmm, sweetie?"}
-
-#tp out
-
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"The Entry Call (Ver. 0.09) app rang on your PokéNav Plus!"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] ["",{"text":"<Steven> ...' + q.player.username + '."}]
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Steven> Were you able to find the Meteorite Shard that we need?"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Steven> If you were able to secure it, could you hurry back to us at the Mossdeep Space Center?"}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Steven> I'm afraid we don't seem to have much time left..."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"<Steven> ...I'll be waiting for you."}
-tellraw @s[scores={DialogueTrigger=182,TalkTime=1}] {"text":"...Kzt!"}
-
-tag @s[scores={DialogueTrigger=182,TalkTime=100..}] add Dialogue182
-#-----------------------------------------------------------------------------------------------------
 #Dialogue 183 - Mossdeep Space Center
 #Speaking to woman by the stairs
 #https://youtu.be/MgkqxXCmrtI?t=65836
