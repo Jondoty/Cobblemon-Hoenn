@@ -304,7 +304,7 @@ tag @s remove LegendaryUnovaBoxes
 tag @s remove LegendarySwords
 tag @s remove LegendaryBeasts
 tag @s remove LegendaryRayquaza
-
+tag @s remove LegendaryPrimal
 
 
 
