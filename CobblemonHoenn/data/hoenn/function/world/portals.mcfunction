@@ -14,10 +14,6 @@ function hoenn:triggers/potioneffects
 #Ruby=GameVersion 1, Sapphire=GameVersion 2
 #May Rival = 1, Brendan Rival = 2
 
-#Lobby without a Trainer Commands check
-#execute if entity @e[x=-2070,y=65,z=1410,dy=3,type=minecraft:armor_stand,tag=!TrainerCommandConfirm] as @a[x=-1995,y=66,z=1374,dz=1,dy=3] run tellraw @s {"text":"Right click the Taillow to confirm you have the Trainer Commands mod! If if says nothing after clicking, download it using the sign to the left and add it to your game.","italic":true,"color":"gray"}
-#execute if entity @e[x=-2070,y=65,z=1410,dy=3,type=minecraft:armor_stand,tag=!TrainerCommandConfirm] as @a[x=-1995,y=66,z=1374,dz=1,dy=3] run tp @s -1980.5 66 1379.5 0 8
-
 #Lobby to Game Version
 tellraw @a[x=-1995,y=66,z=1374,dz=1,dy=3,scores={GameVersion=0}] ["",{"text":"Select which game version and story you would like to follow!\n","italic":true,"color":"gray"},{"text":"THESE CANNOT BE CHANGED LATER","bold":true,"italic":true,"color":"gray"}]
 tp @a[x=-1995,y=66,z=1374,dz=1,dy=3,scores={GameVersion=0}] -2012 65 1374
@@ -85,6 +81,10 @@ execute as @a[x=-2043,y=69,z=344,dx=2,dy=5] run function hoenn:triggers/stopsoun
 execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=!Dialogue7] run effect give @e[x=-2042,y=49,z=319,dy=3,type=cobblemon:npc] minecraft:invisibility infinite 1 true
 #execute as @a[x=-2043,y=69,z=344,dx=2,dy=5,tag=Dialogue11,tag=!Dialogue12] run scoreboard players set @s DialogueTrigger 12
 tp @a[x=-2043,y=69,z=344,dx=2,dy=5] -2041 50 343
+
+#Dialogue 170, tps rival out when player leaves house
+execute as @a[x=-2004,y=40,z=309,dx=4,dy=3,tag=Dialogue170] run tp @e[x=-2002,y=40,z=299,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @a[x=-2059,y=40,z=309,dx=3,dy=3,tag=Dialogue170] run tp @e[x=-2058,y=40,z=299,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
 
 #Brendan's House
 tp @a[x=-2059,y=40,z=309,dx=3,dy=3] -2057 69 310

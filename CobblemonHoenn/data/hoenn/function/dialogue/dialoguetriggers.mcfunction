@@ -639,6 +639,36 @@ execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2
 execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2,StarterPick=2},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_brendan_route103_swampert_team
 execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2,StarterPick=3},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_brendan_route103_sceptile_team
 
+#Dialogue 168 - Littleroot parents after beating Elite Four
+#Spawns dad
+execute as @s[x=-2059,y=45,z=289,distance=..10,scores={PokemonLeague=1..},tag=!Dialogue168] unless entity @e[x=-2060,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2060 40 301 dad_generic
+execute as @s[x=-2000,y=45,z=289,distance=..10,scores={PokemonLeague=1..},tag=!Dialogue168] unless entity @e[x=-2000,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2000 40 301 dad_generic
+
+execute as @s[x=-2056,y=40,z=304,distance=..7,scores={PokemonLeague=1..},tag=!Dialogue168] run opendialogue parents_may_dialogue168 @s
+execute as @s[x=-1999,y=39,z=295,distance=..7,scores={PokemonLeague=1..},tag=!Dialogue168] run opendialogue parents_brendan_dialogue168 @s
+
+#Dialogue 169 - Littleroot meeting Zinia
+execute as @s[x=-2057,y=40,z=309,distance=..10,scores={Rival=1,PokemonLeague=1..},tag=!Dialogue169] unless entity @e[x=-2055,y=69,z=316,dy=3,type=cobblemon:pokemon] run pokespawnat -2055 69 316 whismur level=30 no_ai=yes uncatchable=yes
+execute as @s[x=-2002,y=40,z=309,distance=..10,scores={Rival=2,PokemonLeague=1..},tag=!Dialogue169] unless entity @e[x=-2000,y=69,z=316,dy=3,type=cobblemon:pokemon] run pokespawnat -2000 69 316 whismur level=30 no_ai=yes uncatchable=yes
+execute as @s[x=-2057,y=40,z=309,distance=..10,scores={Rival=1,PokemonLeague=1..},tag=!Dialogue169] unless entity @e[x=-2057,y=69,z=316,dy=3,type=cobblemon:npc] run npcspawnat -2057 69 316 zinnia_generic
+execute as @s[x=-2002,y=40,z=309,distance=..10,scores={Rival=2,PokemonLeague=1..},tag=!Dialogue169] unless entity @e[x=-2002,y=69,z=316,dy=3,type=cobblemon:npc] run npcspawnat -2002 69 316 zinnia_generic
+execute as @s[x=-2057,y=69,z=316,distance=..7,scores={PokemonLeague=1..},tag=!Dialogue169] run opendialogue zinnia_dialogue169 @s
+execute as @s[x=-2002,y=69,z=316,distance=..7,scores={PokemonLeague=1..},tag=!Dialogue169] run opendialogue zinnia_dialogue169 @s
+
+#Dialogue 170, visiting your rival's house
+execute as @s[x=-2002,y=69,z=309,distance=..10,scores={Rival=1,PokemonLeague=1..},tag=Dialogue169,tag=!Dialogue170] unless entity @e[x=-2002,y=40,z=299,dy=3,type=cobblemon:npc] run npcspawnat -2002 40 299 may_generic
+execute as @s[x=-2057,y=69,z=309,distance=..10,scores={Rival=2,PokemonLeague=1..},tag=Dialogue169,tag=!Dialogue170] unless entity @e[x=-2058,y=40,z=299,dy=3,type=cobblemon:npc] run npcspawnat -2058 40 299 brendan_generic
+execute as @s[x=-2002,y=40,z=299,distance=..7,scores={Rival=1},tag=Dialogue169,tag=!Dialogue170] run opendialogue may_dialogue170 @s
+execute as @s[x=-2058,y=40,z=299,distance=..7,scores={Rival=2},tag=Dialogue169,tag=!Dialogue170] run opendialogue brendan_dialogue170 @s
+
+
+
+
+
+
+
+
+
 
 
 
