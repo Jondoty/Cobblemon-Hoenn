@@ -672,6 +672,17 @@ execute as @s[x=-2058,y=40,z=299,distance=..7,scores={Rival=2},tag=Dialogue169,t
 
 
 
+#Dialogue 171 - Route 101
+#Professor Birch giving Johto starter post-league and Zinnia Encounter
+execute as @s[x=-2029,y=69,z=254,distance=..12,tag=Dialogue169,tag=!Dialogue171] run opendialogue birch_dialogue171 @s
+
+#Dialogue 173 - Route 101
+#Professor Birch giving Unova starter post-Delta Episode
+execute as @s[x=-2029,y=69,z=254,distance=..12,tag=Dialogue172,tag=Dialogue209,tag=!Dialogue173] run opendialogue birch_dialogue173 @s
+
+#Dialogue 175 - Route 101
+#Professor Birch giving Sinnoh starters post-Delta Episode & beating the elite four a second time
+execute as @s[x=-2029,y=69,z=254,distance=..12,scores={PokemonLeague=2..},tag=Dialogue174,tag=Dialogue209,tag=!Dialogue175] run opendialogue birch_dialogue175 @s
 
 #-----------------------------------------------------------------------------------------------------
 #Legendary Spawns
@@ -723,6 +734,17 @@ execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={P
 execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=Dialogue149] unless entity @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:interaction] positioned 1639 65 -2528 run function hoenn:spawn/hoopaportal
 execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=!Dialogue149] run kill @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:interaction]
 execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=!Dialogue149] run kill @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:armor_stand]
+
+
+
+
+
+
+
+
+
+
+
 
 
 #

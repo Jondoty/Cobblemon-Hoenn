@@ -2,7 +2,7 @@
 #If no birch is running, spawn one
 execute as @e[x=-2070,y=65,z=1410,dy=3,tag=!Birch4Initiate] run npcspawnat -2051 69 228 birch_generic
 
-#execute as @e[x=-2070,y=65,z=1410,dy=3,tag=!Birch4Initiate] run summon cobblemon:npc -2038 69 228 {Brain: {memories: {}}, HurtByTimestamp: 0, chatNum: 0, Attributes: [{Base: 0.699999988079071d, Name: "minecraft:generic.movement_speed"}, {Base: 0.08d, Name: "forge:entity_gravity"}, {Base: 0.0d, Name: "forge:step_height_addition"}], Invulnerable: 0b, FallFlying: 0b, PortalCooldown: 0, AbsorptionAmount: 0.0f, Name: "Birch", FallDistance: 0.0f, CanUpdate: 1b, DeathTime: 0s, DefaultName: 0b, Commands: {interactCommands: []}, HandDropChances: [0.085f, 0.085f], PersistenceRequired: 1b, trainerLocation: 2, DefaultGreet: 0b, Motion: [0.0d, -0.0784000015258789d, 0.0d], TextureIndex: 4, TrainerIndex: "rocketgruntfemale", NameIndex: 0, Health: 20.0f, LeftHanded: 0b, Air: 300s, OnGround: 1b, Rotation: [4.282583f, -34.029915f], HandItems: [{}, {}], ChatIndex: 3, ArmorDropChances: [0.085f, 0.085f, 0.085f, 0.085f], Profession: -1s, Pos: [-2048.5d, 79.0d, 228.5d], Fire: -1s, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0b, CustomSteveTexture: "dress.png", HurtTime: 0s, BaseTrainer: "Steve", Inventory: [], AIMode: 2s}
+execute as @e[x=-2070,y=65,z=1410,dy=3,tag=!Birch4Initiate] run npcspawnat -2038 69 228 beauty_generic
 
 
 #If birch is found inside of one box but not found inside the running box, tp back to start.

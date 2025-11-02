@@ -32,7 +32,8 @@
                             "q.run_command('execute as ' + q.player.username + ' run pokegive snivy level=5');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @s -2038 69 232 134 7');",
                             "q.run_command('tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch3Initiate] remove Birch3Initiate');",
-                            "q.dialogue.close();"
+                            "q.dialogue.close();",
+                            "q.run_command('execute as ' + q.player.username + ' run opendialogue birch_dialogue174 @s');"
                         ]
                     },
                     {
