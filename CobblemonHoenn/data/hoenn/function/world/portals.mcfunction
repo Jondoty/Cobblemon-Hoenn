@@ -375,9 +375,22 @@ tag @a[x=-2674,y=69,z=-679,dx=6,dy=3,tag=!Dialogue25] remove Dialogue24
 tp @a[x=-2674,y=69,z=-679,dx=6,dy=3] -2985 65 1579
 tp @a[x=-2987,y=65,z=1580,dx=3,dy=3] -2671 69 -678
 
+
 #Devon Corp Building
+
+#Delta episode story
+execute as @a[x=-2761,y=69,z=-708,dx=8,dy=3,dz=2] run tp @e[x=-2757,y=69,z=-704,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @a[x=-2761,y=69,z=-708,dx=8,dy=3,dz=2,tag=Dialogue179,tag=!Dialogue180] run effect give @s minecraft:blindness 2 1 true
+execute as @a[x=-2761,y=69,z=-708,dx=8,dy=3,dz=2,tag=Dialogue179,tag=!Dialogue180] unless entity @e[x=-2748,y=38,z=-725,dy=3,type=cobblemon:npc] run npcspawnat -2748 38 -725 steven_generic
+execute as @a[x=-2761,y=69,z=-708,dx=8,dy=3,dz=2,tag=Dialogue179,tag=!Dialogue180] run opendialogue stones_dialogue180 @s
+execute as @a[x=-2761,y=69,z=-708,dx=8,dy=3,dz=2,tag=Dialogue179,tag=!Dialogue180] run tp @s -2750.54 38.00 -718.23 -120.90 9.60
+
+execute as @a[x=-2758,y=18,z=-706,dx=3,dy=3,tag=Dialogue180] run tp @e[x=-2748,y=38,z=-725,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+
+#main door
 tp @a[x=-2761,y=69,z=-708,dx=8,dy=3,dz=2] -2756 18 -707
 tp @a[x=-2758,y=18,z=-706,dx=3,dy=3] -2757 69 -705
+
 
 #Apartments north of Pokemon Center
 tp @a[x=-2756,y=69,z=-644,dx=4,dy=3] -2754 27 -645

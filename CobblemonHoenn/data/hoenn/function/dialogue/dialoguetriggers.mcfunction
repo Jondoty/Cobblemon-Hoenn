@@ -639,6 +639,11 @@ execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2
 execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2,StarterPick=2},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_brendan_route103_swampert_team
 execute as @s[x=-2024,y=69,z=-92,distance=..20,scores={PokemonLeague=1..,Rival=2,StarterPick=3},tag=!Dialogue167] unless entity @e[x=-2024,y=69,z=-92,dy=4,type=cobblemon:npc] run npcspawnat -2024 69 -92 rival_brendan_route103_sceptile_team
 
+
+#----------------------------------------
+#Starting, Delta Episode
+
+
 #Dialogue 168 - Littleroot parents after beating Elite Four
 #Spawns dad
 execute as @s[x=-2059,y=45,z=289,distance=..10,scores={PokemonLeague=1..},tag=!Dialogue168] unless entity @e[x=-2060,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2060 40 301 dad_generic
@@ -661,11 +666,17 @@ execute as @s[x=-2057,y=69,z=309,distance=..10,scores={Rival=2,PokemonLeague=1..
 execute as @s[x=-2002,y=40,z=299,distance=..7,scores={Rival=1},tag=Dialogue169,tag=!Dialogue170] run opendialogue may_dialogue170 @s
 execute as @s[x=-2058,y=40,z=299,distance=..7,scores={Rival=2},tag=Dialogue169,tag=!Dialogue170] run opendialogue brendan_dialogue170 @s
 
+#Dialogue 177, Team Admins going after Wally
+execute as @s[x=-2590,y=69,z=-4,distance=..30,scores={PokemonLeague=1..},tag=!Dialogue178] unless entity @e[x=-2590,y=69,z=-36,dy=3,type=cobblemon:npc] run npcspawnat -2590 69 -36 wally_generic
+execute as @s[x=-2590,y=69,z=-4,distance=..30,scores={GameVersion=1,PokemonLeague=1..},tag=!Dialogue178] unless entity @e[x=-2590,y=69,z=-29,dy=3,type=cobblemon:npc] run npcspawnat -2590 69 -29 petalburg_courtney
+execute as @s[x=-2590,y=69,z=-4,distance=..30,scores={GameVersion=2,PokemonLeague=1..},tag=!Dialogue178] unless entity @e[x=-2590,y=69,z=-29,dy=3,type=cobblemon:npc] run npcspawnat -2590 69 -29 petalburg_matt
 
+execute as @s[x=-2590,y=69,z=-29,distance=..10,scores={GameVersion=1,PokemonLeague=1..},tag=!Dialogue177] run opendialogue courtney_dialogue177 @s
+execute as @s[x=-2590,y=69,z=-29,distance=..10,scores={GameVersion=2,PokemonLeague=1..},tag=!Dialogue177] run opendialogue matt_dialogue177 @s
 
-
-
-
+#Dialogue 179 - Rustboro Steven after player gets a call
+execute as @s[x=-2722,y=69,z=-676,distance=..30,tag=Dialogue177,tag=!Dialogue179] unless entity @e[x=-2757,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2757 69 -704 steven_generic
+execute as @s[x=-2757,y=69,z=-704,distance=..10,tag=Dialogue177,tag=!Dialogue179] run opendialogue steven_dialogue179 @s
 
 
 

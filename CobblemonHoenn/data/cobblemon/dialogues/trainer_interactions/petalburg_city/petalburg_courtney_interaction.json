@@ -1,11 +1,7 @@
 {
     "initializationAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 13');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
     ],
     "escapeAction": [
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.dialogue.close();"
     ],
     "names": [
@@ -25,7 +21,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                ""
+                "Give me... the Key Stone!"
             ],
             "input": {
                 "type": "option",
@@ -38,15 +34,6 @@
                             "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
                             "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
                             "v.battle = q.npc.start_battle(q.player);"
-                        ]
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-                            "q.dialogue.close();"
                         ]
                     }
                 ]

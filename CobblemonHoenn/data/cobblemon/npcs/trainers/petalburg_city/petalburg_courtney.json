@@ -1,18 +1,18 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:matt",
+    "resourceIdentifier": "cobblemon:courtney",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:aqua_admin_matt_interaction"
+        "dialogue": "cobblemon:petalburg_courtney_interaction"
     },
-    "name": "Matt",
+    "name": "Courtney",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Sharpedo level=53"
+            "Camerupt level=53"
         ]
     },
     "config": [
@@ -35,7 +35,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue aqua_admin_matt_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue petalburg_courtney_end @s');"
         }
     ]
 }

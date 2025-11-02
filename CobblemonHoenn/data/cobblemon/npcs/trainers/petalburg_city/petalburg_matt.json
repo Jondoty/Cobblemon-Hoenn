@@ -1,18 +1,18 @@
 {
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:teammagmagruntm",
+    "resourceIdentifier": "cobblemon:matt",
     "presets": [
         "cobblemon:trainer_basics"
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:magma_admin_courtney_interaction"
+        "dialogue": "cobblemon:petalburg_matt_interaction"
     },
-    "name": "Courtney",
+    "name": "Matt",
     "party": {
         "type": "simple",
         "pokemon": [
-            "Camerupt level=53"
+            "Sharpedo level=53"
         ]
     },
     "config": [
@@ -35,7 +35,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue magma_admin_courtney_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue petalburg_matt_end @s');"
         }
     ]
 }
