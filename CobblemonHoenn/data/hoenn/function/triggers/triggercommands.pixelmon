@@ -99,96 +99,6 @@ execute as @s[scores={TriggerCommand=38}] run tellraw @s {"text":"You drive a ha
 
 
 
-#-----------------------------------------------------------------------------------------------------
-#Johto Starters
-
-#Chikorita
-execute as @s[scores={TriggerCommand=50},tag=!JohtoStarter] run tellraw @s {"text":"You chose Chikorita!"}
-execute as @s[scores={TriggerCommand=50},tag=!JohtoStarter] run pokegive Chikorita lvl:5
-execute as @s[scores={TriggerCommand=50}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=50}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch2Initiate] remove Birch2Initiate
-execute as @s[scores={TriggerCommand=50}] run scoreboard players set @s DialogueTrigger 172
-execute as @s[scores={TriggerCommand=50},tag=!JohtoStarter] run tag @s add JohtoStarter
-
-#Cyndaquil
-execute as @s[scores={TriggerCommand=51},tag=!JohtoStarter] run tellraw @s {"text":"You chose Cyndaquil!"}
-execute as @s[scores={TriggerCommand=51},tag=!JohtoStarter] run pokegive Cyndaquil lvl:5
-execute as @s[scores={TriggerCommand=51}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=51}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch2Initiate] remove Birch2Initiate
-execute as @s[scores={TriggerCommand=51}] run scoreboard players set @s DialogueTrigger 172
-execute as @s[scores={TriggerCommand=51},tag=!JohtoStarter] run tag @s add JohtoStarter
-
-#Totodile
-execute as @s[scores={TriggerCommand=52},tag=!JohtoStarter] run tellraw @s {"text":"You chose Totodile!"}
-execute as @s[scores={TriggerCommand=52},tag=!JohtoStarter] run pokegive Totodile lvl:5
-execute as @s[scores={TriggerCommand=52}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=52}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch2Initiate] remove Birch2Initiate
-execute as @s[scores={TriggerCommand=52}] run scoreboard players set @s DialogueTrigger 172
-execute as @s[scores={TriggerCommand=52},tag=!JohtoStarter] run tag @s add JohtoStarter
-
-#-----------------------------------------------------------------------------------------------------
-#Sinnoh Starters
-
-#Turtwig
-execute as @s[scores={TriggerCommand=53},tag=!SinnohStarter] run tellraw @s {"text":"You chose Turtwig!"}
-execute as @s[scores={TriggerCommand=53},tag=!SinnohStarter] run pokegive Turtwig lvl:5
-execute as @s[scores={TriggerCommand=53}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=53}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch4Initiate] remove Birch4Initiate
-execute as @s[scores={TriggerCommand=53}] run scoreboard players set @s DialogueTrigger 176
-execute as @s[scores={TriggerCommand=53},tag=!SinnohStarter] run tag @s add SinnohStarter
-
-#Chimchar
-execute as @s[scores={TriggerCommand=54},tag=!SinnohStarter] run tellraw @s {"text":"You chose Chimchar!"}
-execute as @s[scores={TriggerCommand=54},tag=!SinnohStarter] run pokegive Chimchar lvl:5
-execute as @s[scores={TriggerCommand=54}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=54}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch4Initiate] remove Birch4Initiate
-execute as @s[scores={TriggerCommand=54}] run scoreboard players set @s DialogueTrigger 176
-execute as @s[scores={TriggerCommand=54},tag=!SinnohStarter] run tag @s add SinnohStarter
-
-#Piplup
-execute as @s[scores={TriggerCommand=55},tag=!SinnohStarter] run tellraw @s {"text":"You chose Piplup!"}
-execute as @s[scores={TriggerCommand=55},tag=!SinnohStarter] run pokegive Piplup lvl:5
-execute as @s[scores={TriggerCommand=55}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=55}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch4Initiate] remove Birch4Initiate
-execute as @s[scores={TriggerCommand=55}] run scoreboard players set @s DialogueTrigger 176
-execute as @s[scores={TriggerCommand=55},tag=!SinnohStarter] run tag @s add SinnohStarter
-
-#-----------------------------------------------------------------------------------------------------
-#Unova  Starters
-
-#Snivy
-execute as @s[scores={TriggerCommand=56},tag=!UnovaStarter] run tellraw @s {"text":"You chose Snivy!"}
-execute as @s[scores={TriggerCommand=56},tag=!UnovaStarter] run pokegive Snivy lvl:5
-execute as @s[scores={TriggerCommand=56}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=56}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch3Initiate] remove Birch3Initiate
-execute as @s[scores={TriggerCommand=56}] run scoreboard players set @s DialogueTrigger 174
-execute as @s[scores={TriggerCommand=56},tag=!UnovaStarter] run tag @s add UnovaStarter
-
-#Tepig
-execute as @s[scores={TriggerCommand=57},tag=!UnovaStarter] run tellraw @s {"text":"You chose Tepig!"}
-execute as @s[scores={TriggerCommand=57},tag=!UnovaStarter] run pokegive Tepig lvl:5
-execute as @s[scores={TriggerCommand=57}] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=57}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch3Initiate] remove Birch3Initiate
-execute as @s[scores={TriggerCommand=57}] run scoreboard players set @s DialogueTrigger 174
-execute as @s[scores={TriggerCommand=57},tag=!UnovaStarter] run tag @s add UnovaStarter
-
-#Oshawott
-execute as @s[scores={TriggerCommand=58},tag=!UnovaStarter] run tp @s -2038 69 232 134 7
-execute as @s[scores={TriggerCommand=58},tag=!UnovaStarter] run tellraw @s {"text":"You chose Oshawott!"}
-execute as @s[scores={TriggerCommand=58}] run pokegive Oshawott lvl:5
-execute as @s[scores={TriggerCommand=58}] run tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch3Initiate] remove Birch3Initiate
-execute as @s[scores={TriggerCommand=58}] run scoreboard players set @s DialogueTrigger 174
-execute as @s[scores={TriggerCommand=58},tag=!UnovaStarter] run tag @s add UnovaStarter
-
-#-----------------------------------------------------------------------------------------------------
-#Ran by the Taillow in the lobby to verify the player has trainer commands to continue
-execute as @s[scores={TriggerCommand=59}] run tag @e[x=-2070,y=65,z=1410,dy=3,type=minecraft:armor_stand] add TrainerCommandConfirm
-execute as @s[scores={TriggerCommand=59}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=59}] run tellraw @s {"text":"<Taillow> Trainer Commands confirmed, you are good to go!"}
-
-#Resource pack explanation & link
-execute as @s[scores={TriggerCommand=60}] run tellraw @s ["",{"text":"[","italic":true,"color":"gray"},{"text":"Click Here","italic":true,"color":"aqua","clickEvent":{"action":"open_url","value":"http://hoenn.jond.tv"}},{"text":"] to download.\n[","italic":true,"color":"gray"},{"text":"Learn More","italic":true,"color":"yellow","clickEvent":{"action":"open_url","value":"https://minecraft.fandom.com/wiki/Tutorials/Loading_a_resource_pack"}},{"text":"] about how to enable a Resource Pack.","italic":true,"color":"gray"}]
-
 #61 used
 
 #-----------------------------------------------------------------------------------------------------
@@ -350,39 +260,6 @@ execute as @s[scores={TriggerCommand=1006,Soot=1000..}] run playsound pixelmon:p
 execute as @s[scores={TriggerCommand=1006,Soot=1000..}] run give @s pixelmon:white_flute
 execute as @s[scores={TriggerCommand=1006,Soot=1000..}] run scoreboard players remove @s Soot 1000
 
-#-----------------------------------------------------------------------------------------------------
-#Shard Guy trading for Stones
-execute as @s[scores={TriggerCommand=1010..1014}] run scoreboard players enable @s TriggerCommand
-
-execute as @s[scores={TriggerCommand=1010}] run tellraw @s {"text":"<Treasure Hunter> Oh hey! That... That's a shard! I'm looking for those! Oh, man, you've got to trade that to me! I'll give you something good!"}
-execute as @s[scores={TriggerCommand=1010},nbt={Inventory:[{id:"pixelmon:red_shard"}]}] run tellraw @s ["",{"text":"["},{"text":"Trade a ","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1011"}},{"text":"Red Shard","color":"red","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1011"}},{"text":"]"}]
-execute as @s[scores={TriggerCommand=1010},nbt={Inventory:[{id:"pixelmon:yellow_shard"}]}] run tellraw @s ["",{"text":"["},{"text":"Trade a ","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1012"}},{"text":"Yellow Shard","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1012"}},{"text":"]"}]
-execute as @s[scores={TriggerCommand=1010},nbt={Inventory:[{id:"pixelmon:blue_shard"}]}] run tellraw @s ["",{"text":"["},{"text":"Trade a ","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1013"}},{"text":"Blue Shard","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1013"}},{"text":"]"}]
-execute as @s[scores={TriggerCommand=1010},nbt={Inventory:[{id:"pixelmon:green_shard"}]}] run tellraw @s ["",{"text":"["},{"text":"Trade a ","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1014"}},{"text":"Green Shard","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 1014"}},{"text":"]"}]
-
-#Trade a Red Shard
-execute as @s[scores={TriggerCommand=1011},nbt={Inventory:[{id:"pixelmon:red_shard"}]}] run tellraw @s {"text":"<Treasure Hunter> It's a done deal! Use that wisely!"}
-execute as @s[scores={TriggerCommand=1011},nbt={Inventory:[{id:"pixelmon:red_shard"}]}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=1011},nbt={Inventory:[{id:"pixelmon:red_shard"}]}] run give @s pixelmon:fire_stone 1
-execute as @s[scores={TriggerCommand=1011},nbt={Inventory:[{id:"pixelmon:red_shard"}]}] run clear @s pixelmon:red_shard 1
-
-#Trade a Yellow Shard
-execute as @s[scores={TriggerCommand=1012},nbt={Inventory:[{id:"pixelmon:yellow_shard"}]}] run tellraw @s {"text":"<Treasure Hunter> It's a done deal! Use that wisely!"}
-execute as @s[scores={TriggerCommand=1012},nbt={Inventory:[{id:"pixelmon:yellow_shard"}]}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=1012},nbt={Inventory:[{id:"pixelmon:yellow_shard"}]}] run give @s pixelmon:thunder_stone 1
-execute as @s[scores={TriggerCommand=1012},nbt={Inventory:[{id:"pixelmon:yellow_shard"}]}] run clear @s pixelmon:yellow_shard 1
-
-#Trade a Blue Shard
-execute as @s[scores={TriggerCommand=1013},nbt={Inventory:[{id:"pixelmon:blue_shard"}]}] run tellraw @s {"text":"<Treasure Hunter> It's a done deal! Use that wisely!"}
-execute as @s[scores={TriggerCommand=1013},nbt={Inventory:[{id:"pixelmon:blue_shard"}]}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=1013},nbt={Inventory:[{id:"pixelmon:blue_shard"}]}] run give @s pixelmon:water_stone 1
-execute as @s[scores={TriggerCommand=1013},nbt={Inventory:[{id:"pixelmon:blue_shard"}]}] run clear @s pixelmon:blue_shard 1
-
-#Trade a Green Shard
-execute as @s[scores={TriggerCommand=1014},nbt={Inventory:[{id:"pixelmon:green_shard"}]}] run tellraw @s {"text":"<Treasure Hunter> It's a done deal! Use that wisely!"}
-execute as @s[scores={TriggerCommand=1014},nbt={Inventory:[{id:"pixelmon:green_shard"}]}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={TriggerCommand=1014},nbt={Inventory:[{id:"pixelmon:green_shard"}]}] run give @s pixelmon:leaf_stone 1
-execute as @s[scores={TriggerCommand=1014},nbt={Inventory:[{id:"pixelmon:green_shard"}]}] run clear @s pixelmon:green_shard 1
 
 #-----------------------------------------------------------------------------------------------------
 
