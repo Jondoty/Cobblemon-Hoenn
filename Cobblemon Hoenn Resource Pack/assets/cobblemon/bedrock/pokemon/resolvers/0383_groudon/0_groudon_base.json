@@ -20,7 +20,7 @@
       "aspects": [
         "statue"
       ],
-      "texture": "minecraft:textures/block/world/rock.png"
+      "texture": "minecraft:textures/block/world/stone.png"
     }
   ]
 }

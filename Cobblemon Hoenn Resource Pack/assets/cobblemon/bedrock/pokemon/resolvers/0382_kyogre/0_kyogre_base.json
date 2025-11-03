@@ -34,12 +34,12 @@
       "aspects": [
         "statue"
       ],
-      "texture": "minecraft:textures/block/world/rock.png",
+      "texture": "minecraft:textures/block/world/stone.png",
       "layers": [
         {
           "name": "emissive",
           "emissive": false,
-          "texture": "minecraft:textures/block/world/rock.png",
+          "texture": "minecraft:textures/block/world/stone.png",
           "translucent": false
         }
       ]
