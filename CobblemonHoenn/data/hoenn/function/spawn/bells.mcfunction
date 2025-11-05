@@ -1,0 +1,2 @@
+give @s music_disc_otherside[!minecraft:jukebox_playable,custom_name='["",{"text":"Clear Bell","italic":false,"color":"red"}]',lore=['["",{"text":"A very old-fashioned bell ","italic":false}]','[{"text":"that makes a gentle ringing sound. ","italic":false}]']]
+give @s music_disc_relic[!minecraft:jukebox_playable,custom_name='["",{"text":"Tidal Bell","italic":false,"color":"dark_aqua"}]',lore=['["",{"text":"A very old-fashioned bell ","italic":false}]','[{"text":"that makes a gentle ringing sound. ","italic":false}]']]
