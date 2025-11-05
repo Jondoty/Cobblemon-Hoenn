@@ -476,7 +476,19 @@ scoreboard players set @s[scores={DialogueTrigger=166},tag=Dialogue166] Dialogue
 
 
 
+#-----------------------------------------------------------------------------------------------------
+#Dialogue 216 - New Mauville
+#Player pressing button(s) in New Mauville
+tellraw @s[scores={DialogueTrigger=216,TalkTime=1}] {"text":"<Computer> WELCOME. THIS IS THE NEW MAUVILLE MANAGEMENT SYSTEM."}
+tellraw @s[scores={DialogueTrigger=216,TalkTime=8}] {"text":"<Computer> SURVEILLANCE OF NEW MAUVILLE BEGINS. ..."}
+tellraw @s[scores={DialogueTrigger=216,TalkTime=16}] {"text":"<Computer> SURVEILLANCE COMPLETE. SECURITY CONFIRMED."}
+tellraw @s[scores={DialogueTrigger=216,TalkTime=24}] {"text":"<Computer> NO UNUSUAL ACTIVITY NOTED IN NEW MAUVILLE."}
+tellraw @s[scores={DialogueTrigger=216,TalkTime=32}] {"text":"<Computer> TRANSMITTING THE SURVEILLANCE RESULT..."}
 
+
+tag @s[scores={DialogueTrigger=216,TalkTime=32..}] add Dialogue216
+scoreboard players set @s[scores={DialogueTrigger=216},tag=Dialogue216] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=216},tag=Dialogue216] DialogueTrigger 0
 
 
 

@@ -2416,29 +2416,7 @@ tellraw @s[scores={DialogueTrigger=210,TalkTime=114}] {"text":"<Mom> I wish he c
 tellraw @s[scores={DialogueTrigger=210,TalkTime=122}] {"text":"<Mom> But I love him just the way he is..."}
 
 tag @s[scores={DialogueTrigger=210,TalkTime=122..}] add Dialogue210
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 211 - Mauville City
-#Wattson New Mauville first talk
-#https://youtu.be/MgkqxXCmrtI?t=73422
-#Accessible after the primals are caught/defeated, tag 149
 
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] ["",{"text":"<Wattson> Oh, ' + q.player.username + ', eh?"}]
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> You got here just in time to give me a hand and take a look at this."}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> This is Square Tower, an attraction here in Mauville City."}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> It's not just for decoration, though. It has a purpose."}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> It's monitoring how things are going in a place near here called New Mauville."}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> To put it simply, it's a watchtower."}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> The light's shining brightly now, see?"}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> It's warning us that something out of the ordinary may be going on in New Mauville."}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] ["",{"text":"<Wattson> I've got something to ask of you, ' + q.player.username + '."}]
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> If we're going to keep standing around talking, could I get you to come to my place?"}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> I've got an apartment on the second floor at Mauville Hills."}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Wattson> I'll let the security guy know, so how about you grab the elevator on the first floor?"}
-tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] ["",{"text":"<Wattson> I sure am sorry to put you out like this, ' + q.player.username + ', but please do come."}]
-
-#Wattson teleports out
-
-tag @s[scores={DialogueTrigger=211,TalkTime=100..}] add Dialogue211
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 212 - Mauville City
 #After Rotation Battle
@@ -2458,30 +2436,7 @@ tellraw @s[scores={DialogueTrigger=212,TalkTime=1}] {"text":"<Circie> You go and
 #https://youtu.be/MgkqxXCmrtI?t=73917
 
 tag @s[scores={DialogueTrigger=212,TalkTime=100..}] add Dialogue212
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 213 - Mauville City
-#Wattson's Apartment
 
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] ["",{"text":"<Wattson> Oh, ' + q.player.username + ', you made it!"}]
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> I'm sure sorry to call you all the way out here."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> Well, I've got a favor I need done right away."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> I've mentioned this before, but that bright, flashing light on top of that tower means something may have happened in New Mauville!"}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> That's why I called you here."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> I want you to go check on things in New Mauville."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> There's just one thing, though."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> New Mauville is usually a prohibited area."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> Back in my day, it was just locked up normally, but security has been evolving, too!"}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> Don't you go anywhere just yet..."}
-#Flash in the player's eyes
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> Hey, thanks! I just took a picture of your eyes."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> Now if we just use the computer to transmit this data..."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> Now if you go to New Mauville, the doors will open automatically!"}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> The Basement Key has what they call \"iris recognition.\""}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> When you get inside, go press the button on the computer in the back."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> When that computer starts working right, come back here and report to me."}
-tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Wattson> I sure am sorry to bug you with all this, but I'm really counting on you!"}
-
-tag @s[scores={DialogueTrigger=213,TalkTime=100..}] add Dialogue213
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 214 - Mauville City
 #Apt 12, A Frightened Man's Home
@@ -2516,34 +2471,7 @@ tellraw @s[scores={DialogueTrigger=215,TalkTime=1}] {"text":"<...> I got it as s
 tellraw @s[scores={DialogueTrigger=215,TalkTime=1}] {"text":"<...> A Pokémon would be miserable if it bonded with such a fool and Mega Evolved."}
 
 tag @s[scores={DialogueTrigger=215,TalkTime=100..}] add Dialogue215
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 216 - New Mauville
-#Player pressing button(s) in New Mauville
-tellraw @s[scores={DialogueTrigger=216,TalkTime=1}] {"text":"<Computer> WELCOME. THIS IS THE NEW MAUVILLE MANAGEMENT SYSTEM. SURVEILLANCE OF NEW MAUVILLE BEGINS. ..."}
-tellraw @s[scores={DialogueTrigger=216,TalkTime=1}] {"text":"<Computer> SURVEILLANCE COMPLETE. SECURITY CONFIRMED. NO UNUSUAL ACTIVITY NOTED IN NEW MAUVILLE."}
-tellraw @s[scores={DialogueTrigger=216,TalkTime=1}] {"text":"<Computer> TRANSMITTING THE SURVEILLANCE RESULT..."}
 
-tag @s[scores={DialogueTrigger=216,TalkTime=100..}] add Dialogue216
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 217 - Mauville City
-#Wattson after button was pressed
-#https://youtu.be/MgkqxXCmrtI?t=74770
-
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] ["",{"text":"<Wattson> Oh, ' + q.player.username + '! Sorry to make you come all this way. You went out to New Mauville, right?"}]
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> The results of your investigation have been sent here to my computer, too."}
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> The most important thing is that there don't appear to be any abnormalities for the time being."}
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> Let me give you this as a way to say sorry for causing you such a hassle."}
-
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained TM24 Thunderbolt!","italic":true,"color":"gray"}]
-
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> By the way, there wasn't anything going on in New Mauville, right?"}
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> That was supposed to be a new town, though..."}
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> We should've been able to build a huge underground city stretching down into the depths."}
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> Things happened, and its development had to be suspended."}
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> Since then it's just been left to rot."}
-tellraw @s[scores={DialogueTrigger=217,TalkTime=1}] {"text":"<Wattson> All the equipment inside might have seen better days."}
-
-tag @s[scores={DialogueTrigger=217,TalkTime=100..}] add Dialogue217
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 218 - Slateport City
 #If player has the scanner in their inventory
@@ -2624,48 +2552,7 @@ execute as @s[scores={DialogueTrigger=221,TalkTime=10}] run tellraw @s ["",{"tex
 #[Yes]
 
 tag @s[scores={DialogueTrigger=221,TalkTime=100..}] add Dialogue221
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 222 - Scorched Slab
-#Flannery Post-Legendary
-#https://youtu.be/MgkqxXCmrtI?t=78387
 
-tellraw @s[scores={DialogueTrigger=222,TalkTime=1}] {"text":"<Flannery> Haiyaaaaaaaaa!"}
-tellraw @s[scores={DialogueTrigger=222,TalkTime=1}] {"text":"<Flannery> Ugh... It might be impossible."}
-#summon exclamation
-tellraw @s[scores={DialogueTrigger=222,TalkTime=1}] {"text":"<Flannery> Waaaaah!!"}
-tellraw @s[scores={DialogueTrigger=222,TalkTime=1}] {"text":"<Flannery> D-d-don't scare me like that!"}
-tellraw @s[scores={DialogueTrigger=222,TalkTime=1}] {"text":"<Flannery> You scared the living daylights out of me!"}
-tellraw @s[scores={DialogueTrigger=222,TalkTime=1}] {"text":"<Flannery> Hah... Anyway... By any chance did you come here to look for the rare Pokémon, too?"}
-#[Yes]  [No]
-
-
-tag @s[scores={DialogueTrigger=222,TalkTime=100..}] add Dialogue222
-#----------------------
-#Dialogue 223
-#Flannery Answer
-#Yes
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> Oh, you don't know the rumor?"}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> OK. I'll tell you, then."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> According to my grandfather, this cave long has been rumored to be the place where a rare Fire-type Pokémon lives."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> The Pokémon has a magma-like body and sharp claws..."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> But it's too dark to move forward from here without Flash."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> It's a bit scary. You know, in a pitch-black place like this, if something falls from the ceiling, you can't tell what it is..."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> Eww. I'm thinking about going back to Lavaridge and coming back better prepared."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> So I'm leaving now, but if you go farther, please be careful!"}
-
-#tp Flannery out
-
-#No
-#Dialogue 224
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> You, too... Oh, I see."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> As you may have heard, this cave has long been rumored to be the place where a rare Fire-type Pokémon lives."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> That's why I came here. But I guess I was a bit ill prepared..."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> I was just thinking about going back to Lavaridge and coming back later."}
-tellraw @s[scores={DialogueTrigger=223,TalkTime=1}] {"text":"<Flannery> So I'm leaving now, but if you go farther, please be careful!"}
-
-#tp Flannery out
-
-tag @s[scores={DialogueTrigger=223,TalkTime=100..}] add Dialogue223
 
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 229 - Sealed Chamber

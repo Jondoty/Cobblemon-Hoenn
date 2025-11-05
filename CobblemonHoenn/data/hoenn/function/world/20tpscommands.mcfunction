@@ -247,4 +247,8 @@ execute as @a[x=-569,y=83,z=-1427,dx=13,dy=8,dz=8,tag=!Dialogue116] run fill -56
 #Slateport Route 134 Rapids
 execute as @a[x=-1331,y=0,z=177,dx=43,dy=150,dz=63] at @s run tp @s ~-1 ~ ~
 
+#New Mauville blocked until granted access by Wattson
+execute as @a[x=-1373,y=43,z=-345,dx=12,dy=7,dz=5,tag=!Dialogue213] run tellraw @s {"text":"Computer: IRIS RECOGNITION START... RECOGNITION ERROR. ACCESS LIMITED TO AUTHORIZED PERSONNEL OF NEW MAUVILLE."}
+execute as @a[x=-1373,y=43,z=-345,dx=12,dy=7,dz=5,tag=!Dialogue213] at @s run tp @s ~ ~ ~4
+
 #

@@ -711,6 +711,27 @@ execute as @s[x=-2029,y=69,z=254,distance=..12,tag=Dialogue172,tag=Dialogue209,t
 #Professor Birch giving Sinnoh starters post-Delta Episode & beating the elite four a second time
 execute as @s[x=-2029,y=69,z=254,distance=..12,scores={PokemonLeague=2..},tag=Dialogue174,tag=Dialogue209,tag=!Dialogue175] run opendialogue birch_dialogue175 @s
 
+
+#Dialogue 211 Mauville Wattson, after dealing with the primals starting New Mauville questline
+execute as @s[x=-1533,y=69,z=-593,distance=..50,tag=Dialogue149,tag=!Dialogue211] unless entity @e[x=-1533,y=69,z=-593,dy=3,type=cobblemon:npc] run npcspawnat -1533 69 -593 wattson_generic
+execute as @s[x=-1533,y=69,z=-593,distance=..7,tag=Dialogue149,tag=!Dialogue211] run opendialogue wattson_dialogue211 @s
+
+#Dialogue 212, Mauville Wattson follow-up, getting access to New Mauville
+execute as @s[x=2753,y=85,z=2884,distance=..6,tag=!Dialogue213] run opendialogue wattson_dialogue213 @s
+
+#Dialogue 216 - New Mauville pressing any buttons
+execute if block -1368 45 -385 stone_button[powered=true] run scoreboard players set @p[x=-1367,y=44,z=-385,distance=..10,tag=!Dialogue216] DialogueTrigger 216
+execute if block -1367 45 -385 stone_button[powered=true] run scoreboard players set @p[x=-1367,y=44,z=-385,distance=..10,tag=!Dialogue216] DialogueTrigger 216
+execute if block -1366 45 -385 stone_button[powered=true] run scoreboard players set @p[x=-1367,y=44,z=-385,distance=..10,tag=!Dialogue216] DialogueTrigger 216
+
+#Dialogue 217, Mauville Wattson, after resetting system
+execute as @s[x=2753,y=85,z=2884,distance=..6,tag=Dialogue216,tag=!Dialogue217] run opendialogue wattson_dialogue217 @s
+
+
+#Dialogue 222 - Flannery post-legendary, pre-Heatran Scorched Slab
+execute as @s[x=1570,y=110,z=-2411,distance=..10,tag=Dialogue149,tag=!Dialogue211] unless entity @e[x=1636,y=108,z=-2402,dy=3,type=cobblemon:npc] run npcspawnat 1636 108 -2402 flannery_generic
+execute as @s[x=1636,y=108,z=-2402,distance=..10,tag=Dialogue149,tag=!Dialogue211] run opendialogue flannery_dialogue222 @s
+
 #-----------------------------------------------------------------------------------------------------
 #Legendary Spawns
 #Static spawns on the overworld

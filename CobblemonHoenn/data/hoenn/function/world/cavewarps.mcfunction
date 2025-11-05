@@ -3,8 +3,37 @@
 #tp @a[x=,y=,z=,dx=2,dy=3,dz=2]
 #tp @a[x=,y=,z=,dx=2,dy=8,dz=2]
 
+
+
 #-------------------------------------------------------------------------
 #Mauville City
+
+#Mauville Elevators, pre and post Wattson authorization
+#North Right Elevator
+execute if block 2770 66 2710 stone_button[powered=true] run tellraw @p[x=2770,y=66,z=2710,distance=..10,tag=!Dialogue211] {"text":"Computer: ...AUTHORIZATION ERROR. THIS IS AN ELEVATOR FOR MAUVILLE HILLS TENANTS ONLY."}
+execute if block 2770 66 2710 stone_button[powered=true] run tellraw @p[x=2770,y=66,z=2710,distance=..10,tag=Dialogue211,tag=!FirstElevatorRide] ["",{"text":"WE'VE BEEN EXPECTING YOU, "},{"selector":"@s"},{"text":". YOUR AUTHORIZATION HAS BEEN PROCESSED. WELCOME TO MAUVILLE HILLS."}]
+execute if block 2770 66 2710 stone_button[powered=true] run tag @p[x=2770,y=66,z=2710,distance=..10,tag=Dialogue211,tag=!FirstElevatorRide] add FirstElevatorRide
+execute if block 2770 66 2710 stone_button[powered=true] run tp @p[x=2770,y=66,z=2710,distance=..10,tag=Dialogue211] 2767 85 2717
+execute if block 2770 66 2710 stone_button[powered=true] run setblock 2770 66 2710 stone_button[powered=false,facing=south]
+
+#North Left Elevator
+execute if block 2647 66 2710 stone_button[powered=true] run tellraw @p[x=2647,y=66,z=2710,distance=..10,tag=!Dialogue211] {"text":"Computer: ...AUTHORIZATION ERROR. THIS IS AN ELEVATOR FOR MAUVILLE HILLS TENANTS ONLY."}
+execute if block 2647 66 2710 stone_button[powered=true] run tellraw @p[x=2647,y=66,z=2710,distance=..10,tag=Dialogue211,tag=!FirstElevatorRide] ["",{"text":"WE'VE BEEN EXPECTING YOU, "},{"selector":"@s"},{"text":". YOUR AUTHORIZATION HAS BEEN PROCESSED. WELCOME TO MAUVILLE HILLS."}]
+execute if block 2647 66 2710 stone_button[powered=true] run tag @p[x=2647,y=66,z=2710,distance=..10,tag=Dialogue211,tag=!FirstElevatorRide] add FirstElevatorRide
+execute if block 2647 66 2710 stone_button[powered=true] run tp @p[x=2647,y=66,z=2710,distance=..10,tag=Dialogue211] 2644 85 2717
+execute if block 2647 66 2710 stone_button[powered=true] run setblock 2647 66 2710 stone_button[powered=false,facing=south]
+
+#Return Elevators
+
+#Northright
+execute if block 2769 86 2713 stone_button[powered=true] run tp @p[x=2769,y=86,z=2713,distance=..10] 2768 65 2713
+execute if block 2769 86 2713 stone_button[powered=true] run setblock 2769 86 2713 stone_button[powered=false,facing=south]
+
+#Northleft
+execute if block 2646 86 2713 stone_button[powered=true] run tp @p[x=2646,y=86,z=2713,distance=..10] 2645 65 2713
+execute if block 2646 86 2713 stone_button[powered=true] run setblock 2646 86 2713 stone_button[powered=false,facing=south]
+
+
 
 #Northwest to Roof
 tp @a[x=2568,y=94,z=2700,dx=14,dy=10,dz=14] -1611 133 -682 -90 ~

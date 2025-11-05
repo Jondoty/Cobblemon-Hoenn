@@ -67,6 +67,7 @@ tag @s remove MuseumGrunt1
 tag @s remove MuseumGrunt2
 tag @s remove HarborGrunt1
 tag @s remove HarborGrunt2
+tag @s remove FirstElevatorRide
 
 
 #Removes Mega Stone Fount tags
