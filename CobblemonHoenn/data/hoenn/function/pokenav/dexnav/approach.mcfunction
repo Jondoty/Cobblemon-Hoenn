@@ -19,8 +19,8 @@ execute if entity @a[distance=3..6,scores={StepCounter=1..}] run tag @s remove A
 
 #execute if entity @a[distance=..3,scores={StepCounter=0}] run pokespawn Tyrogue s
 
-execute if entity @a[distance=..3,scores={StepCounter=0}] run function hoenn:pokenav/dexnav/trigger
-
+execute if entity @a[distance=..3,scores={StepCounter=0},tag=!NatDex] run function hoenn:pokenav/dexnav/trigger
+execute if entity @a[distance=..3,scores={StepCounter=0},tag=NatDex] run function hoenn:pokenav/dexnav/triggernational
 
 
 
