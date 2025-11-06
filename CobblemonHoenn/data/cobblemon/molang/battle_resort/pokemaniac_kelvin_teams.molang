@@ -1,0 +1,12 @@
+t.constants = 'nature=hardy level=60';
+
+t.1 = 'Rhyperior ' + t.constants;
+t.2 = 'Nidoking ' + t.constants;
+t.3 = 'Mamoswine ' + t.constants;
+t.4 = 'Hippowdon ' + t.constants;
+t.5 = 'Nidoqueen ' + t.constants;
+t.6 = 'Gastrodon sea=west ' + t.constants;
+t.7 = 'Garchomp ' + t.constants;
+
+loop(4, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7);
+ q.party.add_by_properties(t.result)});

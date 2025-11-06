@@ -1,0 +1,12 @@
+t.constants = 'nature=hardy level=60';
+
+t.1 = 'Whimsicott ' + t.constants;
+t.2 = 'Wigglytuff ' + t.constants;
+t.3 = 'Slurpuff ' + t.constants;
+t.4 = 'Granbull ' + t.constants;
+t.5 = 'Aromatisse ' + t.constants;
+t.6 = 'Azumarill ' + t.constants;
+t.7 = 'Florges flower=red ' + t.constants;
+
+loop(4, { t.result = q.random(t.1, t.2, t.3, t.4, t.5, t.6, t.7);
+ q.party.add_by_properties(t.result)});

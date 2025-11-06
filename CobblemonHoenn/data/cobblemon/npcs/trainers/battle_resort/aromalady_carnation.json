@@ -1,0 +1,44 @@
+{
+  "resourceIdentifier": "cobblemon:aromalady",    
+  "names": [
+    "Carnation"
+  ],
+  "presets": [
+    "cobblemon:trainer_basics"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:aromalady_carnation_interaction"
+  },
+  "HideNPCNameTag": 1,
+  "skill": 5,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:aromalady_carnation_teams",
+    "isStatic": false
+  },
+
+  "config": [
+    {
+        "variableName": "challenge_cooldown",
+        "displayName": "Cooldown",
+        "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+        "type": "NUMBER",
+        "defaultValue": "0"
+    },
+    {
+        "variableName": "can_rechallenge",
+        "displayName": "Rechallenging",
+        "description": "This NPC can be battled multiple times.",
+        "type": "BOOLEAN",
+        "defaultValue": true
+    },
+    {
+        "variableName": "on_player_wins",
+        "displayName": "npc.variable.on_player_wins.name",
+        "description": "npc.variable.on_player_wins.desc",
+        "type": "TEXT",
+        "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue aromalady_carnation_end @s');"
+      }
+]
+}

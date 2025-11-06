@@ -1,0 +1,89 @@
+{
+    "initializationAction": [
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 6');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
+    ],
+    "escapeAction": [
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "The blue sea and the white beach... What a lovely place!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'd love my Fairy-type Pokémon to go wild to their heart's content."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Would you care to help me?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
+                        "value": "battle",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
