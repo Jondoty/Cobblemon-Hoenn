@@ -1,0 +1,1929 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "lass": {
+            "name": "     ",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:lady",
+                "isLeftSide": true
+            }
+        },
+        "profcozmo": {
+            "name": "Professor Cozmo",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": true
+            }
+        },
+        "steven": {
+            "name": "Steven",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:steven",
+                "isLeftSide": false
+            }
+        },
+        "zinnia": {
+            "name": "Zinnia",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:zinnia",
+                "isLeftSide": true
+            }
+        },
+        "whismur": {
+            "name": "Whismur",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:whismur",
+                "isLeftSide": false
+            }
+        },
+        "system": {
+            "name": "System",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistf",
+                "isLeftSide": false
+            }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "lass",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'You must be ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "lass",
+            "lines": [
+                "Mr. Steven Stone told me he was expecting you. This way, please."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2708.86 179.00 2381.55 462.15 12.60');",
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "lass",
+            "lines": [
+                "Professor Cozmo. If I may interrupt you..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "profcozmo",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Ah, ' + q.player.username + '! Thank you for coming!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "profcozmo",
+            "lines": [
+                "And you brought the Meteorite Shard with you. Well done!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "player",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.player.username + ' handed over the Meteorite Shard to Professor Cozmo!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "steven",
+            "lines": [
+                "I was rather surprised to learn that you knew the professor."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "steven",
+            "lines": [
+                "You really do seem to make connections everywhere you go."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "steven",
+            "lines": [
+                "Now then, Professor..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "steven",
+            "lines": [
+                "Could I ask you to explain once more about the current plan?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "profcozmo",
+            "lines": [
+                "Indeed... Please come this way."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2684.81 179.63 2366.46 558.45 27.15');",
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "profcozmo",
+            "lines": [
+                "I imagine that you've heard some of the situation from President Stone already."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "profcozmo",
+            "lines": [
+                "Our current plan involves using the Infinity Energy within our rocket, combined with the life energy of humans found in Key Stones..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "profcozmo",
+            "lines": [
+                "We will start off by artificially replicating the massive energy that is triggered at the time of Mega Evolution!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "profcozmo",
+            "lines": [
+                "We will fire the energy produced from our rocket into space..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2697.40 183.37 2370.42 502.80 21.30');",
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "profcozmo",
+            "lines": [
+                "And create a \"warp hole.\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "profcozmo",
+            "lines": [
+                "By creating a warp hole in the path of the incoming meteoroid, we hope to be able to transport it somewhere far away from here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2679.58 183.37 2368.03 577.05 31.20');",
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "profcozmo",
+            "lines": [
+                "As a matter of fact, this technology already exists and has been incorporated in some of our commonly used devices."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "profcozmo",
+            "lines": [
+                "I think you know what I mean."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page20');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "profcozmo",
+            "lines": [
+                "Those panels that spin you about and then out you come, warped to another spot."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "profcozmo",
+            "lines": [
+                "I imagine you've stepped on a few such?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "steven",
+            "lines": [
+                "An audacious plan... And using such technology you would..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "steven",
+            "lines": [
+                "May I ask where exactly the asteroid will be warped to?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "profcozmo",
+            "lines": [
+                "Well. We're not entirely sure, but..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "profcozmo",
+            "lines": [
+                "We do have a device that links the warp holes."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page26');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "profcozmo",
+            "lines": [
+                "We've named it the Link Cable."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page27');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "profcozmo",
+            "lines": [
+                "But there's no need to worry. Based on our theory, we can at least guarantee that we will be sending it away from our planet."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page28');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "profcozmo",
+            "lines": [
+                "However, we've realized that we will need more energy than originally anticipated to control the Link Cable properly..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page29');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "profcozmo",
+            "lines": [
+                "I'm sorry to ask this of you, but with one more Meteorite Shard..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound theheirstoeternity record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 126');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2698.66 181.12 2383.80 955.05 25.80');",
+                            "q.run_command('particle cloud 2705 179 2377 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2705 179 2381 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=2705,y=179,z=2377,dy=3,type=cobblemon:npc] run npcspawnat 2705 179 2377 zinnia_generic');",
+                            "q.run_command('execute unless entity @e[x=2705,y=179,z=2381,dy=3,type=cobblemon:npc] run pokespawnat 2705 179 2381 whismur level=30 no_ai=yes');",
+                            "q.dialogue.set_page('page30');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "zinnia",
+            "lines": [
+                "Nice!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page31');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page31",
+            "speaker": "zinnia",
+            "lines": [
+                "So this is the heart of the famous Space Center everyone talks about!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page32');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page32",
+            "speaker": "zinnia",
+            "lines": [
+                "Pretty impressive, huh, Aster?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page33');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page33",
+            "speaker": "whismur",
+            "lines": [
+                "Mur mur mur!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2711 179 2379 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=2711,y=179,z=2379,dy=3,type=cobblemon:npc] run npcspawnat 2711 179 2379 lady_generic');",
+                            "q.dialogue.set_page('page34');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page34",
+            "speaker": "lass",
+            "lines": [
+                "Excuse me! Young lady! You can't just let yourself in here!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page35');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page35",
+            "speaker": "zinnia",
+            "lines": [
+                "Oh? Where's the harm in it? Don't be such a stick-in-the-mud! ♪"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page36');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page36",
+            "speaker": "zinnia",
+            "lines": [
+                "...Right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page37');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page37",
+            "speaker": "lass",
+            "lines": [
+                "Ugh..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2694.24 179.00 2381.20 981.15 8.70');",
+                            "q.dialogue.set_page('page38');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page38",
+            "speaker": "steven",
+            "lines": [
+                "Who...are you? You're no sightseer..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page39');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page39",
+            "speaker": "zinnia",
+            "lines": [
+                "Oh me, we do seem to keep running into one another."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page40');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page40",
+            "speaker": "zinnia",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'You are a busy trainer, ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page41');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page41",
+            "speaker": "profcozmo",
+            "lines": [
+                "Wh-who are you?! What're you doing here?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2700.90 179.00 2382.16 953.25 9.00');",
+                            "q.dialogue.set_page('page42');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page42",
+            "speaker": "zinnia",
+            "lines": [
+                "Me? I'm Zinnia."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page43');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page43",
+            "speaker": "zinnia",
+            "lines": [
+                "Just your regular ol' tourist, nothing more."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page44');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page44",
+            "speaker": "zinnia",
+            "lines": [
+                "Dreaming of taking a little trip into space... Heh."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page45');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page45",
+            "speaker": "zinnia",
+            "lines": [
+                "Oh, I seeeeee... So this is what has come of human technology and of hope and blood and sweat and tears and..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page46');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page46",
+            "speaker": "zinnia",
+            "lines": [
+                "Well, the list gets kinda long and boring. But it contains everything, huh?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page47');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47",
+            "speaker": "zinnia",
+            "lines": [
+                "I know all about it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page48');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page48",
+            "speaker": "zinnia",
+            "lines": [
+                "About just what kinda energy you're using to fuel this rocket thing..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page49');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page49",
+            "speaker": "zinnia",
+            "lines": [
+                "The abominable technology humanity first thought up 3,000 years ago..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page50');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page50",
+            "speaker": "zinnia",
+            "lines": [
+                "So you're once again planning to claim that this is best for humanity, or best for the whole darn world..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page51');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page51",
+            "speaker": "zinnia",
+            "lines": [
+                "It's a snap of your fingers to repeat the sins of the past."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page52');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page52",
+            "speaker": "zinnia",
+            "lines": [
+                "Worse, if what I overheard is true..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page53');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page53",
+            "speaker": "zinnia",
+            "lines": [
+                "This time, you're about to commit an error more abominable than before!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page54');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page54",
+            "speaker": "steven",
+            "lines": [
+                "Tell me, would you rather we sit here wringing our hands, waiting for that meteoroid to strike us?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page55');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page55",
+            "speaker": "zinnia",
+            "lines": [
+                "Ahahahaha! What's up with that?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page56');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page56",
+            "speaker": "zinnia",
+            "lines": [
+                "You're a pretty simple guy for a former Pokémon League Champion."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page57');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page57",
+            "speaker": "zinnia",
+            "lines": [
+                "Then I guess I'll hang my hopes on what our current Champion will have to say."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page58');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page58",
+            "speaker": "zinnia",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'So how about it, ' + q.player.username + '?'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page59');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page59",
+            "speaker": "zinnia",
+            "lines": [
+                "What do you think? Do you have some better idea?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "You bet I do!",
+                        "value": "youbetido",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2703.75 179.00 2379.64 -138.45 18.30');",
+                            "q.dialogue.set_page('page60');"
+                        ]
+                    },
+                    {
+                        "text": "I've got nothing...",
+                        "value": "ivegotnothing",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2703.75 179.00 2379.64 -138.45 18.30');",
+                            "q.dialogue.set_page('page62');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page60",
+            "speaker": "zinnia",
+            "lines": [
+                "Oooh! Really? Well, that's promising..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page61');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page61",
+            "speaker": "zinnia",
+            "lines": [
+                "You'll have to tell me so we can set these guys straight."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page105');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page62",
+            "speaker": "zinnia",
+            "lines": [
+                "Really? Too bad. Guess I was expecting more than I should have from you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page63');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page63",
+            "speaker": "zinnia",
+            "lines": [
+                "Hey, that's fine, though. That's pretty normal."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page105');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        
+        {
+            "id": "page105",
+            "speaker": "zinnia",
+            "lines": [
+                "Look, I'm not here to criticize the way you guys are looking at this."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page106');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page106",
+            "speaker": "zinnia",
+            "lines": [
+                "But I want to be sure you've thought this through well and good."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page107');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page107",
+            "speaker": "zinnia",
+            "lines": [
+                "You know, there are necessary sacrifices, and there are unnecessary sacrifices."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page108');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page108",
+            "speaker": "zinnia",
+            "lines": [
+                "What a disappointment!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page109');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page109",
+            "speaker": "zinnia",
+            "lines": [
+                "This is the best you could do with all your knowledge and technology?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page110');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page110",
+            "speaker": "zinnia",
+            "lines": [
+                "Instead of trying to make something outta nothing, you'd rather repeat the mistakes of the past, straight up?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page111');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page111",
+            "speaker": "zinnia",
+            "lines": [
+                "No, you're gonna add new mistakes on top—that really takes the cake."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page112');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page112",
+            "speaker": "zinnia",
+            "lines": [
+                "You guys need some imagination."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page113');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page113",
+            "speaker": "profcozmo",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page114');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page114",
+            "speaker": "zinnia",
+            "lines": [
+                "Oops! But you were all in the middle of a conversation or something, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page115');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page115",
+            "speaker": "zinnia",
+            "lines": [
+                "Sorry about that."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page116');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page116",
+            "speaker": "zinnia",
+            "lines": [
+                "I guess we'll just let ourselves out, then."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page117');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page117",
+            "speaker": "zinnia",
+            "lines": [
+                "C'mon, Aster."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page118');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page118",
+            "speaker": "whismur",
+            "lines": [
+                "Mur mur mur!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2705 179 2377 1 1 1 0.15 300');",
+                            "q.run_command('particle cloud 2705 179 2381 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=2705,y=179,z=2377,dy=5,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=2705,y=179,z=2381,dy=5,type=cobblemon:pokemon] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2706.80 179.00 2377.57 -287.25 11.10');",
+                            "q.run_command('tp @e[x=2711,y=179,z=2379,dy=5,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page119');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page119",
+            "speaker": "steven",
+            "lines": [
+                "... Who was that woman?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page120');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page120",
+            "speaker": "steven",
+            "lines": [
+                "And the way she spoke to us..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page121');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page121",
+            "speaker": "steven",
+            "lines": [
+                "It's almost as if she came here for some kind of confirmation..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page122');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page122",
+            "speaker": "steven",
+            "lines": [
+                "Ah, Professor, forgive me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page123');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page123",
+            "speaker": "steven",
+            "lines": [
+                "I believe you were trying to tell us something before that woman interrupted us?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page124');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page124",
+            "speaker": "profcozmo",
+            "lines": [
+                "Uh... Yes... Ah, you see..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page125');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page125",
+            "speaker": "profcozmo",
+            "lines": [
+                "In order to complete the warp hole, we will need another Meteorite Shard, an extremely pure one..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page126');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page126",
+            "speaker": "steven",
+            "lines": [
+                "Then should we head to Granite Cave once again?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page127');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page127",
+            "speaker": "profcozmo",
+            "lines": [
+                "No... The kind of Meteorite Shard we need this time can only be found at Meteor Falls."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2700.92 179.00 2384.70 -195.45 13.05');",
+                            "q.dialogue.set_page('page128');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page128",
+            "speaker": "steven",
+            "lines": [
+                "Meteor Falls!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page129');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page129",
+            "speaker": "steven",
+            "lines": [
+                "I see... Perhaps we will learn something there..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page130');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page130",
+            "speaker": "steven",
+            "lines": [
+                "I will head to Meteor Falls at once. Follow as soon as you are ready."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page131');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page131",
+            "speaker": "steven",
+            "lines": [
+                "I feel we might discover even more than a Meteorite Shard there..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud 2701 179 2377 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=2701,y=179,z=2377,dy=5,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue184');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+
+    ]
+}

@@ -1163,8 +1163,14 @@ tp @a[x=1607,y=84,z=-1019,dx=2,dy=3] 1608 47 -1020
 tp @a[x=1606,y=47,z=-1019,dx=3,dy=3] 1608 84 -1018
 
 #Space Center
+#Delta Episode
+tp @a[x=1723,y=104,z=-1013,dx=2,dy=3,tag=Dialogue182,tag=!Dialogue208] 2698 167 2387
+tp @a[x=2696,y=167,z=2388,dx=4,dy=3] 1724 104 -1012
+
+#Regular portal
 tp @a[x=1723,y=104,z=-1013,dx=2,dy=3] 2698 137 2387
 tp @a[x=2696,y=137,z=2388,dx=4,dy=3] 1724 104 -1012
+
 
 #Middle Left NPC Home
 tp @a[x=1427,y=74,z=-977,dx=2,dy=3] 1428 48 -978

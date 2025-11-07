@@ -685,8 +685,11 @@ execute positioned 2565 171 -2598 as @e[distance=..5,type=cobblemon:pokemon,nbt=
 execute as @s[x=2564,y=156,z=-2512,distance=..10,tag=Dialogue180,tag=!Dialogue182] unless entity @e[x=2561,y=171,z=-2598,dy=3,type=cobblemon:npc] run npcspawnat 2561 171 -2598 zinnia_granite_cave
 execute as @s[x=2563,y=170,z=-2596,distance=..7,tag=Dialogue180,tag=!Dialogue181] run opendialogue zinnia_dialogue181 @s
 
-
-
+#Dialogue 183 - Mossdeep Space Center
+execute as @s[x=2698,y=167,z=2383,distance=..10,tag=Dialogue182,tag=!Dialogue183] unless entity @e[x=2725,y=167,z=2357,dy=3,type=cobblemon:npc] run npcspawnat 2725 167 2357 lady_generic
+execute as @s[x=2698,y=167,z=2383,distance=..10,tag=Dialogue182,tag=!Dialogue183] unless entity @e[x=2701,y=179,z=2377,dy=3,type=cobblemon:npc] run npcspawnat 2701 179 2377 steven_generic
+execute as @s[x=2698,y=167,z=2383,distance=..10,tag=Dialogue182,tag=!Dialogue183] unless entity @e[x=2698,y=179,z=2382,dy=3,type=cobblemon:npc] run npcspawnat 2698 179 2382 scientist_generic
+execute as @s[x=2725,y=167,z=2357,distance=..7,tag=Dialogue182,tag=!Dialogue183] run opendialogue spacecenter_dialogue183 @s
 
 
 
