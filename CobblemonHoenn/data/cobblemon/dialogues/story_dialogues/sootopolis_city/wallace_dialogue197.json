@@ -1,11 +1,8 @@
 {
     "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $6840 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 6840');"
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
+    "escapeAction": [],
     "speakers": {
         "wallace": {
             "name": "Wallace",
@@ -15,6 +12,15 @@
                 "identifier": "cobblemon:wallace",
                 "isLeftSide": true
             }
+        },
+        "oldman": {
+            "name": "Old Man",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldman",
+                "isLeftSide": false
+            }
         }
     },
     "pages": [
@@ -22,10 +28,7 @@
             "id": "greeting",
             "speaker": "wallace",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'As I have come to expect from you, ' + q.player.username + '...'"
-                }
+                "What a...glorious turn of events..."
             ],
             "input": {
                 "type": "option",
@@ -43,9 +46,9 @@
         },
         {
             "id": "page1",
-            "speaker": "wallace",
+            "speaker": "oldman",
             "lines": [
-                "You are an excellent Pokémon Trainer."
+                "Is it really? Ohohohoho! Is it really?"
             ],
             "input": {
                 "type": "option",
@@ -65,7 +68,7 @@
             "id": "page2",
             "speaker": "wallace",
             "lines": [
-                "The Pokémon that you sent out in that battle..."
+                "To think that this tree..."
             ],
             "input": {
                 "type": "option",
@@ -85,7 +88,7 @@
             "id": "page3",
             "speaker": "wallace",
             "lines": [
-                "At times dancing as lightly as an elusive spring breeze..."
+                "I never knew we had received it from that huge man who visited from the Kalos region..."
             ],
             "input": {
                 "type": "option",
@@ -105,7 +108,7 @@
             "id": "page4",
             "speaker": "wallace",
             "lines": [
-                "Yet striking with the sudden surety of lightning from the blue."
+                "Goodness me, old master. This has been a learning experience. I thank you for this."
             ],
             "input": {
                 "type": "option",
@@ -123,9 +126,9 @@
         },
         {
             "id": "page5",
-            "speaker": "wallace",
+            "speaker": "oldman",
             "lines": [
-                "Watching you command the battle with such ease and grace..."
+                "Ohoho! You're too kind, Master Wallace! Ohohohoho!"
             ],
             "input": {
                 "type": "option",
@@ -145,7 +148,7 @@
             "id": "page6",
             "speaker": "wallace",
             "lines": [
-                "Even I might succumb to your charm."
+                "No, no, you're too modest. Hah hah hah..."
             ],
             "input": {
                 "type": "option",
@@ -165,7 +168,7 @@
             "id": "page7",
             "speaker": "wallace",
             "lines": [
-                "Now go forth. Find the truth that you seek."
+                "Now then..."
             ],
             "input": {
                 "type": "option",
@@ -185,7 +188,10 @@
             "id": "page8",
             "speaker": "wallace",
             "lines": [
-                "As one of the ancient people of Sootopolis, I cannot intrude upon this holy place."
+                {
+                    "type": "expression",
+                    "expression": "'Welcome again to Sootopolis, our new Champion, ' + q.player.username + '.'"
+                }
             ],
             "input": {
                 "type": "option",
@@ -205,7 +211,7 @@
             "id": "page9",
             "speaker": "wallace",
             "lines": [
-                "I will return to Sootopolis for now and try to lay plans in case the worst should come to pass despite all our efforts."
+                "Steven has told me everything. Do you wish to go to the Sky Pillar?"
             ],
             "input": {
                 "type": "option",
@@ -225,7 +231,7 @@
             "id": "page10",
             "speaker": "wallace",
             "lines": [
-                "I'm sorry that we always seem to be leaving the fate of all the world in your hands."
+                "It is true the cave that leads to the Sky Pillar can only be opened by the hand of someone descended from the ancient people of Sootopolis..."
             ],
             "input": {
                 "type": "option",
@@ -245,7 +251,147 @@
             "id": "page11",
             "speaker": "wallace",
             "lines": [
-                "Yet there it lies once again. Good luck to you, young Champion!"
+                "...as, indeed, am I."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "wallace",
+            "lines": [
+                "Or by one of the Draconids, who have also lived in Hoenn since ancient times..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "wallace",
+            "lines": [
+                "The Sky Pillar is in fact an altar built for the ascension of Rayquaza—that Legendary Pokémon long said to be the protector of the Hoenn region."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "wallace",
+            "lines": [
+                "Only the ancient Draconid people know how to summon Rayquaza to the Sky Pillar."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "wallace",
+            "lines": [
+                "Steven has told me of the woman Zinnia."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "wallace",
+            "lines": [
+                "She must be trying to revive Rayquaza for some purpose."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "wallace",
+            "lines": [
+                "I shall go first to the Sky Pillar. When your preparations are complete, come join me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "wallace",
+            "lines": [
+                "The Sky Pillar towers over everything upon one of Route 131's small islands."
             ],
             "input": {
                 "type": "option",
@@ -255,9 +401,9 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('particle cloud 337 64 19 1 1 1 0.15 300');",
-                            "q.run_command('tp @e[x=337,y=64,z=19,distance=..3,type=cobblemon:npc] 10000000 -50000 -10000000');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue199');",
+                            "q.run_command('particle cloud 972 69 1596 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=972,y=69,z=1596,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue197');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]
@@ -265,6 +411,5 @@
                 ]
             }
         }
-    ],
-    "escapeAction": []
+    ]
 }

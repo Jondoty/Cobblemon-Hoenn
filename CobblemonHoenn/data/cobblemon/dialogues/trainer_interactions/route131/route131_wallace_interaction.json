@@ -1,56 +1,233 @@
 {
-  "initializationAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 3');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
-  ],
-  "escapeAction": [
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-    "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-    "q.dialogue.close();"
-  ],
-  "names": [
-    "Wallace"
-  ],
-  "speakers": {
-    "npc": {
-      "name": {
-        "type": "expression",
-        "expression": "q.npc.name"
-      },
-      "face": "q.npc.face();"
-    }
-  },
-  "pages": [
-    {
-      "id": "greeting",
-      "speaker": "npc",
-      "lines": [
-        "To defeat me, a descendant of the ancient Sootopolis people, and even when I was holding nothing back..."
-      ],
-      "input": {
-        "type": "option",
-        "vertical": false,
-        "options": [
-          {
-            "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
-            "value": "battle",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 37');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "v.battle = q.npc.start_battle(q.player);"
-            ]
-          },
-          {
-            "text": "No",
-            "value": "no",
-            "action": [
-              "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-              "q.dialogue.close();"
-            ]
-          }
-        ]
-      }
-    }
-  ]
+    "initializationAction": [
+    ],
+    "escapeAction": [
+        "q.dialogue.close();"
+    ],
+    "names": [
+        "Wallace"
+    ],
+    "speakers": {
+        "wallace": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "wallace",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page1",
+            "speaker": "wallace",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'So, you\\'ve come, ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "wallace",
+            "lines": [
+                "As you can see, I have undone the seal on the entrance to the Sky Pillar."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "wallace",
+            "lines": [
+                "Follow the path within, and you will reach the pillar in time."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "wallace",
+            "lines": [
+                "However... To go beyond this point... There is one more trial you must overcome."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "wallace",
+            "lines": [
+                "This is my duty as one of the ancient Sootopolitans, a duty passed down to me by my former master."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "wallace",
+            "lines": [
+                "You must battle me. Here and now. Prove to me that your power is great enough to face what lies ahead!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "wallace",
+            "lines": [
+                "Champion of Hoenn."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "wallace",
+            "lines": [
+                "You, who should exhibit the most graceful of art in battle with your Pokémon..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "wallace",
+            "lines": [
+                "I would have you show me your true strength!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
+                        "value": "battle",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 32');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }

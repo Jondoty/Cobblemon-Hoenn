@@ -736,14 +736,33 @@ execute as @s[x=2696,y=211,z=2379,distance=..10,tag=!Dialogue193] run opendialog
 execute as @s[x=2696,y=243,z=2379,distance=..10,tag=!Dialogue193] run opendialogue matt_dialogue193 @s
 
 
+#Dialogue 195, Zinna and team leaders in hideouts
+
+#Magma hideout
+execute as @s[x=959,y=181,z=-2377,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=953,y=181,z=-2380,dy=3,type=cobblemon:npc] run npcspawnat 953 181 -2380 zinnia_generic
+execute as @s[x=959,y=181,z=-2377,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=953,y=181,z=-2382,dy=3,type=cobblemon:pokemon] run pokespawnat 953 181 -2382 whismur level=30 no_ai=yes
+execute as @s[x=959,y=181,z=-2377,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=945,y=181,z=-2380,dy=3,type=cobblemon:npc] run npcspawnat 945 181 -2380 maxie_generic
+execute as @s[x=959,y=181,z=-2377,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=940,y=181,z=-2384,dy=3,type=cobblemon:npc] run npcspawnat 940 181 -2384 tabitha_generic
+execute as @s[x=953,y=181,z=-2380,distance=..10,tag=!Dialogue195] run opendialogue magmahideout_dialogue195 @s
+
+#Aqua hideout
+execute as @s[x=1359,y=181,z=-2380,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=1369,y=181,z=-2380,dy=3,type=cobblemon:npc] run npcspawnat 1369 181 -2380 zinnia_generic
+execute as @s[x=1359,y=181,z=-2380,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=1369,y=181,z=-2382,dy=3,type=cobblemon:pokemon] run pokespawnat 1369 181 -2382 whismur level=30 no_ai=yes
+execute as @s[x=1359,y=181,z=-2380,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=1377,y=181,z=-2380,dy=3,type=cobblemon:npc] run npcspawnat 1377 181 -2380 archie_generic
+execute as @s[x=1359,y=181,z=-2380,distance=..10,tag=Dialogue194,tag=!Dialogue195] unless entity @e[x=1382,y=181,z=-2384,dy=3,type=cobblemon:npc] run npcspawnat 1382 181 -2384 shelly_generic
+execute as @s[x=1369,y=181,z=-2380,distance=..10,tag=!Dialogue195] run opendialogue aquahideout_dialogue195 @s
 
 
+#Dialogue 196, Steven in Space Center after getting mega stones from leaders
+execute as @s[x=2698,y=167,z=2383,distance=..10,tag=Dialogue195,tag=!Dialogue196] unless entity @e[x=2701,y=179,z=2377,dy=3,type=cobblemon:npc] run npcspawnat 2701 179 2377 steven_generic
+execute as @s[x=2701,y=179,z=2377,distance=..7,tag=Dialogue195,tag=!Dialogue196] run opendialogue steven_dialogue196 @s
 
+#Wallace Dialogue 197, Sootopolis outside
+execute as @s[x=972,y=69,z=1596,distance=..50,tag=Dialogue196,tag=!Dialogue197] unless entity @e[x=972,y=69,z=1596,dy=3,type=cobblemon:npc] run npcspawnat 972 69 1596 wallace_generic
+execute as @s[x=972,y=69,z=1596,distance=..10,tag=Dialogue196,tag=!Dialogue197] run opendialogue wallace_dialogue197 @s
 
-
-
-
-
+#Sky Pillar Wallace, spawns NPC to battle
+execute as @s[x=365,y=64,z=119,distance=..50,tag=Dialogue197,tag=!Dialogue199] unless entity @e[x=337,y=64,z=19,dy=3,type=cobblemon:npc] run npcspawnat 337 64 19 route131_wallace
 
 
 

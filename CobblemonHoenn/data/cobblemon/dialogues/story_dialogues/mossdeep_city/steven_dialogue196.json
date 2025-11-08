@@ -1,30 +1,36 @@
 {
     "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $6840 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 6840');"
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
+    "escapeAction": [],
     "speakers": {
-        "wallace": {
-            "name": "Wallace",
+        "steven": {
+            "name": "Steven",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:wallace",
+                "identifier": "cobblemon:steven",
                 "isLeftSide": true
+            }
+        },
+        "system": {
+            "name": "System",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistf",
+                "isLeftSide": false
             }
         }
     },
     "pages": [
         {
             "id": "greeting",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'As I have come to expect from you, ' + q.player.username + '...'"
+                    "expression": "'...' + q.player.username + '! I have been expecting you!'"
                 }
             ],
             "input": {
@@ -43,9 +49,9 @@
         },
         {
             "id": "page1",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "You are an excellent Pokémon Trainer."
+                "Ah... That's it."
             ],
             "input": {
                 "type": "option",
@@ -63,9 +69,9 @@
         },
         {
             "id": "page2",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "The Pokémon that you sent out in that battle..."
+                "That woman... That 'Zinnia'..."
             ],
             "input": {
                 "type": "option",
@@ -83,9 +89,9 @@
         },
         {
             "id": "page3",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "At times dancing as lightly as an elusive spring breeze..."
+                "She mentioned the Sky Pillar."
             ],
             "input": {
                 "type": "option",
@@ -103,9 +109,9 @@
         },
         {
             "id": "page4",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "Yet striking with the sudden surety of lightning from the blue."
+                "Few can enter it—only the successors of the ancient world, who know of what has been..."
             ],
             "input": {
                 "type": "option",
@@ -123,9 +129,9 @@
         },
         {
             "id": "page5",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "Watching you command the battle with such ease and grace..."
+                "The Lorekeepers who are tasked with passing on that knowledge to those who come after..."
             ],
             "input": {
                 "type": "option",
@@ -143,9 +149,9 @@
         },
         {
             "id": "page6",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "Even I might succumb to your charm."
+                "Do you remember Wallace, whom you met in Sootopolis?"
             ],
             "input": {
                 "type": "option",
@@ -163,9 +169,9 @@
         },
         {
             "id": "page7",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "Now go forth. Find the truth that you seek."
+                "The Gym Leader of Sootopolis, Wallace, should know how to undo the seal on the Sky Pillar's entrance."
             ],
             "input": {
                 "type": "option",
@@ -183,9 +189,9 @@
         },
         {
             "id": "page8",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "As one of the ancient people of Sootopolis, I cannot intrude upon this holy place."
+                "He is also one of the few humans to have inherited such ancient lore."
             ],
             "input": {
                 "type": "option",
@@ -203,9 +209,9 @@
         },
         {
             "id": "page9",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "I will return to Sootopolis for now and try to lay plans in case the worst should come to pass despite all our efforts."
+                "I will remain here and work with the professor and his team to devise a plan for what to do next."
             ],
             "input": {
                 "type": "option",
@@ -223,9 +229,9 @@
         },
         {
             "id": "page10",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "I'm sorry that we always seem to be leaving the fate of all the world in your hands."
+                "That woman...Zinnia... I cannot put my faith in her."
             ],
             "input": {
                 "type": "option",
@@ -243,9 +249,89 @@
         },
         {
             "id": "page11",
-            "speaker": "wallace",
+            "speaker": "steven",
             "lines": [
-                "Yet there it lies once again. Good luck to you, young Champion!"
+                "We will think of a new way to stop the meteoroid on our own."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "steven",
+            "lines": [
+                "Zinnia...and the Sky Pillar..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "steven",
+            "lines": [
+                "I will leave them in your hands."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "steven",
+            "lines": [
+                "I will send a message to Wallace for you, so he knows to help."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "steven",
+            "lines": [
+                "You will probably find him in the Cave of Origin in Sootopolis."
             ],
             "input": {
                 "type": "option",
@@ -255,9 +341,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('particle cloud 337 64 19 1 1 1 0.15 300');",
-                            "q.run_command('tp @e[x=337,y=64,z=19,distance=..3,type=cobblemon:npc] 10000000 -50000 -10000000');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue199');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue196');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]
@@ -265,6 +349,5 @@
                 ]
             }
         }
-    ],
-    "escapeAction": []
+    ]
 }

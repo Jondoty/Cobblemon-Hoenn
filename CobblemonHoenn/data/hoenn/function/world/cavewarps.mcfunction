@@ -184,15 +184,27 @@ tp @a[x=878,y=121,z=-3109,dx=9,dy=10,dz=10] 1045 90 -3159 -82 0
 #-------------------------------------------------------------------------
 #Route 124, Team Aqua/Magma Hideout Entrance
 
+#Delta Episode+
+
+#Magma
+tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=1},tag=Dialogue194] 1122 149 -2406
+tp @a[x=1112,y=64,z=-2395,dx=18,dy=16,dz=11] 785 62 -1083
+
+#Aqua
+tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=2},tag=Dialogue194] 1222 149 -2385
+tp @a[x=1209,y=141,z=-2372,dx=25,dy=24,dz=7] 785 62 -1083
+
+
+
+#Regular portals
+
 #Magma
 tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=1}] 1122 68 -2406
-tp @a[x=1112,y=64,z=-2395,dx=18,dy=16,dz=11] 785 62 -1083
 tp @a[x=1112,y=141,z=-2395,dx=18,dy=16,dz=11] 785 62 -1083
 
 #Aqua
 tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=2}] 1222 68 -2385
 tp @a[x=1209,y=62,z=-2372,dx=25,dy=24,dz=7] 785 62 -1083
-tp @a[x=1209,y=141,z=-2372,dx=25,dy=24,dz=7] 785 62 -1083
 
 #-------------------------------------------------------------------------
 #Pokemon League, Steven's Chamber
