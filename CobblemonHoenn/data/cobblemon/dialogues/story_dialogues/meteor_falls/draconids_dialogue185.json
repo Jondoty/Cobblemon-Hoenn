@@ -1,0 +1,1121 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "steven": {
+            "name": "Steven",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:steven",
+                "isLeftSide": true
+            }
+        },
+        "draconid": {
+            "name": "Draconids Lady",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:lady",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "steven",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.player.username + '. We have the Meteorite Shard.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "steven",
+            "lines": [
+                "And I have come to understand many things, as I suspected might happen."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "steven",
+            "lines": [
+                "Allow me to introduce you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "steven",
+            "lines": [
+                "The honorable lady you see before you is a descendant of the ancient Draconids."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "draconid",
+            "lines": [
+                "Yes, I am one of the Draconid people."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "draconid",
+            "lines": [
+                "One of those ancient folk tasked with passing down the knowledge of Mega Evolution—"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "draconid",
+            "lines": [
+                "with the great lore of Lord Rayquaza, who was the beginning of all."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound azoth record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 98');",
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "draconid",
+            "lines": [
+                "Since times long gone, Hoenn has repeatedly suffered great disasters."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "draconid",
+            "lines": [
+                "At times, the destruction took the form of a huge meteoroid, which fell upon our land from distant space."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "draconid",
+            "lines": [
+                "At other times, the Primal Reversions of our own super-ancient Pokémon brought us to the brink of destruction."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "draconid",
+            "lines": [
+                "Each time, Lord Rayquaza has saved us from doom."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "draconid",
+            "lines": [
+                "The chosen Lorekeeper, standing before a stone that shone with rainbow light, offered up a wish to the great one."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "draconid",
+            "lines": [
+                "And Lord Rayquaza's body was suffused with a brilliant light and transformed."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "draconid",
+            "lines": [
+                "In its transformed state, Rayquaza's power was more devastating than ever before,"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "draconid",
+            "lines": [
+                "overcoming even the super-ancient Pokémon with all their primal power."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2321.42 115.00 -2869.55 117.60 17.10');",
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "steven",
+            "lines": [
+                "A rainbow-colored stone..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "steven",
+            "lines": [
+                "An invocation from the Lorekeeper..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "steven",
+            "lines": [
+                "And a Rayquaza unlike any ever seen..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "steven",
+            "lines": [
+                "I see. It does resemble what we know of the process of Mega Evolution..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2314.34 115.00 -2877.95 321.45 11.25');",
+                            "q.dialogue.set_page('page20');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "draconid",
+            "lines": [
+                "Yes, it does indeed. A Pokémon, a person, a stone of power."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "draconid",
+            "lines": [
+                "The bonds that tie them all together..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "draconid",
+            "lines": [
+                "The transformation of the Pokémon that occurs as a result of this phenomenon was called \"Mega Evolution\" by later peoples."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "steven",
+            "lines": [
+                "So the mechanism for Mega Evolution was discovered as a result of the first meeting between humanity and Rayquaza..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "steven",
+            "lines": [
+                "Hmmmm. But I have one last question. That \"Lorekeeper\" you spoke of..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "draconid",
+            "lines": [
+                "The Lorekeeper is the one who has inherited the knowledge and power to summon Lord Rayquaza when disaster imperils this world."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page26');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "draconid",
+            "lines": [
+                "The true Lorekeeper of the current generation is the one called Zinnia."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page27');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "draconid",
+            "lines": [
+                "The disaster that now approaches our planet, as it has twice before..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page28');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "draconid",
+            "lines": [
+                "Zinnia has been trying for some time to avert it... in her own way."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page29');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "draconid",
+            "lines": [
+                "To draw Lord Rayquaza to our sphere, she joined a certain organization that sought to revive the super-ancient Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page30');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "draconid",
+            "lines": [
+                "She taught them the secrets needed to bring back these threats and summon the great Dragon itself."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page31');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page31",
+            "speaker": "draconid",
+            "lines": [
+                "And now it seems she travels the land, scouring the world for Key Stones..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page32');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page32",
+            "speaker": "steven",
+            "lines": [
+                "So it was true..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page33');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page33",
+            "speaker": "steven",
+            "lines": [
+                "As I had suspected, that woman who appeared at the Space Center was one of the Draconids..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page34');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page34",
+            "speaker": "steven",
+            "lines": [
+                "But I never dreamed she was involved in the attempted revival of the super-ancient Pokémon..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page35');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page35",
+            "speaker": "steven",
+            "lines": [
+                "In full knowledge of the power they held, fully understanding the terrible changes they would wreak upon our world..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page36');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page36",
+            "speaker": "steven",
+            "lines": [
+                "Still she helped bring that situation about?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page37');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page37",
+            "speaker": "steven",
+            "lines": [
+                "Did she give a thought to the many people and Pokémon whose lives were put at grave risk by her actions?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page38');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page38",
+            "speaker": "steven",
+            "lines": [
+                "Could she accept the inevitable sacrifice of so many lives, in order to protect the planet from the coming meteoroid?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2318.82 115.00 -2870.32 238.50 16.50');",
+                            "q.dialogue.set_page('page39');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page39",
+            "speaker": "draconid",
+            "lines": [
+                "Balance must rule this world. History is doomed to repeat itself..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page40');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page40",
+            "speaker": "draconid",
+            "lines": [
+                "While our people have overcome many disasters in the past, it was always through great, great sacrifice..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page41');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page41",
+            "speaker": "draconid",
+            "lines": [
+                "Yet we have continued to struggle to preserve peace for as many years as we can."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page42');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page42",
+            "speaker": "draconid",
+            "lines": [
+                "That is how we have protected this world, upon which we now live."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page43');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page43",
+            "speaker": "draconid",
+            "lines": [
+                "People... Pokémon... All nature... And, yes, even you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page44');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page44",
+            "speaker": "draconid",
+            "lines": [
+                "I do not know exactly what you plan to do."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page45');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page45",
+            "speaker": "draconid",
+            "lines": [
+                "But do you believe that you are not sacrificing anything for your own protection?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page46');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page46",
+            "speaker": "draconid",
+            "lines": [
+                "Zinnia will follow her convictions until the very end."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page47');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47",
+            "speaker": "draconid",
+            "lines": [
+                "Even knowing the sacrifices that they will require."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page48');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page48",
+            "speaker": "draconid",
+            "lines": [
+                "Even if the sacrificial blade is leveled at her own heart."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page49');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page49",
+            "speaker": "steven",
+            "lines": [
+                "... Is that right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page50');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page50",
+            "speaker": "steven",
+            "lines": [
+                "... I understand."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page51');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page51",
+            "speaker": "steven",
+            "lines": [
+                "Thank you for everything."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page52');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page52",
+            "speaker": "steven",
+            "lines": [
+                "What is this... This vague sense of apprehension..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page53');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page53",
+            "speaker": "steven",
+            "lines": [
+                "And my intuition has often proven true."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page54');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page54",
+            "speaker": "steven",
+            "lines": [
+                "I am going back to Rustboro first. I have to get back to Devon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('particle cloud 2315 115 -2873 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=2315,y=115,z=-2873,dy=5,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue185');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

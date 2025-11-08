@@ -7,7 +7,7 @@
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 2000');"
     ],
     "speakers": {
-        "npc": {
+        "grunt2": {
             "name": "Team Aqua Grunt",
             "face": {
                 "type": "artificial",
@@ -15,14 +15,86 @@
                 "identifier": "cobblemon:teamaquagruntm",
                 "isLeftSide": true
             }
+        },
+        "grunt": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": false
+            }
         }
     },
     "pages": [
         {
-            "id": "page2",
-            "speaker": "npc",
+            "id": "greeting",
+            "speaker": "grunt",
             "lines": [
-                "Yet another defeat!"
+                "Grrrr... Am I destined to lose to you all the time?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue187');",
+                            "q.run_command('execute unless entity @e[x=-2754,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2754 69 -704 aqua_grunt_rustboro_2');",
+                            "q.run_command('particle cloud -2754 69 -704 1 1 1 0.15 100');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "grunt2",
+            "lines": [
+                "What's wrong, Grunt?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "grunt2",
+            "lines": [
+                "What? You again? ...Fine."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "grunt",
+            "lines": [
+                "Sure I know I can't win, but I'm going to challenge you for Matt!"
             ],
             "input": {
                 "type": "option",
@@ -40,6 +112,5 @@
         }
     ],
     "escapeAction": [
-        "q.dialogue.close();"
     ]
 }

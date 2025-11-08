@@ -1916,7 +1916,7 @@
                         "action": [
                             "q.run_command('particle cloud 2701 179 2377 1 1 1 0.15 300');",
                             "q.run_command('tp @e[x=2701,y=179,z=2377,dy=5,type=cobblemon:npc] 10000000 -50000 -10000000');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue184');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue183');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]

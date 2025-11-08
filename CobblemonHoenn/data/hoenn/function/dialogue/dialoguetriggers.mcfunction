@@ -691,7 +691,28 @@ execute as @s[x=2698,y=167,z=2383,distance=..10,tag=Dialogue182,tag=!Dialogue183
 execute as @s[x=2698,y=167,z=2383,distance=..10,tag=Dialogue182,tag=!Dialogue183] unless entity @e[x=2698,y=179,z=2382,dy=3,type=cobblemon:npc] run npcspawnat 2698 179 2382 scientist_generic
 execute as @s[x=2725,y=167,z=2357,distance=..7,tag=Dialogue182,tag=!Dialogue183] run opendialogue spacecenter_dialogue183 @s
 
+#Meteor Falls Steven & Draconids lady
+execute as @s[x=2284,y=89,z=-2800,distance=..20,tag=Dialogue184,tag=!Dialogue185] unless entity @e[x=2315,y=115,z=-2873,dy=3,type=cobblemon:npc] run npcspawnat 2315 115 -2873 steven_generic
+execute as @s[x=2284,y=89,z=-2800,distance=..20,tag=Dialogue183,tag=!Dialogue185] unless entity @e[x=2322,y=115,z=-2873,dy=3,type=cobblemon:npc] run npcspawnat 2322 115 -2873 meteorfalls_draconidslady
+execute as @s[x=2315,y=115,z=-2873,distance=..7,tag=Dialogue183,tag=!Dialogue185] run opendialogue draconids_dialogue185 @s
 
+#tps lady out as player leaves
+execute as @p[x=2284,y=89,z=-2800,distance=..20,tag=Dialogue185] run tp @e[x=2322,y=115,z=2873,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+
+#Rustboro, Dialogue 186 approaching Devon Corp
+execute as @s[x=-2757,y=69,z=-707,distance=..10,tag=Dialogue185,tag=!Dialogue186,scores={GameVersion=1}] run opendialogue researcher_dialogue186_magma @s
+execute as @s[x=-2757,y=69,z=-707,distance=..10,tag=Dialogue185,tag=!Dialogue186,scores={GameVersion=2}] run opendialogue researcher_dialogue186_aqua @s
+execute as @s[x=-2757,y=69,z=-707,distance=..15,tag=Dialogue186,tag=!Dialogue187,scores={GameVersion=1}] unless entity @e[x=-2757,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2757 69 -704 magma_grunt_rustboro_1
+execute as @s[x=-2757,y=69,z=-707,distance=..15,tag=Dialogue186,tag=!Dialogue187,scores={GameVersion=2}] unless entity @e[x=-2757,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2757 69 -704 aqua_grunt_rustboro_1
+
+execute as @s[x=-2757,y=69,z=-707,distance=..15,tag=Dialogue187,tag=!Dialogue188,scores={GameVersion=1}] unless entity @e[x=-2754,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2754 69 -704 magma_grunt_rustboro_2
+execute as @s[x=-2757,y=69,z=-707,distance=..15,tag=Dialogue187,tag=!Dialogue188,scores={GameVersion=2}] unless entity @e[x=-2754,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2754 69 -704 aqua_grunt_rustboro_2
+
+execute as @s[x=-2757,y=69,z=-707,distance=..15,tag=Dialogue188,tag=!Dialogue189,scores={GameVersion=1}] unless entity @e[x=-2760,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2760 69 -704 magma_grunt_rustboro_3
+execute as @s[x=-2757,y=69,z=-707,distance=..15,tag=Dialogue188,tag=!Dialogue189,scores={GameVersion=2}] unless entity @e[x=-2760,y=69,z=-704,dy=3,type=cobblemon:npc] run npcspawnat -2760 69 -704 aqua_grunt_rustboro_3
+
+#researcher tps out as player leaves
+execute if entity @s[x=-2764,y=69,z=-693,distance=30..50,tag=Dialogue189] run tp @e[x=-2757,y=69,z=-697,dy=4,type=cobblemon:npc] 10000000 -50000 -10000000
 
 
 

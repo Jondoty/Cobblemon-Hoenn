@@ -1,0 +1,174 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "c.npc.set_chatting();"
+    ],
+    "speakers": {
+        "grunt": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": true
+            }
+        },
+        "researcher": {
+            "name": "Devon Researcher",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "researcher",
+            "lines": [
+                "Awawawa?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute unless entity @e[x=-2757,y=69,z=-705,dy=5,type=cobblemon:npc] run npcspawnat -2757 69 -705 scientist_generic');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "researcher",
+            "lines": [
+                "Ouch..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "researcher",
+            "lines": [
+                "Oooh? You're that fantastic Trainer who helped me before!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound teamappears record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 69');",
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "grunt",
+            "lines": [
+                "Yo, geek!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute unless entity @e[x=-2757,y=69,z=-704,dy=5,type=cobblemon:npc] run npcspawnat -2757 69 -704 aqua_grunt_rustboro_1');",
+                            "q.run_command('tp @e[x=-2757,y=69,z=-705,dx=7,dy=5,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute unless entity @e[x=-2757,y=69,z=-697,dy=5,type=cobblemon:npc] run npcspawnat -2757 69 -697 scientist_generic');",
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "researcher",
+            "lines": [
+                "Aiieee! You've got to help me, please!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "grunt",
+            "lines": [
+                "Whoa! You're the kid Trainer I met before!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "grunt",
+            "lines": [
+                "Aargh! You're getting in my way again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue186');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [
+    ]
+}

@@ -1,13 +1,14 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
+        "q.run_command('tag ' + q.player.username + ' add Dialogue189');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1960 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 1960');"
     ],
     "speakers": {
-        "npc": {
+        "grunt": {
             "name": "Team Aqua Grunt",
             "face": {
                 "type": "artificial",
@@ -15,14 +16,226 @@
                 "identifier": "cobblemon:teamaquagruntm",
                 "isLeftSide": true
             }
+        },
+        "researcher": {
+            "name": "Devon Researcher",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": false
+            }
         }
     },
     "pages": [
         {
-            "id": "page2",
-            "speaker": "npc",
+            "id": "greeting",
+            "speaker": "grunt",
             "lines": [
-                "I'm so hungry..."
+                "I lost."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "grunt",
+            "lines": [
+                "Like I figured... I'm gonna get some food on the way back."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('tp @e[x=-2760,y=69,z=-704,dx=7,dy=5,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('particle cloud -2760 69 -704 1 1 1 0.15 100');",
+                            "q.run_command('particle cloud -2757 69 -704 1 1 1 0.15 100');",
+                            "q.run_command('particle cloud -2754 69 -704 1 1 1 0.15 100');",
+                            "q.dialogue.set_page('page3');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "researcher",
+            "lines": [
+                "Th-th-thank you! You helped me again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "researcher",
+            "lines": [
+                "As my thanks, I'll give you another Great Ba—"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "researcher",
+            "lines": [
+                "Oh, now is not the time for this!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "researcher",
+            "lines": [
+                "We're in big trouble!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "researcher",
+            "lines": [
+                "Team Aqua stole the control device for the Link Cable that our company had been developing..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "researcher",
+            "lines": [
+                "It's a special tool called the dimensional shifter."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "researcher",
+            "lines": [
+                "The person who stole it was a huge man with bulging muscles!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "researcher",
+            "lines": [
+                "What shall I do? What would you do? WHAT SHALL I DO?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "researcher",
+            "lines": [
+                "They must have headed for the Mossdeep Space Center..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "researcher",
+            "lines": [
+                "Steven must have gone ahead to the Space Center, but...I'm worried..."
             ],
             "input": {
                 "type": "option",
@@ -40,6 +253,5 @@
         }
     ],
     "escapeAction": [
-        "q.dialogue.close();"
     ]
 }
