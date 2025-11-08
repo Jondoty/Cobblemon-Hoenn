@@ -116,6 +116,7 @@ tag @s remove FlyPacifidlog
 tag @s remove FlyEverGrande
 tag @s remove FlyLeague
 tag @s remove FlyResort
+tag @s remove FlySkyPillar
 
 #Used in Eon Flute
 tag @s remove FlyRoute127

@@ -71,6 +71,7 @@ tag @a[x=45,y=0,z=-8,dx=461,dy=256,dz=404] add FlyRoute131
 tag @a[x=-545,y=31,z=135,dx=364,dy=256,dz=312] add FlyRoute132
 tag @a[x=-924,y=31,z=136,dx=378,dy=256,dz=312] add FlyRoute133
 tag @a[x=-1287,y=31,z=136,dx=362,dy=256,dz=312] add FlyRoute134
+tag @a[x=142,y=0,z=-326,dx=364,dy=256,dz=317] add FlySkyPillar
 
 
 

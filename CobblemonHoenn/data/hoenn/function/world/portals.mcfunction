@@ -1271,7 +1271,10 @@ tp @a[x=2575,y=80,z=-2949,dx=6,dy=3] 2579 80 -2945
 
 #Cave walk up
 #Ocean end
-tp @a[x=334,y=64,z=15,dx=6,dy=3] 331 14 -53
+tellraw @a[x=334,y=64,z=15,dx=6,dy=3,tag=!Dialogue199] {"text":"Only those who have been recognized as being worthy can go beyond this point...","italic":true,"color":"gray"}
+execute as @a[x=334,y=64,z=15,dx=6,dy=3,tag=!Dialogue199] at @s run tp @s ~ ~ ~5
+
+tp @a[x=334,y=64,z=15,dx=6,dy=3,tag=Dialogue199] 331 14 -53
 tp @a[x=329,y=14,z=-52,dx=3,dy=3] 337 64 16
 
 #Pillar End
