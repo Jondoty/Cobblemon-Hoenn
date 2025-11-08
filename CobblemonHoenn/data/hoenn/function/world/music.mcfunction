@@ -200,6 +200,10 @@ scoreboard players set @s[x=-1023,y=3,z=-1326,dx=73,dy=44,dz=51,scores={MusicCoo
 playsound sealedchamber record @s[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
 scoreboard players set @s[x=1068,y=0,z=-803,dx=117,dy=256,dz=145,scores={MusicCooldown=0}] MusicCooldown 123
 
+#Mossdeep Space Center, team takeover
+playsound explosiveencounters record @s[x=2613,y=197,z=2295,dx=149,dy=256,dz=148,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=2613,y=197,z=2295,dx=149,dy=256,dz=148,scores={MusicCooldown=0}] MusicCooldown 102
+
 #---------------------------------------------------------------------------------------------------------------------------
 #Pokemon Centers
 

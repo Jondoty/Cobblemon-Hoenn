@@ -1163,7 +1163,18 @@ tp @a[x=1607,y=84,z=-1019,dx=2,dy=3] 1608 47 -1020
 tp @a[x=1606,y=47,z=-1019,dx=3,dy=3] 1608 84 -1018
 
 #Space Center
-#Delta Episode
+
+#Delta Episode team Takeover
+execute as @a[x=1723,y=104,z=-1013,dx=2,dy=3,tag=Dialogue189,tag=!Dialogue194,scores={GameVersion=1}] run function hoenn:triggers/stopsound
+tp @a[x=1723,y=104,z=-1013,dx=2,dy=3,tag=Dialogue189,tag=!Dialogue194,scores={GameVersion=1}] 2698 199 2387
+tp @a[x=2696,y=199,z=2388,dx=4,dy=3] 1724 104 -1012
+
+execute as @a[x=1723,y=104,z=-1013,dx=2,dy=3,tag=Dialogue189,tag=!Dialogue194,scores={GameVersion=2}] run function hoenn:triggers/stopsound
+tp @a[x=1723,y=104,z=-1013,dx=2,dy=3,tag=Dialogue189,tag=!Dialogue194,scores={GameVersion=2}] 2698 231 2387
+tp @a[x=2696,y=231,z=2388,dx=4,dy=3] 1724 104 -1012
+
+
+#Delta Episode general
 tp @a[x=1723,y=104,z=-1013,dx=2,dy=3,tag=Dialogue182,tag=!Dialogue208] 2698 167 2387
 tp @a[x=2696,y=167,z=2388,dx=4,dy=3] 1724 104 -1012
 

@@ -1,0 +1,160 @@
+{
+    "initializationAction": [
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 14');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');"
+    ],
+    "escapeAction": [
+    ],
+    "speakers": {
+        "grunt1": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": true
+            }
+        },
+        "grunt2": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntm",
+                "isLeftSide": false
+            }
+        },
+        "grunt3": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntf",
+                "isLeftSide": true
+            }
+        },
+        "grunt4": {
+            "name": "Team Aqua Grunt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:teamaquagruntf",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "grunt2",
+            "lines": [
+                "Hee hee hee!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "grunt1",
+            "lines": [
+                "We finally meet again."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "grunt3",
+            "lines": [
+                "It's been three— Hm?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "grunt1",
+            "lines": [
+                "How long has it been?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "grunt3",
+            "lines": [
+                "Nincompoop! It doesn't matter!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "grunt4",
+            "lines": [
+                "Brace yourself! We won't let you call us mere quintuplets!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "\u00a7c\u2694 Battle \u2694\u00a7r",
+                        "value": "battle",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 35');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

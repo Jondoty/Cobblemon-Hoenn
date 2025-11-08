@@ -1,0 +1,476 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "matt": {
+            "name": "Aqua Admin Matt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:matt",
+                "isLeftSide": true
+            }
+        },
+        "steven": {
+            "name": "Steven",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:steven",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "steven",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Your timing is impeccable as always, ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "steven",
+            "lines": [
+                "Team Aqua..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "steven",
+            "lines": [
+                "What do you intend to do with that device?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "steven",
+            "lines": [
+                "You do realize that this is the last hope we have of saving this planet?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "matt",
+            "lines": [
+                "What was that? What? Last hope?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "matt",
+            "lines": [
+                "Hrmm... Ermm, haha..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "matt",
+            "lines": [
+                "Mwahahahaho!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "matt",
+            "lines": [
+                "... I ain't laughin' one bit. ...Punk."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "matt",
+            "lines": [
+                "My bro... My bro whom I loved so much..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "matt",
+            "lines": [
+                "Are you trying to tell me that everything we've done up till now..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "matt",
+            "lines": [
+                "The ties that bind us..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "matt",
+            "lines": [
+                "all of it was a mistake? My bro has changed since he got mixed up with you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "steven",
+            "lines": [
+                "How convenient it must be for you to put all the blame on another."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "matt",
+            "lines": [
+                "Shut it! I... I'm..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "matt",
+            "lines": [
+                "Know what? That rocket's full of crazy amounts of energy!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "matt",
+            "lines": [
+                "It's even more awesome than the ultimate weapon that ended the war 3,000 years ago, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "steven",
+            "lines": [
+                "Wha—?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "steven",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'...' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "steven",
+            "lines": [
+                "This fool!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page20');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "steven",
+            "lines": [
+                "This incredible fool really intends to do it! If we don't stop this now,"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "steven",
+            "lines": [
+                "our whole world will be embroiled in the destruction!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "matt",
+            "lines": [
+                "Hoo hah! I'm gonna smash you up!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue193');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

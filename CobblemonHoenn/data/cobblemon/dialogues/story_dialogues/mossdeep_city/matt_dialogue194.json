@@ -1,0 +1,1411 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $7540 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 7540');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "matt": {
+            "name": "Aqua Admin Matt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:matt",
+                "isLeftSide": true
+            }
+        },
+        "courtney": {
+            "name": "Magma Admin Courtney",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:courtney",
+                "isLeftSide": false
+            }
+        },
+        "steven": {
+            "name": "Steven",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:steven",
+                "isLeftSide": true
+            }
+        },
+        "zinnia": {
+            "name": "Zinnia",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:zinnia",
+                "isLeftSide": false
+            }
+        },
+        "whismur": {
+            "name": "Whismur",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:whismur",
+                "isLeftSide": false
+            }
+        },
+        "profcozmo": {
+            "name": "Professor Cozmo",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": false
+            }
+        },
+        "system": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "matt",
+            "lines": [
+                "Whoa... Ohh... Ohhh..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "matt",
+            "lines": [
+                "Darn! Dang it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "matt",
+            "lines": [
+                "Dang it! Am I not good enough, bro?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "steven",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "steven",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'...' + q.player.username + '! Now is our chance!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "steven",
+            "lines": [
+                "Take the dimensional shifter and—"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.whismur.cry ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "whismur",
+            "lines": [
+                "Mumumurrr!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2692 243 2378 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=2692,y=243,z=2378,dy=3,type=cobblemon:pokemon] run pokespawnat 2692 243 2378 whismur level=30 no_ai=yes');",
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "matt",
+            "lines": [
+                "Wha—?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "system",
+            "lines": [
+                "Aster snatched the dimensional shifter away from Matt!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "steven",
+            "lines": [
+                "That Pokémon... Doesn't it belong to..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "zinnia",
+            "lines": [
+                "Nice one, Aster!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 2700 243 2381 1 1 1 0.15 300');",
+                            "q.run_command('execute unless entity @e[x=2700,y=243,z=2381,dy=3,type=cobblemon:npc] run npcspawnat 2700 243 2381 zinnia_generic');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound theheirstoeternity record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 126');",
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "steven",
+            "lines": [
+                "You're the—!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "zinnia",
+            "lines": [
+                "The Draconid, yup. Or you could just call me Zinnia."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "zinnia",
+            "lines": [
+                "Aster!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.whismur.cry ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "whismur",
+            "lines": [
+                "Murrr!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "zinnia",
+            "lines": [
+                "Thank you, dear."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "zinnia",
+            "lines": [
+                "Now then..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2691.01 243.00 2383.76 599.70 11.25');",
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "zinnia",
+            "lines": [
+                "That is an impressive machine. Snap your fingers, the asteroid vanishes, and we all live happily ever after?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "zinnia",
+            "lines": [
+                "Ahahahah! Indeed! It's like that former Champ said!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page20');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "zinnia",
+            "lines": [
+                "This thing is the best hope we have of saving this planet and everything on it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "zinnia",
+            "lines": [
+                "But you know..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "zinnia",
+            "lines": [
+                "It could also be the worst tragedy imaginable for some other world and everything on it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "steven",
+            "lines": [
+                "...What are you trying to say?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "zinnia",
+            "lines": [
+                "I'm not talking to you. You don't get it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "steven",
+            "lines": [
+                "Ugh..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2697.87 243.00 2383.38 596.85 19.05');",
+                            "q.dialogue.set_page('page26');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "zinnia",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'But you, ' + q.player.username + '...'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page27');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "zinnia",
+            "lines": [
+                "Hope for our world... Tragedy for another... You get it, don't you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page28');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "zinnia",
+            "lines": [
+                "My people know it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page29');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "zinnia",
+            "lines": [
+                "From generation to generation, we pass along the lore about the distortions in the world borne by the Mega Evolution mechanism."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page30');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "zinnia",
+            "lines": [
+                "And about the existence of another world, which we have long observed to be just like this one and yet not the same..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page31');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page31",
+            "speaker": "zinnia",
+            "lines": [
+                "That's right. A Hoenn region that's almost exactly like this one we live in."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page32');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page32",
+            "speaker": "zinnia",
+            "lines": [
+                "Filled with Pokémon and people like us."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page33');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page33",
+            "speaker": "zinnia",
+            "lines": [
+                "A world where maybe the evolution of Pokémon took a slightly different path, where Mega Evolution is unknown..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page34');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page34",
+            "speaker": "zinnia",
+            "lines": [
+                "A world where that war 3,000 years ago...never happened."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page35');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page35",
+            "speaker": "zinnia",
+            "lines": [
+                "A world where the ultimate weapon was never even built."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page36');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page36",
+            "speaker": "zinnia",
+            "lines": [
+                "And in that Hoenn of that world..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page37');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page37",
+            "speaker": "zinnia",
+            "lines": [
+                "What would happen if one day, out of the blue, a meteoroid appeared?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page38');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page38",
+            "speaker": "zinnia",
+            "lines": [
+                "What would happen to the people of that world, without the technology to destroy the meteoroid or the power to warp it away?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page39');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page39",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page40');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page40",
+            "speaker": "zinnia",
+            "lines": [
+                "Looks like it's beyond the power of your imagination."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run stopsound @s record');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s MusicColdown 100');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:item.shield.break ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page41');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page41",
+            "speaker": "system",
+            "lines": [
+                "Zinnia crushed the dimensional shifter in her hand!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2688.27 243.00 2378.73 484.20 18.00');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound theheirstoeternity record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 126');",
+                            "q.dialogue.set_page('page42');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page42",
+            "speaker": "profcozmo",
+            "lines": [
+                "What kind of fool are you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page43');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page43",
+            "speaker": "profcozmo",
+            "lines": [
+                "You have no substantive proof, and yet you claim another world, one just like our own, exists?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page44');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page44",
+            "speaker": "profcozmo",
+            "lines": [
+                "Out of this fantasy, you—you have destroyed our only hope!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2693.78 243.00 2382.02 589.20 12.00');",
+                            "q.dialogue.set_page('page45');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page45",
+            "speaker": "steven",
+            "lines": [
+                "What have...you done..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page46');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page46",
+            "speaker": "zinnia",
+            "lines": [
+                "Farewell, brief hope..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page47');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47",
+            "speaker": "profcozmo",
+            "lines": [
+                "Y-you! Do you even know— Now what are we to do?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page48');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page48",
+            "speaker": "zinnia",
+            "lines": [
+                "Calm down there, Prof."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page49');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page49",
+            "speaker": "zinnia",
+            "lines": [
+                "It'll be OK. I..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page50');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page50",
+            "speaker": "zinnia",
+            "lines": [
+                "We..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page51');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page51",
+            "speaker": "zinnia",
+            "lines": [
+                "We can protect this world...and the other."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page52');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page52",
+            "speaker": "steven",
+            "lines": [
+                "Who exactly is \"we\"? What are your intentions?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page53');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page53",
+            "speaker": "zinnia",
+            "lines": [
+                "Oh yeah! Silly me... I forgot the other thing I came for."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2695.74 243.00 2378.87 438.90 16.50');",
+                            "q.dialogue.set_page('page54');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page54",
+            "speaker": "matt",
+            "lines": [
+                "?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run particle minecraft:cloud 2692 243 2379 0.5 1 0.5 0.1 100 normal');",
+                            "q.dialogue.set_page('page56');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page56",
+            "speaker": "system",
+            "lines": [
+                "Zinnia snatched the Key Stone away from Matt!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page58');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page58",
+            "speaker": "matt",
+            "lines": [
+                "Wha... Errgh!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 2693.78 243.00 2382.02 589.20 12.00');",
+                            "q.dialogue.set_page('page60');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page60",
+            "speaker": "zinnia",
+            "lines": [
+                "And that's the Key Stone gotten..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page61');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page61",
+            "speaker": "zinnia",
+            "lines": [
+                "Now I'll put it together with the Key Stone they've got in their base..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.whismur.cry ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page62');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page62",
+            "speaker": "whismur",
+            "lines": [
+                "Murrr!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page63');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page63",
+            "speaker": "zinnia",
+            "lines": [
+                "Looks like my next appointment is calling, so I'll excuse myself now."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page64');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page64",
+            "speaker": "zinnia",
+            "lines": [
+                "Later!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.whismur.cry ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page65');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page65",
+            "speaker": "whismur",
+            "lines": [
+                "Murrr!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute if entity @e[x=2692,y=242,z=2378,dy=3,type=cobblemon:pokemon] run particle cloud 2692 242 2378 1 1 1 0.15 300');",
+                            "q.run_command('execute if entity @e[x=2700,y=242,z=2381,dy=3,type=cobblemon:npc] run particle cloud 2700 242 2381 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=2692,y=242,z=2378,dy=3,type=cobblemon:pokemon] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=2700,y=242,z=2381,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page66');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page66",
+            "speaker": "matt",
+            "lines": [
+                "Th-that punk! How dare she try to take my bro Archie's Key Stone?! Not cool, man! Not cool!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page67');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page67",
+            "speaker": "steven",
+            "lines": [
+                "Confound it all... So she must be making for Team Aqua's hideout next..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page68');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page68",
+            "speaker": "steven",
+            "lines": [
+                "Think, Steven. Think! What to do, what to do..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue194');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

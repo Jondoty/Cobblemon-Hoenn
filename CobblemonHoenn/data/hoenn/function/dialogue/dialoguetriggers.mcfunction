@@ -714,6 +714,31 @@ execute as @s[x=-2757,y=69,z=-707,distance=..15,tag=Dialogue188,tag=!Dialogue189
 #researcher tps out as player leaves
 execute if entity @s[x=-2764,y=69,z=-693,distance=30..50,tag=Dialogue189] run tp @e[x=-2757,y=69,z=-697,dy=4,type=cobblemon:npc] 10000000 -50000 -10000000
 
+#Dialogue 190 - Mossdeep team starting space center invasion
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=1}] unless entity @e[x=1724,y=84,z=-948,dy=3,type=cobblemon:npc] run npcspawnat 1724 84 -948 courtney_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=1}] unless entity @e[x=1719,y=84,z=-945,dy=3,type=cobblemon:npc] run npcspawnat 1719 84 -945 magmagrunt_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=1}] unless entity @e[x=1721,y=84,z=-943,dy=3,type=cobblemon:npc] run npcspawnat 1721 84 -943 magmagruntf_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=1}] unless entity @e[x=1724,y=84,z=-942,dy=3,type=cobblemon:npc] run npcspawnat 1724 84 -942 magmagrunt_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=1}] unless entity @e[x=1727,y=84,z=-943,dy=3,type=cobblemon:npc] run npcspawnat 1727 84 -943 magmagruntf_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=1}] unless entity @e[x=1730,y=84,z=-945,dy=3,type=cobblemon:npc] run npcspawnat 1730 84 -945 magmagrunt_generic
+execute as @s[x=1708,y=84,z=-938,distance=..10,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=1}] run opendialogue magmas_dialogue190 @s
+
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=2}] unless entity @e[x=1724,y=84,z=-948,dy=3,type=cobblemon:npc] run npcspawnat 1724 84 -948 matt_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=2}] unless entity @e[x=1719,y=84,z=-945,dy=3,type=cobblemon:npc] run npcspawnat 1719 84 -945 aquagrunt_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=2}] unless entity @e[x=1721,y=84,z=-943,dy=3,type=cobblemon:npc] run npcspawnat 1721 84 -943 aquagruntf_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=2}] unless entity @e[x=1724,y=84,z=-942,dy=3,type=cobblemon:npc] run npcspawnat 1724 84 -942 aquagrunt_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=2}] unless entity @e[x=1727,y=84,z=-943,dy=3,type=cobblemon:npc] run npcspawnat 1727 84 -943 aquagruntf_generic
+execute as @s[x=1673,y=83,z=-923,distance=..20,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=2}] unless entity @e[x=1730,y=84,z=-945,dy=3,type=cobblemon:npc] run npcspawnat 1730 84 -945 aquagrunt_generic
+execute as @s[x=1708,y=84,z=-938,distance=..10,tag=Dialogue189,tag=!Dialogue190,scores={GameVersion=2}] run opendialogue aquas_dialogue190 @s
+
+#Dialogue 193 - Mossdeep Admin pre-battle
+execute as @s[x=2696,y=211,z=2379,distance=..10,tag=!Dialogue193] run opendialogue courtney_dialogue193 @s
+execute as @s[x=2696,y=243,z=2379,distance=..10,tag=!Dialogue193] run opendialogue matt_dialogue193 @s
+
+
+
+
+
 
 
 

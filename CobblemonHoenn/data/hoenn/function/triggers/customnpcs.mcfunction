@@ -191,6 +191,12 @@ execute as @s[x=1123,y=36,z=-954,distance=..8,tag=ShardsHave] run opendialogue s
 execute as @s[x=1123,y=36,z=-954,distance=..8,tag=ShardsHave] run tag @s remove ShardsHave
 
 
+#Steven Mossdeep Space Zinnia reminder
+execute as @a[x=2695,y=211,z=2376,distance=..8,tag=!Dialogue194] run opendialogue steven_mossdeep_predialogue194 @s
+execute as @a[x=2695,y=243,z=2376,distance=..8,tag=!Dialogue194] run opendialogue steven_mossdeep_predialogue194 @s
+execute as @s[x=2695,y=211,z=2376,distance=..8,tag=Dialogue194] run opendialogue steven_mossdeep_dialogue194_magma_reminder @s
+execute as @s[x=2695,y=243,z=2376,distance=..8,tag=Dialogue194] run opendialogue steven_mossdeep_dialogue194_aqua_reminder @s
+
 
 #-------------------------------------------------------------
 #Gym Leaders

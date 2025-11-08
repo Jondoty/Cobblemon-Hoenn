@@ -1,0 +1,74 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+        "q.run_command('execute as ' + q.player.username + ' run tp @s 1720.98 87.24 -939.38 569.10 39.30');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Aqua Admin Matt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:matt",
+                "isLeftSide": false
+            }
+        },
+        "player": {
+            "face": "q.player.face(true);",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Mission, start..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Let's go, Grunts!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 1700.49 84.00 -936.33 610.35 6.60');",
+                            "q.run_command('execute as @e[x=1724,y=84,z=-945,distance=..8,type=cobblemon:npc] at @s run particle cloud ~ ~ ~ 1 1 1 0.15 100');",
+                            "q.run_command('tp @e[x=1724,y=84,z=-945,distance=..8,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue190');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
