@@ -218,7 +218,7 @@ execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run tp @s 1855 72 -2408 
 
 
 #Swaps for primal battle
-execute as @s[scores={DialogueTrigger=148,TalkTime=37}] run tp @e[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run tp @e[x=1790,y=64,z=-2483,dx=133,dy=34,dz=151,nbt={NoAI:1b}] 10000000 -50000 -10000000
 execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run particle minecraft:explosion_emitter 1856 70 -2426 4 5 4 .75 100 normal
 execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run pokespawnat 1856 71 -2426 groudon level=45 moves=lavaplume,rest,earthquake,precipiceblades reversion_state=primal
 execute as @s[scores={DialogueTrigger=147,TalkTime=38}] run tp @e[x=1856,y=71,z=-2426,distance=..5,nbt={NoAI:1b}] 10000000 -50000 -10000000
@@ -244,7 +244,7 @@ scoreboard players set @s[scores={DialogueTrigger=147},tag=Dialogue147] Dialogue
 
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 148 - Cave of Origin
-#Groudon in primal chamber
+#Kyogre in primal chamber
 #Triggered by jumping into the water with legendary
 
 tellraw @s[scores={DialogueTrigger=148,TalkTime=1}] {"text":"<Kyogre> Krawr!!"}
@@ -275,7 +275,7 @@ execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run tp @s 2025 72 -2404 
 
 
 #Swaps for primal battle
-execute as @s[scores={DialogueTrigger=148,TalkTime=37}] run tp @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run tp @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,nbt={NoAI:1b}] 10000000 -50000 -10000000
 execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run particle minecraft:explosion_emitter 2025 72 -2421 4 5 4 .75 100 normal
 execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run pokespawnat 2025 70 -2421 kyogre level=45 moves=bodyslam,aquaring,icebeam,originpulse reversion_state=primal
 execute as @s[scores={DialogueTrigger=148,TalkTime=38}] run tp @e[x=2025,y=70,z=-2421,distance=..5,nbt={NoAI:1b}] 10000000 -50000 -10000000
@@ -476,6 +476,91 @@ scoreboard players set @s[scores={DialogueTrigger=166},tag=Dialogue166] Dialogue
 
 
 
+
+#-----------------------------------------------------------------------------------------------------
+#Dialogue 207 - Sky Pillar
+#After battling Zinnia
+#https://youtu.be/MgkqxXCmrtI?t=71855
+
+#Invisibles player's Pokemon out on the field
+execute as @s[scores={DialogueTrigger=207,TalkTime=1..93}] at @s as @e[distance=..75,type=cobblemon:pokemon] unless entity @s[nbt={NoAI:1b}] run effect give @s minecraft:invisibility 10 1 true
+
+#sends Rayqyaza statue out
+execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run gamemode spectator
+execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run tp @s 348.01 251.41 -193.12 42.00 7.00
+execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run pokespawnat 338 243 -184 rayquaza no_ai=true level=70 uncatchable=yes
+
+#Shot of side of pillar
+execute as @s[scores={DialogueTrigger=207,TalkTime=10}] run tp @s 379 245 -123.6 146 24
+
+#Rayquaza Mega Evolves
+execute as @s[scores={DialogueTrigger=207,TalkTime=20}] run tp @s 329.46 247.16 -196.51 -35.00 -6.00
+execute as @s[scores={DialogueTrigger=207,TalkTime=22}] run particle minecraft:explosion_emitter 338 243 -184 4 5 4 .75 100 normal
+execute as @s[scores={DialogueTrigger=207,TalkTime=23}] run data merge entity @e[x=338,y=243,z=-184,distance=..5,nbt={NoAI:1b},limit=1] {Pokemon:{Features:[{mega_evolution:"mega","cobblemon:feature_id":"mega_evolution"}],FormId:"mega"}}
+execute as @s[scores={DialogueTrigger=207,TalkTime=23}] run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=207,TalkTime=33}] run tp @s 349.54 261.89 -191.78 44.00 30.00
+
+#Camera shot riding Rayquaza
+
+#tps both player and statue @20tps into sky
+execute as @s[scores={DialogueTrigger=207,TalkTime=40}] run tp @s 338.36 258.27 -192.17 -0.51 30.35
+execute as @s[scores={DialogueTrigger=207,TalkTime=43}] run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 1 1 1
+#execute as @s[scores={DialogueTrigger=207,TalkTime=50..60}] at @s run tp @e[distance=..15,type=pixelmon:statue] ~ ~5 ~
+#execute as @s[scores={DialogueTrigger=207,TalkTime=50..60}] at @s run tp @s ~ ~5 ~
+
+
+execute as @s[scores={DialogueTrigger=207,TalkTime=65}] run effect give @s minecraft:blindness 4 1 true
+execute as @s[scores={DialogueTrigger=207,TalkTime=65}] at @s run tp @e[distance=..20,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=207,TalkTime=65}] run stopsound @s record
+execute as @s[scores={DialogueTrigger=207,TalkTime=65}] run scoreboard players set @s MusicCooldown 100
+
+#shots of space area
+execute as @s[scores={DialogueTrigger=207,TalkTime=66}] run tp @s 642 -13 2561 0 90
+
+execute as @s[scores={DialogueTrigger=207,TalkTime=74}] run pokespawnat 696 8 2569 rayquaza no_ai=true level=70 mega_evolution=mega
+execute as @s[scores={DialogueTrigger=207,TalkTime=75}] run tp @s 708.32 24.74 2578.47 112.00 32.00
+
+execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run tp @e[x=696,y=8,z=2569,distance=..15,nbt={NoAI:1b}] 10000000 -50000 -10000000
+
+#Shot of Deoxys' triangle
+execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run summon minecraft:item_display 630 -11.5 2529 {item:{id:"minecraft:tipped_arrow",Count:1b,components:{"minecraft:custom_model_data":6}},Glowing:1b}
+execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run tp @s 630.5 -12.75 2531.5 -180 12
+
+#starts playing Deoxys music here
+execute as @s[scores={DialogueTrigger=207,TalkTime=93}] run scoreboard players set @s MusicTitles 52
+execute as @s[scores={DialogueTrigger=207,TalkTime=93}] run function hoenn:triggers/stopsound
+
+#Triangle starts moving
+execute as @s[scores={DialogueTrigger=207,TalkTime=93}] run tp @s 630.5 -12 2533.5 -180 0
+execute as @s[scores={DialogueTrigger=207,TalkTime=96}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 628 -9.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=99}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=102}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=104}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=106}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=108}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 628 -9.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=109}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=110}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=111}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=112}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 628 -9.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=113}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=114}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=114}] run tp @s 630.5 -13 2531.5 -180 12
+
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run particle cloud 630 -13 2529 1 1 1 0.15 300
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run kill @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display]
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run tp @s 630.50 -11.49 2532.56 -180.00 12.00
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run pokespawnat 630 -13 2529 deoxys level=80 no_ai=yes
+execute as @s[scores={DialogueTrigger=207,TalkTime=125}] run playsound cobblemon:pokemon.deoxys.cry ambient @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run tp @e[x=630,y=-13,z=2529,distance=..10,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run tp @s 636 -50 2561 -90 0
+execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run pokespawnat 646 -50 2561 deoxys level=80 moves=cosmicpower,recover,psychoboost,hyperbeam no_ai=yes
+execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run gamemode adventure
+
+tag @s[scores={DialogueTrigger=207,TalkTime=130..}] add Dialogue207
+scoreboard players set @s[scores={DialogueTrigger=207},tag=Dialogue207] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=207},tag=Dialogue207] DialogueTrigger 0
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 216 - New Mauville
 #Player pressing button(s) in New Mauville
