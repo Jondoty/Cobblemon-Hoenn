@@ -1,0 +1,2196 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
+        "q.run_command('execute as ' + q.player.username + ' run time set midnight');",
+        "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+        "q.run_command('execute as ' + q.player.username + ' run tp @s 326.69 248.12 -158.19 930.75 20.55');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "zinnia": {
+            "name": "Zinnia",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:zinnia",
+                "isLeftSide": true
+            }
+        },
+        "whismur": {
+            "name": "Whismur",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:whismur",
+                "isLeftSide": false
+            }
+        },
+        "rayquaza": {
+            "name": "Rayquaza",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:rayquaza",
+                "isLeftSide": false
+            }
+        },
+        "system": {
+            "face": "q.player.face(true);",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page1",
+            "speaker": "zinnia",
+            "lines": [
+                "See that, Aster? You always wanted to watch them, right?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "zinnia",
+            "lines": [
+                "The Litleonids. A million glittering stars falling from the sky..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "zinnia",
+            "lines": [
+                "The show is about to start."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "whismur",
+            "lines": [
+                "Mur! Murrr!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 332.94 243.00 -174.48 1003.35 18.45');",
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "zinnia",
+            "lines": [
+                "Aren't we happy now? Yes, what could be better, dear Aster? Ha ha..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 338.42 243.00 -166.97 898.49 13.65');",
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "zinnia",
+            "lines": [
+                "... Welcome to the Dragonhark altar."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page7');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "zinnia",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "' ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page8');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "zinnia",
+            "lines": [
+                "You know what I am trying to do here by now, don't you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 375.59 248.86 -144.20 864.59 15.60');",
+                            "q.dialogue.set_page('page9');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "zinnia",
+            "lines": [
+                "That's right. I will summon Rayquaza to this world to destroy the meteoroid headed for Hoenn."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page10');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "zinnia",
+            "lines": [
+                "That is my... It is our duty."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 348.44 248.93 -175.77 864.74 -17.70');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound thelamentoffallingstars record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 168');",
+                            "q.dialogue.set_page('page11');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "zinnia",
+            "lines": [
+                "Ever since I was a little girl, I have always turned my eyes up to the sky."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "zinnia",
+            "lines": [
+                "When I was so full of uncertainty that I felt my heart might be crushed by it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "zinnia",
+            "lines": [
+                "When I was so grief-stricken and alone I thought my heart might break of it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 331.41 245.94 -174.06 639.59 46.20');",
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "zinnia",
+            "lines": [
+                "I turned and looked up there... so that my tears would never, ever fall."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 338.77 243.00 -167.39 511.94 12.60');",
+                            "q.dialogue.set_page('page15');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "zinnia",
+            "lines": [
+                "What about you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "zinnia",
+            "lines": [
+                "Have you ever had to do something like that?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "I have.",
+                        "value": "ihave",
+                        "action": [
+                            "q.dialogue.set_page('have1');"
+                        ]
+                    },
+                    {
+                        "text": "Never",
+                        "value": "never",
+                        "action": [
+                            "q.dialogue.set_page('never1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "never1",
+            "speaker": "zinnia",
+            "lines": [
+                "Ahaha! You're just too honest!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('never2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "never2",
+            "speaker": "zinnia",
+            "lines": [
+                "Don't you know that you're supposed to agree, and then we'd share a touching moment of pain?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "have1",
+            "speaker": "zinnia",
+            "lines": [
+                "Right..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page17');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "zinnia",
+            "lines": [
+                "... I used to watch the stars like this all the time..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page18');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "zinnia",
+            "lines": [
+                "Together with Aster. We were always together. In good times and in bad."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 333.06 243.00 -172.45 606.74 18.00');",
+                            "q.dialogue.set_page('page19');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "zinnia",
+            "lines": [
+                "I loved her. I loved her with everything I had..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page20');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "zinnia",
+            "lines": [
+                "But I still lost her."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page21');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "zinnia",
+            "lines": [
+                "... Hahaha..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page22');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "zinnia",
+            "lines": [
+                "... I want to see her..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "zinnia",
+            "lines": [
+                "I want to be with her again... My sweet Aster..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "whismur",
+            "lines": [
+                "Mum...?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 334.56 243.00 -181.31 -30.46 6.15');",
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "zinnia",
+            "lines": [
+                "I will, won't I?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page26');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "zinnia",
+            "lines": [
+                "With this..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page27');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "zinnia",
+            "lines": [
+                "Just a little longer..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run stopsound @s record');",
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
+                            "q.run_command('execute as ' + q.player.username + ' run time set 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 341.69 243.00 -166.88 -209.11 13.05');",
+                            "q.dialogue.set_page('page28');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "whismur",
+            "lines": [
+                "Mur, mur!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page29');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "zinnia",
+            "lines": [
+                "Guess I should say good morning?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page30');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "zinnia",
+            "lines": [
+                "You slept well, didn't you? You look so adorable when you sleep."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page31');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page31",
+            "speaker": "zinnia",
+            "lines": [
+                "Sorry about the knocking-you-out thing."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page32');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page32",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page33');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page33",
+            "speaker": "zinnia",
+            "lines": [
+                "Enough."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page34');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page34",
+            "speaker": "zinnia",
+            "lines": [
+                "I think it's time I gave it a shot."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 345.17 249.66 -186.52 -325.66 39.30');",
+                            "q.dialogue.set_page('page35');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page35",
+            "speaker": "zinnia",
+            "lines": [
+                "I'm sorry...for all the trouble I caused you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page36');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page36",
+            "speaker": "zinnia",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'If something happens to me... Please... Take this little one...'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 337.73 325.77 -199.84 -360.31 84.00');",
+                            "q.dialogue.set_page('page37');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page37",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page38');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page38",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 335.48 243.00 -176.99 -360.01 16.80');",
+                            "q.dialogue.set_page('page39');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page39",
+            "speaker": "zinnia",
+            "lines": [
+                "...OK. Here I go."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page40');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page40",
+            "speaker": "zinnia",
+            "lines": [
+                "\"With jewel bright and borrowed might from the spirits of the departed...\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page41');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page41",
+            "speaker": "zinnia",
+            "lines": [
+                "\"Through sacred rite, in thy great sight, my life as well I offer...\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 374.28 287.87 -219.78 -314.26 49.80');",
+                            "q.dialogue.set_page('page42');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page42",
+            "speaker": "system",
+            "lines": [
+                "The Key Stones that Zinnia holds are giving off a blinding light!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:block.beacon.activate ambient @s ~ ~ ~ 1000 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add ShakeScreen');",
+                            "q.dialogue.set_page('page43');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page43",
+            "speaker": "zinnia",
+            "lines": [
+                "...Ugh...ngh...gh..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 333.79 243.00 -177.20 -384.76 16.05');",
+                            "q.dialogue.set_page('page44');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page44",
+            "speaker": "zinnia",
+            "lines": [
+                "\"I summon thee...to aid...this fight... and save us...from disaster!\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page45');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page45",
+            "speaker": "zinnia",
+            "lines": [
+                "Realize them...upon this world...! For this do I summon thee!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 337.73 325.77 -199.84 -360.31 84.00');",
+                            "q.dialogue.set_page('page46');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page46",
+            "speaker": "zinnia",
+            "lines": [
+                "Rayquazaaa!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
+                            "q.run_command('execute unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run pokespawnat 338 243 -197 rayquaza no_ai=true level=70 moves=dragonascent,extremespeed,dragonpulse,dragondance ability=airlock');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 325.65 245.53 -179.26 224.69 -6.45');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 100 1 1');",
+                            "q.dialogue.set_page('page47');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47",
+            "speaker": "rayquaza",
+            "lines": [
+                "Kiryararararahhh!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ShakeScreen');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound rayquaza record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 137');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 349.73 254.53 -184.35 130.79 25.05');",
+                            "q.dialogue.set_page('page48');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page48",
+            "speaker": "rayquaza",
+            "lines": [
+                "Kiryassshhhaaahhh!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page49');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page49",
+            "speaker": "zinnia",
+            "lines": [
+                "!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 349.73 254.53 -184.35 130.79 25.05');",
+                            "q.dialogue.set_page('page50');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page50",
+            "speaker": "zinnia",
+            "lines": [
+                "Ray...quaza!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 340.14 242.50 -165.03 164.39 -3.15');",
+                            "q.dialogue.set_page('page51');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page51",
+            "speaker": "zinnia",
+            "lines": [
+                "I did it! I...I did it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page52');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page52",
+            "speaker": "zinnia",
+            "lines": [
+                "Now the world...will be saved!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page53');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page53",
+            "speaker": "zinnia",
+            "lines": [
+                "Aster... Aster, I did it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 349.22 257.90 -199.45 35.54 35.25');",
+                            "q.dialogue.set_page('page54');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page54",
+            "speaker": "zinnia",
+            "lines": [
+                "Great Rayquaza! Hear my wish!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page55');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page55",
+            "speaker": "zinnia",
+            "lines": [
+                "Achieve your Mega Evolution! Take hold of your true power!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page56');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page56",
+            "speaker": "zinnia",
+            "lines": [
+                "Show me your true face! The Rayquaza that will save this planet!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run stopsound @s record');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 337.97 242.21 -176.65 40.49 -0.30');",
+                            "q.dialogue.set_page('page57');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page57",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page58');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page58",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page59');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page59",
+            "speaker": "system",
+            "lines": [
+                "Zinnia's Key Stone does not react..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 358.51 245.20 -182.08 90.44 1.20');",
+                            "q.dialogue.set_page('page60');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page60",
+            "speaker": "zinnia",
+            "lines": [
+                "Huh?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page61');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page61",
+            "speaker": "zinnia",
+            "lines": [
+                "H-how can this be?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page62');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page62",
+            "speaker": "zinnia",
+            "lines": [
+                "I gathered all of the Key Stones that could withstand your great power..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page63');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page63",
+            "speaker": "zinnia",
+            "lines": [
+                "and summoned you here... You came..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page64');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page64",
+            "speaker": "zinnia",
+            "lines": [
+                "And yet... Why?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 338.78 242.20 -169.11 164.39 -10.20');",
+                            "q.dialogue.set_page('page65');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page65",
+            "speaker": "zinnia",
+            "lines": [
+                "Come on! Do it! Mega Evolve! Why?! Why won't you..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 337.97 242.21 -176.65 40.49 -0.30');",
+                            "q.dialogue.set_page('page66');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page66",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page67');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page67",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page68');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page68",
+            "speaker": "system",
+            "lines": [
+                "Zinnia's Key Stone does not react..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 325.65 245.53 -179.26 224.69 -6.45');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 100 1 1');",
+                            "q.dialogue.set_page('page69');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page69",
+            "speaker": "rayquaza",
+            "lines": [
+                "Kirrrurrrurrr..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 347.74 253.77 -202.74 -337.36 24.90');",
+                            "q.dialogue.set_page('page70');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page70",
+            "speaker": "zinnia",
+            "lines": [
+                "What?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page71');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page71",
+            "speaker": "zinnia",
+            "lines": [
+                "It can't be..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page72');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page72",
+            "speaker": "zinnia",
+            "lines": [
+                "The one without enough power...is you, Rayquaza?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 338.27 241.76 -169.77 -193.51 -11.55');",
+                            "q.dialogue.set_page('page73');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page73",
+            "speaker": "zinnia",
+            "lines": [
+                "The Meteorites that should lie within Rayquaza's great body...aren't enough?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page74');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page74",
+            "speaker": "zinnia",
+            "lines": [
+                "Have these thousand years drained them of their power?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 335.84 245.13 -178.82 -359.56 31.65');",
+                            "q.dialogue.set_page('page75');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page75",
+            "speaker": "zinnia",
+            "lines": [
+                "This...can't...be..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page76');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page76",
+            "speaker": "zinnia",
+            "lines": [
+                "I can't..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page77');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page77",
+            "speaker": "zinnia",
+            "lines": [
+                "I... I... Everything...I've done...till now..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page78');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page78",
+            "speaker": "zinnia",
+            "lines": [
+                "Aster... I can't... I can't take any...more..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page79');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page79",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 339.26 243.00 -167.32 -185.56 -7.95');",
+                            "q.run_command('execute as ' + q.player.username + ' at @s run particle minecraft:flash ~ ~1 ~ 0 0 0 1 1 normal');",
+                            "q.dialogue.set_page('page80');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page80",
+            "speaker": "system",
+            "lines": [
+                "Your Meteorite suddenly began to glow!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page81');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page81",
+            "speaker": "zinnia",
+            "lines": [
+                "That's—?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:block.beacon.power_select ambient');",
+                            "q.run_command('execute as ' + q.player.username + ' at @s run particle minecraft:flash ~ ~1 ~ 0 0 0 1 1 normal');",
+                            "q.dialogue.set_page('page82');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page82",
+            "speaker": "system",
+            "lines": [
+                "The glow of your Meteorite grew even stronger!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 339.99 243.00 -172.46 -256.51 10.05');",
+                            "q.dialogue.set_page('page83');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page83",
+            "speaker": "zinnia",
+            "lines": [
+                "What? That Meteorite?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page84');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page84",
+            "speaker": "zinnia",
+            "lines": [
+                "It's just like...a Mega Stone?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 334.17 250.38 -182.93 -154.36 5.70');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 100 1 1');",
+                            "q.dialogue.set_page('page85');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page85",
+            "speaker": "rayquaza",
+            "lines": [
+                "Kiryarararaaahhh!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 349.22 244.76 -178.00 -217.51 -13.50');",
+                            "q.dialogue.set_page('page86');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page86",
+            "speaker": "system",
+            "lines": [
+                "Rayquaza swallowed your Meteorite!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 100 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add ShakeScreen');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound rayquaza record @s[tag=!RadioOff] ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[tag=!RadioOff] MusicCooldown 137');",
+                            "q.dialogue.set_page('page87');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page87",
+            "speaker": "rayquaza",
+            "lines": [
+                "Kirrrihrrrihrrrihhhh!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 100 1 1');",
+                            "q.dialogue.set_page('page88');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page88",
+            "speaker": "system",
+            "lines": [
+                "Light is spilling forth from within Rayquaza's body!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 336.38 244.76 -179.64 -354.16 27.90');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ShakeScreen');",
+                            "q.dialogue.set_page('page89');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page89",
+            "speaker": "zinnia",
+            "lines": [
+                "Whoa!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page90');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page90",
+            "speaker": "zinnia",
+            "lines": [
+                "Swallowing meteorites allows it to store as much power as a Mega Stone."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page91');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page91",
+            "speaker": "zinnia",
+            "lines": [
+                "Your Meteorite summoned forth the power needed for Rayquaza to Mega Evolve!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 100 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 339.44 243.64 -167.45 167.24 -0.15');",
+                            "q.dialogue.set_page('page92');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page92",
+            "speaker": "rayquaza",
+            "lines": [
+                "Kirrrihrrrihrrriii!!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page93');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page93",
+            "speaker": "zinnia",
+            "lines": [
+                "Hah! It's amazing!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 339.26 243.00 -167.32 -185.56 -7.95');",
+                            "q.dialogue.set_page('page94');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page94",
+            "speaker": "zinnia",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + '! Rayquaza is trying to build up power...'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page95');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page95",
+            "speaker": "zinnia",
+            "lines": [
+                "It wants power for itself to take you on!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page96');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page96",
+            "speaker": "zinnia",
+            "lines": [
+                "Use everything you've got and win over Rayquaza! You have to master it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page97');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page97",
+            "speaker": "zinnia",
+            "lines": [
+                "This is the Legendary Pokémon that all Hoenn views as our great protector!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page98');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page98",
+            "speaker": "zinnia",
+            "lines": [
+                "And the only one who can direct it now..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page99');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page99",
+            "speaker": "zinnia",
+            "lines": [
+                "It's you! You have to do this!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue205');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

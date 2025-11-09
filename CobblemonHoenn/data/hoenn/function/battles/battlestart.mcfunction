@@ -265,6 +265,7 @@ execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=Legendar
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryBeasts] run playsound dogtrio record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryBeasts] run scoreboard players set @s MusicCooldown 289
 
+execute as @s[x=142,y=200,z=-326,dx=364,dy=256,dz=317,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRayquaza] run tag @s add RayquazaEncounter
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRayquaza] run stopsound @s record
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRayquaza] run playsound rayquaza record @s ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0},tag=LegendaryRayquaza] run scoreboard players set @s MusicCooldown 137

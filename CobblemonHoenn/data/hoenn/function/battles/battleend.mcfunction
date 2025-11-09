@@ -58,8 +58,16 @@ execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue148,tag=!Dialo
 
 
 
+#Player if Rayquaza is not caught in battle, in the Delta Episode
+#RayquazaEncounter is applied upon battling the legend. This bit should detect if it was caught or not. If not caught, removes the Encounter tag allowing it to respawn.
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] run scoreboard players set @s Temp 0
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] store result score @s Temp run teststore @s all rayquaza
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] unless entity @s[scores={Temp=1..}] run tag @s remove RayquazaEncounter
 
-
+#If player catches it, tags accordingly
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] run scoreboard players set @s Temp 0
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] store result score @s Temp run teststore @s all rayquaza
+execute as @s[tag=!RadioOff,scores={BattleEnd=5}] if entity @s[scores={Temp=1..}] run tag @s add RayquazaCaught
 
 
 scoreboard players set @s BattleEnd 0

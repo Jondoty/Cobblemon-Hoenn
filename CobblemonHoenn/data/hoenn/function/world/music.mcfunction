@@ -478,8 +478,8 @@ playsound petalburgwoods record @s[x=-2215,y=0,z=-3100,dx=686,dy=256,dz=757,scor
 scoreboard players set @s[x=-2215,y=0,z=-3100,dx=686,dy=256,dz=757,scores={MusicCooldown=0}] MusicCooldown 122
 
 #Sky Pillar
-playsound skypillar record @s[x=142,y=0,z=-326,dx=364,dy=256,dz=317,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=142,y=0,z=-326,dx=364,dy=256,dz=317,scores={MusicCooldown=0}] MusicCooldown 84
+playsound skypillar record @s[x=142,y=0,z=-326,dx=364,dy=230,dz=317,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=142,y=0,z=-326,dx=364,dy=230,dz=317,scores={MusicCooldown=0}] MusicCooldown 84
 
 #Victory Road
 playsound victoryroad record @s[x=1176,y=0,z=-3361,dx=575,dy=256,dz=797,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1

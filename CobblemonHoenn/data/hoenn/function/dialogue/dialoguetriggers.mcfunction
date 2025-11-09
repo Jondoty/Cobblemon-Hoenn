@@ -784,6 +784,24 @@ execute as @s[x=323,y=143,z=-167,distance=..8,tag=Dialogue202,tag=!Dialogue203] 
 execute as @s[x=321,y=184,z=-162,distance=..25,tag=Dialogue203,tag=!Dialogue204] unless entity @e[x=338,y=187,z=-157,dy=3,type=cobblemon:npc] run npcspawnat 338 187 -157 zinnia_generic
 execute as @s[x=338,y=187,z=-157,distance=..8,tag=Dialogue203,tag=!Dialogue204] run opendialogue zinnia_dialogue204 @s
 
+#Sky Pillar Summit, brings about Rayquaza
+execute as @s[x=338,y=243,z=-175,distance=..15,tag=Dialogue199,tag=!Dialogue205] run opendialogue zinnia_dialogue205 @s
+
+execute as @s[x=338,y=231,z=-146,distance=..25,tag=!Dialogue205] unless entity @e[x=335,y=243,z=-174,dy=3,type=cobblemon:npc] run npcspawnat 335 243 -174 zinnia_generic
+execute as @s[x=338,y=231,z=-146,distance=..25,tag=!Dialogue205] unless entity @e[x=341,y=243,z=-174,dy=3,type=cobblemon:pokemon] run pokespawnat 341 243 -174 whismur level=30 no_ai=yes 
+execute as @e[x=341,y=243,z=-174,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] at @s run tp @s ~ ~ ~ 180 ~
+
+execute positioned 341 243 -174 as @e[distance=..3,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:whismur"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute positioned 341 243 -174 as @e[distance=..3,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:whismur"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute positioned 341 243 -174 as @e[distance=..3,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:whismur"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute positioned 341 243 -174 as @e[distance=..3,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:whismur"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
+#Prompts player to switch out Rayquaza into their party if not present
+execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] run scoreboard players set @s Temp 0
+execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] store result score @s Temp run teststore @s party rayquaza 
+execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run tellraw @s {"text":"Rayquaza wishes to join your party. Please switch it to a party slot.","italic":true,"color":"gray"}
+execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run pc
+execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run scoreboard players set @s StepCounter 0
 
 
 
@@ -860,12 +878,12 @@ execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={
 execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regigigas"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
 
 #Rayquaza
-execute as @s[x=338,y=231,z=-146,distance=..10,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction 338 242 -197 {width:5.5,height:5.5,response:1,Tags:[NPCs]}
-execute as @s[x=338,y=231,z=-146,distance=..10,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run pokespawnat 338 243 -197 rayquaza no_ai=true level=70 moves=dragonascent,extremespeed,dragonpulse,dragondance ability=airlock
-execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
-execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
-execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
-execute positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+execute as @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction 338 242 -197 {width:5.5,height:5.5,response:1,Tags:[NPCs]}
+execute as @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run pokespawnat 338 243 -197 rayquaza no_ai=true level=70 moves=dragonascent,extremespeed,dragonpulse,dragondance ability=airlock
+execute if entity @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute if entity @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute if entity @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute if entity @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
 
 
 #Toggles Heatran's portal to be visible or not depending on the primal reversion story beat
