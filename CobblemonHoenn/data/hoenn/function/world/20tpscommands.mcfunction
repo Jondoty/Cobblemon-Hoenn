@@ -147,14 +147,14 @@ execute as @a[scores={DialogueTrigger=142,TalkTime=200..207},gamemode=spectator]
 execute as @a[scores={DialogueTrigger=142,TalkTime=207..214},gamemode=spectator] at @s run tp @s ~-0.25 ~ ~-0.25
 
 #Cave of Origin particles
-#execute as @a[scores={DialogueTrigger=147..148,TalkTime=216..223}] at @s run tp @s ~0.01 ~ ~-0.01
-#execute as @a[scores={DialogueTrigger=147..148,TalkTime=224..231}] at @s run tp @s ~-0.01 ~ ~-0.01
-#execute if entity @a[scores={DialogueTrigger=147,TalkTime=224..248}] as @e[x=1856,y=70,z=-2426,distance=..5,type=pixelmon:statue] at @s run particle minecraft:electric_spark ~ ~ ~ 5 5 5 1 100 normal
-#execute if entity @a[scores={DialogueTrigger=147,TalkTime=232..248}] as @e[x=1856,y=70,z=-2426,distance=..5,type=pixelmon:statue] at @s run particle minecraft:end_rod ~ ~ ~ 2.5 3 2.5 0.25 10 normal
-#
-#execute if entity @a[scores={DialogueTrigger=148,TalkTime=224..248}] as @e[x=2025,y=70,z=-2421,distance=..5,type=pixelmon:statue] at @s run particle minecraft:electric_spark ~ ~ ~ 5 5 5 1 100 normal
-#execute if entity @a[scores={DialogueTrigger=148,TalkTime=224..248}] as @e[x=2025,y=70,z=-2421,distance=..5,type=pixelmon:statue] at @s run particle minecraft:dolphin ~ ~ ~ 5 5 5 1 100 normal
-#execute if entity @a[scores={DialogueTrigger=148,TalkTime=232..248}] as @e[x=2025,y=70,z=-2421,distance=..5,type=pixelmon:statue] at @s run particle minecraft:end_rod ~ ~ ~ 2.5 3 2.5 0.25 10 normal
+execute as @a[scores={DialogueTrigger=147..148,TalkTime=6..13}] at @s run tp @s ~0.01 ~ ~-0.01
+execute as @a[scores={DialogueTrigger=147..148,TalkTime=14..21}] at @s run tp @s ~-0.01 ~ ~-0.01
+execute if entity @a[scores={DialogueTrigger=147,TalkTime=14..38}] run particle minecraft:electric_spark 1856 70 -2426 5 5 5 1 100 normal
+execute if entity @a[scores={DialogueTrigger=147,TalkTime=22..38}] run particle minecraft:end_rod 1856 70 -2426 2.5 3 2.5 0.25 10 normal
+
+execute if entity @p[scores={DialogueTrigger=148,TalkTime=14..38}] run particle minecraft:electric_spark 2025 72 -2421 5 5 5 1 100 normal
+execute if entity @p[scores={DialogueTrigger=148,TalkTime=14..38}] run particle minecraft:dolphin 2025 72 -2421 5 5 5 1 100 normal
+execute if entity @p[scores={DialogueTrigger=148,TalkTime=22..38}] run particle minecraft:end_rod 2025 72 -2421 2.5 3 2.5 0.25 10 normal
 
 #Dialogue 149, legend defeated cutscene
 execute as @a[scores={DialogueTrigger=149,TalkTime=6..18},gamemode=spectator] at @s run tp @s ~ ~0.1 ~-0.05 ~ ~
@@ -169,7 +169,7 @@ execute as @a[scores={DialogueTrigger=149,TalkTime=80..90},gamemode=spectator] a
 execute as @a[scores={DialogueTrigger=149,TalkTime=592..630},gamemode=spectator] at @s run tp @s ~0.03 ~0.03 ~0.0375 ~ ~
 
 #Sky Pillar into Outer Space
-#execute as @a[scores={DialogueTrigger=207,TalkTime=50..65}] at @s run tp @e[distance=..15,type=pixelmon:statue,nbt={Variant:"mega"}] ~ ~2 ~
+execute as @a[scores={DialogueTrigger=207,TalkTime=50..65}] at @s run tp @e[distance=..30,type=cobblemon:pokemon,nbt={NoAI:1b,Pokemon:{Species:"cobblemon:rayquaza"}}] ~ ~2 ~
 execute as @a[scores={DialogueTrigger=207,TalkTime=50..65}] at @s run tp @s ~ ~2 ~
 
 execute as @a[scores={DialogueTrigger=207,TalkTime=1..9}] at @s run tp @s ~-0.005 ~ ~0.005
