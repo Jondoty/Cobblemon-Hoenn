@@ -4,6 +4,11 @@ for_each(t.player, c.players, {
     v.player = t.player.player;
     q.set_query('player', t.player.player);
 
-    q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 40');
-    q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');
+    q.run_command('execute as ' + q.player.username + ' run tag @s[x=1788,y=63,z=-2497,dx=318,dy=34,dz=172] add Skip');
+    q.run_command('execute as ' + q.player.username + ' run tag @s[x=142,y=250,z=-326,dx=364,dy=256,dz=317] add Skip');
+    q.run_command('execute as ' + q.player.username + ' run tag @s[x=392,y=-100,z=2311,dx=501,dy=256,dz=501] add Skip');
+
+    q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s BattleStart 40');
+    q.run_command('execute as ' + q.player.username + ' unless entity @s[tag=Skip] run function hoenn:triggers/stopsound');
+    q.run_command('execute as ' + q.player.username + ' run tag @s remove Skip');
 });
