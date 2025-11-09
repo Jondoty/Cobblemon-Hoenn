@@ -764,6 +764,29 @@ execute as @s[x=972,y=69,z=1596,distance=..10,tag=Dialogue196,tag=!Dialogue197] 
 #Sky Pillar Wallace, spawns NPC to battle
 execute as @s[x=365,y=64,z=119,distance=..50,tag=Dialogue197,tag=!Dialogue199] unless entity @e[x=337,y=64,z=19,dy=3,type=cobblemon:npc] run npcspawnat 337 64 19 route131_wallace
 
+#Sky Pillar, Zinnia dialogue no 200
+execute as @s[x=338,y=89,z=-111,distance=..25,tag=Dialogue195,tag=!Dialogue200] unless entity @e[x=338,y=91,z=-148,dy=3,type=cobblemon:npc] run npcspawnat 338 91 -148 zinnia_generic
+execute as @s[x=338,y=91,z=-148,distance=..8,tag=Dialogue195,tag=!Dialogue200] run opendialogue zinnia_dialogue200 @s
+
+#no 201
+execute as @s[x=350,y=91,z=-204,distance=..25,tag=Dialogue200,tag=!Dialogue201] unless entity @e[x=350,y=91,z=-204,dy=3,type=cobblemon:npc] run npcspawnat 350 91 -204 zinnia_generic
+execute as @s[x=350,y=91,z=-204,distance=..8,tag=Dialogue200,tag=!Dialogue201] run opendialogue zinnia_dialogue201 @s
+
+#no 202
+execute as @s[x=352,y=138,z=-205,distance=..25,tag=Dialogue201,tag=!Dialogue202] unless entity @e[x=352,y=143,z=-213,dy=3,type=cobblemon:npc] run npcspawnat 352 143 -213 zinnia_generic
+execute as @s[x=352,y=143,z=-213,distance=..8,tag=Dialogue201,tag=!Dialogue202] run opendialogue zinnia_dialogue202 @s
+
+#no 203
+execute as @s[x=323,y=143,z=-168,distance=..30,tag=Dialogue202,tag=!Dialogue203] unless entity @e[x=323,y=143,z=-168,dy=3,type=cobblemon:npc] run npcspawnat 323 143 -168 zinnia_generic
+execute as @s[x=323,y=143,z=-167,distance=..8,tag=Dialogue202,tag=!Dialogue203] run opendialogue zinnia_dialogue203 @s
+
+#no 204
+execute as @s[x=321,y=184,z=-162,distance=..25,tag=Dialogue203,tag=!Dialogue204] unless entity @e[x=338,y=187,z=-157,dy=3,type=cobblemon:npc] run npcspawnat 338 187 -157 zinnia_generic
+execute as @s[x=338,y=187,z=-157,distance=..8,tag=Dialogue203,tag=!Dialogue204] run opendialogue zinnia_dialogue204 @s
+
+
+
+
 
 
 
