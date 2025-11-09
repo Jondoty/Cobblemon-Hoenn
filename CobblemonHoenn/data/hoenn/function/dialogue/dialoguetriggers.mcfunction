@@ -804,7 +804,9 @@ execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaugh
 execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run scoreboard players set @s StepCounter 0
 
 
-
+#Dialogue 206, Sky Pillar after catching Rayquaza
+#Only runs with Rayquaza in the player's party
+execute as @s[x=337,y=242,z=-178,distance=..30,tag=RayquazaCaught,tag=Dialogue205,tag=!Dialogue206,scores={Temp=1..,StepCounter=1..}] run opendialogue zinnia_dialogue206 @s
 
 
 
