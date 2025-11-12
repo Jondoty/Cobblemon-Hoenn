@@ -146,11 +146,41 @@ execute as @a[tag=!RadioOff,scores={MusicCooldown=0}] run function hoenn:world/m
 #Removes a MusicCooldown score each run, resets music at 0
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
 
-#Resets the music if player jumps on or off a bicycle
-#execute as @a[tag=!RadioOff,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
-#execute as @a[tag=!RadioOff,tag=Cycling] at @s positioned ~ ~-2 ~ unless entity @e[dy=4,type=pixelmon:bike] run tag @s remove Cycling
 
-#execute as @a[tag=!RadioOff,tag=!Cycling] at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run function hoenn:tools/forceclick
+#Bicycles
+
+#Equips and dequips bikes
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}}] run tag @s add EquipAcro
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}}] run tag @s add EquipMach
+
+execute as @a[scores={click=1..},tag=EquipAcro] run clear @s minecraft:carrot_on_a_stick[custom_name='["",{"text":"Acro Bike","italic":false,"color":"red"}]',lore=['["",{"text":"This folding Bike allows you to perform","italic":false}]','[{"text":"actions such as wheelies and bunny hops. ","italic":false}]'],custom_model_data=4]
+execute as @a[scores={click=1..},tag=EquipMach] run clear @s minecraft:carrot_on_a_stick[custom_name='["",{"text":"Mach Bike","italic":false,"color":"dark_aqua"}]',lore=['["",{"text":"This folding Bike more than","italic":false}]','[{"text":"doubles your movement speed.","italic":false}]'],custom_model_data=5]
+
+execute as @a[scores={click=1..},tag=EquipAcro] run item replace entity @s armor.head with minecraft:carrot_on_a_stick[custom_name='["",{"text":"Acro Bike","italic":false,"color":"red"}]',lore=['["",{"text":"This folding Bike allows you to perform","italic":false}]','[{"text":"actions such as wheelies and bunny hops. ","italic":false}]'],custom_model_data=4]
+execute as @a[scores={click=1..},tag=EquipMach] run item replace entity @s armor.head with minecraft:carrot_on_a_stick[custom_name='["",{"text":"Mach Bike","italic":false,"color":"dark_aqua"}]',lore=['["",{"text":"This folding Bike more than","italic":false}]','[{"text":"doubles your movement speed.","italic":false}]'],custom_model_data=5]
+
+execute as @a[scores={click=1..},tag=EquipAcro,tag=!RadioOff] run function hoenn:triggers/stopsound
+execute as @a[scores={click=1..},tag=EquipMach,tag=!RadioOff] run function hoenn:triggers/stopsound
+
+execute as @a[scores={click=1..},tag=EquipAcro,tag=!RadioOff] run playsound minecraft:click ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={click=1..},tag=EquipMach,tag=!RadioOff] run playsound minecraft:click ambient @s ~ ~ ~ 1 1 1
+
+execute as @a[scores={click=1..},tag=EquipAcro] run scoreboard players set @s click 0
+execute as @a[scores={click=1..},tag=EquipMach] run scoreboard players set @s click 0
+
+tag @a[tag=EquipAcro] remove EquipAcro
+tag @a[tag=EquipMach] remove EquipMach
+
+#Checks if the player has the cycles equiped for music & cycling features
+tag @a[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] add Cycling
+tag @a[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}]}] add Cycling
+
+#Removes if cycling tag is found, but neither
+execute as @a[tag=Cycling] unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}]}] run tag @s remove Cycling
+
+#Stops music if players dequips cycle
+execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run function hoenn:triggers/stopsound
+execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run tag @s remove CyclingMusic
 
 
 #Desert Ruins Safety Goggles Equip

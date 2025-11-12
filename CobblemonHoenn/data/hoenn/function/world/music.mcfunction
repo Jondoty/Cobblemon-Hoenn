@@ -109,9 +109,13 @@ execute if entity @e[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,nbt={Variant:"prima
 
 
 #If player is riding a bicycle
-#execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run playsound cycling record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-#execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run tag @s add Cycling
-#execute at @s positioned ~ ~-2 ~ if entity @e[dy=4,type=pixelmon:bike] run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 152
+execute as @s[nbt={Inventory:[{Slot: 103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] run playsound cycling record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+execute as @s[nbt={Inventory:[{Slot: 103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] run tag @s add CyclingMusic
+execute as @s[nbt={Inventory:[{Slot: 103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 152
+
+execute as @s[nbt={Inventory:[{Slot: 103b,components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}]}] run playsound cycling record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+execute as @s[nbt={Inventory:[{Slot: 103b,components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}]}] run tag @s add CyclingMusic
+execute as @s[nbt={Inventory:[{Slot: 103b,components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}]}] run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 152
 
 #---------------------------------------------------------------------------------------------------------------------------
 #Takes priority over most zones but not entities

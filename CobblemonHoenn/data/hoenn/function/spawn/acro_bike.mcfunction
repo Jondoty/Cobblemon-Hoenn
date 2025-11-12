@@ -1,0 +1,1 @@
+give @s carrot_on_a_stick[custom_name='["",{"text":"Acro Bike","italic":false,"color":"red"}]',lore=['["",{"text":"This folding Bike allows you to perform","italic":false}]','[{"text":"actions such as wheelies and bunny hops. ","italic":false}]'],custom_model_data=4]
