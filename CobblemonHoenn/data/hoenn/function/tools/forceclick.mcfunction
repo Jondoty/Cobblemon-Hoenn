@@ -1,3 +1,4 @@
+tag @s[tag=Cycling] add Skip
 
 stopsound @s[tag=!Skip] record
 scoreboard players set @s[tag=!Skip] MusicCooldown 0

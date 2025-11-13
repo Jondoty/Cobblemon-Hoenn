@@ -42,9 +42,8 @@ execute as @a[tag=ShakeScreen] at @s run function hoenn:cutscenes/shakeeffect
 #execute as @e[type=minecraft:armor_stand,nbt={ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{Unbreakable:1,Damage:6,HideFlags:6}}]}] at @s positioned ~ ~1.5 ~ run particle minecraft:portal ~ ~ ~ 1 1 1 0.1 1 normal @a
 
 #Bike obstacles
-#execute as @a at @s if entity @e[type=pixelmon:bike,distance=..3] run function hoenn:items/bikeobstacles
-#execute as @a at @s as @e[distance=..5,type=minecraft:item,nbt={Item:{id:"pixelmon:mach_bike",Count:1b}},tag=!AdventureData] run function hoenn:data/bikeitemdata
-#execute as @a at @s as @e[distance=..5,type=minecraft:item,nbt={Item:{id:"pixelmon:acro_bike",Count:1b}},tag=!AdventureData] run function hoenn:data/bikeitemdata
+execute as @a[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] run function hoenn:items/bikeobstacles
+execute as @a[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}]}] run function hoenn:items/bikeobstacles
 
 #Soaring Overworld particles
 #Thundurus, over Dewford
@@ -236,12 +235,12 @@ execute as @a[x=-569,y=83,z=-1427,dx=13,dy=8,dz=8,tag=!Dialogue116] run fill -56
 
 #Acro Bike paths on foot
 #Safari Zone
-#execute as @a[x=-101,y=93,z=-1149,distance=..5] at @s unless entity @e[distance=..5,type=pixelmon:bike] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~ ~ ~3
-#execute as @a[x=-51,y=93,z=-1222,distance=..5] at @s unless entity @e[distance=..5,type=pixelmon:bike] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~3 ~ ~
+execute as @a[x=-101,y=93,z=-1149,distance=..5] at @s unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~ ~ ~3
+execute as @a[x=-51,y=93,z=-1222,distance=..5] at @s unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~3 ~ ~
 
 #Route 119
-#execute as @a[x=-959,y=88,z=-1361,distance=..5] at @s unless entity @e[distance=..5,type=pixelmon:bike] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~-3 ~ ~
-#execute as @a[x=-874,y=67,z=-938,distance=..5] at @s unless entity @e[distance=..5,type=pixelmon:bike] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~3 ~ ~
+execute as @a[x=-959,y=88,z=-1361,distance=..5] at @s unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~-3 ~ ~
+execute as @a[x=-874,y=67,z=-938,distance=..5] at @s unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] if block ~ ~-1 ~ minecraft:iron_block run tp @s ~3 ~ ~
 
 
 #Slateport Route 134 Rapids
