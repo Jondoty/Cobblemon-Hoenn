@@ -1,15 +1,14 @@
 #These are the commands ran on the player immediately spawning into the map. They are only ran once and will reset story progress if ran over a player's existing playerdata
 #Sets values to 0 for base score instead of null values (non existant)
 
+#Movement speed in the world
+attribute @s minecraft:generic.movement_speed base set 0.15
+
 #Gives the player their first items
 function hoenn:spawn/startingbook
 function hoenn:spawn/pokenav
-#item replace entity @s inventory.0 with pixelmon:lime_poke_bag
-#item replace entity @s inventory.1 with pixelmon:red_poke_bag
-#item replace entity @s inventory.2 with pixelmon:light_blue_poke_bag
-#item replace entity @s inventory.8 with pixelmon:potion
-#item replace entity @s hotbar.8 with pixelmon:exp_all
-#give @s pixelmon:new_running_boots{Unbreakable:1}
+function hoenn:spawn/runningshoes
+
 
 #Gives the player money
 scoreboard players add @s Money 2000
