@@ -1,0 +1,333 @@
+{
+    "speakers": {
+        "npc": {
+            "name": "Rydel",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldman",
+                "isLeftSide": true
+            }
+        },
+        "player": {
+            "face": "q.player.face(true);",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Well, well, what have we here? A most energetic customer!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Me? You may call me Rydel. I'm the owner of this cycle shop."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Your running shoes... They're awfully filthy. Did you come from far away?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Hm, hm... You're saying you came all the way from Littleroot?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "My goodness! That's ridiculously far!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "If you had one of my Bikes, you could go anywhere easily while feeling the gentle caress of the wind!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "I'll tell you what! I'll give you a Bike!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "Oh, wait a second! I forgot to tell you that there are two kinds of Bikes!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "They are the Mach Bike and the Acro Bike!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                "Mach Bikes are for cyclists who want to feel the wild, blowing wind as they ride!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "npc",
+            "lines": [
+                "Acro Bikes are for those who prefer a technical ride!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "npc",
+            "lines": [
+                "I'm a real sweetheart, so you can have whichever one you like! Which one will you choose?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Acro Bike",
+                        "value": "acrobike",
+                        "action": "q.dialogue.set_page('pickacro');"
+                    },
+                    {
+                        "text": "Mach Bike",
+                        "value": "machbike",
+                        "action": "q.dialogue.set_page('pickmach');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickacro",
+            "speaker": "player",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + ' chose the Acro Bike.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/acro_bike');",
+                            "q.dialogue.set_page('end2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickmach",
+            "speaker": "player",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + ' chose the Mach Bike.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/acro_bike');",
+                            "q.dialogue.set_page('end2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end1",
+            "speaker": "npc",
+            "lines": [
+                "Just right click the bike to get you going!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.set_page('end2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end2",
+            "speaker": "npc",
+            "lines": [
+                "If you get the urge to switch Bikes, just come see me!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

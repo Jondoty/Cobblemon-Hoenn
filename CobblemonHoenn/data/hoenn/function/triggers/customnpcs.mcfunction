@@ -136,6 +136,18 @@ execute as @s[x=-560,y=45,z=-623,distance=..6] if entity @s[tag=!ItemLoot383,tag
 execute as @s[x=-560,y=45,z=-623,distance=..6] unless entity @s[tag=!ItemLoot383,tag=Temp] run opendialogue route123_richman_interaction @s
 execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
 
+#Rydel's cycles, Mauville City
+#Determines which bike the player already has
+tag @s[x=2831,y=65,z=2790,distance=..6,nbt={Inventory:[{components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Acro Bike"}],"text":""}'}}]}] add AcroRiding
+tag @s[x=2831,y=65,z=2790,distance=..6,nbt={Inventory:[{components:{"minecraft:custom_name":'{"extra":[{"color":"dark_aqua","italic":false,"text":"Mach Bike"}],"text":""}'}}]}] add MachRiding
+
+#Opens dialogue depending on bike status
+execute as @s[x=2831,y=65,z=2790,distance=..6,tag=!AcroRiding,tag=!MachRiding] run opendialogue rydel_nobike @s
+execute as @s[x=2831,y=65,z=2790,distance=..6,tag=AcroRiding] run opendialogue rydel_acrobike @s
+execute as @s[x=2831,y=65,z=2790,distance=..6,tag=MachRiding] run opendialogue rydel_machbike @s
+
+tag @s[x=2831,y=65,z=2790,distance=..6] remove AcroRiding
+tag @s[x=2831,y=65,z=2790,distance=..6] remove MachRiding
 
 #-------------
 
