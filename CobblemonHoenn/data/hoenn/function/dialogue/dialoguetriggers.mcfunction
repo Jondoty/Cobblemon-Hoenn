@@ -810,6 +810,14 @@ execute as @s[x=337,y=242,z=-178,distance=..30,tag=RayquazaCaught,tag=Dialogue20
 
 
 
+#Dialogue 210 - Littleroot parents after beating Elite Four
+#Spawns dad
+execute as @s[x=-2059,y=45,z=289,distance=..10,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] unless entity @e[x=-2060,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2060 40 301 dad_generic
+execute as @s[x=-2000,y=45,z=289,distance=..10,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] unless entity @e[x=-2000,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2000 40 301 dad_generic
+
+execute as @s[x=-2056,y=40,z=304,distance=..7,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] run opendialogue ssticket_dialogue210 @s
+execute as @s[x=-1999,y=39,z=295,distance=..7,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] run opendialogue ssticket_dialogue210 @s
+
 #Dialogue 171 - Route 101
 #Professor Birch giving Johto starter post-league and Zinnia Encounter
 execute as @s[x=-2029,y=69,z=254,distance=..12,tag=Dialogue169,tag=!Dialogue171] run opendialogue birch_dialogue171 @s

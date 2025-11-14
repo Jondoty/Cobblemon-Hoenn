@@ -561,6 +561,7 @@ execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run gamemode adventure
 tag @s[scores={DialogueTrigger=207,TalkTime=130..}] add Dialogue207
 scoreboard players set @s[scores={DialogueTrigger=207},tag=Dialogue207] TalkTime 0
 scoreboard players set @s[scores={DialogueTrigger=207},tag=Dialogue207] DialogueTrigger 0
+
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 216 - New Mauville
 #Player pressing button(s) in New Mauville
@@ -574,6 +575,51 @@ tellraw @s[scores={DialogueTrigger=216,TalkTime=32}] {"text":"<Computer> TRANSMI
 tag @s[scores={DialogueTrigger=216,TalkTime=32..}] add Dialogue216
 scoreboard players set @s[scores={DialogueTrigger=216},tag=Dialogue216] TalkTime 0
 scoreboard players set @s[scores={DialogueTrigger=216},tag=Dialogue216] DialogueTrigger 0
+
+#-----------------------------------------------------------------------------------------------------
+#Dialogue 243 - S.S. Tidal Voyrage Start
+#Traveling to a location
+tellraw @s[scores={DialogueTrigger=243,TalkTime=1}] {"text":"<Stewardess> Please board the ferry and wait for departure."}
+
+#blinds player
+execute as @s[scores={DialogueTrigger=243,TalkTime=6}] run effect give @s minecraft:blindness 5 1 true
+
+#tps player to the in-progress boat, tracks where they're heading with a score
+execute as @s[scores={DialogueTrigger=243,TalkTime=7}] run tp @s 2382 72 -1333 0 20
+execute as @s[scores={DialogueTrigger=243,TalkTime=7}] run function hoenn:tools/forceclick
+
+#If the player sleeps during the voyage
+execute as @s[scores={DialogueTrigger=243,TalkTime=7..439,sleep=0..5}] run scoreboard players set @s TalkTime 430
+execute as @s[scores={DialogueTrigger=243,TalkTime=7..439,sleep=0..5}] run tellraw @s ["",{"text":"<"},{"selector":"@s"},{"text":"> "},{"text":"zzz.....","italic":true,"color":"gray"}]
+
+tellraw @s[scores={DialogueTrigger=243,TalkTime=14}] {"text":"<Sailor> This ferry is built to plow through fast-running currents."}
+tellraw @s[scores={DialogueTrigger=243,TalkTime=22}] {"text":"<Sailor> We hope you enjoy your voyage with us. Feel free to explore the ship."}
+
+#Start 5 minute timer, arrives
+tellraw @s[scores={DialogueTrigger=243,TalkTime=35}] {"text":"<Intercom> Our journey will take about five minutes. Feel free to walk about the ship in the meantime!"}
+
+tellraw @s[scores={DialogueTrigger=243,TalkTime=435,Temp=2}] {"text":"<Intercom> We will be landing in Slateport City shortly."}
+tellraw @s[scores={DialogueTrigger=243,TalkTime=435,Temp=1}] {"text":"<Intercom> We will be landing in Lilycove City shortly."}
+tellraw @s[scores={DialogueTrigger=243,TalkTime=435,Temp=3}] {"text":"<Intercom> We will be landing at the Battle Resort shortly."}
+
+execute as @s[scores={DialogueTrigger=243,TalkTime=453}] run effect give @s minecraft:blindness 5 1 true
+execute as @s[scores={DialogueTrigger=243,TalkTime=455}] run tp @s 2505 70 1047 85 15
+tellraw @s[scores={DialogueTrigger=243,TalkTime=455}] {"text":"<Intercom> Thank you for sailing with us."}
+
+#Sets the player's respawn point at Pokemon Center of destination in case they slept and reset their spawn point onboard
+execute as @s[scores={DialogueTrigger=243,TalkTime=455,Temp=3}] run spawnpoint @s 2353 48 804
+execute as @s[scores={DialogueTrigger=243,TalkTime=455,Temp=2}] run spawnpoint @s -1539 48 261
+execute as @s[scores={DialogueTrigger=243,TalkTime=455,Temp=1}] run spawnpoint @s 518 53 -1036
+
+tag @s[scores={DialogueTrigger=243,TalkTime=455..}] add Dialogue216
+scoreboard players set @s[scores={DialogueTrigger=243},tag=Dialogue243] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=243},tag=Dialogue243] DialogueTrigger 0
+
+#-----------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 

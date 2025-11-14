@@ -210,6 +210,19 @@ execute as @s[x=2695,y=211,z=2376,distance=..8,tag=Dialogue194] run opendialogue
 execute as @s[x=2695,y=243,z=2376,distance=..8,tag=Dialogue194] run opendialogue steven_mossdeep_dialogue194_aqua_reminder @s
 
 
+#SS Tidal NPCs
+#Slateport
+execute as @s[x=2211,y=79,z=2585,distance=..8,tag=!SSTicket] run opendialogue sstidal_noticket @s
+execute as @s[x=2211,y=79,z=2585,distance=..8,tag=SSTicket] run opendialogue sstidal_slateport @s
+
+#Lilycove
+execute as @s[x=2421,y=79,z=2585,distance=..8,tag=!SSTicket] run opendialogue sstidal_noticket @s
+execute as @s[x=2421,y=79,z=2585,distance=..8,tag=SSTicket] run opendialogue sstidal_lilycove @s
+
+#Battle Resort
+execute as @s[x=2505,y=70,z=1044,distance=..8,tag=!SSTicket] run opendialogue sstidal_noticket @s
+execute as @s[x=2505,y=70,z=1044,distance=..8,tag=SSTicket] run opendialogue sstidal_battleresort @s
+
 #-------------------------------------------------------------
 #Gym Leaders
 #Mainly just teleports the player to the battle room when they click on the gym leaders

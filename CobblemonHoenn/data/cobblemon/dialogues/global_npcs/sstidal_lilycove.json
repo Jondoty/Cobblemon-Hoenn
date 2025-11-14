@@ -1,0 +1,128 @@
+{
+    "initializationAction": [
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Stewardess",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:lass",
+                "isLeftSide": false
+            }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hello. Are you here for the ferry? May I see your ticket?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "player",
+            "lines": [
+                "You showed the woman your ticket."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Perfect! That's all you need! And where would you like to go?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "The Battle Resort",
+                        "value": "battleresort",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove Dialogue243');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 3');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s DialogueTrigger 243');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "Slateport City",
+                        "value": "slateport",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove Dialogue243');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s DialogueTrigger 243');",
+                            "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "Nowhere",
+                        "value": "nowhere",
+                        "action": [
+                            "q.dialogue.set_page('end1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        
+
+
+
+        {
+            "id": "end1",
+            "speaker": "npc",
+            "lines": [
+                "Please sail with us another time!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        }
+    ]
+}
