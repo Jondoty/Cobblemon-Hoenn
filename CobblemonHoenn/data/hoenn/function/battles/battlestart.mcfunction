@@ -284,7 +284,25 @@ execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0}] run scorebo
 
 
 
+#----------------------------------------------------------------Battle Maison music----------------------------------------------------------------
 
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound trainer record @s[tag=Music1] ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=Music1] MusicCooldown 245
+
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound rival record @s[tag=Music2] ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=Music2] MusicCooldown 183
+
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound gymleader record @s[tag=Music3] ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=Music3] MusicCooldown 208
+
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound teambattle record @s[tag=Music4] ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=Music4] MusicCooldown 280
+
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound teamleaders record @s[tag=Music5] ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=Music5] MusicCooldown 203
+
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound wally record @s[tag=Music6] ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=Music6] MusicCooldown 117
 
 
 

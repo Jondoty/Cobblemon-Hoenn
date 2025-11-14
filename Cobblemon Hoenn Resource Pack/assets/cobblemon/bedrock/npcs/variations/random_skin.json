@@ -1,0 +1,552 @@
+{
+    "name": "cobblemon:random_skin",
+    "order": 0,
+    "variations": [
+        {
+            "aspects": [
+                "acetrainerf"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/acetrainerfemale.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "acetrainerm"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/acetrainermale.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "aromalady"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/aromalady.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "backpacker"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/backpacker.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "battlegirl"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/battlegirl.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "beauty"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/beauty.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "birdkeeper"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/birdkeeper.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "blackbelt"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/blackbelt.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "bride"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/bride.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "bugcatcher"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/bugcatcher.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "bugmaniac"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/bugmaniac.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "camper"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/camper.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "collector"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/collector.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "courtney"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/courtney.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "delinquent"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/delinquent.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "dragontamer"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/dragontamer.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "engineer"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/engineer.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "fairytalegirl"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/fairytalegirl.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "fisherman"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/fisherman.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "furisode"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/furisode.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "gentleman"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/gentleman.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "guitarist"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/guitarist.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "hexmaniac"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/hexmaniac.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "hiker"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/hiker.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "kindler"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/kindler.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "lady"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/lady.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "lass"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/lass.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "ninja"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/ninja.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "nita"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/nita.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "norman"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/norman.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "oldman"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/oldman.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "parasollady"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/parasollady.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "picnicker"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/picnicker.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "pokefanf"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/pokefanf.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "pokefanm"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/pokefanm.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "pokemaniac"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/pokemaniac.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "pokemonbreeder"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/pokemonbreeder.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "psychic"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/psychic.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "rangerf"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/rangerf.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "rangerm"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/rangerm.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "reporter"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/reporter.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "richman"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/richman.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "roxanne"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/roxanne.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "ruinmaniac"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/ruinmaniac.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "sailor"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/sailor.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "schoolboy"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/schoolboy.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "schoolgirl"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/schoolgirl.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "scientistf"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/scientistf.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "scientistm"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/scientistm.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "scubadiver"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/scubadiver.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "scubadiverf"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/scubadiverf.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "shopman"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/shopman.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "streetthug"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/streetthug.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "supernerd"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/supernerd.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "swimmerf"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/swimmerf.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "swimmerm"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/swimmerm.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "tourist"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/tourist.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "triathlete"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/triathlete.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "twin"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/twin.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "youngster"
+            ],
+            "poser": "cobblemon:standard",
+            "model": "cobblemon:trainer.geo",
+            "texture": "cobblemon:textures/npcs/youngster.png",
+            "layers": []
+        },
+        {
+            "aspects": [
+                "hasty"
+            ],
+            "poser": "cobblemon:standard"
+        }
+    ]
+}
