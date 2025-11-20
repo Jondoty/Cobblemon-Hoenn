@@ -8,7 +8,7 @@
     "type": "dialogue",
     "dialogue": "cobblemon:seafloor_team_magma_grunt4_interaction"
   },
-  "name": "Team Magma Grunt4",
+  "name": "Team Magma Grunt",
   "party": {
     "type": "simple",
     "pokemon": [

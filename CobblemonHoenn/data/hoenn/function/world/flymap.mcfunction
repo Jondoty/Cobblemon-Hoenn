@@ -34,6 +34,7 @@ execute at @s if block ~ ~ ~ minecraft:green_carpet run playsound minecraft:enti
 
 
 #teleports the player to respective location
+tp @s[x=321,y=237,z=-1913,dy=3,scores={Rival=2}] -2002 69 311 0 ~
 tp @s[x=321,y=237,z=-1913,dy=3] -2057 69 311 0 ~
 tp @s[x=321,y=237,z=-1916,dy=3,tag=FlyOldale] -2054 69 90 0 ~
 tp @s[x=318,y=237,z=-1916,dx=1,dy=3,tag=FlyPetalburg] -2506 69 28 0 ~

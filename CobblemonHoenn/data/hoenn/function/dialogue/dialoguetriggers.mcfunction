@@ -63,7 +63,7 @@ execute as @s[x=-2042,y=49,z=319,distance=..6,tag=Dialogue11,tag=!Dialogue12,sco
 #Dialogue 13, Mom after returning to lab
 execute as @s[x=-2026,y=69,z=285,distance=..15,tag=Dialogue12,tag=!Dialogue13] run opendialogue mom_dialogue13 @s
 
-#Dialogue 16 - Petalburg CityDad and Wally
+#Dialogue 16 - Petalburg City Dad and Wally
 #Sets up dad and youngster
 execute as @s[x=-2539,y=68,z=5,distance=..30,tag=!Dialogue16] unless entity @e[x=-2545,y=69,z=-16,distance=..2,type=cobblemon:npc] run npcspawnat -2545 69 -16 dad_generic
 execute as @s[x=-2539,y=68,z=5,distance=..30,tag=!Dialogue16] unless entity @e[x=-2545,y=69,z=-12,distance=..2,type=cobblemon:npc] run npcspawnat -2545 69 -12 youngster_generic
@@ -100,7 +100,7 @@ execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,sc
 execute as @s[x=-2415,y=42,z=-814,distance=..15,tag=Roxanne,tag=!Dialogue29,scores={GameVersion=1}] unless entity @e[x=-2361,y=42,z=-821,dy=3,type=cobblemon:npc] run npcspawnat -2361 42 -821 magma_grunt_rusturf_tunnel
 execute as @s[x=-2415,y=42,z=-814,distance=..15,tag=Roxanne,tag=!Dialogue29,scores={GameVersion=2}] unless entity @e[x=-2361,y=42,z=-821,dy=3,type=cobblemon:npc] run npcspawnat -2361 42 -821 aqua_grunt_rusturf_tunnel
 
-execute as @s[x=-2415,y=42,z=-814,distance=..15,tag=Roxanne,tag=!Dialogue29] unless entity @e[x=-2357,y=42,z=-821,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b}] run pokespawnat -2357 42 -821 wingull no_ai=true level=10
+execute as @s[x=-2415,y=42,z=-814,distance=..15,tag=Roxanne,tag=!Dialogue29] unless entity @e[x=-2357,y=42,z=-821,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b}] run pokespawnat -2357 42 -821 wingull no_ai=true level=25 nickname=Peeko
 execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
 execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
 execute positioned -2357 42 -821 as @e[distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b

@@ -17,9 +17,9 @@ execute if entity @e[x=-2070,y=65,z=1410,dy=3,type=armor_stand,tag=!ReloadCheck]
 execute as @a[x=-2021,y=64,z=1459,distance=..20,tag=!InitialTags] run function hoenn:triggers/startingcommands
 
 #Runs function to update player's music and titles on a constant basis
-execute as @a[scores={BattleMusic=0,DialogueTrigger=0,Cutscene=0}] run function hoenn:world/musictitles
+execute as @a[scores={DialogueTrigger=0,Cutscene=0}] run function hoenn:world/musictitles
 
-#Runs less-frequent cave portals, portals that are not activated by a portal block.
+#Runs less-frequent cave portals, warps that are not activated by a portal block.
 execute as @a run function hoenn:world/cavewarps
 
 
@@ -124,10 +124,10 @@ execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custo
 execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"dark_purple","italic":false,"text":"Eon Flute"}],"text":""}'}}}] run function hoenn:items/eonflute
 
 #Flash
-execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run tellraw @s {"text":"You used Flash!","italic":true,"color":"gray"}
-execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run effect give @s minecraft:night_vision 900 1 true
-execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~ 1 1 1
-execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run scoreboard players remove @s click 1
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"TM70: Flash"}],"text":""}'}}}] run tellraw @s {"text":"You used Flash!","italic":true,"color":"gray"}
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"TM70: Flash"}],"text":""}'}}}] run effect give @s minecraft:night_vision 900 1 true
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"TM70: Flash"}],"text":""}'}}}] run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"TM70: Flash"}],"text":""}'}}}] run scoreboard players remove @s click 1
 
 #Fly Map
 execute as @a[x=334,y=237,z=-1917,distance=..40] run function hoenn:world/flymap

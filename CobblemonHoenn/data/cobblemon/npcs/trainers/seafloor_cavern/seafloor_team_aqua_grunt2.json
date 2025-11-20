@@ -8,7 +8,7 @@
     "type": "dialogue",
     "dialogue": "cobblemon:seafloor_team_aqua_grunt2_interaction"
   },
-  "name": "Team Aqua Grunt2",
+  "name": "Team Aqua Grunt",
   "party": {
     "type": "simple",
     "pokemon": [

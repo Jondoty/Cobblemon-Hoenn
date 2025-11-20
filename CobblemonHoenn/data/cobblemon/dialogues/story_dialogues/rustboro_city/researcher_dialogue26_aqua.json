@@ -14,11 +14,11 @@
             }
         },
         "grunt": {
-            "name": "Team Magma Grunt",
+            "name": "Team Aqua Grunt",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:teammagmagruntm",
+                "identifier": "cobblemon:teamaquagruntm",
                 "isLeftSide": false
             }
         }

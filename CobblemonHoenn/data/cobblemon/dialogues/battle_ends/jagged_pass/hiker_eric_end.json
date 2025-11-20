@@ -22,7 +22,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                null
+                "Losing left me bitter!"
             ],
             "input": {
                 "type": "option",

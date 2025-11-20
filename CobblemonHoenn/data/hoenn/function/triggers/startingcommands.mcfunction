@@ -6,7 +6,7 @@ attribute @s minecraft:generic.movement_speed base set 0.15
 
 #Gives the player their first items
 function hoenn:spawn/startingbook
-function hoenn:spawn/pokenav
+function hoenn:pokenav/give
 function hoenn:spawn/runningshoes
 
 
@@ -42,6 +42,7 @@ scoreboard players set @s SecretBase 0
 scoreboard players set @s BaseTrigger 0
 scoreboard players set @s rng 0
 scoreboard players set @s PokemonLeague 0
+scoreboard players set @s Cutscene 0
 
 #Removes Misc Story Tags
 advancement revoke @s everything
@@ -67,6 +68,9 @@ tag @s remove MuseumGrunt2
 tag @s remove HarborGrunt1
 tag @s remove HarborGrunt2
 tag @s remove FirstElevatorRide
+tag @s remove PetalburgDoor1
+tag @s remove PetalburgDoor2
+tag @s remove PetalburgDoor3
 
 
 #Removes Mega Stone Fount tags
@@ -1205,7 +1209,14 @@ tag @s remove ItemLoot612
 
 
 
+#Resets currencies so you don't see my money in your shops
+scoreboard players reset Jond Money
+scoreboard players reset Jond BattlePoints
+scoreboard players reset Jond Coins
 
+scoreboard players reset JondGames Money
+scoreboard players reset JondGames BattlePoints
+scoreboard players reset JondGames Coins
 
 
 tag @s add InitialTags

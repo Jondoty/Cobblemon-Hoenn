@@ -282,7 +282,7 @@
                         "value": "next",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
-                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/acro_bike');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/mach_bike');",
                             "q.dialogue.set_page('end2');"
                         ]
                     }

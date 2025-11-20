@@ -8,6 +8,12 @@ execute as @a[x=-2033,y=68,z=272,dx=14,dy=10,dz=15,tag=!Dialogue5] at @s run tp 
 
 tp @a[x=2293,y=0,z=-1378,dx=211,dy=64,dz=92] 2387 72 -1333 90 24
 
+#----------
+#Rustboro Forest before player beats grunt
+execute as @a[x=-2726,y=68,z=-239,dx=12,dy=6,dz=9,tag=!Dialogue18] at @s run tp @s ~ ~ ~6
+
+
+#----------
 
 #Desert without Safety Goggles
 #South Side

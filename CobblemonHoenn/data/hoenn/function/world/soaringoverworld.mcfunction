@@ -688,6 +688,7 @@ gamemode adventure @s[x=-968,y=63,z=1450,dx=14,dy=15,dz=12]
 
 #Teleports
 #In version 2, probably good to control these with tags so once player gets it can't skip to routes not visited. For now, probably fine
+tp @s[x=-928,y=63,z=1498,dx=8,dy=15,dz=7,scores={Rival=2}] -2002 69 311 0 ~
 tp @s[x=-928,y=63,z=1498,dx=8,dy=15,dz=7] -2057 69 311 0 ~
 tp @s[x=-928,y=63,z=1482,dx=8,dy=15,dz=6] -2054 69 90 0 ~
 tp @s[x=-945,y=63,z=1477,dx=7,dy=15,dz=8] -2506 69 28 0 ~
