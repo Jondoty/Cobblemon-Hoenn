@@ -271,22 +271,22 @@ scoreboard players set @s PokeHave 0
 #three Pokémon with max friendship in their party
 
 scoreboard players set @s Temp 0
-execute as @s store result score @s PokeHave run testpartyslot @s 1 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 1 friendship=255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run testpartyslot @s 2 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 2 friendship=255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run testpartyslot @s 3 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 3 friendship=255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run testpartyslot @s 4 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 4 friendship=255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run testpartyslot @s 5 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 5 friendship=255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
-execute as @s store result score @s PokeHave run testpartyslot @s 6 friendship:255
+execute as @s store result score @s PokeHave run testpartyslot @s 6 friendship=255
 execute as @s[scores={PokeHave=1}] run scoreboard players add @s Temp 1
 scoreboard players set @s PokeHave 0
 
@@ -302,18 +302,9 @@ scoreboard players set @s PokeHave 0
 
 #Fabled Cave
 #if the player has a Level 100 Pokémon on their team
-execute as @s store result score @s PokeHave run testpartyslot @s 1 lvl:100
+execute as @s store result score @s PokeHave run teststore @s party level=100
 tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run testpartyslot @s 2 lvl:100
-tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run testpartyslot @s 3 lvl:100
-tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run testpartyslot @s 4 lvl:100
-tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run testpartyslot @s 5 lvl:100
-tag @s[scores={PokeHave=1}] add HaveLvl100
-execute as @s store result score @s PokeHave run testpartyslot @s 6 lvl:100
-tag @s[scores={PokeHave=1}] add HaveLvl100
+scoreboard players set @s PokeHave 0
 
 execute as @s[tag=HaveLvl100] run particle minecraft:firework -869 67 1480 0 2 0 0.1 0 force
 execute as @s[x=-870,y=63,z=1479,dx=2,dy=150,dz=2,tag=HaveLvl100] run title @s actionbar {"text":"Fabled Cave"}
@@ -322,36 +313,17 @@ execute as @s[x=-870,y=63,z=1479,dx=2,dy=15,dz=2,tag=HaveLvl100] run gamemode ad
 execute as @s[x=-870,y=63,z=1479,dx=2,dy=15,dz=2,tag=HaveLvl100] run tp @s -187 72 2221 180 0
 
 tag @s remove HaveLvl100
-scoreboard players set @s PokeHave 0
 
 
 #Gnarled Den
 #if the player has Reshiram and Zekrom in their party
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Reshiram
+execute as @s store result score @s PokeHave run teststore @s party reshiram
 tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Reshiram
-tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Reshiram
-tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Reshiram
-tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Reshiram
-tag @s[scores={PokeHave=1}] add ReshiramHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Reshiram
-tag @s[scores={PokeHave=1}] add ReshiramHave
+scoreboard players set @s PokeHave 0
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Zekrom
+execute as @s store result score @s PokeHave run teststore @s party zekrom
 tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Zekrom
-tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Zekrom
-tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Zekrom
-tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Zekrom
-tag @s[scores={PokeHave=1}] add ZekromHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Zekrom
-tag @s[scores={PokeHave=1}] add ZekromHave
+scoreboard players set @s PokeHave 0
 
 execute as @s[tag=ReshiramHave,tag=ZekromHave] run particle minecraft:firework -928 73 1420 0 2 0 0.1 0 force
 execute as @s[x=-929,y=63,z=1419,dx=2,dy=150,dz=2,tag=ReshiramHave,tag=ZekromHave] run title @s actionbar {"text":"Gnarled Den"}
@@ -366,31 +338,13 @@ scoreboard players set @s PokeHave 0
 #Trackless Forest
 #if the player has Ho-Oh or Lugia in their party
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Lugia
+execute as @s store result score @s PokeHave run teststore @s party lugia
 tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Lugia
-tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Lugia
-tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Lugia
-tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Lugia
-tag @s[scores={PokeHave=1}] add LugiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Lugia
-tag @s[scores={PokeHave=1}] add LugiaHave
+scoreboard players set @s PokeHave 0
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Hooh
+execute as @s store result score @s PokeHave run teststore @s party hooh
 tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Hooh
-tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Hooh
-tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Hooh
-tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Hooh
-tag @s[scores={PokeHave=1}] add HoohHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Hooh
-tag @s[scores={PokeHave=1}] add HoohHave
+scoreboard players set @s PokeHave 0
 
 scoreboard players set @s[tag=HoohHave] PokeHave 1
 scoreboard players set @s[tag=LugiaHave] PokeHave 1
@@ -409,74 +363,34 @@ scoreboard players set @s PokeHave 0
 #The second contains Giratina, and only appears if the player has Dialga and Palkia in their party
 
 scoreboard players set @s Temp 0
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Uxie
+
+execute as @s store result score @s PokeHave run teststore @s party uxie
 tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Uxie
-tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Uxie
-tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Uxie
-tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Uxie
-tag @s[scores={PokeHave=1}] add UxieHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Uxie
-tag @s[scores={PokeHave=1}] add UxieHave
+scoreboard players set @s PokeHave 0
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Mesprit
+execute as @s store result score @s PokeHave run teststore @s party mesprit
 tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Mesprit
-tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Mesprit
-tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Mesprit
-tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Mesprit
-tag @s[scores={PokeHave=1}] add MespritHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Mesprit
-tag @s[scores={PokeHave=1}] add MespritHave
+scoreboard players set @s PokeHave 0
 
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Azelf
+execute as @s store result score @s PokeHave run teststore @s party azelf
 tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Azelf
-tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Azelf
-tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Azelf
-tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Azelf
-tag @s[scores={PokeHave=1}] add AzelfHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Azelf
-tag @s[scores={PokeHave=1}] add AzelfHave
+scoreboard players set @s PokeHave 0
 
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Dialga
+execute as @s store result score @s PokeHave run teststore @s party dialga
 tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Dialga
-tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Dialga
-tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Dialga
-tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Dialga
-tag @s[scores={PokeHave=1}] add DialgaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Dialga
-tag @s[scores={PokeHave=1}] add DialgaHave
+scoreboard players set @s PokeHave 0
 
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Palkia
+execute as @s store result score @s PokeHave run teststore @s party palkia
 tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Palkia
-tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Palkia
-tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Palkia
-tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Palkia
-tag @s[scores={PokeHave=1}] add PalkiaHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Palkia
-tag @s[scores={PokeHave=1}] add PalkiaHave
+scoreboard players set @s PokeHave 0
 
+#Kills space rift
+execute unless @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] unless entity @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!PalkiaEncounter] unless entity @s[x=-958,y=100,z=1539,distance=..7,tag=!InDialogue,tag=DialgaHave,tag=PalkiaHave,tag=!Dialogue267] run kill @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display]
+
+#Spawns space rift
 execute as @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomModelData:5}},Rotation:[-145f,0.0f]}
 execute as @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!PalkiaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomModelData:5}},Rotation:[-145f,0.0f]}
 execute as @s[tag=DialgaHave,tag=PalkiaHave,tag=!GiratinaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomModelData:5}},Rotation:[-145f,0.0f]}
@@ -496,44 +410,17 @@ scoreboard players set @s PokeHave 0
 #The first contains TornadusOR/ThundurusAS, and only appears if the player has Castform in their party
 #The second cloud contains Landorus, and only appears if the player has Tornadus and Thundurus in their party
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Castform
+execute as @s store result score @s PokeHave run teststore @s party castform
 tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Castform
-tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Castform
-tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Castform
-tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Castform
-tag @s[scores={PokeHave=1}] add CastformHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Castform
-tag @s[scores={PokeHave=1}] add CastformHave
+scoreboard players set @s PokeHave 0
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Tornadus
+execute as @s store result score @s PokeHave run teststore @s party tornadus
 tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Tornadus
-tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Tornadus
-tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Tornadus
-tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Tornadus
-tag @s[scores={PokeHave=1}] add TornadusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Tornadus
-tag @s[scores={PokeHave=1}] add TornadusHave
+scoreboard players set @s PokeHave 0
 
-execute as @s store result score @s PokeHave run testpartyslot @s 1 Thundurus
+execute as @s store result score @s PokeHave run teststore @s party thundurus
 tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 2 Thundurus
-tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 3 Thundurus
-tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 4 Thundurus
-tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 5 Thundurus
-tag @s[scores={PokeHave=1}] add ThundurusHave
-execute as @s store result score @s PokeHave run testpartyslot @s 6 Thundurus
-tag @s[scores={PokeHave=1}] add ThundurusHave
+scoreboard players set @s PokeHave 0
 
 #Thundurus, runs if it is raining
 execute as @a[tag=CastformHave,x=-863,y=95,z=1411,distance=..7,tag=!ThundurusEncounter] if predicate hoenn:rain_test run opendialogue thundurus_encounter @s[tag=!InDialogue]
