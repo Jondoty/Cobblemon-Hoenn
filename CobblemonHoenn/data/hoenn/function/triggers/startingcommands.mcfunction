@@ -8,6 +8,7 @@ attribute @s minecraft:generic.movement_speed base set 0.15
 function hoenn:spawn/startingbook
 function hoenn:pokenav/give
 function hoenn:spawn/runningshoes
+function hoenn:spawn/travelersbackpack
 
 
 #Gives the player money
