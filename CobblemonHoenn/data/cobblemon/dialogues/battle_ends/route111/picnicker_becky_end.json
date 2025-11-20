@@ -22,7 +22,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                ""
+                "If they can find Fossils in the desert, it must have been a sea once! But that doesn't make my eyes any less itchy..."
             ],
             "input": {
                 "type": "option",

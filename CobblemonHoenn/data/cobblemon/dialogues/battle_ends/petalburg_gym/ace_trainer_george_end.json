@@ -3,6 +3,7 @@
         "c.npc.set_chatting();",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s add PetalburgDoor2');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1680 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 1680');"
     ],
@@ -19,10 +20,50 @@
     },
     "pages": [
         {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "I should have expected no less from our Gym Leader's kid. Well... That's not the whole story."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I should have expected no less from our Gym Leader's kid. Well... That's not the whole story. A Trainer's skills are the result of effort and work. I lost to you because I didn't put in enough effort. Go on! Next is the One-Hit KO Room!"
+                "A Trainer's skills are the result of effort and work. I lost to you because I didn't put in enough effort."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Go on! Next is the One-Hit KO Room!"
             ],
             "input": {
                 "type": "option",
