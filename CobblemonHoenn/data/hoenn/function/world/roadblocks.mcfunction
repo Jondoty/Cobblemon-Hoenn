@@ -8,9 +8,21 @@ tp @a[x=2293,y=0,z=-1378,dx=211,dy=64,dz=92] 2387 72 -1333 90 24
 execute as @a[x=-2032,y=68,z=262,dx=13,dy=5,dz=7,tag=!Dialogue5] run opendialogue route101_youngster_blocking @s
 execute as @a[x=-2032,y=68,z=262,dx=13,dy=5,dz=7,tag=!Dialogue5] at @s run tp @s ~ ~ ~5 
 
+#Oldale Town before rival battle & Birch followup
+execute as @a[x=-2112,y=68,z=48,dx=10,dy=6,dz=12,tag=!Dialogue12] run opendialogue oldale_supernerd_blocked @s
+execute as @a[x=-2112,y=68,z=48,dx=10,dy=6,dz=12,tag=!Dialogue12] at @s run tp @s ~7 ~ ~ 
+
 #Rustboro Forest before player beats grunt
 execute as @a[x=-2726,y=68,z=-239,dx=12,dy=6,dz=9,tag=!Dialogue18] at @s run tp @s ~ ~ ~6
 
+#Cycling Road without a bike
+#South Gate
+execute as @a[x=-1501,y=68,z=14,dx=8,dy=5,dz=14,tag=!Cycling] run opendialogue cyclingroad_south_blocked @s
+execute as @a[x=-1501,y=68,z=14,dx=8,dy=5,dz=14,tag=!Cycling] at @s run tp @s ~-7 ~ ~ 
+
+#North
+execute as @a[x=-1515,y=68,z=-383,dx=8,dy=5,dz=14,tag=!Cycling] run opendialogue cyclingroad_north_blocked @s
+execute as @a[x=-1515,y=68,z=-383,dx=8,dy=5,dz=14,tag=!Cycling] at @s run tp @s ~-7 ~ ~ 
 
 #----------
 
@@ -81,17 +93,195 @@ execute as @a[x=2127,y=68,z=-100,dx=12,dy=30,dz=30,tag=!Wallace] at @s run tp @s
 execute as @a[x=2243,y=68,z=-100,dx=12,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~-6 ~-3 ~10
 execute as @a[x=2127,y=68,z=-100,dx=122,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~ ~-3 ~10
 
-
-
-
-
-
-
 #----------
 
 #Gyms
 #Mossdeep Gym Return
 tp @a[x=-2686,y=0,z=1224,dx=190,dy=50,dz=449] -2586 61 1586 180 0
+
+
+
+#-----------------------------------------------------------------------------
+#Surf blocks!
+
+#Route 101
+execute as @a[x=-2179,y=0,z=-3,dx=49,dy=68,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2179,y=0,z=-3,dx=49,dy=68,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2152 69 38
+
+#Route 103
+execute as @a[x=-1979,y=0,z=-103,dx=70,dy=68,dz=85,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1979,y=0,z=-103,dx=70,dy=68,dz=85,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1979 69 -51
+
+execute as @a[x=-1908,y=0,z=-103,dx=77,dy=68,dz=85,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1908,y=0,z=-103,dx=77,dy=68,dz=85,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1830 69 -57
+
+#Petalburg City
+execute as @a[x=-2530,y=0,z=-60,dx=60,dy=68,dz=46,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2530,y=0,z=-60,dx=60,dy=68,dz=46,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2499 69 -9
+
+execute as @a[x=-2627,y=0,z=10,dx=42,dy=68,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2627,y=0,z=10,dx=42,dy=68,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2608 69 10
+
+execute as @a[x=-2627,y=0,z=67,dx=69,dy=68,dz=32,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2627,y=0,z=67,dx=69,dy=68,dz=32,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2561 69 62
+
+
+#Route 104
+execute as @a[x=-2810,y=0,z=-61,dx=74,dy=63,dz=64,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2810,y=0,z=-61,dx=74,dy=63,dz=64,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2748 64 -17
+
+execute as @a[x=-2810,y=0,z=4,dx=74,dy=63,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2810,y=0,z=4,dx=74,dy=63,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2738 64 35
+
+execute as @a[x=-2776,y=0,z=61,dx=67,dy=63,dz=94,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2776,y=0,z=61,dx=67,dy=63,dz=94,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2729 64 65
+
+execute as @a[x=-2708,y=0,z=61,dx=54,dy=63,dz=94,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2708,y=0,z=61,dx=54,dy=63,dz=94,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2686 64 78
+
+#Route 104 northern lake
+execute as @a[x=-2774,y=0,z=-457,dx=135,dy=68,dz=29,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2774,y=0,z=-457,dx=135,dy=68,dz=29,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2694 69 -465
+
+execute as @a[x=-2774,y=0,z=-427,dx=135,dy=68,dz=49,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2774,y=0,z=-427,dx=135,dy=68,dz=49,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2729 69 -379
+
+
+#Route 115
+execute as @a[x=-2869,y=0,z=-1045,dx=118,dy=63,dz=77,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2869,y=0,z=-1045,dx=118,dy=63,dz=77,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2771 64 -998
+
+execute as @a[x=-2869,y=0,z=-967,dx=169,dy=63,dz=41,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2869,y=0,z=-967,dx=169,dy=63,dz=41,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2752 64 -954
+
+execute as @a[x=-2869,y=0,z=-926,dx=169,dy=63,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2869,y=0,z=-926,dx=169,dy=63,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2768 64 -889
+
+execute as @a[x=-2869,y=0,z=-885,dx=78,dy=63,dz=43,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2869,y=0,z=-885,dx=78,dy=63,dz=43,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2809 64 -857
+
+execute as @a[x=-2869,y=0,z=-841,dx=119,dy=63,dz=67,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2869,y=0,z=-841,dx=119,dy=63,dz=67,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2796 64 -811
+
+
+
+#Route 106 & Dewford
+execute as @a[x=-2743,y=0,z=678,dx=64,dy=63,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2743,y=0,z=678,dx=64,dy=63,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2697 64 727
+
+execute as @a[x=-2678,y=0,z=678,dx=81,dy=63,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2678,y=0,z=678,dx=81,dy=63,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2632 64 715
+
+execute as @a[x=-2596,y=0,z=678,dx=127,dy=63,dz=58,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2596,y=0,z=678,dx=127,dy=63,dz=58,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2560 64 728
+
+execute as @a[x=-2516,y=0,z=737,dx=81,dy=63,dz=58,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2516,y=0,z=737,dx=81,dy=63,dz=58,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2483 64 770
+
+execute as @a[x=-2470,y=0,z=796,dx=32,dy=63,dz=88,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2470,y=0,z=796,dx=32,dy=63,dz=88,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2461 64 859
+
+execute as @a[x=-2437,y=0,z=815,dx=72,dy=63,dz=69,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2437,y=0,z=815,dx=72,dy=63,dz=69,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2420 64 881
+
+
+#Route 109
+execute as @a[x=-1678,y=0,z=435,dx=91,dy=63,dz=73,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1678,y=0,z=435,dx=91,dy=63,dz=73,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1594 64 478
+
+execute as @a[x=-1646,y=0,z=509,dx=95,dy=63,dz=74,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1646,y=0,z=509,dx=95,dy=63,dz=74,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1581 64 541
+
+execute as @a[x=-1611,y=0,z=584,dx=111,dy=63,dz=44,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1611,y=0,z=584,dx=111,dy=63,dz=44,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1535 64 611
+
+execute as @a[x=-1540,y=0,z=629,dx=96,dy=63,dz=95,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1540,y=0,z=629,dx=96,dy=63,dz=95,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1472 64 641
+
+execute as @a[x=-1443,y=0,z=629,dx=72,dy=63,dz=95,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1443,y=0,z=629,dx=72,dy=63,dz=95,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1408 64 644
+
+execute as @a[x=-1378,y=0,z=573,dx=45,dy=63,dz=106,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1378,y=0,z=573,dx=45,dy=63,dz=106,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1363 64 607
+
+execute as @a[x=-1332,y=0,z=498,dx=56,dy=63,dz=110,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1332,y=0,z=498,dx=56,dy=63,dz=110,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1333 64 550
+
+
+
+#Slateport City
+execute as @a[x=-1378,y=0,z=169,dx=47,dy=63,dz=77,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1378,y=0,z=169,dx=47,dy=63,dz=77,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1377 64 213
+
+
+#Route 110
+execute as @a[x=-1575,y=0,z=-54,dx=40,dy=68,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1575,y=0,z=-54,dx=40,dy=68,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1578 69 -40
+
+execute as @a[x=-1467,y=0,z=-89,dx=30,dy=68,dz=20,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1467,y=0,z=-89,dx=30,dy=68,dz=20,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1456 69 -65
+
+execute as @a[x=-1434,y=0,z=-52,dx=40,dy=68,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1434,y=0,z=-52,dx=40,dy=68,dz=40,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1420 69 -59
+
+execute as @a[x=-1603,y=0,z=-346,dx=18,dy=68,dz=24,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1603,y=0,z=-346,dx=18,dy=68,dz=24,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1597 69 -349
+
+execute as @a[x=-1584,y=0,z=-346,dx=18,dy=68,dz=24,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1584,y=0,z=-346,dx=18,dy=68,dz=24,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1575 69 -348
+
+execute as @a[x=-1565,y=0,z=-346,dx=42,dy=68,dz=24,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1565,y=0,z=-346,dx=42,dy=68,dz=24,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1549 69 -348
+
+#Route 118
+execute as @a[x=-1268,y=0,z=-654,dx=125,dy=63,dz=79,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1268,y=0,z=-654,dx=125,dy=63,dz=79,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1192 64 -609
+
+execute as @a[x=-1268,y=0,z=-574,dx=125,dy=63,dz=61,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1268,y=0,z=-574,dx=125,dy=63,dz=61,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1210 64 -567
+
+
+
+#Route 111
+execute as @a[x=-1610,y=0,z=-929,dx=69,dy=78,dz=48,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1610,y=0,z=-929,dx=69,dy=78,dz=48,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1542 79 -904
+
+execute as @a[x=-1610,y=0,z=-880,dx=69,dy=78,dz=53,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-1610,y=0,z=-880,dx=69,dy=78,dz=53,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -1551 79 -860
+
+
+
+#Route 114
+execute as @a[x=-2563,y=0,z=-1462,dx=30,dy=98,dz=138,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2563,y=0,z=-1462,dx=30,dy=98,dz=138,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2531 89 -1395
+
+execute as @a[x=-2532,y=0,z=-1380,dx=43,dy=88,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2532,y=0,z=-1380,dx=43,dy=88,dz=56,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2512 89 -1348
+
+execute as @a[x=-2488,y=0,z=-1352,dx=97,dy=88,dz=36,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2488,y=0,z=-1352,dx=97,dy=88,dz=36,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2472 89 -1349
+
+execute as @a[x=-2617,y=0,z=-1323,dx=127,dy=88,dz=67,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2617,y=0,z=-1323,dx=127,dy=88,dz=67,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2535 89 -1257
+
+execute as @a[x=-2488,y=0,z=-1315,dx=36,dy=88,dz=59,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2488,y=0,z=-1315,dx=36,dy=88,dz=59,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2473 89 -1259
+
+execute as @a[x=-2451,y=0,z=-1315,dx=60,dy=88,dz=59,tag=!Surf] at @s if block ~ ~ ~ water run tellraw @s {"text":"This area needs Surf to traverse!","italic":true,"color":"gray"}
+execute as @a[x=-2451,y=0,z=-1315,dx=60,dy=88,dz=59,tag=!Surf] at @s if block ~ ~ ~ water run tp @s -2420 89 -1257
+
+
+
+
+
+
+
+
+
+
+
+
+#-----------------------------------------------------------------------------
 
 
 #

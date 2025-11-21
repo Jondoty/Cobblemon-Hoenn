@@ -115,6 +115,12 @@ execute as @s[x=-2064,y=40,z=299,distance=..6,scores={Rival=2}] run opendialogue
 execute as @s[x=-1995,y=40,z=299,distance=..6,scores={Rival=2}] run opendialogue littleroot_beauty_interaction @s
 execute as @s[x=-1995,y=40,z=299,distance=..6,scores={Rival=1}] run opendialogue littleroot_maysmom_generic @s
 
+
+#Oldale Town supernerd blocking the way
+execute as @s[x=-2102,y=69,z=48,distance=..6,tag=!Dialogue12] run opendialogue oldale_supernerd_alt_interaction @s
+execute as @s[x=-2102,y=69,z=48,distance=..6,tag=Dialogue12] run opendialogue oldale_supernerd_interaction @s
+
+
 #Route109 Mr Sea
 execute as @s[x=-1552,y=38,z=494,distance=..6] run opendialogue route109_richman_interaction @s
 execute as @s[x=-1552,y=38,z=494,distance=..6,tag=SeashoreTrainer1,tag=SeashoreTrainer2,tag=SeashoreTrainer3,tag=SeashoreTrainer4,tag=SeashoreTrainer5,tag=!ItemLoot118] run opendialogue mrsea_trainersbeaten @s
