@@ -491,7 +491,7 @@ execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run tp @s 348.01 251.41 -
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run pokespawnat 338 243 -184 rayquaza no_ai=true level=70 uncatchable=yes
 
 #Shot of side of pillar
-execute as @s[scores={DialogueTrigger=207,TalkTime=10}] run tp @s 379 245 -123.6 146 24
+execute as @s[scores={DialogueTrigger=207,TalkTime=10}] run tp @s 379 245 -123.6 146 6
 
 #Rayquaza Mega Evolves
 execute as @s[scores={DialogueTrigger=207,TalkTime=20}] run tp @s 329.46 247.16 -196.51 -35.00 -6.00
@@ -516,46 +516,46 @@ execute as @s[scores={DialogueTrigger=207,TalkTime=65}] run stopsound @s record
 execute as @s[scores={DialogueTrigger=207,TalkTime=65}] run scoreboard players set @s MusicCooldown 100
 
 #shots of space area
-execute as @s[scores={DialogueTrigger=207,TalkTime=66}] run tp @s 642 -13 2561 0 90
+execute as @s[scores={DialogueTrigger=207,TalkTime=66}] run tp @s 642 113 2561 0 90
 
-execute as @s[scores={DialogueTrigger=207,TalkTime=74}] run pokespawnat 696 8 2569 rayquaza no_ai=true level=70 mega_evolution=mega
-execute as @s[scores={DialogueTrigger=207,TalkTime=75}] run tp @s 708.32 24.74 2578.47 112.00 32.00
+execute as @s[scores={DialogueTrigger=207,TalkTime=74}] run pokespawnat 696 134 2569 rayquaza no_ai=true level=70 mega_evolution=mega
+execute as @s[scores={DialogueTrigger=207,TalkTime=75}] run tp @s 708.32 150.74 2578.47 112.00 32.00
 
-execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run tp @e[x=696,y=8,z=2569,distance=..15,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run tp @e[x=696,y=134,z=2569,distance=..15,nbt={NoAI:1b}] 10000000 -49874 -10000000
 
 #Shot of Deoxys' triangle
-execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run summon minecraft:item_display 630 -11.5 2529 {item:{id:"minecraft:tipped_arrow",Count:1b,components:{"minecraft:custom_model_data":6}},Glowing:1b}
-execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run tp @s 630.5 -12.75 2531.5 -180 12
+execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run summon minecraft:item_display 630 114.5 2529 {item:{id:"minecraft:tipped_arrow",Count:1b,components:{"minecraft:custom_model_data":6}},Glowing:1b}
+execute as @s[scores={DialogueTrigger=207,TalkTime=85}] run tp @s 630.5 113.25 2531.5 -180 12
 
 #starts playing Deoxys music here
 execute as @s[scores={DialogueTrigger=207,TalkTime=93}] run scoreboard players set @s MusicTitles 52
 execute as @s[scores={DialogueTrigger=207,TalkTime=93}] run function hoenn:triggers/stopsound
 
 #Triangle starts moving
-execute as @s[scores={DialogueTrigger=207,TalkTime=93}] run tp @s 630.5 -12 2533.5 -180 0
-execute as @s[scores={DialogueTrigger=207,TalkTime=96}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 628 -9.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=99}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=102}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=104}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=106}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=108}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 628 -9.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=109}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=110}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=111}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=112}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 628 -9.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=113}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 632 -9.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=114}] at @s run tp @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display] 630 -11.75 2529
-execute as @s[scores={DialogueTrigger=207,TalkTime=114}] run tp @s 630.5 -13 2531.5 -180 12
+execute as @s[scores={DialogueTrigger=207,TalkTime=93}] run tp @s 630.5 114 2533.5 -180 0
+execute as @s[scores={DialogueTrigger=207,TalkTime=96}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 628 116.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=99}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 632 116.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=102}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 630 114.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=104}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 632 116.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=106}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 630 114.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=108}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 628 116.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=109}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 630 114.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=110}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 632 116.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=111}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 630 114.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=112}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 628 116.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=113}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 632 116.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=114}] at @s run tp @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display] 630 114.25 2529
+execute as @s[scores={DialogueTrigger=207,TalkTime=114}] run tp @s 630.5 113 2531.5 -180 12
 
-execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run particle cloud 630 -13 2529 1 1 1 0.15 300
-execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run kill @e[x=630,y=-13,z=2529,distance=..20,type=minecraft:item_display]
-execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run tp @s 630.50 -11.49 2532.56 -180.00 12.00
-execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run pokespawnat 630 -13 2529 deoxys level=80 no_ai=yes
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run particle cloud 630 113 2529 1 1 1 0.15 300
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run kill @e[x=630,y=113,z=2529,distance=..20,type=minecraft:item_display]
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run tp @s 630.50 114.51 2532.56 -180.00 12.00
+execute as @s[scores={DialogueTrigger=207,TalkTime=120}] run pokespawnat 630 113 2529 deoxys level=80 no_ai=yes
 execute as @s[scores={DialogueTrigger=207,TalkTime=125}] run playsound cobblemon:pokemon.deoxys.cry ambient @s ~ ~ ~ 1 1 1
 
-execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run tp @e[x=630,y=-13,z=2529,distance=..10,nbt={NoAI:1b}] 10000000 -50000 -10000000
-execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run tp @s 636 -50 2561 -90 0
-execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run pokespawnat 646 -50 2561 deoxys level=80 moves=cosmicpower,recover,psychoboost,hyperbeam no_ai=yes
+execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run tp @e[x=630,y=113,z=2529,distance=..10,nbt={NoAI:1b}] 10000000 -49874 -10000000
+execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run tp @s 636 76 2561 -90 0
+execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run pokespawnat 646 76 2561 deoxys level=80 moves=cosmicpower,recover,psychoboost,hyperbeam no_ai=yes
 execute as @s[scores={DialogueTrigger=207,TalkTime=130}] run gamemode adventure
 
 tag @s[scores={DialogueTrigger=207,TalkTime=130..}] add Dialogue207

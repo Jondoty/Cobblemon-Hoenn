@@ -17,7 +17,7 @@ execute as @a[tag=Dive] at @s if block ~ ~ ~ water run effect give @s minecraft:
 execute as @a[x=-3594,y=0,z=1224,dx=1232,dy=256,dz=449] run effect give @s minecraft:night_vision 20 1 true
 
 #Outer Space
-execute as @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501] run effect give @s minecraft:night_vision 20 1 true
+execute as @a[x=392,y=0,z=2311,dx=501,dy=256,dz=501] run effect give @s minecraft:night_vision 20 1 true
 
 
 #Mauville City

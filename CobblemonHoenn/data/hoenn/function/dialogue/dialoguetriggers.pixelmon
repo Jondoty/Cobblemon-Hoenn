@@ -125,7 +125,7 @@ execute as @a[x=142,y=242,z=-326,dx=364,dy=50,dz=317,tag=RayquazaEncounter] run 
 execute as @a[x=142,y=242,z=-326,dx=364,dy=50,dz=317,tag=Temp,tag=!SpacePrompt,tag=!Dialogue206,scores={DialogueTrigger=0,TalkTime=0}] run scoreboard players set @s TriggerCommand 515
 
 #Deoxys in space, removes check if a Deoxys is present for player to get return dialogue
-execute if entity @e[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=-100,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] remove TempDelay
+execute if entity @e[x=392,y=0,z=2311,dx=501,dy=256,dz=501,type=pixelmon:pixelmon,nbt={ndex:386}] run tag @a[x=392,y=0,z=2311,dx=501,dy=256,dz=501,scores={DialogueTrigger=0},gamemode=adventure,tag=TempDelay] remove TempDelay
 
 
 #-----------------------------------------------------------------------------------------------------
