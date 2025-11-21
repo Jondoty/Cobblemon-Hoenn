@@ -1,14 +1,13 @@
 #Used for keeping player from leaving areas, or skipping ahead
 
-#Littleroot before player meets their rival
-execute as @a[x=-2033,y=68,z=272,dx=14,dy=10,dz=15,tag=!Dialogue5] at @s run tp @s ~ ~ ~5
-
-
 #S.S. Tidal if player jumps into the water
-
 tp @a[x=2293,y=0,z=-1378,dx=211,dy=64,dz=92] 2387 72 -1333 90 24
 
 #----------
+#Littleroot blocking player from a starter before meeting your rival
+execute as @a[x=-2032,y=68,z=262,dx=13,dy=5,dz=7,tag=!Dialogue5] run opendialogue route101_youngster_blocking @s
+execute as @a[x=-2032,y=68,z=262,dx=13,dy=5,dz=7,tag=!Dialogue5] at @s run tp @s ~ ~ ~5 
+
 #Rustboro Forest before player beats grunt
 execute as @a[x=-2726,y=68,z=-239,dx=12,dy=6,dz=9,tag=!Dialogue18] at @s run tp @s ~ ~ ~6
 

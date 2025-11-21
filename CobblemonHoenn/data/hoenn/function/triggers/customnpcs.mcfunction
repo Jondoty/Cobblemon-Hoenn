@@ -106,6 +106,15 @@ execute as @s[x=236,y=78,z=1473,distance=..8,tag=CresseliaEncounter] run opendia
 #-------------------------------------------------------------
 #Misc World NPCs
 
+#Moms
+#Brendan's House, Rival 1 = Your Mom
+execute as @s[x=-2064,y=40,z=299,distance=..6,scores={Rival=1}] run opendialogue littleroot_beauty_interaction @s
+execute as @s[x=-2064,y=40,z=299,distance=..6,scores={Rival=2}] run opendialogue littleroot_brendansmom_generic @s
+
+#May's House, Rival 2 = Your Mom
+execute as @s[x=-1995,y=40,z=299,distance=..6,scores={Rival=2}] run opendialogue littleroot_beauty_interaction @s
+execute as @s[x=-1995,y=40,z=299,distance=..6,scores={Rival=1}] run opendialogue littleroot_maysmom_generic @s
+
 #Route109 Mr Sea
 execute as @s[x=-1552,y=38,z=494,distance=..6] run opendialogue route109_richman_interaction @s
 execute as @s[x=-1552,y=38,z=494,distance=..6,tag=SeashoreTrainer1,tag=SeashoreTrainer2,tag=SeashoreTrainer3,tag=SeashoreTrainer4,tag=SeashoreTrainer5,tag=!ItemLoot118] run opendialogue mrsea_trainersbeaten @s
