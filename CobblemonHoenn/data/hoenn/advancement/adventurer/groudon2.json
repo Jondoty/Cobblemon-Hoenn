@@ -8,7 +8,7 @@
             "text": "Encounter Primal Groudon"
         },
         "icon": {
-            "id": "mega_showdown:redorb"
+            "id": "mega_showdown:red_orb"
         },
         "frame": "task",
         "show_toast": true,

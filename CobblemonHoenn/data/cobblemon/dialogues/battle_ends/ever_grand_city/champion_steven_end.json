@@ -6,8 +6,8 @@
     "q.run_command('execute as ' + q.player.username + ' run tag @s add Steven');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $11800 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 11800');",
-    "q.run_command('execute as ' + q.player.username + ' run opendialogue champion_may_dialogue164 @s[scores={Rival=1}]');",
-    "q.run_command('execute as ' + q.player.username + ' run opendialogue champion_brendan_dialogue164 @s[scores={Rival=2}]');"
+    "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Rival=1}] run opendialogue champion_may_dialogue164 @s');",
+    "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Rival=2}] run opendialogue champion_brendan_dialogue164 @s');"
   ],
   "speakers": {
     "npc": {

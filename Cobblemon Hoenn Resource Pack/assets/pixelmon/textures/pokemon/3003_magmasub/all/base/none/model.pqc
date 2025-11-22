@@ -1,4 +1,0 @@
-$body idle.smd
-$anim walk idle.smd
-$anim idle idle.smd
-$scale 1

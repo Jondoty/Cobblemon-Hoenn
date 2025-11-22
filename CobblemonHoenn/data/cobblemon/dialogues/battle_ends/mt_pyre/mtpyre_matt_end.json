@@ -164,7 +164,7 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run give @s mega_showdown:redorb');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s mega_showdown:red_orb');",
                             "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
                             "q.dialogue.set_page('page10');"
                         ]

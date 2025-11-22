@@ -4,7 +4,8 @@
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $6200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 6200');"
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 6200');",
+        "q.run_command('execute as ' + q.player.username + ' run pokeheal');"
     ],
     "speakers": {
         "zinnia": {

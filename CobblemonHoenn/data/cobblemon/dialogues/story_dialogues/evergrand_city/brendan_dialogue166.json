@@ -5,11 +5,11 @@
     "escapeAction": [],
     "speakers": {
         "npc": {
-            "name": "May",
+            "name": "Brendan",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:may",
+                "identifier": "cobblemon:brendan",
                 "isLeftSide": false
             }
         },

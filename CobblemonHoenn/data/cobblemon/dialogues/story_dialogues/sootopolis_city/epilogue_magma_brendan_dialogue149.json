@@ -835,7 +835,7 @@
                         "value": "next",
                         "action": [
                             "q.run_command('playsound minecraft:megastoneget ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
-                            "q.run_command('give ' + q.player.username + ' mega_showdown:redorb');",
+                            "q.run_command('give ' + q.player.username + ' mega_showdown:red_orb');",
                             "q.dialogue.set_page('page44');"
                         ]
                     }

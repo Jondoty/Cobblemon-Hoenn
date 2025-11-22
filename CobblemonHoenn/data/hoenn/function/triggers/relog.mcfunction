@@ -14,7 +14,8 @@ execute if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTr
 execute if entity @e[x=-2070,y=64,z=1410,dy=3,type=armor_stand,scores={WeekdayTrack=7}] run title @s[scores={relog=1..}] actionbar {"text":"Sunday","italic":true}
 
 
-
+#Just generally if player is in a dialogue screen, removes the tag so they can get back into the dialogue
+tag @s remove InDialogue
 
 
 #Resets music

@@ -91,6 +91,9 @@ execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scor
 execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue26,scores={GameVersion=2}] run opendialogue researcher_dialogue26_aqua @s
 
 #Dialogue 27 - Rustboro researcher after gym
+execute as @s[x=-2706,y=69,z=-701,distance=..30,tag=Dialogue26,tag=!Dialogue30,scores={GameVersion=1}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_magma
+execute as @s[x=-2706,y=69,z=-701,distance=..30,tag=Dialogue26,tag=!Dialogue30,scores={GameVersion=2}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_aqua
+
 execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue30,scores={GameVersion=1}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_magma
 execute as @s[x=-2671,y=69,z=-676,distance=..10,tag=Roxanne,tag=!Dialogue30,scores={GameVersion=2}] unless entity @e[x=-2706,y=69,z=-701,dy=3,type=cobblemon:npc] run npcspawnat -2706 69 -701 researcher_dialogue27_aqua
 execute as @s[x=-2697,y=69,z=-706,distance=..7,tag=Dialogue26,tag=!Dialogue27,scores={GameVersion=1}] run opendialogue researcher_dialogue27_magma_interaction @s
@@ -190,7 +193,7 @@ execute as @s[x=2675,y=65,z=2716,distance=..40,tag=!Dialogue62] unless entity @e
 
 
 #Rusturf Tunnel after knowing Rock Smash
-execute as @s[x=-2300,y=42,z=-820,distance=..7,tag=RockSmash,tag=Wattson,tag=!Dialogue69] run opendialogue wanda_dialogue69 @s
+execute as @s[x=-2300,y=42,z=-820,distance=..7,tag=RockSmash,tag=Wattson,tag=!Dialogue69,tag=!Dialogue70] run opendialogue wanda_dialogue69 @s
 
 #Dialogue 70, sets up NPCs for when player uses Rock Smash
 execute as @s[x=-2309,y=43,z=-817,distance=..40,tag=!Dialogue70] unless entity @e[x=-2314,y=42,z=-817,dy=3,type=cobblemon:npc] run npcspawnat -2314 42 -817 rusturftunnel_blackbelt
@@ -429,12 +432,12 @@ execute as @s[x=-322,y=79,z=-1355,distance=..10,tag=!Dialogue114] unless entity 
 execute as @s[x=-359,y=85,z=-1357,distance=..8,tag=!Dialogue113] run opendialogue steven_dialogue113 @s
 
 #After any battle
-#execute as @s[x=-362,y=85,z=-1354,distance=..30,tag=Dialogue113,tag=!Dialogue114] run opendialogue steven_dialogue113 @s
+#execute as @s[x=-362,y=85,z=-1354,distance=..30,tag=Dialogue113,tag=!Dialogue114] run opendialogue steven_dialogue114 @s
 
 #Fortree City Devon Scope Gym Clear
 execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=DevonScope,tag=!Dialogue115] if block -562 84 -1419 barrier run opendialogue kecleon_scope @s
-execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run opendialogue kecleon_noscope @s
-execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run tag @s add KecleonHint
+execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!DevonScope,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run opendialogue kecleon_noscope @s
+execute as @s[x=-569,y=83,z=-1422,dx=13,dy=8,dz=3,tag=!DevonScope,tag=!KecleonHint,tag=!Dialogue115] if block -562 84 -1419 barrier run tag @s add KecleonHint
 
 
 #Dialogue 119 - Route 121 team grunts overhearing
@@ -888,7 +891,7 @@ execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={
 execute positioned -2802 -10 117 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:regigigas"}},nbt={PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
 
 #Rayquaza
-execute as @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run summon minecraft:interaction 338 242 -197 {width:5.5,height:5.5,response:1,Tags:[NPCs]}
+execute as @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=minecraft:interaction] run summon minecraft:interaction 338 242 -197 {width:5.5,height:5.5,response:1,Tags:[NPCs]}
 execute as @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] unless entity @e[x=338,y=242,z=-197,distance=..5,type=cobblemon:pokemon] run pokespawnat 338 243 -197 rayquaza no_ai=true level=70 moves=dragonascent,extremespeed,dragonpulse,dragondance ability=airlock
 execute if entity @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
 execute if entity @s[x=338,y=231,z=-146,distance=..30,tag=Dialogue205,tag=!RayquazaEncounter] positioned 338 242 -197 as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:rayquaza"}},nbt={PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b

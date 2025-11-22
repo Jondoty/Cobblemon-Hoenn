@@ -1,1 +1,1 @@
-give @a carrot_on_a_stick[custom_name='["",{"text":"HM02: Fly","italic":false,"color":"aqua"}]',lore=['["",{"text":"An HM that can be used for","italic":false}]','["",{"text":"flying to any familiar town.","italic":false}]'],custom_model_data=2]
+give @s carrot_on_a_stick[custom_name='["",{"text":"HM02: Fly","italic":false,"color":"aqua"}]',lore=['["",{"text":"An HM that can be used for","italic":false}]','["",{"text":"flying to any familiar town.","italic":false}]'],custom_model_data=2]
