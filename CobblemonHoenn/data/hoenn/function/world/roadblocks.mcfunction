@@ -52,7 +52,7 @@ execute as @p[x=-1763,y=104,z=-1169,distance=..20,scores={GameVersion=2},tag=!Di
 
 #----------
 #Team Grunts blocking Weather Institute bridge until admin delt with
-execute as @a[x=-953,y=75,z=-1283,dx=5,dy=10,dz=9,tag=!Dialogue104] at @s run tp @s ~-6 ~ ~
+execute as @a[x=-953,y=75,z=-1283,dx=10,dy=10,dz=9,tag=!Dialogue104] at @s run tp @s -960 ~ ~
 execute as @p[x=-984,y=78,z=-1276,distance=..30,tag=Dialogue104] run tp @e[x=-954,y=79,z=-1279,distance=..5,type=cobblemon:npc] 10000000 -50000 -10000000
 execute as @p[x=-965,y=78,z=-1246,distance=..30,scores={GameVersion=1},tag=!Dialogue104] unless entity @e[x=-954,y=78,z=-1276,dy=3,type=cobblemon:npc] run npcspawnat -954 79 -1276 route119_teammagmagruntmale
 execute as @p[x=-965,y=78,z=-1246,distance=..30,scores={GameVersion=1},tag=!Dialogue104] unless entity @e[x=-954,y=78,z=-1279,dx=1,dy=3,type=cobblemon:npc] run npcspawnat -954 79 -1278.0 route119_teammagmagruntmale2
@@ -87,11 +87,19 @@ execute as @e[x=841,y=62,z=-1025,distance=..35,type=cobblemon:pokemon,nbt={NoAI:
 execute as @p[x=816,y=64,z=-1026,distance=..50,tag=Dialogue136] run tp @e[x=839,y=50,z=-1053,dx=18,dy=30,dz=53,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
 
 
-#Block if player is not able to use Waterfall
-tellraw @a[x=2127,y=68,z=-100,dx=122,dy=50,dz=30,tag=!Wallace] {"text":"It's a towering waterfall. You may be able to swim up it with an HM.","italic":true,"color":"gray"}
-execute as @a[x=2127,y=68,z=-100,dx=12,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~6 ~-3 ~10
-execute as @a[x=2243,y=68,z=-100,dx=12,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~-6 ~-3 ~10
-execute as @a[x=2127,y=68,z=-100,dx=122,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~ ~-3 ~10
+#Base blocking
+execute as @a[x=781,y=58,z=-1093,dx=8,dy=10,dz=8,tag=!Dialogue127] run tellraw @s {"text":"A Wailmer is blocking the way.","italic":true,"color":"gray"}
+execute as @a[x=781,y=58,z=-1093,dx=8,dy=10,dz=8,tag=!Dialogue127] at @s run tp @s ~ 63 ~10
+
+execute as @p[x=785,y=63,z=-1088,distance=..50,tag=!Dialogue127] unless entity @e[x=785,y=62,z=-1088,distance=..3,type=cobblemon:pokemon] run pokespawnat 785 63.5 -1088 wailmer level=25 no_ai=yes uncatchable=yes
+
+execute as @p[x=785,y=63,z=-1088,distance=..50,tag=Dialogue127] run tp @e[x=785,y=63,z=-1088,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
+
+execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
+
 
 #----------
 
@@ -99,6 +107,23 @@ execute as @a[x=2127,y=68,z=-100,dx=122,dy=30,dz=30,tag=!Wallace] at @s run tp @
 #Mossdeep Gym Return
 tp @a[x=-2686,y=0,z=1224,dx=190,dy=50,dz=449] -2586 61 1586 180 0
 
+
+#-----------------------------------------------------------------------------
+#Block if player is not able to use Waterfall
+
+#Evergand
+tellraw @a[x=2127,y=68,z=-100,dx=122,dy=50,dz=30,tag=!Wallace] {"text":"It's a towering waterfall. You may be able to swim up it with an HM.","italic":true,"color":"gray"}
+execute as @a[x=2127,y=68,z=-100,dx=12,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~6 ~-3 ~10
+execute as @a[x=2243,y=68,z=-100,dx=12,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~-6 ~-3 ~10
+execute as @a[x=2127,y=68,z=-100,dx=122,dy=30,dz=30,tag=!Wallace] at @s run tp @s ~ ~-3 ~10
+
+#Meteor Falls
+tellraw @a[x=2253,y=105,z=-2546,dx=50,dy=10,dz=5,tag=!Wallace] {"text":"It's a towering waterfall. You may be able to swim up it with an HM.","italic":true,"color":"gray"}
+execute as @a[x=2253,y=105,z=-2546,dx=50,dy=10,dz=5,tag=!Wallace] at @s run tp @s ~ ~-3 ~10
+
+#Route 114
+tellraw @a[x=-2586,y=89,z=-1418,dx=43,dy=10,dz=6,tag=!Wallace] {"text":"It's a towering waterfall. You may be able to swim up it with an HM.","italic":true,"color":"gray"}
+execute as @a[x=-2586,y=89,z=-1418,dx=43,dy=10,dz=6,tag=!Wallace] at @s run tp @s ~ ~-3 ~10
 
 
 #-----------------------------------------------------------------------------
