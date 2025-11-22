@@ -58,7 +58,7 @@ tag @a[tag=!FlyLilycove,x=318,y=0,z=-1170,dx=514,dy=256,dz=325] add FlyLilycove
 tag @a[tag=!FlyMossdeep,x=1245,y=0,z=-1163,dx=554,dy=256,dz=351] add FlyMossdeep
 tag @a[tag=!FlySootopolis,x=689,y=0,z=1366,dx=582,dy=256,dz=602] add FlySootopolis
 tag @a[tag=!FlyPacifidlog,x=-180,y=0,z=97,dx=224,dy=256,dz=299] add FlyPacifidlog
-tag @a[tag=!FlyEverGrande,x=2025,y=0,z=-884,dx=338,dy=256,dz=961] add FlyEverGrande
+tag @a[tag=!FlyEverGrande,x=2025,y=0,z=-884,dx=338,dy=256,dz=961,tag=!InDialogue,scores={DialogueTrigger=0}] add FlyEverGrande
 tag @a[tag=!FlyLeague,x=2137,y=170,z=-798,dx=42,dy=15,dz=35] add FlyLeague
 tag @a[tag=!FlyResort,x=2071,y=0,z=323,dx=663,dy=256,dz=906] add FlyResort
 
@@ -71,7 +71,7 @@ tag @a[x=45,y=0,z=-8,dx=461,dy=256,dz=404] add FlyRoute131
 tag @a[x=-545,y=31,z=135,dx=364,dy=256,dz=312] add FlyRoute132
 tag @a[x=-924,y=31,z=136,dx=378,dy=256,dz=312] add FlyRoute133
 tag @a[x=-1287,y=31,z=136,dx=362,dy=256,dz=312] add FlyRoute134
-tag @a[x=142,y=0,z=-326,dx=364,dy=256,dz=317] add FlySkyPillar
+tag @a[x=142,y=0,z=-326,dx=364,dy=256,dz=317,tag=!InDialogue,scores={DialogueTrigger=0}] add FlySkyPillar
 
 
 
