@@ -365,7 +365,7 @@ execute as @s[x=-2452,y=64,z=879,distance=..5,tag=!ItemLoot78] run playsound min
 execute as @s[x=-2452,y=64,z=879,distance=..5,tag=!ItemLoot78] run tag @s add ItemLoot78
 
 execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=ItemLoot80] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=!ItemLoot80] run give @s mega_showdown:flameplate
+execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=!ItemLoot80] run give @s mega_showdown:flame_plate
 execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=!ItemLoot80] run tellraw @s {"text":"You found a Flame Plate!","italic":true,"color":"gray"}
 execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=!ItemLoot80] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-2175,y=-23,z=772,distance=..5,tag=!ItemLoot80] run tag @s add ItemLoot80
@@ -1737,7 +1737,7 @@ execute as @s[x=886,y=-29,z=-1064,distance=..5,tag=!ItemLoot418] run playsound m
 execute as @s[x=886,y=-29,z=-1064,distance=..5,tag=!ItemLoot418] run tag @s add ItemLoot418
 
 execute as @s[x=1041,y=-29,z=-1074,distance=..5,tag=ItemLoot420] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1041,y=-29,z=-1074,distance=..5,tag=!ItemLoot420] run give @s mega_showdown:skyplate
+execute as @s[x=1041,y=-29,z=-1074,distance=..5,tag=!ItemLoot420] run give @s mega_showdown:sky_plate
 execute as @s[x=1041,y=-29,z=-1074,distance=..5,tag=!ItemLoot420] run tellraw @s {"text":"You found a Sky Plate!","italic":true,"color":"gray"}
 execute as @s[x=1041,y=-29,z=-1074,distance=..5,tag=!ItemLoot420] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1041,y=-29,z=-1074,distance=..5,tag=!ItemLoot420] run tag @s add ItemLoot420
@@ -1803,7 +1803,7 @@ execute as @s[x=1603,y=47,z=-1031,distance=..5,tag=!ItemLoot431] run playsound m
 execute as @s[x=1603,y=47,z=-1031,distance=..5,tag=!ItemLoot431] run tag @s add ItemLoot431
 
 execute as @s[x=1388,y=46,z=-1042,distance=..5,tag=ItemLoot432] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1388,y=46,z=-1042,distance=..5,tag=!ItemLoot432] run give @s mega_showdown:ironplate
+execute as @s[x=1388,y=46,z=-1042,distance=..5,tag=!ItemLoot432] run give @s mega_showdown:iron_plate
 execute as @s[x=1388,y=46,z=-1042,distance=..5,tag=!ItemLoot432] run tellraw @s {"text":"You found an Iron Plate!","italic":true,"color":"gray"}
 execute as @s[x=1388,y=46,z=-1042,distance=..5,tag=!ItemLoot432] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1388,y=46,z=-1042,distance=..5,tag=!ItemLoot432] run tag @s add ItemLoot432
@@ -1941,13 +1941,13 @@ execute as @s[x=1483,y=64,z=-259,distance=..5,tag=!ItemLoot457] run playsound mi
 execute as @s[x=1483,y=64,z=-259,distance=..5,tag=!ItemLoot457] run tag @s add ItemLoot457
 
 execute as @s[x=1513,y=-21,z=-549,distance=..5,tag=ItemLoot459] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1513,y=-21,z=-549,distance=..5,tag=!ItemLoot459] run give @s mega_showdown:dreadplate
+execute as @s[x=1513,y=-21,z=-549,distance=..5,tag=!ItemLoot459] run give @s mega_showdown:dread_plate
 execute as @s[x=1513,y=-21,z=-549,distance=..5,tag=!ItemLoot459] run tellraw @s {"text":"You found a Dread Plate!","italic":true,"color":"gray"}
 execute as @s[x=1513,y=-21,z=-549,distance=..5,tag=!ItemLoot459] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1513,y=-21,z=-549,distance=..5,tag=!ItemLoot459] run tag @s add ItemLoot459
 
 execute as @s[x=1449,y=-21,z=-437,distance=..5,tag=ItemLoot460] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1449,y=-21,z=-437,distance=..5,tag=!ItemLoot460] run give @s mega_showdown:spookyplate
+execute as @s[x=1449,y=-21,z=-437,distance=..5,tag=!ItemLoot460] run give @s mega_showdown:spooky_plate
 execute as @s[x=1449,y=-21,z=-437,distance=..5,tag=!ItemLoot460] run tellraw @s {"text":"You found a Spooky Plate!","italic":true,"color":"gray"}
 execute as @s[x=1449,y=-21,z=-437,distance=..5,tag=!ItemLoot460] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1449,y=-21,z=-437,distance=..5,tag=!ItemLoot460] run tag @s add ItemLoot460
@@ -1971,7 +1971,7 @@ execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=!ItemLoot463] run playsound m
 execute as @s[x=1285,y=-21,z=-338,distance=..5,tag=!ItemLoot463] run tag @s add ItemLoot463
 
 execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=ItemLoot464] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=!ItemLoot464] run give @s mega_showdown:insectplate
+execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=!ItemLoot464] run give @s mega_showdown:insect_plate
 execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=!ItemLoot464] run tellraw @s {"text":"You found an Insect Plate!","italic":true,"color":"gray"}
 execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=!ItemLoot464] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1540,y=-21,z=-561,distance=..5,tag=!ItemLoot464] run tag @s add ItemLoot464
@@ -1989,7 +1989,7 @@ execute as @s[x=794,y=-18,z=-774,distance=..5,tag=!ItemLoot466] run playsound mi
 execute as @s[x=794,y=-18,z=-774,distance=..5,tag=!ItemLoot466] run tag @s add ItemLoot466
 
 execute as @s[x=782,y=-31,z=-655,distance=..5,tag=ItemLoot468] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=782,y=-31,z=-655,distance=..5,tag=!ItemLoot468] run give @s mega_showdown:mindplate
+execute as @s[x=782,y=-31,z=-655,distance=..5,tag=!ItemLoot468] run give @s mega_showdown:mind_plate
 execute as @s[x=782,y=-31,z=-655,distance=..5,tag=!ItemLoot468] run tellraw @s {"text":"You found a Mind Plate!","italic":true,"color":"gray"}
 execute as @s[x=782,y=-31,z=-655,distance=..5,tag=!ItemLoot468] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=782,y=-31,z=-655,distance=..5,tag=!ItemLoot468] run tag @s add ItemLoot468
@@ -2031,19 +2031,19 @@ execute as @s[x=1036,y=-23,z=-463,distance=..5,tag=!ItemLoot474] run playsound m
 execute as @s[x=1036,y=-23,z=-463,distance=..5,tag=!ItemLoot474] run tag @s add ItemLoot474
 
 execute as @s[x=1361,y=-21,z=-184,distance=..5,tag=ItemLoot478] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1361,y=-21,z=-184,distance=..5,tag=!ItemLoot478] run give @s mega_showdown:stoneplate
+execute as @s[x=1361,y=-21,z=-184,distance=..5,tag=!ItemLoot478] run give @s mega_showdown:stone_plate
 execute as @s[x=1361,y=-21,z=-184,distance=..5,tag=!ItemLoot478] run tellraw @s {"text":"You found a Stone Plate!","italic":true,"color":"gray"}
 execute as @s[x=1361,y=-21,z=-184,distance=..5,tag=!ItemLoot478] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1361,y=-21,z=-184,distance=..5,tag=!ItemLoot478] run tag @s add ItemLoot478
 
 execute as @s[x=1282,y=-21,z=-204,distance=..5,tag=ItemLoot479] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1282,y=-21,z=-204,distance=..5,tag=!ItemLoot479] run give @s mega_showdown:dracoplate
+execute as @s[x=1282,y=-21,z=-204,distance=..5,tag=!ItemLoot479] run give @s mega_showdown:draco_plate
 execute as @s[x=1282,y=-21,z=-204,distance=..5,tag=!ItemLoot479] run tellraw @s {"text":"You found a Draco Plate!","italic":true,"color":"gray"}
 execute as @s[x=1282,y=-21,z=-204,distance=..5,tag=!ItemLoot479] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1282,y=-21,z=-204,distance=..5,tag=!ItemLoot479] run tag @s add ItemLoot479
 
 execute as @s[x=1432,y=-21,z=24,distance=..5,tag=ItemLoot480] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1432,y=-21,z=24,distance=..5,tag=!ItemLoot480] run give @s mega_showdown:pixieplate
+execute as @s[x=1432,y=-21,z=24,distance=..5,tag=!ItemLoot480] run give @s mega_showdown:pixie_plate
 execute as @s[x=1432,y=-21,z=24,distance=..5,tag=!ItemLoot480] run tellraw @s {"text":"You found a Pixie Plate!","italic":true,"color":"gray"}
 execute as @s[x=1432,y=-21,z=24,distance=..5,tag=!ItemLoot480] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1432,y=-21,z=24,distance=..5,tag=!ItemLoot480] run tag @s add ItemLoot480
@@ -2085,19 +2085,19 @@ execute as @s[x=1528,y=-47,z=318,distance=..5,tag=!ItemLoot487] run playsound mi
 execute as @s[x=1528,y=-47,z=318,distance=..5,tag=!ItemLoot487] run tag @s add ItemLoot487
 
 execute as @s[x=1498,y=-51,z=345,distance=..5,tag=ItemLoot488] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1498,y=-51,z=345,distance=..5,tag=!ItemLoot488] run give @s mega_showdown:splashplate
+execute as @s[x=1498,y=-51,z=345,distance=..5,tag=!ItemLoot488] run give @s mega_showdown:splash_plate
 execute as @s[x=1498,y=-51,z=345,distance=..5,tag=!ItemLoot488] run tellraw @s {"text":"You found a Splash Plate!","italic":true,"color":"gray"}
 execute as @s[x=1498,y=-51,z=345,distance=..5,tag=!ItemLoot488] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1498,y=-51,z=345,distance=..5,tag=!ItemLoot488] run tag @s add ItemLoot488
 
 execute as @s[x=1291,y=-57,z=303,distance=..5,tag=ItemLoot489] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1291,y=-57,z=303,distance=..5,tag=!ItemLoot489] run give @s mega_showdown:zapplate
+execute as @s[x=1291,y=-57,z=303,distance=..5,tag=!ItemLoot489] run give @s mega_showdown:zap_plate
 execute as @s[x=1291,y=-57,z=303,distance=..5,tag=!ItemLoot489] run tellraw @s {"text":"You found a Zap Plate!","italic":true,"color":"gray"}
 execute as @s[x=1291,y=-57,z=303,distance=..5,tag=!ItemLoot489] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1291,y=-57,z=303,distance=..5,tag=!ItemLoot489] run tag @s add ItemLoot489
 
 execute as @s[x=1195,y=-48,z=250,distance=..5,tag=ItemLoot490] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1195,y=-48,z=250,distance=..5,tag=!ItemLoot490] run give @s mega_showdown:toxicplate
+execute as @s[x=1195,y=-48,z=250,distance=..5,tag=!ItemLoot490] run give @s mega_showdown:toxic_plate
 execute as @s[x=1195,y=-48,z=250,distance=..5,tag=!ItemLoot490] run tellraw @s {"text":"You found a Toxic Plate!","italic":true,"color":"gray"}
 execute as @s[x=1195,y=-48,z=250,distance=..5,tag=!ItemLoot490] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1195,y=-48,z=250,distance=..5,tag=!ItemLoot490] run tag @s add ItemLoot490
@@ -2109,25 +2109,25 @@ execute as @s[x=1063,y=-54,z=216,distance=..5,tag=!ItemLoot491] run playsound mi
 execute as @s[x=1063,y=-54,z=216,distance=..5,tag=!ItemLoot491] run tag @s add ItemLoot491
 
 execute as @s[x=1115,y=-49,z=337,distance=..5,tag=ItemLoot492] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=1115,y=-49,z=337,distance=..5,tag=!ItemLoot492] run give @s mega_showdown:fistplate
+execute as @s[x=1115,y=-49,z=337,distance=..5,tag=!ItemLoot492] run give @s mega_showdown:fist_plate
 execute as @s[x=1115,y=-49,z=337,distance=..5,tag=!ItemLoot492] run tellraw @s {"text":"You found a Fist Plate!","italic":true,"color":"gray"}
 execute as @s[x=1115,y=-49,z=337,distance=..5,tag=!ItemLoot492] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=1115,y=-49,z=337,distance=..5,tag=!ItemLoot492] run tag @s add ItemLoot492
 
 execute as @s[x=753,y=-55,z=318,distance=..5,tag=ItemLoot493] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=753,y=-55,z=318,distance=..5,tag=!ItemLoot493] run give @s mega_showdown:icicleplate
+execute as @s[x=753,y=-55,z=318,distance=..5,tag=!ItemLoot493] run give @s mega_showdown:icicle_plate
 execute as @s[x=753,y=-55,z=318,distance=..5,tag=!ItemLoot493] run tellraw @s {"text":"You found an Icicle Plate!","italic":true,"color":"gray"}
 execute as @s[x=753,y=-55,z=318,distance=..5,tag=!ItemLoot493] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=753,y=-55,z=318,distance=..5,tag=!ItemLoot493] run tag @s add ItemLoot493
 
 execute as @s[x=710,y=-56,z=224,distance=..5,tag=ItemLoot494] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=710,y=-56,z=224,distance=..5,tag=!ItemLoot494] run give @s mega_showdown:earthplate
+execute as @s[x=710,y=-56,z=224,distance=..5,tag=!ItemLoot494] run give @s mega_showdown:earth_plate
 execute as @s[x=710,y=-56,z=224,distance=..5,tag=!ItemLoot494] run tellraw @s {"text":"You found an Earth Plate!","italic":true,"color":"gray"}
 execute as @s[x=710,y=-56,z=224,distance=..5,tag=!ItemLoot494] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=710,y=-56,z=224,distance=..5,tag=!ItemLoot494] run tag @s add ItemLoot494
 
 execute as @s[x=711,y=-42,z=334,distance=..5,tag=ItemLoot495] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=711,y=-42,z=334,distance=..5,tag=!ItemLoot495] run give @s mega_showdown:meadowplate
+execute as @s[x=711,y=-42,z=334,distance=..5,tag=!ItemLoot495] run give @s mega_showdown:meadow_plate
 execute as @s[x=711,y=-42,z=334,distance=..5,tag=!ItemLoot495] run tellraw @s {"text":"You found a Meadow Plate!","italic":true,"color":"gray"}
 execute as @s[x=711,y=-42,z=334,distance=..5,tag=!ItemLoot495] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=711,y=-42,z=334,distance=..5,tag=!ItemLoot495] run tag @s add ItemLoot495
