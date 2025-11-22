@@ -5,15 +5,19 @@
 #Kills Eye of Ender entity
 execute at @s[scores={EscapeRopeUse=1..}] run kill @e[distance=..20,type=minecraft:eye_of_ender]
 
+#If player right clicks without throwing it, clears one
+execute as @s[advancements={hoenn:click/ender_eye=true}] run scoreboard players set @s EscapeRopeUse 1
+execute as @s[advancements={hoenn:click/ender_eye=true}] run clear @s ender_eye 1
+
 #---------------------------------------------------------------------------------------------------------------------------------
 
 #If player is currently in a dialogue
 title @s[scores={DialogueTrigger=1..,EscapeRopeUse=1..}] actionbar {"text":"You can't use this while in a dialogue!"}
-give @s[scores={EscapeRopeUse=1..,DialogueTrigger=1..}] ender_eye
+execute as @s[scores={EscapeRopeUse=1..,DialogueTrigger=1..}] run function hoenn:spawn/escaperope
 scoreboard players set @s[scores={EscapeRopeUse=1..,DialogueTrigger=1..}] EscapeRopeUse 0
 
 title @s[scores={TalkTime=1..,score_EscapeRopeUse=1..}] actionbar {"text":"You can't use this while in a dialogue!"}
-give @s[scores={EscapeRopeUse=1..,score_TalkTime=1..}] ender_eye
+execute as @s[scores={EscapeRopeUse=1..,score_TalkTime=1..}] run function hoenn:spawn/escaperope
 scoreboard players set @s[scores={EscapeRopeUse=1..,TalkTime=1..}] EscapeRopeUse 0
 
 
@@ -148,6 +152,9 @@ execute as @s[tag=EscapeRopeUse] run tag @s remove EscapeRopeUse
 
 #Not in area where Escape Rope works
 tellraw @s[scores={EscapeRopeUse=1..}] ["",{"text":"Your father's words echo in your mind... ","italic":true,"color":"gray"},{"selector":"@s","italic":true,"color":"gray"},{"text":"! This isn't the time for that!\"","italic":true,"color":"gray"}]
-give @s[scores={EscapeRopeUse=1..}] ender_eye
+execute as @s[scores={EscapeRopeUse=1..}] run function hoenn:spawn/escaperope
 scoreboard players set @s[scores={EscapeRopeUse=1..}] EscapeRope 0
 scoreboard players set @s[scores={EscapeRopeUse=1..}] EscapeRopeUse 0
+
+
+advancement revoke @s only hoenn:click/ender_eye
