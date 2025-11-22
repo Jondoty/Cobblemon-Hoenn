@@ -1,7 +1,6 @@
 {
   "hitbox": "player",
   "resourceIdentifier": "cobblemon:stern",
-  "presets": [],
   "variation": {
     "dirt": [
       "clean",
@@ -33,9 +32,9 @@
   "skill": 5,
   "ai": [
     {
-      "type": "apply_presets",
-      "presets": []
-    },
+            "type": "apply_behaviours",
+            "behaviours": []
+        },
     {
       "type": "add_tasks_to_activity",
       "activity": "core",

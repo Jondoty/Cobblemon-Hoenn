@@ -3,10 +3,15 @@
   "names": [
     "Battle Maison Trainer"
   ],
-  "presets": [
-    "cobblemon:trainer_basics",
-    "cobblemon:skin_variations"
-  ],
+"ai": [
+        {
+            "type": "apply_behaviours",
+            "behaviours": [
+                          "cobblemon:trainer_basics",
+                          "cobblemon:skin_variations"
+              ]
+        }
+      ],
   "interaction": {
     "type": "dialogue",
     "dialogue": "cobblemon:battlemaison_trainer_interaction"

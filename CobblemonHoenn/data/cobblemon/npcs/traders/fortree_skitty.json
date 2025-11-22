@@ -3,9 +3,34 @@
   "names": [
     "§lTrader Elyssa"
   ],
-  "presets": [
-    "cobblemon:trainer_basics"
-  ],
+    "ai": [
+        {
+            "type": "apply_behaviours",
+            "behaviours": ["cobblemon:trainer_basics"]
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ],
   "interaction": {
     "type": "dialogue",
     "dialogue": "cobblemon:fortree_skitty_interaction"
@@ -53,33 +78,5 @@
   "allowProjectileHits": false,
   "isInvulnerable": true, 
   "canDespawn": false,
-  "skill": 5,
-  "ai": [
-      {
-          "type": "apply_presets",
-          "presets": []
-      },
-      {
-          "type": "add_tasks_to_activity",
-          "activity": "core",
-          "tasksByPriority": {
-              "0": [
-                  "look_at_target",
-                  "stay_afloat"
-              ]
-          }
-      },
-      {
-          "type": "add_tasks_to_activity",
-          "activity": "idle",
-          "tasksByPriority": {
-              "0": [
-                  "look_at_target"
-              ],
-              "1": [
-                  "look_at_entities"
-              ]
-          }
-      }
-  ]
+  "skill": 5
 }
