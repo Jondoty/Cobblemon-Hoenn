@@ -1,0 +1,13 @@
+{
+	"criteria": {
+	  "catch": {
+		"trigger": "cobblemon:aspects_collected",
+		"conditions": {
+		  "pokemon": "kecleon"
+		}
+	  }
+	},  
+    "rewards": {
+        "function": "hoenn:catch/kecleon"
+    }
+  }
