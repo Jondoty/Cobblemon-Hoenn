@@ -433,12 +433,12 @@ execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run advancement grant @s 
 execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run scoreboard players add @s PokemonLeague 1
 
 #Gives the player's Party Pokemon a ribbon
-#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 1 ribbon:hoenn_champion
-#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 2 ribbon:hoenn_champion
-#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 3 ribbon:hoenn_champion
-#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 4 ribbon:hoenn_champion
-#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 5 ribbon:hoenn_champion
-#execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run pokeedit 6 ribbon:hoenn_champion
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 1 cobblemon:ribbon_champion_hoenn
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 2 cobblemon:ribbon_champion_hoenn
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 3 cobblemon:ribbon_champion_hoenn
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 4 cobblemon:ribbon_champion_hoenn
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 5 cobblemon:ribbon_champion_hoenn
+execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 6 cobblemon:ribbon_champion_hoenn
 
 tellraw @s[scores={DialogueTrigger=166,TalkTime=1}] {"text":"Thank you for playing Pixelmon Hoenn!"}
 tellraw @s[scores={DialogueTrigger=166,TalkTime=10}] {"text":"Map Creators: Jond - Project Manager, Builder, Commands, Terrain"}
