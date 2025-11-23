@@ -854,6 +854,14 @@ execute as @s[x=2753,y=85,z=2884,distance=..6,tag=Dialogue216,tag=!Dialogue217] 
 execute as @s[x=1570,y=110,z=-2411,distance=..10,tag=Dialogue149,tag=!Dialogue211] unless entity @e[x=1636,y=108,z=-2402,dy=3,type=cobblemon:npc] run npcspawnat 1636 108 -2402 flannery_generic
 execute as @s[x=1636,y=108,z=-2402,distance=..10,tag=Dialogue149,tag=!Dialogue211] run opendialogue flannery_dialogue222 @s
 
+
+#Sets up Desert Fossils if player hasn't picked one
+execute as @s[x=-1368,y=78,z=-1251,distance=..25,tag=!ItemLoot200] unless entity @e[x=-1370,y=77,z=-1251,dy=3,type=item_frame] run summon item_frame -1370 78 -1251 {Invulnerable:1b,Invisible:1b,Facing: 1b, ItemRotation: 0b, Invulnerable: 1b, Air: 300s, OnGround: 0b, PortalCooldown: 0, Rotation: [0.0f, -90.0f], Item: {count: 1, id: "cobblemon:root_fossil"}, Fixed: 0b}
+execute as @s[x=-1368,y=78,z=-1251,distance=..25,tag=!ItemLoot200] unless entity @e[x=-1365,y=77,z=-1251,dy=3,type=item_frame] run summon item_frame -1365 78 -1251 {Invulnerable:1b,Invisible:1b,Facing: 1b, ItemRotation: 0b, Invulnerable: 1b, Air: 300s, OnGround: 0b, PortalCooldown: 0, Rotation: [0.0f, -90.0f], Item: {count: 1, id: "cobblemon:claw_fossil"}, Fixed: 0b}
+
+execute as @s[x=-1368,y=78,z=-1251,distance=..25,tag=!ItemLoot200] unless entity @e[x=-1370,y=77,z=-1251,dy=3,type=interaction] run summon minecraft:interaction -1370 78 -1251 {width:1.25,height:1.25,response:1,Tags:[Box1]}
+execute as @s[x=-1368,y=78,z=-1251,distance=..25,tag=!ItemLoot200] unless entity @e[x=-1365,y=77,z=-1251,dy=3,type=interaction] run summon minecraft:interaction -1365 78 -1251 {width:1.25,height:1.25,response:1,Tags:[Box2]}
+
 #-----------------------------------------------------------------------------------------------------
 #Legendary Spawns
 #Static spawns on the overworld

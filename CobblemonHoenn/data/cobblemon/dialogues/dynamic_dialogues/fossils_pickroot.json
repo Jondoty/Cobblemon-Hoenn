@@ -1,0 +1,123 @@
+{   
+    "speakers": {
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+      },
+    "escapeAction": [],
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "player",
+            "lines": [
+                "You found the Root Fossil."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "player",
+            "lines": [
+                "If you take this Fossil, no doubt the other one will sink into the sand."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "player",
+            "lines": [
+                "Take the Root Fossil anyway?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run kill @e[x=-1370,y=77,z=-1251,dy=3,type=item_frame]');",
+                            "q.run_command('execute as ' + q.player.username + ' run kill @e[x=-1370,y=77,z=-1251,dy=3,type=interaction]');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:root_fossil');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add ItemLoot200');",
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "player",
+            "lines": [
+                "You obtained a Root Fossil!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run particle falling_dust{block_state:{Name:sand}} -1365 78 -1251 0.5 0.5 0.5 1 500 normal');",
+                            "q.run_command('execute as ' + q.player.username + ' run kill @e[x=-1365,y=77,z=-1251,dy=3,type=item_frame]');",
+                            "q.run_command('execute as ' + q.player.username + ' run kill @e[x=-1365,y=77,z=-1251,dy=3,type=interaction]');",
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "player",
+            "lines": [
+                "You left the Root Fossil alone."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

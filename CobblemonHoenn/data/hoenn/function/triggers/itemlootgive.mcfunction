@@ -658,17 +658,7 @@ execute as @s[x=-1358,y=79,z=-1181,distance=..5,tag=!ItemLoot198] run tellraw @s
 execute as @s[x=-1358,y=79,z=-1181,distance=..5,tag=!ItemLoot198] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-1358,y=79,z=-1181,distance=..5,tag=!ItemLoot198] run tag @s add ItemLoot198
 
-execute as @s[x=-1369,y=78,z=-1251,distance=..5,tag=ItemLoot199] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-1369,y=78,z=-1251,distance=..5,tag=!ItemLoot199] run give @s cobblemon:claw_fossil
-execute as @s[x=-1369,y=78,z=-1251,distance=..5,tag=!ItemLoot199] run tellraw @s {"text":"You found a Claw Fossil!","italic":true,"color":"gray"}
-execute as @s[x=-1369,y=78,z=-1251,distance=..5,tag=!ItemLoot199] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=-1369,y=78,z=-1251,distance=..5,tag=!ItemLoot199] run tag @s add ItemLoot199
-
-execute as @s[x=-1365,y=78,z=-1251,distance=..5,tag=ItemLoot200] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-1365,y=78,z=-1251,distance=..5,tag=!ItemLoot200] run give @s cobblemon:root_fossil
-execute as @s[x=-1365,y=78,z=-1251,distance=..5,tag=!ItemLoot200] run tellraw @s {"text":"You found a Root Fossil!","italic":true,"color":"gray"}
-execute as @s[x=-1365,y=78,z=-1251,distance=..5,tag=!ItemLoot200] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=-1365,y=78,z=-1251,distance=..5,tag=!ItemLoot200] run tag @s add ItemLoot200
+#ItemLoot200, choice between Root or Claw
 
 execute as @s[x=-1389,y=89,z=-1361,distance=..5,tag=ItemLoot204] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-1389,y=89,z=-1361,distance=..5,tag=!ItemLoot204] run give @s cobblemon:elixir

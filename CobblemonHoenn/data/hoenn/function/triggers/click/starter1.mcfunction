@@ -18,6 +18,11 @@ execute as @s[x=-1945,y=65,z=1311,distance=..10] run opendialogue pick_turtwig @
 #Also used with multiple advancement-based hitboxes are close together
 execute as @s[x=-395,y=45,z=-655,distance=..10] run opendialogue poochyena_dialogue121 @s
 
+#Root Fossil
+execute as @s[x=-1370,y=78,z=-1251,distance=..10,tag=!ItemLoot200] run opendialogue fossils_pickroot @s
+
+
+
 
 
 advancement revoke @s only hoenn:click/box1
