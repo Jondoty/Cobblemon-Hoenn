@@ -1,9 +1,9 @@
 {
     "initializationAction": [
-        "q.run_command('team join shops ' + q.player.username + '');"
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
     ],
     "escapeAction": [
-        "q.run_command('team join default ' + q.player.username + '');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
         "q.dialogue.close();"
     ],
     "speakers": {
@@ -203,6 +203,7 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('MoneyHave45000')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
@@ -273,6 +274,7 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('MoneyHave1500')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
@@ -363,6 +365,7 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('MoneyHave80000')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
@@ -434,6 +437,7 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('MoneyHave1500')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
@@ -525,6 +529,7 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('MoneyHave150000')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
@@ -598,6 +603,7 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('MoneyHave1500')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
@@ -637,7 +643,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
                             "q.dialogue.close();"
                         ]
                     }
@@ -658,7 +664,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
                             "q.dialogue.close();"
                         ]
                     }

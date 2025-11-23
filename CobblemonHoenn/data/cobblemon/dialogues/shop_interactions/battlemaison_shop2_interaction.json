@@ -1,9 +1,10 @@
 {
     "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');",
         "q.run_command('team join battlepoints ' + q.player.username + '');"
     ],
     "escapeAction": [
-        "q.run_command('team join default ' + q.player.username + '');",
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
         "q.dialogue.close();"
     ],
     "names": [
@@ -240,21 +241,26 @@
             }
         },
 
+        
         {
             "id": "pickwiseglasses",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. This thick pair of glasses slightly boosts the power of special moves. "
+                "48 BP) An item to be held by a Pokémon. This thick pair of glasses slightly boosts the power of special moves."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 265');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:wise_glasses 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -272,17 +278,21 @@
             "id": "pickchoicespecs",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. These curious glasses boost Sp. Atk but only allow the use of one move. "
+                "48 BP) An item to be held by a Pokémon. These curious glasses boost Sp. Atk but only allow the use of one move."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 266');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:choice_specs 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -300,17 +310,21 @@
             "id": "pickscopelens",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio. "
+                "48 BP) An item to be held by a Pokémon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 267');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:scope_lens 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -328,17 +342,21 @@
             "id": "pickzoomlens",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. If the holder moves after its target moves, its accuracy will be boosted. "
+                "48 BP) An item to be held by a Pokémon. If the holder moves after its target moves, its accuracy will be boosted."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 268');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:zoom_lens 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -356,17 +374,21 @@
             "id": "pickwidelens",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. It's a magnifying lens that slightly boosts the accuracy of moves. "
+                "48 BP) An item to be held by a Pokémon. It's a magnifying lens that slightly boosts the accuracy of moves."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 269');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:wide_lens 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -384,17 +406,21 @@
             "id": "pickmuscleband",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. This headband exudes strength, slightly boosting the power of physical moves. "
+                "48 BP) An item to be held by a Pokémon. This headband exudes strength, slightly boosting the power of physical moves."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 270');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:muscle_band 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -412,17 +438,21 @@
             "id": "pickfocusband",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. The holder may endure a potential KO attack, leaving it with just 1 HP. "
+                "48 BP) An item to be held by a Pokémon. The holder may endure a potential KO attack, leaving it with just 1 HP."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 271');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:focus_band 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -440,17 +470,21 @@
             "id": "pickchoiceband",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. This curious headband boosts Attack but only allows the use of one move. "
+                "48 BP) An item to be held by a Pokémon. This curious headband boosts Attack but only allows the use of one move."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 272');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:choice_band 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -468,17 +502,21 @@
             "id": "pickchoicescarf",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. This curious scarf boosts Speed but only allows the use of one move. "
+                "48 BP) An item to be held by a Pokémon. This curious scarf boosts Speed but only allows the use of one move."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 273');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:choice_scarf 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -496,17 +534,21 @@
             "id": "pickassaultvest",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. This offensive vest raises Sp. Def but prevents the use of status moves. "
+                "48 BP) An item to be held by a Pokémon. This offensive vest raises Sp. Def but prevents the use of status moves."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 274');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:assault_vest 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -524,17 +566,21 @@
             "id": "pickfocussash",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears. "
+                "48 BP) An item to be held by a Pokémon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 275');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:focus_sash 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -552,17 +598,20 @@
             "id": "pickrazorclaw",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. This sharply hooked claw increases the holder's critical-hit ratio. "
+                "48 BP) An item to be held by a Pokémon. This sharply hooked claw increases the holder's critical-hit ratio."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 276');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:razor_claw 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -580,17 +629,20 @@
             "id": "pickrazorfang",
             "speaker": "npc",
             "lines": [
-                "48 BP) An item to be held by a Pokémon. When the holder successfully inflicts damage, the target may also flinch. "
+                "48 BP) An item to be held by a Pokémon. When the holder successfully inflicts damage, the target may also flinch."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 277');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:razor_fang 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -615,10 +667,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 278');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:bright_powder 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -643,10 +698,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 279');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:life_orb 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -671,10 +729,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 280');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:iron_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -699,10 +760,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 281');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:air_balloon 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -727,10 +791,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 282');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:binding_band 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -755,10 +822,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 283');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:safety_goggles 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -783,10 +853,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave48')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 284');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 48');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -811,10 +884,13 @@
                 "vertical": false,
                 "options": [
                     {
+                        "isSelectable": "q.player.has_tag('BPHave200')",
                         "text": "Buy",
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 285');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:ability_capsule 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints 200');",
                             "q.dialogue.set_page('buyend');"
                         ]
                     },
@@ -828,7 +904,6 @@
                 ]
             }
         },
-
         {
             "id": "buyend",
             "speaker": "npc",
@@ -843,7 +918,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
                             "q.dialogue.close();"
                         ]
                     }
@@ -864,7 +939,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
                             "q.dialogue.close();"
                         ]
                     }
