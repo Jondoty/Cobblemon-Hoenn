@@ -27,10 +27,12 @@ execute as @s[x=-2759,y=69,z=-285,distance=..10] run kill @e[x=-2759,y=69,z=-285
 
 
 #Rustboro City
+execute as @s[x=-2780,y=69,z=-603,distance=..10] run fill -2778 69 -603 -2782 70 -603 air
 execute as @s[x=-2780,y=69,z=-603,distance=..10] at @e[x=-2780,y=69,z=-603,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
 execute as @s[x=-2780,y=69,z=-603,distance=..10] as @e[x=-2780,y=69,z=-603,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
 execute as @s[x=-2780,y=69,z=-603,distance=..10] run kill @e[x=-2780,y=69,z=-603,distance=..5,tag=CutTree,type=interaction]
 
+execute as @s[x=-2766,y=69,z=-603,distance=..10] run fill -2764 69 -603 -2768 70 -603 air
 execute as @s[x=-2766,y=69,z=-603,distance=..10] at @e[x=-2766,y=69,z=-603,distance=..5,type=minecraft:armor_stand,tag=CutTree] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 10 normal
 execute as @s[x=-2766,y=69,z=-603,distance=..10] as @e[x=-2766,y=69,z=-603,distance=..5,type=minecraft:armor_stand,tag=CutTree] run data merge entity @s {ArmorItems:[{},{},{},{id:"air",Count:1}]}
 execute as @s[x=-2766,y=69,z=-603,distance=..10] run kill @e[x=-2766,y=69,z=-603,distance=..5,tag=CutTree,type=interaction]
