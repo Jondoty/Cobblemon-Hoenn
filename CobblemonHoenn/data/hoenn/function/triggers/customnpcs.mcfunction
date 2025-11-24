@@ -203,6 +203,23 @@ execute as @s[x=-2415,y=69,z=837,distance=..6,tag=!Brawly] run opendialogue brin
 execute as @s[x=-2415,y=69,z=837,distance=..6,tag=Dialogue36,tag=!Dialogue37,tag=Brawly] run opendialogue briney_dialogue37 @s
 execute as @s[x=-2415,y=69,z=837,distance=..6,tag=Dialogue36,tag=Dialogue37,tag=Brawly] run opendialogue briney_dewford @s
 
+
+#Rustboro Fossil Reanimator
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:root_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:claw_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:helix_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:dome_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:old_amber_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:armor_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:skull_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:cover_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:plume_fossil"}]}] run tag @s add FossilHave
+
+execute as @s[x=-2786,y=28,z=-705,distance=..8,tag=!FossilHave] run opendialogue fossilman_nofossils @s
+execute as @s[x=-2786,y=28,z=-705,distance=..8,tag=FossilHave] run opendialogue fossilman_reanimate @s
+execute as @s[x=-2786,y=28,z=-705,distance=..8,tag=FossilHave] run tag @s remove FossilHave
+
+
 #Slateport
 execute as @s[x=-1436,y=70,z=687,distance=..6] run opendialogue briney_slateport @s
 
