@@ -29,7 +29,6 @@
     "allowProjectileHits": false,
     "isInvulnerable": true,
     "canDespawn": false,
-    "skill": 5,
     "ai": [
         {
             "type": "apply_behaviours",
