@@ -30,8 +30,6 @@ execute as @s[tag=CresseliaEncounter] unless entity @s[scores={Temp=1..}] run ta
 scoreboard players set @s Temp 0
 execute store result score @s Temp run teststore @s all deoxys
 execute as @s[tag=Dialogue207] unless entity @s[scores={Temp=1..}] run tellraw @s {"text":"You can now rebattle Deoxys!","italic":true,"color":"gray"}
-execute as @s[tag=Dialogue207] unless entity @s[scores={Temp=1..}] run tag @s remove Dialogue206
-execute as @s[tag=Dialogue207] unless entity @s[scores={Temp=1..}] run tag @s remove Dialogue208
 execute as @s[tag=Dialogue207] unless entity @s[scores={Temp=1..}] run tag @s remove SpacePrompt
 execute as @s[tag=Dialogue207] unless entity @s[scores={Temp=1..}] run tag @s remove Dialogue207
 

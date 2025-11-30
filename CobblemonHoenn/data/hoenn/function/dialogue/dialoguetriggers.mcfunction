@@ -811,6 +811,13 @@ execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaugh
 #Only runs with Rayquaza in the player's party
 execute as @s[x=337,y=242,z=-178,distance=..30,tag=RayquazaCaught,tag=Dialogue205,tag=!Dialogue206,scores={Temp=1..,StepCounter=1..}] run opendialogue zinnia_dialogue206 @s
 
+#Prompts the player to go back into space if they defeat Deoxys, beat the E4 again, and get 207 reset while still having 209
+execute as @s[x=339,y=242,z=-201,distance=..30,tag=Dialogue209,tag=!Dialogue207] run scoreboard players set @s Temp 0
+execute as @s[x=339,y=242,z=-201,distance=..30,tag=Dialogue209,tag=!Dialogue207] store result score @s Temp run teststore @s party rayquaza 
+execute as @s[x=339,y=242,z=-201,distance=..30,tag=Dialogue209,tag=!Dialogue207,scores={Temp=1..},tag=!SpacePrompt] run opendialogue rayquaza_skyprompt @s
+
+#Resets prompt if player goes lower in Sky Pillar
+execute as @s[x=142,y=0,z=-326,dx=364,dy=230,dz=317,tag=Dialogue209,tag=!Dialogue207,tag=SpacePrompt] run tag @s remove SpacePrompt
 
 
 #Dialogue 210 - Littleroot parents after beating Elite Four
