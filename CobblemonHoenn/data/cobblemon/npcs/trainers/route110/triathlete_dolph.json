@@ -48,6 +48,13 @@
     },
     "config": [
         {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
             "variableName": "challenge_cooldown",
             "displayName": "Cooldown",
             "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",

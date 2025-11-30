@@ -1,41 +1,43 @@
 {
   "hitbox": "player",
   "resourceIdentifier": "cobblemon:freediver",
-    "ai": [
-        {
-            "type": "apply_behaviours",
-            "behaviours": ["cobblemon:trainer_basics"]
-        },
-        {
-            "type": "add_tasks_to_activity",
-            "activity": "core",
-            "tasksByPriority": {
-                "0": [
-                    "look_at_target",
-                    "stay_afloat"
-                ]
-            }
-        },
-        {
-            "type": "add_tasks_to_activity",
-            "activity": "idle",
-            "tasksByPriority": {
-                "0": [
-                    "look_at_target"
-                ],
-                "1": [
-                    "look_at_entities"
-                ]
-            }
-        }
-    ],
-    "autoHealParty": true,
-    "isMovable": false,
-    "isLeashable": false,
-    "allowProjectileHits": false,
-    "isInvulnerable": true,
-    "canDespawn": false,
-    "interaction": {
+  "ai": [
+    {
+      "type": "apply_behaviours",
+      "behaviours": [
+        "cobblemon:trainer_basics"
+      ]
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "tasksByPriority": {
+        "0": [
+          "look_at_target",
+          "stay_afloat"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "0": [
+          "look_at_target"
+        ],
+        "1": [
+          "look_at_entities"
+        ]
+      }
+    }
+  ],
+  "autoHealParty": true,
+  "isMovable": false,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "isInvulnerable": true,
+  "canDespawn": false,
+  "interaction": {
     "type": "dialogue",
     "dialogue": "cobblemon:freediver_arzu_interaction"
   },
@@ -48,6 +50,13 @@
     ]
   },
   "config": [
+    {
+      "variableName": "on_player_loses",
+      "displayName": "npc.variable.on_player_loses.name",
+      "description": "npc.variable.on_player_loses.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+    },
     {
       "variableName": "challenge_cooldown",
       "displayName": "Cooldown",

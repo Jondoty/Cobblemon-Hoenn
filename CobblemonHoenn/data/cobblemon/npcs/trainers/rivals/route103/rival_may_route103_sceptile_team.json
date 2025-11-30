@@ -1,10 +1,12 @@
 {
     "hitbox": "player",
     "resourceIdentifier": "cobblemon:may",
-"ai": [
+    "ai": [
         {
             "type": "apply_behaviours",
-            "behaviours": ["cobblemon:trainer_basics"]
+            "behaviours": [
+                "cobblemon:trainer_basics"
+            ]
         },
         {
             "type": "add_tasks_to_activity",
@@ -51,6 +53,13 @@
         ]
     },
     "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
         {
             "variableName": "challenge_cooldown",
             "displayName": "Cooldown",
