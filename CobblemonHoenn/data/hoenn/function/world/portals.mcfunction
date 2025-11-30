@@ -1144,9 +1144,13 @@ tp @a[x=1117,y=36,z=-941,dx=3,dy=3] 1119 64 -940
 #-------------------------------------------------------------------------
 #Mossdeep City
 
-#Top Left NPC Home
+#Top Left NPC Home (Steven's House)
+tp @a[x=1384,y=74,z=-1029,dx=2,dy=3,scores={PokemonLeague=1..}] 1385 33 -1030
+tp @a[x=1383,y=33,z=-1029,dx=4,dy=3] 1385 74 -1028
+
 tp @a[x=1384,y=74,z=-1029,dx=2,dy=3] 1385 46 -1030
 tp @a[x=1383,y=46,z=-1029,dx=4,dy=3] 1385 74 -1028
+
 
 #Top Middle NPC Home
 tp @a[x=1472,y=74,z=-1036,dx=2,dy=3] 1473 47 -1037

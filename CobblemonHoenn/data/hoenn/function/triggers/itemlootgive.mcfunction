@@ -2680,6 +2680,9 @@ execute as @s[x=2672,y=137,z=2362,distance=..5,tag=!ItemLoot619] run tellraw @s 
 execute as @s[x=2672,y=137,z=2362,distance=..5,tag=!ItemLoot619] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=2672,y=137,z=2362,distance=..5,tag=!ItemLoot619] run tag @s add ItemLoot619
 
+execute as @s[x=1385,y=34,z=-1037,distance=..6,tag=ItemLoot620] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=1385,y=34,z=-1037,distance=..6,tag=!ItemLoot620] run opendialogue mossdeep_beldum @s
+
 
 
 advancement revoke @s only hoenn:click/itemclick
