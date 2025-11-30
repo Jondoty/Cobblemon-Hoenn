@@ -1,12 +1,14 @@
 {
-  "resourceIdentifier": "cobblemon:richman",    
-  "names": [
-    "Antoin"
-  ],
+    "resourceIdentifier": "cobblemon:richman",
+    "names": [
+        "Antoin"
+    ],
     "ai": [
         {
             "type": "apply_behaviours",
-            "behaviours": ["cobblemon:trainer_basics"]
+            "behaviours": [
+                "cobblemon:trainer_basics"
+            ]
         },
         {
             "type": "add_tasks_to_activity",
@@ -31,39 +33,44 @@
             }
         }
     ],
-  "interaction": {
-    "type": "dialogue",
-    "dialogue": "cobblemon:richman_antoin_interaction"
-  },
-  "HideNPCNameTag": 1,
-  "skill": 5,
-  "party": {
-    "type": "script",
-    "script": "cobblemon:richman_antoin_teams",
-    "isStatic": false
-  },
-
-  "config": [
-    {
-        "variableName": "challenge_cooldown",
-        "displayName": "Cooldown",
-        "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
-        "type": "NUMBER",
-        "defaultValue": "0"
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:richman_antoin_interaction"
     },
-    {
-        "variableName": "can_rechallenge",
-        "displayName": "Rechallenging",
-        "description": "This NPC can be battled multiple times.",
-        "type": "BOOLEAN",
-        "defaultValue": true
+    "HideNPCNameTag": 1,
+    "skill": 5,
+    "party": {
+        "type": "script",
+        "script": "cobblemon:richman_antoin_teams",
+        "isStatic": false
     },
-    {
-        "variableName": "on_player_wins",
-        "displayName": "npc.variable.on_player_wins.name",
-        "description": "npc.variable.on_player_wins.desc",
-        "type": "TEXT",
-        "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue richman_antoin_end @s');"
-      }
-]
+    "config": [
+        {
+            "variableName": "challenge_cooldown",
+            "displayName": "Cooldown",
+            "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+            "type": "NUMBER",
+            "defaultValue": "0"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue richman_antoin_end @s');"
+        }
+    ]
 }

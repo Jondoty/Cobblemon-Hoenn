@@ -27,6 +27,12 @@
             }
         }
     ],
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:battlemaison_trainer_interaction"

@@ -1,10 +1,12 @@
 {
     "hitbox": "player",
     "resourceIdentifier": "cobblemon:battlegirl",
-"ai": [
+    "ai": [
         {
             "type": "apply_behaviours",
-            "behaviours": ["cobblemon:trainer_basics"]
+            "behaviours": [
+                "cobblemon:trainer_basics"
+            ]
         },
         {
             "type": "add_tasks_to_activity",
@@ -29,6 +31,12 @@
             }
         }
     ],
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:battle_girl_laura_interaction"
