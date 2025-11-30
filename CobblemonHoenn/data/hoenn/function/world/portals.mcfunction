@@ -597,10 +597,10 @@ execute as @a[x=-1412,y=64,z=203,dx=8,dy=3] run tp @e[x=-1408,y=64,z=211,distanc
 #Teams stealing Submarine
 
 execute as @a[x=-1412,y=64,z=203,dx=8,dy=3,tag=Dialogue123,tag=!Dialogue126] run function hoenn:triggers/stopsound
-execute as @a[x=2220,y=79,z=2709,dx=3,dy=3,tag=Dialogue123,tag=!Dialogue126] run function hoenn:triggers/stopsound
+execute as @a[x=2220,y=79,z=2709,dx=3,dy=3] run function hoenn:triggers/stopsound
 
 tp @a[x=-1412,y=64,z=203,dx=8,dy=3,tag=Dialogue123,tag=!Dialogue126] 2221 79 2708
-tp @a[x=2220,y=79,z=2709,dx=2,dy=3,tag=Dialogue123,tag=!Dialogue126] -1408 64 204
+tp @a[x=2220,y=79,z=2709,dx=2,dy=3] -1408 64 204
 
 #No story
 tp @a[x=-1412,y=64,z=203,dx=8,dy=3] 2221 79 2594
