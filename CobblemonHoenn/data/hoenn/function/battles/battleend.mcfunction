@@ -57,6 +57,10 @@ execute as @s[x=1790,y=64,z=-2483,dx=133,dy=50,dz=152,tag=Dialogue147,tag=!Dialo
 execute as @s[x=1954,y=64,z=-2496,dx=144,dy=34,dz=170,tag=Dialogue148,tag=!Dialogue149,scores={BattleEnd=5,GameVersion=2}] run scoreboard players set @s DialogueTrigger 149
 
 
+#Deoxys space battle, after winning or catching. Must happen or the player is trapped
+execute as @s[x=392,y=0,z=2311,dx=501,dy=256,dz=501] run tag @s remove Dialogue208
+execute as @s[x=392,y=0,z=2311,dx=501,dy=256,dz=501] run scoreboard players set @s DialogueTrigger 208
+
 
 #Player if Rayquaza is not caught in battle, in the Delta Episode
 #RayquazaEncounter is applied upon battling the legend. This bit should detect if it was caught or not. If not caught, removes the Encounter tag allowing it to respawn.

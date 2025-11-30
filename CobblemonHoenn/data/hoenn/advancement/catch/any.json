@@ -3,11 +3,11 @@
 	  "catch": {
 		"trigger": "cobblemon:aspects_collected",
 		"conditions": {
-		  "pokemon": "kecleon"
+		  "pokemon": "any"
 		}
 	  }
 	},  
     "rewards": {
-        "function": "hoenn:catch/kecleon"
+        "function": "hoenn:catch/any"
     }
   }
