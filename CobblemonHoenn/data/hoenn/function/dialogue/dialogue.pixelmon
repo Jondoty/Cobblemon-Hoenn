@@ -843,22 +843,6 @@ tag @s[scores={DialogueTrigger=112,TalkTime=100..}] add Dialogue112
 #Post-Deoxys Battle
 #https://youtu.be/MgkqxXCmrtI?t=72112
 
-#V1 simplified
-#Shot of particles in the sky
-execute as @s[scores={DialogueTrigger=208,TalkTime=7}] run gamemode spectator
-execute as @s[scores={DialogueTrigger=208,TalkTime=7}] run playsound pixelmon:pixelmon.mob.rayquaza ambient @s ~ ~ ~ 1 1 1
-execute as @s[scores={DialogueTrigger=208,TalkTime=7}] run effect give @s minecraft:blindness 4 1 true
-execute as @s[scores={DialogueTrigger=208,TalkTime=8..18}] run tp @s 336.5 310 -186.5 180 -90
-execute as @s[scores={DialogueTrigger=208,TalkTime=20}] at @s run particle cloud ~ ~100 ~ 1 1 1 1 500 force @s
-
-#View from Sky Pillar
-execute as @s[scores={DialogueTrigger=208,TalkTime=26}] run tp @s 379 245 -123.6 146 24
-execute as @s[scores={DialogueTrigger=208,TalkTime=26}] run scoreboard players set @s MusicTitles 36
-execute as @s[scores={DialogueTrigger=208,TalkTime=26}] run function hoenn:tools/forceclick
-
-#player is back on Sky Pillar
-execute as @s[scores={DialogueTrigger=208,TalkTime=36}] run tp @s 338 243 -169 180 20
-execute as @s[scores={DialogueTrigger=208,TalkTime=36}] run gamemode adventure
 
 #tellraw @s[scores={DialogueTrigger=208,TalkTime=1}] {"text":"<Whismur> Mur!"}
 #tellraw @s[scores={DialogueTrigger=208,TalkTime=1}] {"text":"You received a letter from Aster!","italic":true,"color":"gray"}
@@ -1110,7 +1094,7 @@ tellraw @s[scores={DialogueTrigger=209,TalkTime=1}] ["",{"text":"<Mom & Dad> You
 
 #title sequence
 execute as @s[scores={DialogueTrigger=209,TalkTime=1}] run title @s subtitle {"text":"Delta Episode","color":"dark_green"}
-execute as @s[scores={DialogueTrigger=209,TalkTime=1}] run title @s title {"text":"Pixelmon Hoenn"}
+execute as @s[scores={DialogueTrigger=209,TalkTime=1}] run title @s title {"text":"Cobblemon Hoenn"}
 
 #tps to room
 

@@ -803,7 +803,7 @@ execute positioned 341 243 -174 as @e[distance=..3,type=cobblemon:pokemon,nbt={P
 execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] run scoreboard players set @s Temp 0
 execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] store result score @s Temp run teststore @s party rayquaza 
 execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run tellraw @s {"text":"Rayquaza wishes to join your party. Please switch it to a party slot.","italic":true,"color":"gray"}
-execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run pc
+execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run tp @s 329.73 243.00 -171.31 7.34 21.75
 execute as @s[x=337,y=242,z=-178,distance=..30,tag=Dialogue205,tag=RayquazaCaught,tag=!Dialogue206] if entity @s[scores={StepCounter=1..,Temp=0}] run scoreboard players set @s StepCounter 0
 
 

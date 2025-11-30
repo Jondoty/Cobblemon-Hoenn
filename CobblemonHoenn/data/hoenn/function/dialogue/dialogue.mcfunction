@@ -562,6 +562,40 @@ tag @s[scores={DialogueTrigger=207,TalkTime=130..}] add Dialogue207
 scoreboard players set @s[scores={DialogueTrigger=207},tag=Dialogue207] TalkTime 0
 scoreboard players set @s[scores={DialogueTrigger=207},tag=Dialogue207] DialogueTrigger 0
 
+
+#-----------------------------------------------------------------------------------------------------
+
+#Shot of particles in the sky
+execute as @s[scores={DialogueTrigger=208,TalkTime=7}] run gamemode spectator
+execute as @s[scores={DialogueTrigger=208,TalkTime=7}] run playsound cobblemon:pokemon.rayquaza.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=208,TalkTime=7}] run effect give @s minecraft:blindness 4 1 true
+execute as @s[scores={DialogueTrigger=208,TalkTime=8..18}] run tp @s 336.5 310 -186.5 180 -90
+execute as @s[scores={DialogueTrigger=208,TalkTime=20}] at @s run particle cloud ~ ~100 ~ 1 1 1 1 500 force @s
+
+#Zinna tps out if still remaining
+execute as @s[scores={DialogueTrigger=208,TalkTime=26}] run tp @e[x=338,y=243,z=-186,distance=..3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+#View from Sky Pillar
+execute as @s[scores={DialogueTrigger=208,TalkTime=26}] run tp @s 379 245 -123.6 146 24
+execute as @s[scores={DialogueTrigger=208,TalkTime=26}] run scoreboard players set @s MusicTitles 36
+execute as @s[scores={DialogueTrigger=208,TalkTime=26}] run function hoenn:tools/forceclick
+
+
+#player is back on Sky Pillar
+execute as @s[scores={DialogueTrigger=208,TalkTime=36}] run tp @s 342.72 243.00 -177.11 19.80 22.25
+execute as @s[scores={DialogueTrigger=208,TalkTime=36}] run gamemode adventure
+
+#Opens corresponding dialogues
+#execute as @s[scores={DialogueTrigger=208,TalkTime=37,GameVersion=1,Rival=1}] run opendialogue dialogue208_magma_may @s
+#execute as @s[scores={DialogueTrigger=208,TalkTime=37,GameVersion=1,Rival=2}] run opendialogue dialogue208_magma_brendan @s
+#execute as @s[scores={DialogueTrigger=208,TalkTime=37,GameVersion=2,Rival=1}] run opendialogue 
+#execute as @s[scores={DialogueTrigger=208,TalkTime=37,GameVersion=2,Rival=2}] run opendialogue 
+execute as @s[scores={DialogueTrigger=208,TalkTime=37}] run opendialogue dialogue208_short @s
+
+tag @s[scores={DialogueTrigger=208,TalkTime=37..}] add Dialogue208
+scoreboard players set @s[scores={DialogueTrigger=208},tag=Dialogue208] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=208},tag=Dialogue208] DialogueTrigger 0
+
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 216 - New Mauville
 #Player pressing button(s) in New Mauville

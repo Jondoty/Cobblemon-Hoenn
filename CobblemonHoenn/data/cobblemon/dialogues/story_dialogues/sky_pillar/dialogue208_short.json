@@ -1,0 +1,355 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.whismur.cry ambient @s ~ ~ ~ 1 1 1');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "whismur": {
+            "name": "Whismur",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:whismur",
+                "isLeftSide": true
+            }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    },
+        "scientist": {
+            "name": "Scientist",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": true
+            }
+        },
+        "prof_cozmo": {
+            "name": "Professor Cozmo",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": true
+            }
+        },
+        "wally": {
+            "name": "Wally",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:wally",
+                "isLeftSide": true
+            }
+        },
+        "wally_dad": {
+            "name": "Wally's Dad",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:richboy",
+                "isLeftSide": true
+            }
+        },
+        "wally_mom": {
+            "name": "Wally's Mom",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:beauty",
+                "isLeftSide": false
+            }
+        },
+        "courtney": {
+            "name": "Magma Admin Courtney",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:courtney",
+                "isLeftSide": true
+            }
+        },
+        "maxie": {
+            "name": "Maxie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:maxie",
+                "isLeftSide": false
+            }
+        },
+        "tabitha": {
+            "name": "Team Magma Tabitha",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:hiker",
+                "isLeftSide": true
+            }
+        },
+        "steven": {
+            "name": "Steven",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:steven",
+                "isLeftSide": true
+            }
+        },
+        "wallace": {
+            "name": "Wallace",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:artist",
+                "isLeftSide": false
+            }
+        },
+        "zinnia": {
+            "name": "Zinnia",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:zinnia",
+                "isLeftSide": true
+            }
+        },
+        "draconid_lady": {
+            "name": "Draconids Lady",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:lady",
+                "isLeftSide": false
+            }
+        },
+        "grandma": {
+            "name": "Zinnia's Grandma",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:lady",
+                "isLeftSide": false
+            }
+        },
+        "birch": {
+            "name": "Professor Birch",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:birch",
+                "isLeftSide": true
+            }
+        },
+        "mrs_birch": {
+            "name": "Mrs. Birch",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:beauty",
+                "isLeftSide": false
+            }
+        },
+        "mom": {
+            "name": "Mom",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:beauty",
+                "isLeftSide": true
+            }
+        },
+        "dad": {
+            "name": "Dad",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:norman",
+                "isLeftSide": false
+            }
+        },
+        "announcement": {
+            "name": "Announcement",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:reporter",
+                "isLeftSide": false
+            }
+        },
+        "may": {
+            "name": "May",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:may",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "whismur",
+            "lines": [
+                "Mur!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "player",
+            "lines": [
+                "You received a letter from Aster!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:pokemon.whismur.cry ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "whismur",
+            "lines": [
+                "Mur murrr!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('particle cloud 341 243 -174 1 1 1 0.15 300');",
+                            "q.run_command('tp @e[x=341,y=243,z=-174,distance=..3,type=cobblemon:pokemon] 10000000 -50000 -10000000');",
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "player",
+            "lines": [
+                "\"I was finally able to bring everything to an end.\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "player",
+            "lines": [
+                "\"I thank you for that.\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "player",
+            "lines": [
+                "\"I think I'll spend some time now trying to find out if it's also possible to forge a new beginning for something once lost.\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "player",
+            "lines": [
+                "\"Until we meet again,\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "player",
+            "lines": [
+                "\"-Zinnia\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run title @s subtitle {\"text\":\"Delta Episode\",\"color\":\"dark_green\"}');",
+                            "q.run_command('execute as ' + q.player.username + ' run title @s title {\"text\":\"Cobblemon Hoenn\"}');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue208');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

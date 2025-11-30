@@ -1,0 +1,3156 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "whismur": {
+            "name": "Whismur",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:whismur",
+                "isLeftSide": true
+            }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    },
+        "scientist": {
+            "name": "Scientist",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": true
+            }
+        },
+        "prof_cozmo": {
+            "name": "Professor Cozmo",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": true
+            }
+        },
+        "wally": {
+            "name": "Wally",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:wally",
+                "isLeftSide": true
+            }
+        },
+        "wally_dad": {
+            "name": "Wally's Dad",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:richboy",
+                "isLeftSide": true
+            }
+        },
+        "wally_mom": {
+            "name": "Wally's Mom",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:beauty",
+                "isLeftSide": false
+            }
+        },
+        "courtney": {
+            "name": "Magma Admin Courtney",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:courtney",
+                "isLeftSide": true
+            }
+        },
+        "maxie": {
+            "name": "Maxie",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:maxie",
+                "isLeftSide": false
+            }
+        },
+        "tabitha": {
+            "name": "Team Magma Tabitha",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:tabitha",
+                "isLeftSide": true
+            }
+        },
+        "steven": {
+            "name": "Steven",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:steven",
+                "isLeftSide": true
+            }
+        },
+        "wallace": {
+            "name": "Wallace",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:artist",
+                "isLeftSide": false
+            }
+        },
+        "zinnia": {
+            "name": "Zinnia",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:zinnia",
+                "isLeftSide": true
+            }
+        },
+        "draconid_lady": {
+            "name": "Draconids Lady",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:elder",
+                "isLeftSide": false
+            }
+        },
+        "grandma": {
+            "name": "Zinnia's Grandma",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:lady",
+                "isLeftSide": false
+            }
+        },
+        "birch": {
+            "name": "Professor Birch",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:birch",
+                "isLeftSide": true
+            }
+        },
+        "mrs_birch": {
+            "name": "Mrs. Birch",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:beauty",
+                "isLeftSide": false
+            }
+        },
+        "mom": {
+            "name": "Mom",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:acetrainerf",
+                "isLeftSide": true
+            }
+        },
+        "dad": {
+            "name": "Dad",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:norman",
+                "isLeftSide": false
+            }
+        },
+        "announcement": {
+            "name": "Announcement",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:reporter",
+                "isLeftSide": false
+            }
+        },
+        "brendan": {
+            "name": "Brendan",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:brendan",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "whismur",
+            "lines": [
+                "Mur!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "player",
+            "lines": [
+                "You received a letter from Aster!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "whismur",
+            "lines": [
+                "Mur murrr!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "player",
+            "lines": [
+                "\"I was finally able to bring everything to an end.\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "player",
+            "lines": [
+                "\"I thank you for that.\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "player",
+            "lines": [
+                "\"I think I'll spend some time now trying to find out if it's also possible to forge a new beginning for something once lost.\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "player",
+            "lines": [
+                "\"Until we meet again,\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "player",
+            "lines": [
+                "\"-Zinnia\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "scientist",
+            "lines": [
+                "The energy reading appears to be diffusing!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "scientist",
+            "lines": [
+                "W-we can confirm that the meteoroid has been destroyed, sir!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "scientist",
+            "lines": [
+                "Puh... P-P-P-P-P-P-Professor!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "scientist",
+            "lines": [
+                "The meteoroid! The meteoroid—it's—! Thank the powers above! It's—!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page13');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "prof_cozmo",
+            "lines": [
+                "Calm yourself, man!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page14');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "prof_cozmo",
+            "lines": [
+                "Oh, who am I kidding! I'm so happy, I could kiss you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page15');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "prof_cozmo",
+            "lines": [
+                "We did it! We actually did it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page16');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
+            "speaker": "prof_cozmo",
+            "lines": [
+                "Wahahahaha! Success is ours!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page17');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page17",
+            "speaker": "prof_cozmo",
+            "lines": [
+                "Hahahaha...ha... Hah..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page18');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page18",
+            "speaker": "prof_cozmo",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Thank you, ' + q.player.username + '.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page19');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page19",
+            "speaker": "wally",
+            "lines": [
+                "I'll be leaving, then. Good-bye, Mom! Bye, Dad!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page20');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page20",
+            "speaker": "wally_dad",
+            "lines": [
+                "W-wait just a minute! Wally!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page21');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page21",
+            "speaker": "wally_mom",
+            "lines": [
+                "That's right! Are you OK?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page22');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page22",
+            "speaker": "wally_mom",
+            "lines": [
+                "You looked like you were in trouble recently when those strange thugs came around..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page23');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "wally",
+            "lines": [
+                "Of course! My Pokémon and I are fit for anything!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page24');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "wally",
+            "lines": [
+                "See, ' + q.player.username + ' got my Key Stone back for me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page25');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
+            "speaker": "wally",
+            "lines": [
+                "And Mr. Norman gave me a ticket to a resort that sounds really neat."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page26');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "wally",
+            "lines": [
+                "I can't wait to go and check it out!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page27');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "wally_dad",
+            "lines": [
+                "My, my... I never dreamed I would one day think that Wally was TOO well..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page28');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page28",
+            "speaker": "wally_mom",
+            "lines": [
+                "Yes... But he looks so honestly happy... that I can't help feeling happy, too."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page29');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page29",
+            "speaker": "courtney",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page30');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page30",
+            "speaker": "maxie",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page31');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page31",
+            "speaker": "courtney",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page32');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page32",
+            "speaker": "maxie",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page33');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page33",
+            "speaker": "courtney",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page34');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page34",
+            "speaker": "maxie",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page35');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page35",
+            "speaker": "tabitha",
+            "lines": [
+                "Uwaahhh!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page36');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page36",
+            "speaker": "tabitha",
+            "lines": [
+                "This conversation isn't proceeding as expected!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page37');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page37",
+            "speaker": "maxie",
+            "lines": [
+                "Ugh..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page38');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page38",
+            "speaker": "tabitha",
+            "lines": [
+                "If it has come to this, then I, Tabitha, shall handle this myself!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page39');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page39",
+            "speaker": "tabitha",
+            "lines": [
+                "Courtney!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page40');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page40",
+            "speaker": "courtney",
+            "lines": [
+                "Y-yes?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page41');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page41",
+            "speaker": "tabitha",
+            "lines": [
+                "Apologize to Leader Maxie!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page42');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page42",
+            "speaker": "courtney",
+            "lines": [
+                "Hu-huh?! Ow...ch..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page43');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page43",
+            "speaker": "tabitha",
+            "lines": [
+                "Hurry up! OK?! Just say, \"Sorry!\""
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page44');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page44",
+            "speaker": "courtney",
+            "lines": [
+                "I'm sorry! Leader Maxie, I'm sorry!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page45');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page45",
+            "speaker": "courtney",
+            "lines": [
+                "I won't do it...anymore! I'll never do anything...like that...again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page46');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page46",
+            "speaker": "courtney",
+            "lines": [
+                "So please... Forgive... Forgive me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page47');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47",
+            "speaker": "maxie",
+            "lines": [
+                "?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page48');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page48",
+            "speaker": "courtney",
+            "lines": [
+                "Wah...wah... Sniffle..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page49');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page49",
+            "speaker": "maxie",
+            "lines": [
+                "What are you—?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page50');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page50",
+            "speaker": "courtney",
+            "lines": [
+                "Sniff...sniffle... Ohh...ooh..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page51');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page51",
+            "speaker": "maxie",
+            "lines": [
+                "... ... Fine."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page52');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page52",
+            "speaker": "maxie",
+            "lines": [
+                "I understand."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page53');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page53",
+            "speaker": "maxie",
+            "lines": [
+                "Courtney."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page54');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page54",
+            "speaker": "maxie",
+            "lines": [
+                "I, the great Maxie, will forgive you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page55');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page55",
+            "speaker": "maxie",
+            "lines": [
+                "But only on one condition!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page56');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page56",
+            "speaker": "courtney",
+            "lines": [
+                "Huh?!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page57');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page57",
+            "speaker": "tabitha",
+            "lines": [
+                "?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page58');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page58",
+            "speaker": "maxie",
+            "lines": [
+                "You must...also forgive me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page59');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page59",
+            "speaker": "maxie",
+            "lines": [
+                "Courtney. I never imagined... I never could have imagined..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page60');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page60",
+            "speaker": "maxie",
+            "lines": [
+                "How very loyal you were to me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page61');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page61",
+            "speaker": "maxie",
+            "lines": [
+                "Nor did I imagine even one iota of the shock you must have experienced, due to my recent speech and conduct, or how it could have pained you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page62');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page62",
+            "speaker": "maxie",
+            "lines": [
+                "The one who drove you to such an extreme act was me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page63');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page63",
+            "speaker": "maxie",
+            "lines": [
+                "I am truly sorry for that."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page64');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page64",
+            "speaker": "maxie",
+            "lines": [
+                "You see, Courtney, I would like to start on a new path."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page65');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page65",
+            "speaker": "maxie",
+            "lines": [
+                "There are truths that I have learned because of the mistakes I have made."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page66');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page66",
+            "speaker": "maxie",
+            "lines": [
+                "They pit me against others who are not like me and against ideas that differ from mine."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page67');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page67",
+            "speaker": "maxie",
+            "lines": [
+                "They tell me the importance of understanding these others, even though we may continue to cause pain to one another."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page68');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page68",
+            "speaker": "maxie",
+            "lines": [
+                "And that holds true whether the opponent I face is human, Pokémon, or even the might of nature itself."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page69');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page69",
+            "speaker": "maxie",
+            "lines": [
+                "I will take this step forward, free from hesitation, and meet my foe."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page70');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page70",
+            "speaker": "maxie",
+            "lines": [
+                "And together we will find a way to create, not destroy."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page71');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page71",
+            "speaker": "maxie",
+            "lines": [
+                "Or so I hope. That is the vision that I, Maxie, have for Team Magma's future."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page72');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page72",
+            "speaker": "maxie",
+            "lines": [
+                "Will you come with me on this journey as well? Courtney."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page73');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page73",
+            "speaker": "courtney",
+            "lines": [
+                "Wahh... Uwahh... Waahhh!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page74');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page74",
+            "speaker": "courtney",
+            "lines": [
+                "Waahhh... Of course I will!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page75');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page75",
+            "speaker": "maxie",
+            "lines": [
+                "My... You certainly do cry a lot."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page76');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page76",
+            "speaker": "tabitha",
+            "lines": [
+                "Ahyahya!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page77');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page77",
+            "speaker": "tabitha",
+            "lines": [
+                "And that settles that! Ahyahyahyahya!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page78');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page78",
+            "speaker": "steven",
+            "lines": [
+                "I still owe you for your help at the Sky Pillar. Thank you for that."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page79');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page79",
+            "speaker": "wallace",
+            "lines": [
+                "Hahaha!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page80');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page80",
+            "speaker": "wallace",
+            "lines": [
+                "How unlike you to be so thoughtful."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page81');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page81",
+            "speaker": "steven",
+            "lines": [
+                "Heh..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page82');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page82",
+            "speaker": "steven",
+            "lines": [
+                "You know, this experience really brought it home for me again..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page83');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page83",
+            "speaker": "steven",
+            "lines": [
+                "That there is still so much about this world that I do not know."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page84');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page84",
+            "speaker": "steven",
+            "lines": [
+                "I wonder what would have happened to Hoenn..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page85');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page85",
+            "speaker": "steven",
+            "lines": [
+                "If ' + q.player.username + ' had not been here to aid us with this, and the incident with the super-ancient Pokémon..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page86');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page86",
+            "speaker": "steven",
+            "lines": [
+                "I alone was powerless to stop either."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page87');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page87",
+            "speaker": "wallace",
+            "lines": [
+                "There is no one person in this world who knows all."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page88');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page88",
+            "speaker": "wallace",
+            "lines": [
+                "None who can do all."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page89');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page89",
+            "speaker": "wallace",
+            "lines": [
+                "Steven... There is no cause for such worries or concern."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page90');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page90",
+            "speaker": "steven",
+            "lines": [
+                "Hmm."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page91');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page91",
+            "speaker": "steven",
+            "lines": [
+                "Heh. Don't worry."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page92');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page92",
+            "speaker": "steven",
+            "lines": [
+                "It's not that I am so shocked by my own disappointing performance. But rather..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page93');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page93",
+            "speaker": "wallace",
+            "lines": [
+                "Rather what?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page94');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page94",
+            "speaker": "steven",
+            "lines": [
+                "I was just thinking how much more there is I must learn about nature...about Pokémon..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page95');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page95",
+            "speaker": "steven",
+            "lines": [
+                "and about my fellow humans as well... If I am to keep living in this huge, wide world."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page96');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page96",
+            "speaker": "steven",
+            "lines": [
+                "I want to walk this world on my own two feet."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page97');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page97",
+            "speaker": "steven",
+            "lines": [
+                "To see it with my own eyes. To feel it on my very skin..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page98');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page98",
+            "speaker": "steven",
+            "lines": [
+                "I need to put into practice all of the advice I ever gave to ' + q.player.username + '."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page99');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page99",
+            "speaker": "steven",
+            "lines": [
+                "That's what I am thinking now."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page100');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page100",
+            "speaker": "wallace",
+            "lines": [
+                "...? Steven... You can't intend to..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page101');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page101",
+            "speaker": "steven",
+            "lines": [
+                "Hah hah hah! But no need to fear..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page102');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page102",
+            "speaker": "steven",
+            "lines": [
+                "I won't just disappear at once."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page103');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page103",
+            "speaker": "steven",
+            "lines": [
+                "I'll still be around doing my duty on behalf of the Pokémon League."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page104');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page104",
+            "speaker": "steven",
+            "lines": [
+                "But, hmm..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page105');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page105",
+            "speaker": "steven",
+            "lines": [
+                "When the time does come for me to pursue my own hopes..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page106');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page106",
+            "speaker": "steven",
+            "lines": [
+                "Well... I hope that you, Wallace, will be behind me to lend a hand."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page107');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page107",
+            "speaker": "wallace",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page108');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page108",
+            "speaker": "wallace",
+            "lines": [
+                "Hmph. It seems I have little choice."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page109');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page109",
+            "speaker": "wallace",
+            "lines": [
+                "I bow to the whims of the pampered heir. I, Wallace, will do this thing you wish."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page110');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page110",
+            "speaker": "wallace",
+            "lines": [
+                "Heh."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page111');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page111",
+            "speaker": "steven",
+            "lines": [
+                "Hah hah hah... Thank you, my friend..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page112');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page112",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page113');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page113",
+            "speaker": "whismur",
+            "lines": [
+                "Mum..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page114');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page114",
+            "speaker": "zinnia",
+            "lines": [
+                "Aster..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page115');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page115",
+            "speaker": "zinnia",
+            "lines": [
+                "It's over... It's all over..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page116');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page116",
+            "speaker": "draconid_lady",
+            "lines": [
+                "...Zinnia, my child."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page117');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page117",
+            "speaker": "zinnia",
+            "lines": [
+                "...Grannie."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page118');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page118",
+            "speaker": "grandma",
+            "lines": [
+                "...You have worked so hard."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page119');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page119",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page120');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page120",
+            "speaker": "grandma",
+            "lines": [
+                "...It is enough, child. ...Be done with your burden. Let it go now."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page121');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page121",
+            "speaker": "grandma",
+            "lines": [
+                "For everything there must be an ending."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page122');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page122",
+            "speaker": "grandma",
+            "lines": [
+                "Only then... Only then can there be a new beginning."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page123');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page123",
+            "speaker": "grandma",
+            "lines": [
+                "This is immutable truth that all living things on this planet, great and small, must accept."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page124');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page124",
+            "speaker": "grandma",
+            "lines": [
+                "We Draconids have seen it in our history, as you have seen it in your own life."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page125');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page125",
+            "speaker": "grandma",
+            "lines": [
+                "Now is the time for rest."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page126');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page126",
+            "speaker": "grandma",
+            "lines": [
+                "Let down the great burden you have borne so long alone..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page127');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page127",
+            "speaker": "grandma",
+            "lines": [
+                "So that you might at last take a step forward toward new life."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page128');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page128",
+            "speaker": "grandma",
+            "lines": [
+                "Now is the time for rest..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page129');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page129",
+            "speaker": "zinnia",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page130');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page130",
+            "speaker": "zinnia",
+            "lines": [
+                "... Yes."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page131');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page131",
+            "speaker": "birch",
+            "lines": [
+                "I suppose May and ' + q.player.username + ' have probably arrived by now..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page132');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page132",
+            "speaker": "mrs_birch",
+            "lines": [
+                "I imagine so."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page133');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page133",
+            "speaker": "mom",
+            "lines": [
+                "The weather is good today. They should get a good view of the stars."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page134');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page134",
+            "speaker": "dad",
+            "lines": [
+                "But you know...I really am glad we moved here from Johto."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page135');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page135",
+            "speaker": "dad",
+            "lines": [
+                "I think that meeting you, Birch, and Mrs. Birch and little May, has had a huge impact on ' + q.player.username + ''s life."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page136');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page136",
+            "speaker": "mrs_birch",
+            "lines": [
+                "Oh, it's just the same for our May."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page137');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page137",
+            "speaker": "mrs_birch",
+            "lines": [
+                "Don't you agree, dear?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page138');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page138",
+            "speaker": "birch",
+            "lines": [
+                "Of course!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page139');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page139",
+            "speaker": "birch",
+            "lines": [
+                "Whenever she does make it home, all May has to talk about is Pokémon and her precious friend ' + q.player.username + '."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page140');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page140",
+            "speaker": "birch",
+            "lines": [
+                "I think she's over the moon about this adventure and the great friend she's found."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page141');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page141",
+            "speaker": "mom",
+            "lines": [
+                "I think ours is just the same. They always looks so happy these days."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page142');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page142",
+            "speaker": "dad",
+            "lines": [
+                "I hope you'll continue to look after our ' + q.player.username + ' for many more years to come."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page143');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page143",
+            "speaker": "birch",
+            "lines": [
+                "Bwahahaha! Why, Norman! You don't even have to ask..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page144');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page144",
+            "speaker": "birch",
+            "lines": [
+                "Nothing could make me happier!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page145');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page145",
+            "speaker": "dad",
+            "lines": [
+                "Hahahaha... Thanks, old friend."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page146');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page146",
+            "speaker": "mrs_birch",
+            "lines": [
+                "...Well then, dear, isn't it about time we were headed back home?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page147');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page147",
+            "speaker": "mrs_birch",
+            "lines": [
+                "I should get supper started..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page148');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page148",
+            "speaker": "birch",
+            "lines": [
+                "Oh, yes! Those kids'll probably be starving when they get home!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page149');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page149",
+            "speaker": "mom",
+            "lines": [
+                "Oh, I didn't make any plans yet for dinner... What do you think we should have, dear?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page150');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page150",
+            "speaker": "dad",
+            "lines": [
+                "Hmm. How about our little ' + q.player.username + ''s favorite?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page151');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page151",
+            "speaker": "brendan",
+            "lines": [
+                "That was amazing... So those are the Litleonids.!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page152');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page152",
+            "speaker": "brendan",
+            "lines": [
+                "I'm really gonna have to to thank your dad for this one."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page153');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page153",
+            "speaker": "brendan",
+            "lines": [
+                "'Cause... Come on..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page154');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page154",
+            "speaker": "brendan",
+            "lines": [
+                "I feel like I've been knocked flat on my back......"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page155');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page155",
+            "speaker": "brendan",
+            "lines": [
+                "...Thanks, ' + q.player.username + '!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page156');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page156",
+            "speaker": "brendan",
+            "lines": [
+                "I'm really glad I got to see this with you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page157');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page157",
+            "speaker": "announcement",
+            "lines": [
+                "Thank you for visiting the Mossdeep Space Center."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page158');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page158",
+            "speaker": "announcement",
+            "lines": [
+                "This center will be closing shortly."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page159');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page159",
+            "speaker": "announcement",
+            "lines": [
+                "Please make sure that you don't forget anything when you leave."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page160');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page160",
+            "speaker": "brendan",
+            "lines": [
+                "It's true what they say, though. Time really flies when you're having fun..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page161');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page161",
+            "speaker": "brendan",
+            "lines": [
+                "Well... Bye..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page162');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page162",
+            "speaker": "brendan",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page163');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page163",
+            "speaker": "brendan",
+            "lines": [
+                "' + q.player.username + '!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page164');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page164",
+            "speaker": "brendan",
+            "lines": [
+                "See you tomorrow!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue208');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

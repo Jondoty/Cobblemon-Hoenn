@@ -7,4 +7,7 @@ for_each(t.player, c.players, {
     q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 5');
     q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');
     q.run_command('execute as ' + q.player.username + ' run opendialogue steven_dialogue114 @s[x=-362,y=85,z=-1354,distance=..30,tag=Dialogue113,tag=!Dialogue114]');
+    
+    q.run_command('execute as ' + q.player.username + ' run tag @s[x=392,y=0,z=2311,dx=501,dy=256,dz=501] remove Dialogue208');
+    q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s[x=392,y=0,z=2311,dx=501,dy=256,dz=501] DialogueTrigger 208');
 });

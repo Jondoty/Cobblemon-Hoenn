@@ -79,7 +79,6 @@ execute as @s[tag=!LugiaCatch,tag=!LugiaEncounter] run tag @s remove Dialogue221
 
 #Rayquaza space prompt
 tag @s remove SpacePrompt
-tag @s remove Dialogue206
 
 #if player is stuck on the screen shaking effect
 tag @s remove ShakeScreen
