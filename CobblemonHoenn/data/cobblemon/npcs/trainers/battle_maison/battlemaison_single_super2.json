@@ -1,50 +1,306 @@
 {
-  "resourceIdentifier": "cobblemon:random_skin",    
-  "names": [
-    "Battle Maison Trainer"
-  ],
-"ai": [
+    "resourceIdentifier": "cobblemon:random_skin",
+    "names": [
+        "Battle Maison Trainer"
+    ],
+    "ai": [
         {
-            "type": "apply_behaviours",
-            "behaviours": [
-                          "cobblemon:trainer_basics",
-                          "cobblemon:skin_variations"
-              ]
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
         }
-      ],
-  "interaction": {
-    "type": "dialogue",
-    "dialogue": "cobblemon:battlemaison_trainer_interaction"
-  },
-  "HideNPCNameTag": 1,
-  "skill": 5,
-  "party": {
-    "type": "script",
-    "script": "cobblemon:maison_super_pool2",
-    "isStatic": false
-  },
-
-  "config": [
-    {
-        "variableName": "challenge_cooldown",
-        "displayName": "Cooldown",
-        "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
-        "type": "NUMBER",
-        "defaultValue": "0"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:battlemaison_trainer_interaction"
     },
-    {
-        "variableName": "can_rechallenge",
-        "displayName": "Rechallenging",
-        "description": "This NPC can be battled multiple times.",
-        "type": "BOOLEAN",
-        "defaultValue": true
+    "HideNPCNameTag": 1,
+    "skill": 5,
+    "party": {
+        "type": "script",
+        "script": "cobblemon:maison_super_pool2",
+        "isStatic": false
     },
-    {
-        "variableName": "on_player_wins",
-        "displayName": "npc.variable.on_player_wins.name",
-        "description": "npc.variable.on_player_wins.desc",
-        "type": "TEXT",
-        "defaultValue": "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 3');"
-      }
-]
+    "variation": {
+        "net": {
+            "type": "weighted",
+            "options": [
+                {
+                    "aspect": "acetrainerf",
+                    "weight": 1
+                },
+                {
+                    "aspect": "acetrainerm",
+                    "weight": 1
+                },
+                {
+                    "aspect": "aromalady",
+                    "weight": 1
+                },
+                {
+                    "aspect": "backpacker",
+                    "weight": 1
+                },
+                {
+                    "aspect": "battlegirl",
+                    "weight": 1
+                },
+                {
+                    "aspect": "beauty",
+                    "weight": 1
+                },
+                {
+                    "aspect": "birdkeeper",
+                    "weight": 1
+                },
+                {
+                    "aspect": "blackbelt",
+                    "weight": 1
+                },
+                {
+                    "aspect": "bride",
+                    "weight": 1
+                },
+                {
+                    "aspect": "bugcatcher",
+                    "weight": 1
+                },
+                {
+                    "aspect": "bugmaniac",
+                    "weight": 1
+                },
+                {
+                    "aspect": "camper",
+                    "weight": 1
+                },
+                {
+                    "aspect": "collector",
+                    "weight": 1
+                },
+                {
+                    "aspect": "delinquent",
+                    "weight": 1
+                },
+                {
+                    "aspect": "dragontamer",
+                    "weight": 1
+                },
+                {
+                    "aspect": "engineer",
+                    "weight": 1
+                },
+                {
+                    "aspect": "fairytalegirl",
+                    "weight": 1
+                },
+                {
+                    "aspect": "fisherman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "furisode",
+                    "weight": 1
+                },
+                {
+                    "aspect": "gentleman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "guitarist",
+                    "weight": 1
+                },
+                {
+                    "aspect": "hexmaniac",
+                    "weight": 1
+                },
+                {
+                    "aspect": "hiker",
+                    "weight": 1
+                },
+                {
+                    "aspect": "kindler",
+                    "weight": 1
+                },
+                {
+                    "aspect": "lady",
+                    "weight": 1
+                },
+                {
+                    "aspect": "lass",
+                    "weight": 1
+                },
+                {
+                    "aspect": "ninja",
+                    "weight": 1
+                },
+                {
+                    "aspect": "oldman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "parasollady",
+                    "weight": 1
+                },
+                {
+                    "aspect": "picnicker",
+                    "weight": 1
+                },
+                {
+                    "aspect": "pokefanf",
+                    "weight": 1
+                },
+                {
+                    "aspect": "pokefanm",
+                    "weight": 1
+                },
+                {
+                    "aspect": "pokemaniac",
+                    "weight": 1
+                },
+                {
+                    "aspect": "pokemonbreeder",
+                    "weight": 1
+                },
+                {
+                    "aspect": "psychic",
+                    "weight": 1
+                },
+                {
+                    "aspect": "rangerf",
+                    "weight": 1
+                },
+                {
+                    "aspect": "rangerm",
+                    "weight": 1
+                },
+                {
+                    "aspect": "reporter",
+                    "weight": 1
+                },
+                {
+                    "aspect": "richman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "roxanne",
+                    "weight": 1
+                },
+                {
+                    "aspect": "ruinmaniac",
+                    "weight": 1
+                },
+                {
+                    "aspect": "sailor",
+                    "weight": 1
+                },
+                {
+                    "aspect": "schoolboy",
+                    "weight": 1
+                },
+                {
+                    "aspect": "schoolgirl",
+                    "weight": 1
+                },
+                {
+                    "aspect": "scientistf",
+                    "weight": 1
+                },
+                {
+                    "aspect": "scientistm",
+                    "weight": 1
+                },
+                {
+                    "aspect": "scubadiver",
+                    "weight": 1
+                },
+                {
+                    "aspect": "scubadiverf",
+                    "weight": 1
+                },
+                {
+                    "aspect": "shopman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "streetthug",
+                    "weight": 1
+                },
+                {
+                    "aspect": "supernerd",
+                    "weight": 1
+                },
+                {
+                    "aspect": "swimmerf",
+                    "weight": 1
+                },
+                {
+                    "aspect": "swimmerm",
+                    "weight": 1
+                },
+                {
+                    "aspect": "tourist",
+                    "weight": 1
+                },
+                {
+                    "aspect": "triathlete",
+                    "weight": 1
+                },
+                {
+                    "aspect": "twin",
+                    "weight": 1
+                },
+                {
+                    "aspect": "youngster",
+                    "weight": 1
+                }
+            ]
+        }
+    },
+    "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "challenge_cooldown",
+            "displayName": "Cooldown",
+            "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+            "type": "NUMBER",
+            "defaultValue": "0"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 3');"
+        }
+    ]
 }
