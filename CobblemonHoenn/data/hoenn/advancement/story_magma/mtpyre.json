@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Above It All"
+            "text": "The Orb Origins"
         },
         "description": {
-            "text": "Fly Rayquaza into Outer Space"
+            "text": "Obtain the Blue Orb"
         },
         "icon": {
-            "id": "cobblemon:star_sweet"
+            "id": "mega_showdown:blue_orb"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:story_magma/weatherinstitute",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

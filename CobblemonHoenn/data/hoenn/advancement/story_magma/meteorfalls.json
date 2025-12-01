@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "An Ancient Power"
+            "text": "Meteor Mash"
         },
         "description": {
-            "text": "Encounter Primal Groudon"
+            "text": "Rescue Prof Cozmo in Meteor Falls"
         },
         "icon": {
-            "id": "mega_showdown:red_orb"
+            "id": "cobblemon:wise_glasses"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer/groudon1",
+      "parent": "hoenn:story_magma/peeko",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

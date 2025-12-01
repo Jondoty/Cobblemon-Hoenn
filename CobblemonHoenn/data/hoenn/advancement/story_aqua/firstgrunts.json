@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Above It All"
+            "text": "Team Whatsit?"
         },
         "description": {
-            "text": "Fly Rayquaza into Outer Space"
+            "text": "Encounter Team Aqua in Petalburg Forest"
         },
         "icon": {
-            "id": "cobblemon:star_sweet"
+            "id": "minecraft:soul_campfire"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:story_aqua/starter",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Above It All"
+            "text": "The Draconid Legend"
         },
         "description": {
-            "text": "Fly Rayquaza into Outer Space"
+            "text": "Complete the Delta Episode"
         },
         "icon": {
-            "id": "cobblemon:star_sweet"
+            "id": "cobblemon:dragon_fang"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:story_magma/deltastart",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

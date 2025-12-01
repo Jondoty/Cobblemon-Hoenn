@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Above It All"
+            "text": "Shining Stones"
         },
         "description": {
-            "text": "Fly Rayquaza into Outer Space"
+            "text": "Find a shining Mega Stone in the wild"
         },
         "icon": {
-            "id": "cobblemon:star_sweet"
+            "id": "mega_showdown:venusarite"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": true
+        "hidden": false
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:adventurer/megaring",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

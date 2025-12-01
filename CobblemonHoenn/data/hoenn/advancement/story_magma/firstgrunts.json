@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Kyogre Awakened"
+            "text": "Team Whatsit?"
         },
         "description": {
-            "text": "Wake up Kyogre from its slumber"
+            "text": "Encounter Team Magma in Petalburg Forest"
         },
         "icon": {
-            "id": "cobblemon:water_gem"
+            "id": "minecraft:campfire"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:story_magma/starter",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

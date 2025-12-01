@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Above It All"
+            "text": "The Stolen Submarine"
         },
         "description": {
-            "text": "Fly Rayquaza into Outer Space"
+            "text": "Chase Team Magma to their Hideout"
         },
         "icon": {
-            "id": "cobblemon:star_sweet"
+            "id": "minecraft:lava_bucket"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:story_magma/mtpyre",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

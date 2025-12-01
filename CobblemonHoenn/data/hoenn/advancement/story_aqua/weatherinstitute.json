@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Above It All"
+            "text": "A Clear Forecast"
         },
         "description": {
-            "text": "Fly Rayquaza into Outer Space"
+            "text": "Chase out Team Aqua from the Weather Institute"
         },
         "icon": {
-            "id": "cobblemon:star_sweet"
+            "id": "cobblemon:mystic_water"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:story_aqua/mtchimney",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

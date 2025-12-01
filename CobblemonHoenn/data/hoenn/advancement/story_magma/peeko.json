@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Above It All"
+            "text": "I've got you, Peeko"
         },
         "description": {
-            "text": "Fly Rayquaza into Outer Space"
+            "text": "Save Peeko from Team Magma"
         },
         "icon": {
-            "id": "cobblemon:star_sweet"
+            "id": "minecraft:feather"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:adventurer",
+      "parent": "hoenn:story_magma/firstgrunts",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"
