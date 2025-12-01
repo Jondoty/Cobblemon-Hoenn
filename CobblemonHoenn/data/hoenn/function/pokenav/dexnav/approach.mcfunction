@@ -9,7 +9,7 @@ scoreboard players set @a[distance=6..25] StepCounter 0
 #If score is >1 in range of the Pokemon, they will see and flee.
 execute as @a[distance=3..6,scores={StepCounter=1..}] run tellraw @s {"text":"The Pokémon Fled!","italic":true,"color":"gray"}
 execute if entity @a[distance=3..6,scores={StepCounter=1..}] at @s run particle minecraft:explosion ~ ~1 ~ 1 1 1 1 10 normal
-execute if entity @a[distance=3..6,scores={StepCounter=1..}] as @e[type=#animated_java:root,tag=aj.animated_pokemon.root,distance=..5] run function animated_java:animated_pokemon/remove/this
+execute if entity @a[distance=3..6,scores={StepCounter=1..}] as @e[type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:shadow"}},distance=..5] run tp @s 10000000 -50000 -10000000
 execute if entity @a[distance=3..6,scores={StepCounter=1..}] run tag @s remove Active
 
 
@@ -27,7 +27,7 @@ execute if entity @a[distance=..3,scores={StepCounter=0},tag=NatDex] run functio
 
 #Kills the model, reverts back to inactive armor stand
 execute if entity @a[distance=..3,scores={StepCounter=0}] at @s run particle minecraft:explosion ~ ~1 ~ 1 1 1 1 10 normal
-execute if entity @a[distance=..3,scores={StepCounter=0}] as @e[type=#animated_java:root,tag=aj.animated_pokemon.root,distance=..5] run function animated_java:animated_pokemon/remove/this
+execute if entity @a[distance=..3,scores={StepCounter=0}] as @e[type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:shadow"}},distance=..5] run tp @s 10000000 -50000 -10000000
 execute if entity @a[distance=..3,scores={StepCounter=0}] run tag @s remove Active
 
 

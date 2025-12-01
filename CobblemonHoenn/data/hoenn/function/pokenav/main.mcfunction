@@ -85,8 +85,14 @@ execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..50,sort=nea
 execute as @s[scores={NavTrack=15,click=1..}] at @s run tag @e[distance=..50,sort=nearest,tag=DexNav,tag=!Active] add Active
 
 #Sets up model on Active tagged armor stand
-execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..55,tag=Active] at @s unless entity @e[type=#animated_java:root,tag=aj.animated_pokemon.root,distance=..5] positioned ~ ~-.75 ~ run function animated_java:animated_pokemon/summon
-execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..55,tag=Active] at @s as @e[type=#animated_java:root,tag=aj.animated_pokemon.root] run function animated_java:animated_pokemon/animations/idle/play
+execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..55,tag=Active] at @s unless entity @e[type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:shadow"}},distance=..5] positioned ~ ~-0.75 ~ run pokespawn shadow level=10 no_ai=yes uncatchable=yes
+
+#Makes shadows persistant and unbattleable
+execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..55,tag=Active] at @s as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:shadow"},PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
+execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..55,tag=Active] at @s as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:shadow"},PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
+execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..55,tag=Active] at @s as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:shadow"},PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
+execute as @s[scores={NavTrack=15,click=1..}] at @s as @e[distance=..55,tag=Active] at @s as @e[distance=..5,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:shadow"},PersistenceRequired:0b}] run data modify entity @s PersistenceRequired set value 1
+
 
 #Plays successful sound if player is within range
 execute as @s[scores={NavTrack=15,click=1}] at @s if entity @e[distance=..55,tag=Active] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
