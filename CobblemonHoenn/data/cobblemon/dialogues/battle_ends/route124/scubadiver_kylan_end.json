@@ -22,7 +22,7 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
-        ""
+        "Glug glug...glug! (That was fun! Let's do it again sometime!)"
       ],
       "input": {
         "type": "option",

@@ -25,7 +25,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-        ""
+        "Glug...glug glug...glug! (Hey! Did you come for a battle?!)"
       ],
       "input": {
         "type": "option",

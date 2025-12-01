@@ -25,7 +25,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-        ""
+        "Bloo-bloop... Bloop... (Oh? An invitation to battle, yes?)"
       ],
       "input": {
         "type": "option",

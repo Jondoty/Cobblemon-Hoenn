@@ -25,7 +25,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-        ""
+        "Glug! Glu-glug! (Hey! Who do you think you are?!)"
       ],
       "input": {
         "type": "option",

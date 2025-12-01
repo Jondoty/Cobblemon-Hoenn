@@ -22,7 +22,7 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
-        ""
+        "Bloop bloop... Bloop-oop... (Just being underwater puts me in a good mood.)"
       ],
       "input": {
         "type": "option",
