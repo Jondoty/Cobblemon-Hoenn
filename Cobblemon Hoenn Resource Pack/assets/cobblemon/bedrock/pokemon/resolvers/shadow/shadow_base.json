@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:shadow",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:shadow",
+      "model": "cobblemon:shadow.geo",
+      "texture": "cobblemon:textures/pokemon/shadow/shadow.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/shadow/shadow.png"
+    }
+  ]
+ }

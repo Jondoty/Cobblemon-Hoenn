@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shadow.ground_idle": {
+			"loop": true,
+			"bones": {
+				"ear1": {
+					"rotation": ["-0-math.sin(q.anim_time*90*2.25)*7.5", 0, 0]
+				},
+				"ear2": {
+					"rotation": ["-0-math.sin(q.anim_time*90*2.25)*7.5", 0, 0]
+				},
+				"controller": {
+					"rotation": ["-0-math.sin(q.anim_time*90*2.25)*7.5", 0, 0]
+				}
+			}
+		}
+	}
+}
