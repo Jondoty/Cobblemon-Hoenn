@@ -592,11 +592,11 @@ execute as @s[x=2694,y=65,z=2896,distance=..5,tag=!ItemLoot168] run tellraw @s {
 execute as @s[x=2694,y=65,z=2896,distance=..5,tag=!ItemLoot168] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=2694,y=65,z=2896,distance=..5,tag=!ItemLoot168] run tag @s add ItemLoot168
 
-execute as @s[x=2622,y=67,z=2794,distance=..5,tag=ItemLoot171] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=2622,y=67,z=2794,distance=..5,tag=!ItemLoot171] run give @s mega_showdown:reveal_glass
-execute as @s[x=2622,y=67,z=2794,distance=..5,tag=!ItemLoot171] run tellraw @s {"text":"You found a Reveal Glass!","italic":true,"color":"gray"}
-execute as @s[x=2622,y=67,z=2794,distance=..5,tag=!ItemLoot171] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=2622,y=67,z=2794,distance=..5,tag=!ItemLoot171] run tag @s add ItemLoot171
+execute as @s[x=2622,y=67,z=2794,distance=..8,tag=ItemLoot171] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2622,y=67,z=2794,distance=..8,tag=!ItemLoot171] run give @s mega_showdown:reveal_glass
+execute as @s[x=2622,y=67,z=2794,distance=..8,tag=!ItemLoot171] run tellraw @s {"text":"You recieved a Reveal Glass!","italic":true,"color":"gray"}
+execute as @s[x=2622,y=67,z=2794,distance=..8,tag=!ItemLoot171] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2622,y=67,z=2794,distance=..8,tag=!ItemLoot171] run tag @s add ItemLoot171
 
 execute as @s[x=-1569,y=133,z=-665,distance=..5,tag=ItemLoot185] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-1569,y=133,z=-665,distance=..5,tag=!ItemLoot185] run give @s cobblemon:metronome

@@ -143,23 +143,35 @@ execute as @s[x=-2747,y=38,z=-719,distance=..6,nbt={Inventory:[{id:"minecraft:pr
 execute as @s[x=-2747,y=38,z=-719,distance=..6,tag=Dialogue180,tag=!Dialogue209] run opendialogue mrstone_deltaepisode_reminder @s
 
 #Route Route 123, Berry Master's House if Shaymin is in your party
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
-execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 1 shaymin
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 2 shaymin
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 3 shaymin
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 4 shaymin
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 5 shaymin
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
-execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s PokeHave run testpartyslot @s 6 shaymin
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s[scores={PokeHave=1}] add Temp
+execute as @s[x=-560,y=45,z=-623,distance=..5] run scoreboard players set @s Temp 0
+execute as @s[x=-560,y=45,z=-623,distance=..5] store result score @s Temp run teststore @s party shaymin
 
-execute as @s[x=-560,y=45,z=-623,distance=..6] if entity @s[tag=!ItemLoot383,tag=Temp] run opendialogue route123_richman_shaymin @s
-execute as @s[x=-560,y=45,z=-623,distance=..6] unless entity @s[tag=!ItemLoot383,tag=Temp] run opendialogue route123_richman_interaction @s
-execute as @s[x=-560,y=45,z=-623,distance=..5] run tag @s remove Temp
+execute as @s[x=-560,y=45,z=-623,distance=..6] if entity @s[tag=!ItemLoot383,scores={Temp=1..}] run opendialogue route123_richman_shaymin @s
+execute as @s[x=-560,y=45,z=-623,distance=..6] unless entity @s[tag=!ItemLoot383,scores={Temp=1..}] run opendialogue route123_richman_interaction @s
+
+
+#Mauville Mirror Store if player has one of the genies
+execute as @s[x=2620,y=68,z=2794,distance=..6] run scoreboard players set @s Temp 0
+execute as @s[x=2620,y=68,z=2794,distance=..6] store result score @s Temp run teststore @s party thundurus 
+execute as @s[x=2620,y=68,z=2794,distance=..6,scores={Temp=1..}] run tag @s add ThundurusHave
+
+execute as @s[x=2620,y=68,z=2794,distance=..6] run scoreboard players set @s Temp 0
+execute as @s[x=2620,y=68,z=2794,distance=..6] store result score @s Temp run teststore @s party tornadus 
+execute as @s[x=2620,y=68,z=2794,distance=..6,scores={Temp=1..}] run tag @s add TornadusHave
+
+execute as @s[x=2620,y=68,z=2794,distance=..6] run scoreboard players set @s Temp 0
+execute as @s[x=2620,y=68,z=2794,distance=..6] store result score @s Temp run teststore @s party landorus 
+execute as @s[x=2620,y=68,z=2794,distance=..6,scores={Temp=1..}] run tag @s add LandorusHave
+
+execute as @s[x=2620,y=68,z=2794,distance=..6,tag=!ItemLoot171,tag=!ThundurusHave,tag=!TornadusHave,tag=!LandorusHave] run opendialogue mauville_lass_interaction @s
+execute as @s[x=2620,y=68,z=2794,distance=..6,tag=!ItemLoot171,tag=ThundurusHave] run opendialogue mauville_mirrors_thundurus @s
+execute as @s[x=2620,y=68,z=2794,distance=..6,tag=!ItemLoot171,tag=TornadusHave] run opendialogue mauville_mirrors_tornadus @s
+execute as @s[x=2620,y=68,z=2794,distance=..6,tag=!ItemLoot171,tag=LandorusHave] run opendialogue mauville_mirrors_landorus @s
+execute as @s[x=2620,y=68,z=2794,distance=..6,tag=ItemLoot171] run opendialogue mauville_mirrors_followup @s
+execute as @s[x=2620,y=68,z=2794,distance=..6] run tag @s remove ThundurusHave
+execute as @s[x=2620,y=68,z=2794,distance=..6] run tag @s remove TornadusHave
+execute as @s[x=2620,y=68,z=2794,distance=..6] run tag @s remove LandorusHave
+
 
 #Rydel's cycles, Mauville City
 #Determines which bike the player already has
