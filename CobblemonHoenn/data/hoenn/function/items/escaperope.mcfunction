@@ -157,4 +157,3 @@ scoreboard players set @s[scores={EscapeRopeUse=1..}] EscapeRope 0
 scoreboard players set @s[scores={EscapeRopeUse=1..}] EscapeRopeUse 0
 
 
-advancement revoke @s only hoenn:click/ender_eye
