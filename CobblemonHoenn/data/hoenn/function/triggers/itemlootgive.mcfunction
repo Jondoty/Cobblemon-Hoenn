@@ -406,6 +406,12 @@ execute as @s[x=-1820,y=66,z=659,distance=..5,tag=!ItemLoot96] run tellraw @s {"
 execute as @s[x=-1820,y=66,z=659,distance=..5,tag=!ItemLoot96] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-1820,y=66,z=659,distance=..5,tag=!ItemLoot96] run tag @s add ItemLoot96
 
+execute as @s[x=-1891,y=77,z=703,distance=..5,tag=ItemLoot94] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-1891,y=77,z=703,distance=..5,tag=!ItemLoot94] run function hoenn:spawn/scanner
+execute as @s[x=-1891,y=77,z=703,distance=..5,tag=!ItemLoot94] run tellraw @s {"text":"You found a Scanner!","italic":true,"color":"gray"}
+execute as @s[x=-1891,y=77,z=703,distance=..5,tag=!ItemLoot94] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-1891,y=77,z=703,distance=..5,tag=!ItemLoot94] run tag @s add ItemLoot94
+
 execute as @s[x=-1866,y=83,z=710,distance=..5,tag=ItemLoot99] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-1866,y=83,z=710,distance=..5,tag=!ItemLoot99] run scoreboard players add @s Money 60000
 execute as @s[x=-1866,y=83,z=710,distance=..5,tag=!ItemLoot99] run tellraw @s {"text":"You found $60,000!","italic":true,"color":"gray"}

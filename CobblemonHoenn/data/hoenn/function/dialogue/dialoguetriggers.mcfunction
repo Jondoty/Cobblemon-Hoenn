@@ -920,8 +920,16 @@ execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=Dialogue149] unless entity @
 execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=!Dialogue149] run kill @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:interaction]
 execute as @p[x=1638,y=65,z=-2471,distance=..20,tag=!Dialogue149] run kill @e[x=1639,y=64,z=-2528,distance=..5,type=minecraft:armor_stand]
 
+#Toggles Lugia and Ho-Oh's portals to be visible based on if you have the bells exchanged and is after primal reversions
+#Hooh
+execute as @p[x=-1977,y=99,z=688,distance=..50,tag=Dialogue219,tag=Dialogue149] unless entity @e[x=-1977,y=99,z=688,distance=..5,type=minecraft:interaction] positioned -1977 99 688 run function hoenn:spawn/hoopaportaleastwest
+execute as @p[x=-1977,y=99,z=688,distance=..50,tag=Dialogue219,tag=!Dialogue149] run kill @e[x=-1977,y=99,z=688,distance=..5,type=minecraft:interaction]
+execute as @p[x=-1977,y=99,z=688,distance=..50,tag=Dialogue219,tag=!Dialogue149] run kill @e[x=-1977,y=99,z=688,distance=..5,type=minecraft:armor_stand]
 
-
+#Lugia
+execute as @p[x=-1814,y=64,z=688,distance=..50,tag=Dialogue219,tag=Dialogue149] unless entity @e[x=-1814,y=64,z=688,distance=..5,type=minecraft:interaction] positioned -1814 64 688 run function hoenn:spawn/hoopaportaleastwest
+execute as @p[x=-1814,y=64,z=688,distance=..50,tag=Dialogue219,tag=!Dialogue149] run kill @e[x=-1814,y=64,z=688,distance=..5,type=minecraft:interaction]
+execute as @p[x=-1814,y=64,z=688,distance=..50,tag=Dialogue219,tag=!Dialogue149] run kill @e[x=-1814,y=64,z=688,distance=..5,type=minecraft:armor_stand]
 
 
 

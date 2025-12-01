@@ -103,6 +103,16 @@ execute as @a[x=236,y=78,z=1473,distance=..8,tag=!CresseliaEncounter] run opendi
 execute as @s[x=236,y=78,z=1473,distance=..8,tag=CresseliaEncounter] run opendialogue portal_empty @s
 
 
+#Ho-oh portal
+execute as @a[x=-1977,y=99,z=688,distance=..8,tag=!HoohEncounter] run opendialogue hooh_encounter @s
+execute as @s[x=-1977,y=99,z=688,distance=..8,tag=HoohEncounter] run opendialogue portal_empty @s
+
+
+#Lugia portal
+execute as @a[x=-1814,y=64,z=688,distance=..8,tag=!LugiaEncounter] run opendialogue lugia_encounter @s
+execute as @s[x=-1814,y=64,z=688,distance=..8,tag=LugiaEncounter] run opendialogue portal_empty @s
+
+
 #-------------------------------------------------------------
 #Misc World NPCs
 
@@ -254,6 +264,11 @@ execute as @s[x=2421,y=79,z=2585,distance=..8,tag=SSTicket] run opendialogue sst
 #Battle Resort
 execute as @s[x=2505,y=70,z=1044,distance=..8,tag=!SSTicket] run opendialogue sstidal_noticket @s
 execute as @s[x=2505,y=70,z=1044,distance=..8,tag=SSTicket] run opendialogue sstidal_battleresort @s
+
+
+#Stern exchanging scanner for bells
+execute as @s[x=2198,y=79,z=2591,distance=..8] if entity @s[nbt={Inventory:[{id:"minecraft:music_disc_pigstep"}]}] run opendialogue slateport_stern_scanner @s
+execute as @s[x=2198,y=79,z=2591,distance=..8] unless entity @s[nbt={Inventory:[{id:"minecraft:music_disc_pigstep"}]}] run opendialogue slateport_stern_interaction @s
 
 #-------------------------------------------------------------
 #Gym Leaders
