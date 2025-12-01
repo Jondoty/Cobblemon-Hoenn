@@ -33,6 +33,7 @@
                         "value": "close",
                         "action": [
                             "q.dialogue.close();",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only hoenn:story_magma/meteorfalls');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Rival=1}] run opendialogue rivalleader_magma_may_dialogue82 @s');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Rival=2}] run opendialogue rivalleader_magma_brendan_dialogue82 @s');"
                         ]

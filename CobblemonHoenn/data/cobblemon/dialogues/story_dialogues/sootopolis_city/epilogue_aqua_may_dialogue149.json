@@ -1523,6 +1523,7 @@
                         "action": [
                             "q.run_command('particle cloud 987 69 1510 1 1 1 0.15 300');",
                             "q.run_command('tp @e[type=cobblemon:npc,x=987,y=69,z=1510,dy=3] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only hoenn:story_aqua/kyogre2');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue149');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"

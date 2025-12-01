@@ -1121,13 +1121,14 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
                             "q.run_command('execute as ' + q.player.username + ' run title @s title {\"text\":\"The Delta Episode\"}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=1}] run advancement grant @s only hoenn:story_magma/deltastart');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=2}] run advancement grant @s only hoenn:story_aqua/deltastart');",
                             "q.run_command('tp @e[x=338,y=243,z=-224,dy=4,type=cobblemon:npc] 10000000 -50000 -10000000');",
                             "q.run_command('execute as ' + q.player.username + ' run gamemode spectator');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @s[scores={Rival=1}] -2072.23 50.00 298.28 -135.45 2.25');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @s[scores={Rival=2}] -1986.57 50.00 299.78 148.65 3.45');",
                             "q.run_command('execute as ' + q.player.username + ' run gamemode adventure');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue167');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                         ]

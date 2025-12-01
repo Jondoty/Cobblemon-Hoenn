@@ -15,7 +15,7 @@
         "announce_to_chat": true,
         "hidden": true
       },
-      "parent": "hoenn:story_aqua/groudon1",
+      "parent": "hoenn:story_magma/groudon1",
       "criteria": {
           "example": {
               "trigger": "minecraft:impossible"

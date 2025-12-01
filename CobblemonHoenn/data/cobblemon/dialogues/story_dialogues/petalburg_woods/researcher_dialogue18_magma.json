@@ -347,6 +347,7 @@
                         "action": [
                             "q.run_command('particle cloud -2720 69 -222 1 1 1 0.15 300');",
                             "q.run_command('tp @e[x=-2720,y=69,z=-222,distance=..2,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only hoenn:story_magma/firstgrunts');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue18');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"

@@ -343,6 +343,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run title @s subtitle {\"text\":\"Delta Episode\",\"color\":\"dark_green\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run title @s title {\"text\":\"Cobblemon Hoenn\"}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=1}] run advancement grant @s only hoenn:story_magma/deltaend');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=2}] run advancement grant @s only hoenn:story_aqua/deltaend');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue208');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue209');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
