@@ -440,7 +440,7 @@ execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 4 cobblem
 execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 5 cobblemon:ribbon_champion_hoenn
 execute as @s[scores={DialogueTrigger=166,TalkTime=1}] run givemark @s 6 cobblemon:ribbon_champion_hoenn
 
-tellraw @s[scores={DialogueTrigger=166,TalkTime=1}] {"text":"Thank you for playing Pixelmon Hoenn!"}
+tellraw @s[scores={DialogueTrigger=166,TalkTime=1}] {"text":"Thank you for playing Cobblemon Hoenn!"}
 tellraw @s[scores={DialogueTrigger=166,TalkTime=10}] {"text":"Map Creators: Jond - Project Manager, Builder, Commands, Terrain"}
 tellraw @s[scores={DialogueTrigger=166,TalkTime=20}] {"text":"PixelmonChampion (Ozzy) - Builder & Modeler"}
 
