@@ -1,1 +1,0 @@
-function animated_java:animated_pokemon/zzzzzzzz/animations/idle/tick_animation
