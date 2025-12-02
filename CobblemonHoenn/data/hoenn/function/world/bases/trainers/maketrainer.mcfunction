@@ -1,6 +1,6 @@
 #Prompted by player in their base to create a trainer
 #If that option is activated, run this function
-#Scans for if there is already a pixelmon:npc_trainer within the player's assigned base
+#Scans for if there is already a cobblemon:npc within the player's assigned base
 #If trainer, skips the scan and spawn function.
 #If no trainer, runs the scan function.
 
@@ -13,7 +13,7 @@ function hoenn:world/bases/trainers/removedata
 function hoenn:world/bases/trainers/partyscan
 
 #Spawns trainer based on scan data where the player stands
-execute as @s at @s run function hoenn:world/bases/trainers/spawntrainer
+function hoenn:world/bases/trainers/spawntrainer
 
 
 
