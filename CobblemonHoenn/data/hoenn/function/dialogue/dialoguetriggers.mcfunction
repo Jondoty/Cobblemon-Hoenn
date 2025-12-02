@@ -695,12 +695,12 @@ execute as @s[x=2698,y=167,z=2383,distance=..10,tag=Dialogue182,tag=!Dialogue183
 execute as @s[x=2725,y=167,z=2357,distance=..7,tag=Dialogue182,tag=!Dialogue183] run opendialogue spacecenter_dialogue183 @s
 
 #Meteor Falls Steven & Draconids lady
-execute as @s[x=2284,y=89,z=-2800,distance=..20,tag=Dialogue184,tag=!Dialogue185] unless entity @e[x=2315,y=115,z=-2873,dy=3,type=cobblemon:npc] run npcspawnat 2315 115 -2873 steven_generic
+execute as @s[x=2284,y=89,z=-2800,distance=..20,tag=Dialogue183,tag=!Dialogue185] unless entity @e[x=2315,y=115,z=-2873,dy=3,type=cobblemon:npc] run npcspawnat 2315 115 -2873 steven_generic
 execute as @s[x=2284,y=89,z=-2800,distance=..20,tag=Dialogue183,tag=!Dialogue185] unless entity @e[x=2322,y=115,z=-2873,dy=3,type=cobblemon:npc] run npcspawnat 2322 115 -2873 meteorfalls_draconidslady
 execute as @s[x=2315,y=115,z=-2873,distance=..7,tag=Dialogue183,tag=!Dialogue185] run opendialogue draconids_dialogue185 @s
 
 #tps lady out as player leaves
-execute as @p[x=2284,y=89,z=-2800,distance=..20,tag=Dialogue185] run tp @e[x=2322,y=115,z=2873,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
+execute as @p[x=2284,y=89,z=-2816,distance=..20,tag=Dialogue185] run tp @e[x=2322,y=115,z=-2873,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000 
 
 #Rustboro, Dialogue 186 approaching Devon Corp
 execute as @s[x=-2757,y=69,z=-707,distance=..10,tag=Dialogue185,tag=!Dialogue186,scores={GameVersion=1}] run opendialogue researcher_dialogue186_magma @s
