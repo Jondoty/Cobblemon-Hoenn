@@ -1,0 +1,106 @@
+{   
+    "speakers": {
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+      },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "player",
+            "lines": [
+                "It is your secret base! What would you like to do?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Unclaim",
+                        "value": "unclaim",
+                        "action": [
+                            "q.dialogue.set_page('unclaimconfirm');"
+                        ]
+                    },
+                    {
+                        "text": "Nothing",
+                        "value": "nothing",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "unclaimconfirm",
+            "speaker": "player",
+            "lines": [
+                "You want to release your claim to this base? Any remaining items will be left behind."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:world/bases/abandonbase');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('greeting');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "trainerconfirm",
+            "speaker": "player",
+            "lines": [
+                "This creates a mimic trainer and copies your party as a basis for which Pokemon you can battle against. Create a custom trainer"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Custom NPC Trainer",
+                        "value": "customtrainers",
+                        "action": [
+                            "q.dialogue.set_page('trainerconfirm');"
+                        ]
+                    },
+                    {
+                        "text": "Create",
+                        "value": "create",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:world/bases/trainers/maketrainer');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "Despawn",
+                        "value": "despawn",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[gamemode=survival] as @e[distance=..10,type=cobblemon:npc] at @s run particle cloud ~ ~ ~ 1 1 1 0.15 300');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[gamemode=survival] as @e[distance=..10,type=cobblemon:npc] at @s run tp @s 10000000 -50000 -10000000');",
+                            "q.dialogue.close();"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('greeting');"
+                    }
+                ]
+            }
+        }
+        ]
+    }

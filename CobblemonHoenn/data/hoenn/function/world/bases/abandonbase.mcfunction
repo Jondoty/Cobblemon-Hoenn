@@ -100,7 +100,7 @@ execute as @s[scores={SecretBase=82}] run tag @e[x=-2070,y=65,z=1410,dy=3] remov
 
 
 
-
+gamemode adventure @s
 tellraw @s {"text":"You unclaimed your base!","italic":true,"color":"gray"}
 playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~
 scoreboard players set @s SecretBase 0
