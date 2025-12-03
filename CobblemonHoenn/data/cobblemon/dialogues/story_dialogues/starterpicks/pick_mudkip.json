@@ -7,12 +7,21 @@
         "npc": {
             "name": "Mudkip",
             "face": {
-              "type": "artificial",
-              "modelType": "pokemon",
-              "identifier": "cobblemon:mudkip",
-              "isLeftSide": true
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:mudkip",
+                "isLeftSide": true
             }
-    }
+        },
+        "birch": {
+            "name": "Professor Birch",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:birch",
+                "isLeftSide": true
+            }
+        }
     },
     "pages": [
         {
@@ -34,7 +43,7 @@
                             "q.run_command('execute as ' + q.player.username + ' run tp @s -2038 69 232 134 7');",
                             "q.run_command('tag @e[x=-2070,y=65,z=1410,dy=3,tag=Birch1Initiate] remove Birch1Initiate');",
                             "q.run_command('execute positioned as ' + q.player.username + ' run pokespawn poochyena level=3');",
-                            "q.dialogue.close();"
+                            "q.dialogue.set_page('page2');"
                         ]
                     },
                     {
@@ -44,6 +53,29 @@
                     }
                 ]
             }
-        }    
+        },
+        {
+            "id": "page2",
+            "speaker": "birch",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Quick! Press R to battle it!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
     ]
 }

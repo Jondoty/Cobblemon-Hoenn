@@ -281,14 +281,7 @@
             "displayName": "npc.variable.on_player_loses.name",
             "description": "npc.variable.on_player_loses.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
-        },
-        {
-            "variableName": "on_player_loses",
-            "displayName": "npc.variable.on_player_loses.name",
-            "description": "npc.variable.on_player_loses.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 6');"
         },
         {
             "variableName": "challenge_cooldown",

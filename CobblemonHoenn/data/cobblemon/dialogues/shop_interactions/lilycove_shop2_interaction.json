@@ -204,7 +204,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "isSelectable": "q.player.has_tag(MoneyHave200)",
+                        "isSelectable": "q.player.has_tag('MoneyHave200')",
                         "text": "Buy x1",
                         "value": "buy1",
                         "action": [
@@ -251,7 +251,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "isSelectable": "q.player.has_tag(MoneyHave600)",
+                        "isSelectable": "q.player.has_tag('MoneyHave600')",
                         "text": "Buy x1",
                         "value": "buy1",
                         "action": [
@@ -298,7 +298,7 @@
                 "vertical": false,
                 "options": [
                     {
-                        "isSelectable": "q.player.has_tag(MoneyHave1200)",
+                        "isSelectable": "q.player.has_tag('MoneyHave1200')",
                         "text": "Buy x1",
                         "value": "buy1",
                         "action": [

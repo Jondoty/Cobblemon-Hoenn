@@ -160,6 +160,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run pokerestart');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @s -2098 65 1319 180 21');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue6');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",

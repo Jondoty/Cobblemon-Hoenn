@@ -1379,6 +1379,7 @@ tp @a[x=1209,y=73,z=1658,dx=3,dy=3] 1211 89 1659
 
 #Cave of Origin
 #Kicks player back before dialogue
+execute as @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1,tag=!Dialogue143,tag=!Dialogue144] run opendialogue sootopolis_caveoforigin_block_interaction @s
 tp @a[x=979,y=69,z=1500,dx=13,dy=8,dz=1,tag=!Dialogue143,tag=!Dialogue144] ~ ~ ~7
 
 #tps chatting npcs into void after dialogue is cleared

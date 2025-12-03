@@ -858,8 +858,8 @@ execute as @s[x=2753,y=85,z=2884,distance=..6,tag=Dialogue216,tag=!Dialogue217] 
 
 
 #Dialogue 222 - Flannery post-legendary, pre-Heatran Scorched Slab
-execute as @s[x=1570,y=110,z=-2411,distance=..10,tag=Dialogue149,tag=!Dialogue211] unless entity @e[x=1636,y=108,z=-2402,dy=3,type=cobblemon:npc] run npcspawnat 1636 108 -2402 flannery_generic
-execute as @s[x=1636,y=108,z=-2402,distance=..10,tag=Dialogue149,tag=!Dialogue211] run opendialogue flannery_dialogue222 @s
+execute as @s[x=1570,y=110,z=-2411,distance=..10,tag=Dialogue149,tag=!Dialogue222] unless entity @e[x=1636,y=108,z=-2402,dy=3,type=cobblemon:npc] run npcspawnat 1636 108 -2402 flannery_generic
+execute as @s[x=1636,y=108,z=-2402,distance=..10,tag=Dialogue149,tag=!Dialogue222] run opendialogue flannery_dialogue222 @s
 
 
 #Sets up Desert Fossils if player hasn't picked one

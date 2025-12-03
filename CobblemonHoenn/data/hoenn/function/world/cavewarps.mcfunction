@@ -199,11 +199,11 @@ tp @a[x=1209,y=141,z=-2372,dx=25,dy=24,dz=7] 785 62 -1083
 #Regular portals
 
 #Magma
-tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=1},tag=Dialogue127] 1122 68 -2406
+tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=1},tag=Dialogue126] 1122 68 -2406
 tp @a[x=1112,y=141,z=-2395,dx=18,dy=16,dz=11] 785 62 -1083
 
 #Aqua
-tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=2},tag=Dialogue127] 1222 68 -2385
+tp @a[x=776,y=55,z=-1106,dx=18,dy=12,dz=14,scores={GameVersion=2},tag=Dialogue126] 1222 68 -2385
 tp @a[x=1209,y=62,z=-2372,dx=25,dy=24,dz=7] 785 62 -1083
 
 #-------------------------------------------------------------------------

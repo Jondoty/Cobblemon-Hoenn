@@ -286,6 +286,11 @@ execute as @s[tag=!RadioOff,scores={BattleStart=40,MusicCooldown=0}] run scorebo
 
 #----------------------------------------------------------------Battle Maison music----------------------------------------------------------------
 
+#If player never changes their music
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound trainer record @s[tag=!Music1,tag=!Music2,tag=!Music3,tag=!Music4,tag=!Music5,tag=!Music6] ~ ~ ~ 1 1 1
+execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=!Music1,tag=!Music2,tag=!Music3,tag=!Music4,tag=!Music5,tag=!Music6] MusicCooldown 245
+
+
 execute as @s[tag=!RadioOff,scores={BattleStart=41}] run playsound trainer record @s[tag=Music1] ~ ~ ~ 1 1 1
 execute as @s[tag=!RadioOff,scores={BattleStart=41}] run scoreboard players set @s[tag=Music1] MusicCooldown 245
 

@@ -303,7 +303,7 @@ scoreboard players set @s PokeHave 0
 #Fabled Cave
 #if the player has a Level 100 Pokémon on their team
 execute as @s store result score @s PokeHave run teststore @s party level=100
-tag @s[scores={PokeHave=1}] add HaveLvl100
+tag @s[scores={PokeHave=1..}] add HaveLvl100
 scoreboard players set @s PokeHave 0
 
 execute as @s[tag=HaveLvl100] run particle minecraft:firework -869 67 1480 0 2 0 0.1 0 force
@@ -388,7 +388,7 @@ tag @s[scores={PokeHave=1}] add PalkiaHave
 scoreboard players set @s PokeHave 0
 
 #Kills space rift
-execute unless entity @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] unless entity @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!PalkiaEncounter] unless entity @s[x=-958,y=100,z=1539,distance=..7,tag=!InDialogue,tag=DialgaHave,tag=PalkiaHave,tag=!Dialogue267] run kill @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display]
+execute unless entity @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] unless entity @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!PalkiaEncounter] unless entity @s[tag=!InDialogue,tag=DialgaHave,tag=PalkiaHave,tag=!GiratinaEncounter] run kill @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display]
 
 #Spawns space rift
 execute as @s[tag=UxieHave,tag=MespritHave,tag=AzelfHave,tag=!DialgaEncounter] unless entity @e[x=-958,y=100,z=1539,distance=..5,type=minecraft:item_display] run summon minecraft:item_display -958 100 1539 {item:{id:"minecraft:tipped_arrow",Count:1b,components:{"minecraft:custom_model_data":5}},Rotation:[-145f,0.0f]}

@@ -12,11 +12,11 @@ execute if entity @e[x=-2060,y=64,z=1418,dy=3,scores={Ndex=1..}] run scoreboard 
 
 
 #Spawns a trainer in depending on how many Pokemon the player has in their party
-execute as @s[scores={Temp=1}] at @s run npcspawn bases_Slot1
-execute as @s[scores={Temp=2}] at @s run npcspawn bases_Slot2
-execute as @s[scores={Temp=3}] at @s run npcspawn bases_Slot3
-execute as @s[scores={Temp=4}] at @s run npcspawn bases_Slot4
-execute as @s[scores={Temp=5}] at @s run npcspawn bases_Slot5
+execute as @s[scores={Temp=1}] at @s run npcspawn bases_party1
+execute as @s[scores={Temp=2}] at @s run npcspawn bases_party2
+execute as @s[scores={Temp=3}] at @s run npcspawn bases_party3
+execute as @s[scores={Temp=4}] at @s run npcspawn bases_party4
+execute as @s[scores={Temp=5}] at @s run npcspawn bases_party5
 execute as @s[scores={Temp=6}] at @s run npcspawn bases_party6
 
 

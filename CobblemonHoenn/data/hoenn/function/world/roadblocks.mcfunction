@@ -88,18 +88,22 @@ execute as @p[x=816,y=64,z=-1026,distance=..50,tag=Dialogue136] run tp @e[x=839,
 
 
 #Base blocking
-execute as @a[x=781,y=58,z=-1093,dx=8,dy=10,dz=8,tag=!Dialogue127] run tellraw @s {"text":"A Wailmer is blocking the way.","italic":true,"color":"gray"}
-execute as @a[x=781,y=58,z=-1093,dx=8,dy=10,dz=8,tag=!Dialogue127] at @s run tp @s ~ 63 ~10
+execute as @a[x=781,y=58,z=-1093,dx=8,dy=10,dz=8,tag=!Dialogue126] run tellraw @s {"text":"A Wailmer is blocking the way.","italic":true,"color":"gray"}
+execute as @a[x=781,y=58,z=-1093,dx=8,dy=10,dz=8,tag=!Dialogue126] at @s run tp @s ~ 63 ~10
 
-execute as @p[x=785,y=63,z=-1088,distance=..50,tag=!Dialogue127] unless entity @e[x=785,y=62,z=-1088,distance=..3,type=cobblemon:pokemon] run pokespawnat 785 63.5 -1088 wailmer level=25 no_ai=yes uncatchable=yes
+execute as @p[x=785,y=63,z=-1088,distance=..50,tag=!Dialogue126] unless entity @e[x=785,y=62,z=-1088,distance=..3,type=cobblemon:pokemon] run pokespawnat 785 63.5 -1088 wailmer level=25 no_ai=yes uncatchable=yes
 
-execute as @p[x=785,y=63,z=-1088,distance=..50,tag=Dialogue127] run tp @e[x=785,y=63,z=-1088,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
+execute as @p[x=785,y=63,z=-1088,distance=..50,tag=Dialogue126] run tp @e[x=785,y=63,z=-1088,distance=..3,type=cobblemon:pokemon,nbt={NoAI:1b}] 10000000 -50000 -10000000
 
 execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Invulnerable set value 1b
 execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data modify entity @s Unbattleable set value 1b
 execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {Pokemon:{PokemonData:["uncatchable"]}}
 execute if entity @s[x=785,y=63,z=-1088,distance=..50] as @e[x=785,y=63,z=-1088,distance=..5,type=cobblemon:pokemon,nbt={NoAI:1b,PersistenceRequired:0b}] run data merge entity @s {PersistenceRequired:1b}
 
+
+#Cave of Origin man explaining block before player awakens the legend
+execute as @p[x=985,y=69,z=1556,distance=..40] unless entity @s[tag=!Dialogue143,tag=!Dialogue144] run tp @e[x=993,y=69,z=1509,dy=3,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute as @p[x=985,y=69,z=1556,distance=..40,tag=!Dialogue143,tag=!Dialogue144] unless entity @e[x=993,y=69,z=1509,dy=3,type=cobblemon:npc] run npcspawnat 993 69 1509 sootopolis_caveoforigin_block
 
 #----------
 

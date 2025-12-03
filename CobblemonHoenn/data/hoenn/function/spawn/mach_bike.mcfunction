@@ -1,1 +1,1 @@
-give @s carrot_on_a_stick[custom_name='["",{"text":"Mach Bike","italic":false,"color":"dark_aqua"}]',lore=['["",{"text":"This folding Bike more than","italic":false}]','[{"text":"doubles your movement speed.","italic":false}]'],custom_model_data=5]
+give @s carrot_on_a_stick[custom_name='["",{"text":"Mach Bike","italic":false,"color":"dark_aqua"}]',lore=['["",{"text":"This folding Bike more than","italic":false}]','[{"text":"doubles your movement speed.","italic":false}]','[""]','[{"text":"Right click to equip.","italic":false}]'],custom_model_data=5]

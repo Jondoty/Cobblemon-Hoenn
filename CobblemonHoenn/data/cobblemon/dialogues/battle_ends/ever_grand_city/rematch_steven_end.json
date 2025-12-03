@@ -6,8 +6,8 @@
     "q.run_command('execute as ' + q.player.username + ' run tag @s add Steven');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $15800 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 15800');",
-    "q.run_command('execute as ' + q.player.username + ' run opendialogue rematch_steven_end_first @s[tag=!Dialogue164]');",
-    "q.run_command('execute as ' + q.player.username + ' run opendialogue rematch_steven_end_additional @s[tag=Dialogue164]');"
+    "q.run_command('execute as ' + q.player.username + ' run opendialogue rematch_steven_end_first @s[scores={PokemonLeague=1}]');",
+    "q.run_command('execute as ' + q.player.username + ' run opendialogue rematch_steven_end_additional @s[scores={PokemonLeague=2..}]');"
   ],
   "speakers": {
     "npc": {
