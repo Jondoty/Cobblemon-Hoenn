@@ -1,6 +1,6 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:looker",
+  "resourceIdentifier": "cobblemon:gentleman",
   "variation": {
     "dirt": [
       "clean",
@@ -11,9 +11,9 @@
   },
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:battleresort_looker_interaction"
+    "dialogue": "cobblemon:mauville_gentleman7_interaction"
   },
-  "name": "Looker",
+  "name": "     ",
   "party": {
     "type": "simple",
     "pokemon": [

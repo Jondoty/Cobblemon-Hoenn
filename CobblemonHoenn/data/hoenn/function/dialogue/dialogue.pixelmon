@@ -1141,20 +1141,6 @@ tellraw @s[scores={DialogueTrigger=214,TalkTime=1}] {"text":"<A Frightened Man> 
 #tps them both inside
 
 tag @s[scores={DialogueTrigger=214,TalkTime=100..}] add Dialogue214
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 215 - Mauville City
-#After some time has passed. Maybe after the computer is on?
-#https://youtu.be/MgkqxXCmrtI?t=74725
-
-tellraw @s[scores={DialogueTrigger=215,TalkTime=1}] {"text":"<...> Yo! You're a Trainer, aren't ya? Then take this."}
-
-tellraw @s[scores={DialogueTrigger=215,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained a Lopunnite!","italic":true,"color":"gray"}]
-
-tellraw @s[scores={DialogueTrigger=215,TalkTime=1}] {"text":"<...> I got it as security for a loan from a fool who doesn't pay what he owes."}
-tellraw @s[scores={DialogueTrigger=215,TalkTime=1}] {"text":"<...> A Pokémon would be miserable if it bonded with such a fool and Mega Evolved."}
-
-tag @s[scores={DialogueTrigger=215,TalkTime=100..}] add Dialogue215
-
 
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 229 - Sealed Chamber
@@ -1341,26 +1327,7 @@ tellraw @s[scores={DialogueTrigger=249,TalkTime=1}] ["",{"selector":"@s","italic
 tellraw @s[scores={DialogueTrigger=249,TalkTime=1}] {"text":"<Lass> You may embrace the happiness and express your gratitude for having been able to help me every time you use the move."}
 
 tag @s[scores={DialogueTrigger=249,TalkTime=100..}] add Dialogue249
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 250 - Battle Resort
-#Looker first encounter
-#https://youtu.be/MgkqxXCmrtI?t=87236
 
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<...> Ugh..."}
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<...> ...You. I want to ask you something."}
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<...> Where...where am I?"}
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<...> Hoenn...?"}
-
-#tp in NPC
-
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<Beauty> Hey! What happened to you? You're absolutely soaked to the skin!"}
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<Beauty> Even in a tropical place like Hoenn, if you are soaked like that, you'll catch cold!"}
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<...> Ah...yeah..."}
-tellraw @s[scores={DialogueTrigger=250,TalkTime=1}] {"text":"<Beauty> Oh, boy. I guess I have no other choice... Come to my cottage."}
-
-#both walk away
-
-tag @s[scores={DialogueTrigger=250,TalkTime=100..}] add Dialogue250
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 251 - Battle Maison
 #Upon first entrance
@@ -1475,29 +1442,7 @@ tellraw @s[scores={DialogueTrigger=253,TalkTime=1}] {"text":"<Team Aqua Grunt> T
 execute as @s[scores={DialogueTrigger=253,TalkTime=1}] run pokegive @s sharpedo lvl:40
 
 tag @s[scores={DialogueTrigger=253,TalkTime=100..}] add Dialogue253
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 254 - Battle Resort
-#Looker Follow Up
-#https://youtu.be/MgkqxXCmrtI?t=89373
 
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> Hnh. You again."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> I apologize for my actions earlier. The truth of the matter is..."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> I have no idea in the world what I am doing here... Or even who I am."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> The first thing of which I can remember is awakening here upon this beach."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> Baffled, lacking awareness of the circumstances that brought me here..."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> And at that moment, you appeared!"}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> I feel...as though I have some duty that I should be accomplishing..."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> But of it, I can remember nothing."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> Please, pardon me for going on about myself. In fact... I feel quite uneasy."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> Of course, I must thank you for finding me."}
-
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained an Audinite!","italic":true,"color":"gray"}]
-
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> That, I found in the pocket of my overcoat."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> It was the only thing I had on me."}
-tellraw @s[scores={DialogueTrigger=254,TalkTime=1}] {"text":"<...> I do not know if it will prove worth anything, but I'm glad to give it to you."}
-
-tag @s[scores={DialogueTrigger=254,TalkTime=100..}] add Dialogue254
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 255 - Littleroot
 #Mom giving Latiasite (After Delta Episode?)
@@ -1575,61 +1520,7 @@ tellraw @s[scores={DialogueTrigger=258,TalkTime=73}] {"text":"<Professor Birch> 
 
 
 tag @s[scores={DialogueTrigger=258,TalkTime=73..}] add Dialogue258
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 259 - Verdanturf Town
-#Wanda after clearing out the tunnel
-#tp in the NPCs separately
 
-tellraw @s[scores={DialogueTrigger=259,TalkTime=1}] {"text":"<Wanda> Why, it feels like it's been ages since we saw you last!"}
-tellraw @s[scores={DialogueTrigger=259,TalkTime=1}] {"text":"<Wanda> What wonderful timing! I was thinking that I wanted to give this to you..."}
-
-tellraw @s[scores={DialogueTrigger=259,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained a Gardevoirite!","italic":true,"color":"gray"}]
-
-tellraw @s[scores={DialogueTrigger=259,TalkTime=1}] {"text":"<Wanda> I didn't really thank you properly when you helped smash those rocks in the tunnel."}
-tellraw @s[scores={DialogueTrigger=259,TalkTime=1}] {"text":"<Wanda> Do you remember how light came falling out of the sky a while ago?"}
-tellraw @s[scores={DialogueTrigger=259,TalkTime=1}] {"text":"<Wanda> I found this in the yard that day. Actually, I found two, and I gave the other to Wally."}
-tellraw @s[scores={DialogueTrigger=259,TalkTime=1}] {"text":"<Wanda> It's a pretty stone, and I'm sure your Pokémon would be delighted if you let one of them hold it!"}
-
-tag @s[scores={DialogueTrigger=259,TalkTime=100..}] add Dialogue259
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 260 - Fallarbor Town
-#Professor Cozmo after the Delta Episode
-
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> Oh! Why, hello again!"}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> What good fortune... I'd been thinking that if I saw you again, I would want to give you this..."}
-
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained a Galladite!","italic":true,"color":"gray"}]
-
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> I happened to pick this up some time ago, while doing excavation at Meteor Falls."}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> I hoped it might help you and your team along on your journey."}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> But I'm still astounded by it all."}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> A relationship between the Mega Stones, Key Stones, and the Meteorites..."}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> My, but new facts do come to light every day! This is what makes my research feel worthwhile!"}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> I know a man, a dear friend in the Kalos region, who has been researching Mega Evolution."}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> We worked together a few years back here at Meteor Falls researching Meteorites."}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> I'll have to share this information with him at once."}
-tellraw @s[scores={DialogueTrigger=260,TalkTime=1}] {"text":"<Professor Cozmo> It might propel his research forward, and help future Trainers and Pokémon. I hope it does."}
-
-tag @s[scores={DialogueTrigger=260,TalkTime=100..}] add Dialogue260
-#-----------------------------------------------------------------------------------------------------
-#Dialogue 261 - Meteor Falls
-#Zinnia's Grandma after the Delta Episode
-
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> Child, you..."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> I heard of what happened from Zinnia."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> The Draconids owe you much. Thank you, child."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> Zinnia has gone on a journey. A journey to find herself this time."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> Ah, yes... She did leave this for you, though. I hope you will accept it."}
-
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" obtained a Salamencite!","italic":true,"color":"gray"}]
-
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> I wonder what kind of future Zinnia might find for herself, now that she is free from the fate of the Draconids."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> Though I don't think that I need worry about it."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> Ah, yes. If ever your Rayquaza forgets how to use Dragon Ascent, come call upon me."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> I may not seem like much, but I am also one of the last Draconids."}
-tellraw @s[scores={DialogueTrigger=261,TalkTime=1}] {"text":"<Zinnia's Grandma> I can help the Dragon lord remember that grand move."}
-
-tag @s[scores={DialogueTrigger=261,TalkTime=100..}] add Dialogue261
 #-----------------------------------------------------------------------------------------------------
 #Dialogue 262 - Mt. Pyre
 #Elite Four Phoebe

@@ -1,0 +1,160 @@
+{
+  "initializationAction": [
+    "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+  ],
+  "escapeAction": [],
+  "speakers": {
+    "npc": {
+      "name": "Wanda",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:aromalady",
+        "isLeftSide": true
+      }
+    },
+    "player": {
+      "face": "q.player.face(true);",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+        "Why, it feels like it's been ages since we saw you last!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page2');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": [
+        "What wonderful timing! I was thinking that I wanted to give this to you..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!Dialogue259] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1');",
+              "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!Dialogue259] run give @s mega_showdown:gardevoirite');",
+              "q.dialogue.set_page('page3');"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page3",
+      "speaker": "player",
+      "lines": [
+        "You obtained a Gardevoirite!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page4');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page4",
+      "speaker": "npc",
+      "lines": [
+        "I didn't really thank you properly when you helped smash those rocks in the tunnel."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page5');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": [
+        "Do you remember how light came falling out of the sky a while ago?"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page6');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        "I found this in the yard that day. Actually, I found two, and I gave the other to Wally."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page7');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page7",
+      "speaker": "npc",
+      "lines": [
+        "It's a pretty stone, and I'm sure your Pokémon would be delighted if you let one of them hold it!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": [
+              "q.run_command('tag ' + q.player.username + ' add Dialogue259');",
+              "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

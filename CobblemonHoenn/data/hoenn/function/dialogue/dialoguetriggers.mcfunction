@@ -869,6 +869,26 @@ execute as @s[x=-1368,y=78,z=-1251,distance=..25,tag=!ItemLoot200] unless entity
 execute as @s[x=-1368,y=78,z=-1251,distance=..25,tag=!ItemLoot200] unless entity @e[x=-1370,y=77,z=-1251,dy=3,type=interaction] run summon minecraft:interaction -1370 78 -1251 {width:1.25,height:1.25,response:1,Tags:[Box1]}
 execute as @s[x=-1368,y=78,z=-1251,distance=..25,tag=!ItemLoot200] unless entity @e[x=-1365,y=77,z=-1251,dy=3,type=interaction] run summon minecraft:interaction -1365 78 -1251 {width:1.25,height:1.25,response:1,Tags:[Box2]}
 
+#Looker first finding
+execute as @s[x=2570,y=64,z=725,distance=..75,tag=!Dialogue250] unless entity @e[x=2570,y=64,z=725,dy=50,type=cobblemon:npc] run npcspawnat 2570 100 725 looker_dialogue250
+
+#Looker followup
+execute as @s[x=2678,y=69,z=619,distance=..25,tag=Dialogue250] unless entity @e[x=2678,y=69,z=619,dy=3,type=cobblemon:npc] run npcspawnat 2678 69 619 looker_dialogue254
+execute as @s[x=2678,y=69,z=619,distance=..25,tag=!Dialogue250] run tp @e[x=2678,y=69,z=619,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+#Verdanturf Wanda, after beating the Delta Episode
+execute as @s[x=-2123,y=48,z=-579,distance=..7,tag=Dialogue70,tag=Dialogue209,tag=!Dialogue259] unless entity @e[x=-2138,y=48,z=-586,dy=3,type=cobblemon:npc] run npcspawnat -2138 48 -586 verdanturf_wanda
+execute as @s[x=-2123,y=48,z=-579,distance=..7,tag=Dialogue70,tag=!Dialogue209,tag=!Dialogue259] run tp @e[x=-2138,y=48,z=-586,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+#Professor Cozmo after Delta episode
+execute as @s[x=-2264,y=68,z=-1385,distance=..25,tag=Dialogue209,tag=!Dialogue260] unless entity @e[x=-2264,y=68,z=-1385,dy=3,type=cobblemon:npc] run npcspawnat -2264 68 -1385 fallarbor_cozmo_megastone
+execute as @s[x=-2264,y=68,z=-1385,distance=..25,tag=!Dialogue209,tag=!Dialogue260] run tp @e[x=-2264,y=68,z=-1385,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+#Meteor Falls Zinnia's Grandma
+execute as @s[x=2273,y=110,z=-2506,distance=..75,tag=Dialogue209,tag=!Dialogue261] unless entity @e[x=2273,y=110,z=-2506,dy=3,type=cobblemon:npc] run npcspawnat 2273 110 -2506 meteorfalls_draconidslady_megastone
+execute as @s[x=2273,y=110,z=-2506,distance=..75,tag=!Dialogue209,tag=!Dialogue261] run tp @e[x=2273,y=110,z=-2506,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+
 #-----------------------------------------------------------------------------------------------------
 #Legendary Spawns
 #Static spawns on the overworld

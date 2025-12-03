@@ -210,6 +210,14 @@ execute as @s[x=2899,y=70,z=-3201,distance=..8] if entity @s[tag=ShellHave,tag=S
 
 execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075,scores={Temp=4..}] run tag @s remove SaltHave 
 execute as @s[x=2761,y=0,z=-3361,dx=294,dy=256,dz=1075,scores={Temp=4..}] run tag @s remove ShellHave 
+
+
+#Slateport Friendship Soothe Bell if friendship is above
+execute as @s[x=-1615,y=52,z=251,distance=..6] run function hoenn:data/friendshipscan
+execute as @s[x=-1615,y=52,z=251,distance=..6,scores={Temp=..149},tag=!ItemLoot121] run opendialogue slateport_lady_interaction @s
+execute as @s[x=-1615,y=52,z=251,distance=..6,scores={Temp=150..},tag=!ItemLoot121] run opendialogue slateport_lady_soothebell @s
+execute as @s[x=-1615,y=52,z=251,distance=..6,tag=ItemLoot121] run opendialogue slateport_lady_followup @s
+
 #-------------------------------------------------------------
 #General Story NPCs
 

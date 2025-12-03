@@ -1,0 +1,250 @@
+{
+  "initializationAction": [
+    "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+  ],
+  "escapeAction": [],
+  "speakers": {
+    "npc": {
+      "name": "Professor Cozmo",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:scientistm",
+        "isLeftSide": true
+      }
+    },
+    "player": {
+      "face": "q.player.face(true);",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+        "Oh! Why, hello again!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page2');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": [
+        "What good fortune... I'd been thinking that if I saw you again, I would want to give you this..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!Dialogue260] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1');",
+              "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!Dialogue260] run give @s mega_showdown:galladite');",
+              "q.dialogue.set_page('page3');"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page3",
+      "speaker": "player",
+      "lines": [
+        "You obtained a Galladite!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page4');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page4",
+      "speaker": "npc",
+      "lines": [
+        "I happened to pick this up some time ago, while doing excavation at Meteor Falls."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page5');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": [
+        "I hoped it might help you and your team along on your journey."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page6');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        "But I'm still astounded by it all."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page7');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page7",
+      "speaker": "npc",
+      "lines": [
+        "A relationship between the Mega Stones, Key Stones, and the Meteorites..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page8');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page8",
+      "speaker": "npc",
+      "lines": [
+        "My, but new facts do come to light every day! This is what makes my research feel worthwhile!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page9');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page9",
+      "speaker": "npc",
+      "lines": [
+        "I know a man, a dear friend in the Kalos region, who has been researching Mega Evolution."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page10');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page10",
+      "speaker": "npc",
+      "lines": [
+        "We worked together a few years back here at Meteor Falls researching Meteorites."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page11');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page11",
+      "speaker": "npc",
+      "lines": [
+        "I'll have to share this information with him at once."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page12');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page12",
+      "speaker": "npc",
+      "lines": [
+        "It might propel his research forward, and help future Trainers and Pokémon. I hope it does."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": [
+              "q.run_command('tag ' + q.player.username + ' add Dialogue260');",
+              "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

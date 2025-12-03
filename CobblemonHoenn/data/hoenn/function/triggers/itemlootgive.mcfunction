@@ -474,7 +474,7 @@ execute as @s[x=-1379,y=64,z=843,distance=..5,tag=!ItemLoot120] run tag @s add I
 
 execute as @s[x=-1615,y=52,z=251,distance=..5,tag=ItemLoot121] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-1615,y=52,z=251,distance=..5,tag=!ItemLoot121] run give @s cobblemon:soothe_bell
-execute as @s[x=-1615,y=52,z=251,distance=..5,tag=!ItemLoot121] run tellraw @s {"text":"You found a Soothe Bell!","italic":true,"color":"gray"}
+execute as @s[x=-1615,y=52,z=251,distance=..5,tag=!ItemLoot121] run tellraw @s {"text":"You received a Soothe Bell!","italic":true,"color":"gray"}
 execute as @s[x=-1615,y=52,z=251,distance=..5,tag=!ItemLoot121] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-1615,y=52,z=251,distance=..5,tag=!ItemLoot121] run tag @s add ItemLoot121
 
@@ -2689,6 +2689,11 @@ execute as @s[x=2672,y=137,z=2362,distance=..5,tag=!ItemLoot619] run tag @s add 
 execute as @s[x=1385,y=34,z=-1037,distance=..6,tag=ItemLoot620] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=1385,y=34,z=-1037,distance=..6,tag=!ItemLoot620] run opendialogue mossdeep_beldum @s
 
+execute as @s[x=2808,y=85,z=2837,distance=..5,tag=ItemLoot621] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=2808,y=85,z=2837,distance=..5,tag=!ItemLoot621] run give @s mega_showdown:lopunnite
+execute as @s[x=2808,y=85,z=2837,distance=..5,tag=!ItemLoot621] run tellraw @s {"text":"You received a Lopunnite!","italic":true,"color":"gray"}
+execute as @s[x=2808,y=85,z=2837,distance=..5,tag=!ItemLoot621] run playsound minecraft:megastoneget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=2808,y=85,z=2837,distance=..5,tag=!ItemLoot621] run tag @s add ItemLoot621
 
 
 advancement revoke @s only hoenn:click/itemclick
