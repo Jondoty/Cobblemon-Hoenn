@@ -51,8 +51,8 @@ execute as @p[x=1387,y=181,z=-2393,distance=..50] run summon minecraft:interacti
 execute as @p[x=1389,y=181,z=-2393,distance=..50] run summon minecraft:interaction 1389 181 -2393 {width:1.25,height:1.25,response:1,Tags:[Box3]}
 
 
-
-
+#Creates the whiteout condition for players to respawn elsewhere upon defeat
+scoreboard objectives add Whiteout dummy
 
 
 

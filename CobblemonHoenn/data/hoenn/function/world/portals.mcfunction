@@ -98,6 +98,7 @@ tp @a[x=-2004,y=69,z=309,dx=4,dy=3] -2002 40 308
 #Oldale Town
 
 #Pokemon Center
+execute as @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 1
 execute as @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] run spawnpoint @s -2054 48 86
 tp @a[x=-2057,y=69,z=87,dx=6,dy=5,dz=1] -2054 48 86
@@ -125,6 +126,7 @@ tp @a[x=-1995,y=55,z=88,dx=3,dy=3] -1993 69 89
 #Petalburg City
 
 #Pokemon Center
+execute as @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 2
 execute as @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] run spawnpoint @s -2506 48 24
 tp @a[x=-2509,y=69,z=25,dx=6,dy=5,dz=1] -2506 48 24
@@ -356,6 +358,7 @@ execute as @a[x=-2803,y=11,z=207,dx=4,dy=5] at @s run tp @s ~ ~ ~5
 #Rustboro City
 
 #Pokemon Center
+execute as @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 3
 execute as @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] run spawnpoint @s -2736 48 -608
 tp @a[x=-2739,y=69,z=-607,dx=6,dy=5,dz=1] -2736 48 -608
@@ -471,6 +474,7 @@ tp @a[x=-2271,y=37,z=-770,dx=6,dy=5] -2118 69 -658
 #Verdanturf Town
 
 #Pokemon Center
+execute as @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 8
 execute as @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] run spawnpoint @s -2056 48 -640
 tp @a[x=-2059,y=69,z=-639,dx=6,dy=5,dz=1] -2056 48 -640
@@ -520,6 +524,7 @@ tp @a[x=-1724,y=50,z=-652,dx=3,dy=3] -1722 69 -655
 #Dewford Town
 
 #Pokemon Center
+execute as @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 4
 execute as @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] run spawnpoint @s -2533 43 863
 tp @a[x=-2536,y=64,z=864,dx=6,dy=5,dz=1] -2533 43 863
@@ -565,6 +570,7 @@ tp @a[x=-1556,y=66,z=513,dx=4,dy=3] -1554 38 512
 tp @a[x=-1556,y=38,z=513,dx=3,dy=3] -1554 64 516
 
 #Pokemon Center
+execute as @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 5
 execute as @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] run spawnpoint @s -1539 48 261
 tp @a[x=-1542,y=69,z=262,dx=6,dy=5,dz=1] -1539 48 261
@@ -690,6 +696,7 @@ execute as @a[x=-1512,y=50,z=-645,dx=3,dy=3] run function hoenn:triggers/stopsou
 tp @a[x=-1512,y=50,z=-645,dx=3,dy=3] -1510 69 -644
 
 #Pokemon Center
+execute as @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] run scoreboard players set @s Whiteout 7
 execute as @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] run spawnpoint @s -1558 48 -647
 tp @a[x=-1561,y=69,z=-646,dx=6,dy=3,dz=1] -1558 48 -647
@@ -822,6 +829,7 @@ tp @a[x=-1789,y=33,z=-1336,dx=5,dy=5] -1682 79 -1308
 #Lavaridge Town
 
 #Pokemon Center
+execute as @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 10
 execute as @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] run spawnpoint @s -2012 63 -1109
 tp @a[x=-2015,y=84,z=-1108,dx=6,dy=5,dz=1] -2012 63 -1109
@@ -868,6 +876,7 @@ tp @a[x=-1956,y=77,z=-1458,dx=3,dy=3] -1954 94 -1455
 #Fallarbor Town
 
 #Pokemon Center
+execute as @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 9
 execute as @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] run spawnpoint @s -2200 68 -1431
 tp @a[x=-2203,y=89,z=-1430,dx=6,dy=5,dz=1] -2200 68 -1431
@@ -978,6 +987,7 @@ tp @a[x=-989,y=6,z=-1280,dx=3,dy=50] -987 79 -1279
 #Fortree City
 
 #Pokemon Center
+execute as @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 11
 execute as @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] run spawnpoint @s -688 63 -1428
 tp @a[x=-691,y=84,z=-1427,dx=6,dy=5,dz=1] -688 63 -1428
@@ -1098,6 +1108,7 @@ tp @a[x=443,y=74,z=-1036,dx=4,dy=3] 445 55 -1037
 tp @a[x=443,y=55,z=-1036,dx=3,dy=3] 445 74 -1035
 
 #Pokemon Center
+execute as @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 12
 execute as @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] run spawnpoint @s 518 53 -1036
 tp @a[x=515,y=74,z=-1035,dx=6,dy=5,dz=1] 518 53 -1036
@@ -1191,6 +1202,7 @@ tp @a[x=1427,y=74,z=-977,dx=2,dy=3] 1428 48 -978
 tp @a[x=1426,y=48,z=-977,dx=4,dy=3] 1428 74 -976
 
 #Pokemon Center
+execute as @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 13
 execute as @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] run spawnpoint @s 1482 53 -979
 tp @a[x=1479,y=74,z=-978,dx=6,dy=5,dz=1] 1482 53 -979
@@ -1292,6 +1304,7 @@ tp @a[x=-102,y=65,z=248,dx=4,dy=3] -100 32 247
 tp @a[x=-102,y=32,z=248,dx=3,dy=3] -100 65 249
 
 #Pokemon Center
+execute as @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] run scoreboard players set @s Whiteout 15
 execute as @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] run spawnpoint @s -53 28 265
 tp @a[x=-56,y=65,z=267,dx=6,dy=3,dz=1] -53 28 265
@@ -1329,6 +1342,7 @@ tp @a[x=983,y=64,z=1715,dx=6,dy=3] -3533.0 82 1601
 tp @a[x=-3536,y=82,z=1602,dx=5,dy=3] 986 65 1716
 
 #Pokemon Center
+execute as @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 14
 execute as @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] run spawnpoint @s 1121 58 1667
 tp @a[x=1118,y=79,z=1668,dx=6,dy=5,dz=1] 1121 58 1667
@@ -1393,6 +1407,7 @@ tp @a[x=1943,y=227,z=-2417,dx=4,dy=4] 985 69 1503
 #Evergrand City
 
 #Pokemon Center
+execute as @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 16
 execute as @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] run spawnpoint @s 2227 133 -223
 tp @a[x=2224,y=154,z=-222,dx=6,dy=5,dz=1] 2227 133 -223
@@ -1417,6 +1432,7 @@ tp @a[x=1642,y=94,z=-3112,dx=8,dy=3] 2248 159 -378
 #Pokemon League
 
 #Exterior to Interior
+execute as @a[x=2154,y=170,z=-750,dx=8,dy=3] run scoreboard players set @s Whiteout 17
 execute as @a[x=2154,y=170,z=-750,dx=8,dy=3] run function hoenn:triggers/stopsound
 execute as @a[x=2154,y=170,z=-750,dx=8,dy=3] run spawnpoint @s 2158 171 -766
 tp @a[x=2154,y=170,z=-750,dx=8,dy=3] 2158 171 -766
@@ -1543,6 +1559,7 @@ tp @a[x=632,y=115,z=-3288,dx=4,dy=100,tag=Steven] 633 132 -3305
 #Battle Resort
 
 #Pokemon Center
+execute as @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] run scoreboard players set @s Whiteout 18
 execute as @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] run function hoenn:triggers/stopsound
 execute as @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] run spawnpoint @s 2353 48 804
 tp @a[x=2350,y=69,z=805,dx=6,dy=5,dz=1] 2353 48 804

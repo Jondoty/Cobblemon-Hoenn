@@ -62,6 +62,14 @@ scoreboard players enable @a info
 execute as @a[scores={Info=1..}] run function tools:infolist
 execute as @a[scores={info=1..}] run function tools:infolist
 
+
+#Runs whiteout function if enabled
+#Exception is the battle maison
+execute as @a[x=2348,y=38,z=611,dx=93,dy=40,dz=111,tag=Whiteout] run tag @s remove Whiteout
+
+execute as @a[tag=Whiteout] if entity @e[x=-2070,y=65,z=1410,dy=3,tag=WhiteoutEnable] run function hoenn:triggers/whiteout
+execute as @a[tag=Whiteout] run tag @s remove Whiteout
+
 #---------------------
 #Time-based commands
 
