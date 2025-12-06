@@ -86,12 +86,12 @@ tag @s remove ShakeScreen
 
 #Refreshes any stuck on advancement achievements
 advancement revoke @s only hoenn:click/signread
-advancement revoke @s only kalos:click/cuttrees
-advancement revoke @s only kalos:click/itemclick
-advancement revoke @s only kalos:click/npcs
-advancement revoke @s only kalos:click/rocksmash
-advancement revoke @s only kalos:click/signs
-advancement revoke @s only kalos:click/strengthrock
+advancement revoke @s only hoenn:click/cuttrees
+advancement revoke @s only hoenn:click/itemclick
+advancement revoke @s only hoenn:click/npcs
+advancement revoke @s only hoenn:click/rocksmash
+advancement revoke @s only hoenn:click/signs
+advancement revoke @s only hoenn:click/strengthrock
 advancement revoke @s only hoenn:click/box1
 advancement revoke @s only hoenn:click/box2
 advancement revoke @s only hoenn:click/box3
