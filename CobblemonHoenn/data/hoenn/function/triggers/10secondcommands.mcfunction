@@ -1,5 +1,7 @@
 #These commands run at, shockingly, 10-second intervals. Used for larger-area things that aren't super time-sensitive
 
+#Runs updates between versions if conditions are found and needed to be updated.
+function hoenn:triggers/runupdates
 
 #Deletes duplicate Pokemon/Trainers if player relogs near where something respawns, spawning new entities over the old ones.
 execute at @e[nbt={NoAI: 1b},type=cobblemon:pokemon] unless entity @e[type=cobblemon:pokemon,tag=keeper] run tag @e[distance=..0.01,limit=1] add keeper
