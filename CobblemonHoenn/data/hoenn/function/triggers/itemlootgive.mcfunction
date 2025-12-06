@@ -976,6 +976,12 @@ execute as @s[x=-999,y=89,z=-1352,distance=..5,tag=!ItemLoot278] run tellraw @s 
 execute as @s[x=-999,y=89,z=-1352,distance=..5,tag=!ItemLoot278] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-999,y=89,z=-1352,distance=..5,tag=!ItemLoot278] run tag @s add ItemLoot278
 
+execute as @s[x=-951,y=74,z=-1296,distance=..5,tag=ItemLoot622] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-951,y=74,z=-1296,distance=..5,tag=!ItemLoot622] run give @s cobblemon:prism_scale
+execute as @s[x=-951,y=74,z=-1296,distance=..5,tag=!ItemLoot622] run tellraw @s {"text":"You found a Prism Scale!","italic":true,"color":"gray"}
+execute as @s[x=-951,y=74,z=-1296,distance=..5,tag=!ItemLoot622] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-951,y=74,z=-1296,distance=..5,tag=!ItemLoot622] run tag @s add ItemLoot622
+
 execute as @s[x=-1011,y=51,z=-1288,distance=..5,tag=ItemLoot281] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-1011,y=51,z=-1288,distance=..5,tag=!ItemLoot281] run give @s cobblemon:rocky_helmet
 execute as @s[x=-1011,y=51,z=-1288,distance=..5,tag=!ItemLoot281] run tellraw @s {"text":"You found a Rocky Helmet!","italic":true,"color":"gray"}
@@ -1459,11 +1465,7 @@ execute as @s[x=933,y=102,z=-2395,distance=..5,tag=!ItemLoot390] run tellraw @s 
 execute as @s[x=933,y=102,z=-2395,distance=..5,tag=!ItemLoot390] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=933,y=102,z=-2395,distance=..5,tag=!ItemLoot390] run tag @s add ItemLoot390
 
-execute as @s[x=935,y=102,z=-2393,distance=..5,tag=ItemLoot391] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=935,y=102,z=-2393,distance=..5,tag=!ItemLoot391] run scoreboard players add @s Money 5000
-execute as @s[x=935,y=102,z=-2393,distance=..5,tag=!ItemLoot391] run tellraw @s {"text":"You found $5,000!","italic":true,"color":"gray"}
-execute as @s[x=935,y=102,z=-2393,distance=..5,tag=!ItemLoot391] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=935,y=102,z=-2393,distance=..5,tag=!ItemLoot391] run tag @s add ItemLoot391
+#ItemLoot391 in Starter3
 
 execute as @s[x=925,y=88,z=-2384,distance=..5,tag=ItemLoot392] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=925,y=88,z=-2384,distance=..5,tag=!ItemLoot392] run give @s cobblemon:max_elixir
@@ -1507,17 +1509,9 @@ execute as @s[x=950,y=75,z=-2457,distance=..5,tag=!ItemLoot399] run tellraw @s {
 execute as @s[x=950,y=75,z=-2457,distance=..5,tag=!ItemLoot399] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=950,y=75,z=-2457,distance=..5,tag=!ItemLoot399] run tag @s add ItemLoot399
 
-execute as @s[x=933,y=102,z=-2393,distance=..4,tag=ItemLoot400] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=933,y=102,z=-2393,distance=..4,tag=!ItemLoot400] run pokespawn electrode level=30 
-execute as @s[x=933,y=102,z=-2393,distance=..4,tag=!ItemLoot400] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
-execute as @s[x=933,y=102,z=-2393,distance=..4,tag=!ItemLoot400] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=933,y=102,z=-2393,distance=..4,tag=!ItemLoot400] run tag @s add ItemLoot400
+#ItemLoot400 in Starter2
 
-execute as @s[x=935,y=102,z=-2395,distance=..4,tag=ItemLoot401] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run pokespawn electrode level=30 
-execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
-execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run tag @s add ItemLoot401
+#ItemLoot401 in Starter1
 
 execute as @s[x=1400,y=83,z=-2358,distance=..5,tag=ItemLoot402] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=1400,y=83,z=-2358,distance=..5,tag=!ItemLoot402] run scoreboard players add @s Money 5000
@@ -1580,12 +1574,6 @@ execute as @s[x=933,y=181,z=-2395,distance=..5,tag=!ItemLoot390] run tellraw @s 
 execute as @s[x=933,y=181,z=-2395,distance=..5,tag=!ItemLoot390] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=933,y=181,z=-2395,distance=..5,tag=!ItemLoot390] run tag @s add ItemLoot390
 
-execute as @s[x=935,y=181,z=-2393,distance=..5,tag=ItemLoot391] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=935,y=181,z=-2393,distance=..5,tag=!ItemLoot391] run scoreboard players add @s Money 5000
-execute as @s[x=935,y=181,z=-2393,distance=..5,tag=!ItemLoot391] run tellraw @s {"text":"You found $5,000!","italic":true,"color":"gray"}
-execute as @s[x=935,y=181,z=-2393,distance=..5,tag=!ItemLoot391] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=935,y=181,z=-2393,distance=..5,tag=!ItemLoot391] run tag @s add ItemLoot391
-
 execute as @s[x=925,y=167,z=-2384,distance=..5,tag=ItemLoot392] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=925,y=167,z=-2384,distance=..5,tag=!ItemLoot392] run give @s cobblemon:max_elixir
 execute as @s[x=925,y=167,z=-2384,distance=..5,tag=!ItemLoot392] run tellraw @s {"text":"You found a Max Elixir!","italic":true,"color":"gray"}
@@ -1627,18 +1615,6 @@ execute as @s[x=950,y=154,z=-2457,distance=..5,tag=!ItemLoot399] run give @s cob
 execute as @s[x=950,y=154,z=-2457,distance=..5,tag=!ItemLoot399] run tellraw @s {"text":"You found a Max Revive!","italic":true,"color":"gray"}
 execute as @s[x=950,y=154,z=-2457,distance=..5,tag=!ItemLoot399] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=950,y=154,z=-2457,distance=..5,tag=!ItemLoot399] run tag @s add ItemLoot399
-
-execute as @s[x=933,y=181,z=-2393,distance=..4,tag=ItemLoot400] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=933,y=181,z=-2393,distance=..4,tag=!ItemLoot400] run pokespawn electrode level=30 
-execute as @s[x=933,y=181,z=-2393,distance=..4,tag=!ItemLoot400] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
-execute as @s[x=933,y=181,z=-2393,distance=..4,tag=!ItemLoot400] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=933,y=181,z=-2393,distance=..4,tag=!ItemLoot400] run tag @s add ItemLoot400
-
-execute as @s[x=935,y=181,z=-2395,distance=..4,tag=ItemLoot401] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run pokespawn electrode level=30 
-execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
-execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
-execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run tag @s add ItemLoot401
 
 execute as @s[x=1400,y=162,z=-2358,distance=..5,tag=ItemLoot402] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=1400,y=162,z=-2358,distance=..5,tag=!ItemLoot402] run scoreboard players add @s Money 5000

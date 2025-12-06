@@ -822,11 +822,11 @@ execute as @s[x=142,y=0,z=-326,dx=364,dy=230,dz=317,tag=Dialogue209,tag=!Dialogu
 
 #Dialogue 210 - Littleroot parents after beating Elite Four
 #Spawns dad
-execute as @s[x=-2059,y=45,z=289,distance=..10,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] unless entity @e[x=-2060,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2060 40 301 dad_generic
-execute as @s[x=-2000,y=45,z=289,distance=..10,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] unless entity @e[x=-2000,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2000 40 301 dad_generic
+execute as @s[x=-2057,y=39,z=304,distance=..10,scores={Rival=1,PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] unless entity @e[x=-2060,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2060 40 301 dad_generic
+execute as @s[x=-2002,y=39,z=304,distance=..10,scores={Rival=2,PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] unless entity @e[x=-2000,y=40,z=301,dy=3,type=cobblemon:npc] run npcspawnat -2000 40 301 dad_generic
 
-execute as @s[x=-2056,y=40,z=304,distance=..7,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] run opendialogue ssticket_dialogue210 @s
-execute as @s[x=-1999,y=39,z=295,distance=..7,scores={PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] run opendialogue ssticket_dialogue210 @s
+execute as @s[x=-2056,y=39,z=304,distance=..7,scores={Rival=1,PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] run opendialogue ssticket_dialogue210 @s
+execute as @s[x=-2002,y=39,z=304,distance=..7,scores={Rival=2,PokemonLeague=1..},tag=Dialogue209,tag=!Dialogue210] run opendialogue ssticket_dialogue210 @s
 
 #Dialogue 171 - Route 101
 #Professor Birch giving Johto starter post-league and Zinnia Encounter

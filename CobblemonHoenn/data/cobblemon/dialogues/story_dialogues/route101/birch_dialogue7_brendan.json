@@ -265,7 +265,7 @@
             "id": "page13",
             "speaker": "birch",
             "lines": [
-                "My girl, May, happens to be out on Route 103 right now, surveying Pokémon for me."
+                "My boy, Brendan, happens to be out on Route 103 right now, surveying Pokémon for me."
             ],
             "input": {
                 "type": "option",
@@ -352,7 +352,7 @@
             "id": "page17",
             "speaker": "birch",
             "lines": [
-                "Great! I'm sure May'll be happy to hear that, too."
+                "Great! I'm sure Brendan'll be happy to hear that, too."
             ],
             "input": {
                 "type": "option",
@@ -372,7 +372,7 @@
             "id": "page18",
             "speaker": "birch",
             "lines": [
-                "She can help teach you what it means to be a Trainer."
+                "He can help teach you what it means to be a Trainer."
             ],
             "input": {
                 "type": "option",
@@ -432,7 +432,7 @@
             "id": "page21",
             "speaker": "birch",
             "lines": [
-                "You can use it to see how to get to Route 103, where May ought to be."
+                "You can use it to see how to get to Route 103, where Brendan ought to be."
             ],
             "input": {
                 "type": "option",

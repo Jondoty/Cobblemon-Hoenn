@@ -23,6 +23,35 @@ execute as @s[x=-1370,y=78,z=-1251,distance=..10,tag=!ItemLoot200] run opendialo
 
 
 
+#Magma Hideout dense loots, northeast
+execute as @s[x=935,y=102,z=-2395,distance=..4,tag=ItemLoot401] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run pokespawn electrode level=30 
+execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
+execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=935,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run tag @s add ItemLoot401
+
+#Delta Magma Northeast
+execute as @s[x=935,y=181,z=-2395,distance=..4,tag=ItemLoot401] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run pokespawn electrode level=30 
+execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
+execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=935,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run tag @s add ItemLoot401
+
+
+#Aqua Hideout northwest
+execute as @s[x=1387,y=102,z=-2395,distance=..4,tag=ItemLoot401] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=1387,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run pokespawn electrode level=30 
+execute as @s[x=1387,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
+execute as @s[x=1387,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=1387,y=102,z=-2395,distance=..4,tag=!ItemLoot401] run tag @s add ItemLoot401
+
+#Delta Aqua, northwest
+execute as @s[x=1387,y=181,z=-2395,distance=..4,tag=ItemLoot401] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=1387,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run pokespawn electrode level=30 
+execute as @s[x=1387,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run tellraw @s {"text":"An Electrode jumped out!","italic":true,"color":"gray"}
+execute as @s[x=1387,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run playsound cobblemon:pokemon.electrode.cry ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=1387,y=181,z=-2395,distance=..4,tag=!ItemLoot401] run tag @s add ItemLoot401
+
 
 
 advancement revoke @s only hoenn:click/box1

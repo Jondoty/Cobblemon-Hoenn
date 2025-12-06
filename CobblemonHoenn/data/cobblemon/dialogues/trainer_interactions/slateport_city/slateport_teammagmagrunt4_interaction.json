@@ -20,7 +20,7 @@
         {
             "id": "greeting",
             "speaker": "npc",
-            "lines": ["Stand back and watch me, the 27th-strongest member of Team Aqua, take care of this kid!"],
+            "lines": ["Stand back and watch me, the 27th-strongest member of Team Magma, take care of this kid!"],
             "input": {
                 "type": "option",
                 "vertical": false,
