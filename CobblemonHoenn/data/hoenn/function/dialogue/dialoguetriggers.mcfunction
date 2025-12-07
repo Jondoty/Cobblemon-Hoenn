@@ -507,7 +507,7 @@ execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123]
 execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1399,y=64,z=211,dy=3,type=cobblemon:npc] run npcspawnat -1399 64 211 oldman_generic
 
 
-execute as @a[x=2209,y=78,z=2704,distance=..20,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=2218,y=78,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2218 78 2704 stern_generic
+execute as @a[x=2209,y=78,z=2704,distance=..20,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=2218,y=78,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2218 79 2704 stern_generic
 
 #Admin and Leader that teleport out
 execute as @a[x=2218,y=78,z=2704,distance=..20,tag=!Dialogue124,scores={GameVersion=1}] unless entity @e[x=2207,y=78,z=2699,dy=3,type=cobblemon:npc] run npcspawnat 2207 79 2699 maxie_generic
