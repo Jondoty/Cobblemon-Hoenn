@@ -490,8 +490,8 @@ execute if entity @p[x=-402,y=44,z=-643,distance=..10] as @e[x=-395,y=44,z=-655,
 
 
 #Slateport City - Team stealing submarine
-execute as @a[x=-1420,y=64,z=219,distance=..10,tag=Dialogue120,tag=!Dialogue123,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue123 @s
-execute as @a[x=-1420,y=64,z=219,distance=..10,tag=Dialogue120,tag=!Dialogue123,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue123 @s
+execute as @s[x=-1420,y=64,z=219,distance=..10,tag=Dialogue120,tag=!Dialogue123,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue123 @s
+execute as @s[x=-1420,y=64,z=219,distance=..10,tag=Dialogue120,tag=!Dialogue123,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue123 @s
 
 execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1408,y=64,z=205,dy=3,type=cobblemon:npc] run npcspawnat -1408 64 205 stern_generic
 execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1408,y=64,z=208,dy=3,type=cobblemon:npc] run npcspawnat -1408 64 208 lass_generic
@@ -506,9 +506,6 @@ execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123]
 execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1402,y=64,z=211,dy=3,type=cobblemon:npc] run npcspawnat -1402 64 211 gentleman_generic
 execute as @s[x=-1444,y=64,z=219,distance=..30,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=-1399,y=64,z=211,dy=3,type=cobblemon:npc] run npcspawnat -1399 64 211 oldman_generic
 
-#Dialoges 124-126, Slateport stealing submarine
-execute as @a[x=2209,y=78,z=2698,distance=..10,tag=!Dialogue124,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue124 @s
-execute as @a[x=2209,y=78,z=2698,distance=..10,tag=!Dialogue124,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue124 @s
 
 execute as @a[x=2209,y=78,z=2704,distance=..20,tag=Dialogue120,tag=!Dialogue123] unless entity @e[x=2218,y=78,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2218 78 2704 stern_generic
 
@@ -524,10 +521,13 @@ execute as @a[x=2201,y=79,z=2704,distance=..10,tag=Dialogue124,tag=!Dialogue126,
 execute as @a[x=2201,y=79,z=2701,distance=..10,tag=Dialogue124,tag=!Dialogue126,scores={GameVersion=2}] unless entity @e[x=2201,y=79,z=2701,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2701 slateport_teamaquagrunt1
 execute as @a[x=2201,y=79,z=2704,distance=..10,tag=Dialogue124,tag=!Dialogue126,scores={GameVersion=2}] unless entity @e[x=2201,y=79,z=2704,dy=3,type=cobblemon:npc] run npcspawnat 2201 79 2704 slateport_teamaquagrunt2
 
+#Dialoges 124-126, Slateport stealing submarine
+execute as @s[x=2209,y=78,z=2698,distance=..10,tag=!Dialogue124,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue124 @s[tag=!InDialogue]
+execute as @s[x=2209,y=78,z=2698,distance=..10,tag=!Dialogue124,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue124 @s[tag=!InDialogue]
 
 #Once both grunts are beaten
-execute as @a[x=2218,y=78,z=2704,distance=..10,tag=HarborGrunt1,tag=HarborGrunt2,tag=!Dialogue126,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue126 @s
-execute as @a[x=2218,y=78,z=2704,distance=..10,tag=HarborGrunt1,tag=HarborGrunt2,tag=!Dialogue126,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue126 @s
+execute as @s[x=2201,y=78,z=2704,distance=..15,tag=Dialogue124,tag=HarborGrunt1,tag=HarborGrunt2,tag=!Dialogue126,scores={GameVersion=1}] run opendialogue slateport_magma_dialogue126 @s[tag=!InDialogue]
+execute as @s[x=2201,y=78,z=2704,distance=..15,tag=Dialogue124,tag=HarborGrunt1,tag=HarborGrunt2,tag=!Dialogue126,scores={GameVersion=2}] run opendialogue slateport_aqua_dialogue126 @s[tag=!InDialogue]
 
 
 #Lilycove Rival battle
