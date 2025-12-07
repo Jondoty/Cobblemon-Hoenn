@@ -55,6 +55,8 @@ execute as @p[x=1389,y=181,z=-2393,distance=..50] run summon minecraft:interacti
 scoreboard objectives add Whiteout dummy
 
 
+#Extra Lilycove Shopkeeper
+execute as @p[x=514,y=69,z=-1106,distance=..50] unless entity @e[x=514,y=69,z=-1106,dy=3,type=cobblemon:npc] run npcspawnat 514 69 -1106 lilycove_shop13
 
 
 

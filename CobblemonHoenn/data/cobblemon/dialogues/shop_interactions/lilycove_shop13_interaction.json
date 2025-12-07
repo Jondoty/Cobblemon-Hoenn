@@ -1,0 +1,2176 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "names": [
+        "Department Clerk"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Lilycove Department Clerk",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shopman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome to Lilycove Department Store!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "Are you looking for anything in particular?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Fire Stone",
+                        "value": "firestone",
+                        "action": "q.dialogue.set_page('pickfirestone');"
+                    },
+                    {
+                        "text": "Water Stone",
+                        "value": "waterstone",
+                        "action": "q.dialogue.set_page('pickwaterstone');"
+                    },
+                    {
+                        "text": "Thunder Stone",
+                        "value": "thunderstone",
+                        "action": "q.dialogue.set_page('pickthunderstone');"
+                    },
+                    {
+                        "text": "Leaf Stone",
+                        "value": "leafstone",
+                        "action": "q.dialogue.set_page('pickleafstone');"
+                    },
+                    {
+                        "text": "Moon Stone",
+                        "value": "moonstone",
+                        "action": "q.dialogue.set_page('pickmoonstone');"
+                    },
+                    {
+                        "text": "Page 2 >>",
+                        "value": "page2",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "Which item would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Sun Stone",
+                        "value": "sunstone",
+                        "action": "q.dialogue.set_page('picksunstone');"
+                    },
+                    {
+                        "text": "Dawn Stone",
+                        "value": "dawnstone",
+                        "action": "q.dialogue.set_page('pickdawnstone');"
+                    },
+                    {
+                        "text": "Dusk Stone",
+                        "value": "duskstone",
+                        "action": "q.dialogue.set_page('pickduskstone');"
+                    },
+                    {
+                        "text": "Shiny Stone",
+                        "value": "shinystone",
+                        "action": "q.dialogue.set_page('pickshinystone');"
+                    },
+                    {
+                        "text": "Everstone",
+                        "value": "everstone",
+                        "action": "q.dialogue.set_page('pickeverstone');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy3",
+            "speaker": "npc",
+            "lines": [
+                "Which item would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Razor Fang",
+                        "value": "razorfang",
+                        "action": "q.dialogue.set_page('pickrazorfang');"
+                    },
+                    {
+                        "text": "Razor Claw",
+                        "value": "razorclaw",
+                        "action": "q.dialogue.set_page('pickrazorclaw');"
+                    },
+                    {
+                        "text": "Link Cable",
+                        "value": "linkcable",
+                        "action": "q.dialogue.set_page('picklinkcable');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "picklinkcable",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Link Cable for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy 1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:link_cable 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpokeball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Poke Ball for $200 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave200')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:poke_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:poke_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave2000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:poke_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 2000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickgreatball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Great Ball for $600 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave600')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:great_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:great_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave6000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:great_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 6000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickultraball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Ultra Ball for $1200 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1200')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:ultra_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave6000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:ultra_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 6000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave12000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:ultra_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 12000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpotion",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Potion for $300 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave300')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:potion 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 300');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1500')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:potion 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksuperpotion",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Super Potion for $700 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave700')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:super_potion 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 700');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3500')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:super_potion 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickhyperpotion",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Hyper Potion for $1200 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1200')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:hyper_potion 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave6000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:hyper_potion 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 6000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickmaxpotion",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Max Potion for $2500 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave2500')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:max_potion 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 2500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave12500')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:max_potion 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 12500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickfullrestore",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Full Restore for $3000 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:full_restore 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave15000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:full_restore 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 15000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickantidote",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Antidote for $100 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave100')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:antidote 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 100');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave500')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:antidote 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickparalyzeheal",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Paralyze Heal for $200 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave200')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:paralyze_heal 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:antidote 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickawakening",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Awakening for $250 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave250')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:awakening 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 250');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1250')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:awakening 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1250');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickburnheal",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Burn Heal for $250 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave250')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:burn_heal 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 250');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1250')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:burn_heal 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1250');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickiceheal",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Ice Heal for $250 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave250')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:ice_heal 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 250');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1250')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:ice_heal 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1250');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickescaperope",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Escape Rope for $550 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave550')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/escaperope');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 550');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave2750')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/escaperope');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/escaperope');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/escaperope');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/escaperope');",
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:spawn/escaperope');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 2750');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickfullheal",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Full Heal for $600 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave600')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:full_heal 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:full_heal 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickfirestone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Fire Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:fire_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwaterstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Water Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:water_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickthunderstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Thunder Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:thunder_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickleafstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Leaf Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:leaf_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickmoonstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Moon Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:moon_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksunstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Sun Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:sun_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdawnstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Dawn Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dawn_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickduskstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Dusk Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dusk_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickshinystone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Shiny Stone for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:shiny_stone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickeverstone",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Everstone for $1000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:everstone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdubiousdisc",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Dubious Disc for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dubious_disc 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickelectirizer",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Electirizer for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:electirizer 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickkingsrock",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Kings Rock for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:kings_rock 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickmagmarizer",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Magmarizer for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:magmarizer 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickmetalcoat",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Metal Coat for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:metal_coat 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickprotector",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Protector for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:protector 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickupgrade",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Up-Grade for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:upgrade 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdragonscale",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Dragon Scale for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dragon_scale 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrazorfang",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Razor Fang for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:razor_fang 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrazorclaw",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Razor Claw for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:razor_claw 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrevive",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Revive for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1500')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:revive 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave7500')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:revive 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 7500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickhealball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Heal Ball for $200 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave300')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:heal_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 300');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1500')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:heal_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave3000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:heal_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picknetball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Net Ball for $1000 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:net_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave5000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:net_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 5000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave10000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:net_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 10000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickduskball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Dusk Ball for $1000 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dusk_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave5000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dusk_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 5000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave10000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dusk_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 10000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickquickball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Quick Ball for $1000 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:quick_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave5000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:quick_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 5000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave10000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:quick_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 10000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picknestball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Nest Ball for $1000 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:nest_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave5000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:nest_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 5000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave10000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:nest_ball 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 10000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpremierball",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Premier Ball for $200 each?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave200')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave1000')",
+                        "text": "Buy x5",
+                        "value": "buy5",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave2000')",
+                        "text": "Buy x10",
+                        "value": "buy10",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:premier_ball 11');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 2000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickproteon",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Protein for $9800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave9800')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:protein 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 9800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickiron",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an Iron for $9800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave9800')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:iron 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 9800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcalcium",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Calcium for $9800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave9800')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:calcium 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 9800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickzinc",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Zinc for $9800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave9800')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:zinc 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 9800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcarbos",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Carbos for $9800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave9800')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:carbos 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 9800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickhpup",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an HP Up for $9800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave9800')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:hp_up 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 9800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickxspeed",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an X Speed for $250?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave250')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:x_speed 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 250');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickxattack",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an X Attack for $500?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave500')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:x_attack 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickxdefence",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an X Defend for $550?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave550')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:x_defence 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 550');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickguardspec",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Guard Spec for $700?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave700')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:guard_spec 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 700');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdirehit",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase a Dire Hit for $650?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave650')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:dire_hit 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 650');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickxaccuracy",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an X Accuracy for $950?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave950')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:x_accuracy 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 950');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickxspecialattack",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an X Special Attack for $350?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave350')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:x_special_attack 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 350');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickxspecialdefence",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase an X Special Defence for $350?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('MoneyHave350')",
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:x_special_defence 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players remove @s Money 350');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Here you are! Thank you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Please come again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
