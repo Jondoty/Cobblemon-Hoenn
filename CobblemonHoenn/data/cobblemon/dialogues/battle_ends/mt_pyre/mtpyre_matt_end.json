@@ -164,7 +164,8 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run give @s mega_showdown:red_orb');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=1}] run give @s mega_showdown:blue_orb');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=2}] run give @s mega_showdown:red_orb');",
                             "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:keyitem ambient @s ~ ~ ~ 1 1 1');",
                             "q.dialogue.set_page('page10');"
                         ]
@@ -246,7 +247,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only hoenn:story_aqua/mtpyre');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=1}] run advancement grant @s only hoenn:story_magma/mtpyre');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={GameVersion=2}] run advancement grant @s only hoenn:story_aqua/mtpyre');",
                             "q.dialogue.close();"
                         ]
                     }
