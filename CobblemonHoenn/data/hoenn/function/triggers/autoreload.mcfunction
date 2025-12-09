@@ -7,3 +7,10 @@ tag @e[x=-2070,y=65,z=1410,dy=3] add ReloadCheck
 
 #Purposeful command that errors out unless reloaded
 execute as @p[x=-2023,y=64,z=1410,distance=..5] unless entity @e[x=-2023,y=64,z=1410,dy=2,type=cobblemon:npc] run npcspawnat -2023 64 1410 birch_generic
+
+
+#Disables extra spawn datapacks that players might add in
+datapack disable "file/AllTheMons R3.0.zip"
+datapack disable "file/AllTheMons x MegaShowdown Radiants1.2.2 (1.7).zip"
+datapack disable "file/AllTheMons R3.0"
+datapack disable "file/AllTheMons x MegaShowdown Radiants1.2.2 (1.7)"
