@@ -149,10 +149,10 @@ execute as @a[x=-2107,y=0,z=-138,dx=452,dy=256,dz=133,tag=Success,scores={rng=6.
 
 #Route 104
 execute as @a[x=-2862,y=0,z=-512,dx=253,dy=256,dz=164,tag=Success,scores={rng=0..1}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Zigzagoon level=5 hiddenability=yes
-execute as @a[x=-2862,y=0,z=-512,dx=253,dy=256,dz=164,tag=Success,scores={rng=2..3}]  at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Wingull level=5 hiddenability=yes
+execute as @a[x=-2862,y=0,z=-512,dx=253,dy=256,dz=164,tag=Success,scores={rng=2..3}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Wingull level=5 hiddenability=yes
 
 execute as @a[x=-2889,y=27,z=-114,dx=252,dy=256,dz=224,tag=Success,scores={rng=3..5}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Zigzagoon level=7 hiddenability=no
-execute as @a[x=-2889,y=27,z=-114,dx=252,dy=256,dz=224,tag=Success,scores={rng=6..}]  at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Taillow level=7 hiddenability=no
+execute as @a[x=-2889,y=27,z=-114,dx=252,dy=256,dz=224,tag=Success,scores={rng=6..}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Taillow level=7 hiddenability=no
 
 
 execute as @a[x=-2889,y=27,z=-114,dx=252,dy=256,dz=224,tag=Success,scores={rng=0..1}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Zigzagoon level=7 hiddenability=yes
@@ -257,8 +257,8 @@ execute as @a[x=-2620,y=0,z=-1507,dx=275,dy=256,dz=427,tag=Success,scores={rng=6
 
 
 #Route 115
-execute as @a[x=-2929,y=0,z=-1363,dx=320,dy=256,dz=614,tag=Successscores={rng=0..3}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Swablu level=20 hiddenability=yes
-execute as @a[x=-2929,y=0,z=-1363,dx=320,dy=256,dz=614,tag=Successscores={rng=4..}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Swablu level=20 hiddenability=no
+execute as @a[x=-2929,y=0,z=-1363,dx=320,dy=256,dz=614,tag=Success,scores={rng=0..3}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Swablu level=20 hiddenability=yes
+execute as @a[x=-2929,y=0,z=-1363,dx=320,dy=256,dz=614,tag=Success,scores={rng=4..}] at @s as @e[type=minecraft:armor_stand,tag=Active,distance=..3,limit=1] run pokespawn Swablu level=20 hiddenability=no
 
 
 #Route 116
