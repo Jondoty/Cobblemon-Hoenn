@@ -1,0 +1,438 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Department Clerk",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shopman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome to Lilycove Department Store! Here we have lighting and displays for your base!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "Which items would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Torch",
+                        "value": "torch",
+                        "action": "q.dialogue.set_page('picktorch');"
+                    },
+                    {
+                        "text": "Glowstone",
+                        "value": "glowstone",
+                        "action": "q.dialogue.set_page('pickglowstone');"
+                    },
+                    {
+                        "text": "Sea Lantern",
+                        "value": "sea_lantern",
+                        "action": "q.dialogue.set_page('picksea_lantern');"
+                    },
+                    {
+                        "text": "Soul Torch",
+                        "value": "soul_torch",
+                        "action": "q.dialogue.set_page('picksoul_torch');"
+                    },
+                    {
+                        "text": "Redstone Torch",
+                        "value": "redstone_torch",
+                        "action": "q.dialogue.set_page('pickredstone_torch');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "Which resource would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "End Rod",
+                        "value": "end_rod",
+                        "action": "q.dialogue.set_page('pickend_rod');"
+                    },
+                    {
+                        "text": "Item Frame",
+                        "value": "item_frame",
+                        "action": "q.dialogue.set_page('pickitem_frame');"
+                    },
+                    {
+                        "text": "Glow Item Frame",
+                        "value": "glow_item_frame",
+                        "action": "q.dialogue.set_page('pickglow_item_frame');"
+                    },
+                    {
+                        "text": "Display Case",
+                        "value": "display_case",
+                        "action": "q.dialogue.set_page('pickdisplay_case');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picktorch",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of sixteen. Would you like 16 Torches for $600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=600..}] run give @s minecraft:torch 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=600..}] run scoreboard players remove @s Money 600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickglowstone",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of eight. Would you like 8 Glowstone Blocks for $900?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run give @s minecraft:glowstone 8');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run scoreboard players remove @s Money 900');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksea_lantern",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of eight. Would you like 8 Sea Lanterns for $800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run give @s minecraft:sea_lantern 8');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run scoreboard players remove @s Money 800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksoul_torch",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of eight. Would you like 8 Soul Torches for $2400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run give @s minecraft:soul_torch 8');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run scoreboard players remove @s Money 2400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickredstone_torch",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of eight. Would you like 8 Redstone Torches for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3000..}] run give @s minecraft:redstone_torch 8');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3000..}] run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickend_rod",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of eight. Would you like 8 End Rods for $2600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run give @s minecraft:end_rod 8');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run scoreboard players remove @s Money 2600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickitem_frame",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of eight. Would you like 8 Item Frames for $1400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run give @s minecraft:item_frame 8');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run scoreboard players remove @s Money 1400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickglow_item_frame",
+            "speaker": "npc",
+            "lines": [
+                "These items come in pairs of eight. Would you like 8 Glow Item Frames for $2200?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run give @s minecraft:glow_item_frame 8');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run scoreboard players remove @s Money 2200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdisplay_case",
+            "speaker": "npc",
+            "lines": [
+                "This item come in pairs of two. Would you like 2 Display Cases for $1500?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run give @s cobblemon:display_case 2');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run scoreboard players remove @s Money 1500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

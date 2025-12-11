@@ -1,0 +1,473 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Department Clerk",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shopman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome to Lilycove Department Store! Here we have raw brick materials for your base!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "Which resource would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Stone",
+                        "value": "stone",
+                        "action": "q.dialogue.set_page('pickstone');"
+                    },
+                    {
+                        "text": "Granite",
+                        "value": "granite",
+                        "action": "q.dialogue.set_page('pickgranite');"
+                    },
+                    {
+                        "text": "Diorite",
+                        "value": "diorite",
+                        "action": "q.dialogue.set_page('pickdiorite');"
+                    },
+                    {
+                        "text": "Andesite",
+                        "value": "andesite",
+                        "action": "q.dialogue.set_page('pickandesite');"
+                    },
+                    {
+                        "text": "Deepslate",
+                        "value": "deepslate",
+                        "action": "q.dialogue.set_page('pickdeepslate');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "Which resource would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Tuff",
+                        "value": "tuff",
+                        "action": "q.dialogue.set_page('picktuff');"
+                    },
+                    {
+                        "text": "Dirt",
+                        "value": "dirt",
+                        "action": "q.dialogue.set_page('pickdirt');"
+                    },
+                    {
+                        "text": "Grass Block",
+                        "value": "grass_block",
+                        "action": "q.dialogue.set_page('pickgrass_block');"
+                    },
+                    {
+                        "text": "Nether Bricks",
+                        "value": "nether_bricks",
+                        "action": "q.dialogue.set_page('picknether_bricks');"
+                    },
+                    {
+                        "text": "Prismarine",
+                        "value": "prismarine",
+                        "action": "q.dialogue.set_page('pickprismarine');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickstone",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Stone for $800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run give @s minecraft:stone 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run scoreboard players remove @s Money 800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickgranite",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Granite for $900?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run give @s minecraft:granite 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run scoreboard players remove @s Money 900');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdiorite",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Diorite for $900?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run give @s minecraft:diorite 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run scoreboard players remove @s Money 900');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickandesite",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Andesite for $900?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run give @s minecraft:andesite 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=900..}] run scoreboard players remove @s Money 900');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdeepslate",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Deepslate for $1100?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run give @s minecraft:deepslate 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run scoreboard players remove @s Money 1100');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picktuff",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Tuff for $1100?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run give @s minecraft:tuff 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run scoreboard players remove @s Money 1100');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdirt",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Dirt for $300?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=300..}] run give @s minecraft:dirt 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=300..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=300..}] run scoreboard players remove @s Money 300');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickgrass_block",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Grass Blocks for $700?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run give @s minecraft:grass_block 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run scoreboard players remove @s Money 700');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picknether_bricks",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Nether Brick Blocks for $1400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run give @s minecraft:nether_bricks 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run scoreboard players remove @s Money 1400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickprismarine",
+            "speaker": "npc",
+            "lines": [
+                "We sell our materials by stacks of 32. Would you like 32 Prismarine Blocks for $2000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run give @s minecraft:prismarine 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run scoreboard players remove @s Money 2000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

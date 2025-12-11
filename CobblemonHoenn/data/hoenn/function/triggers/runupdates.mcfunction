@@ -55,9 +55,21 @@ execute as @p[x=1389,y=181,z=-2393,distance=..50] run summon minecraft:interacti
 scoreboard objectives add Whiteout dummy
 
 
-#Extra Lilycove Shopkeeper
-execute as @p[x=514,y=69,z=-1106,distance=..50] unless entity @e[x=514,y=69,z=-1106,dy=3,type=cobblemon:npc] run npcspawnat 514 69 -1106 lilycove_shop13
+#Extra Lilycove Shopkeepers
 
+#4F, Evolution stones
+execute as @p[x=536,y=59,z=-1107,distance=..50] unless entity @e[x=536,y=59,z=-1107,dy=3,type=cobblemon:npc] run npcspawnat 536 59 -1107 lilycove_shop13
+execute as @p[x=536,y=59,z=-1102,distance=..50] unless entity @e[x=536,y=59,z=-1102,dy=3,type=cobblemon:npc] run npcspawnat 536 59 -1102 lilycove_shop12
+
+#5F, Secret Base Shops
+execute as @p[x=510,y=69,z=-1109,distance=..50] unless entity @e[x=510,y=69,z=-1109,dy=3,type=cobblemon:npc] run npcspawnat 510 69 -1109 lilycove_shop7
+execute as @p[x=515,y=69,z=-1106,distance=..50] unless entity @e[x=515,y=69,z=-1106,dy=3,type=cobblemon:npc] run npcspawnat 515 69 -1106 lilycove_shop8
+execute as @p[x=522,y=69,z=-1106,distance=..50] unless entity @e[x=522,y=69,z=-1106,dy=3,type=cobblemon:npc] run npcspawnat 522 69 -1106 lilycove_shop9
+execute as @p[x=527,y=69,z=-1109,distance=..50] unless entity @e[x=527,y=69,z=-1109,dy=3,type=cobblemon:npc] run npcspawnat 527 69 -1109 lilycove_shop10
+tp @e[x=519,y=68,z=-1106,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+
+#Route 119 Flower Shopkeeper
+execute as @p[x=-2806,y=52,z=-416,distance=..50] unless entity @e[x=-2806,y=52,z=-416,dy=3,type=cobblemon:npc] run npcspawnat -2806 52 -416 route104_flowershop
 
 
 

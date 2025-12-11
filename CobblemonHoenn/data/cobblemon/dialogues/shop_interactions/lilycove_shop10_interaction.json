@@ -1,0 +1,701 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Department Clerk",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shopman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome to Lilycove Department Store! Here we have wool and dyes for your base items!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "White Wool",
+                        "value": "white_wool",
+                        "action": "q.dialogue.set_page('pickwhite_wool');"
+                    },
+                    {
+                        "text": "White Dye",
+                        "value": "white_dye",
+                        "action": "q.dialogue.set_page('pickwhite_dye');"
+                    },
+                    {
+                        "text": "Light Gray Dye",
+                        "value": "light_gray_dye",
+                        "action": "q.dialogue.set_page('picklight_gray_dye');"
+                    },
+                    {
+                        "text": "Gray Dye",
+                        "value": "gray_dye",
+                        "action": "q.dialogue.set_page('pickgray_dye');"
+                    },
+                    {
+                        "text": "Black Dye",
+                        "value": "black_dye",
+                        "action": "q.dialogue.set_page('pickblack_dye');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Brown Dye",
+                        "value": "brown_dye",
+                        "action": "q.dialogue.set_page('pickbrown_dye');"
+                    },
+                    {
+                        "text": "Red Dye",
+                        "value": "red_dye",
+                        "action": "q.dialogue.set_page('pickred_dye');"
+                    },
+                    {
+                        "text": "Orange Dye",
+                        "value": "orange_dye",
+                        "action": "q.dialogue.set_page('pickorange_dye');"
+                    },
+                    {
+                        "text": "Yellow Dye",
+                        "value": "yellow_dye",
+                        "action": "q.dialogue.set_page('pickyellow_dye');"
+                    },
+                    {
+                        "text": "Lime Dye",
+                        "value": "lime_dye",
+                        "action": "q.dialogue.set_page('picklime_dye');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy3",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Green Dye",
+                        "value": "green_dye",
+                        "action": "q.dialogue.set_page('pickgreen_dye');"
+                    },
+                    {
+                        "text": "Cyan Dye",
+                        "value": "cyan_dye",
+                        "action": "q.dialogue.set_page('pickcyan_dye');"
+                    },
+                    {
+                        "text": "Light Blue Dye",
+                        "value": "light_blue_dye",
+                        "action": "q.dialogue.set_page('picklight_blue_dye');"
+                    },
+                    {
+                        "text": "Blue Dye",
+                        "value": "blue_dye",
+                        "action": "q.dialogue.set_page('pickblue_dye');"
+                    },
+                    {
+                        "text": "Purple Dye",
+                        "value": "purple_dye",
+                        "action": "q.dialogue.set_page('pickpurple_dye');"
+                    },
+                    {
+                        "text": "Pink Dye",
+                        "value": "pink_dye",
+                        "action": "q.dialogue.set_page('pickpink_dye');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwhite_wool",
+            "speaker": "npc",
+            "lines": [
+                "We sell our wool in stacks of 16 for $1500. Would you like White Wool?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run give @s minecraft:white_wool 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run scoreboard players remove @s Money 1500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwhite_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like White Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:white_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picklight_gray_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Light Gray Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:light_gray_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickgray_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Gray Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:gray_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickblack_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Black Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:black_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickbrown_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Brown Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:brown_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickred_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Red Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:red_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickorange_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Orange Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:orange_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickyellow_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Yellow Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:yellow_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picklime_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Lime Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:lime_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickgreen_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Green Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:green_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcyan_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Cyan Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:cyan_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picklight_blue_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Light Blue Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:light_blue_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickblue_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Blue Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:blue_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpurple_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Purple Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:purple_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpink_dye",
+            "speaker": "npc",
+            "lines": [
+                "We sell our dyes in stacks of 16 for $500. Would you like Pink Dye?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:pink_dye 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

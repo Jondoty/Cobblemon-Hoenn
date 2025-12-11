@@ -1,0 +1,1087 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Flower Shop",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:aromalady",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hello! This is the Pretty Petal flower shop. Spreading flowers throughout the world!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Flower Pot",
+                        "value": "flower_pot",
+                        "action": "q.dialogue.set_page('pickflower_pot');"
+                    },
+                    {
+                        "text": "Jack O Lantern",
+                        "value": "jack_o_lantern",
+                        "action": "q.dialogue.set_page('pickjack_o_lantern');"
+                    },
+                    {
+                        "text": "Brown Mushroom",
+                        "value": "brown_mushroom",
+                        "action": "q.dialogue.set_page('pickbrown_mushroom');"
+                    },
+                    {
+                        "text": "Red Mushroom",
+                        "value": "red_mushroom",
+                        "action": "q.dialogue.set_page('pickred_mushroom');"
+                    },
+                    {
+                        "text": "Crimson Fungus",
+                        "value": "crimson_fungus",
+                        "action": "q.dialogue.set_page('pickcrimson_fungus');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Warped Fungus",
+                        "value": "warped_fungus",
+                        "action": "q.dialogue.set_page('pickwarped_fungus');"
+                    },
+                    {
+                        "text": "Short Grass",
+                        "value": "short_grass",
+                        "action": "q.dialogue.set_page('pickshort_grass');"
+                    },
+                    {
+                        "text": "Fern",
+                        "value": "fern",
+                        "action": "q.dialogue.set_page('pickfern');"
+                    },
+                    {
+                        "text": "Dandelion",
+                        "value": "dandelion",
+                        "action": "q.dialogue.set_page('pickdandelion');"
+                    },
+                    {
+                        "text": "Poppy",
+                        "value": "poppy",
+                        "action": "q.dialogue.set_page('pickpoppy');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy3",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Blue Orchid",
+                        "value": "blue_orchid",
+                        "action": "q.dialogue.set_page('pickblue_orchid');"
+                    },
+                    {
+                        "text": "Allium",
+                        "value": "allium",
+                        "action": "q.dialogue.set_page('pickallium');"
+                    },
+                    {
+                        "text": "Azure Bluet",
+                        "value": "azure_bluet",
+                        "action": "q.dialogue.set_page('pickazure_bluet');"
+                    },
+                    {
+                        "text": "Red Tulip",
+                        "value": "red_tulip",
+                        "action": "q.dialogue.set_page('pickred_tulip');"
+                    },
+                    {
+                        "text": "Orange Tulip",
+                        "value": "orange_tulip",
+                        "action": "q.dialogue.set_page('pickorange_tulip');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy4",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "White Tulip",
+                        "value": "white_tulip",
+                        "action": "q.dialogue.set_page('pickwhite_tulip');"
+                    },
+                    {
+                        "text": "Pink Tulip",
+                        "value": "pink_tulip",
+                        "action": "q.dialogue.set_page('pickpink_tulip');"
+                    },
+                    {
+                        "text": "Oxeye Daisy",
+                        "value": "oxeye_daisy",
+                        "action": "q.dialogue.set_page('pickoxeye_daisy');"
+                    },
+                    {
+                        "text": "Cornflower",
+                        "value": "cornflower",
+                        "action": "q.dialogue.set_page('pickcornflower');"
+                    },
+                    {
+                        "text": "Lily Of The Valley",
+                        "value": "lily_of_the_valley",
+                        "action": "q.dialogue.set_page('picklily_of_the_valley');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy5",
+            "speaker": "npc",
+            "lines": [
+                "We sell flowers for your bases. Which ones would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Torchflower",
+                        "value": "torchflower",
+                        "action": "q.dialogue.set_page('picktorchflower');"
+                    },
+                    {
+                        "text": "Wither Rose",
+                        "value": "wither_rose",
+                        "action": "q.dialogue.set_page('pickwither_rose');"
+                    },
+                    {
+                        "text": "Pink Petals",
+                        "value": "pink_petals",
+                        "action": "q.dialogue.set_page('pickpink_petals');"
+                    },
+                    {
+                        "text": "Spore Blossom",
+                        "value": "spore_blossom",
+                        "action": "q.dialogue.set_page('pickspore_blossom');"
+                    },
+                    {
+                        "text": "Bamboo",
+                        "value": "bamboo",
+                        "action": "q.dialogue.set_page('pickbamboo');"
+                    },
+                    {
+                        "text": "Sunflower",
+                        "value": "sunflower",
+                        "action": "q.dialogue.set_page('picksunflower');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickflower_pot",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Flower Pots for $260?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run give @s minecraft:flower_pot 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run scoreboard players remove @s Money 260');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickjack_o_lantern",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Jack O Lanterns for $340?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=340..}] run give @s minecraft:jack_o_lantern 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=340..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=340..}] run scoreboard players remove @s Money 340');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickbrown_mushroom",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Brown Mushrooms for $280?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=280..}] run give @s minecraft:brown_mushroom 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=280..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=280..}] run scoreboard players remove @s Money 280');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickred_mushroom",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Red Mushrooms for $280?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=280..}] run give @s minecraft:red_mushroom 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=280..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=280..}] run scoreboard players remove @s Money 280');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcrimson_fungus",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Crimson Fungi for $410?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=410..}] run give @s minecraft:crimson_fungus 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=410..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=410..}] run scoreboard players remove @s Money 410');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwarped_fungus",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Warped Fungi for $490?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=490..}] run give @s minecraft:warped_fungus 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=490..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=490..}] run scoreboard players remove @s Money 490');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickshort_grass",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Short Grass for $130?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run give @s minecraft:short_grass 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run scoreboard players remove @s Money 130');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickfern",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Ferns for $150?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run give @s minecraft:fern 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run scoreboard players remove @s Money 150');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdandelion",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Dandelions for $110?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=110..}] run give @s minecraft:dandelion 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=110..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=110..}] run scoreboard players remove @s Money 110');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpoppy",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Poppies for $110?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=110..}] run give @s minecraft:poppy 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=110..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=110..}] run scoreboard players remove @s Money 110');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickblue_orchid",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Blue Orchids for $225?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=225..}] run give @s minecraft:blue_orchid 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=225..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=225..}] run scoreboard players remove @s Money 225');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickallium",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Alliums for $260?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run give @s minecraft:allium 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run scoreboard players remove @s Money 260');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickazure_bluet",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Azure Bluets for $130?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run give @s minecraft:azure_bluet 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run scoreboard players remove @s Money 130');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickred_tulip",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Red Tulips for $150?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run give @s minecraft:red_tulip 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run scoreboard players remove @s Money 150');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickorange_tulip",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Orange Tulips for $150?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run give @s minecraft:orange_tulip 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run scoreboard players remove @s Money 150');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwhite_tulip",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 White Tulips for $150?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run give @s minecraft:white_tulip 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run scoreboard players remove @s Money 150');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpink_tulip",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Pink Tulips for $150?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run give @s minecraft:pink_tulip 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=150..}] run scoreboard players remove @s Money 150');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickoxeye_daisy",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Oxeye Dasies for $130?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run give @s minecraft:oxeye_daisy 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run scoreboard players remove @s Money 130');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcornflower",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Cornflower for $130?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run give @s minecraft:cornflower 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=130..}] run scoreboard players remove @s Money 130');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picklily_of_the_valley",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Lily Of The Valley for $300?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=300..}] run give @s minecraft:lily_of_the_valley 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=300..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=300..}] run scoreboard players remove @s Money 300');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picktorchflower",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Torchflower for $470?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=470..}] run give @s minecraft:torchflower 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=470..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=470..}] run scoreboard players remove @s Money 470');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwither_rose",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Wither Rose for $750?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=750..}] run give @s minecraft:wither_rose 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=750..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=750..}] run scoreboard players remove @s Money 750');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpink_petals",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Pink Petals for $340?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=340..}] run give @s minecraft:pink_petals 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=340..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=340..}] run scoreboard players remove @s Money 340');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickspore_blossom",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Spore Blossom for $710?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=710..}] run give @s minecraft:spore_blossom 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=710..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=710..}] run scoreboard players remove @s Money 710');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickbamboo",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Bamboo for $90?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=90..}] run give @s minecraft:bamboo 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=90..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=90..}] run scoreboard players remove @s Money 90');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksunflower",
+            "speaker": "npc",
+            "lines": [
+                "Our flowers come in pairs of three. Would you like 3 Sunflowers for $260?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x3",
+                        "value": "buy3",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run give @s minecraft:sunflower 3');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=260..}] run scoreboard players remove @s Money 260');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
