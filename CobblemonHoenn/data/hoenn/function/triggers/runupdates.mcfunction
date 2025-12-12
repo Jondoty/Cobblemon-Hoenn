@@ -71,6 +71,15 @@ tp @e[x=519,y=68,z=-1106,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 #Route 119 Flower Shopkeeper
 execute as @p[x=-2806,y=52,z=-416,distance=..50] unless entity @e[x=-2806,y=52,z=-416,dy=3,type=cobblemon:npc] run npcspawnat -2806 52 -416 route104_flowershop
 
+#Fortree Shops
+execute as @p[x=-483,y=66,z=-1387,distance=..50] unless entity @e[x=-483,y=66,z=-1387,dy=3,type=cobblemon:npc] run npcspawnat -483 65 -1387 fortree_baseshop1
+execute as @p[x=-483,y=66,z=-1387,distance=..50] unless entity @e[x=-483,y=66,z=-1384,dy=3,type=cobblemon:npc] run npcspawnat -483 66 -1384 fortree_baseshop2
+
+#Slateport Shops
+execute as @p[x=-1618,y=69,z=-412,distance=..50] unless entity @e[x=-1618,y=69,z=-412,dy=3,type=cobblemon:npc] run npcspawnat -1618 69 412 slateport_shop3
+execute as @p[x=-1552,y=69,z=-412,distance=..50] unless entity @e[x=-1552,y=69,z=-412,dy=3,type=cobblemon:npc] run npcspawnat -1552 69 412 slateport_shop7
+execute as @p[x=-1546,y=69,z=-412,distance=..50] unless entity @e[x=-1546,y=69,z=-412,dy=3,type=cobblemon:npc] run npcspawnat -1546 69 412 slateport_shop8
+
 
 
 #

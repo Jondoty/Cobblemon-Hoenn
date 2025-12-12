@@ -1,0 +1,666 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Redstone Guy",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:engineer",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome! I sell Redstone supplies for contraptions at your secret base!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "Which items would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Redstone Dust",
+                        "value": "redstone_dust",
+                        "action": "q.dialogue.set_page('pickredstone_dust');"
+                    },
+                    {
+                        "text": "Repeater",
+                        "value": "repeater",
+                        "action": "q.dialogue.set_page('pickrepeater');"
+                    },
+                    {
+                        "text": "Comparator",
+                        "value": "comparator",
+                        "action": "q.dialogue.set_page('pickcomparator');"
+                    },
+                    {
+                        "text": "Daylight Detector",
+                        "value": "daylight_detector",
+                        "action": "q.dialogue.set_page('pickdaylight_detector');"
+                    },
+                    {
+                        "text": "Hopper",
+                        "value": "hopper",
+                        "action": "q.dialogue.set_page('pickhopper');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "Which resource would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Dispenser",
+                        "value": "dispenser",
+                        "action": "q.dialogue.set_page('pickdispenser');"
+                    },
+                    {
+                        "text": "Dropper",
+                        "value": "dropper",
+                        "action": "q.dialogue.set_page('pickdropper');"
+                    },
+                    {
+                        "text": "Piston",
+                        "value": "piston",
+                        "action": "q.dialogue.set_page('pickpiston');"
+                    },
+                    {
+                        "text": "Sticky Piston",
+                        "value": "sticky_piston",
+                        "action": "q.dialogue.set_page('picksticky_piston');"
+                    },
+                    {
+                        "text": "Minecart",
+                        "value": "minecart",
+                        "action": "q.dialogue.set_page('pickminecart');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy3",
+            "speaker": "npc",
+            "lines": [
+                "Which resource would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Rail",
+                        "value": "rail",
+                        "action": "q.dialogue.set_page('pickrail');"
+                    },
+                    {
+                        "text": "Powered Rail",
+                        "value": "powered_rail",
+                        "action": "q.dialogue.set_page('pickpowered_rail');"
+                    },
+                    {
+                        "text": "Detector Rail",
+                        "value": "detector_rail",
+                        "action": "q.dialogue.set_page('pickdetector_rail');"
+                    },
+                    {
+                        "text": "Activator Rail",
+                        "value": "activator_rail",
+                        "action": "q.dialogue.set_page('pickactivator_rail');"
+                    },
+                    {
+                        "text": "Note Block",
+                        "value": "noteblock",
+                        "action": "q.dialogue.set_page('picknoteblock');"
+                    },
+                    {
+                        "text": "<< Page 2",
+                        "value": "page2",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickredstone_dust",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 64 Redstone Dust for $1600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run give @s minecraft:redstone 64');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run scoreboard players remove @s Money 1600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrepeater",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Repeater for $1600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run give @s minecraft:repeater 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run scoreboard players remove @s Money 1600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcomparator",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Comparator for $2400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run give @s minecraft:comparator 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run scoreboard players remove @s Money 2400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdaylight_detector",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Daylight Detector for $2600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run give @s minecraft:daylight_detector 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run scoreboard players remove @s Money 2600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickhopper",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Hopper for $3800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3800..}] run give @s minecraft:hopper 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3800..}] run scoreboard players remove @s Money 3800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdispenser",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Dispenser for $2000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run give @s minecraft:dispenser 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run scoreboard players remove @s Money 2000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdropper",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Dropper for $1400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run give @s minecraft:dropper 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run scoreboard players remove @s Money 1400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpiston",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Piston for $2000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run give @s minecraft:piston 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2000..}] run scoreboard players remove @s Money 2000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksticky_piston",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Sticky Piston for $2600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run give @s minecraft:sticky_piston 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run scoreboard players remove @s Money 2600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickminecart",
+            "speaker": "npc",
+            "lines": [
+                "Would you like a Minecart for $1000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run give @s minecraft:minecart 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrail",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Rail for $1800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1800..}] run give @s minecraft:rail 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1800..}] run scoreboard players remove @s Money 1800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpowered_rail",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Powered Rail for $4000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=4000..}] run give @s minecraft:powered_rail 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=4000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=4000..}] run scoreboard players remove @s Money 4000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdetector_rail",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Detector Rail for $2600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run give @s minecraft:detector_rail 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run scoreboard players remove @s Money 2600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickactivator_rail",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Activator Rail for $2600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run give @s minecraft:activator_rail 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2600..}] run scoreboard players remove @s Money 2600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picknoteblock",
+            "speaker": "npc",
+            "lines": [
+                "We sell these in bundles of four. Would you like 4 Note Block for $1400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run give @s minecraft:note_block 4');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1400..}] run scoreboard players remove @s Money 1400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

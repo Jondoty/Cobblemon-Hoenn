@@ -1,0 +1,561 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Secret Base Guild",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:ruinmaniac",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome to the Secret Base Guild, we sell basics to get any base started!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "Which items would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Oak Wood",
+                        "value": "oak_wood",
+                        "action": "q.dialogue.set_page('pickoak_wood');"
+                    },
+                    {
+                        "text": "Birch Wood",
+                        "value": "birch_wood",
+                        "action": "q.dialogue.set_page('pickbirch_wood');"
+                    },
+                    {
+                        "text": "Jungle Wood",
+                        "value": "jungle_wood",
+                        "action": "q.dialogue.set_page('pickjungle_wood');"
+                    },
+                    {
+                        "text": "Acacia Wood",
+                        "value": "acacia_wood",
+                        "action": "q.dialogue.set_page('pickacacia_wood');"
+                    },
+                    {
+                        "text": "Dark Oak Wood",
+                        "value": "dark_oak_wood",
+                        "action": "q.dialogue.set_page('pickdark_oak_wood');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "Which items would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Mangrove Wood",
+                        "value": "mangrove_wood",
+                        "action": "q.dialogue.set_page('pickmangrove_wood');"
+                    },
+                    {
+                        "text": "Cherry Wood",
+                        "value": "cherry_wood",
+                        "action": "q.dialogue.set_page('pickcherry_wood');"
+                    },
+                    {
+                        "text": "Spruce Planks",
+                        "value": "spruce_planks",
+                        "action": "q.dialogue.set_page('pickspruce_planks');"
+                    },
+                    {
+                        "text": "Bamboo Planks",
+                        "value": "bamboo_planks",
+                        "action": "q.dialogue.set_page('pickbamboo_planks');"
+                    },
+                    {
+                        "text": "Crimson Planks",
+                        "value": "crimson_planks",
+                        "action": "q.dialogue.set_page('pickcrimson_planks');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy3",
+            "speaker": "npc",
+            "lines": [
+                "Which items would you like to purchase?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Warped Planks",
+                        "value": "warped_planks",
+                        "action": "q.dialogue.set_page('pickwarped_planks');"
+                    },
+                    {
+                        "text": "Glass",
+                        "value": "glass",
+                        "action": "q.dialogue.set_page('pickglass');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickoak_wood",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Oak Wood for $1000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run give @s minecraft:oak_wood 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickbirch_wood",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Birch Wood for $1000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run give @s minecraft:birch_wood 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickjungle_wood",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Jungle Wood for $1100?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run give @s minecraft:jungle_wood 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run scoreboard players remove @s Money 1100');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickacacia_wood",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Acacia Wood for $1100?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run give @s minecraft:acacia_wood 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1100..}] run scoreboard players remove @s Money 1100');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdark_oak_wood",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Dark Oak Wood for $1200?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run give @s minecraft:dark_oak_wood 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run scoreboard players remove @s Money 1200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickmangrove_wood",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Mangrove Wood for $1300?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1300..}] run give @s minecraft:mangrove_wood 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1300..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1300..}] run scoreboard players remove @s Money 1300');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcherry_wood",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Cherry Wood for $1200?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run give @s minecraft:cherry_wood 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run scoreboard players remove @s Money 1200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickspruce_planks",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 32 Spruce Planks for $600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=600..}] run give @s minecraft:spruce_planks 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=600..}] run scoreboard players remove @s Money 600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickbamboo_planks",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 32 Bamboo Planks for $700?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run give @s minecraft:bamboo_planks 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run scoreboard players remove @s Money 700');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcrimson_planks",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 32 Crimson Planks for $1500?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run give @s minecraft:crimson_planks 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1500..}] run scoreboard players remove @s Money 1500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickwarped_planks",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 32 Warped Planks for $1600?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run give @s minecraft:warped_planks 32');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1600..}] run scoreboard players remove @s Money 1600');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickglass",
+            "speaker": "npc",
+            "lines": [
+                "Some excellent building blocks for your base! Would you like 16 Glass for $800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run give @s minecraft:glass 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=800..}] run scoreboard players remove @s Money 800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,438 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Decorative Man",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:engineer",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome! I sell high-end decorative items for your base!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "Which items are you interested in?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Pasture",
+                        "value": "pasture",
+                        "action": "q.dialogue.set_page('pickpasture');"
+                    },
+                    {
+                        "text": "Amethyst Cluster",
+                        "value": "amethyst_cluster",
+                        "action": "q.dialogue.set_page('pickamethyst_cluster');"
+                    },
+                    {
+                        "text": "Enchanting Table",
+                        "value": "enchanting_table",
+                        "action": "q.dialogue.set_page('pickenchanting_table');"
+                    },
+                    {
+                        "text": "End Crystal",
+                        "value": "end_crystal",
+                        "action": "q.dialogue.set_page('pickend_crystal');"
+                    },
+                    {
+                        "text": "Tumblestone Cluster",
+                        "value": "tumblestone_cluster",
+                        "action": "q.dialogue.set_page('picktumblestone_cluster');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "Which items are you interested in?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Black Tumblestone Cluster",
+                        "value": "black_tumblestone_cluster",
+                        "action": "q.dialogue.set_page('pickblack_tumblestone_cluster');"
+                    },
+                    {
+                        "text": "Sky Tumblestone Cluster",
+                        "value": "sky_tumblestone_cluster",
+                        "action": "q.dialogue.set_page('picksky_tumblestone_cluster');"
+                    },
+                    {
+                        "text": "Bell",
+                        "value": "bell",
+                        "action": "q.dialogue.set_page('pickbell');"
+                    },
+                    {
+                        "text": "Iron Blocks",
+                        "value": "iron_blocks",
+                        "action": "q.dialogue.set_page('pickiron_block');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickpasture",
+            "speaker": "npc",
+            "lines": [
+                "Pastures allow your Pokemon to roam around in your base. Would you like to buy a Pasture for $8500?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=8500..}] run give @s cobblemon:pasture 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=8500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=8500..}] run scoreboard players remove @s Money 8500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickamethyst_cluster",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Amethyst Cluster for $2200?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run give @s minecraft:amethyst_cluster 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run scoreboard players remove @s Money 2200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickenchanting_table",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Enchanting Table for $5000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=5000..}] run give @s minecraft:enchanting_table 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=5000..}] run scoreboard players remove @s Money 5000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickend_crystal",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a End Crystal for $9000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=9000..}] run give @s minecraft:end_crystal 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=9000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=9000..}] run scoreboard players remove @s Money 9000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picktumblestone_cluster",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Tumblestone Cluster for $3000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3000..}] run give @s cobblemon:tumblestone_cluster 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3000..}] run scoreboard players remove @s Money 3000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickblack_tumblestone_cluster",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Black Tumblestone Cluster for $3500?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3500..}] run give @s cobblemon:black_tumblestone_cluster 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3500..}] run scoreboard players remove @s Money 3500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksky_tumblestone_cluster",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Sky Tumblestone Cluster for $3800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3800..}] run give @s cobblemon:sky_tumblestone_cluster 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=3800..}] run scoreboard players remove @s Money 3800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickbell",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Bell for $2800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2800..}] run give @s minecraft:bell 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2800..}] run scoreboard players remove @s Money 2800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickiron_block",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy 16 Iron Blocks for $2500?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2500..}] run give @s minecraft:iron_block 16');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2500..}] run scoreboard players remove @s Money 2500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

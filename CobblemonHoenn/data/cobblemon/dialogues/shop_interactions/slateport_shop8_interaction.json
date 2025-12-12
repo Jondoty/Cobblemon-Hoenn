@@ -1,0 +1,438 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/testformoney');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Industrial Man",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:engineer",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome! I sell industrial tools for work in your secret base!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "Which items are you interested in?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Chain",
+                        "value": "chain",
+                        "action": "q.dialogue.set_page('pickchain');"
+                    },
+                    {
+                        "text": "Stonecutter",
+                        "value": "stonecutter",
+                        "action": "q.dialogue.set_page('pickstonecutter');"
+                    },
+                    {
+                        "text": "Cartography Table",
+                        "value": "cartography_table",
+                        "action": "q.dialogue.set_page('pickcartography_table');"
+                    },
+                    {
+                        "text": "Smithing Table",
+                        "value": "smithing_table",
+                        "action": "q.dialogue.set_page('picksmithing_table');"
+                    },
+                    {
+                        "text": "Grindstone",
+                        "value": "grindstone",
+                        "action": "q.dialogue.set_page('pickgrindstone');"
+                    },
+                    {
+                        "text": "Next Page >>",
+                        "value": "nextpage",
+                        "action": "q.dialogue.set_page('buy2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "npc",
+            "lines": [
+                "Which items are you interested in?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Furnace",
+                        "value": "furnace",
+                        "action": "q.dialogue.set_page('pickfurnace');"
+                    },
+                    {
+                        "text": "Blast Furnace",
+                        "value": "blast_furnace",
+                        "action": "q.dialogue.set_page('pickblast_furnace');"
+                    },
+                    {
+                        "text": "Anvil",
+                        "value": "anvil",
+                        "action": "q.dialogue.set_page('pickanvil');"
+                    },
+                    {
+                        "text": "Armor Stand",
+                        "value": "armor_stand",
+                        "action": "q.dialogue.set_page('pickarmor_stand');"
+                    },
+                    {
+                        "text": "<< Page 1",
+                        "value": "page1",
+                        "action": "q.dialogue.set_page('buy1');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickchain",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy two Chain for $500?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run give @s minecraft:chain 2');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=500..}] run scoreboard players remove @s Money 500');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickstonecutter",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Stonecutter for $1200?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run give @s minecraft:stonecutter 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1200..}] run scoreboard players remove @s Money 1200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickcartography_table",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Cartography Table for $1000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run give @s minecraft:cartography_table 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1000..}] run scoreboard players remove @s Money 1000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksmithing_table",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Smithing Table for $2200?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run give @s minecraft:smithing_table 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2200..}] run scoreboard players remove @s Money 2200');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickgrindstone",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Grindstone for $1800?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1800..}] run give @s minecraft:grindstone 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=1800..}] run scoreboard players remove @s Money 1800');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickfurnace",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Furnace for $400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=400..}] run give @s minecraft:furnace 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=400..}] run scoreboard players remove @s Money 400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickblast_furnace",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Blast Furnace for $2400?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run give @s minecraft:blast_furnace 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=2400..}] run scoreboard players remove @s Money 2400');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickanvil",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Anvil for $6000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=6000..}] run give @s minecraft:anvil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=6000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=6000..}] run scoreboard players remove @s Money 6000');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickarmor_stand",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to buy a Armor Stand for $700?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy x1",
+                        "value": "buy1",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run give @s minecraft:armor_stand 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Money=700..}] run scoreboard players remove @s Money 700');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Lovely. And here you are. Happy decorating!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Visit us again anytime!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function hoenn:data/removemoneytags');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
