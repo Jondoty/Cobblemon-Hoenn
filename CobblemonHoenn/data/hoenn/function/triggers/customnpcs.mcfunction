@@ -244,6 +244,8 @@ execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:ar
 execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:skull_fossil"}]}] run tag @s add FossilHave
 execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:cover_fossil"}]}] run tag @s add FossilHave
 execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:plume_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:sail_fossil"}]}] run tag @s add FossilHave
+execute as @s[x=-2786,y=28,z=-705,distance=..8,nbt={Inventory:[{id:"cobblemon:jaw_fossil"}]}] run tag @s add FossilHave
 
 execute as @s[x=-2786,y=28,z=-705,distance=..8,tag=!FossilHave] run opendialogue fossilman_nofossils @s
 execute as @s[x=-2786,y=28,z=-705,distance=..8,tag=FossilHave] run opendialogue fossilman_reanimate @s

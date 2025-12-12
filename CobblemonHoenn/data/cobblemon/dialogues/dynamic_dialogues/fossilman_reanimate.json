@@ -8,7 +8,9 @@
         "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:armor_fossil\"}]}] add ArmorHave');",
         "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:skull_fossil\"}]}] add SkullHave');",
         "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:cover_fossil\"}]}] add CoverHave');",
-        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:plume_fossil\"}]}] add PlumeHave');"
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:plume_fossil\"}]}] add PlumeHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:jaw_fossil\"}]}] add JawHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:sail_fossil\"}]}] add SailHave');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -108,16 +110,6 @@
                         ]
                     },
                     {
-                        "isSelectable": "q.player.has_tag('AmberHave')",
-                        "text": "Old Amber",
-                        "value": "oldamber",
-                        "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:old_amber_fossil 1');",
-                            "q.run_command('execute as ' + q.player.username + ' run pokegive aerodactyl level=20');",
-                            "q.dialogue.set_page('page3');"
-                        ]
-                    },
-                    {
                         "text": "More >>",
                         "value": "more",
                         "action": [
@@ -126,8 +118,7 @@
                     }
                 ]
             }
-        },
-        {
+        },        {
             "id": "fossilpick2",
             "speaker": "npc",
             "lines": [
@@ -137,6 +128,16 @@
                 "type": "option",
                 "vertical": true,
                 "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('AmberHave')",
+                        "text": "Old Amber",
+                        "value": "oldamber",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:old_amber_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive aerodactyl level=20');",
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    },
                     {
                         "isSelectable": "q.player.has_tag('ArmorHave')",
                         "text": "Armor Fossil",
@@ -168,12 +169,52 @@
                         ]
                     },
                     {
+                        "text": "More >>",
+                        "value": "more",
+                        "action": [
+                            "q.dialogue.set_page('fossilpick3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "fossilpick3",
+            "speaker": "npc",
+            "lines": [
+                "Which Fossil should I restore for you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
                         "isSelectable": "q.player.has_tag('PlumeHave')",
                         "text": "Plume Fossil",
                         "value": "plume",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:plume_fossil 1');",
                             "q.run_command('execute as ' + q.player.username + ' run pokegive archen level=20');",
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('JawHave')",
+                        "text": "Jaw Fossil",
+                        "value": "Jaw",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:jaw_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive tyrunt level=20');",
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('SailHave')",
+                        "text": "Sail Fossil",
+                        "value": "sail",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:sail_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive amaura level=20');",
                             "q.dialogue.set_page('page3');"
                         ]
                     },
@@ -279,6 +320,8 @@
                             "q.run_command('execute as ' + q.player.username + ' run tag @s remove SkullHave');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s remove CoverHave');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s remove PlumeHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove JawHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove SailHave');",
                             "q.dialogue.close();"
                         ]
                     }
@@ -309,6 +352,8 @@
                             "q.run_command('execute as ' + q.player.username + ' run tag @s remove SkullHave');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s remove CoverHave');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s remove PlumeHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove JawHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove SailHave');",
                             "q.dialogue.close();"
                         ]
                     }
