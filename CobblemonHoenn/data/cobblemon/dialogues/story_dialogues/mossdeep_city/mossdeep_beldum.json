@@ -54,7 +54,7 @@
                         "value": "yes",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' unless entity @s[tag=ItemLoot620] run playsound minecraft:eggget ambient @s ~ ~ ~ 1 1 1');",
-                            "q.run_command('execute as ' + q.player.username + ' unless entity @s[tag=ItemLoot620] run pokegive beldum level=1');",
+                            "q.run_command('execute as ' + q.player.username + ' unless entity @s[tag=ItemLoot620] run pokegive beldum level=1 held_item=mega_showdown:iron_plate');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add ItemLoot620');",
                             "q.dialogue.set_page('page3');"
                         ]

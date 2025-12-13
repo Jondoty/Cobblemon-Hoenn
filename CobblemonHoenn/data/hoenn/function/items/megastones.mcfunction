@@ -173,12 +173,12 @@ execute at @e[x=-2071,y=69,z=348,dy=3,tag=MegaStone] as @a[distance=..3,tag=!Meg
 execute at @e[x=-2071,y=69,z=348,dy=3,tag=MegaStone] run tag @a[distance=..3,tag=!MegaStone21,scores={LegendCatch=1}] add MegaStone21
 
 #Blastoisinite
-execute at @e[x=2367,y=73,z=-1333,dy=3,tag=MegaStone] run particle dust_color_transition{from_color:[0.75,0.75,0.75],to_color:[0.0,0.5,0.75],scale:1} ~ ~ ~ 1 1 1 0 10 normal @a[distance=..50,tag=!MegaStone22]
-execute at @e[x=2367,y=73,z=-1333,dy=3,tag=MegaStone] run give @a[distance=..3,tag=!MegaStone22] mega_showdown:blastoisinite
-execute at @e[x=2367,y=73,z=-1333,dy=3,tag=MegaStone] run tellraw @a[distance=..3,tag=!MegaStone22] {"text":"You obtained a Mega Stone!","italic":true,"color":"gray"}
-execute at @e[x=2367,y=73,z=-1333,dy=3,tag=MegaStone] run playsound megastoneget ambient @a[distance=..3,tag=!MegaStone22] ~ ~ ~ 1 1 1
-execute at @e[x=2367,y=73,z=-1333,dy=3,tag=MegaStone] as @a[distance=..3,tag=!MegaStone22] run advancement grant @s only hoenn:adventurer/megastone
-execute at @e[x=2367,y=73,z=-1333,dy=3,tag=MegaStone] run tag @a[distance=..3,tag=!MegaStone22] add MegaStone22
+execute at @e[x=2353,y=73,z=-1333,dy=3,tag=MegaStone] run particle dust_color_transition{from_color:[0.75,0.75,0.75],to_color:[0.0,0.5,0.75],scale:1} ~ ~ ~ 1 1 1 0 10 normal @a[distance=..50,tag=!MegaStone22]
+execute at @e[x=2353,y=73,z=-1333,dy=3,tag=MegaStone] run give @a[distance=..3,tag=!MegaStone22] mega_showdown:blastoisinite
+execute at @e[x=2353,y=73,z=-1333,dy=3,tag=MegaStone] run tellraw @a[distance=..3,tag=!MegaStone22] {"text":"You obtained a Mega Stone!","italic":true,"color":"gray"}
+execute at @e[x=2353,y=73,z=-1333,dy=3,tag=MegaStone] run playsound megastoneget ambient @a[distance=..3,tag=!MegaStone22] ~ ~ ~ 1 1 1
+execute at @e[x=2353,y=73,z=-1333,dy=3,tag=MegaStone] as @a[distance=..3,tag=!MegaStone22] run advancement grant @s only hoenn:adventurer/megastone
+execute at @e[x=2353,y=73,z=-1333,dy=3,tag=MegaStone] run tag @a[distance=..3,tag=!MegaStone22] add MegaStone22
 
 #Abomasite
 execute at @e[x=-695,y=79,z=-657,dy=3,tag=MegaStone] run particle dust_color_transition{from_color:[0.5,0.5,1.0],to_color:[0.25,0.5,0.5],scale:1} ~ ~ ~ 1 1 1 0 10 normal @a[distance=..50,tag=!MegaStone23,scores={LegendCatch=1}]
