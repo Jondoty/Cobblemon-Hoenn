@@ -1,0 +1,1 @@
+Unless they are quality of life packs or modifications, things like AllTheMons and other model-adding packs should go in your Minecraft's resource packs folder only. Adding them here will introduce their own spawn conditions the map won't know what to do with and spawn random Pokémon everywhere.
