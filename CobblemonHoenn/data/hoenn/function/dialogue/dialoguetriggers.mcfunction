@@ -877,16 +877,16 @@ execute as @s[x=2678,y=69,z=619,distance=..25,tag=Dialogue250] unless entity @e[
 execute as @s[x=2678,y=69,z=619,distance=..25,tag=!Dialogue250] run tp @e[x=2678,y=69,z=619,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 
 #Verdanturf Wanda, after beating the Delta Episode
-execute as @s[x=-2123,y=48,z=-579,distance=..7,tag=Dialogue70,tag=Dialogue209,tag=!Dialogue259] unless entity @e[x=-2138,y=48,z=-586,dy=3,type=cobblemon:npc] run npcspawnat -2138 48 -586 verdanturf_wanda
-execute as @s[x=-2123,y=48,z=-579,distance=..7,tag=Dialogue70,tag=!Dialogue209,tag=!Dialogue259] run tp @e[x=-2138,y=48,z=-586,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @s[x=-2123,y=48,z=-579,distance=..7,tag=Dialogue70,tag=Dialogue209] unless entity @e[x=-2138,y=48,z=-586,dy=3,type=cobblemon:npc] run npcspawnat -2138 48 -586 verdanturf_wanda
+execute as @s[x=-2123,y=48,z=-579,distance=..7,tag=Dialogue70,tag=!Dialogue209] run tp @e[x=-2138,y=48,z=-586,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 
 #Professor Cozmo after Delta episode
-execute as @s[x=-2264,y=68,z=-1385,distance=..25,tag=Dialogue209,tag=!Dialogue260] unless entity @e[x=-2264,y=68,z=-1385,dy=3,type=cobblemon:npc] run npcspawnat -2264 68 -1385 fallarbor_cozmo_megastone
-execute as @s[x=-2264,y=68,z=-1385,distance=..25,tag=!Dialogue209,tag=!Dialogue260] run tp @e[x=-2264,y=68,z=-1385,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @s[x=-2264,y=68,z=-1385,distance=..25,tag=Dialogue209] unless entity @e[x=-2264,y=68,z=-1385,dy=3,type=cobblemon:npc] run npcspawnat -2264 68 -1385 fallarbor_cozmo_megastone
+execute as @s[x=-2264,y=68,z=-1385,distance=..25,tag=!Dialogue209] run tp @e[x=-2264,y=68,z=-1385,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 
 #Meteor Falls Zinnia's Grandma
-execute as @s[x=2273,y=110,z=-2506,distance=..75,tag=Dialogue209,tag=!Dialogue261] unless entity @e[x=2273,y=110,z=-2506,dy=3,type=cobblemon:npc] run npcspawnat 2273 110 -2506 meteorfalls_draconidslady_megastone
-execute as @s[x=2273,y=110,z=-2506,distance=..75,tag=!Dialogue209,tag=!Dialogue261] run tp @e[x=2273,y=110,z=-2506,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @s[x=2273,y=110,z=-2506,distance=..75,tag=Dialogue209] unless entity @e[x=2273,y=110,z=-2506,dy=3,type=cobblemon:npc] run npcspawnat 2273 110 -2506 meteorfalls_draconidslady_megastone
+execute as @s[x=2273,y=110,z=-2506,distance=..75,tag=!Dialogue209] run tp @e[x=2273,y=110,z=-2506,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 
 
 #-----------------------------------------------------------------------------------------------------
