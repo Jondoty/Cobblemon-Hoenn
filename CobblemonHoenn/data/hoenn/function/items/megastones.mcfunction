@@ -213,4 +213,23 @@ execute at @e[x=2507,y=45,z=446,dy=3,tag=MegaStone] as @a[distance=..3,tag=!Mega
 execute at @e[x=2507,y=45,z=446,dy=3,tag=MegaStone] run tag @a[distance=..3,tag=!MegaStone26] add MegaStone26
 
 
+#Custom Couple Mega Stones, not found in story conditions
+
+#Altarianite
+execute positioned 635 74 -1037 as @a[distance=..50,tag=!ItemLoot333] run particle dust_color_transition{from_color:[0.0,0.0,0.0],to_color:[1.0,1.0,1.0],scale:1} ~ ~ ~ 1 1 1 0 10 normal @s
+execute positioned 635 74 -1037 as @a[distance=..3,tag=!ItemLoot333] run give @s mega_showdown:altarianite
+execute positioned 635 74 -1037 as @a[distance=..3,tag=!ItemLoot333] run tellraw @s {"text":"You obtained a Mega Stone!","italic":true,"color":"gray"}
+execute positioned 635 74 -1037 as @a[distance=..3,tag=!ItemLoot333] run playsound megastoneget ambient @s ~ ~ ~ 1 1 1
+execute positioned 635 74 -1037 as @a[distance=..3,tag=!ItemLoot333] as @s run advancement grant @s only hoenn:adventurer/megastone
+execute positioned 635 74 -1037 as @a[distance=..3,tag=!ItemLoot333] run tag @s add ItemLoot333
+
+#Garchompite
+execute positioned -466 66 -1377 as @a[distance=..50,tag=!ItemLoot296,scores={LegendCatch=1}] run particle dust_color_transition{from_color:[0.0,0.0,0.0],to_color:[1.0,1.0,1.0],scale:1} ~ ~ ~ 1 1 1 0 10 normal @s
+execute positioned -466 66 -1377 as @a[distance=..3,tag=!ItemLoot296,scores={LegendCatch=1}] run give @s mega_showdown:garchompite
+execute positioned -466 66 -1377 as @a[distance=..3,tag=!ItemLoot296,scores={LegendCatch=1}] run tellraw @s {"text":"You obtained a Mega Stone!","italic":true,"color":"gray"}
+execute positioned -466 66 -1377 as @a[distance=..3,tag=!ItemLoot296,scores={LegendCatch=1}] run playsound megastoneget ambient @s ~ ~ ~ 1 1 1
+execute positioned -466 66 -1377 as @a[distance=..3,tag=!ItemLoot296,scores={LegendCatch=1}] as @s run advancement grant @s only hoenn:adventurer/megastone
+execute positioned -466 66 -1377 as @a[distance=..3,tag=!ItemLoot296,scores={LegendCatch=1}] run tag @s add ItemLoot296
+
+
 #
