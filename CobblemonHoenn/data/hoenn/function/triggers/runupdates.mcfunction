@@ -81,5 +81,8 @@ execute as @p[x=-1552,y=69,z=-412,distance=..50] unless entity @e[x=-1552,y=69,z
 execute as @p[x=-1546,y=69,z=-412,distance=..50] unless entity @e[x=-1546,y=69,z=-412,dy=3,type=cobblemon:npc] run npcspawnat -1546 69 412 slateport_shop8
 
 
+#1.0.1 to 1.0.2
+
+
 
 #
