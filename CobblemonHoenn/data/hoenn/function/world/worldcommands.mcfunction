@@ -53,6 +53,10 @@ execute as @a[scores={BattleEnd=1..}] run function hoenn:battles/battleend
 execute as @a[scores={BattleStart=1..,MusicCooldown=0},tag=BattleMusicCooldown] run tag @s remove BattleMusicCooldown
 execute as @a[scores={BattleStart=1..},tag=!BattleMusicCooldown] run function hoenn:battles/battlestart
 
+#Displays the player's Battle Points or Money if in a shop that uses them
+title @a[team=shops] actionbar ["",{"text":"Your Money Balance: $"},{"score":{"name":"*","objective":"Money"}}]
+title @a[team=battlepoints] actionbar ["",{"text":"Your Battle Points: "},{"score":{"name":"*","objective":"BattlePoints"}}]
+
 #---------------------
 #Lobby Gamerule Stuff
 

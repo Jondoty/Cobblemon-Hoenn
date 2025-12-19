@@ -82,7 +82,8 @@ execute as @p[x=-1546,y=69,z=-412,distance=..50] unless entity @e[x=-1546,y=69,z
 
 
 #1.0.1 to 1.0.2
-
+scoreboard objectives setdisplay sidebar.team.red
+scoreboard objectives setdisplay sidebar.team.green
 
 
 #
