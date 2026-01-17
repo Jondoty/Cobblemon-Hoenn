@@ -57,6 +57,11 @@ execute as @a[scores={BattleStart=1..},tag=!BattleMusicCooldown] run function ho
 title @a[team=shops] actionbar ["",{"text":"Your Money Balance: $"},{"score":{"name":"*","objective":"Money"}}]
 title @a[team=battlepoints] actionbar ["",{"text":"Your Battle Points: "},{"score":{"name":"*","objective":"BattlePoints"}}]
 
+#Integrates Cobblemon-Home compatibility
+execute if block -2054 50 318 air if entity @p[x=-2054,y=50,z=318,distance=..30] run function hoenn:spawn/pokemonhome
+execute if entity @p[x=-2054,y=50,z=318,distance=..6,scores={PokemonLeague=0}] unless entity @e[x=-2054,y=50,z=318,distance=..2,type=interaction] run summon minecraft:interaction -2054 50 318 {width:1.25,height:1.25,response:1,Tags:[NPCs]} 
+execute if entity @p[x=-2054,y=50,z=318,distance=..6,scores={PokemonLeague=1..}] run kill @e[x=-2054,y=50,z=318,distance=..2,type=interaction]
+
 #---------------------
 #Lobby Gamerule Stuff
 

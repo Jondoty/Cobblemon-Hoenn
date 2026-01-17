@@ -4,6 +4,11 @@
 #Hall of Fame machine running credits
 execute as @s[x=633,y=132,z=-3321,distance=..8] run tag @s remove Dialogue166
 execute as @s[x=633,y=132,z=-3321,distance=..8] run scoreboard players set @s DialogueTrigger 166
+
+#Cobblemon Home integration, pre-Pokemon-League
+execute as @s[x=-2054,y=50,z=318,distance=..4,scores={PokemonLeague=0}] run opendialogue pokemon_home_blocked @s
+execute as @s[x=-2054,y=50,z=318,distance=..4,scores={PokemonLeague=1..}] run opendialogue pokemon_home_poweron @s
+
 #-------------------------------------------------------------
 #Legendary Pokemon Triggers
 #execute as @e[distance=..3,type=cobblemon:pokemon] at @s run summon minecraft:interaction ~ ~ ~ {width:3,height:5,response:1,Tags:[NPCs]}
