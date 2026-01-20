@@ -1,0 +1,283 @@
+{
+    "initializationAction": [
+        "v.slot1 = q.player.party.get_pokemon(0);",
+        "v.slot2 = q.player.party.get_pokemon(1);",
+        "v.slot3 = q.player.party.get_pokemon(2);",
+        "v.slot4 = q.player.party.get_pokemon(3);",
+        "v.slot5 = q.player.party.get_pokemon(4);",
+        "v.slot6 = q.player.party.get_pokemon(5);"
+    ],
+    "escapeAction": [
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "player": {
+            "face": "q.player.face(true);",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "player",
+            "lines": [
+                "Deoxys is reacting to the meteorite... Would you like to bring the Deoxys in your party closer to the meteorite?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' Temp 0');",
+                            "q.dialogue.set_page('buy1');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "player",
+            "lines": [
+                "Which Deoxys would you like to bring closer to the meteorite?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot1.species.name;"
+                        },
+                        "isSelectable": "v.slot1.species.name == 'Deoxys'",
+                        "isVisible": "v.slot1 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.set_page('buy2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 1');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot2.species.name;"
+                        },
+                        "isSelectable": "v.slot2.species.name == 'Deoxys'",
+                        "isVisible": "v.slot2 != 0",
+                        "value": "s2",
+                        "action": [
+                            "q.dialogue.set_page('buy2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 2');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot3.species.name;"
+                        },
+                        "isSelectable": "v.slot3.species.name == 'Deoxys'",
+                        "isVisible": "v.slot3 != 0",
+                        "value": "s3",
+                        "action": [
+                            "q.dialogue.set_page('buy2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 3');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot4.species.name;"
+                        },
+                        "isSelectable": "v.slot4.species.name == 'Deoxys'",
+                        "isVisible": "v.slot4 != 0",
+                        "value": "s4",
+                        "action": [
+                            "q.dialogue.set_page('buy2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 4');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot5.species.name;"
+                        },
+                        "isSelectable": "v.slot5.species.name == 'Deoxys'",
+                        "isVisible": "v.slot5 != 0",
+                        "value": "s5",
+                        "action": [
+                            "q.dialogue.set_page('buy2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 5');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot6.species.name;"
+                        },
+                        "isSelectable": "v.slot6.species.name == 'Deoxys'",
+                        "isVisible": "v.slot6 != 0",
+                        "value": "s6",
+                        "action": [
+                            "q.dialogue.set_page('buy2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy2",
+            "speaker": "player",
+            "lines": [
+                "And what kind of style were you thinking of? Our trims are unparalleled in the Kalos region!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Attack",
+                        "value": "attack",
+                        "action": "q.dialogue.set_page('pickattack');"
+                    },
+                    {
+                        "text": "Defense",
+                        "value": "defense",
+                        "action": "q.dialogue.set_page('pickdefense');"
+                    },
+                    {
+                        "text": "Speed",
+                        "value": "speed",
+                        "action": "q.dialogue.set_page('pickspeed');"
+                    },
+                    {
+                        "text": "Normal",
+                        "value": "normal",
+                        "action": "q.dialogue.set_page('picknormal');"
+                    },
+                    {
+                        "text": "Leave",
+                        "value": "leave",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickattack",
+            "speaker": "player",
+            "lines": [
+                "Deoxys has changed to have superior stats for attacking!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=1}] run pokeedit 1 meteorite_forme=attack');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=2}] run pokeedit 2 meteorite_forme=attack');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=3}] run pokeedit 3 meteorite_forme=attack');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=4}] run pokeedit 4 meteorite_forme=attack');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=5}] run pokeedit 5 meteorite_forme=attack');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=6}] run pokeedit 6 meteorite_forme=attack');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickdefense",
+            "speaker": "player",
+            "lines": [
+                "Deoxys has changed to have superior stats when defending!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=1}] run pokeedit 1 meteorite_forme=defense');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=2}] run pokeedit 2 meteorite_forme=defense');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=3}] run pokeedit 3 meteorite_forme=defense');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=4}] run pokeedit 4 meteorite_forme=defense');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=5}] run pokeedit 5 meteorite_forme=defense');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=6}] run pokeedit 6 meteorite_forme=defense');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickspeed",
+            "speaker": "player",
+            "lines": [
+                "Deoxys has changed to have increased Speed!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=1}] run pokeedit 1 meteorite_forme=speed');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=2}] run pokeedit 2 meteorite_forme=speed');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=3}] run pokeedit 3 meteorite_forme=speed');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=4}] run pokeedit 4 meteorite_forme=speed');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=5}] run pokeedit 5 meteorite_forme=speed');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=6}] run pokeedit 6 meteorite_forme=speed');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picknormal",
+            "speaker": "player",
+            "lines": [
+                "Deoxys has changed to have balanced stats!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=1}] run pokeedit 1 meteorite_forme=normal');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=2}] run pokeedit 2 meteorite_forme=normal');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=3}] run pokeedit 3 meteorite_forme=normal');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=4}] run pokeedit 4 meteorite_forme=normal');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=5}] run pokeedit 5 meteorite_forme=normal');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[scores={Temp=6}] run pokeedit 6 meteorite_forme=normal');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

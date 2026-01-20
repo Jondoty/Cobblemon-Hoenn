@@ -1,5 +1,14 @@
 #Spawns/despawns/runs things in the world 
 
+
+#1.0.1 to 1.0.2
+#Cozmo's meteorite
+execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] if block -2260 69 -1394 air run setblock -2260 69 -1394 cobblemon:display_case{x: -2260, y: 69, Items: [{count: 1, Slot: 0b, id: "mega_showdown:deoxys_meteorite"}], z: -1394, id: "cobblemon:display_case"}
+execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] if block -2260 68 -1394 air run fill -2261 68 -1395 -2261 68 -1394 minecraft:smooth_quartz_stairs[facing=west,half=top]
+execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] if block -2260 68 -1394 air run fill -2259 68 -1395 -2259 68 -1394 minecraft:smooth_quartz_stairs[facing=east,half=top]
+execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] if block -2260 68 -1394 air run fill -2260 68 -1395 -2260 68 -1394 minecraft:smooth_quartz_slab[type=top]
+execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] unless entity @e[x=-2260,y=68,z=-1394,dy=3] run summon minecraft:interaction -2260 69 -1394 {width:1.1,height:1.1,response:1,Tags:[NPCs]}
+
 #1.0.0 to 1.0.1
 
 #adds a prism scale loot

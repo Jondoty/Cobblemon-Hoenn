@@ -9,6 +9,14 @@ execute as @s[x=633,y=132,z=-3321,distance=..8] run scoreboard players set @s Di
 execute as @s[x=-2054,y=50,z=318,distance=..4,scores={PokemonLeague=0}] run opendialogue pokemon_home_blocked @s
 execute as @s[x=-2054,y=50,z=318,distance=..4,scores={PokemonLeague=1..}] run opendialogue pokemon_home_poweron @s
 
+#Prof Cozmo's Form-changing Deoxys Meteorite
+execute as @s[x=-2260,y=69,z=-1394,distance=..5] run scoreboard players set @s PokeHave 0
+execute as @s[x=-2260,y=69,z=-1394,distance=..5] store result score @s PokeHave run teststore @s party deoxys
+
+execute as @s[x=-2260,y=69,z=-1394,distance=..5,scores={PokeHave=0}] run opendialogue meteorite_nodeoxys @s
+execute as @s[x=-2260,y=69,z=-1394,distance=..5,scores={PokeHave=1}] run opendialogue meteorite_formchange @s
+execute as @s[x=-2260,y=69,z=-1394,distance=..5,scores={PokeHave=1}] run scoreboard players set @s PokeHave 0
+
 #-------------------------------------------------------------
 #Legendary Pokemon Triggers
 #execute as @e[distance=..3,type=cobblemon:pokemon] at @s run summon minecraft:interaction ~ ~ ~ {width:3,height:5,response:1,Tags:[NPCs]}
