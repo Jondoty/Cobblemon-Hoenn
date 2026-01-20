@@ -1,5 +1,5 @@
 {
-    "infiniteStamina": "true",
+    "infiniteStamina": "false",
     "staminaRegenTime": "5.0",
     "hitboxBreachPercentage": "0.5",
     "jumpExpr": "q.get_ride_stats('JUMP', 'LIQUID', 10.0, 1.0)",

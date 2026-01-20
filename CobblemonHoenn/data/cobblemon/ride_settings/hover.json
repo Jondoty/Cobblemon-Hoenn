@@ -1,10 +1,9 @@
 {
     "infiniteStamina": "false",
-    "gravity": "1",
-    "canJump": "true",
-    "stamReplenishTimeSeconds": "0.0",
-    "speedExpr": "q.get_ride_stats('SPEED', 'AIR', 0.0, 0.0)",
-    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'AIR', 0.0, 0.0)",
+    "canJump": "false",
+    "stamReplenishTimeSeconds": "2.0",
+    "speedExpr": "q.get_ride_stats('SPEED', 'AIR', 1.0, 1.0)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'AIR', 1.0, 1.0)",
     "staminaExpr": "q.get_ride_stats('STAMINA', 'AIR', 0.0, 0.0)",
     "jumpExpr": "q.get_ride_stats('JUMP', 'AIR', 0.0, 0.0)",
     "handlingExpr": "q.get_ride_stats('SKILL', 'AIR', 0.0, 0.0)"
