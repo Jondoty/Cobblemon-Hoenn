@@ -15,7 +15,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-        "That annoying Team Magma... They always mess with our plans!"
+        "That annoying Team Aqua... They always mess with our plans!"
       ],
       "input": {
         "type": "option",

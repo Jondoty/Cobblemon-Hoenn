@@ -286,9 +286,9 @@ execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=Base49Claimed] if entity @a[x=
 execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=Base49Temp] if entity @a[x=-82,y=75,z=-990,distance=..50] run clone -2066 65 1456 -2066 64 1458 -82 74 -991
 
 #50
-execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=!Base50Claimed] if entity @a[x=-350,y=105,z=-1219,distance=..50] run clone -2068 70 1450 -2068 64 1452 79 79 -1050
-execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=Base50Claimed] if entity @a[x=-350,y=105,z=-1219,distance=..50] run clone -2066 64 1452 -2066 70 1450 79 79 -1050
-execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=Base50Temp] if entity @a[x=-350,y=105,z=-1219,distance=..50] run clone -2066 64 1452 -2066 70 1450 79 79 -1050
+execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=!Base50Claimed] if entity @a[x=79,y=80,z=-1048,distance=..50] run clone -2068 70 1450 -2068 64 1452 79 79 -1050
+execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=Base50Claimed] if entity @a[x=79,y=80,z=-1048,distance=..50] run clone -2066 64 1452 -2066 70 1450 79 79 -1050
+execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=Base50Temp] if entity @a[x=79,y=80,z=-1048,distance=..50] run clone -2066 64 1452 -2066 70 1450 79 79 -1050
 
 #51
 execute if entity @e[x=-2070,y=65,z=1410,dy=3,tag=!Base51Claimed] if entity @a[x=39,y=75,z=-1014,distance=..50] run clone -2071 65 1456 -2071 64 1457 39 74 -1015
