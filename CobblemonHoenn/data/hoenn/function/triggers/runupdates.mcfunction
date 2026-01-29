@@ -9,6 +9,11 @@ execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] if block -2260 68 -1394
 execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] if block -2260 68 -1394 air run fill -2260 68 -1395 -2260 68 -1394 minecraft:smooth_quartz_slab[type=top]
 execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] unless entity @e[x=-2260,y=68,z=-1394,dy=3] run summon minecraft:interaction -2260 69 -1394 {width:1.1,height:1.1,response:1,Tags:[NPCs]}
 
+#Mauville Salon
+scoreboard objectives add Friendship dummy
+execute as @p[x=2622,y=67,z=2746,distance=..50] unless entity @e[x=2622,y=67,z=2746,dy=3,type=cobblemon:npc] run npcspawnat 2622 67 2746 mauville_salon
+
+
 #1.0.0 to 1.0.1
 
 #adds a prism scale loot

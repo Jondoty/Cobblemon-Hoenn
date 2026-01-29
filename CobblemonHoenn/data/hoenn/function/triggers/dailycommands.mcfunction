@@ -50,6 +50,9 @@ tag @a remove ItemLoot445
 #Loto-ID daily reset
 tag @a remove Dialogue130
 
+#Beauty salon daily
+tag @a add BeautyCD
+
 
 
 #Removes temporary claimed base tags, which is added when player goes to tour a base. Doesn't need to claim.
