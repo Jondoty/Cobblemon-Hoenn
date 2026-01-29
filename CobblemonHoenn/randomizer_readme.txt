@@ -1,0 +1,3 @@
+This python script (LLM generated) looks for and targets the wild spawns in the region, and changes them to something completely random. Unzip the CobblemonHoenn zip file this comes in, and with Python installed, run the script once or twice to shuffle your spawns. 
+
+This does NOT work to randomize trainer Pokémon or those granted/spawned by commands (Starters, Legendaries). But it'll allow you to find Pokémon, including Alolan/Galarian/Paldean forms or evolution-bias forms on routes and water. Enjoy!
