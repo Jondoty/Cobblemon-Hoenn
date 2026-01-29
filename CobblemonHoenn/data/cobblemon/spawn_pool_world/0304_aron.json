@@ -9,6 +9,19 @@
             "type": "pokemon",
             "context": "grounded",
             "bucket": "common",
+            "level": "9-12",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 130, "maxY": 150
+            }
+        },
+        {
+            "id": "aron-2",
+            "pokemon": "aron",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
             "level": "10-12",
             "weight": 30,
             "condition": {
@@ -17,7 +30,7 @@
             }
         },
         {
-            "id": "aron-1",
+            "id": "aron-3",
             "pokemon": "aron",
             "type": "pokemon",
             "context": "grounded",
