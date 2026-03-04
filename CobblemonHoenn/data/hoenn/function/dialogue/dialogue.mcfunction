@@ -645,9 +645,9 @@ execute as @s[scores={DialogueTrigger=243,TalkTime=455,Temp=3}] run spawnpoint @
 execute as @s[scores={DialogueTrigger=243,TalkTime=455,Temp=2}] run spawnpoint @s -1539 48 261
 execute as @s[scores={DialogueTrigger=243,TalkTime=455,Temp=1}] run spawnpoint @s 518 53 -1036
 
-tag @s[scores={DialogueTrigger=243,TalkTime=455..}] add Dialogue216
-scoreboard players set @s[scores={DialogueTrigger=243},tag=Dialogue216] TalkTime 0
-scoreboard players set @s[scores={DialogueTrigger=243},tag=Dialogue216] DialogueTrigger 0
+tag @s[scores={DialogueTrigger=243,TalkTime=455..}] add Dialogue243
+scoreboard players set @s[scores={DialogueTrigger=243},tag=Dialogue243] TalkTime 0
+scoreboard players set @s[scores={DialogueTrigger=243},tag=Dialogue243] DialogueTrigger 0
 
 #-----------------------------------------------------------------------------------------------------
 
