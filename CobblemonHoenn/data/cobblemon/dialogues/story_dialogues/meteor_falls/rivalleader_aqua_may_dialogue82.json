@@ -958,6 +958,28 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
+                            "q.dialogue.set_page('page47b');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page47b",
+            "speaker": "cozmo",
+            "lines": [
+                "I hope you'll take this TM as some small form of repayment."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run givetm smackdown @s');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
                             "q.dialogue.set_page('page48');"
                         ]
                     }

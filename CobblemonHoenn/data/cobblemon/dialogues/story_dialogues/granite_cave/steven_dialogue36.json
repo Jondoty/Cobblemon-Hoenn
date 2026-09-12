@@ -310,7 +310,7 @@
             "id": "page15",
             "speaker": "steven",
             "lines": [
-                "If you don't mind me asking... Do you feel anything in particular when you look up at this wall?"
+                "I suppose I must repay you in some way."
             ],
             "input": {
                 "type": "option",
@@ -330,7 +330,7 @@
             "id": "page16",
             "speaker": "steven",
             "lines": [
-                "A primal world, lost thousands of years in the past..."
+                "Let me see... I will give you this TM."
             ],
             "input": {
                 "type": "option",
@@ -350,7 +350,7 @@
             "id": "page17",
             "speaker": "steven",
             "lines": [
-                "A Legendary Pok\u00e9mon of tremendous power became humanity's greatest threat..."
+                "Please accept it. It contains my favorite move, Steel Wing."
             ],
             "input": {
                 "type": "option",
@@ -360,6 +360,8 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run givetm steelwing @s');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
                             "q.dialogue.set_page('page18');"
                         ]
                     }
@@ -370,7 +372,7 @@
             "id": "page18",
             "speaker": "steven",
             "lines": [
-                "The terror aroused by that power is clear to see in this ancient artwork."
+                "If you don't mind me asking... Do you feel anything in particular when you look up at this wall?"
             ],
             "input": {
                 "type": "option",
@@ -390,7 +392,7 @@
             "id": "page19",
             "speaker": "steven",
             "lines": [
-                "...Yes. But not all power is terrible. Your Pok\u00e9mon are clearly quite capable as well."
+                "A primal world, lost thousands of years in the past..."
             ],
             "input": {
                 "type": "option",
@@ -410,7 +412,7 @@
             "id": "page20",
             "speaker": "steven",
             "lines": [
-                "Looking at you all together... I think that you have in you what it takes to become a Pok\u00e9mon League Champion."
+                "A Legendary Pok\u00e9mon of tremendous power became humanity's greatest threat..."
             ],
             "input": {
                 "type": "option",
@@ -430,7 +432,7 @@
             "id": "page21",
             "speaker": "steven",
             "lines": [
-                "As long as you keep training, that is."
+                "The terror aroused by that power is clear to see in this ancient artwork."
             ],
             "input": {
                 "type": "option",
@@ -448,6 +450,66 @@
         },
         {
             "id": "page22",
+            "speaker": "steven",
+            "lines": [
+                "...Yes. But not all power is terrible. Your Pok\u00e9mon are clearly quite capable as well."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page23');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page23",
+            "speaker": "steven",
+            "lines": [
+                "Looking at you all together... I think that you have in you what it takes to become a Pok\u00e9mon League Champion."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page24');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page24",
+            "speaker": "steven",
+            "lines": [
+                "As long as you keep training, that is."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page25');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page25",
             "speaker": "steven",
             "lines": [
                 "Good luck to you. I must be going now."

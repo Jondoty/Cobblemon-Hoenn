@@ -1,6 +1,32 @@
 #Spawns/despawns/runs things in the world 
 
 
+#1.0.2 to 1.1
+#Adds TM loots
+execute if entity @a[x=2613,y=80,z=-2420,distance=..75] if block 2613 80 -2420 air positioned 2613 80 -2420 run function hoenn:spawn/tmloot
+execute if entity @a[x=-2531,y=49,z=812,distance=..75] if block -2531 49 812 air positioned -2531 49 812 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1933,y=83,z=729,distance=..75] if block -1933 83 729 air positioned -1933 83 729 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1830,y=64,z=631,distance=..75] if block -1830 64 631 air positioned -1830 64 631 run function hoenn:spawn/tmloot
+execute if entity @a[x=2744,y=88,z=2776,distance=..75] if block 2744 88 2776 air positioned 2744 88 2776 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1407,y=79,z=-889,distance=..75] if block -1407 79 -889 air positioned -1407 79 -889 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1819,y=155,z=-2892,distance=..75] if block -1819 155 -2892 air positioned -1819 155 -2892 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1968,y=145,z=-2878,distance=..75] if block -1968 145 -2878 air positioned -1968 145 -2878 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1979,y=213,z=-3381,distance=..75] if block -1979 213 -3381 air positioned -1979 213 -3381 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1886,y=38,z=-1348,distance=..75] if block -1886 38 -1348 air positioned -1886 38 -1348 run function hoenn:spawn/tmloot
+execute if entity @a[x=2337,y=149,z=-3120,distance=..75] if block 2337 149 -3120 air positioned 2337 149 -3120 run function hoenn:spawn/tmloot
+execute if entity @a[x=-956,y=89,z=-1396,distance=..75] if block -956 89 -1396 air positioned -956 89 -1396 run function hoenn:spawn/tmloot
+execute if entity @a[x=-572,y=84,z=-1427,distance=..75] if block -572 84 -1427 air positioned -572 84 -1427 run function hoenn:spawn/tmloot
+
+
+
+
+#new NPCs
+
+
+#block updates
+execute if entity @a[x=2776,y=85,z=2788,distance=..75] if block -1830 64 631 air run fill 2776 85 2788 2776 85 2780 minecraft:magenta_carpet replace air
+
+
 #1.0.1 to 1.0.2
 #Cozmo's meteorite
 execute if entity @p[x=-2260,y=69,z=-1394,distance=..50] if block -2260 69 -1394 air run setblock -2260 69 -1394 cobblemon:display_case{x: -2260, y: 69, Items: [{count: 1, Slot: 0b, id: "mega_showdown:deoxys_meteorite"}], z: -1394, id: "cobblemon:display_case"}

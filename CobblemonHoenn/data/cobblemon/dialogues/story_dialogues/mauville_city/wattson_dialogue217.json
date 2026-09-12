@@ -92,7 +92,11 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run givetm thunderbolt @s');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page5');"
+                        ]
                     }
                 ]
             }

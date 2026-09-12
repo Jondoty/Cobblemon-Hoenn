@@ -740,6 +740,10 @@ tp @a[x=2836,y=85,z=2774,dz=3,dy=3] 2832 85 2775
 tp @a[x=2805,y=85,z=2772,dz=3,dy=3] 2801 85 2773
 tp @a[x=2802,y=85,z=2772,dz=3,dy=3] 2806 85 2773
 
+#Apartment 11 Balcony
+tp @a[x=2776,y=85,z=2780,dz=8,dy=3] 2746 88 2783
+tp @a[x=2747,y=88,z=2782,dx=2,dy=3,dz=1] 2777 85 2784
+
 
 #Apartment 13, Wattson's Home (south side)
 tp @a[x=2745,y=85,z=2890,dx=3,dy=3] 2739 85 2886

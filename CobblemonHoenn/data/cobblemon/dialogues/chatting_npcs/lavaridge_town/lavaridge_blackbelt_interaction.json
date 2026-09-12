@@ -58,8 +58,13 @@
         "vertical": false,
         "options": [
           {
-            "text": "Next",
+            "text": "Yes",
             "value": "next",
+            "action": "q.dialogue.set_page('yesend');"
+          },
+          {
+            "text": "No",
+            "value": "no",
             "action": "q.dialogue.set_page('page4');"
           }
         ]
@@ -67,6 +72,83 @@
     },
     {
       "id": "page4",
+      "speaker": "npc",
+      "lines": [
+        "Oh... I so sad and wretched..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page5');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": [
+        "You take this and you understand way of karate of me, fool Trainer!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/itemlootgive');",
+              "q.dialogue.set_page('page6');"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        "Suh-words Dance!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page7');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page7",
+      "speaker": "npc",
+      "lines": [
+        "You use soulful dance for to make power of Pokémon go up, up! It is the way of karate I seek!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": [
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "yesend",
       "speaker": "npc",
       "lines": [
         "OK! OK! You good kid!"

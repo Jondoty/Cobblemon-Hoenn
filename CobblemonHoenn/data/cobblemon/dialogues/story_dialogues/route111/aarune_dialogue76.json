@@ -353,6 +353,7 @@
                         "value": "next",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run playsound keyitem ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm secretpower @s');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add SecretBase');",
                             "q.dialogue.set_page('page18');"
                         ]

@@ -48,10 +48,192 @@
       }
     },
     {
-      "id": "page3",
+      "id": "page2",
       "speaker": "npc",
       "lines": [
         "Let this old woman see if your hidden power has awakened."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page3');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page3",
+      "speaker": "npc",
+      "lines": [
+        "Let's see..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page4');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page4",
+      "speaker": "npc",
+      "lines": [
+        "I hold a coin in my hand."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page5');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": [
+        "Now tell me, which hand holds the coin, the right hand or the left?"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Left hand",
+            "value": "lefthand",
+            "action": "q.dialogue.set_page('fail');"
+          },
+          {
+            "text": "Right hand",
+            "value": "righthand",
+            "action": "q.dialogue.set_page('page6');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        "You are correct! Let us try again."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Left hand",
+            "value": "lefthand",
+            "action": "q.dialogue.set_page('page7');"
+          },
+          {
+            "text": "Right hand",
+            "value": "righthand",
+            "action": "q.dialogue.set_page('fail');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page7",
+      "speaker": "npc",
+      "lines": [
+        "Yes, correct again! We shall try once more."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Left hand",
+            "value": "lefthand",
+            "action": "q.dialogue.set_page('fail');"
+          },
+          {
+            "text": "Right hand",
+            "value": "righthand",
+            "action": "q.dialogue.set_page('page8');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page8",
+      "speaker": "npc",
+      "lines": [
+        "Splendid! Your hidden power has awakened!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page9');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page9",
+      "speaker": "npc",
+      "lines": [
+        "Here, take this and awaken the hidden power of your Pokémon."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/itemlootgive');",
+              "q.dialogue.set_page('page10');"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page10",
+      "speaker": "npc",
+      "lines": [
+        "Hidden Power varies in type depending on the Pokémon using it."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": [
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fail",
+      "speaker": "npc",
+      "lines": [
+        "No, too bad. You guessed wrong."
       ],
       "input": {
         "type": "option",
