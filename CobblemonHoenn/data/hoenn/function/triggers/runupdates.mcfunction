@@ -16,6 +16,32 @@ execute if entity @a[x=-1886,y=38,z=-1348,distance=..75] if block -1886 38 -1348
 execute if entity @a[x=2337,y=149,z=-3120,distance=..75] if block 2337 149 -3120 air positioned 2337 149 -3120 run function hoenn:spawn/tmloot
 execute if entity @a[x=-956,y=89,z=-1396,distance=..75] if block -956 89 -1396 air positioned -956 89 -1396 run function hoenn:spawn/tmloot
 execute if entity @a[x=-572,y=84,z=-1427,distance=..75] if block -572 84 -1427 air positioned -572 84 -1427 run function hoenn:spawn/tmloot
+execute if entity @a[x=-9,y=94,z=-1160,distance=..75] if block -9 94 -1160 air positioned -9 94 -1160 run function hoenn:spawn/tmloot
+execute if entity @a[x=10,y=84,z=-1272,distance=..75] if block 10 84 -1272 air positioned 10 84 -1272 run function hoenn:spawn/tmloot
+execute if entity @a[x=61,y=99,z=-1257,distance=..75] if block 61 99 -1257 air positioned 61 99 -1257 run function hoenn:spawn/tmloot
+execute if entity @a[x=1614,y=66,z=2572,distance=..75] if block 1614 66 2572 air positioned 1614 66 2572 run function hoenn:spawn/tmloot
+execute if entity @a[x=1616,y=122,z=2819,distance=..75] if block 1616 122 2819 air positioned 1616 122 2819 run function hoenn:spawn/tmloot
+execute if entity @a[x=947,y=99,z=-2323,distance=..75] if block 947 99 -2323 air positioned 947 99 -2323 run function hoenn:spawn/tmloot
+execute if entity @a[x=1375,y=99,z=-2323,distance=..75] if block 1375 99 -2323 air positioned 1375 99 -2323 run function hoenn:spawn/tmloot
+execute if entity @a[x=2954,y=102,z=-2912,distance=..75] if block 2954 102 -2912 air positioned 2954 102 -2912 run function hoenn:spawn/tmloot
+execute if entity @a[x=2962,y=70,z=-2898,distance=..75] if block 2962 70 -2898 air positioned 2962 70 -2898 run function hoenn:spawn/tmloot
+execute if entity @a[x=284,y=143,z=-158,distance=..75] if block 284 143 -158 air positioned 284 143 -158 run function hoenn:spawn/tmloot
+execute if entity @a[x=-430,y=64,z=337,distance=..75] if block -430 64 337 air positioned -430 64 337 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1075,y=64,z=325,distance=..75] if block -1075 64 325 air positioned -1075 64 325 run function hoenn:spawn/tmloot
+execute if entity @a[x=2305,y=139,z=-151,distance=..75] if block 2305 139 -151 air positioned 2305 139 -151 run function hoenn:spawn/tmloot
+execute if entity @a[x=1344,y=77,z=-2707,distance=..75] if block 1344 77 -2707 air positioned 1344 77 -2707 run function hoenn:spawn/tmloot
+execute if entity @a[x=1574,y=110,z=-2916,distance=..75] if block 1574 110 -2916 air positioned 1574 110 -2916 run function hoenn:spawn/tmloot
+execute if entity @a[x=938,y=107,z=-2836,distance=..75] if block 938 107 -2836 air positioned 938 107 -2836 run function hoenn:spawn/tmloot
+execute if entity @a[x=1026,y=90,z=-3146,distance=..75] if block 1026 90 -3146 air positioned 1026 90 -3146 run function hoenn:spawn/tmloot
+execute if entity @a[x=1538,y=124,z=-2410,distance=..75] if block 1538 124 -2410 air positioned 1538 124 -2410 run function hoenn:spawn/tmloot
+execute if entity @a[x=2440,y=82,z=-1336,distance=..75] if block 2440 82 -1336 air positioned 2440 82 -1336 run function hoenn:spawn/tmloot
+execute if entity @a[x=2465,y=42,z=790,distance=..75] if block 2465 42 790 air positioned 2465 42 790 run function hoenn:spawn/tmloot
+execute if entity @a[x=1778,y=76,z=-1678,distance=..75] if block 1778 76 -1678 air positioned 1778 76 -1678 run function hoenn:spawn/tmloot
+execute if entity @a[x=-58,y=99,z=818,distance=..75] if block -58 99 818 air positioned -58 99 818 run function hoenn:spawn/tmloot
+execute if entity @a[x=-908,y=74,z=655,distance=..75] if block -908 74 655 air positioned -908 74 655 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1039,y=4,z=2577,distance=..75] if block -1039 64 2577 air positioned -1039 64 2577 run function hoenn:spawn/tmloot
+execute if entity @a[x=-29,y=15,z=2865,distance=..75] if block -29 15 2865 air positioned -29 15 2865 run function hoenn:spawn/tmloot
+execute if entity @a[x=-751,y=80,z=2576,distance=..75] if block -751 80 2576 air positioned -751 80 2576 run function hoenn:spawn/tmloot
 
 
 

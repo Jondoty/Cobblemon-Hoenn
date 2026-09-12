@@ -15,7 +15,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-        "Why, hello, hellooo, little visiting Trainer! Greetings to you out here in the big blue!"
+        "Why, hello, hellooo, little visiting Trainer! "
       ],
       "input": {
         "type": "option",
@@ -33,7 +33,7 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
-        "Now, I know you know that a Psychic Trainer like me can see riiiiiight through any foe."
+        "Greetings to you out here in the big blue! "
       ],
       "input": {
         "type": "option",
@@ -51,7 +51,7 @@
       "id": "page3",
       "speaker": "npc",
       "lines": [
-        "I can tell exactly how strong you are and how a battle between us would go... just by lookin' at you! It's eerie, right?"
+        "Now, I know you know that a Psychic Trainer like me can see riiiiiight through any foe. "
       ],
       "input": {
         "type": "option",
@@ -69,7 +69,115 @@
       "id": "page4",
       "speaker": "npc",
       "lines": [
-        "Now stand back and watch as I battle you within my mind! ... Yowza! You did me right in! Take this, and have mercy!"
+        "I can tell exactly how strong you are and how a battle between us would go... just by lookin' at you! "
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page5');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": [
+        "It's eerie, right? "
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page6');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        "Now stand back and watch as I battle you within my mind!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page7');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page7",
+      "speaker": "npc",
+      "lines": [
+        "... "
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page8');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page8",
+      "speaker": "npc",
+      "lines": [
+        "Yowza! "
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page9');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page9",
+      "speaker": "npc",
+      "lines": [
+        "You did me right in! "
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page10');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page10",
+      "speaker": "npc",
+      "lines": [
+        "Take this, and have mercy!"
       ],
       "input": {
         "type": "option",
@@ -79,6 +187,7 @@
             "text": "Close",
             "value": "close",
             "action": [
+              "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/itemlootgive');",
               "q.dialogue.close();"
             ]
           }

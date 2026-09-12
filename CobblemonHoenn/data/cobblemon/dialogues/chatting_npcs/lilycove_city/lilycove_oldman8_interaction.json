@@ -15,7 +15,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-        "Zzz... Hm? Wha\u2014? Lemme be... I'm still half-asleep... Here... Just take this..."
+        "Zzz... Hm? Wha\u2014? Lemme be... "
       ],
       "input": {
         "type": "option",
@@ -33,6 +33,29 @@
       "id": "page2",
       "speaker": "npc",
       "lines": [
+        "I'm still half-asleep... Here... Just take this..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s[tag=!ItemLoot334] ~ ~ ~ 1 1 1');",
+              "q.run_command('execute as ' + q.player.username + ' run givetm rest @s[tag=!ItemLoot334]');",
+              "q.run_command('execute as ' + q.player.username + ' run tag @s add ItemLoot334');",
+              "q.dialogue.set_page('page3');"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page3",
+      "speaker": "npc",
+      "lines": [
         "Zzz... Hm? Take this, too..."
       ],
       "input": {
@@ -42,13 +65,18 @@
           {
             "text": "Next",
             "value": "next",
-            "action": "q.dialogue.set_page('page3');"
+            "action": [
+              "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s[tag=!ItemLoot335] ~ ~ ~ 1 1 1');",
+              "q.run_command('execute as ' + q.player.username + ' run givetm sleeptalk @s[tag=!ItemLoot335]');",
+              "q.run_command('execute as ' + q.player.username + ' run tag @s add ItemLoot335');",
+              "q.dialogue.set_page('page4');"
+            ]
           }
         ]
       }
     },
     {
-      "id": "page3",
+      "id": "page4",
       "speaker": "npc",
       "lines": [
         "Zzz... Sleep is essential for good health..."
@@ -60,16 +88,34 @@
           {
             "text": "Next",
             "value": "next",
-            "action": "q.dialogue.set_page('page4');"
+            "action": "q.dialogue.set_page('page5');"
           }
         ]
       }
     },
     {
-      "id": "page4",
+      "id": "page5",
       "speaker": "npc",
       "lines": [
-        "You've gotta rest to...stay...healthy... and attack...while...asleep... Zzz..."
+        "You've gotta rest to...stay...healthy..."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.set_page('page6');"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        " and attack...while...asleep... Zzz..."
       ],
       "input": {
         "type": "option",
