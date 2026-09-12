@@ -1,6 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
+        "q.run_command('execute as ' + q.player.username + ' run givetm calmmind @s[tag=!LizaTate]');",
         "q.run_command('execute as ' + q.player.username + ' run tag @s add LizaTate');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
@@ -91,6 +92,135 @@
             "id": "page4",
             "speaker": "tate",
             "lines": [
+                "And take this, too!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "liza",
+            "lines": [
+                "Calm Mind..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "tate",
+            "lines": [
+                "...comes from relaxing your mind and concentrating."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "liza",
+            "lines": [
+                "Pokémon's Sp. Atk and..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "tate",
+            "lines": [
+                "...Pokémon's Sp. Def..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "tate",
+            "lines": [
+                "...will be heightened by this move!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "liza",
+            "lines": [
+                "It's a perfect move for Psychic-type Pokémon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "tate",
+            "lines": [
                 "Looks like the bond between you and your Pokémon is far stronger than the bond we share as twins..."
             ],
             "input": {
@@ -101,14 +231,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page5');"
+                            "q.dialogue.set_page('page12');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page5",
+            "id": "page12",
             "speaker": "tate",
             "lines": [
                 "But you'll go on from here to form even more bonds! That's the future I see for you!"
@@ -121,14 +251,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page6');"
+                            "q.dialogue.set_page('page13');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page6",
+            "id": "page13",
             "speaker": "liza",
             "lines": [
                 "There may be a harsh ordeal ahead for you and your Pokémon..."
@@ -141,14 +271,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page7');"
+                            "q.dialogue.set_page('page14');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page7",
+            "id": "page14",
             "speaker": "liza",
             "lines": [
                 "But that's all right! You and your Pokémon aren't alone!"
@@ -161,15 +291,15 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page8');"
+                            "q.dialogue.set_page('page15');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page8",
-            "speaker": "liza",
+            "id": "page15",
+            "speaker": "tate",
             "lines": [
                 "You have each other!"
             ],
@@ -181,14 +311,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page9');"
+                            "q.dialogue.set_page('page16');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page9",
+            "id": "page16",
             "speaker": "liza",
             "lines": [
                 "That's why we want you to face whatever troubles may come your way head-on and full of courage!"

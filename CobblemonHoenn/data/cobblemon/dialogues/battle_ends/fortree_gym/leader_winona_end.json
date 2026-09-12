@@ -1,6 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
+        "q.run_command('execute as ' + q.player.username + ' run givetm roost @s[tag=!Winona]');",
         "q.run_command('execute as ' + q.player.username + ' run tag @s add Winona');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
@@ -62,6 +63,81 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
+                "And this... This is a gift from me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Roost... With this move, the user can restore its HP by up to half of its max HP"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "by landing on the ground and resting its injured body."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "However, the user loses its Flying-type designation during the turn, so be cautious."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
                 "You won against me... I know you'll keep aiming higher and higher!"
             ],
             "input": {
@@ -71,13 +147,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.set_page('page8');"
                     }
                 ]
             }
         },
         {
-            "id": "page4",
+            "id": "page8",
             "speaker": "npc",
             "lines": [
                 "Someday, you may even fly up into the sky..."
@@ -90,14 +166,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page5');"
+                            "q.dialogue.set_page('page9');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page5",
+            "id": "page9",
             "speaker": "npc",
             "lines": [
                 "That's the impression I get from you."

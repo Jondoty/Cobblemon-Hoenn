@@ -1,6 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
+        "q.run_command('execute as ' + q.player.username + ' run givetm retaliate @s[tag=!Norman]');",
         "q.run_command('execute as ' + q.player.username + ' run tag @s add Norman');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
@@ -139,7 +140,10 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "..."
+                {
+                    "type": "expression",
+                    "expression": "'And this is my gift to you, ' + q.player.username + ' I'm sure you'll be able to use it well.';"
+                }
             ],
             "input": {
                 "type": "option",
@@ -149,7 +153,9 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page8');"]
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page8');"
+                        ]
                     }
                 ]
             }
@@ -158,7 +164,7 @@
             "id": "page8",
             "speaker": "npc",
             "lines": [
-                "Sigh."
+                "Retaliate will allow you to take revenge for a fallen team member."
             ],
             "input": {
                 "type": "option",
@@ -177,7 +183,7 @@
             "id": "page9",
             "speaker": "npc",
             "lines": [
-                "As the Gym Leader, I can't express how frustrated I am."
+                "Its power will be doubled if you have a Pokémon use it in the very next move right after an ally faints."
             ],
             "input": {
                 "type": "option",
@@ -196,7 +202,7 @@
             "id": "page10",
             "speaker": "npc",
             "lines": [
-                "But, as a father, it makes me both happy and a little sad. It's odd."
+                "I hope you and your Pokémon will be diligent enough to use it wisely."
             ],
             "input": {
                 "type": "option",
@@ -215,10 +221,7 @@
             "id": "page11",
             "speaker": "npc",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'... Come on, ' + q.player.username + '.';"
-                }
+                "..."
             ],
             "input": {
                 "type": "option",
@@ -235,6 +238,85 @@
         },
         {
             "id": "page12",
+            "speaker": "npc",
+            "lines": [
+                "Sigh."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page13');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "npc",
+            "lines": [
+                "As the Gym Leader, I can't express how frustrated I am."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page14');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "npc",
+            "lines": [
+                "But, as a father, it makes me both happy and a little sad. It's odd."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page15');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page15",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'... Come on, ' + q.player.username + '.';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page16');"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page16",
             "speaker": "npc",
             "lines": [
                 "I'll see you on your way. Let's get out of here."

@@ -1,6 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
+        "q.run_command('execute as ' + q.player.username + ' run givetm voltswitch @s[tag=!Wattson]');",
         "q.run_command('execute as ' + q.player.username + ' run tag @s add Wattson');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
@@ -35,7 +36,8 @@
                         "action": [
                             
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only hoenn:badges/badge3');",
-                            "q.dialogue.set_page('page2');"]
+                            "q.dialogue.set_page('page2');"
+                        ]
                     }
                 ]
             }
@@ -63,6 +65,117 @@
             "speaker": "npc",
             "lines": [
                 "I swell with optimism, seeing a promising young Trainer like you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "All righty then, this here's for you, too!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "Go on, take it with you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page6');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Volt Switch is a move where your Pokémon attacks the opponent"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "and then rushes back to switch places with a party Pokémon in waiting!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "I swell with optimism, seeing a promising young Trainer like you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "Wahahahah! Go forth and endeavor, youngster!"
             ],
             "input": {
                 "type": "option",
