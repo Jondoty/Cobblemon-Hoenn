@@ -14,6 +14,12 @@
             "bucket": "common",
             "level": "2-3",
             "weight": 15.0,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -2436, "maxX": -2107, "minZ": -27, "maxZ": 118, "minY": 0, "maxY": 256
             }
@@ -27,6 +33,12 @@
         "bucket": "common",
         "level": "2-3",
         "weight": 4,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
         "condition": {
             "presets": [
                 "water"
@@ -46,6 +58,12 @@
             "bucket": "common",
             "level": "13-16",
             "weight": 4.0,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -1601, "maxX": -1313, "minZ": -1507, "maxZ": -719, "minY": 60, "maxY": 316
             }
@@ -62,6 +80,12 @@
             "bucket": "common",
             "level": "16-19",
             "weight": 4.0,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -2620, "maxX": -2345, "minZ": -1507, "maxZ": -1080, "minY": 0, "maxY": 256
             }
@@ -77,6 +101,12 @@
             "bucket": "common",
             "level": "16-19",
             "weight": 4.0,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -2620, "maxX": -2345, "minZ": -1507, "maxZ": -1080, "minY": 0, "maxY": 256
             }
@@ -93,6 +123,12 @@
             "bucket": "common",
             "level": "11-14",
             "weight": 4.0,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -1998, "maxX": -1669, "minZ": -718, "maxZ": -492, "minY": 0, "maxY": 256
             }
@@ -109,6 +145,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 4.0,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -435, "maxX": -178, "minZ": -1509, "maxZ": -993, "minY": 60, "maxY": 316
             }
@@ -125,6 +167,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 4.0,
+            "heldItems": [
+                {
+                    "item": "cobblemon:silver_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -725, "maxX": 247, "minZ": -680, "maxZ": -491, "minY": 0, "maxY": 256
             }

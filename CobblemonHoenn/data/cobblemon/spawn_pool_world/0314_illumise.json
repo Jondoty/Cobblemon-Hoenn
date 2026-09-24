@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "11-14",
             "weight": 20,
+            "heldItems": [
+                {
+                    "item": "cobblemon:bright_powder",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

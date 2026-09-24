@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "16-19",
             "weight": 9.5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:quick_claw",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -26,6 +32,12 @@
             "bucket": "common",
             "level": "16-19",
             "weight": 9.5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:quick_claw",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

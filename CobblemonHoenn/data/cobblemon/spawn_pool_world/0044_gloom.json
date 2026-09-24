@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "22-25",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:absorb_bulb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass",
@@ -29,6 +35,12 @@
             "bucket": "common",
             "level": "24-27",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:absorb_bulb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -46,6 +58,12 @@
             "bucket": "common",
             "level": "27-30",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:absorb_bulb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass",
@@ -63,6 +81,12 @@
             "bucket": "common",
             "level": "27-30",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:absorb_bulb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -79,6 +103,12 @@
             "bucket": "common",
             "level": "28-31",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:absorb_bulb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

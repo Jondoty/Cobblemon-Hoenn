@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "20-23",
             "weight": 20,
+            "heldItems": [
+                {
+                    "item": "cobblemon:light_clay",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:sand",
@@ -27,6 +33,12 @@
             "bucket": "common",
             "level": "20-23",
             "weight": 20,
+            "heldItems": [
+                {
+                    "item": "cobblemon:light_clay",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:sand",

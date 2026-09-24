@@ -11,6 +11,16 @@
             "bucket": "common",
             "level": "2",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:bright_powder",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:pecha_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -27,6 +37,16 @@
             "bucket": "common",
             "level": "2-3",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:bright_powder",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:pecha_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -43,6 +63,16 @@
             "bucket": "common",
             "level": "2-5",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:bright_powder",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:pecha_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -58,6 +88,16 @@
             "bucket": "common",
             "level": "4-7",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:bright_powder",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:pecha_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -74,6 +114,16 @@
             "bucket": "common",
             "level": "4-6",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:bright_powder",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:pecha_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "neededNearbyBlocks": [

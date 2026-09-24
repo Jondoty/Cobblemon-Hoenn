@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -27,6 +33,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -43,6 +55,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -62,6 +80,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -81,6 +105,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -97,6 +127,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -113,6 +149,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -129,6 +171,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -145,6 +193,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -161,6 +215,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -177,6 +237,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -193,6 +259,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -209,6 +281,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -225,6 +303,12 @@
             "bucket": "common",
             "level": "37-40",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -241,6 +325,12 @@
             "bucket": "common",
             "level": "35-40",
             "weight": 50,
+            "heldItems": [
+                {
+                    "item": "cobblemon:poison_barb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"

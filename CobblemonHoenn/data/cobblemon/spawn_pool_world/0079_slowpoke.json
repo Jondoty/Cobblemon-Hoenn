@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 10,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lagging_tail",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": -79, "maxX": 130, "minZ": 2487, "maxZ": 2700, "minY": 0, "maxY": 60
@@ -25,6 +31,12 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lagging_tail",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": -224, "maxX": 60, "minZ": 2823, "maxZ": 3083, "minY": 0, "maxY": 60

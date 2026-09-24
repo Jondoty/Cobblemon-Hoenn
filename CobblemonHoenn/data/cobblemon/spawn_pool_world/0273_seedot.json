@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "2-3",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:power_herb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

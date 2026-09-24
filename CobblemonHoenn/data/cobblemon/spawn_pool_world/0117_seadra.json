@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "40",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:dragon_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 507, "maxX": 944, "minZ": 78, "maxZ": 429, "minY": 31, "maxY": 287,
                 "minLureLevel": 3,
@@ -26,6 +32,12 @@
             "bucket": "common",
             "level": "40",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:dragon_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 45, "maxX": 506, "minZ": -8, "maxZ": 396, "minY": 0, "maxY": 256,
                 "minLureLevel": 3,
@@ -41,6 +53,12 @@
             "bucket": "common",
             "level": "40",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:dragon_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -545, "maxX": -181, "minZ": 135, "maxZ": 447, "minY": 31, "maxY": 287,
                 "minLureLevel": 3,
@@ -56,6 +74,12 @@
             "bucket": "common",
             "level": "40",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:dragon_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -924, "maxX": -546, "minZ": 136, "maxZ": 448, "minY": 31, "maxY": 287,
                 "minLureLevel": 3,
@@ -71,6 +95,12 @@
             "bucket": "common",
             "level": "40",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:dragon_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -1287, "maxX": -925, "minZ": 136, "maxZ": 448, "minY": 31, "maxY": 287,
                 "minLureLevel": 3,

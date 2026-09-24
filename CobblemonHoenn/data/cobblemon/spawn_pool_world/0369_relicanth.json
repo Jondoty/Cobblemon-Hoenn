@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:deep_sea_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": -2330, "maxX": -2060, "minZ": 782, "maxZ": 966, "minY": -128, "maxY": 39,
                 "neededNearbyBlocks": [
@@ -30,6 +36,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:deep_sea_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 833, "maxX": 1244, "minZ": -1170, "maxZ": -831, "minY": -32, "maxY": 0,
                 "neededNearbyBlocks": [
@@ -49,6 +61,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:deep_sea_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 692, "maxX": 1145, "minZ": -835, "maxZ": -327, "minY": -46, "maxY": 29,
                 "neededNearbyBlocks": [
@@ -68,6 +86,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 1,
+            "heldItems": [
+                {
+                    "item": "cobblemon:deep_sea_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 1175, "maxX": 1793, "minZ": -237, "maxZ": 105, "minY": -62, "maxY": 30,
                 "neededNearbyBlocks": [
@@ -87,6 +111,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:deep_sea_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 964, "maxX": 1637, "minZ": 83, "maxZ": 434, "minY": -74, "maxY": 29,
                 "neededNearbyBlocks": [
@@ -106,6 +136,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:deep_sea_scale",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 546, "maxX": 963, "minZ": 83, "maxZ": 334, "minY": -74, "maxY": 182,
                 "neededNearbyBlocks": [

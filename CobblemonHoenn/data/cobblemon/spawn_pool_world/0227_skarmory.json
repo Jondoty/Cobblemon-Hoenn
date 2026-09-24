@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "15-18",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:metal_coat",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

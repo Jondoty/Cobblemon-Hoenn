@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "2-3",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -27,6 +33,12 @@
             "bucket": "common",
             "level": "2-3",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -43,6 +55,12 @@
             "bucket": "common",
             "level": "4-7",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -60,6 +78,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -76,6 +100,12 @@
             "bucket": "common",
             "level": "9-12",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -92,6 +122,12 @@
             "bucket": "common",
             "level": "9-12",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -108,6 +144,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -124,6 +166,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -140,6 +188,12 @@
             "bucket": "common",
             "level": "20-25",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -156,6 +210,12 @@
             "bucket": "common",
             "level": "10-13",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -172,6 +232,12 @@
             "bucket": "common",
             "level": "10-13",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -188,6 +254,12 @@
             "bucket": "common",
             "level": "10-13",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -204,6 +276,12 @@
             "bucket": "common",
             "level": "17-20",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -220,6 +298,12 @@
             "bucket": "common",
             "level": "11-14",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -236,6 +320,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -252,6 +342,12 @@
             "bucket": "common",
             "level": "27-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass",
@@ -269,6 +365,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -285,6 +387,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -302,6 +410,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -319,6 +433,12 @@
             "bucket": "common",
             "level": "20-30",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -336,6 +456,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -353,6 +479,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -370,6 +502,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -390,6 +528,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -407,6 +551,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -424,6 +574,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -441,6 +597,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -475,6 +637,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -492,6 +660,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -509,6 +683,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -526,6 +706,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -543,6 +729,12 @@
             "bucket": "common",
             "level": "35-40",
             "weight": 19,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"
@@ -560,6 +752,12 @@
             "bucket": "common",
             "level": "25-35",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:lucky_egg",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "presets": [
                     "water"

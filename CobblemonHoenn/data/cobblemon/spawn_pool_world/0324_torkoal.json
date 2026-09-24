@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "13-16",
             "weight": 10,
+            "heldItems": [
+                {
+                    "item": "cobblemon:charcoal",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": -1963, "maxX": -1739, "minZ": -1387, "maxZ": -1144, "minY": 0, "maxY": 60

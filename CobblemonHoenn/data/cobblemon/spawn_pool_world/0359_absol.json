@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "24-27",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:life_orb",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

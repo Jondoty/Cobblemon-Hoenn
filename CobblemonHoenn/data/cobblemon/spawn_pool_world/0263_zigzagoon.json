@@ -11,6 +11,16 @@
             "bucket": "common",
             "level": "2",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -27,6 +37,16 @@
             "bucket": "common",
             "level": "2-3",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -43,6 +63,16 @@
             "bucket": "common",
             "level": "2-3",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -59,6 +89,16 @@
             "bucket": "common",
             "level": "2-5",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -74,6 +114,16 @@
             "bucket": "common",
             "level": "4-7",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -90,6 +140,16 @@
             "bucket": "common",
             "level": "4-6",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "neededNearbyBlocks": [
@@ -107,6 +167,16 @@
             "bucket": "common",
             "level": "10-13",
             "weight": 10,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "neededNearbyBlocks": [
@@ -124,6 +194,16 @@
             "bucket": "common",
             "level": "5-8",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -140,6 +220,16 @@
             "bucket": "common",
             "level": "11-14",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:revive",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:potion",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

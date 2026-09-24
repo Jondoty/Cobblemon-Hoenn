@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "16-19",
             "weight": 25,
+            "heldItems": [
+                {
+                    "item": "cobblemon:moon_stone",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2199, "maxX": 2402, "minZ": -2619, "maxZ": -2326, "minY": 0, "maxY": 135
@@ -24,6 +30,12 @@
             "bucket": "common",
             "level": "37-40",
             "weight": 25,
+            "heldItems": [
+                {
+                    "item": "cobblemon:moon_stone",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2215, "maxX": 2402, "minZ": -3169, "maxZ": -2654, "minY": 63, "maxY": 135
@@ -37,6 +49,12 @@
             "bucket": "common",
             "level": "37-40",
             "weight": 25,
+            "heldItems": [
+                {
+                    "item": "cobblemon:moon_stone",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2298, "maxX": 2376, "minZ": -3146, "maxZ": -3023, "minY": 138
@@ -53,6 +71,12 @@
             "bucket": "common",
             "level": "16-19",
             "weight": 16,
+            "heldItems": [
+                {
+                    "item": "cobblemon:moon_stone",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 2199, "maxX": 2402, "minZ": -2619, "maxZ": -2326, "minY": 0, "maxY": 135
             }
@@ -68,6 +92,12 @@
             "bucket": "common",
             "level": "30-40",
             "weight": 20,
+            "heldItems": [
+                {
+                    "item": "cobblemon:moon_stone",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "minX": 2215, "maxX": 2402, "minZ": -3169, "maxZ": -2654
             }

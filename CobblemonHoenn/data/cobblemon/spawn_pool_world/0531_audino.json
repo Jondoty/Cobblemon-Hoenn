@@ -11,6 +11,16 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 90,
+            "heldItems": [
+                {
+                    "item": "cobblemon:sitrus_berry",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:oran_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -27,6 +37,16 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 10,
+            "heldItems": [
+                {
+                    "item": "cobblemon:sitrus_berry",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:oran_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -43,6 +63,16 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 90,
+            "heldItems": [
+                {
+                    "item": "cobblemon:sitrus_berry",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:oran_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -59,6 +89,16 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 60,
+            "heldItems": [
+                {
+                    "item": "cobblemon:sitrus_berry",
+                    "percentage": 5.0
+                },
+                {
+                    "item": "cobblemon:oran_berry",
+                    "percentage": 50.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

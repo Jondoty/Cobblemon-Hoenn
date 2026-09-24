@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "37-40",
             "weight": 20,
+            "heldItems": [
+                {
+                    "item": "cobblemon:hard_stone",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 1182, "maxX": 1463, "minZ": -3312, "maxZ": -2580

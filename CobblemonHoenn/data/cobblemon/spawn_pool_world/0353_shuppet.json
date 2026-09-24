@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "27-30",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:spell_tag",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass",
@@ -28,6 +34,12 @@
             "bucket": "common",
             "level": "28-31",
             "weight": 65,
+            "heldItems": [
+                {
+                    "item": "cobblemon:spell_tag",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 1562, "maxX": 1671, "minZ": 2552, "maxZ": 2667, "minY": 21, "maxY": 79
@@ -41,6 +53,12 @@
             "bucket": "common",
             "level": "27-30",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:spell_tag",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"
@@ -57,6 +75,12 @@
             "bucket": "common",
             "level": "28-31",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:spell_tag",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "neededNearbyBlocks": [
                     "minecraft:short_grass"

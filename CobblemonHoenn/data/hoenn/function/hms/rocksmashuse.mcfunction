@@ -132,7 +132,7 @@ execute as @s[x=-2451,y=0,z=-863,dx=222,dy=60,dz=147,scores={rng=10..20}] at @s 
 #Granite Cave
 #Geodude or Nosepass
 execute as @s[x=2440,y=0,z=-2673,dx=319,dy=256,dz=387,scores={rng=10..18}] at @s run pokespawn geodude level=11
-execute as @s[x=2440,y=0,z=-2673,dx=319,dy=256,dz=387,scores={rng=19..20}] at @s run pokespawn nosepass level=11
+execute as @s[x=2440,y=0,z=-2673,dx=319,dy=256,dz=387,scores={rng=19..20}] at @s run pokespawn nosepass held_item=cobblemon:hard_stone level=11
 
 #--------------------------------------
 #Lilycove City, Mirage Forest, Seafloor Cavern, Shoal Cave

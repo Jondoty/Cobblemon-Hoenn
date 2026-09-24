@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "9-12",
             "weight": 15,
+            "heldItems": [
+                {
+                    "item": "cobblemon:twisted_spoon",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 130, "maxY": 150
@@ -24,6 +30,12 @@
             "bucket": "common",
             "level": "10-12",
             "weight": 20,
+            "heldItems": [
+                {
+                    "item": "cobblemon:twisted_spoon",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 92, "maxY": 129
@@ -37,6 +49,12 @@
             "bucket": "common",
             "level": "10-12",
             "weight": 20,
+            "heldItems": [
+                {
+                    "item": "cobblemon:twisted_spoon",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 64, "maxY": 91

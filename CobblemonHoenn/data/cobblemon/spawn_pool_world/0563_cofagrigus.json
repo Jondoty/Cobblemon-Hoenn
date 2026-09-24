@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 30,
+            "heldItems": [
+                {
+                    "item": "cobblemon:spell_tag",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": -79, "maxX": 130, "minZ": 2487, "maxZ": 2700, "minY": 0, "maxY": 60
@@ -25,6 +31,12 @@
             "bucket": "common",
             "level": "36-38",
             "weight": 40,
+            "heldItems": [
+                {
+                    "item": "cobblemon:spell_tag",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": -3177, "maxX": -2997, "minZ": -2052, "maxZ": -1884, "minY": 0, "maxY": 60

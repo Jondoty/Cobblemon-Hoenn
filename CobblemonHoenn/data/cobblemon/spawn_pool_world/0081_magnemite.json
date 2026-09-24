@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "22-25",
             "weight": 50,
+            "heldItems": [
+                {
+                    "item": "cobblemon:metal_coat",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": -1399, "maxX": -1334, "minZ": -413, "maxZ": -321, "minY": 0, "maxY": 55

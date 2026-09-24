@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "9-12",
             "weight": 5,
+            "heldItems": [
+                {
+                    "item": "cobblemon:everstone",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2440, "maxX": 2759, "minZ": -2673, "maxZ": -2286, "minY": 130, "maxY": 150

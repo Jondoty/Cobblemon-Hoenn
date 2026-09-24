@@ -11,6 +11,12 @@
             "bucket": "common",
             "level": "37-40",
             "weight": 35,
+            "heldItems": [
+                {
+                    "item": "cobblemon:dragon_fang",
+                    "percentage": 5.0
+                }
+            ],
             "condition": {
                 "canSeeSky": false,
                 "minX": 2298, "maxX": 2376, "minZ": -3146, "maxZ": -3023, "minY": 138
