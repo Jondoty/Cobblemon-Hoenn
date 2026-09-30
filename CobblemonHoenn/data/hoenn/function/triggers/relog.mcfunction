@@ -26,6 +26,8 @@ scoreboard players set @s[scores={relog=1..}] MusicCooldown 0
 scoreboard players set @s BattleStart 0
 scoreboard players set @s BattleEnd 0
 
+#If Surf Music is on when player relogs
+tag @s remove SurfMusic
 
 #Removes dialogue tags for legendary prompts if the player never responds to them to encounter them
 #If player does respond to them, applies an Encounter tag and must defeat the E4 to reset.

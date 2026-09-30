@@ -150,6 +150,52 @@ playsound heavyrain record @s[tag=KyogreParticles,scores={Temp=20..,MusicCooldow
 scoreboard players set @s[tag=KyogreParticles,scores={Temp=20..,MusicCooldown=0}] MusicCooldown 98
 
 #---------------------------------------------------------------------------------------------------------------------------
+#Surf-specific music, underwater zones get priority but not surface routes
+
+
+#Route 107 (Underwater)
+playsound dive record @s[x=-2236,y=-84,z=721,dx=214,dy=124,dz=253,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=-2236,y=-84,z=721,dx=214,dy=124,dz=253,scores={MusicCooldown=0}] MusicCooldown 225
+
+#Route 124 (Underwater)
+playsound dive record @s[x=838,y=-70,z=-1150,dx=314,dy=99,dz=372,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=838,y=-70,z=-1150,dx=314,dy=99,dz=372,scores={MusicCooldown=0}] MusicCooldown 225
+
+#Route 126 (Underwater)
+playsound dive record @s[x=692,y=-46,z=-835,dx=453,dy=75,dz=508,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=692,y=-46,z=-835,dx=453,dy=75,dz=508,scores={MusicCooldown=0}] MusicCooldown 225
+
+#Route 127 (Underwater)
+playsound dive record @s[x=1175,y=-62,z=-811,dx=619,dy=92,dz=573,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1175,y=-62,z=-811,dx=619,dy=92,dz=573,scores={MusicCooldown=0}] MusicCooldown 225
+
+#Route 128 (Underwater)
+playsound dive record @s[x=1175,y=-62,z=-237,dx=618,dy=92,dz=342,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1175,y=-62,z=-237,dx=618,dy=92,dz=342,scores={MusicCooldown=0}] MusicCooldown 225
+
+#Route 129 (Underwater)
+playsound dive record @s[x=964,y=-74,z=83,dx=673,dy=103,dz=351,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=964,y=-74,z=83,dx=673,dy=103,dz=351,scores={MusicCooldown=0}] MusicCooldown 225
+
+#Route 130 (Underwater)
+playsound dive record @s[x=546,y=-74,z=83,dx=417,dy=102,dz=251,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=546,y=-74,z=83,dx=417,dy=102,dz=251,scores={MusicCooldown=0}] MusicCooldown 225
+
+#Route 134 (Underwater)
+playsound dive record @s[x=-1092,y=-41,z=304,dx=198,dy=71,dz=512,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=-1092,y=-41,z=304,dx=198,dy=71,dz=512,scores={MusicCooldown=0}] MusicCooldown 225
+
+
+
+#Riding a Pokemon in the water
+playsound surf record @s[tag=SurfMusic,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+scoreboard players set @s[tag=SurfMusic,scores={MusicCooldown=0}] MusicCooldown 212
+
+execute as @a at @s[scores={MusicCooldown=0}] on vehicle if predicate hoenn:near_water on passengers run playsound surf record @s ~ ~ ~ 1 1 1
+execute as @a at @s[scores={MusicCooldown=0}] on vehicle if predicate hoenn:near_water on passengers run tag @s add SurfMusic
+execute as @a at @s[scores={MusicCooldown=0}] on vehicle if predicate hoenn:near_water on passengers run scoreboard players set @s MusicCooldown 212
+
+#---------------------------------------------------------------------------------------------------------------------------
 #Areas within areas, takes priority
 
 #New Mauville
@@ -714,39 +760,6 @@ scoreboard players set @s[x=-924,y=31,z=136,dx=378,dy=256,dz=312,scores={MusicCo
 #Route 134
 playsound route119 record @s[x=-1287,y=31,z=136,dx=362,dy=256,dz=312,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
 scoreboard players set @s[x=-1287,y=31,z=136,dx=362,dy=256,dz=312,scores={MusicCooldown=0}] MusicCooldown 200
-
-
-#Route 107 (Underwater)
-playsound dive record @s[x=-2236,y=-84,z=721,dx=214,dy=124,dz=253,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=-2236,y=-84,z=721,dx=214,dy=124,dz=253,scores={MusicCooldown=0}] MusicCooldown 225
-
-#Route 124 (Underwater)
-playsound dive record @s[x=838,y=-70,z=-1150,dx=314,dy=99,dz=372,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=838,y=-70,z=-1150,dx=314,dy=99,dz=372,scores={MusicCooldown=0}] MusicCooldown 225
-
-#Route 126 (Underwater)
-playsound dive record @s[x=692,y=-46,z=-835,dx=453,dy=75,dz=508,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=692,y=-46,z=-835,dx=453,dy=75,dz=508,scores={MusicCooldown=0}] MusicCooldown 225
-
-#Route 127 (Underwater)
-playsound dive record @s[x=1175,y=-62,z=-811,dx=619,dy=92,dz=573,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=1175,y=-62,z=-811,dx=619,dy=92,dz=573,scores={MusicCooldown=0}] MusicCooldown 225
-
-#Route 128 (Underwater)
-playsound dive record @s[x=1175,y=-62,z=-237,dx=618,dy=92,dz=342,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=1175,y=-62,z=-237,dx=618,dy=92,dz=342,scores={MusicCooldown=0}] MusicCooldown 225
-
-#Route 129 (Underwater)
-playsound dive record @s[x=964,y=-74,z=83,dx=673,dy=103,dz=351,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=964,y=-74,z=83,dx=673,dy=103,dz=351,scores={MusicCooldown=0}] MusicCooldown 225
-
-#Route 130 (Underwater)
-playsound dive record @s[x=546,y=-74,z=83,dx=417,dy=102,dz=251,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=546,y=-74,z=83,dx=417,dy=102,dz=251,scores={MusicCooldown=0}] MusicCooldown 225
-
-#Route 134 (Underwater)
-playsound dive record @s[x=-1092,y=-41,z=304,dx=198,dy=71,dz=512,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-scoreboard players set @s[x=-1092,y=-41,z=304,dx=198,dy=71,dz=512,scores={MusicCooldown=0}] MusicCooldown 225
 
 
 #All Gyms

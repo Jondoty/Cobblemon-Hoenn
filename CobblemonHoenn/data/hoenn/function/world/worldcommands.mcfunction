@@ -44,7 +44,8 @@ function hoenn:world/roadblocks
 #Manages potion effects in the world.
 function hoenn:triggers/potioneffects
 
-#Battle Music
+#-----------------------
+#World Music
 #Runs battle music and post-battle events
 #Battle endings
 execute as @a[scores={BattleEnd=1..}] run function hoenn:battles/battleend
@@ -52,6 +53,26 @@ execute as @a[scores={BattleEnd=1..}] run function hoenn:battles/battleend
 #Battle start and music
 execute as @a[scores={BattleStart=1..,MusicCooldown=0},tag=BattleMusicCooldown] run tag @s remove BattleMusicCooldown
 execute as @a[scores={BattleStart=1..},tag=!BattleMusicCooldown] run function hoenn:battles/battlestart
+
+
+#Starts Surfing music
+execute as @a at @s[tag=!SurfMusic] on vehicle if predicate hoenn:near_water on passengers run function hoenn:triggers/stopsound
+execute as @a at @s[tag=!SurfMusic] on vehicle if predicate hoenn:near_water on passengers run tag @s add SurfMusic
+
+#Stops Surfing music if players dismounts a mount
+execute as @a at @s[tag=SurfMusic] unless predicate hoenn:near_water run function hoenn:triggers/stopsound
+execute as @a at @s[tag=SurfMusic] unless predicate hoenn:near_water run tag @s remove SurfMusic
+
+
+#Runs music function
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0}] run function hoenn:world/music
+
+#Removes a MusicCooldown score each run, resets music at 0
+scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
+
+
+#-----------------------
+
 
 #Displays the player's Battle Points or Money if in a shop that uses them
 title @a[team=shops] actionbar ["",{"text":"Your Money Balance: $"},{"score":{"name":"*","objective":"Money"}}]
@@ -157,12 +178,6 @@ advancement revoke @a only hoenn:click/ender_eye
 #Mega Stones, execute if player is nearby a Mega Stone armor stand
 execute as @e[type=minecraft:armor_stand,tag=MegaStone] at @s if entity @a[distance=..50] run function hoenn:items/megastones
 
-
-#Runs music function
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0}] run function hoenn:world/music
-
-#Removes a MusicCooldown score each run, resets music at 0
-scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
 
 
 #Bicycles
