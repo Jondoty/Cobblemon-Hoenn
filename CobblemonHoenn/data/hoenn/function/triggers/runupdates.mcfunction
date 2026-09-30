@@ -42,6 +42,8 @@ execute if entity @a[x=-908,y=74,z=655,distance=..75] if block -908 74 655 air p
 execute if entity @a[x=-1039,y=4,z=2577,distance=..75] if block -1039 64 2577 air positioned -1039 64 2577 run function hoenn:spawn/tmloot
 execute if entity @a[x=-29,y=15,z=2865,distance=..75] if block -29 15 2865 air positioned -29 15 2865 run function hoenn:spawn/tmloot
 execute if entity @a[x=-751,y=80,z=2576,distance=..75] if block -751 80 2576 air positioned -751 80 2576 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1864,y=38,z=-1270,distance=..75] if block -1864 38 -1270 air positioned -1864 38 -1270 run function hoenn:spawn/tmloot
+execute if entity @a[x=-1819,y=94,z=-1442,distance=..75] if block -1819 94 -1442 air positioned -1819 94 -1442 run function hoenn:spawn/tmloot
 
 
 
