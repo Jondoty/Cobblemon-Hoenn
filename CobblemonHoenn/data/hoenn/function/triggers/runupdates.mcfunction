@@ -53,6 +53,8 @@ execute if entity @a[x=-1819,y=94,z=-1442,distance=..75] if block -1819 94 -1442
 
 #block updates
 execute if entity @a[x=2776,y=85,z=2788,distance=..75] if block -1830 64 631 air run fill 2776 85 2788 2776 85 2780 minecraft:magenta_carpet replace air
+execute if entity @a[x=-2069,y=50,z=303,distance=..75] if block -2069 50 303 air run fill -2069 50 303 -2070 52 303 cobblemon:disc_shelf[facing=north]
+execute if entity @a[x=-1989,y=52,z=303,distance=..75] if block -1989 52 303 air run fill -1989 52 303 -1990 50 303 cobblemon:disc_shelf[facing=north]
 
 
 #1.0.1 to 1.0.2

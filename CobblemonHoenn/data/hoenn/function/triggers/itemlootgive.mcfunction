@@ -192,7 +192,7 @@ execute as @s[x=-2743,y=37,z=-673,distance=..5,tag=!ItemLoot35] run tag @s add I
 
 execute as @s[x=-2775,y=50,z=-619,distance=..5,tag=ItemLoot36] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-2775,y=50,z=-619,distance=..5,tag=!ItemLoot36] run tellraw @s {"text":"You received HM01: Cut!","italic":true,"color":"gray"}
-execute as @s[x=-2775,y=50,z=-619,distance=..5,tag=!ItemLoot36] run playsound minecraft:itemget ambient @s ~ ~ ~ 1 1 1
+execute as @s[x=-2775,y=50,z=-619,distance=..5,tag=!ItemLoot36] run playsound minecraft:tmget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-2775,y=50,z=-619,distance=..5,tag=!ItemLoot36] run tag @s add Cut
 execute as @s[x=-2775,y=50,z=-619,distance=..5,tag=!ItemLoot36] run givetm cut @s
 execute as @s[x=-2775,y=50,z=-619,distance=..5,tag=!ItemLoot36] run tag @s add ItemLoot36
@@ -2406,8 +2406,8 @@ execute as @s[x=-865,y=64,z=216,distance=..5,tag=!ItemLoot513] run playsound min
 execute as @s[x=-865,y=64,z=216,distance=..5,tag=!ItemLoot513] run tag @s add ItemLoot513
 
 execute as @s[x=-828,y=64,z=205,distance=..5,tag=ItemLoot514] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-828,y=64,z=205,distance=..5,tag=!ItemLoot514] run givetm psyshock @s
-execute as @s[x=-828,y=64,z=205,distance=..5,tag=!ItemLoot514] run tellraw @s {"text":"You received the TM Psyshock!","italic":true,"color":"gray"}
+execute as @s[x=-828,y=64,z=205,distance=..5,tag=!ItemLoot514] run givetm psychup @s
+execute as @s[x=-828,y=64,z=205,distance=..5,tag=!ItemLoot514] run tellraw @s {"text":"You received the TM Psych Up!","italic":true,"color":"gray"}
 execute as @s[x=-828,y=64,z=205,distance=..5,tag=!ItemLoot514] run playsound minecraft:tmget ambient @s ~ ~ ~ 1 1 1
 execute as @s[x=-828,y=64,z=205,distance=..5,tag=!ItemLoot514] run tag @s add ItemLoot514
 
