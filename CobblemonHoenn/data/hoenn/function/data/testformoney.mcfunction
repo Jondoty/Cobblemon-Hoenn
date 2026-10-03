@@ -34,12 +34,16 @@ tag @s[scores={Money=10000..}] add MoneyHave10000
 tag @s[scores={Money=12000..}] add MoneyHave12000
 tag @s[scores={Money=12500..}] add MoneyHave12500
 tag @s[scores={Money=15000..}] add MoneyHave15000
+tag @s[scores={Money=25000..}] add MoneyHave25000
 tag @s[scores={Money=45000..}] add MoneyHave45000
 tag @s[scores={Money=80000..}] add MoneyHave80000
 tag @s[scores={Money=150000..}] add MoneyHave150000
 
 
 tag @s[scores={BattlePoints=2..}] add BPHave2
+tag @s[scores={BattlePoints=4..}] add BPHave4
+tag @s[scores={BattlePoints=8..}] add BPHave8
+tag @s[scores={BattlePoints=12..}] add BPHave12
 tag @s[scores={BattlePoints=16..}] add BPHave16
 tag @s[scores={BattlePoints=32..}] add BPHave32
 tag @s[scores={BattlePoints=48..}] add BPHave48

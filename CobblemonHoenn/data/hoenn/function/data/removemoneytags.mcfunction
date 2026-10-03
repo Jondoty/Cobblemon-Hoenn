@@ -33,12 +33,16 @@ tag @s remove MoneyHave10000
 tag @s remove MoneyHave12000
 tag @s remove MoneyHave12500
 tag @s remove MoneyHave15000
+tag @s remove MoneyHave25000
 tag @s remove MoneyHave45000
 tag @s remove MoneyHave80000
 tag @s remove MoneyHave150000
 
 #Battle Points
 tag @s remove BPHave2
+tag @s remove BPHave4
+tag @s remove BPHave8
+tag @s remove BPHave12
 tag @s remove BPHave16
 tag @s remove BPHave32
 tag @s remove BPHave48

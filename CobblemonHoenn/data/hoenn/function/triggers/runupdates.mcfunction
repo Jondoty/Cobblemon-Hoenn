@@ -49,12 +49,28 @@ execute if entity @a[x=-1819,y=94,z=-1442,distance=..75] if block -1819 94 -1442
 
 
 #new NPCs
+execute as @p[x=2244,y=64,z=649,distance=..50] unless entity @e[x=2244,y=64,z=649,dy=3,type=cobblemon:npc] run npcspawnat 2244 64 649 battleresort_tmshop1
+execute as @p[x=2282,y=64,z=691,distance=..50] unless entity @e[x=2282,y=64,z=691,dy=3,type=cobblemon:npc] run npcspawnat 2282 64 691 battleresort_tmshop2
+execute as @p[x=2282,y=64,z=731,distance=..50] unless entity @e[x=2282,y=64,z=731,dy=3,type=cobblemon:npc] run npcspawnat 2282 64 731 battleresort_tmshop3
+execute as @p[x=2282,y=64,z=767,distance=..50] unless entity @e[x=2282,y=64,z=767,dy=3,type=cobblemon:npc] run npcspawnat 2282 64 767 battleresort_tmshop4
+execute as @p[x=536,y=59,z=-1103,distance=..50] unless entity @e[x=536,y=59,z=-1092,dy=3,type=cobblemon:npc] run npcspawnat 536 59 -1092 lilycove_shop5
+execute as @p[x=536,y=59,z=-1103,distance=..50] unless entity @e[x=536,y=59,z=-1097,dy=3,type=cobblemon:npc] run npcspawnat 536 59 -1097 lilycove_shop6
+execute as @p[x=-1550,y=69,z=342,distance=..50] unless entity @e[x=-1550,y=69,z=342,dy=3,type=cobblemon:npc] run npcspawnat -1550 69 342 slateport_shop4
+
 
 
 #block updates
 execute if entity @a[x=2776,y=85,z=2788,distance=..75] if block -1830 64 631 air run fill 2776 85 2788 2776 85 2780 minecraft:magenta_carpet replace air
 execute if entity @a[x=-2069,y=50,z=303,distance=..75] if block -2069 50 303 air run fill -2069 50 303 -2070 52 303 cobblemon:disc_shelf[facing=north]
 execute if entity @a[x=-1989,y=52,z=303,distance=..75] if block -1989 52 303 air run fill -1989 52 303 -1990 50 303 cobblemon:disc_shelf[facing=north]
+
+execute if entity @a[x=540,y=62,z=-1099,distance=..75] if block 538 59 -1090 minecraft:quartz_stairs run fill 540 62 -1099 538 59 -1090 air
+execute if entity @a[x=540,y=62,z=-1099,distance=..75] if block 534 59 -1098 air run clone 540 63 -1110 539 59 -1103 539 59 -1098
+execute if entity @a[x=540,y=62,z=-1099,distance=..75] if block 534 59 -1098 air run fill 535 59 -1099 535 59 -1088 minecraft:white_stained_glass_pane[north=true,south=true]
+execute if entity @a[x=540,y=62,z=-1099,distance=..75] if block 534 59 -1098 air run fill 535 60 -1099 535 60 -1088 minecraft:blue_carpet
+execute if entity @a[x=540,y=62,z=-1099,distance=..75] if block 534 59 -1098 air run fill 534 59 -1098 533 59 -1091 minecraft:red_carpet
+
+
 
 
 #1.0.1 to 1.0.2
