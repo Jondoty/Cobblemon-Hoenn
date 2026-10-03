@@ -78,7 +78,7 @@
             }
         },
         {
-            "id": "page3",
+            "id": "page4",
             "speaker": "npc",
             "lines": [
                 "The Stone Badge enables Pokémon to use the HM move Cut outside of battle."
@@ -91,14 +91,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page4');"
+                            "q.dialogue.set_page('page5');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page5",
             "speaker": "npc",
             "lines": [
                 "And... Please take this with you, too."
@@ -112,14 +112,14 @@
                         "value": "next",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run playsound tmget ambient @s ~ ~ ~ 1 1 1');",
-                            "q.dialogue.set_page('page4');"
+                            "q.dialogue.set_page('page6');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page6",
             "speaker": "npc",
             "lines": [
                 "The move Rock Tomb not only inflicts damage by dropping rocks, it also lowers the target's Speed."
@@ -132,14 +132,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page4');"
+                            "q.dialogue.set_page('page7');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page7",
             "speaker": "npc",
             "lines": [
                 "If you use a TM, it instantly teaches the move to a Pokémon."
@@ -152,14 +152,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page4');"
+                            "q.dialogue.set_page('page8');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page8",
             "speaker": "npc",
             "lines": [
                 "The Stone Badge enables Pokémon to use the HM move Cut outside of battle."
@@ -172,17 +172,17 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page4');"
+                            "q.dialogue.set_page('page9');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page9",
             "speaker": "npc",
             "lines": [
-                "You can use a TM as many times as you want, at least if your settings are tweaked to do that!"
+                "You can use a TM as many times as you want, at least if your settings are tweaked to do that! I recommend it."
             ],
             "input": {
                 "type": "option",
@@ -192,14 +192,14 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page4');"
+                            "q.dialogue.set_page('page10');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "page4",
+            "id": "page10",
             "speaker": "npc",
             "lines": [
                 "So please try it out!"
