@@ -242,7 +242,7 @@
                         "action": [
                             "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 32');",
                             "q.run_command('execute as ' + q.player.username + ' run function hoenn:triggers/stopsound');",
-                            "v.battle = q.npc.start_battle(q.player);"
+                            "v.battle = q.npc.start_battle(q.player, 'double');"
                         ]
                     },
                     {
